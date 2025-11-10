@@ -77,6 +77,7 @@ export default function VijayVilasPalace() {
       }
       facts={data.facts}
       mapUrl={data.mapUrl}
+      gallery={[]}
     />
   );
 }

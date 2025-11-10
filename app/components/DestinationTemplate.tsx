@@ -77,7 +77,7 @@ export default function DestinationTemplate({
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-sora text-white tracking-tight mb-4 whitespace-nowrap overflow-hidden text-ellipsis"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-sora text-white tracking-tight mb-4"
                 style={{ textShadow: '2px 4px 12px rgba(0,0,0,0.6)' }}
               >
                 {title}
@@ -88,8 +88,8 @@ export default function DestinationTemplate({
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex items-center gap-3 text-white/90"
               >
-                <span className="text-xl">📍</span>
-                <span className="text-lg md:text-xl font-poppins font-medium">Kutch, Gujarat</span>
+                <span className="text-lg">📍</span>
+                <span className="text-base md:text-lg font-poppins font-medium">Kutch, Gujarat</span>
               </motion.div>
             </div>
           </div>

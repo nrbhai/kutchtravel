@@ -72,11 +72,11 @@ const CraftCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const craftImages = [
-    { src: "/images/crafts/bandhani-placeholder.jpg", alt: "Bandhani Tie-Dye", caption: "Bandhani - Traditional Tie-Dye" },
-    { src: "/images/crafts/ajrakh-placeholder.jpg", alt: "Ajrakh Block Printing", caption: "Ajrakh - Block Printing Art" },
-    { src: "/images/crafts/rogan-placeholder.jpg", alt: "Rogan Art", caption: "Rogan Art - Painted Textiles" },
-    { src: "/images/crafts/mirror-placeholder.jpg", alt: "Mirror Work", caption: "Mirror Work - Shisha Embroidery" },
-    { src: "/images/crafts/embroidery-placeholder.jpg", alt: "Kutchi Embroidery", caption: "Traditional Kutchi Embroidery" },
+    { src: "/images/crafts/bandhani.jpg", alt: "Bandhani Tie-Dye", caption: "Bandhani - Traditional Tie-Dye", hasImage: true },
+    { src: "/images/crafts/ajrakh.jpg", alt: "Ajrakh Block Printing", caption: "Ajrakh - Block Printing Art", hasImage: true },
+    { src: "/images/crafts/rogan.jpg", alt: "Rogan Art", caption: "Rogan Art - Painted Textiles", hasImage: true },
+    { src: "/images/crafts/bandhani2.webp", alt: "Bandhani Variants", caption: "Bandhani - Colorful Patterns", hasImage: true },
+    { src: "/images/crafts/rogan2.jpg", alt: "Rogan Art Designs", caption: "Rogan Art - Intricate Designs", hasImage: true },
   ];
 
   useEffect(() => {
@@ -97,22 +97,23 @@ const CraftCarousel = () => {
           transition={{ duration: 0.8 }}
           className={`absolute inset-0 ${index === currentIndex ? 'z-10' : 'z-0'}`}
         >
-          <div className="relative w-full h-full bg-gradient-to-br from-orange-100 to-red-100">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center p-8">
-                <div className="text-8xl mb-6">
-                  {index === 0 && "🔴"}
-                  {index === 1 && "🔵"}
-                  {index === 2 && "🟡"}
-                  {index === 3 && "✨"}
-                  {index === 4 && "🧵"}
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">{image.caption}</h3>
-                <p className="text-gray-600">Traditional Kutchi Craft</p>
-              </div>
+          <div className="relative w-full h-full">
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority={index === 0}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div className="absolute bottom-6 left-6 right-6">
+              <h3 className="text-2xl font-sora font-bold text-white mb-2" style={{ textShadow: '2px 4px 8px rgba(0,0,0,0.6)' }}>
+                {image.caption}
+              </h3>
+              <p className="text-white/90 font-poppins" style={{ textShadow: '1px 2px 4px rgba(0,0,0,0.6)' }}>Traditional Kutchi Craft</p>
             </div>
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
         </motion.div>
       ))}
       
@@ -361,7 +362,7 @@ export default function Home() {
               variants={stagger}
             >
               <motion.h1 variants={fadeUp} className="font-sora leading-tight tracking-tight">
-                <span className="block text-5xl md:text-6xl lg:text-7xl font-extrabold holographic drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]">
+                <span className="block text-4xl md:text-5xl lg:text-6xl font-extrabold holographic drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]">
                   Discover Kutch
                 </span>
                 <motion.span 
@@ -456,7 +457,7 @@ export default function Home() {
       </section>
 
       {/* Feature Tabs Grid Section */}
-      <section className="relative -mt-20 mb-40 z-20">
+      <section className="relative -mt-20 mb-12 z-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 lg:gap-8 relative">
             <Link href="/destinations" 
@@ -525,21 +526,21 @@ export default function Home() {
       </section>
 
       {/* 2️⃣ Enhanced Explore Kutch Section */}
-      <section id="explore-kutch" className="relative overflow-hidden py-20 bg-gradient-to-b from-amber-50/30 via-yellow-50/20 to-orange-50/30">
+      <section id="explore-kutch" className="relative overflow-hidden py-12 bg-gradient-to-br from-blue-50/40 via-cyan-50/30 to-teal-50/40">
         {/* Background decorative elements */}
         <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.02] mix-blend-overlay"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Content Side */}
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <span className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-600 to-amber-700 text-white rounded-full text-sm font-poppins font-semibold tracking-wide shadow-lg shadow-yellow-500/30">
+            <div className="space-y-6">
+              <div className="space-y-3">
+                <span className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-sm font-poppins font-semibold tracking-wide shadow-lg shadow-purple-500/30">
                   <span>🗺️</span>
                   <span>Local Insights</span>
                 </span>
                 
-                <h2 className="text-5xl md:text-6xl lg:text-7xl font-sora font-extrabold holographic drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)] leading-tight">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold holographic drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)] leading-tight">
                   Explore Kutch
                 </h2>
                 
@@ -552,25 +553,25 @@ export default function Home() {
               {/* Feature Points */}
               <div className="flex flex-wrap items-center gap-6 pt-4">
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-yellow-600 to-amber-700 rounded-full animate-pulse"></span>
+                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
                   <span className="text-sm font-poppins font-medium">Expert Tips</span>
                 </div>
-                <div className="w-px h-4 bg-gradient-to-b from-yellow-400 to-amber-500"></div>
+                <div className="w-px h-4 bg-gradient-to-b from-purple-400 to-indigo-500"></div>
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 rounded-full animate-pulse"></span>
-                  <span className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">Local Insights</span>
+                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 rounded-full animate-pulse"></span>
+                  <span className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600">Local Insights</span>
                 </div>
-                <div className="w-px h-4 bg-gradient-to-b from-cyan-400 via-blue-400 to-indigo-400"></div>
+                <div className="w-px h-4 bg-gradient-to-b from-purple-400 via-violet-400 to-indigo-400"></div>
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 rounded-full animate-pulse"></span>
-                  <span className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600">Season Guide</span>
+                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 rounded-full animate-pulse"></span>
+                  <span className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600">Season Guide</span>
                 </div>
               </div>
 
               {/* CTA Button */}
               <Link 
                 href="/destinations" 
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-yellow-600 to-amber-700 text-white rounded-full font-poppins font-semibold text-base shadow-xl shadow-yellow-500/30 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full font-poppins font-semibold text-base shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:scale-105 transition-all duration-300"
               >
                 <span>Start Exploring</span>
                 <ArrowRight className="w-5 h-5" />
@@ -618,31 +619,30 @@ export default function Home() {
               className="text-left"
             >
               <div className="mb-8">
-                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-yellow-600 to-amber-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-yellow-500/30">
+                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-purple-500/30">
                   <span>✨</span>
                   <span>Handpicked Destinations</span>
                 </span>
               </div>
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-sora font-extrabold mb-8 leading-tight holographic">
-                Featured Destinations
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold mb-8 leading-tight holographic whitespace-nowrap">
+                Top Destinations
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-poppins font-light mb-8">
-                Discover the most captivating places in Kutch, each with its own story of heritage, 
-                <span className="block mt-3 text-slate-900 font-medium">natural beauty, and cultural significance.</span>
+              <p className="text-lg md:text-xl text-gray-900 leading-relaxed mb-8 font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+                Start with our handpicked favorites - the must-visit places that capture the essence of Kutch's beauty and heritage.
               </p>
               
               {/* Decorative Elements */}
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-yellow-600 to-amber-700 rounded-full animate-pulse"></span>
-                  <span className="text-base">12+ Destinations</span>
+                  <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
+                  <span className="text-base">Top 6 Featured</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-yellow-600 to-amber-700 rounded-full animate-pulse"></span>
+                  <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Rich Heritage</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-800 font-poppins font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-amber-700 to-yellow-800 rounded-full animate-pulse"></span>
+                  <span className="w-4 h-4 bg-gradient-to-r from-purple-700 to-indigo-800 rounded-full animate-pulse"></span>
                   <span className="text-base">Cultural Experiences</span>
                 </div>
               </div>
@@ -666,7 +666,7 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Enhanced Destinations Grid */}
+          {/* Enhanced Destinations Grid - Show only first 6 */}
           <motion.div 
             initial="hidden" 
             whileInView="visible" 
@@ -674,7 +674,7 @@ export default function Home() {
             variants={stagger} 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-20 max-w-[120rem] mx-auto px-4 sm:px-8 lg:px-12"
           >
-            {DESTINATIONS.map((destination) => (
+            {DESTINATIONS.slice(0, 6).map((destination) => (
               <Link
                 key={destination.slug}
                 href={`/destinations/${destination.slug}`}
@@ -702,7 +702,7 @@ export default function Home() {
                     />
                     {/* Beautiful Gradient Overlays */}
                     <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-blue-900/30 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/40 via-blue-600/20 to-indigo-600/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-blue-100/15 to-cyan-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     
                     {/* Premium Category Badge */}
                     <div className="absolute top-6 right-6 z-10">
@@ -755,22 +755,29 @@ export default function Home() {
             ))}
           </motion.div>
 
-          {/* Call to Action */}
+          {/* View All Destinations CTA */}
           <motion.div 
             initial="hidden" 
             whileInView="visible" 
             viewport={{ once: true }} 
             variants={fadeUp} 
-            className="text-center mt-16"
+            className="text-center mt-20"
           >
-            <Link
-              href="/destinations"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-cyan-700 hover:via-blue-700 hover:to-indigo-700 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl border border-white/20"
-            >
-              <span>View All Destinations</span>
-              <span className="transform group-hover:translate-x-1 transition-transform">→</span>
-            </Link>
-            <p className="text-gray-700 text-sm mt-4">Discover all 12+ amazing places in Kutch</p>
+            <div className="bg-gradient-to-r from-purple-50 via-indigo-50 to-blue-50 rounded-3xl p-12 max-w-3xl mx-auto border-2 border-purple-100/50 shadow-xl">
+              <h3 className="text-3xl font-sora font-bold mb-4 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                Explore More Destinations
+              </h3>
+              <p className="text-gray-700 text-lg mb-8 font-poppins leading-relaxed">
+                We've shown you just a glimpse! Discover {DESTINATIONS.length - 6} more incredible destinations waiting to be explored in Kutch.
+              </p>
+              <Link
+                href="/destinations"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white px-10 py-5 rounded-full font-poppins font-bold text-lg hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-2xl shadow-purple-500/30 group"
+              >
+                <span>View All {DESTINATIONS.length}+ Destinations</span>
+                <span className="transform group-hover:translate-x-2 transition-transform duration-300 text-2xl">→</span>
+              </Link>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -807,12 +814,12 @@ export default function Home() {
               className="text-left order-1 lg:order-2"
             >
               <div className="mb-8">
-                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-orange-600 to-red-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-orange-500/30">
+                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-purple-500/30">
                   <span>🎨</span>
                   <span>Traditional Arts & Culture</span>
                 </span>
               </div>
-              <h2 className="text-5xl md:text-6xl lg:text-7xl font-sora font-extrabold mb-8 leading-tight holographic whitespace-nowrap">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold mb-8 leading-tight holographic whitespace-nowrap">
                 Culture & Crafts
               </h2>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-poppins font-light mb-8">
@@ -823,15 +830,15 @@ export default function Home() {
               {/* Decorative Elements */}
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-orange-600 to-red-700 rounded-full animate-pulse"></span>
+                  <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Traditional Textiles</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-orange-600 to-red-700 rounded-full animate-pulse"></span>
+                  <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Ancient Techniques</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-800 font-poppins font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-red-700 to-orange-800 rounded-full animate-pulse"></span>
+                  <span className="w-4 h-4 bg-gradient-to-r from-purple-700 to-indigo-800 rounded-full animate-pulse"></span>
                   <span className="text-base">Master Artisans</span>
                 </div>
               </div>
@@ -847,176 +854,146 @@ export default function Home() {
             className="space-y-6"
           >
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {/* Bandhani Placeholder */}
-                <div 
-                  className="group cursor-pointer" 
-                  onClick={() => {
-                    console.log('Bandhani clicked');
-                    setSelectedTextile('bandhani');
-                  }}
-                >
-                  <div className="relative bg-white/90 rounded-2xl p-8 border-2 border-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                {/* Bandhani */}
+                <Link href="/crafts/bandhani" className="group cursor-pointer">
+                  <div className="relative bg-gradient-to-br from-purple-50/80 to-purple-100/60 rounded-2xl p-8 border-2 border-purple-200/40 hover:border-purple-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="text-center">
-                      <div className="w-20 h-20 bg-white rounded-full mx-auto mb-5 flex items-center justify-center shadow-lg border border-white/30">
-                        <span className="text-3xl text-gray-900">🔴</span>
+                      <div className="w-20 h-20 rounded-full mx-auto mb-5 overflow-hidden shadow-lg border-2 border-white/30">
+                        <Image 
+                          src="/images/crafts/bandhani.jpg" 
+                          alt="Bandhani"
+                          width={80}
+                          height={80}
+                          className="object-cover w-full h-full"
+                        />
                       </div>
                       <h3 className="font-bold text-gray-600 mb-3 text-lg">Bandhani</h3>
                       <p className="text-sm text-gray-600">Tie-dye artistry with intricate dot patterns</p>
                       <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-purple-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   </div>
-                </div>
+                </Link>
 
-                {/* Ajrakh Placeholder */}
-                <div 
-                  className="group cursor-pointer" 
-                  onClick={() => {
-                    console.log('Ajrakh clicked');
-                    setSelectedTextile('ajrakh');
-                  }}
-                >
-                  <div className="relative bg-white/90 rounded-2xl p-8 border-2 border-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                {/* Ajrakh */}
+                <Link href="/crafts/ajrakh" className="group cursor-pointer">
+                  <div className="relative bg-gradient-to-br from-indigo-50/80 to-indigo-100/60 rounded-2xl p-8 border-2 border-indigo-200/40 hover:border-indigo-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="text-center">
-                      <div className="w-20 h-20 bg-white rounded-full mx-auto mb-5 flex items-center justify-center shadow-lg border border-white/30">
-                        <span className="text-3xl text-gray-900">🔵</span>
+                      <div className="w-20 h-20 rounded-full mx-auto mb-5 overflow-hidden shadow-lg border-2 border-white/30">
+                        <Image 
+                          src="/images/crafts/ajrakh.jpg" 
+                          alt="Ajrakh"
+                          width={80}
+                          height={80}
+                          className="object-cover w-full h-full"
+                        />
                       </div>
                       <h3 className="font-bold text-gray-600 mb-3 text-lg">Ajrakh</h3>
                       <p className="text-sm text-gray-600">Block-printed geometric masterpieces</p>
                       <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-indigo-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   </div>
-                </div>
+                </Link>
 
-                {/* Rogan Art Placeholder */}
-                <div 
-                  className="group cursor-pointer" 
-                  onClick={() => {
-                    console.log('Rogan Art clicked');
-                    setSelectedTextile('rogan');
-                  }}
-                >
-                  <div className="relative bg-white/90 rounded-2xl p-8 border-2 border-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                {/* Rogan Art */}
+                <Link href="/crafts/rogan-art" className="group cursor-pointer">
+                  <div className="relative bg-gradient-to-br from-blue-50/80 to-blue-100/60 rounded-2xl p-8 border-2 border-blue-200/40 hover:border-blue-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="text-center">
-                      <div className="w-20 h-20 bg-white rounded-full mx-auto mb-5 flex items-center justify-center shadow-lg border border-white/30">
-                        <span className="text-3xl text-gray-900">🟡</span>
+                      <div className="w-20 h-20 rounded-full mx-auto mb-5 overflow-hidden shadow-lg border-2 border-white/30">
+                        <Image 
+                          src="/images/crafts/rogan.jpg" 
+                          alt="Rogan Art"
+                          width={80}
+                          height={80}
+                          className="object-cover w-full h-full"
+                        />
                       </div>
-                      <h3 className="font-bold text-gray-800 mb-3 text-lg">Rogan Art</h3>
+                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Rogan Art</h3>
                       <p className="text-sm text-gray-600">Painted fabric with castor oil colors</p>
-                      <p className="text-sm text-gray-500 mt-3 opacity-75">Click to learn more</p>
+                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   </div>
-                </div>
+                </Link>
 
-                {/* Mirror Work Placeholder */}
-                <div 
-                  className="group cursor-pointer" 
-                  onClick={() => {
-                    console.log('Mirror Work clicked');
-                    setSelectedTextile('mirror');
-                  }}
-                >
-                  <div className="relative bg-white/90 rounded-2xl p-8 border-2 border-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                {/* Mirror Work */}
+                <Link href="/crafts/mirror-work" className="group cursor-pointer">
+                  <div className="relative bg-gradient-to-br from-violet-50/80 to-violet-100/60 rounded-2xl p-8 border-2 border-violet-200/40 hover:border-violet-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="text-center">
-                      <div className="w-20 h-20 bg-white rounded-full mx-auto mb-5 flex items-center justify-center shadow-lg border border-white/30">
-                        <span className="text-3xl text-gray-900">✨</span>
+                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-violet-200 to-violet-300 shadow-lg border-2 border-white/30">
+                        <span className="text-4xl">✨</span>
                       </div>
                       <h3 className="font-bold text-gray-600 mb-3 text-lg">Mirror Work</h3>
                       <p className="text-sm text-gray-600">Shisha embroidery with tiny mirrors</p>
                       <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-violet-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   </div>
-                </div>
+                </Link>
               </div>
 
               {/* Additional Crafts Row */}
-              <div className="grid grid-cols-2 gap-4 mt-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
                 {/* Sudi Chappu Card */}
-                <div 
-                  className="group cursor-pointer" 
-                  onClick={() => {
-                    console.log('Sudi Chappu clicked');
-                    setSelectedTextile('sudi');
-                  }}
-                >
-                  <div className="relative bg-white/90 rounded-2xl p-8 border-2 border-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <Link href="/crafts/sudi-chappu" className="group cursor-pointer">
+                  <div className="relative bg-gradient-to-br from-fuchsia-50/80 to-fuchsia-100/60 rounded-2xl p-8 border-2 border-fuchsia-200/40 hover:border-fuchsia-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg border border-white/30">
-                        <span className="text-2xl text-gray-900">🔪</span>
+                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-fuchsia-200 to-fuchsia-300 shadow-lg border-2 border-white/30">
+                        <span className="text-4xl">🔪</span>
                       </div>
-                      <h3 className="font-bold text-gray-800 mb-2">Sudi Chappu</h3>
-                      <p className="text-xs text-gray-600">Traditional knife-making in Anjar</p>
-                      <p className="text-xs text-gray-500 mt-2 opacity-75">Click to learn more</p>
+                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Sudi Chappu</h3>
+                      <p className="text-sm text-gray-600">Traditional knife-making in Anjar</p>
+                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-fuchsia-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Pottery Card */}
-                <div 
-                  className="group cursor-pointer" 
-                  onClick={() => {
-                    console.log('Pottery clicked');
-                    setSelectedTextile('pottery');
-                  }}
-                >
-                  <div className="relative bg-white/90 rounded-2xl p-8 border-2 border-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <Link href="/crafts/pottery" className="group cursor-pointer">
+                  <div className="relative bg-gradient-to-br from-cyan-50/80 to-cyan-100/60 rounded-2xl p-8 border-2 border-cyan-200/40 hover:border-cyan-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg border border-white/30">
-                        <span className="text-2xl text-gray-900">🏺</span>
+                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-cyan-200 to-cyan-300 shadow-lg border-2 border-white/30">
+                        <span className="text-4xl">🏺</span>
                       </div>
-                      <h3 className="font-bold text-gray-800 mb-2">Pottery</h3>
-                      <p className="text-xs text-gray-600">Clay craft traditions across villages</p>
-                      <p className="text-xs text-gray-500 mt-2 opacity-75">Click to learn more</p>
+                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Pottery</h3>
+                      <p className="text-sm text-gray-600">Clay craft traditions across villages</p>
+                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-cyan-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Leather Craft Card */}
-                <div 
-                  className="group cursor-pointer" 
-                  onClick={() => {
-                    console.log('Leather Craft clicked');
-                    setSelectedTextile('leather');
-                  }}
-                >
-                  <div className="relative bg-white/90 rounded-2xl p-8 border-2 border-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <Link href="/crafts/leather-craft" className="group cursor-pointer">
+                  <div className="relative bg-gradient-to-br from-teal-50/80 to-teal-100/60 rounded-2xl p-8 border-2 border-teal-200/40 hover:border-teal-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg border border-white/30">
-                        <span className="text-2xl text-gray-900">👜</span>
+                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-teal-200 to-teal-300 shadow-lg border-2 border-white/30">
+                        <span className="text-4xl">👞</span>
                       </div>
-                      <h3 className="font-bold text-gray-800 mb-2">Leather Craft</h3>
-                      <p className="text-xs text-gray-600">Traditional leather working</p>
-                      <p className="text-xs text-gray-500 mt-2 opacity-75">Click to learn more</p>
+                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Leather Craft</h3>
+                      <p className="text-sm text-gray-600">Traditional leather working and mojari shoes</p>
+                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-teal-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   </div>
-                </div>
+                </Link>
 
                 {/* Weaving Card */}
-                <div 
-                  className="group cursor-pointer" 
-                  onClick={() => {
-                    console.log('Weaving clicked');
-                    setSelectedTextile('weaving');
-                  }}
-                >
-                  <div className="relative bg-white/90 rounded-2xl p-8 border-2 border-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                <Link href="/crafts/weaving" className="group cursor-pointer">
+                  <div className="relative bg-gradient-to-br from-sky-50/80 to-sky-100/60 rounded-2xl p-8 border-2 border-sky-200/40 hover:border-sky-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="text-center">
-                      <div className="w-16 h-16 bg-white rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg border border-white/30">
-                        <span className="text-2xl text-gray-900">🧵</span>
+                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-sky-200 to-sky-300 shadow-lg border-2 border-white/30">
+                        <span className="text-4xl">🧵</span>
                       </div>
-                      <h3 className="font-bold text-gray-800 mb-2">Weaving</h3>
-                      <p className="text-xs text-gray-600">Handloom textiles and carpets</p>
-                      <p className="text-xs text-gray-500 mt-2 opacity-75">Click to learn more</p>
+                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Weaving</h3>
+                      <p className="text-sm text-gray-600">Handloom textiles and traditional carpets</p>
+                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-sky-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   </div>
-                </div>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -1037,166 +1014,311 @@ export default function Home() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6">
-          {/* Enhanced Header with Beautiful Typography */}
-          <motion.div 
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true }} 
-            variants={fadeUp} 
-            className="text-center mb-16"
-          >
-            <div className="mb-6">
-              <span className="inline-block px-6 py-2 bg-gradient-to-r from-yellow-600 to-amber-700 text-white rounded-full text-sm font-poppins font-semibold tracking-wide border border-yellow-500 shadow-lg">
-                🧭 Essential Information
-              </span>
-            </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-sora font-extrabold mb-6 leading-tight holographic">
-              Travel Guide
-            </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-poppins font-light">
-              Everything you need to know for the perfect Kutch adventure. From seasonal tips 
-              to packing essentials, we've got you covered.
-            </p>
+          {/* Two Column Layout */}
+          <div className="grid lg:grid-cols-2 gap-12 items-start">
             
-            {/* Decorative Elements */}
-            <div className="flex items-center justify-center gap-4 mt-8">
-              <div className="flex items-center gap-2 text-yellow-600 font-poppins">
-                <span className="w-2 h-2 bg-gradient-to-r from-yellow-600 to-amber-700 rounded-full animate-pulse"></span>
-                <span className="text-sm font-medium">Best Times</span>
-              </div>
-              <div className="w-px h-4 bg-white"></div>
-              <div className="flex items-center gap-2 text-yellow-600 font-poppins">
-                <span className="w-2 h-2 bg-gradient-to-r from-yellow-600 to-amber-700 rounded-full animate-pulse"></span>
-                <span className="text-sm font-medium">Travel Tips</span>
-              </div>
-              <div className="w-px h-4 bg-white"></div>
-              <div className="flex items-center gap-2 text-yellow-600 font-poppins">
-                <span className="w-2 h-2 bg-gradient-to-r from-yellow-600 to-amber-700 rounded-full animate-pulse"></span>
-                <span className="text-sm font-medium">Safety Guide</span>
+            {/* Left Side - Travel Guide Content */}
+            <div>
+              {/* Enhanced Header */}
+              <motion.div 
+                initial="hidden" 
+                whileInView="visible" 
+                viewport={{ once: true }} 
+                variants={fadeUp} 
+                className="mb-12"
+              >
+                <div className="mb-6">
+                  <span className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full text-sm font-poppins font-bold tracking-wide shadow-lg shadow-purple-500/30 border border-purple-400/30">
+                    ✈️ Plan Your Journey
+                  </span>
+                </div>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold mb-6 leading-tight bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                  Travel Essentials
+                </h2>
+                <p className="text-xl text-gray-900 leading-relaxed font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+                  Your complete guide to experiencing Kutch like never before. We've curated everything 
+                  you need for an unforgettable desert adventure.
+                </p>
+              </motion.div>
+
+              {/* Enhanced Content Grid */}
+              <div className="space-y-8">
+            
+                {/* Best Time to Visit */}
+                <motion.div 
+                  initial="hidden" 
+                  whileInView="visible" 
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="group bg-gradient-to-br from-purple-50/80 via-indigo-50/80 to-blue-50/80 backdrop-blur-xl rounded-3xl p-8 shadow-xl border-2 border-purple-200/50 hover:border-purple-300/70 hover:shadow-2xl transition-all duration-500"
+                >
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/50 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white text-2xl">🗓️</span>
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-sora font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">When to Visit</h3>
+                      <p className="text-sm text-gray-600 font-poppins">Choose your perfect season</p>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border-2 border-purple-200/60 hover:border-purple-400/80 transition-all duration-300 hover:shadow-lg">
+                      <div className="flex items-start justify-between mb-2">
+                        <h4 className="font-poppins font-bold text-purple-900 text-lg">November - February</h4>
+                        <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-xs rounded-full font-bold">BEST</span>
+                      </div>
+                      <p className="text-sm text-slate-700 font-poppins leading-relaxed">Pleasant weather (10-25°C), world-famous Rann Utsav festival, perfect for desert camping under starlit skies, vibrant cultural performances, and exploring the white salt desert.</p>
+                    </div>
+                    <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border-2 border-indigo-200/60 hover:border-indigo-400/80 transition-all duration-300 hover:shadow-lg">
+                      <div className="flex items-start justify-between mb-2">
+                        <h4 className="font-poppins font-bold text-indigo-900 text-lg">March - April</h4>
+                        <span className="px-3 py-1 bg-gradient-to-r from-indigo-500 to-blue-500 text-white text-xs rounded-full font-bold">GOOD</span>
+                      </div>
+                      <p className="text-sm text-slate-700 font-poppins leading-relaxed">Mild temperatures, fewer tourists means better deals, excellent for photography with clear skies, ideal for village visits and craft shopping without crowds.</p>
+                    </div>
+                    <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border-2 border-red-200/60 hover:border-red-400/80 transition-all duration-300 hover:shadow-lg">
+                      <div className="flex items-start justify-between mb-2">
+                        <h4 className="font-poppins font-bold text-red-900 text-lg">May - October</h4>
+                        <span className="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs rounded-full font-bold">AVOID</span>
+                      </div>
+                      <p className="text-sm text-slate-700 font-poppins leading-relaxed">Extremely hot (40-48°C) with scorching desert heat, monsoon brings occasional rains making roads challenging, many tourist facilities remain closed during this off-season.</p>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* How to Reach */}
+                <motion.div 
+                  initial="hidden" 
+                  whileInView="visible" 
+                  viewport={{ once: true }}
+                  variants={fadeUp}
+                  className="group bg-gradient-to-br from-blue-50/80 via-cyan-50/80 to-teal-50/80 backdrop-blur-xl rounded-3xl p-8 shadow-xl border-2 border-blue-200/50 hover:border-blue-300/70 hover:shadow-2xl transition-all duration-500"
+                >
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/50 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-white text-2xl">✈️</span>
+                    </div>
+                    <div>
+                      <h3 className="text-3xl font-sora font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Getting There</h3>
+                      <p className="text-sm text-gray-600 font-poppins">All routes lead to Kutch</p>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border-2 border-blue-200/60 hover:border-blue-400/80 transition-all duration-300 hover:shadow-lg">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl flex items-center justify-center flex-shrink-0 border-2 border-blue-300">
+                          <span className="text-2xl">✈️</span>
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-poppins font-bold text-blue-900 text-lg mb-2">By Air - Fastest Route</h4>
+                          <p className="text-sm text-slate-700 font-poppins leading-relaxed mb-2"><strong>Bhuj Airport (BHJ)</strong> - Direct flights from Mumbai, Ahmedabad, and Bengaluru. Just 60 km (1 hour) from the Great Rann of Kutch.</p>
+                          <p className="text-sm text-slate-700 font-poppins leading-relaxed"><strong>Ahmedabad Airport</strong> - Major international hub, 330 km away. Scenic 5-hour drive through Gujarat's countryside.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border-2 border-indigo-200/60 hover:border-indigo-400/80 transition-all duration-300 hover:shadow-lg">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-indigo-100 to-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 border-2 border-indigo-300">
+                          <span className="text-2xl">🚂</span>
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-poppins font-bold text-indigo-900 text-lg mb-2">By Train - Scenic Journey</h4>
+                          <p className="text-sm text-slate-700 font-poppins leading-relaxed mb-2"><strong>Bhuj Railway Station</strong> - Well connected to major cities. Overnight trains from Mumbai, Delhi, and Ahmedabad available.</p>
+                          <p className="text-sm text-slate-700 font-poppins leading-relaxed"><strong>Gandhidham Junction</strong> - Alternative station, 60 km from Bhuj with more train options.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border-2 border-teal-200/60 hover:border-teal-400/80 transition-all duration-300 hover:shadow-lg">
+                      <div className="flex items-start gap-4">
+                        <div className="w-12 h-12 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-xl flex items-center justify-center flex-shrink-0 border-2 border-teal-300">
+                          <span className="text-2xl">🚗</span>
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-poppins font-bold text-teal-900 text-lg mb-2">By Road - Freedom to Explore</h4>
+                          <p className="text-sm text-slate-700 font-poppins leading-relaxed">Excellent highway network connects Kutch to Ahmedabad (330 km), Rajkot (250 km), and other Gujarat cities. State transport buses, private cabs, and self-drive options available. Road trip recommended for flexibility!</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
               </div>
             </div>
-          </motion.div>
 
-          {/* Enhanced Content Grid */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
-            
-            {/* Best Time to Visit */}
+            {/* Right Side - Hotels & Homestays Placeholder */}
             <motion.div 
               initial="hidden" 
               whileInView="visible" 
               viewport={{ once: true }}
               variants={fadeUp}
-              className="bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-500"
+              className="lg:sticky lg:top-24"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center border border-white/30">
-                  <span className="text-gray-900 text-2xl">🗓️</span>
+              <div className="bg-gradient-to-br from-orange-50/90 via-amber-50/90 to-yellow-50/90 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border-2 border-orange-200/50">
+                <div className="mb-6">
+                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-600 text-white rounded-full text-xs font-poppins font-bold mb-4 shadow-lg shadow-orange-500/30">
+                    🏨 ACCOMMODATIONS
+                  </span>
+                  <h3 className="text-4xl font-sora font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent mb-2">Where to Stay</h3>
+                  <p className="text-gray-900 font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+                    From luxury resorts to authentic village homes
+                  </p>
                 </div>
-                <h3 className="text-2xl font-sora font-bold text-gray-900">Best Time</h3>
-              </div>
-              <div className="space-y-4">
-                <div className="bg-white/90 p-4 rounded-2xl border border-white/30">
-                  <h4 className="font-poppins font-bold text-gray-900 mb-2">November - February</h4>
-                  <p className="text-sm text-slate-800 font-poppins">Perfect weather, Rann Utsav festival, ideal for desert camping</p>
-                </div>
-                <div className="bg-white/90 p-4 rounded-2xl border border-white/30">
-                  <h4 className="font-poppins font-bold text-gray-900 mb-2">March - April</h4>
-                  <p className="text-sm text-slate-800 font-poppins">Mild temperatures, fewer crowds, great for photography</p>
-                </div>
-                <div className="bg-white/90 p-4 rounded-2xl border border-white/30">
-                  <h4 className="font-poppins font-bold text-gray-900 mb-2">May - September</h4>
-                  <p className="text-sm text-slate-800 font-poppins">Hot & humid, monsoon season, avoid this period</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* How to Reach */}
-            <motion.div 
-              initial="hidden" 
-              whileInView="visible" 
-              viewport={{ once: true }}
-              variants={fadeUp}
-              className="bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-500"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center border border-white/30">
-                  <span className="text-gray-900 text-2xl">✈️</span>
-                </div>
-                <h3 className="text-2xl font-sora font-bold text-gray-900">How to Reach</h3>
-              </div>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1 border border-white/30">
-                    <span className="text-gray-900 text-sm">✈️</span>
+                
+                {/* Placeholder Images Grid */}
+                <div className="space-y-4">
+                  <div className="group relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-orange-200/60 via-amber-200/60 to-yellow-200/60 border-2 border-orange-300/70 hover:border-orange-400 transition-all duration-300 hover:shadow-xl cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <span className="text-7xl mb-3 group-hover:scale-110 transition-transform duration-300">🏨</span>
+                      <h4 className="text-white font-sora font-bold text-2xl mb-1 drop-shadow-lg">Luxury Hotels</h4>
+                      <p className="text-white/90 font-poppins text-sm drop-shadow-md">Premium resorts & 5-star properties</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-poppins font-semibold text-gray-900">By Air</h4>
-                    <p className="text-sm text-slate-800 font-poppins">Bhuj Airport (1 hr from Rann), Ahmedabad (4-5 hrs drive)</p>
+                  
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="group relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-amber-200/60 via-yellow-200/60 to-orange-200/60 border-2 border-amber-300/70 hover:border-amber-400 transition-all duration-300 hover:shadow-xl cursor-pointer">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                      <div className="absolute inset-0 flex flex-col items-center justify-center">
+                        <span className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">🏡</span>
+                        <h4 className="text-white font-sora font-bold text-lg drop-shadow-lg">Homestays</h4>
+                        <p className="text-white/90 font-poppins text-xs drop-shadow-md px-2 text-center">Authentic village life</p>
+                      </div>
+                    </div>
+                    
+                    <div className="group relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-yellow-200/60 via-orange-200/60 to-red-200/60 border-2 border-yellow-300/70 hover:border-yellow-400 transition-all duration-300 hover:shadow-xl cursor-pointer">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                      <div className="absolute inset-0 flex flex-col items-center justify-center">
+                        <span className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">⛺</span>
+                        <h4 className="text-white font-sora font-bold text-lg drop-shadow-lg">Desert Camps</h4>
+                        <p className="text-white/90 font-poppins text-xs drop-shadow-md px-2 text-center">Glamping under stars</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1 border border-white/30">
-                    <span className="text-gray-900 text-sm">🚂</span>
-                  </div>
-                  <div>
-                    <h4 className="font-poppins font-semibold text-gray-900">By Train</h4>
-                    <p className="text-sm text-slate-800 font-poppins">Bhuj Railway Station, Gandhidham Junction</p>
+                  
+                  <div className="group relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-red-200/60 via-orange-200/60 to-amber-200/60 border-2 border-red-300/70 hover:border-red-400 transition-all duration-300 hover:shadow-xl cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      <span className="text-7xl mb-3 group-hover:scale-110 transition-transform duration-300">🏰</span>
+                      <h4 className="text-white font-sora font-bold text-2xl mb-1 drop-shadow-lg">Heritage Stays</h4>
+                      <p className="text-white/90 font-poppins text-sm drop-shadow-md">Royal palaces & historic havelis</p>
+                    </div>
                   </div>
                 </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center flex-shrink-0 mt-1 border border-white/30">
-                    <span className="text-gray-900 text-sm">🚗</span>
+                
+                <div className="mt-8 space-y-4">
+                  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border-2 border-orange-200/60">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-2xl">💰</span>
+                      <h4 className="font-poppins font-bold text-orange-900">Budget Options</h4>
+                    </div>
+                    <p className="text-xs text-gray-700 font-poppins">Starting from ₹800/night - Guesthouses, hostels, and budget hotels available in Bhuj and surrounding villages.</p>
                   </div>
-                  <div>
-                    <h4 className="font-poppins font-semibold text-gray-900">By Road</h4>
-                    <p className="text-sm text-slate-800 font-poppins">Well-connected highways from major Gujarat cities</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* What to Pack */}
-            <motion.div 
-              initial="hidden" 
-              whileInView="visible" 
-              viewport={{ once: true }}
-              variants={fadeUp}
-              className="bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-500"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center border border-white/30">
-                  <span className="text-gray-900 text-2xl">🎒</span>
-                </div>
-                <h3 className="text-2xl font-sora font-bold text-gray-900">What to Pack</h3>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 text-sm font-poppins">
-                  <span className="w-2 h-2 bg-white rounded-full border border-white/30"></span>
-                  <span className="text-gray-700">Layered clothing for temperature changes</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm font-poppins">
-                  <span className="w-2 h-2 bg-white rounded-full border border-white/30"></span>
-                  <span className="text-gray-700">Comfortable walking shoes</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm font-poppins">
-                  <span className="w-2 h-2 bg-white rounded-full border border-white/30"></span>
-                  <span className="text-gray-700">Sunscreen & sunglasses</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm font-poppins">
-                  <span className="w-2 h-2 bg-white rounded-full border border-white/30"></span>
-                  <span className="text-gray-700">Camera with extra batteries</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm font-poppins">
-                  <span className="w-2 h-2 bg-white rounded-full border border-white/30"></span>
-                  <span className="text-gray-700">Water bottle & snacks</span>
-                </div>
-                <div className="flex items-center gap-3 text-sm font-poppins">
-                  <span className="w-2 h-2 bg-white rounded-full border border-white/30"></span>
-                  <span className="text-gray-700">First aid kit & medications</span>
+                  
+                  <Link 
+                    href="/bookings"
+                    className="block w-full text-center bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 hover:from-orange-600 hover:via-amber-600 hover:to-yellow-600 text-white px-6 py-4 rounded-2xl font-poppins font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl shadow-orange-500/30"
+                  >
+                    <span className="flex items-center justify-center gap-2">
+                      <span>Explore All Stays</span>
+                      <span>→</span>
+                    </span>
+                  </Link>
                 </div>
               </div>
             </motion.div>
           </div>
+
+          {/* Packing Essentials - Full Width Section */}
+          <motion.div 
+            initial="hidden" 
+            whileInView="visible" 
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="group bg-gradient-to-br from-violet-50/80 via-purple-50/80 to-fuchsia-50/80 backdrop-blur-xl rounded-3xl p-8 shadow-xl border-2 border-violet-200/50 hover:border-violet-300/70 hover:shadow-2xl transition-all duration-500 mb-16 mt-20"
+          >
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-violet-500/50 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white text-2xl">🎒</span>
+              </div>
+              <div>
+                <h3 className="text-3xl md:text-4xl lg:text-5xl font-sora font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Packing Essentials</h3>
+                <p className="text-base text-gray-600 font-poppins">Travel smart, travel light</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-purple-200/60 hover:border-purple-400/80 transition-all duration-300 hover:shadow-lg group">
+                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
+                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">👕</span>
+                  <div>
+                    <h4 className="font-poppins font-bold text-purple-900 mb-1 text-base">Clothing</h4>
+                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">Light cotton clothes, warm layers for nights</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-indigo-200/60 hover:border-indigo-400/80 transition-all duration-300 hover:shadow-lg group">
+                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
+                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">👟</span>
+                  <div>
+                    <h4 className="font-poppins font-bold text-indigo-900 mb-1 text-base">Footwear</h4>
+                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">Walking shoes, sandals, socks for salt flats</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-blue-200/60 hover:border-blue-400/80 transition-all duration-300 hover:shadow-lg group">
+                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
+                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">☀️</span>
+                  <div>
+                    <h4 className="font-poppins font-bold text-blue-900 mb-1 text-base">Sun Protection</h4>
+                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">SPF sunscreen, sunglasses, hat, lip balm</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-cyan-200/60 hover:border-cyan-400/80 transition-all duration-300 hover:shadow-lg group">
+                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
+                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">📸</span>
+                  <div>
+                    <h4 className="font-poppins font-bold text-cyan-900 mb-1 text-base">Photography Gear</h4>
+                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">Camera, batteries, power bank, memory cards</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-teal-200/60 hover:border-teal-400/80 transition-all duration-300 hover:shadow-lg group">
+                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
+                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">💧</span>
+                  <div>
+                    <h4 className="font-poppins font-bold text-teal-900 mb-1 text-base">Hydration & Snacks</h4>
+                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">Water bottle, dry fruits, energy bars</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-violet-200/60 hover:border-violet-400/80 transition-all duration-300 hover:shadow-lg group">
+                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
+                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">💊</span>
+                  <div>
+                    <h4 className="font-poppins font-bold text-violet-900 mb-1 text-base">Medical Essentials</h4>
+                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">First aid kit, medicines, antiseptic</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-fuchsia-200/60 hover:border-fuchsia-400/80 transition-all duration-300 hover:shadow-lg group">
+                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
+                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">🔦</span>
+                  <div>
+                    <h4 className="font-poppins font-bold text-fuchsia-900 mb-1 text-base">Night Essentials</h4>
+                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">Flashlight, warm jacket, mosquito repellent</p>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-pink-200/60 hover:border-pink-400/80 transition-all duration-300 hover:shadow-lg group">
+                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
+                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">📱</span>
+                  <div>
+                    <h4 className="font-poppins font-bold text-pink-900 mb-1 text-base">Documents & Tech</h4>
+                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">ID proof, bookings, offline maps, chargers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
 
           {/* Safety & Tips Section */}
           <motion.div 
@@ -1204,36 +1326,46 @@ export default function Home() {
             whileInView="visible" 
             viewport={{ once: true }}
             variants={fadeUp}
-            className="bg-white rounded-3xl p-8 text-gray-900 shadow-xl mb-16 border border-white/20"
+            className="group bg-gradient-to-br from-emerald-50/80 via-teal-50/80 to-cyan-50/80 backdrop-blur-xl rounded-3xl p-12 shadow-2xl mb-16 border-2 border-emerald-200/50 hover:border-emerald-300/70 hover:shadow-3xl transition-all duration-500"
           >
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-sora font-bold mb-4 flex items-center justify-center gap-3">
-                <span>🛡️</span>
-                Safety & Important Tips
-              </h3>
-              <p className="text-gray-700 text-lg font-poppins">Stay safe and make the most of your Kutch adventure</p>
+            <div className="text-center mb-10">
+              <span className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-full text-sm font-poppins font-bold tracking-wide mb-6 shadow-lg shadow-emerald-500/30 border border-emerald-400/30">
+                🛡️ TRAVEL SAFELY
+              </span>
+              <h3 className="text-4xl md:text-5xl lg:text-6xl font-sora font-bold bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent mb-4">Safety & Important Tips</h3>
+              <p className="text-gray-900 text-lg font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+                Stay safe and make the most of your Kutch adventure
+              </p>
             </div>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/30">
-                <div className="text-3xl mb-3">🌡️</div>
-                <h4 className="font-poppins font-bold mb-2">Weather Check</h4>
-                <p className="text-sm text-slate-800 font-poppins">Monitor weather conditions, especially during monsoon</p>
+              <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center border-2 border-emerald-200/60 hover:border-emerald-400/80 transition-all duration-300 hover:shadow-xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-emerald-300 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-4xl">🌡️</span>
+                </div>
+                <h4 className="font-poppins font-bold mb-3 text-emerald-900 text-lg">Weather Check</h4>
+                <p className="text-sm text-slate-700 font-poppins leading-relaxed">Monitor weather conditions daily, especially during monsoon season for safe travel</p>
               </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/30">
-                <div className="text-3xl mb-3">📱</div>
-                <h4 className="font-poppins font-bold mb-2">Stay Connected</h4>
-                <p className="text-sm text-slate-800 font-poppins">Keep emergency contacts, local network may be limited</p>
+              <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center border-2 border-teal-200/60 hover:border-teal-400/80 transition-all duration-300 hover:shadow-xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-teal-300 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-4xl">📱</span>
+                </div>
+                <h4 className="font-poppins font-bold mb-3 text-teal-900 text-lg">Stay Connected</h4>
+                <p className="text-sm text-slate-700 font-poppins leading-relaxed">Keep emergency contacts handy, local network coverage may be limited in remote areas</p>
               </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/30">
-                <div className="text-3xl mb-3">💧</div>
-                <h4 className="font-poppins font-bold mb-2">Stay Hydrated</h4>
-                <p className="text-sm text-slate-800 font-poppins">Carry plenty of water, desert climate can be dehydrating</p>
+              <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center border-2 border-cyan-200/60 hover:border-cyan-400/80 transition-all duration-300 hover:shadow-xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-cyan-300 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-4xl">💧</span>
+                </div>
+                <h4 className="font-poppins font-bold mb-3 text-cyan-900 text-lg">Stay Hydrated</h4>
+                <p className="text-sm text-slate-700 font-poppins leading-relaxed">Carry plenty of water bottles, desert climate can be extremely dehydrating in hot weather</p>
               </div>
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/30">
-                <div className="text-3xl mb-3">🗺️</div>
-                <h4 className="font-poppins font-bold mb-2">Local Guide</h4>
-                <p className="text-sm text-slate-800 font-poppins">Consider hiring local guides for remote areas</p>
+              <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center border-2 border-blue-200/60 hover:border-blue-400/80 transition-all duration-300 hover:shadow-xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-blue-300 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-4xl">🗺️</span>
+                </div>
+                <h4 className="font-poppins font-bold mb-3 text-blue-900 text-lg">Local Guide</h4>
+                <p className="text-sm text-slate-700 font-poppins leading-relaxed">Consider hiring experienced local guides for remote areas and authentic village experiences</p>
               </div>
             </div>
           </motion.div>

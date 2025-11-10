@@ -77,6 +77,7 @@ export default function Ravalpir() {
       }
       facts={data.facts}
       mapUrl={data.mapUrl}
+      gallery={[]}
     />
   );
 }

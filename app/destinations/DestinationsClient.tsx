@@ -165,96 +165,136 @@ function DestinationsClient() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-slate-100 to-zinc-50 selection:bg-gray-300 selection:text-gray-900">
+    <div className="min-h-screen bg-white selection:bg-purple-200 selection:text-purple-900">
       <Navigation />
       
-      {/* Header Section with Hero Image */}
-      <div className="relative overflow-hidden h-[min(65vh,480px)] bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
-        {/* Hero Image with Parallax Effect */}
+      {/* Header Section - Two Column Layout */}
+      <div className="relative overflow-hidden py-20 bg-white">
+        {/* Background Blobs */}
         <div className="absolute inset-0">
-          <Image
-            src="/images/destinations/hero.jpg"
-            alt="Kutch Landscape"
-            fill
-            className="object-cover opacity-60 scale-110 origin-center transform motion-safe:animate-subtle-zoom"
-            priority
-            quality={100}
-          />
-          {/* Multi-layer gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60" />
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900/30 to-purple-900/30" />
+          <div className="blob blob-1 w-[500px] h-[500px] top-0 left-0 opacity-30"></div>
+          <div className="blob blob-2 w-[400px] h-[400px] bottom-0 right-0 opacity-30"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
         </div>
         
-        <div className="relative h-full flex flex-col items-center justify-center max-w-7xl mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="absolute top-4 left-4 z-10">
             <BackButton />
           </div>
           
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
+          {/* Two Column Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Auto-rotating Image Carousel */}
             <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="mb-6"
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl order-2 lg:order-1"
             >
-              <span className="inline-block px-5 py-1.5 bg-white/10 backdrop-blur-sm text-white/90 rounded-lg text-sm font-medium tracking-wide border border-white/10 shadow-lg">
-                🗺️ Explore the Unexplored
-              </span>
-            </motion.div>
-            
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight font-sora text-white tracking-tight text-balance relative"
-            >
-              <span className="inline-block blur-xl absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-50 mix-blend-overlay" aria-hidden="true">
-                Discover Kutch
-              </span>
-              <span className="relative">
-                Discover Kutch
-              </span>
-            </motion.h1>
-
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg text-white/80 mx-auto leading-relaxed font-medium max-w-2xl text-balance mb-8"
-            >
-              From ancient temples to pristine landscapes, explore the hidden treasures of Gujarat's largest district
-            </motion.p>
-
-            {/* Stats Bar */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="flex items-center justify-center gap-8 mb-8"
-            >
-              <div className="text-center">
-                <p className="text-2xl font-bold text-white mb-1">{DESTINATIONS.length}</p>
-                <p className="text-sm text-white/70">Destinations</p>
-              </div>
-              <div className="h-8 w-px bg-white/20" />
-              <div className="text-center">
-                <p className="text-2xl font-bold text-white mb-1">{categories.length - 1}</p>
-                <p className="text-sm text-white/70">Categories</p>
+              <div className="relative h-full">
+                {DESTINATIONS.slice(0, 6).map((dest, index) => (
+                  <motion.div
+                    key={dest.slug}
+                    initial={{ opacity: 0 }}
+                    animate={{ 
+                      opacity: [0, 1, 1, 0],
+                      scale: [1.1, 1, 1, 1.1]
+                    }}
+                    transition={{
+                      duration: 5,
+                      repeat: Infinity,
+                      delay: index * 5,
+                      times: [0, 0.1, 0.9, 1]
+                    }}
+                    className="absolute inset-0"
+                    style={{ display: index === 0 ? 'block' : 'none' }}
+                  >
+                    <Image
+                      src={dest.image}
+                      alt={dest.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      priority={index === 0}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="absolute bottom-6 left-6 right-6">
+                      <h3 className="text-2xl font-sora font-bold text-white" style={{ textShadow: '2px 4px 8px rgba(0,0,0,0.6)' }}>
+                        {dest.title}
+                      </h3>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
-          </motion.div>
+
+            {/* Right Column - Discover Kutch Text */}
+            <motion.div 
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-left order-1 lg:order-2"
+            >
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="mb-8"
+              >
+                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-purple-500/30">
+                  <span>✨</span>
+                  <span>All Destinations</span>
+                </span>
+              </motion.div>
+              
+              <motion.h1 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight font-sora tracking-tight relative"
+              >
+                <span className="inline-block blur-xl absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-50 mix-blend-overlay" aria-hidden="true">
+                  Discover Kutch
+                </span>
+                <span className="relative holographic">
+                  Discover Kutch
+                </span>
+              </motion.h1>
+
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-lg md:text-xl text-gray-900 leading-relaxed mb-8 font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
+              >
+                From ancient temples to pristine landscapes, explore the hidden treasures of Gujarat's largest district
+              </motion.p>
+
+              {/* Decorative Elements */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="flex flex-col gap-4 mb-8"
+              >
+                <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
+                  <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
+                  <span className="text-base">{DESTINATIONS.length}+ Destinations</span>
+                </div>
+                <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
+                  <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
+                  <span className="text-base">Rich Heritage</span>
+                </div>
+                <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
+                  <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
+                  <span className="text-base">Cultural Experiences</span>
+                </div>
+              </motion.div>
+            </motion.div>
+          </div>
+
         </div>
-
-        {/* Decorative bottom gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
       </div>
-
-      {/* Category Filters Section */}
       {/* Category Filters and Search Section */}
       <div className="bg-white/90 backdrop-blur-xl sticky top-0 z-10 border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-5">
@@ -350,7 +390,7 @@ function DestinationsClient() {
                       
                       {/* Gradient Overlays */}
                       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20 group-hover:from-purple-600/30 group-hover:to-blue-600/30 transition-all duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-cyan-400/10 group-hover:from-white/20 group-hover:to-cyan-300/20 transition-all duration-700" />
                       
                       {/* Premium Category Badge */}
                       <div className="absolute top-6 right-6 z-10">
@@ -383,7 +423,7 @@ function DestinationsClient() {
                     {/* Enhanced Content Area */}
                     <div className="p-7 bg-white/90 backdrop-blur-xl border-t border-purple-100">
                       <p className="text-gray-700 font-poppins text-base leading-relaxed mb-5 line-clamp-3 group-hover:text-gray-800 transition-colors">
-                        {destination.description}
+                        {destination.sections[0]?.content?.replace(/<[^>]*>/g, '') || destination.title}
                       </p>
                       
                       {/* Action Footer */}

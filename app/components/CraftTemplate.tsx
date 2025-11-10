@@ -50,19 +50,19 @@ export default function CraftTemplate({ craft }: CraftProps) {
   };
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-gradient-to-br from-amber-50/50 via-orange-50/50 to-rose-50/50">
+    <main className="min-h-screen overflow-x-hidden bg-gradient-to-br from-purple-50/40 via-indigo-50/30 to-blue-50/40">
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-sm border-b border-slate-200 shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-14">
             <div className="flex">
-              <Link href="/#culture" className="flex items-center gap-2 text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors">
+              <Link href="/#culture" className="flex items-center gap-2 text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors">
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Culture & Crafts</span>
               </Link>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="/" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
+              <Link href="/" className="text-sm font-medium text-slate-600 hover:text-purple-700 transition-colors">
                 Home
               </Link>
             </div>
@@ -126,12 +126,12 @@ export default function CraftTemplate({ craft }: CraftProps) {
         <div className="space-y-6">
           {craft.sections.map((section, index) => {
             const sectionColors = [
-              { bg: "bg-amber-50", text: "text-amber-900", border: "border-amber-400" },
-              { bg: "bg-orange-50", text: "text-orange-900", border: "border-orange-400" },
-              { bg: "bg-rose-50", text: "text-rose-900", border: "border-rose-400" },
-              { bg: "bg-red-50", text: "text-red-900", border: "border-red-400" },
-              { bg: "bg-yellow-50", text: "text-yellow-900", border: "border-yellow-400" },
-              { bg: "bg-pink-50", text: "text-pink-900", border: "border-pink-400" },
+              { bg: "bg-purple-50", text: "text-purple-900", border: "border-purple-400" },
+              { bg: "bg-indigo-50", text: "text-indigo-900", border: "border-indigo-400" },
+              { bg: "bg-blue-50", text: "text-blue-900", border: "border-blue-400" },
+              { bg: "bg-violet-50", text: "text-violet-900", border: "border-violet-400" },
+              { bg: "bg-fuchsia-50", text: "text-fuchsia-900", border: "border-fuchsia-400" },
+              { bg: "bg-cyan-50", text: "text-cyan-900", border: "border-cyan-400" },
             ];
             const colorSet = sectionColors[index % sectionColors.length];
 
@@ -200,17 +200,17 @@ export default function CraftTemplate({ craft }: CraftProps) {
 
       {/* Quick Facts */}
       <section className="max-w-6xl mx-auto px-6 py-8 mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
           Quick Facts
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {craft.facts.map((fact, index) => {
             const colors = [
-              { bg: "bg-amber-50", text: "text-amber-900", border: "border-amber-300", shadow: "hover:shadow-amber-200/50" },
-              { bg: "bg-orange-50", text: "text-orange-900", border: "border-orange-300", shadow: "hover:shadow-orange-200/50" },
-              { bg: "bg-rose-50", text: "text-rose-900", border: "border-rose-300", shadow: "hover:shadow-rose-200/50" },
-              { bg: "bg-red-50", text: "text-red-900", border: "border-red-300", shadow: "hover:shadow-red-200/50" },
-              { bg: "bg-yellow-50", text: "text-yellow-900", border: "border-yellow-300", shadow: "hover:shadow-yellow-200/50" },
+              { bg: "bg-purple-50", text: "text-purple-900", border: "border-purple-300", shadow: "hover:shadow-purple-200/50" },
+              { bg: "bg-indigo-50", text: "text-indigo-900", border: "border-indigo-300", shadow: "hover:shadow-indigo-200/50" },
+              { bg: "bg-blue-50", text: "text-blue-900", border: "border-blue-300", shadow: "hover:shadow-blue-200/50" },
+              { bg: "bg-violet-50", text: "text-violet-900", border: "border-violet-300", shadow: "hover:shadow-violet-200/50" },
+              { bg: "bg-fuchsia-50", text: "text-fuchsia-900", border: "border-fuchsia-300", shadow: "hover:shadow-fuchsia-200/50" },
             ];
             const colorSet = colors[index % colors.length];
             
@@ -228,7 +228,7 @@ export default function CraftTemplate({ craft }: CraftProps) {
 
       {/* Gallery */}
       <section className="max-w-6xl mx-auto px-6 py-8 mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-amber-600 via-orange-600 to-red-600 bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
           Gallery
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">

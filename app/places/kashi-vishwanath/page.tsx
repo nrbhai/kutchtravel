@@ -77,6 +77,7 @@ export default function KashiVishwanath() {
       }
       facts={data.facts}
       mapUrl={data.mapUrl}
+      gallery={[]}
     />
   );
 }

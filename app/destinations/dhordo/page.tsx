@@ -54,19 +54,8 @@ export default function Dhordo() {
     };
   });
 
-  const formattedFacts = dhordo.facts.map((fact, index) => {
-    // Split facts at the colon if present
-    const [title, content] = fact.includes(':') 
-      ? fact.split(':') 
-      : [`Interesting Fact ${index + 1}`, fact];
-    return {
-      title: title.trim(),
-      content: content.trim()
-    };
-  });
-
   const formattedGallery = dhordo.gallery.map(item => ({
-    image: item.src,
+    src: item.src,
     caption: item.caption
   }));
 
@@ -85,10 +74,9 @@ export default function Dhordo() {
         title={dhordo.title}
         image={dhordo.image}
         description={description}
-        facts={formattedFacts}
+        facts={dhordo.facts}
         mapUrl={dhordo.mapUrl}
         gallery={formattedGallery}
-        sections={formattedSections}
       />
     </>
   );

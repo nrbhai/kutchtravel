@@ -24,8 +24,8 @@ export const Section: React.FC<SectionProps> = ({
   variant = 'dark'
 }) => {
   const gradientClass = variant === 'dark' 
-    ? theme.colors.gradients.primary 
-    : theme.colors.gradients.light;
+    ? 'from-gray-900 via-gray-800 to-gray-900' 
+    : 'from-gray-50 via-white to-gray-50';
     
   return (
     <section id={id} className={`relative overflow-hidden ${theme.spacing.section} ${className}`}>

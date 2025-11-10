@@ -3,6 +3,7 @@ import {
   getTextColor,
   getBgColor,
   getBorderColor,
+  getTextSize,
   theme,
 } from "@/app/theme/config";
 import { useState, useEffect } from "react";
@@ -112,7 +113,7 @@ export default function DestinationTemplate({
         {/* Facts Section */}
         {facts && facts.length > 0 && (
           <div className={`mt-12 p-6 rounded-xl ${getBgColor("card")} ${getBorderColor("DEFAULT")} shadow-sm`}>
-            <h3 className={`${getFont("heading")} ${getTextSize("xl")} mb-4`}>Quick Facts</h3>
+            <h3 className={`${getFont("heading")} ${getTextSize("h3")} mb-4`}>Quick Facts</h3>
             <ul className="grid gap-3">
               {facts.map((fact, index) => (
                 <li key={index} className="flex items-start gap-2">

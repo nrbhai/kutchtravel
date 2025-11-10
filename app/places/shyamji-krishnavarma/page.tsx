@@ -77,6 +77,7 @@ export default function ShyamjiKrishnavarma() {
       }
       facts={data.facts}
       mapUrl={data.mapUrl}
+      gallery={[]}
     />
   );
 }

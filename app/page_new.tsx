@@ -9,9 +9,25 @@ import Navigation from "./components/Navigation";
 import { DESTINATIONS } from "@/app/destinations/data";
 import { useState } from "react";
 
+// Animation variants
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.12, delayChildren: 0.2 } },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+};
+
 // [Previous imports and constants remain the same...]
 
 export default function Home() {
+  // Subtitle configuration: per-letter sparkle timing
+  const subtitle = "Beyond the White Desert";
+  const perLetterDuration = 0.6; // seconds each letter's active window
+  const totalDuration = Math.max(3, subtitle.length * perLetterDuration); // total cycle duration
+
   // [Previous state and constants remain the same...]
 
   return (
