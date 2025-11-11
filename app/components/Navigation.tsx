@@ -56,9 +56,8 @@ export default function Navigation() {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="fixed top-0 inset-x-0 z-50"
     >
-      {/* Enhanced Glassmorphism Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/98 to-white/95 backdrop-blur-2xl border-b border-gray-200 shadow-lg">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/40" />
+      {/* Transparent Background */}
+      <div className="absolute inset-0 bg-transparent">
       </div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
