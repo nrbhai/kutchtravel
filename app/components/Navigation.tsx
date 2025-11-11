@@ -57,164 +57,39 @@ export default function Navigation() {
       className="fixed top-0 inset-x-0 z-50"
     >
       {/* Enhanced Glassmorphism Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/98 to-white/95 backdrop-blur-2xl border-b border-gray-200 shadow-xl">
+      <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/98 to-white/95 backdrop-blur-2xl border-b border-gray-200 shadow-lg">
         <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/60 to-white/40" />
       </div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-14">
           
           {/* Logo/Brand */}
-          <Link href="/" className="group flex items-center space-x-3">
+          <Link href="/" className="group flex items-center space-x-2">
             <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-2xl transition-all duration-300 group-hover:scale-110 group-hover:rotate-6">
-                <MapPin className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:rotate-3">
+                <MapPin className="w-5 h-5 text-white" />
               </div>
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse shadow-lg" />
+              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse shadow-md" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-2xl font-bold font-sora bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent whitespace-nowrap tracking-tight">
+              <h1 className="text-xl font-bold font-sora bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent whitespace-nowrap tracking-tight">
                 TravelKutch
               </h1>
-              <p className="text-xs text-gray-600 font-medium font-poppins tracking-wide">Discover the Magic</p>
+              <p className="text-xs text-gray-500 font-medium font-poppins tracking-wide">Discover the Magic</p>
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
-            
-            {/* Home Link */}
-            <Link href="/" className="group relative flex items-center space-x-2 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 transition-all duration-300 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-indigo-500/5 group-hover:via-purple-500/5 group-hover:to-pink-500/5 transition-all duration-500" />
-              <Home className="w-4 h-4 text-gray-600 group-hover:text-indigo-600 transition-colors duration-300 relative z-10" />
-              <span className="text-sm font-semibold font-sora text-gray-700 group-hover:text-indigo-600 transition-colors duration-300 relative z-10">Home</span>
-            </Link>
-
-            {/* Destinations Dropdown */}
-            <Popover className="relative">
-              {({ open }) => (
-                <>
-                  <PopoverButton className="group relative flex items-center space-x-2 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 transition-all duration-300 outline-none overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-indigo-500/5 group-hover:via-purple-500/5 group-hover:to-pink-500/5 transition-all duration-500" />
-                    <MapPin className="w-4 h-4 text-gray-600 group-hover:text-purple-600 transition-colors duration-300 relative z-10" />
-                    <span className="text-sm font-semibold font-sora text-gray-700 group-hover:text-purple-600 transition-colors duration-300 relative z-10">Destinations</span>
-                    <ChevronDown className={`w-4 h-4 text-gray-500 group-hover:text-purple-600 transition-all duration-300 relative z-10 ${open ? 'rotate-180' : ''}`} />
-                  </PopoverButton>
-
-                  <AnimatePresence>
-                    {open && (
-                      <PopoverPanel
-                        static
-                        as={motion.div}
-                        key="destinations-panel"
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                        variants={panelVars}
-                        anchor="bottom start"
-                        className="absolute left-0 mt-4 w-96 origin-top-left z-50"
-                      >
-                        <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl">
-                          <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 p-4">
-                            <div className="flex items-center space-x-2 text-white">
-                              <Sparkles className="w-5 h-5" />
-                              <span className="font-semibold font-sora">Explore Kutch Destinations</span>
-                            </div>
-                          </div>
-                          
-                          <div className="p-4 max-h-80 overflow-y-auto">
-                            <div className="grid grid-cols-1 gap-2">
-                              {DESTINATIONS.map((destination, i) => {
-                                const Icon = destination.icon;
-                                return (
-                                  <motion.div
-                                    key={destination.slug}
-                                    custom={i}
-                                    variants={itemVars}
-                                    initial="hidden"
-                                    animate="visible"
-                                    exit="exit"
-                                  >
-                                    <Link
-                                      href={`/destinations/${destination.slug}`}
-                                      className="group flex items-center space-x-3 p-3 rounded-xl hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 transition-all duration-300 hover:shadow-md"
-                                    >
-                                      <div className="w-10 h-10 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-md">
-                                        <Icon className="w-5 h-5 text-white" />
-                                      </div>
-                                      <div className="flex-1">
-                                        <div className="font-semibold font-sora text-gray-800 group-hover:text-indigo-600 transition-colors">{destination.title}</div>
-                                        <div className="text-sm text-gray-500 font-poppins">{destination.category}</div>
-                                      </div>
-                                    </Link>
-                                  </motion.div>
-                                );
-                              })}
-                            </div>
-                            
-                            <div className="mt-4 pt-4 border-t border-gray-200">
-                              <Link 
-                                href="/destinations" 
-                                className="flex items-center justify-center space-x-2 w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 font-medium font-sora shadow-lg hover:shadow-xl"
-                              >
-                                <MapPin className="w-4 h-4" />
-                                <span>View All Destinations</span>
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </PopoverPanel>
-                    )}
-                  </AnimatePresence>
-                </>
-              )}
-            </Popover>
-
-            {/* Other Navigation Items */}
-            <Link href="/hidden-gems" className="group relative flex items-center space-x-2 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-pink-50 hover:to-purple-50 transition-all duration-300 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-500/0 via-purple-500/0 to-indigo-500/0 group-hover:from-pink-500/5 group-hover:via-purple-500/5 group-hover:to-indigo-500/5 transition-all duration-500" />
-              <Sparkles className="w-4 h-4 text-gray-600 group-hover:text-pink-600 transition-colors duration-300 relative z-10" />
-              <span className="text-sm font-semibold font-sora text-gray-700 group-hover:text-pink-600 transition-colors duration-300 relative z-10 whitespace-nowrap">Hidden Gems</span>
-            </Link>
-            
-            <Link href="/bookings" className="group relative flex items-center space-x-2 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-cyan-50 hover:to-blue-50 transition-all duration-300 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/0 via-blue-500/0 to-indigo-500/0 group-hover:from-cyan-500/5 group-hover:via-blue-500/5 group-hover:to-indigo-500/5 transition-all duration-500" />
-              <Calendar className="w-4 h-4 text-gray-600 group-hover:text-cyan-600 transition-colors duration-300 relative z-10" />
-              <span className="text-sm font-semibold font-sora text-gray-700 group-hover:text-cyan-600 transition-colors duration-300 relative z-10">Bookings</span>
-            </Link>
-            
-            <Link href="/#culture" className="group relative flex items-center space-x-2 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50 transition-all duration-300 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-pink-500/0 to-indigo-500/0 group-hover:from-purple-500/5 group-hover:via-pink-500/5 group-hover:to-indigo-500/5 transition-all duration-500" />
-              <Camera className="w-4 h-4 text-gray-600 group-hover:text-purple-600 transition-colors duration-300 relative z-10" />
-              <span className="text-sm font-semibold font-sora text-gray-700 group-hover:text-purple-600 transition-colors duration-300 relative z-10">Culture</span>
-            </Link>
-            
-            <Link href="/gallery" className="group relative flex items-center space-x-2 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-indigo-50 hover:to-purple-50 transition-all duration-300 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/0 via-purple-500/0 to-pink-500/0 group-hover:from-indigo-500/5 group-hover:via-purple-500/5 group-hover:to-pink-500/5 transition-all duration-500" />
-              <Camera className="w-4 h-4 text-gray-600 group-hover:text-indigo-600 transition-colors duration-300 relative z-10" />
-              <span className="text-sm font-semibold font-sora text-gray-700 group-hover:text-indigo-600 transition-colors duration-300 relative z-10">Gallery</span>
-            </Link>
-            
-            <Link href="/#guide" className="group relative flex items-center space-x-2 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-blue-50 hover:to-cyan-50 transition-all duration-300 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-cyan-500/0 to-indigo-500/0 group-hover:from-blue-500/5 group-hover:via-cyan-500/5 group-hover:to-indigo-500/5 transition-all duration-500" />
-              <BookOpen className="w-4 h-4 text-gray-600 group-hover:text-blue-600 transition-colors duration-300 relative z-10" />
-              <span className="text-sm font-semibold font-sora text-gray-700 group-hover:text-blue-600 transition-colors duration-300 relative z-10">Guide</span>
-            </Link>
-            
-            <Link href="/about" className="group relative flex items-center space-x-2 px-4 py-2.5 rounded-xl hover:bg-gradient-to-r hover:from-purple-50 hover:to-indigo-50 transition-all duration-300 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-500/0 via-indigo-500/0 to-pink-500/0 group-hover:from-purple-500/5 group-hover:via-indigo-500/5 group-hover:to-pink-500/5 transition-all duration-500" />
-              <Users className="w-4 h-4 text-gray-600 group-hover:text-purple-600 transition-colors duration-300 relative z-10" />
-              <span className="text-sm font-semibold font-sora text-gray-700 group-hover:text-purple-600 transition-colors duration-300 relative z-10">About</span>
-            </Link>
-
-            {/* Language Selector */}
-            <div className="flex items-center space-x-2 px-3 py-2 rounded-xl bg-gradient-to-r from-indigo-50/50 to-purple-50/50 border border-indigo-100" style={{ pointerEvents: 'auto' }}>
-              <Globe className="w-4 h-4 text-indigo-600 flex-shrink-0" />
-              <div style={{ pointerEvents: 'auto' }}>
-                <GoogleTranslate />
-              </div>
-            </div>
-          </div>
+          {/* Hidden Gems Button */}
+          <Link 
+            href="/hidden-gems"
+            className="group relative flex items-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-pink-50 to-purple-50 hover:from-pink-100 hover:to-purple-100 border border-pink-200 transition-all duration-300 hover:shadow-md hover:scale-105"
+          >
+            <Sparkles className="w-4 h-4 text-pink-600 group-hover:text-pink-700 transition-colors duration-300" />
+            <span className="text-sm font-semibold font-sora text-pink-700 group-hover:text-pink-800 transition-colors duration-300 whitespace-nowrap">
+              Hidden Gems
+            </span>
+          </Link>
 
           {/* Mobile Menu */}
           <Menu as="div" className="lg:hidden relative">
