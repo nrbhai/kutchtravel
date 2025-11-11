@@ -79,8 +79,16 @@ export default function Navigation() {
             </div>
           </Link>
 
-          {/* Empty space - all navigation in tabs */}
-          <div></div>
+          {/* Home Button */}
+          <Link 
+            href="/"
+            className="group relative flex items-center space-x-2 px-4 py-2 rounded-xl bg-white/90 hover:bg-white border border-gray-200 hover:border-indigo-300 backdrop-blur-sm shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+          >
+            <Home className="w-4 h-4 text-indigo-600 group-hover:text-indigo-700 transition-colors duration-300" />
+            <span className="text-sm font-semibold font-sora text-gray-700 group-hover:text-indigo-700 transition-colors duration-300">
+              Home
+            </span>
+          </Link>
 
           {/* Mobile Menu */}
           <Menu as="div" className="lg:hidden relative">
