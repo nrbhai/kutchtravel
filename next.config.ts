@@ -6,9 +6,6 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   
-  // Output mode for production deployment
-  output: 'standalone',
-  
   // Image Optimizations
   images: {
     formats: ['image/webp', 'image/avif'],
