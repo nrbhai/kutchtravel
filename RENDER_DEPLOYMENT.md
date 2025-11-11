@@ -51,6 +51,7 @@ This guide will help you deploy the Kutch Travel website on Render.
    - Add these environment variables:
      - `NODE_VERSION` = `20.11.0`
      - `NODE_ENV` = `production`
+     - `PORT` = `10000`
 
 4. **Deploy**
    - Click "Create Web Service"
@@ -81,9 +82,10 @@ This guide will help you deploy the Kutch Travel website on Render.
 ### Build Configuration
 
 The project is configured with:
-- **Output mode**: `standalone` - Optimized for production deployment
+- **Output mode**: Standard Next.js server (optimized for Render)
 - **Node version**: 20.11.0 (LTS)
 - **Next.js version**: 16.0.1
+- **Port**: 10000 (Render's default)
 
 ### Free Tier Limitations
 
