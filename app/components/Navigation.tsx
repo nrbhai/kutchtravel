@@ -80,16 +80,8 @@ export default function Navigation() {
             </div>
           </Link>
 
-          {/* Hidden Gems Button */}
-          <Link 
-            href="/hidden-gems"
-            className="group relative flex items-center space-x-2 px-4 py-2 rounded-xl bg-gradient-to-r from-pink-50 to-purple-50 hover:from-pink-100 hover:to-purple-100 border border-pink-200 transition-all duration-300 hover:shadow-md hover:scale-105"
-          >
-            <Sparkles className="w-4 h-4 text-pink-600 group-hover:text-pink-700 transition-colors duration-300" />
-            <span className="text-sm font-semibold font-sora text-pink-700 group-hover:text-pink-800 transition-colors duration-300 whitespace-nowrap">
-              Hidden Gems
-            </span>
-          </Link>
+          {/* Empty space - all navigation in tabs */}
+          <div></div>
 
           {/* Mobile Menu */}
           <Menu as="div" className="lg:hidden relative">

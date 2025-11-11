@@ -468,12 +468,12 @@ export default function Home() {
                 <span className="text-sm font-medium text-blue-900 font-sans tracking-wide">Destinations</span>
               </div>
             </Link>
-            <Link href="/itineraries" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-emerald-50 via-teal-50/80 to-emerald-50 backdrop-blur-sm border border-emerald-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-b from-emerald-100/50 via-teal-100/50 to-emerald-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+            <Link href="/hidden-gems" 
+              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-pink-50 via-purple-50/80 to-pink-50 backdrop-blur-sm border border-pink-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-b from-pink-100/50 via-purple-100/50 to-pink-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Calendar className="w-8 h-8 text-emerald-600 mb-3 transform group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium text-emerald-900 font-sans tracking-wide">Itineraries</span>
+                <Sparkles className="w-8 h-8 text-pink-600 mb-3 transform group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-sm font-medium text-pink-900 font-sans tracking-wide">Hidden Gems</span>
               </div>
             </Link>
             <Link href="/experiences" 
