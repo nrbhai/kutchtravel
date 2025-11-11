@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
   
+  // Output mode for production deployment
+  output: 'standalone',
+  
   // Image Optimizations
   images: {
     formats: ['image/webp', 'image/avif'],
@@ -67,21 +70,6 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['framer-motion', 'lucide-react'],
   },
-
-  // Turbopack configuration
-  turbopack: {
-    rules: {
-      '*.svg': {
-        loaders: ['@svgr/webpack'],
-        as: '*.js',
-      },
-    },
-  },
-
-  // Bundle analyzer (enable when needed)
-  // env: {
-  //   ANALYZE: process.env.ANALYZE,
-  // },
 };
 
 // Wrap with bundle analyzer if needed
