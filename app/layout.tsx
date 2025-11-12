@@ -152,6 +152,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="theme-color" content="#0ea5e9" />
       </head>
       <body className={`${inter.variable} ${playfair.variable} ${lora.variable} ${dancing.variable} ${poppins.variable} ${spaceGrotesk.variable} ${sora.variable}`}>
+        {/* Work in Progress Banner */}
+        <div className="bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 text-white py-3 px-4 text-center font-semibold shadow-lg sticky top-0 z-50">
+          <p className="text-sm md:text-base">
+            🚧 Work in Progress - Website Under Development 🚧
+          </p>
+        </div>
+        
         <ErrorBoundary>
           <Suspense fallback={<div>Loading...</div>}>
             {children}
