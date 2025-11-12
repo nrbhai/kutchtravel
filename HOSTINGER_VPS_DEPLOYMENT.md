@@ -28,9 +28,16 @@ ssh root@YOUR_VPS_IP_ADDRESS
 # Update system packages
 sudo apt update && sudo apt upgrade -y
 
+# Install Node.js v20 using NVM (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+
+# Load NVM
+source ~/.bashrc
+
 # Install Node.js v20 (LTS)
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt install -y nodejs
+nvm install 20
+nvm use 20
+nvm alias default 20
 
 # Verify installation
 node --version  # Should show v20.x.x

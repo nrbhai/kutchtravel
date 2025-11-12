@@ -1,4 +1,4 @@
-# 🚀 Quick Deployment Steps - Hostinger VPS
+ye# 🚀 Quick Deployment Steps - Hostinger VPS
 
 ## Copy-Paste Commands (Run in order)
 
@@ -10,8 +10,19 @@ ssh root@YOUR_VPS_IP
 ### 2️⃣ Install Node.js & Dependencies
 ```bash
 sudo apt update && sudo apt upgrade -y
-curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt install -y nodejs git
+
+# Install Node.js v20 using official method
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+source ~/.bashrc
+nvm install 20
+nvm use 20
+
+# Verify Node.js installation
+node --version
+npm --version
+
+# Install Git and PM2
+sudo apt install -y git
 sudo npm install -g pm2
 ```
 
