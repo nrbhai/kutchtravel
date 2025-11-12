@@ -339,10 +339,13 @@ export default function Home() {
 
   return (
     <main className="scroll-smooth selection:bg-gray-300 selection:text-gray-900 relative text-gray-900 dark:bg-gray-950 dark:text-gray-900">
-      <Navigation />
-
       {/* 1️⃣ Modern Hero Section with Animated Mesh Background */}
       <section id="home" className="relative min-h-[85vh] flex items-center overflow-hidden">
+        {/* Navigation - Position it absolutely over the hero */}
+        <div className="absolute top-0 left-0 right-0 z-50">
+          <Navigation />
+        </div>
+        
         {/* Background Elements */}
         <div className="absolute inset-0 bg-white/90">
           <div className="blob blob-1 w-[400px] h-[400px] top-0 left-0 opacity-40"></div>
@@ -474,14 +477,6 @@ export default function Home() {
               <div className="relative z-10">
                 <Sparkles className="w-8 h-8 text-pink-600 mb-3 transform group-hover:scale-110 transition-transform duration-300" />
                 <span className="text-sm font-medium text-pink-900 font-sans tracking-wide">Hidden Gems</span>
-              </div>
-            </Link>
-            <Link href="/experiences" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-amber-50 via-orange-50/80 to-amber-50 backdrop-blur-sm border border-amber-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-b from-amber-100/50 via-orange-100/50 to-amber-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
-              <div className="relative z-10">
-                <Sparkles className="w-8 h-8 text-amber-600 mb-3 transform group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium text-amber-900 font-sans tracking-wide">Experiences</span>
               </div>
             </Link>
             <Link href="/guide" 

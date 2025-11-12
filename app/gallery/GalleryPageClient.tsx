@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import GalleryClient from './GalleryClient';
-import BackButton from './BackButton';
 import Navigation from '../components/Navigation';
 
 export default function GalleryPageClient() {
@@ -26,10 +25,13 @@ export default function GalleryPageClient() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-slate-100 to-zinc-50">
-      <Navigation />
-      
       {/* Modern Header with Back Button */}
-      <div className="relative overflow-hidden py-16">
+      <div className="relative overflow-hidden pt-8 pb-16">
+        {/* Navigation - Position it absolutely over the section */}
+        <div className="absolute top-0 left-0 right-0 z-50">
+          <Navigation />
+        </div>
+        
         {/* Animated background blobs */}
         <div className="absolute inset-0">
           <div className="blob blob-1 bg-gray-500/30"></div>
@@ -37,12 +39,7 @@ export default function GalleryPageClient() {
           <div className="blob blob-3 bg-gray-500/30"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-6">
-          {/* Back Button */}
-          <div className="mb-6">
-            <BackButton />
-          </div>
-
+        <div className="relative max-w-7xl mx-auto px-6 pt-20">
           {/* Header Content */}
           <div className="text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black mb-6 text-gray-900 leading-tight font-sora holographic">

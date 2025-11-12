@@ -2,9 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Phone, Mail, MapPin, Clock, Users, Heart, Star, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Users, Heart, Star, Camera, Compass, Award, Sparkles } from 'lucide-react';
 import Navigation from '../components/Navigation';
-import BackButton from '../bookings/BackButton';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -12,274 +11,303 @@ const fadeUp = {
 };
 
 const stagger = {
-  visible: { transition: { staggerChildren: 0.1 } }
+  visible: { transition: { staggerChildren: 0.15 } }
+};
+
+const scaleIn = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
 };
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-50 via-slate-100 to-zinc-50">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-24">
-        {/* Animated background blobs */}
-        <div className="absolute inset-0">
-          <div className="blob blob-1 bg-gray-500/30"></div>
-          <div className="blob blob-2 bg-gray-500/30"></div>
-          <div className="blob blob-3 bg-gray-500/30"></div>
+    <main className="min-h-screen bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50">
+      <section className="relative overflow-hidden pt-8 pb-12">
+        {/* Navigation - Position it absolutely over the section */}
+        <div className="absolute top-0 left-0 right-0 z-50">
+          <Navigation />
         </div>
+        
+        <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 opacity-5"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6">
-          <BackButton />
-          
-          <motion.div 
-            initial="hidden" 
-            animate="visible" 
-            variants={fadeUp}
-            className="text-center mb-16"
-          >
-            <div className="mb-6">
-              <span className="inline-flex items-center px-8 py-3 bg-white/10 backdrop-blur-xl rounded-full text-base font-bold tracking-wide border border-gray-200 shadow-xl relative overflow-hidden font-poppins">
-                <span className="relative z-10 text-gray-600">
-                  ✨ Your Gateway to Kutch's Wonders ✨
+        <div className="relative max-w-7xl mx-auto px-6 pt-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mt-8">
+            <motion.div initial="hidden" animate="visible" variants={fadeUp}>
+              <div className="mb-6">
+                <span className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-sm font-bold tracking-wide text-white shadow-lg">
+                  ✨ About Us
                 </span>
-              </span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight font-sora holographic">
-              Discover Kutch with Us
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-medium font-poppins">
-              Your trusted local guide to exploring the magical landscapes, rich heritage, 
-              and vibrant culture of Kutch, Gujarat.
-            </p>
-          </motion.div>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight font-sora">
+                <span className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  Your Gateway to
+                </span>
+                <br />
+                <span className="text-gray-900">Kutch Wonders</span>
+              </h1>
+              <p className="text-xl text-gray-700 leading-relaxed font-poppins mb-8">
+                We are passionate local experts dedicated to showcasing the incredible beauty, rich heritage, and vibrant culture of Kutch, Gujarat.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-md">
+                  <Award className="w-5 h-5 text-indigo-600" />
+                  <span className="font-semibold text-gray-800">10,000+ Travelers</span>
+                </div>
+                <div className="flex items-center gap-2 bg-white rounded-full px-6 py-3 shadow-md">
+                  <Star className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                  <span className="font-semibold text-gray-800">4.9/5 Rating</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div initial="hidden" animate="visible" variants={scaleIn} className="relative">
+              <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-400 via-purple-400 to-pink-400 flex items-center justify-center">
+                  <div className="text-center text-white">
+                    <Camera className="w-20 h-20 mx-auto mb-4 opacity-50" />
+                    <p className="text-xl font-semibold">Team Photo</p>
+                    <p className="text-sm opacity-75">Coming Soon</p>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 w-24 h-24 bg-yellow-400 rounded-full blur-3xl opacity-50"></div>
+                <div className="absolute bottom-4 left-4 w-32 h-32 bg-pink-400 rounded-full blur-3xl opacity-50"></div>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-6 pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          
-          {/* About Content */}
-          <motion.div 
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true }}
-            variants={stagger}
-            className="space-y-8"
-          >
-            {/* Our Story */}
-            <motion.div 
-              variants={fadeUp}
-              className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-gray-200"
-            >
+      <div className="max-w-7xl mx-auto px-6 py-12">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-16">
+          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl p-10 shadow-2xl text-white overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-pink-400 rounded-full blur-3xl opacity-30"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow-400 rounded-full blur-3xl opacity-20"></div>
+            <div className="relative z-10">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center">
-                  <Heart className="text-gray-900" size={24} />
+                <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                  <Heart className="text-white" size={28} />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900 font-sora">Our Story</h2>
+                <h2 className="text-4xl font-bold font-sora">Our Story</h2>
               </div>
-              <p className="text-gray-700 leading-relaxed mb-4 font-poppins">
-                Born from a passion for showcasing the incredible beauty and rich cultural heritage of Kutch, 
-                we are dedicated to providing authentic and memorable experiences for travelers from around the world.
-              </p>
-              <p className="text-gray-700 leading-relaxed font-poppins">
-                From the pristine white salt desert of the Great Rann to the bustling markets of Bhuj, 
-                from ancient handicrafts to modern hospitality, we help you discover the true essence of Kutch.
-              </p>
+              <div className="grid md:grid-cols-2 gap-8">
+                <p className="text-lg text-white/95 leading-relaxed font-poppins">
+                  Born from a passion for showcasing the incredible beauty and rich cultural heritage of Kutch, we are dedicated to providing authentic and memorable experiences for travelers from around the world.
+                </p>
+                <p className="text-lg text-white/95 leading-relaxed font-poppins">
+                  From the pristine white salt desert of the Great Rann to the bustling markets of Bhuj, from ancient handicrafts to modern hospitality, we help you discover the true essence of Kutch.
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={scaleIn} className="mb-16">
+          <div className="relative h-96 rounded-3xl overflow-hidden shadow-2xl">
+            <div className="absolute inset-0 bg-gradient-to-br from-orange-400 via-pink-400 to-purple-400 flex items-center justify-center">
+              <div className="text-center text-white">
+                <Compass className="w-20 h-20 mx-auto mb-4 opacity-50" />
+                <p className="text-2xl font-bold">Kutch Landscape</p>
+                <p className="text-sm opacity-75 mt-2">Placeholder Image</p>
+              </div>
+            </div>
+            <div className="absolute top-6 left-6 w-32 h-32 bg-yellow-300 rounded-full blur-3xl opacity-40"></div>
+            <div className="absolute bottom-6 right-6 w-40 h-40 bg-pink-300 rounded-full blur-3xl opacity-40"></div>
+          </div>
+        </motion.div>
+
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger} className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 font-sora">
+              <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+                Why Choose Us
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 font-poppins">We bring Kutch to life with expertise and passion</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div variants={fadeUp} className="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl p-8 text-white shadow-xl hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4">
+                <Users size={32} />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 font-sora">Local Expertise</h3>
+              <p className="text-white/90 font-poppins">Deep knowledge of Kutch hidden gems and cultural nuances</p>
             </motion.div>
 
-            {/* Why Choose Us */}
-            <motion.div 
-              variants={fadeUp}
-              className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-gray-200"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-gray-500 to-gray-600 rounded-2xl flex items-center justify-center">
-                  <Star className="text-gray-900" size={24} />
-                </div>
-                <h2 className="text-3xl font-bold text-gray-900 font-sora">Why Choose Us</h2>
+            <motion.div variants={fadeUp} className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-8 text-white shadow-xl hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4">
+                <Sparkles size={32} />
               </div>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-gray-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Users size={16} className="text-gray-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1 font-sora">Local Expertise</h3>
-                    <p className="text-sm text-gray-600 font-poppins">Deep knowledge of Kutch's hidden gems and cultural nuances</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-gray-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Globe size={16} className="text-gray-300" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1 font-sora">Authentic Experiences</h3>
-                    <p className="text-sm text-gray-600 font-poppins">Genuine connections with local communities and traditions</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-gray-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Clock size={16} className="text-gray-800" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1 font-sora">24/7 Support</h3>
-                    <p className="text-sm text-gray-600 font-poppins">Round-the-clock assistance for your travel needs</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 bg-gray-500/30 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <Heart size={16} className="text-gray-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-1 font-sora">Personalized Service</h3>
-                    <p className="text-sm text-gray-600 font-poppins">Customized itineraries based on your interests</p>
-                  </div>
-                </div>
-              </div>
+              <h3 className="text-2xl font-bold mb-3 font-sora">Authentic Experiences</h3>
+              <p className="text-white/90 font-poppins">Genuine connections with local communities and traditions</p>
             </motion.div>
+
+            <motion.div variants={fadeUp} className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-8 text-white shadow-xl hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4">
+                <Clock size={32} />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 font-sora">24/7 Support</h3>
+              <p className="text-white/90 font-poppins">Round-the-clock assistance for your travel needs</p>
+            </motion.div>
+
+            <motion.div variants={fadeUp} className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-8 text-white shadow-xl hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4">
+                <Heart size={32} />
+              </div>
+              <h3 className="text-2xl font-bold mb-3 font-sora">Personalized Service</h3>
+              <p className="text-white/90 font-poppins">Customized itineraries based on your interests</p>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white rounded-3xl p-8 shadow-xl">
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3 text-gray-900 font-sora">
+              <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">
+                <Phone size={24} className="text-white" />
+              </div>
+              Get in Touch
+            </h2>
+            <p className="text-gray-700 mb-8 leading-relaxed font-poppins text-lg">
+              Ready to explore Kutch? Contact us for personalized travel planning and unforgettable experiences.
+            </p>
+
+            <div className="space-y-4 mb-8">
+              <div className="flex items-center gap-4 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl p-5 border border-indigo-100">
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Phone size={20} className="text-white" />
+                </div>
+                <div>
+                  <p className="text-gray-600 text-sm font-semibold">Primary Contact</p>
+                  <a href="tel:+919825034580" className="text-xl font-bold text-indigo-600 hover:text-purple-600 transition-colors">
+                    +91 98250 34580
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4 bg-gradient-to-r from-pink-50 to-purple-50 rounded-2xl p-5 border border-pink-100">
+                <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Phone size={20} className="text-white" />
+                </div>
+                <div>
+                  <p className="text-gray-600 text-sm font-semibold">Alternative Contact</p>
+                  <a href="tel:+919512234395" className="text-xl font-bold text-pink-600 hover:text-purple-600 transition-colors">
+                    +91 95122 34395
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
+                <Mail size={20} className="text-indigo-600" />
+                <div>
+                  <p className="text-gray-600 text-sm">Email</p>
+                  <a href="mailto:info@kutchtravel.com" className="text-gray-900 font-semibold hover:text-indigo-600 transition-colors">
+                    info@kutchtravel.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
+                <MapPin size={20} className="text-pink-600" />
+                <div>
+                  <p className="text-gray-600 text-sm">Location</p>
+                  <p className="text-gray-900 font-semibold">Kutch, Gujarat, India</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3 p-4 bg-gray-50 rounded-xl">
+                <Clock size={20} className="text-purple-600" />
+                <div>
+                  <p className="text-gray-600 text-sm">Available</p>
+                  <p className="text-gray-900 font-semibold">24/7 for travelers</p>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
-          {/* Contact Information */}
-          <motion.div 
-            initial="hidden" 
-            whileInView="visible" 
-            viewport={{ once: true }}
-            variants={stagger}
-            className="space-y-8"
-          >
-            {/* Contact Details */}
-            <motion.div 
-              variants={fadeUp}
-              className="bg-gradient-to-br from-white/95 via-gray-50/80 to-gray-50/90 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/50"
-            >
-              <h2 className="text-3xl font-bold mb-6 flex items-center gap-3 text-gray-900">
-                <Phone size={32} className="text-gray-600" />
-                Get in Touch
-              </h2>
-              <p className="text-gray-700 mb-8 leading-relaxed">
-                Ready to explore Kutch? Contact us for personalized travel planning, 
-                local guidance, and unforgettable experiences.
-              </p>
-
-              {/* Contact Numbers */}
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-4 bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-gray-200">
-                  <div className="w-12 h-12 bg-gradient-to-r from-gray-500 to-gray-500 rounded-full flex items-center justify-center">
-                    <Phone size={20} className="text-gray-900" />
-                  </div>
-                  <div>
-                    <p className="text-gray-700 text-sm">Primary Contact</p>
-                    <a href="tel:+919825034580" className="text-xl font-bold text-gray-900 hover:text-gray-600 transition-colors">
-                      +91 98250 34580
-                    </a>
-                  </div>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-gradient-to-br from-orange-500 to-pink-500 rounded-3xl p-8 shadow-xl text-white">
+            <h2 className="text-3xl font-bold mb-6 font-sora">Our Services</h2>
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 p-4 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 transition-colors">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                  🗺️
                 </div>
-
-                <div className="flex items-center gap-4 bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-gray-200">
-                  <div className="w-12 h-12 bg-gradient-to-r from-gray-500 to-gray-500 rounded-full flex items-center justify-center">
-                    <Phone size={20} className="text-gray-900" />
-                  </div>
-                  <div>
-                    <p className="text-gray-700 text-sm">Alternative Contact</p>
-                    <a href="tel:+919512234395" className="text-xl font-bold text-gray-900 hover:text-gray-600 transition-colors">
-                      +91 95122 34395
-                    </a>
-                  </div>
+                <div>
+                  <p className="font-bold text-lg">Customized Tour Packages</p>
+                  <p className="text-white/80 text-sm">Tailored to your preferences</p>
                 </div>
               </div>
-
-              {/* Additional Contact Info */}
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Mail size={20} className="text-gray-600" />
-                  <div>
-                    <p className="text-gray-700 text-sm">Email</p>
-                    <a href="mailto:info@kutchtravel.com" className="text-gray-900 font-semibold hover:text-gray-600 transition-colors">
-                      info@kutchtravel.com
-                    </a>
-                  </div>
+              
+              <div className="flex items-center gap-4 p-4 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 transition-colors">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                  🏨
                 </div>
-
-                <div className="flex items-center gap-3">
-                  <MapPin size={20} className="text-gray-600" />
-                  <div>
-                    <p className="text-gray-700 text-sm">Location</p>
-                    <p className="text-gray-900 font-semibold">Kutch, Gujarat, India</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <Clock size={20} className="text-gray-600" />
-                  <div>
-                    <p className="text-gray-700 text-sm">Available</p>
-                    <p className="text-gray-900 font-semibold">24/7 for travelers</p>
-                  </div>
+                <div>
+                  <p className="font-bold text-lg">Accommodation Booking</p>
+                  <p className="text-white/80 text-sm">From budget to luxury stays</p>
                 </div>
               </div>
-            </motion.div>
-
-            {/* Services */}
-            <motion.div 
-              variants={fadeUp}
-              className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-gray-200"
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Services</h2>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 p-3 bg-gray-500/20 rounded-xl">
-                  <span className="text-gray-600">🗺️</span>
-                  <span className="font-medium text-gray-900">Customized Tour Packages</span>
+              
+              <div className="flex items-center gap-4 p-4 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 transition-colors">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                  🚗
                 </div>
-                <div className="flex items-center gap-3 p-3 bg-gray-500/20 rounded-xl">
-                  <span className="text-gray-600">🏨</span>
-                  <span className="font-medium text-gray-900">Accommodation Booking</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
-                  <span className="text-gray-600">🚗</span>
-                  <span className="font-medium text-gray-900">Transportation Services</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
-                  <span className="text-gray-600">🎨</span>
-                  <span className="font-medium text-gray-900">Cultural Experience Tours</span>
-                </div>
-                <div className="flex items-center gap-3 p-3 bg-gray-50 rounded-xl">
-                  <span className="text-gray-600">📸</span>
-                  <span className="font-medium text-gray-900">Photography Tours</span>
+                <div>
+                  <p className="font-bold text-lg">Transportation Services</p>
+                  <p className="text-white/80 text-sm">Comfortable vehicle options</p>
                 </div>
               </div>
-            </motion.div>
+              
+              <div className="flex items-center gap-4 p-4 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 transition-colors">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                  🎨
+                </div>
+                <div>
+                  <p className="font-bold text-lg">Cultural Experience Tours</p>
+                  <p className="text-white/80 text-sm">Meet local artisans communities</p>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-4 p-4 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 transition-colors">
+                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+                  📸
+                </div>
+                <div>
+                  <p className="font-bold text-lg">Photography Tours</p>
+                  <p className="text-white/80 text-sm">Capture Kutch beauty</p>
+                </div>
+              </div>
+            </div>
           </motion.div>
         </div>
 
-        {/* Call to Action */}
-        <motion.div 
-          initial="hidden" 
-          whileInView="visible" 
-          viewport={{ once: true }}
-          variants={fadeUp}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-gray-500 via-gray-500 to-gray-500 rounded-3xl p-8 text-gray-900 shadow-xl">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Explore Kutch?</h2>
-            <p className="text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
-              Let's plan your perfect Kutch adventure together. Contact us today for personalized recommendations and bookings.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="tel:+919825034580"
-                className="bg-white/10 backdrop-blur-xl text-gray-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-500/20 transition-colors shadow-lg flex items-center gap-2"
-              >
-                <Phone size={20} />
-                Call Now
-              </a>
-              <Link
-                href="/destinations"
-                className="bg-white/20 backdrop-blur-sm text-gray-900 border-2 border-white/30 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors flex items-center gap-2"
-              >
-                <MapPin size={20} />
-                View Destinations
-              </Link>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center">
+          <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-3xl p-12 text-white shadow-2xl relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-yellow-400 rounded-full blur-3xl opacity-20"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-pink-400 rounded-full blur-3xl opacity-20"></div>
+            <div className="relative z-10">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 font-sora">Ready to Explore Kutch?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto font-poppins">
+                Let us plan your perfect Kutch adventure together. Contact us today for personalized recommendations and bookings.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a
+                  href="tel:+919825034580"
+                  className="bg-white text-indigo-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2"
+                >
+                  <Phone size={20} />
+                  Call Now
+                </a>
+                <Link
+                  href="/destinations"
+                  className="bg-white/20 backdrop-blur-sm text-white border-2 border-white/50 px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-colors flex items-center gap-2"
+                >
+                  <MapPin size={20} />
+                  View Destinations
+                </Link>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -287,12 +315,3 @@ export default function AboutPage() {
     </main>
   );
 }
-
-
-
-
-
-
-
-
-

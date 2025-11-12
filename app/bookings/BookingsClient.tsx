@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Navigation from '../components/Navigation';
-import BackButton from './BackButton';
 
 // Animation variants
 const containerVariants = {
@@ -52,10 +51,13 @@ export default function BookingsClient() {
 
   return (
     <div className="min-h-screen bg-white selection:bg-purple-200 selection:text-purple-900">
-      <Navigation />
-      
       {/* Header Section - Two Column Layout */}
-      <div className="relative overflow-hidden py-20 bg-white">
+      <div className="relative overflow-hidden pt-8 pb-20 bg-white">
+        {/* Navigation - Position it absolutely over the section */}
+        <div className="absolute top-0 left-0 right-0 z-50">
+          <Navigation />
+        </div>
+        
         {/* Background Blobs */}
         <div className="absolute inset-0">
           <div className="blob blob-1 w-[500px] h-[500px] top-0 left-0 opacity-30"></div>
@@ -63,11 +65,7 @@ export default function BookingsClient() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
-            <BackButton />
-          </div>
-          
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
           {/* Two Column Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content */}

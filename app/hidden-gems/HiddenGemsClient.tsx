@@ -113,32 +113,20 @@ function HiddenGemsClient() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navigation />
-
-      {/* Back Button */}
-      <div className="bg-white border-b border-gray-100 pt-24">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <Link 
-            href="/" 
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-indigo-600 transition-colors font-poppins font-semibold"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-            <span className="font-medium">Back to Home</span>
-          </Link>
-        </div>
-      </div>
-
       {/* Hero Header Section */}
       <div className="relative overflow-hidden bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 pt-12 pb-16">
+        {/* Navigation - Position it absolutely over the section */}
+        <div className="absolute top-0 left-0 right-0 z-50">
+          <Navigation />
+        </div>
+        
         {/* Decorative background elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-purple-200/30 to-pink-200/30 rounded-full blur-3xl" />
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-indigo-200/30 to-blue-200/30 rounded-full blur-3xl" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4">
+        <div className="relative max-w-7xl mx-auto px-4 pt-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Left: Image Placeholder */}
             <motion.div
@@ -203,7 +191,7 @@ function HiddenGemsClient() {
       </div>
 
       {/* Category Filters and Search Section */}
-      <div className="bg-white/90 backdrop-blur-xl sticky top-0 z-10 border-b border-gray-100 shadow-sm">
+      <div className="bg-white/90 backdrop-blur-xl border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-5">
           {/* Search and Results Count Row */}
           <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-6">

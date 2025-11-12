@@ -54,7 +54,7 @@ export default function Navigation() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="fixed top-0 inset-x-0 z-50"
+      className="relative w-full z-50"
     >
       {/* Transparent Background */}
       <div className="absolute inset-0 bg-transparent">
@@ -82,7 +82,7 @@ export default function Navigation() {
           {/* Home Button */}
           <Link 
             href="/"
-            className="group relative flex items-center space-x-2 px-4 py-2 rounded-xl bg-white/90 hover:bg-white border border-gray-200 hover:border-indigo-300 backdrop-blur-sm shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105"
+            className="group relative flex items-center space-x-2 px-4 py-2 rounded-xl bg-transparent hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-105"
           >
             <Home className="w-4 h-4 text-indigo-600 group-hover:text-indigo-700 transition-colors duration-300" />
             <span className="text-sm font-semibold font-sora text-gray-700 group-hover:text-indigo-700 transition-colors duration-300">
@@ -240,6 +240,18 @@ export default function Navigation() {
                             >
                               <BookOpen className="w-5 h-5 text-gray-600" />
                               <span className="font-medium text-gray-100">Guide</span>
+                            </Link>
+                          )}
+                        </MenuItem>
+                        
+                        <MenuItem>
+                          {({ active }) => (
+                            <Link 
+                              className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-300 ${active ? "bg-gradient-to-r from-gray-50 to-gray-50 scale-105" : ""}`} 
+                              href="/blog"
+                            >
+                              <BookOpen className="w-5 h-5 text-gray-600" />
+                              <span className="font-medium text-gray-100">Blog</span>
                             </Link>
                           )}
                         </MenuItem>
