@@ -409,8 +409,8 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
                 </Link>
                 <a 
-                  href="#quick-guide" 
-                  className="inline-flex items-center gap-2 text-sm font-medium text-gray-700 hover:text-gray-900 py-3 px-6 rounded-full border border-gray-200 hover:border-gray-300 transition-colors"
+                  href="#destinations" 
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 hover:from-teal-600 hover:via-cyan-600 hover:to-blue-600 text-white font-poppins font-semibold py-3 px-6 rounded-full shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:scale-105 active:scale-95"
                 >
                   <span>Quick Guide</span>
                   <span>✨</span>

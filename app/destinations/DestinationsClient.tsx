@@ -152,10 +152,10 @@ function DestinationsClient() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-slate-100 to-zinc-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-pink-50 flex items-center justify-center">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-gray-400 mx-auto mb-6"></div>
-          <p className="text-xl font-sora font-semibold text-gray-600">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-amber-400 mx-auto mb-6"></div>
+          <p className="text-xl font-sora font-semibold text-gray-700">
             Loading destinations...
           </p>
         </div>
@@ -164,19 +164,12 @@ function DestinationsClient() {
   }
 
   return (
-    <div className="min-h-screen bg-white selection:bg-purple-200 selection:text-purple-900">
+    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-rose-50 to-pink-50 selection:bg-pink-200 selection:text-pink-900">
       {/* Header Section - Two Column Layout */}
-      <div className="relative overflow-hidden pt-8 pb-20 bg-white">
+      <div className="relative overflow-hidden pt-8 pb-20 bg-gradient-to-br from-pink-50/80 via-rose-50/80 to-pink-50/80">
         {/* Navigation - Position it absolutely over the section */}
         <div className="absolute top-0 left-0 right-0 z-50">
           <Navigation />
-        </div>
-        
-        {/* Background Blobs */}
-        <div className="absolute inset-0">
-          <div className="blob blob-1 w-[500px] h-[500px] top-0 left-0 opacity-30"></div>
-          <div className="blob blob-2 w-[400px] h-[400px] bottom-0 right-0 opacity-30"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
@@ -294,7 +287,7 @@ function DestinationsClient() {
         </div>
       </div>
       {/* Category Filters and Search Section */}
-      <div className="bg-white/90 backdrop-blur-xl border-b border-gray-100 shadow-sm">
+      <div className="bg-pink-50/60 backdrop-blur-xl border-b border-pink-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-5">
           {/* Search and Results Count Row */}
           <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-6">
@@ -304,7 +297,7 @@ function DestinationsClient() {
                 placeholder="Search destinations..."
                 value={searchTerm}
                 onChange={handleSearchChange}
-                className="w-full px-4 py-2.5 pl-10 bg-white text-gray-900 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-200 focus:border-indigo-300 transition-all duration-300 shadow-sm"
+                className="w-full px-4 py-2.5 pl-10 bg-white text-gray-900 border border-pink-200 rounded-xl focus:ring-2 focus:ring-pink-200 focus:border-pink-300 transition-all duration-300 shadow-sm"
               />
               <div className="absolute left-3 top-1/2 transform -translate-y-1/2">
                 <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -343,7 +336,7 @@ function DestinationsClient() {
                   className={`w-full px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm border ${
                     activeFilter === category
                       ? getCategoryStyle(category)
-                      : 'bg-white/80 text-gray-600 hover:bg-gray-50 border-gray-200 hover:text-gray-900'
+                      : 'bg-white/80 text-gray-600 hover:bg-pink-50 border-pink-200 hover:text-gray-900'
                   }`}
                 >
                   <span className="line-clamp-1">{category}</span>
@@ -368,12 +361,12 @@ function DestinationsClient() {
             {filteredDestinations.map((destination, index) => {
               // Define unique colors for each card
               const cardColors = [
-                { border: 'border-cyan-200', hoverBorder: 'hover:border-cyan-400', gradient: 'from-white via-cyan-50/30 to-blue-50/30', tag: 'bg-cyan-50 text-cyan-700 border-cyan-200', button: 'bg-cyan-600 hover:bg-cyan-700' },
-                { border: 'border-purple-200', hoverBorder: 'hover:border-purple-400', gradient: 'from-white via-purple-50/30 to-pink-50/30', tag: 'bg-purple-50 text-purple-700 border-purple-200', button: 'bg-purple-600 hover:bg-purple-700' },
-                { border: 'border-emerald-200', hoverBorder: 'hover:border-emerald-400', gradient: 'from-white via-emerald-50/30 to-teal-50/30', tag: 'bg-emerald-50 text-emerald-700 border-emerald-200', button: 'bg-emerald-600 hover:bg-emerald-700' },
-                { border: 'border-orange-200', hoverBorder: 'hover:border-orange-400', gradient: 'from-white via-orange-50/30 to-amber-50/30', tag: 'bg-orange-50 text-orange-700 border-orange-200', button: 'bg-orange-600 hover:bg-orange-700' },
-                { border: 'border-blue-200', hoverBorder: 'hover:border-blue-400', gradient: 'from-white via-blue-50/30 to-indigo-50/30', tag: 'bg-blue-50 text-blue-700 border-blue-200', button: 'bg-blue-600 hover:bg-blue-700' },
-                { border: 'border-rose-200', hoverBorder: 'hover:border-rose-400', gradient: 'from-white via-rose-50/30 to-red-50/30', tag: 'bg-rose-50 text-rose-700 border-rose-200', button: 'bg-rose-600 hover:bg-rose-700' }
+                { border: 'border-cyan-200', hoverBorder: 'hover:border-cyan-400', gradient: 'from-yellow-50 via-cyan-50/40 to-blue-50/40', tag: 'bg-cyan-50 text-cyan-700 border-cyan-200', button: 'bg-cyan-600 hover:bg-cyan-700' },
+                { border: 'border-purple-200', hoverBorder: 'hover:border-purple-400', gradient: 'from-amber-50 via-purple-50/40 to-pink-50/40', tag: 'bg-purple-50 text-purple-700 border-purple-200', button: 'bg-purple-600 hover:bg-purple-700' },
+                { border: 'border-emerald-200', hoverBorder: 'hover:border-emerald-400', gradient: 'from-yellow-50 via-emerald-50/40 to-teal-50/40', tag: 'bg-emerald-50 text-emerald-700 border-emerald-200', button: 'bg-emerald-600 hover:bg-emerald-700' },
+                { border: 'border-orange-200', hoverBorder: 'hover:border-orange-400', gradient: 'from-amber-50 via-orange-50/40 to-yellow-50/40', tag: 'bg-orange-50 text-orange-700 border-orange-200', button: 'bg-orange-600 hover:bg-orange-700' },
+                { border: 'border-blue-200', hoverBorder: 'hover:border-blue-400', gradient: 'from-yellow-50 via-blue-50/40 to-indigo-50/40', tag: 'bg-blue-50 text-blue-700 border-blue-200', button: 'bg-blue-600 hover:bg-blue-700' },
+                { border: 'border-rose-200', hoverBorder: 'hover:border-rose-400', gradient: 'from-amber-50 via-rose-50/40 to-red-50/40', tag: 'bg-rose-50 text-rose-700 border-rose-200', button: 'bg-rose-600 hover:bg-rose-700' }
               ];
               const colors = cardColors[index % 6];
               

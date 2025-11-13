@@ -262,7 +262,19 @@ function HiddenGemsClient() {
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8"
           >
-            {filteredGems.map((gem, index) => (
+            {filteredGems.map((gem, index) => {
+              // Define unique colors for each card
+              const cardColors = [
+                { border: 'border-cyan-200', hoverBorder: 'hover:border-cyan-400', gradient: 'from-white via-cyan-50/30 to-blue-50/30', tag: 'bg-cyan-50 text-cyan-700 border-cyan-200', button: 'bg-cyan-600 hover:bg-cyan-700' },
+                { border: 'border-emerald-200', hoverBorder: 'hover:border-emerald-400', gradient: 'from-white via-emerald-50/30 to-teal-50/30', tag: 'bg-emerald-50 text-emerald-700 border-emerald-200', button: 'bg-emerald-600 hover:bg-emerald-700' },
+                { border: 'border-amber-200', hoverBorder: 'hover:border-amber-400', gradient: 'from-white via-amber-50/30 to-orange-50/30', tag: 'bg-amber-50 text-amber-700 border-amber-200', button: 'bg-amber-600 hover:bg-amber-700' },
+                { border: 'border-blue-200', hoverBorder: 'hover:border-blue-400', gradient: 'from-white via-blue-50/30 to-indigo-50/30', tag: 'bg-blue-50 text-blue-700 border-blue-200', button: 'bg-blue-600 hover:bg-blue-700' },
+                { border: 'border-rose-200', hoverBorder: 'hover:border-rose-400', gradient: 'from-white via-rose-50/30 to-pink-50/30', tag: 'bg-rose-50 text-rose-700 border-rose-200', button: 'bg-rose-600 hover:bg-rose-700' },
+                { border: 'border-teal-200', hoverBorder: 'hover:border-teal-400', gradient: 'from-white via-teal-50/30 to-cyan-50/30', tag: 'bg-teal-50 text-teal-700 border-teal-200', button: 'bg-teal-600 hover:bg-teal-700' }
+              ];
+              const colors = cardColors[index % 6];
+              
+              return (
               <motion.div
                 key={gem.slug}
                 variants={cardVariants}
@@ -271,72 +283,87 @@ function HiddenGemsClient() {
               >
                 <Link href={`/hidden-gems/${gem.slug}`}>
                   <motion.article 
-                    className="relative bg-white rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 border border-purple-100 group-hover:border-purple-300"
+                    className={`group relative bg-gradient-to-br ${colors.gradient} rounded-2xl overflow-hidden shadow-lg border-2 ${colors.border} transition-all duration-500 hover:shadow-2xl ${colors.hoverBorder}`}
                   >
-                    {/* Image Container */}
-                    <div className="relative h-[400px] overflow-hidden">
-                      <Image
-                        src={gem.image}
-                        alt={gem.title}
-                        fill
-                        className="object-cover transition-transform duration-1000 group-hover:scale-125"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
+                    {/* Compact Layout matching destinations */}
+                    <div className="flex flex-col">
                       
-                      {/* Gradient Overlays */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-transparent to-blue-600/20 group-hover:from-purple-600/30 group-hover:to-blue-600/30 transition-all duration-700" />
-                      
-                      {/* Premium Category Badge */}
-                      <div className="absolute top-6 right-6 z-10">
-                        <div className="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full shadow-2xl backdrop-blur-sm border-2 border-white/30 font-poppins">
-                          <span className="text-sm font-bold tracking-wide">{gem.type}</span>
-                        </div>
-                      </div>
-                      
-                      {/* Floating Action Button */}
-                      <div className="absolute top-6 left-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-75 group-hover:scale-100 z-10">
-                        <div className="w-16 h-16 bg-gradient-to-r from-white/95 to-white/80 backdrop-blur-md rounded-full shadow-2xl flex items-center justify-center border-2 border-white/50 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white transition-all duration-300">
-                          <span className="text-gray-600 hover:text-gray-900 text-2xl font-bold">→</span>
+                      {/* Compact Image with Rounded Corners */}
+                      <div className="relative h-40 m-4 rounded-xl overflow-hidden">
+                        <Image
+                          src={gem.image}
+                          alt={gem.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-700"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent"></div>
+                        
+                        {/* Floating Category Tag */}
+                        <div className="absolute top-2 right-2">
+                          <span className={`backdrop-blur-sm border px-3 py-1 rounded-lg text-xs font-bold font-poppins shadow-md ${colors.tag}`}>
+                            {gem.type || 'Hidden Gem'}
+                          </span>
                         </div>
                       </div>
 
-                      {/* Title Overlay */}
-                      <div className="absolute bottom-6 left-6 right-6 z-10">
-                        <h3 className="text-2xl font-sora font-semibold mb-3 leading-tight text-white" style={{ textShadow: '2px 4px 8px rgba(0,0,0,0.4)' }}>
-                          {gem.title}
-                        </h3>
-                        <div className="flex items-center gap-3 text-white/90">
-                          <span className="text-base">🏴‍☠️</span>
-                          <span className="text-base font-poppins font-medium text-white/90">{gem.discoveryLevel || 'Hidden Gem'}</span>
+                      {/* Content Section */}
+                      <div className="px-5 pb-5 space-y-3">
+                        
+                        {/* Title with Icon */}
+                        <div className="flex items-start justify-between gap-2">
+                          <h3 className="text-lg font-sora font-bold text-gray-900 leading-tight">
+                            {gem.title}
+                          </h3>
+                          <span className="text-xl shrink-0">🏴‍☠️</span>
                         </div>
-                      </div>
-                    </div>
 
-                    {/* Enhanced Content Area */}
-                    <div className="p-7 bg-white/90 backdrop-blur-xl border-t border-purple-100">
-                      <p className="text-gray-700 font-poppins text-base leading-relaxed mb-5 line-clamp-3 group-hover:text-gray-800 transition-colors">
-                        {gem.sections[0]?.content || "Discover this amazing hidden gem in Kutch."}
-                      </p>
-                      
-                      {/* Action Footer */}
-                      <div className="flex items-center justify-between pt-5 border-t border-purple-100">
-                        <span className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-poppins font-bold text-sm">
-                          <span>Explore More</span>
-                          <span className="transform group-hover:translate-x-2 transition-transform duration-300">→</span>
-                        </span>
-                        <div className="flex items-center gap-2">
-                          <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center border border-white/30">
-                            <span className="text-xs">✨</span>
+                        {/* Info Grid */}
+                        <div className="space-y-2.5">
+                          
+                          {/* Description */}
+                          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-cyan-100">
+                            <div className="flex items-start gap-2">
+                              <span className="text-base shrink-0">✨</span>
+                              <div className="min-w-0">
+                                <p className="text-[10px] font-bold text-cyan-700 uppercase tracking-wider font-poppins mb-0.5">About</p>
+                                <p className="text-xs text-gray-800 font-poppins leading-snug line-clamp-2">
+                                  {gem.sections[0]?.content || "Discover this amazing hidden gem in Kutch."}
+                                </p>
+                              </div>
+                            </div>
                           </div>
-                          <span className="text-xs font-poppins font-semibold text-gray-600">{gem.difficulty || 'Easy'}</span>
+
+                          {/* Discovery Level */}
+                          <div className="bg-gradient-to-r from-emerald-50 to-teal-50 rounded-lg p-3 border border-emerald-200/50">
+                            <div className="flex items-start gap-2">
+                              <span className="text-base shrink-0">🗺️</span>
+                              <div className="min-w-0">
+                                <p className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider font-poppins mb-0.5">Discovery Level</p>
+                                <p className="text-xs text-gray-800 font-poppins font-semibold">
+                                  {gem.discoveryLevel || 'Off the beaten path'}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
                         </div>
+
+                        {/* Action Button */}
+                        <div className="pt-2">
+                          <div className={`flex items-center justify-between rounded-lg px-4 py-2.5 transition-colors duration-300 ${colors.button}`}>
+                            <span className="text-white font-poppins font-semibold text-sm">Explore</span>
+                            <span className="text-white text-lg transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
                   </motion.article>
                 </Link>
               </motion.div>
-            ))}
+              );
+            })}
           </motion.div>
         ) : (
           <motion.div 
@@ -403,6 +430,17 @@ function HiddenGemsClient() {
                 <span>Back to Home</span>
               </Link>
             </div>
+            
+            {/* Footer Line */}
+            <motion.p 
+              className="text-white/90 text-sm font-medium mt-8"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.5 }}
+              viewport={{ once: true }}
+            >
+              Designed with ❤️ for travelers seeking authentic Kutch
+            </motion.p>
           </div>
         </div>
       </motion.div>
