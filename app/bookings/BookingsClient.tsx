@@ -643,6 +643,19 @@ function ShoppingSection() {
         <p className="font-bold mb-2 text-purple-900">🔔 Affiliate Disclosure:</p>
         <p>This page contains affiliate links. We may earn a small commission from purchases made through these links at no additional cost to you. This helps us maintain and improve our travel guides.</p>
       </div>
+
+      {/* Footer Line */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="text-center py-8"
+      >
+        <p className="text-gray-800 text-sm font-medium">
+          Designed with ❤️ for travelers seeking authentic Kutch
+        </p>
+      </motion.div>
     </div>
   );
 }

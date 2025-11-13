@@ -41,8 +41,8 @@ const AutoplayCarousel = ({ images }: { images: { src: string; alt: string; capt
             sizes="(max-width: 1024px) 90vw, 45vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
-          <div className="absolute bottom-4 left-4 text-white text-sm font-medium px-3 py-1 bg-black/30 rounded-full backdrop-blur-sm">
+          <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
+          <div className="absolute bottom-4 left-4 text-gray-900 text-sm font-medium px-3 py-1 bg-white/80 rounded-full backdrop-blur-sm shadow-md">
             {image.caption}
           </div>
         </motion.div>
@@ -106,12 +106,12 @@ const CraftCarousel = () => {
               sizes="(max-width: 1024px) 100vw, 50vw"
               priority={index === 0}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-            <div className="absolute bottom-6 left-6 right-6">
-              <h3 className="text-2xl font-sora font-bold text-white mb-2" style={{ textShadow: '2px 4px 8px rgba(0,0,0,0.6)' }}>
+            <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-transparent"></div>
+            <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md rounded-2xl p-4 shadow-lg">
+              <h3 className="text-2xl font-sora font-bold text-gray-900 mb-2">
                 {image.caption}
               </h3>
-              <p className="text-white/90 font-poppins" style={{ textShadow: '1px 2px 4px rgba(0,0,0,0.6)' }}>Traditional Kutchi Craft</p>
+              <p className="text-gray-700 font-poppins font-medium">Traditional Kutchi Craft</p>
             </div>
           </div>
         </motion.div>
@@ -338,20 +338,19 @@ export default function Home() {
   };
 
   return (
-    <main className="scroll-smooth selection:bg-gray-300 selection:text-gray-900 relative text-gray-900 dark:bg-gray-950 dark:text-gray-900">
+    <main className="scroll-smooth selection:bg-blue-200 selection:text-gray-900 relative text-gray-900 dark:bg-gray-950 dark:text-gray-900">
       {/* 1️⃣ Modern Hero Section with Animated Mesh Background */}
-      <section id="home" className="relative min-h-[85vh] flex items-center overflow-hidden">
+      <section id="home" className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50">
         {/* Navigation - Position it absolutely over the hero */}
         <div className="absolute top-0 left-0 right-0 z-50">
           <Navigation />
         </div>
         
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-white/90">
-          <div className="blob blob-1 w-[400px] h-[400px] top-0 left-0 opacity-40"></div>
-          <div className="blob blob-2 w-[350px] h-[350px] top-1/3 right-0 opacity-40"></div>
-          <div className="blob blob-3 w-[380px] h-[380px] bottom-0 left-1/2 opacity-40"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20"></div>
+        {/* Background Elements with Light Blue/Cyan Gradient */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-200/40 to-cyan-200/40 rounded-full blur-3xl opacity-60"></div>
+          <div className="absolute top-1/3 right-0 w-[450px] h-[450px] bg-gradient-to-br from-cyan-200/40 to-teal-200/40 rounded-full blur-3xl opacity-60"></div>
+          <div className="absolute bottom-0 left-1/2 w-[480px] h-[480px] bg-gradient-to-br from-teal-200/40 to-blue-200/40 rounded-full blur-3xl opacity-60"></div>
         </div>
 
         {/* Content grid container */}
@@ -391,11 +390,11 @@ export default function Home() {
                 </motion.span>
               </motion.h1>
 
-              <motion.p variants={fadeUp} className="mt-6 text-base md:text-lg lg:text-xl max-w-xl mx-auto lg:mx-0 font-space-grotesk font-medium leading-relaxed">
+              <motion.p variants={fadeUp} className="mt-8 text-base md:text-lg lg:text-xl max-w-xl mx-auto lg:mx-0 font-space-grotesk font-medium leading-relaxed">
                 <span className="text-gray-900 font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
                   Where salt meets sky, and stories meet silence
                 </span>
-                <span className="block text-sm md:text-base mt-3 font-poppins font-light text-gray-800">
+                <span className="block text-sm md:text-base mt-5 font-poppins font-light text-gray-800">
                   Practical guides, real photos, and local tips — not tourist brochures.
                 </span>
               </motion.p>
@@ -419,24 +418,16 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            {/* Featured Image Carousel */}
+            {/* Featured Image Carousel - Larger Size */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              className="relative aspect-[4/3] w-full max-w-lg mx-auto rounded-2xl overflow-hidden shadow-2xl"
+              className="relative aspect-[4/3] w-full max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-2xl"
             >
               <AutoplayCarousel images={heroImages} />
             </motion.div>
           </div>
-        </div>
-
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-white">
-          <div className="blob blob-1 w-[500px] h-[500px] top-0 left-0 opacity-50"></div>
-          <div className="blob blob-2 w-[400px] h-[400px] top-1/3 right-0 opacity-50"></div>
-          <div className="blob blob-3 w-[450px] h-[450px] bottom-0 left-1/2 opacity-50"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
         </div>
 
         {/* Bottom Decorative Elements */}
@@ -472,27 +463,27 @@ export default function Home() {
               </div>
             </Link>
             <Link href="/hidden-gems" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-pink-50 via-purple-50/80 to-pink-50 backdrop-blur-sm border border-pink-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-b from-pink-100/50 via-purple-100/50 to-pink-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-cyan-50 via-teal-50/80 to-cyan-50 backdrop-blur-sm border border-cyan-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-b from-cyan-100/50 via-teal-100/50 to-cyan-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Sparkles className="w-8 h-8 text-pink-600 mb-3 transform group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium text-pink-900 font-sans tracking-wide">Hidden Gems</span>
+                <Sparkles className="w-8 h-8 text-cyan-600 mb-3 transform group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-sm font-medium text-cyan-900 font-sans tracking-wide">Hidden Gems</span>
               </div>
             </Link>
             <Link href="/guide" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-rose-50 via-pink-50/80 to-rose-50 backdrop-blur-sm border border-rose-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-b from-rose-100/50 via-pink-100/50 to-rose-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-teal-50 via-emerald-50/80 to-teal-50 backdrop-blur-sm border border-teal-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-b from-teal-100/50 via-emerald-100/50 to-teal-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <BookOpen className="w-8 h-8 text-rose-600 mb-3 transform group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium text-rose-900 font-sans tracking-wide">Travel Guide</span>
+                <BookOpen className="w-8 h-8 text-teal-600 mb-3 transform group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-sm font-medium text-teal-900 font-sans tracking-wide">Travel Guide</span>
               </div>
             </Link>
             <Link href="/gallery" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-purple-50 via-violet-50/80 to-purple-50 backdrop-blur-sm border border-purple-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-b from-purple-100/50 via-violet-100/50 to-purple-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-sky-50 via-blue-50/80 to-sky-50 backdrop-blur-sm border border-sky-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-b from-sky-100/50 via-blue-100/50 to-sky-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Camera className="w-8 h-8 text-purple-600 mb-3 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-purple-900 font-sans tracking-wide">Gallery</span>
+                <Camera className="w-8 h-8 text-sky-600 mb-3 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium text-sky-900 font-sans tracking-wide">Gallery</span>
               </div>
             </Link>
             <Link href="/blog" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-cyan-50 via-sky-50/80 to-cyan-50 backdrop-blur-sm border border-cyan-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -530,7 +521,7 @@ export default function Home() {
             {/* Content Side */}
             <div className="space-y-6">
               <div className="space-y-3">
-                <span className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-sm font-poppins font-semibold tracking-wide shadow-lg shadow-purple-500/30">
+                <span className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-sm font-poppins font-semibold tracking-wide shadow-lg shadow-cyan-500/30">
                   <span>🗺️</span>
                   <span>Local Insights</span>
                 </span>
@@ -548,25 +539,25 @@ export default function Home() {
               {/* Feature Points */}
               <div className="flex flex-wrap items-center gap-6 pt-4">
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
+                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
                   <span className="text-sm font-poppins font-medium">Expert Tips</span>
                 </div>
-                <div className="w-px h-4 bg-gradient-to-b from-purple-400 to-indigo-500"></div>
+                <div className="w-px h-4 bg-gradient-to-b from-cyan-400 to-blue-500"></div>
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 rounded-full animate-pulse"></span>
-                  <span className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600">Local Insights</span>
+                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 rounded-full animate-pulse"></span>
+                  <span className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600">Local Insights</span>
                 </div>
-                <div className="w-px h-4 bg-gradient-to-b from-purple-400 via-violet-400 to-indigo-400"></div>
+                <div className="w-px h-4 bg-gradient-to-b from-cyan-400 via-sky-400 to-blue-400"></div>
                 <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600 rounded-full animate-pulse"></span>
-                  <span className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-violet-600 to-indigo-600">Season Guide</span>
+                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 rounded-full animate-pulse"></span>
+                  <span className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600">Season Guide</span>
                 </div>
               </div>
 
               {/* CTA Button */}
               <Link 
                 href="/destinations" 
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full font-poppins font-semibold text-base shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full font-poppins font-semibold text-base shadow-xl shadow-cyan-500/30 hover:shadow-2xl hover:scale-105 transition-all duration-300"
               >
                 <span>Start Exploring</span>
                 <ArrowRight className="w-5 h-5" />
@@ -596,10 +587,9 @@ export default function Home() {
       {/* 3️⃣ Enhanced Featured Destinations Section */}
       <section id="destinations" className="relative overflow-hidden py-28">
         {/* Modern gradient background - consistent with hero */}
-        <div className="absolute inset-0 bg-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50">
           <div className="blob blob-1 w-[500px] h-[500px] top-0 right-0 opacity-30"></div>
           <div className="blob blob-2 w-[400px] h-[400px] bottom-0 left-0 opacity-30"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6">
@@ -614,7 +604,7 @@ export default function Home() {
               className="text-left"
             >
               <div className="mb-8">
-                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-purple-500/30">
+                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-cyan-500/30">
                   <span>✨</span>
                   <span>Handpicked Destinations</span>
                 </span>
@@ -629,15 +619,15 @@ export default function Home() {
               {/* Decorative Elements */}
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
+                  <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Top 6 Featured</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
+                  <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Rich Heritage</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-800 font-poppins font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-purple-700 to-indigo-800 rounded-full animate-pulse"></span>
+                  <span className="w-4 h-4 bg-gradient-to-r from-cyan-700 to-blue-800 rounded-full animate-pulse"></span>
                   <span className="text-base">Cultural Experiences</span>
                 </div>
               </div>
@@ -669,7 +659,19 @@ export default function Home() {
             variants={stagger} 
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-20 max-w-[120rem] mx-auto px-4 sm:px-8 lg:px-12"
           >
-            {DESTINATIONS.slice(0, 6).map((destination) => (
+            {DESTINATIONS.slice(0, 6).map((destination, index) => {
+              // Define unique colors for each card
+              const cardColors = [
+                { border: 'border-cyan-200', hoverBorder: 'hover:border-cyan-400', gradient: 'from-white via-cyan-50/30 to-blue-50/30', tag: 'bg-cyan-50 text-cyan-700 border-cyan-200', button: 'bg-cyan-600 hover:bg-cyan-700' },
+                { border: 'border-purple-200', hoverBorder: 'hover:border-purple-400', gradient: 'from-white via-purple-50/30 to-pink-50/30', tag: 'bg-purple-50 text-purple-700 border-purple-200', button: 'bg-purple-600 hover:bg-purple-700' },
+                { border: 'border-emerald-200', hoverBorder: 'hover:border-emerald-400', gradient: 'from-white via-emerald-50/30 to-teal-50/30', tag: 'bg-emerald-50 text-emerald-700 border-emerald-200', button: 'bg-emerald-600 hover:bg-emerald-700' },
+                { border: 'border-orange-200', hoverBorder: 'hover:border-orange-400', gradient: 'from-white via-orange-50/30 to-amber-50/30', tag: 'bg-orange-50 text-orange-700 border-orange-200', button: 'bg-orange-600 hover:bg-orange-700' },
+                { border: 'border-blue-200', hoverBorder: 'hover:border-blue-400', gradient: 'from-white via-blue-50/30 to-indigo-50/30', tag: 'bg-blue-50 text-blue-700 border-blue-200', button: 'bg-blue-600 hover:bg-blue-700' },
+                { border: 'border-rose-200', hoverBorder: 'hover:border-rose-400', gradient: 'from-white via-rose-50/30 to-red-50/30', tag: 'bg-rose-50 text-rose-700 border-rose-200', button: 'bg-rose-600 hover:bg-rose-700' }
+              ];
+              const colors = cardColors[index % 6];
+              
+              return (
               <Link
                 key={destination.slug}
                 href={`/destinations/${destination.slug}`}
@@ -680,74 +682,96 @@ export default function Home() {
               >
                 <motion.article 
                   variants={fadeUp} 
-                  whileHover={{ y: -16, scale: 1.03 }} 
-                  className="modern-card relative frosted-glass rounded-[2.5rem] overflow-hidden shadow-2xl border-2 border-white/50 transition-all duration-500 hover:shadow-[0_25px_80px_rgba(99,102,241,0.4)]"
+                  whileHover={{ y: -6 }} 
+                  className={`group relative bg-gradient-to-br ${colors.gradient} rounded-2xl overflow-hidden shadow-lg border-2 ${colors.border} transition-all duration-500 hover:shadow-2xl ${colors.hoverBorder}`}
                 >
-                  {/* Enhanced Image Container */}
-                  <div className="relative h-96 overflow-hidden">
-                    <Image
-                      src={destination.image}
-                      alt={`${destination.title} - ${destinationDescriptions[destination.slug] || destination.title} in Kutch, Gujarat`}
-                      fill
-                      className="object-cover group-hover:scale-125 transition-transform duration-700"
-                      sizes="(max-width: 640px) 100vw, (max-width:1024px) 50vw, 33vw"
-                      priority={false}
-                      loading="lazy"
-                      quality={90}
-                    />
-                    {/* Beautiful Gradient Overlays */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-blue-900/30 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/20 via-blue-100/15 to-cyan-100/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                  {/* Horizontal Layout: Image + Content Side by Side */}
+                  <div className="flex flex-col">
                     
-                    {/* Premium Category Badge */}
-                    <div className="absolute top-6 right-6 z-10">
-                      <div className="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full shadow-2xl backdrop-blur-sm border-2 border-white/30 font-poppins">
-                        <span className="text-sm font-bold tracking-wide">{destinationCategories[destination.slug] || "Explore"}</span>
-                      </div>
-                    </div>
-                    
-                    {/* Floating Action Button */}
-                    <div className="absolute top-6 left-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-75 group-hover:scale-100 z-10">
-                      <div className="w-16 h-16 bg-gradient-to-r from-white/95 to-white/80 backdrop-blur-md rounded-full shadow-2xl flex items-center justify-center border-2 border-white/50 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white transition-all duration-300">
-                        <span className="text-gray-600 hover:text-gray-900 text-2xl font-bold">→</span>
+                    {/* Compact Image with Rounded Corners */}
+                    <div className="relative h-40 m-4 rounded-xl overflow-hidden">
+                      <Image
+                        src={destination.image}
+                        alt={`${destination.title} - ${destinationDescriptions[destination.slug] || destination.title} in Kutch, Gujarat`}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                        sizes="(max-width: 640px) 100vw, (max-width:1024px) 50vw, 33vw"
+                        priority={false}
+                        loading="lazy"
+                        quality={85}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent"></div>
+                      
+                      {/* Floating Category Tag */}
+                      <div className="absolute top-2 right-2">
+                        <span className={`backdrop-blur-sm border px-3 py-1 rounded-lg text-xs font-bold font-poppins shadow-md ${colors.tag}`}>
+                          {destinationCategories[destination.slug] || "Explore"}
+                        </span>
                       </div>
                     </div>
 
-                    {/* Title Overlay */}
-                    <div className="absolute bottom-6 left-6 right-6 z-10">
-                      <h3 className="text-2xl font-sora font-semibold mb-3 leading-tight deep-shadow text-white">
-                        {destination.title}
-                      </h3>
-                      <div className="flex items-center gap-3 text-white/90">
-                        <span className="text-base">📍</span>
-                        <span className="text-base font-poppins font-medium text-white/90">Kutch, Gujarat</span>
+                    {/* Content Section */}
+                    <div className="px-5 pb-5 space-y-3">
+                      
+                      {/* Title with Location */}
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="text-lg font-sora font-bold text-gray-900 leading-tight">
+                          {destination.title}
+                        </h3>
+                        <span className="text-xl shrink-0">📍</span>
                       </div>
-                    </div>
-                  </div>
 
-                  {/* Enhanced Content Area */}
-                  <div className="p-7 bg-white/90 backdrop-blur-xl border-t border-purple-100">
-                    <p className="text-gray-700 font-poppins text-base leading-relaxed mb-5 line-clamp-3 group-hover:text-gray-800 transition-colors">
-                      {destinationDescriptions[destination.slug] || "Discover this amazing destination in Kutch with rich history and stunning landscapes."}
-                    </p>
-                    
-                    {/* Action Footer */}
-                    <div className="flex items-center justify-between pt-5 border-t border-purple-100">
-                      <span className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-poppins font-bold text-sm">
-                        <span>Explore More</span>
-                        <span className="transform group-hover:translate-x-2 transition-transform duration-300">→</span>
-                      </span>
-                      <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center border border-white/30">
-                          <span className="text-xs">✨</span>
+                      {/* Info Grid */}
+                      <div className="space-y-2.5">
+                        
+                        {/* Famous For */}
+                        <div className="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-cyan-100">
+                          <div className="flex items-start gap-2">
+                            <span className="text-base shrink-0">✨</span>
+                            <div className="min-w-0">
+                              <p className="text-[10px] font-bold text-cyan-700 uppercase tracking-wider font-poppins mb-0.5">Famous For</p>
+                              <p className="text-xs text-gray-800 font-poppins leading-snug">
+                                {destination.slug === 'bhuj' && 'Historic palaces, museums & vibrant bazaars'}
+                                {destination.slug === 'white-rann' && 'Endless white salt desert & full moon nights'}
+                                {destination.slug === 'mandvi' && 'Pristine beaches & Vijay Vilas Palace'}
+                                {destination.slug === 'dhordo' && 'Rann Utsav festival & tent city experience'}
+                                {destination.slug === 'kalo-dungar' && "Black Hills & India's magnetic hill"}
+                                {destination.slug === 'lakhpat' && 'Ancient fort ruins & Gurudwara'}
+                                {!['bhuj', 'white-rann', 'mandvi', 'dhordo', 'kalo-dungar', 'lakhpat'].includes(destination.slug) && 'Rich cultural heritage & scenic beauty'}
+                              </p>
+                            </div>
+                          </div>
                         </div>
-                        <span className="text-xs font-poppins font-semibold text-gray-600">Featured</span>
+
+                        {/* Best Season */}
+                        <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-lg p-3 border border-cyan-200/50">
+                          <div className="flex items-start gap-2">
+                            <span className="text-base shrink-0">🌤️</span>
+                            <div className="min-w-0">
+                              <p className="text-[10px] font-bold text-blue-700 uppercase tracking-wider font-poppins mb-0.5">Best Season</p>
+                              <p className="text-xs text-gray-800 font-poppins font-semibold">
+                                November to February
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
                       </div>
+
+                      {/* Action Button */}
+                      <div className="pt-2">
+                        <div className={`flex items-center justify-between rounded-lg px-4 py-2.5 transition-colors duration-300 ${colors.button}`}>
+                          <span className="text-white font-poppins font-semibold text-sm">View Details</span>
+                          <span className="text-white text-lg transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </motion.article>
               </Link>
-            ))}
+              );
+            })}
           </motion.div>
 
           {/* View All Destinations CTA */}
@@ -758,8 +782,8 @@ export default function Home() {
             variants={fadeUp} 
             className="text-center mt-20"
           >
-            <div className="bg-gradient-to-r from-purple-50 via-indigo-50 to-blue-50 rounded-3xl p-12 max-w-3xl mx-auto border-2 border-purple-100/50 shadow-xl">
-              <h3 className="text-3xl font-sora font-bold mb-4 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
+            <div className="bg-gradient-to-r from-cyan-50 via-sky-50 to-blue-50 rounded-3xl p-12 max-w-3xl mx-auto border-2 border-cyan-100/50 shadow-xl">
+              <h3 className="text-3xl font-sora font-bold mb-4 bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 bg-clip-text text-transparent">
                 Explore More Destinations
               </h3>
               <p className="text-gray-700 text-lg mb-8 font-poppins leading-relaxed">
@@ -767,7 +791,7 @@ export default function Home() {
               </p>
               <Link
                 href="/destinations"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white px-10 py-5 rounded-full font-poppins font-bold text-lg hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-2xl shadow-purple-500/30 group"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 text-white px-10 py-5 rounded-full font-poppins font-bold text-lg hover:from-cyan-700 hover:via-sky-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-2xl shadow-cyan-500/30 group"
               >
                 <span>View All {DESTINATIONS.length}+ Destinations</span>
                 <span className="transform group-hover:translate-x-2 transition-transform duration-300 text-2xl">→</span>
@@ -780,10 +804,9 @@ export default function Home() {
       {/* 4️⃣ Enhanced Culture & Crafts Section */}
       <section id="culture" className="relative overflow-hidden py-28">
         {/* Modern gradient background */}
-        <div className="absolute inset-0 bg-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-teal-50 to-blue-50">
           <div className="blob blob-1 w-[500px] h-[500px] top-0 left-0 opacity-30"></div>
           <div className="blob blob-2 w-[400px] h-[400px] bottom-0 right-0 opacity-30"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6">
@@ -809,7 +832,7 @@ export default function Home() {
               className="text-left order-1 lg:order-2"
             >
               <div className="mb-8">
-                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-purple-500/30">
+                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-cyan-500/30">
                   <span>🎨</span>
                   <span>Traditional Arts & Culture</span>
                 </span>
@@ -825,15 +848,15 @@ export default function Home() {
               {/* Decorative Elements */}
               <div className="flex flex-col gap-4">
                 <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
+                  <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Traditional Textiles</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
+                  <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Ancient Techniques</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-800 font-poppins font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-purple-700 to-indigo-800 rounded-full animate-pulse"></span>
+                  <span className="w-4 h-4 bg-gradient-to-r from-cyan-700 to-blue-800 rounded-full animate-pulse"></span>
                   <span className="text-base">Master Artisans</span>
                 </div>
               </div>
@@ -851,7 +874,7 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {/* Bandhani */}
                 <Link href="/crafts/bandhani" className="group cursor-pointer">
-                  <div className="relative bg-gradient-to-br from-purple-50/80 to-purple-100/60 rounded-2xl p-8 border-2 border-purple-200/40 hover:border-purple-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  <div className="relative bg-gradient-to-br from-cyan-50/80 to-cyan-100/60 rounded-2xl p-8 border-2 border-cyan-200/40 hover:border-cyan-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="text-center">
                       <div className="w-20 h-20 rounded-full mx-auto mb-5 overflow-hidden shadow-lg border-2 border-white/30">
                         <Image 
@@ -866,7 +889,7 @@ export default function Home() {
                       <p className="text-sm text-gray-600">Tie-dye artistry with intricate dot patterns</p>
                       <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-purple-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-cyan-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   </div>
                 </Link>
 
@@ -914,16 +937,16 @@ export default function Home() {
 
                 {/* Mirror Work */}
                 <Link href="/crafts/mirror-work" className="group cursor-pointer">
-                  <div className="relative bg-gradient-to-br from-violet-50/80 to-violet-100/60 rounded-2xl p-8 border-2 border-violet-200/40 hover:border-violet-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  <div className="relative bg-gradient-to-br from-sky-50/80 to-sky-100/60 rounded-2xl p-8 border-2 border-sky-200/40 hover:border-sky-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="text-center">
-                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-violet-200 to-violet-300 shadow-lg border-2 border-white/30">
+                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-sky-200 to-sky-300 shadow-lg border-2 border-white/30">
                         <span className="text-4xl">✨</span>
                       </div>
                       <h3 className="font-bold text-gray-600 mb-3 text-lg">Mirror Work</h3>
                       <p className="text-sm text-gray-600">Shisha embroidery with tiny mirrors</p>
                       <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-violet-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-sky-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   </div>
                 </Link>
               </div>
@@ -932,16 +955,16 @@ export default function Home() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
                 {/* Sudi Chappu Card */}
                 <Link href="/crafts/sudi-chappu" className="group cursor-pointer">
-                  <div className="relative bg-gradient-to-br from-fuchsia-50/80 to-fuchsia-100/60 rounded-2xl p-8 border-2 border-fuchsia-200/40 hover:border-fuchsia-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                  <div className="relative bg-gradient-to-br from-blue-50/80 to-blue-100/60 rounded-2xl p-8 border-2 border-blue-200/40 hover:border-blue-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                     <div className="text-center">
-                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-fuchsia-200 to-fuchsia-300 shadow-lg border-2 border-white/30">
+                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-200 to-blue-300 shadow-lg border-2 border-white/30">
                         <span className="text-4xl">🔪</span>
                       </div>
                       <h3 className="font-bold text-gray-600 mb-3 text-lg">Sudi Chappu</h3>
                       <p className="text-sm text-gray-600">Traditional knife-making in Anjar</p>
                       <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-fuchsia-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-blue-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
                   </div>
                 </Link>
 
@@ -1001,11 +1024,10 @@ export default function Home() {
 
       {/* 5️⃣ Enhanced Travel Guide Section */}
       <section id="guide" className="relative overflow-hidden py-24">
-        {/* Consistent Indigo/Purple/Blue Gradient */}
-        <div className="absolute inset-0 bg-white">
+        {/* Consistent Cyan/Sky/Blue Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-teal-50 via-cyan-50 to-sky-50">
           <div className="blob blob-1 w-[500px] h-[500px] top-0 left-0 opacity-30"></div>
           <div className="blob blob-2 w-[400px] h-[400px] bottom-0 right-0 opacity-30"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6">
@@ -1023,11 +1045,11 @@ export default function Home() {
                 className="mb-12"
               >
                 <div className="mb-6">
-                  <span className="inline-block px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full text-sm font-poppins font-bold tracking-wide shadow-lg shadow-purple-500/30 border border-purple-400/30">
+                  <span className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full text-sm font-poppins font-bold tracking-wide shadow-lg shadow-cyan-500/30 border border-cyan-400/30">
                     ✈️ Plan Your Journey
                   </span>
                 </div>
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold mb-6 leading-tight bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold mb-6 leading-tight bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 bg-clip-text text-transparent">
                   Travel Essentials
                 </h2>
                 <p className="text-xl text-gray-900 leading-relaxed font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
@@ -1045,22 +1067,22 @@ export default function Home() {
                   whileInView="visible" 
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="group bg-gradient-to-br from-purple-50/80 via-indigo-50/80 to-blue-50/80 backdrop-blur-xl rounded-3xl p-8 shadow-xl border-2 border-purple-200/50 hover:border-purple-300/70 hover:shadow-2xl transition-all duration-500"
+                  className="group bg-gradient-to-br from-cyan-50/80 via-sky-50/80 to-blue-50/80 backdrop-blur-xl rounded-3xl p-8 shadow-xl border-2 border-cyan-200/50 hover:border-cyan-300/70 hover:shadow-2xl transition-all duration-500"
                 >
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center shadow-lg shadow-purple-500/50 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-500/50 group-hover:scale-110 transition-transform duration-300">
                       <span className="text-white text-2xl">🗓️</span>
                     </div>
                     <div>
-                      <h3 className="text-3xl font-sora font-bold bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">When to Visit</h3>
+                      <h3 className="text-3xl md:text-4xl font-sora font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">When to Visit</h3>
                       <p className="text-sm text-gray-600 font-poppins">Choose your perfect season</p>
                     </div>
                   </div>
                   <div className="space-y-4">
-                    <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border-2 border-purple-200/60 hover:border-purple-400/80 transition-all duration-300 hover:shadow-lg">
+                    <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border-2 border-cyan-200/60 hover:border-cyan-400/80 transition-all duration-300 hover:shadow-lg">
                       <div className="flex items-start justify-between mb-2">
-                        <h4 className="font-poppins font-bold text-purple-900 text-lg">November - February</h4>
-                        <span className="px-3 py-1 bg-gradient-to-r from-purple-500 to-indigo-500 text-white text-xs rounded-full font-bold">BEST</span>
+                        <h4 className="font-poppins font-bold text-cyan-900 text-lg">November - February</h4>
+                        <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs rounded-full font-bold">BEST</span>
                       </div>
                       <p className="text-sm text-slate-700 font-poppins leading-relaxed">Pleasant weather (10-25°C), world-famous Rann Utsav festival, perfect for desert camping under starlit skies, vibrant cultural performances, and exploring the white salt desert.</p>
                     </div>
@@ -1094,7 +1116,7 @@ export default function Home() {
                       <span className="text-white text-2xl">✈️</span>
                     </div>
                     <div>
-                      <h3 className="text-3xl font-sora font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Getting There</h3>
+                      <h3 className="text-3xl md:text-4xl font-sora font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Getting There</h3>
                       <p className="text-sm text-gray-600 font-poppins">All routes lead to Kutch</p>
                     </div>
                   </div>
@@ -1152,7 +1174,7 @@ export default function Home() {
                   <span className="inline-block px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-600 text-white rounded-full text-xs font-poppins font-bold mb-4 shadow-lg shadow-orange-500/30">
                     🏨 ACCOMMODATIONS
                   </span>
-                  <h3 className="text-4xl font-sora font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent mb-2">Where to Stay</h3>
+                  <h3 className="text-3xl md:text-4xl font-sora font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent mb-2">Where to Stay</h3>
                   <p className="text-gray-900 font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
                     From luxury resorts to authentic village homes
                   </p>
@@ -1160,41 +1182,41 @@ export default function Home() {
                 
                 {/* Placeholder Images Grid */}
                 <div className="space-y-4">
-                  <div className="group relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-orange-200/60 via-amber-200/60 to-yellow-200/60 border-2 border-orange-300/70 hover:border-orange-400 transition-all duration-300 hover:shadow-xl cursor-pointer">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div className="group relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-orange-100 via-amber-100 to-yellow-100 border-2 border-orange-300/70 hover:border-orange-400 transition-all duration-300 hover:shadow-xl cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent"></div>
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
                       <span className="text-7xl mb-3 group-hover:scale-110 transition-transform duration-300">🏨</span>
-                      <h4 className="text-white font-sora font-bold text-2xl mb-1 drop-shadow-lg">Luxury Hotels</h4>
-                      <p className="text-white/90 font-poppins text-sm drop-shadow-md">Premium resorts & 5-star properties</p>
+                      <h4 className="text-gray-900 font-sora font-bold text-2xl mb-1">Luxury Hotels</h4>
+                      <p className="text-gray-700 font-poppins text-sm font-medium">Premium resorts & 5-star properties</p>
                     </div>
                   </div>
                   
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="group relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-amber-200/60 via-yellow-200/60 to-orange-200/60 border-2 border-amber-300/70 hover:border-amber-400 transition-all duration-300 hover:shadow-xl cursor-pointer">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="group relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-amber-100 via-yellow-100 to-orange-100 border-2 border-amber-300/70 hover:border-amber-400 transition-all duration-300 hover:shadow-xl cursor-pointer">
+                      <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent"></div>
                       <div className="absolute inset-0 flex flex-col items-center justify-center">
                         <span className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">🏡</span>
-                        <h4 className="text-white font-sora font-bold text-lg drop-shadow-lg">Homestays</h4>
-                        <p className="text-white/90 font-poppins text-xs drop-shadow-md px-2 text-center">Authentic village life</p>
+                        <h4 className="text-gray-900 font-sora font-bold text-lg">Homestays</h4>
+                        <p className="text-gray-700 font-poppins text-xs font-medium px-2 text-center">Authentic village life</p>
                       </div>
                     </div>
                     
-                    <div className="group relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-yellow-200/60 via-orange-200/60 to-red-200/60 border-2 border-yellow-300/70 hover:border-yellow-400 transition-all duration-300 hover:shadow-xl cursor-pointer">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                    <div className="group relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-yellow-100 via-orange-100 to-red-100 border-2 border-yellow-300/70 hover:border-yellow-400 transition-all duration-300 hover:shadow-xl cursor-pointer">
+                      <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent"></div>
                       <div className="absolute inset-0 flex flex-col items-center justify-center">
                         <span className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">⛺</span>
-                        <h4 className="text-white font-sora font-bold text-lg drop-shadow-lg">Desert Camps</h4>
-                        <p className="text-white/90 font-poppins text-xs drop-shadow-md px-2 text-center">Glamping under stars</p>
+                        <h4 className="text-gray-900 font-sora font-bold text-lg">Desert Camps</h4>
+                        <p className="text-gray-700 font-poppins text-xs font-medium px-2 text-center">Glamping under stars</p>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="group relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-red-200/60 via-orange-200/60 to-amber-200/60 border-2 border-red-300/70 hover:border-red-400 transition-all duration-300 hover:shadow-xl cursor-pointer">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                  <div className="group relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-red-100 via-orange-100 to-amber-100 border-2 border-red-300/70 hover:border-red-400 transition-all duration-300 hover:shadow-xl cursor-pointer">
+                    <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent"></div>
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
                       <span className="text-7xl mb-3 group-hover:scale-110 transition-transform duration-300">🏰</span>
-                      <h4 className="text-white font-sora font-bold text-2xl mb-1 drop-shadow-lg">Heritage Stays</h4>
-                      <p className="text-white/90 font-poppins text-sm drop-shadow-md">Royal palaces & historic havelis</p>
+                      <h4 className="text-gray-900 font-sora font-bold text-2xl mb-1">Heritage Stays</h4>
+                      <p className="text-gray-700 font-poppins text-sm font-medium">Royal palaces & historic havelis</p>
                     </div>
                   </div>
                 </div>
@@ -1228,23 +1250,23 @@ export default function Home() {
             whileInView="visible" 
             viewport={{ once: true }}
             variants={fadeUp}
-            className="group bg-gradient-to-br from-violet-50/80 via-purple-50/80 to-fuchsia-50/80 backdrop-blur-xl rounded-3xl p-8 shadow-xl border-2 border-violet-200/50 hover:border-violet-300/70 hover:shadow-2xl transition-all duration-500 mb-16 mt-20"
+            className="group bg-gradient-to-br from-cyan-50/80 via-sky-50/80 to-blue-50/80 backdrop-blur-xl rounded-3xl p-8 shadow-xl border-2 border-cyan-200/50 hover:border-cyan-300/70 hover:shadow-2xl transition-all duration-500 mb-16 mt-20"
           >
             <div className="flex items-center gap-3 mb-8">
-              <div className="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg shadow-violet-500/50 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-14 h-14 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50 group-hover:scale-110 transition-transform duration-300">
                 <span className="text-white text-2xl">🎒</span>
               </div>
               <div>
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-sora font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">Packing Essentials</h3>
+                <h3 className="text-3xl md:text-4xl font-sora font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Packing Essentials</h3>
                 <p className="text-base text-gray-600 font-poppins">Travel smart, travel light</p>
               </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-purple-200/60 hover:border-purple-400/80 transition-all duration-300 hover:shadow-lg group">
+              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-cyan-200/60 hover:border-cyan-400/80 transition-all duration-300 hover:shadow-lg group">
                 <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300">👕</span>
                   <div>
-                    <h4 className="font-poppins font-bold text-purple-900 mb-1 text-base">Clothing</h4>
+                    <h4 className="font-poppins font-bold text-cyan-900 mb-1 text-base">Clothing</h4>
                     <p className="text-xs text-slate-700 font-poppins leading-relaxed">Light cotton clothes, warm layers for nights</p>
                   </div>
                 </div>
@@ -1285,29 +1307,29 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-violet-200/60 hover:border-violet-400/80 transition-all duration-300 hover:shadow-lg group">
+              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-sky-200/60 hover:border-sky-400/80 transition-all duration-300 hover:shadow-lg group">
                 <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300">💊</span>
                   <div>
-                    <h4 className="font-poppins font-bold text-violet-900 mb-1 text-base">Medical Essentials</h4>
+                    <h4 className="font-poppins font-bold text-sky-900 mb-1 text-base">Medical Essentials</h4>
                     <p className="text-xs text-slate-700 font-poppins leading-relaxed">First aid kit, medicines, antiseptic</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-fuchsia-200/60 hover:border-fuchsia-400/80 transition-all duration-300 hover:shadow-lg group">
+              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-blue-200/60 hover:border-blue-400/80 transition-all duration-300 hover:shadow-lg group">
                 <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300">🔦</span>
                   <div>
-                    <h4 className="font-poppins font-bold text-fuchsia-900 mb-1 text-base">Night Essentials</h4>
+                    <h4 className="font-poppins font-bold text-blue-900 mb-1 text-base">Night Essentials</h4>
                     <p className="text-xs text-slate-700 font-poppins leading-relaxed">Flashlight, warm jacket, mosquito repellent</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-pink-200/60 hover:border-pink-400/80 transition-all duration-300 hover:shadow-lg group">
+              <div className="bg-white/80 backdrop-blur-sm p-5 rounded-xl border-2 border-teal-200/60 hover:border-teal-400/80 transition-all duration-300 hover:shadow-lg group">
                 <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300">📱</span>
                   <div>
-                    <h4 className="font-poppins font-bold text-pink-900 mb-1 text-base">Documents & Tech</h4>
+                    <h4 className="font-poppins font-bold text-teal-900 mb-1 text-base">Documents & Tech</h4>
                     <p className="text-xs text-slate-700 font-poppins leading-relaxed">ID proof, bookings, offline maps, chargers</p>
                   </div>
                 </div>
@@ -1327,7 +1349,7 @@ export default function Home() {
               <span className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-full text-sm font-poppins font-bold tracking-wide mb-6 shadow-lg shadow-emerald-500/30 border border-emerald-400/30">
                 🛡️ TRAVEL SAFELY
               </span>
-              <h3 className="text-4xl md:text-5xl lg:text-6xl font-sora font-bold bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent mb-4">Safety & Important Tips</h3>
+              <h3 className="text-3xl md:text-4xl font-sora font-bold bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent mb-4">Safety & Important Tips</h3>
               <p className="text-gray-900 text-lg font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
                 Stay safe and make the most of your Kutch adventure
               </p>
@@ -1374,7 +1396,7 @@ export default function Home() {
             className="text-center"
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/20">
-              <h3 className="text-3xl font-sora font-bold text-gray-900 mb-4">Need Personalized Guidance?</h3>
+              <h3 className="text-3xl md:text-4xl font-sora font-bold text-gray-900 mb-4">Need Personalized Guidance?</h3>
               <p className="text-slate-800 font-poppins mb-8 max-w-2xl mx-auto">
                 Get customized itineraries, local insights, and 24/7 support for your Kutch journey. 
                 Our local experts are here to help plan your perfect adventure.
@@ -1402,11 +1424,10 @@ export default function Home() {
 
       {/* 6️⃣ Contact CTA */}
       <section id="contact" className="relative overflow-hidden py-20">
-        {/* Consistent Indigo/Purple/Blue Gradient */}
-        <div className="absolute inset-0 bg-white">
+        {/* Consistent Cyan/Sky/Blue Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-50 via-blue-50 to-cyan-50">
           <div className="blob blob-1 w-[500px] h-[500px] top-0 left-0 opacity-30"></div>
           <div className="blob blob-2 w-[400px] h-[400px] top-1/3 right-0 opacity-30"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-6">
@@ -1418,7 +1439,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-sora font-extrabold mb-6 holographic">
+            <h2 className="text-3xl md:text-4xl font-sora font-extrabold mb-6 holographic">
               Stay Connected
             </h2>
             <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-poppins font-light">
@@ -1520,13 +1541,13 @@ export default function Home() {
       </section>
 
       {/* 7️⃣ Footer */}
-      <footer className="relative overflow-hidden">
-        {/* Gradient Background */}
-        <div className="absolute inset-0 bg-white"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+      <footer className="relative overflow-hidden bg-gradient-to-br from-orange-50 via-cyan-50 to-blue-50">
+        {/* Decorative Blobs */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-sky-100 to-cyan-100 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-orange-100 rounded-full blur-3xl opacity-30"></div>
         
-        {/* Decorative Elements */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-white"></div>
+        {/* Decorative Top Border */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-500"></div>
         
         <div className="relative pt-20 pb-12">
           <div className="max-w-7xl mx-auto px-6">
@@ -1541,11 +1562,12 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
                   viewport={{ once: true }}
+                  className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white shadow-lg"
                 >
-                  <h3 className="text-4xl font-sora font-extrabold bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800 bg-clip-text text-transparent mb-6">
+                  <h3 className="text-5xl md:text-6xl font-sora font-extrabold holographic drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)] mb-6">
                     Travel Kutch
                   </h3>
-                  <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-md font-poppins">
+                  <p className="text-xl text-gray-700 leading-relaxed mb-8 font-poppins">
                     Your gateway to the mystical land of Kutch — from the ethereal White Desert to ancient heritage sites. 
                     Discover authentic crafts, vibrant festivals, and the timeless stories that define Gujarat's cultural crown jewel.
                   </p>
@@ -1554,13 +1576,13 @@ export default function Home() {
                   <div className="flex flex-wrap gap-4">
                     <a 
                       href="https://wa.me/919825034580" 
-                      className="flex items-center gap-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
+                      className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 shadow-md"
                     >
                       💬 WhatsApp
                     </a>
                     <a 
                       href="tel:+919512234395" 
-                      className="flex items-center gap-2 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 text-white px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
+                      className="flex items-center gap-2 bg-gradient-to-r from-sky-500 to-blue-500 hover:from-sky-600 hover:to-blue-600 text-white px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 shadow-md"
                     >
                       📞 Call Now
                     </a>
@@ -1574,8 +1596,9 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
+                className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white shadow-lg"
               >
-                <h4 className="text-2xl font-sora font-bold text-gray-900 mb-6">Explore</h4>
+                <h4 className="text-2xl font-sora font-bold bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent mb-6">Explore</h4>
                 <ul className="space-y-3 font-poppins">
                   {[
                     { name: "Home", href: "#home", icon: "🏠" },
@@ -1587,10 +1610,10 @@ export default function Home() {
                     <li key={index}>
                       <a 
                         href={link.href} 
-                        className="flex items-center gap-3 text-gray-600 hover:text-gray-900 transition-colors duration-300 group"
+                        className="flex items-center gap-3 text-gray-700 hover:text-indigo-600 transition-colors duration-300 group"
                       >
                         <span className="group-hover:scale-110 transition-transform duration-300">{link.icon}</span>
-                        <span className="group-hover:translate-x-1 transition-transform duration-300">{link.name}</span>
+                        <span className="group-hover:translate-x-1 transition-transform duration-300 font-medium">{link.name}</span>
                       </a>
                     </li>
                   ))}
@@ -1603,34 +1626,33 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
+                className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white shadow-lg"
               >
-                <h4 className="text-2xl font-sora font-bold text-gray-900 mb-6">Connect</h4>
-                <div className="space-y-4 font-poppins">
-                  <div className="flex items-start gap-3 text-gray-600">
-                    <span className="text-xl mt-1">📍</span>
+                <h4 className="text-2xl font-sora font-bold bg-gradient-to-r from-cyan-600 to-orange-600 bg-clip-text text-transparent mb-6">Connect</h4>
+                <div className="space-y-5 font-poppins">
+                  <div className="flex items-start gap-3 text-gray-700">
+                    <span className="text-2xl mt-1">📍</span>
                     <div>
-                      <p className="font-medium text-gray-900">Visit Us</p>
-                      <p className="text-sm">Bhuj, Kutch District</p>
-                      <p className="text-sm">Gujarat, India</p>
+                      <p className="font-semibold text-gray-900 mb-1">Visit Us</p>
+                      <p className="text-sm leading-relaxed">Bhuj, Kutch District<br />Gujarat, India</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-center gap-3 text-gray-600">
-                    <span className="text-xl">📞</span>
+                  <div className="flex items-start gap-3 text-gray-700">
+                    <span className="text-2xl mt-1">📞</span>
                     <div>
-                      <p className="font-medium text-gray-900">Call Us</p>
-                      <a href="tel:+919825034580" className="hover:text-gray-800 transition-colors text-sm">+91 98250 34580</a>
-                      <br />
-                      <a href="tel:+919512234395" className="hover:text-gray-800 transition-colors text-sm">+91 95122 34395</a>
+                      <p className="font-semibold text-gray-900 mb-1">Call Us</p>
+                      <a href="tel:+919825034580" className="hover:text-indigo-600 transition-colors text-sm block">+91 98250 34580</a>
+                      <a href="tel:+919512234395" className="hover:text-indigo-600 transition-colors text-sm block">+91 95122 34395</a>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3 text-gray-600">
-                    <span className="text-xl">✉️</span>
+                  <div className="flex items-start gap-3 text-gray-700">
+                    <span className="text-2xl mt-1">✉️</span>
                     <div>
-                      <p className="font-medium text-gray-900">Email</p>
-                      <a href="mailto:info@travelkutch.com" className="hover:text-gray-800 transition-colors text-sm">
-                        info@travelkutch.com
+                      <p className="font-semibold text-gray-900 mb-1">Email</p>
+                      <a href="mailto:rachhnn@gmail.com" className="hover:text-indigo-600 transition-colors text-sm">
+                        rachhnn@gmail.com
                       </a>
                     </div>
                   </div>
@@ -1646,7 +1668,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-3xl font-bold text-center bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent mb-8 font-playfair emboss-text">
+              <h4 className="text-3xl font-bold text-center text-gray-900 mb-8 font-playfair">
                 Discover the Geography of Wonder
               </h4>
               <div className="max-w-4xl mx-auto">
@@ -1662,7 +1684,7 @@ export default function Home() {
                       className="border-0"
                     />
                   </div>
-                  <p className="text-gray-100/80 text-center mt-4">
+                  <p className="text-gray-800 text-center mt-4 font-medium">
                     From the vast salt marshes of the Rann to historic ports along the Arabian Sea — explore every corner of this magnificent region
                   </p>
                 </div>
@@ -1670,27 +1692,27 @@ export default function Home() {
             </motion.div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-purple-100 pt-8">
+            <div className="border-t border-cyan-100 pt-8">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <motion.p 
-                  className="text-gray-200/80 text-center md:text-left"
+                  className="text-gray-800 text-center md:text-left font-medium"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  © {new Date().getFullYear()} <span className="text-gray-300 font-semibold">Travel Kutch</span>. 
+                  © {new Date().getFullYear()} <span className="text-gray-900 font-bold">Travel Kutch</span>. 
                   Crafted with passion for authentic cultural experiences.
                 </motion.p>
                 
                 <motion.p 
-                  className="text-gray-200/60 text-sm"
+                  className="text-gray-800 text-sm font-medium"
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.6, delay: 0.5 }}
                   viewport={{ once: true }}
                 >
-                  Designed with ❤️ for travelers seeking authentic Gujarat
+                  Designed with ❤️ for travelers seeking authentic Kutch
                 </motion.p>
               </div>
             </div>

@@ -365,7 +365,19 @@ function DestinationsClient() {
             animate="visible"
             className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8"
           >
-            {filteredDestinations.map((destination, index) => (
+            {filteredDestinations.map((destination, index) => {
+              // Define unique colors for each card
+              const cardColors = [
+                { border: 'border-cyan-200', hoverBorder: 'hover:border-cyan-400', gradient: 'from-white via-cyan-50/30 to-blue-50/30', tag: 'bg-cyan-50 text-cyan-700 border-cyan-200', button: 'bg-cyan-600 hover:bg-cyan-700' },
+                { border: 'border-purple-200', hoverBorder: 'hover:border-purple-400', gradient: 'from-white via-purple-50/30 to-pink-50/30', tag: 'bg-purple-50 text-purple-700 border-purple-200', button: 'bg-purple-600 hover:bg-purple-700' },
+                { border: 'border-emerald-200', hoverBorder: 'hover:border-emerald-400', gradient: 'from-white via-emerald-50/30 to-teal-50/30', tag: 'bg-emerald-50 text-emerald-700 border-emerald-200', button: 'bg-emerald-600 hover:bg-emerald-700' },
+                { border: 'border-orange-200', hoverBorder: 'hover:border-orange-400', gradient: 'from-white via-orange-50/30 to-amber-50/30', tag: 'bg-orange-50 text-orange-700 border-orange-200', button: 'bg-orange-600 hover:bg-orange-700' },
+                { border: 'border-blue-200', hoverBorder: 'hover:border-blue-400', gradient: 'from-white via-blue-50/30 to-indigo-50/30', tag: 'bg-blue-50 text-blue-700 border-blue-200', button: 'bg-blue-600 hover:bg-blue-700' },
+                { border: 'border-rose-200', hoverBorder: 'hover:border-rose-400', gradient: 'from-white via-rose-50/30 to-red-50/30', tag: 'bg-rose-50 text-rose-700 border-rose-200', button: 'bg-rose-600 hover:bg-rose-700' }
+              ];
+              const colors = cardColors[index % 6];
+              
+              return (
               <motion.div
                 key={destination.slug}
                 variants={cardVariants}
@@ -374,76 +386,87 @@ function DestinationsClient() {
               >
                 <Link href={`/destinations/${destination.slug}`}>
                   <motion.article 
-                    className="relative bg-white rounded-[2.5rem] overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 transform hover:-translate-y-3 border border-purple-100 group-hover:border-purple-300"
+                    className={`group relative bg-gradient-to-br ${colors.gradient} rounded-2xl overflow-hidden shadow-lg border-2 ${colors.border} transition-all duration-500 hover:shadow-2xl ${colors.hoverBorder}`}
                   >
-                    {/* Image Container */}
-                    <div className="relative h-[400px] overflow-hidden">
-                      <Image
-                        src={destination.image}
-                        alt={destination.title}
-                        fill
-                        className="object-cover transition-transform duration-1000 group-hover:scale-125"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
+                    {/* Horizontal Layout: Image + Content Side by Side */}
+                    <div className="flex flex-col">
                       
-                      {/* Gradient Overlays */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-cyan-400/10 group-hover:from-white/20 group-hover:to-cyan-300/20 transition-all duration-700" />
-                      
-                      {/* Premium Category Badge */}
-                      <div className="absolute top-6 right-6 z-10">
-                        <div className="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 text-white px-6 py-3 rounded-full shadow-2xl backdrop-blur-sm border-2 border-white/30 font-poppins">
-                          <span className="text-sm font-bold tracking-wide">
+                      {/* Compact Image with Rounded Corners */}
+                      <div className="relative h-40 m-4 rounded-xl overflow-hidden">
+                        <Image
+                          src={destination.image}
+                          alt={destination.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-700"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent"></div>
+                        
+                        {/* Floating Category Tag */}
+                        <div className="absolute top-2 right-2">
+                          <span className={`backdrop-blur-sm border px-3 py-1 rounded-lg text-xs font-bold font-poppins shadow-md ${colors.tag}`}>
                             {destination.sections.find(s => s.heading === 'Category')?.content || 'Explore'}
                           </span>
                         </div>
                       </div>
-                      
-                      {/* Floating Action Button */}
-                      <div className="absolute top-6 left-6 opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-75 group-hover:scale-100 z-10">
-                        <div className="w-16 h-16 bg-gradient-to-r from-white/95 to-white/80 backdrop-blur-md rounded-full shadow-2xl flex items-center justify-center border-2 border-white/50 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 hover:text-white transition-all duration-300">
-                          <span className="text-gray-600 hover:text-gray-900 text-2xl font-bold">→</span>
-                        </div>
-                      </div>
 
-                      {/* Title Overlay */}
-                      <div className="absolute bottom-6 left-6 right-6 z-10">
-                        <h3 className="text-2xl font-sora font-semibold mb-3 leading-tight text-white" style={{ textShadow: '2px 4px 8px rgba(0,0,0,0.4)' }}>
-                          {destination.title}
-                        </h3>
-                        <div className="flex items-center gap-3 text-white/90">
-                          <span className="text-base">📍</span>
-                          <span className="text-base font-poppins font-medium text-white/90">Kutch, Gujarat</span>
+                      {/* Content Section */}
+                      <div className="px-5 pb-5 space-y-3">
+                        
+                        {/* Title with Location */}
+                        <div className="flex items-start justify-between gap-2">
+                          <h3 className="text-lg font-sora font-bold text-gray-900 leading-tight">
+                            {destination.title}
+                          </h3>
+                          <span className="text-xl shrink-0">📍</span>
                         </div>
-                      </div>
-                    </div>
 
-                    {/* Enhanced Content Area */}
-                    <div className="p-7 bg-white/90 backdrop-blur-xl border-t border-purple-100">
-                      <p className="text-gray-700 font-poppins text-base leading-relaxed mb-5 line-clamp-3 group-hover:text-gray-800 transition-colors">
-                        {destination.sections[0]?.content?.replace(/<[^>]*>/g, '') || destination.title}
-                      </p>
-                      
-                      {/* Action Footer */}
-                      <div className="flex items-center justify-between pt-5 border-t border-purple-100">
-                        <span className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-poppins font-bold text-sm">
-                          <span>Explore More</span>
-                          <span className="transform group-hover:translate-x-2 transition-transform duration-300">→</span>
-                        </span>
-                        <div className="flex items-center gap-2">
-                          <div className="w-7 h-7 bg-white rounded-full flex items-center justify-center border border-white/30">
-                            <span className="text-xs">✨</span>
+                        {/* Info Grid */}
+                        <div className="space-y-2.5">
+                          
+                          {/* Famous For */}
+                          <div className="bg-white/80 backdrop-blur-sm rounded-lg p-3 border border-cyan-100">
+                            <div className="flex items-start gap-2">
+                              <span className="text-base shrink-0">✨</span>
+                              <div className="min-w-0">
+                                <p className="text-[10px] font-bold text-cyan-700 uppercase tracking-wider font-poppins mb-0.5">Famous For</p>
+                                <p className="text-xs text-gray-800 font-poppins leading-snug line-clamp-2">
+                                  {destination.sections[0]?.content?.replace(/<[^>]*>/g, '') || destination.title}
+                                </p>
+                              </div>
+                            </div>
                           </div>
-                          <span className="text-xs font-poppins font-semibold text-gray-600">
-                            {destination.sections.find(s => s.heading === 'Duration')?.content || '1-2 days'}
-                          </span>
+
+                          {/* Best Season */}
+                          <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-lg p-3 border border-cyan-200/50">
+                            <div className="flex items-start gap-2">
+                              <span className="text-base shrink-0">🌤️</span>
+                              <div className="min-w-0">
+                                <p className="text-[10px] font-bold text-blue-700 uppercase tracking-wider font-poppins mb-0.5">Best Season</p>
+                                <p className="text-xs text-gray-800 font-poppins font-semibold">
+                                  November to February
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+
                         </div>
+
+                        {/* Action Button */}
+                        <div className="pt-2">
+                          <div className={`flex items-center justify-between rounded-lg px-4 py-2.5 transition-colors duration-300 ${colors.button}`}>
+                            <span className="text-white font-poppins font-semibold text-sm">View Details</span>
+                            <span className="text-white text-lg transform group-hover:translate-x-1 transition-transform duration-300">→</span>
+                          </div>
+                        </div>
+
                       </div>
                     </div>
                   </motion.article>
                 </Link>
               </motion.div>
-            ))}
+              );
+            })}
           </motion.div>
         ) : (
           <motion.div 
@@ -477,39 +500,52 @@ function DestinationsClient() {
         )}
       </div>
 
-      {/* Call to Action with Ocean Gradient */}
+      {/* Call to Action with Light Gradient */}
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.6 }}
-        className="relative overflow-hidden mt-16"
+        className="relative overflow-hidden mt-16 bg-gradient-to-br from-cyan-50 via-sky-50 to-blue-50"
       >
-        {/* Background with ocean-like gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-indigo-800 via-purple-300 to-pink-100">
-          <div className="absolute inset-0 bg-gradient-to-b from-white/10 to-transparent" />
-        </div>
+        {/* Decorative Blobs */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-sky-100 to-teal-100 rounded-full blur-3xl opacity-30"></div>
+        
+        {/* Decorative Top Border */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-500"></div>
         
         <div className="relative max-w-4xl mx-auto text-center px-4 py-20">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-indigo-900 via-purple-900 to-pink-900 drop-shadow-[0_6px_18px_rgba(0,0,0,0.18)] emboss-text display-heading mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 bg-clip-text text-transparent mb-6">
             Plan Your Kutch Adventure
           </h2>
-          <p className="text-xl md:text-2xl font-lora font-semibold text-indigo-700 drop-shadow-[0_6px_14px_rgba(0,0,0,0.12)] tracking-wide mb-8">
+          <p className="text-xl md:text-2xl font-semibold text-gray-700 mb-8">
             Ready to explore the wonders of Kutch? Start planning your journey today!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link 
               href="/"
-              className="inline-block bg-gradient-to-r from-white/90 via-indigo-50/90 to-purple-50/90 text-indigo-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur transform hover:scale-105"
+              className="inline-block bg-white hover:bg-gray-50 text-gray-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-200"
             >
               Back to Home
             </Link>
             <Link 
-              href="#"
-              className="inline-block bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg shadow-purple-500/30 transition-all duration-300 transform hover:scale-105"
+              href="/guide"
+              className="inline-block bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105"
             >
               Start Planning
             </Link>
           </div>
+          
+          {/* Bottom Text - Matching Main Page Style */}
+          <motion.p 
+            className="text-gray-800 text-sm font-medium"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Designed with ❤️ for travelers seeking authentic Kutch
+          </motion.p>
         </div>
       </motion.div>
     </div>

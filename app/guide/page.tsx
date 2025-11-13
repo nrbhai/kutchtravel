@@ -21,49 +21,126 @@ const stagger = {
 };
 
 export default function TravelGuidePage() {
+  // Destination coordinates (approximate positions on the map)
+  const destinations = [
+    { name: 'Mandvi', top: '65%', left: '75%', delay: 0 },
+    { name: 'Bhuj', top: '55%', left: '50%', delay: 0.1 },
+    { name: 'Dhordo', top: '30%', left: '40%', delay: 0.2 },
+    { name: 'Kalo Dungar', top: '25%', left: '45%', delay: 0.3 },
+    { name: 'Anjar', top: '70%', left: '45%', delay: 0.4 },
+    { name: 'Gandhidham', top: '75%', left: '55%', delay: 0.5 },
+    { name: 'Mundra', top: '80%', left: '65%', delay: 0.6 },
+    { name: 'Lakhpat', top: '15%', left: '30%', delay: 0.7 },
+    { name: 'Mata Na Madh', top: '35%', left: '25%', delay: 0.8 },
+    { name: 'Kadia Dhrow', top: '45%', left: '35%', delay: 0.9 },
+    { name: 'Narayan Sarovar', top: '28%', left: '15%', delay: 1.0 },
+    { name: 'Road to Heaven', top: '40%', left: '55%', delay: 1.1 },
+  ];
+
   return (
     <main className="scroll-smooth selection:bg-cyan-200 selection:text-gray-900 relative text-gray-900">
+      {/* Twinkling Star Animation */}
+      <style dangerouslySetInnerHTML={{__html: `
+        @keyframes twinkle {
+          0%, 100% { 
+            opacity: 1; 
+            transform: scale(1);
+          }
+          50% { 
+            opacity: 0.3; 
+            transform: scale(1.3);
+          }
+        }
+        .star-twinkle {
+          animation: twinkle 2s ease-in-out infinite;
+        }
+      `}} />
+
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-[60vh] flex items-center">
+      <section className="relative overflow-hidden min-h-[80vh] flex items-center">
         <div className="absolute top-0 left-0 right-0 z-50">
           <Navigation />
         </div>
 
         {/* Enhanced Background - Matching Main Page */}
-        <div className="absolute inset-0 bg-white/90">
-          <div className="absolute top-0 -left-20 w-96 h-96 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
-          <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
-          <div className="absolute -bottom-20 left-1/3 w-96 h-96 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-4000"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-sky-50 to-blue-50">
+          <div className="absolute top-0 -left-20 w-96 h-96 bg-gradient-to-br from-cyan-200 to-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
+          <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-sky-200 to-teal-300 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
+          <div className="absolute -bottom-20 left-1/3 w-96 h-96 bg-gradient-to-br from-blue-200 to-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-6 pt-20 pb-16 w-full">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={fadeUp}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <div className="inline-flex items-center gap-2 px-6 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-6 border border-gray-200 shadow-lg">
-              <BookOpen className="w-5 h-5 text-cyan-600" />
-              <span className="text-sm font-semibold text-gray-900">Your Complete Travel Companion</span>
-            </div>
-            
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 font-sora leading-tight holographic">
-              Kutch Travel Guide
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-800 mb-8 font-poppins leading-relaxed font-medium">
-              Everything you need to know for an unforgettable journey to the land of white deserts
-            </p>
-          </motion.div>
+        <div className="relative z-20 max-w-7xl mx-auto px-6 pt-24 pb-16 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Side - Map with Twinkling Stars */}
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 shadow-2xl border border-cyan-200">
+                <div className="relative w-full h-[500px] rounded-2xl overflow-hidden bg-gradient-to-br from-blue-50 to-cyan-50">
+                  {/* Using embedded Google Maps as static iframe with pointer-events disabled */}
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d947193.0711048405!2d69.5!3d23.25!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950c4976e1d8b25%3A0x76e2f6be5b8c8a86!2sKutch%20District%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1735228800000!5m2!1sen!2sin"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0, pointerEvents: 'none' }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Kutch District Map"
+                  />
+                </div>
+                <p className="text-gray-700 text-center mt-4 font-medium text-sm">
+                  Kutch District, Gujarat - Gateway to the White Desert
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Right Side - Title and Description */}
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-left"
+            >
+              <div className="inline-flex items-center gap-2 px-6 py-2 bg-white/80 backdrop-blur-sm rounded-full mb-6 border border-gray-200 shadow-lg">
+                <BookOpen className="w-5 h-5 text-cyan-600" />
+                <span className="text-sm font-semibold text-gray-900">Your Complete Travel Companion</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 font-sora leading-tight holographic">
+                Kutch Travel Guide
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-800 mb-8 font-poppins leading-relaxed font-medium">
+                Everything you need to know for an unforgettable journey to the land of white deserts
+              </p>
+
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="#itineraries"
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold rounded-full shadow-lg shadow-cyan-500/30 transition-all duration-300 transform hover:scale-105"
+                >
+                  View Itineraries
+                </a>
+                <a
+                  href="/destinations"
+                  className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-900 font-semibold rounded-full shadow-lg border border-gray-200 transition-all duration-300 transform hover:scale-105"
+                >
+                  Explore Destinations
+                </a>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <div className="relative bg-white/90">
-        <div className="absolute top-40 right-10 w-80 h-80 bg-gradient-to-br from-cyan-300 to-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-        <div className="absolute bottom-60 left-20 w-80 h-80 bg-gradient-to-br from-purple-300 to-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-indigo-300 to-cyan-400 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob animation-delay-2000"></div>
+      <div className="relative bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50">
+        <div className="absolute top-40 right-10 w-80 h-80 bg-gradient-to-br from-cyan-200 to-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+        <div className="absolute bottom-60 left-20 w-80 h-80 bg-gradient-to-br from-sky-200 to-teal-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-blue-200 to-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob animation-delay-2000"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
           
@@ -76,8 +153,8 @@ export default function TravelGuidePage() {
             className="mb-16"
           >
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-12 shadow-2xl relative overflow-hidden border border-gray-200">
-              <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full blur-3xl opacity-40 animate-blob"></div>
-              <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-cyan-300 to-blue-300 rounded-full blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
+              <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-sky-200 to-blue-300 rounded-full blur-3xl opacity-40 animate-blob"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-br from-cyan-200 to-teal-300 rounded-full blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
               
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 font-sora holographic">About Kutch</h2>
@@ -96,17 +173,17 @@ export default function TravelGuidePage() {
                       <div className="text-sm opacity-90">Population</div>
                       <div className="text-2xl font-bold">2.1M+</div>
                     </div>
-                    <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl p-4 text-white shadow-lg">
+                    <div className="bg-gradient-to-br from-sky-500 to-cyan-600 rounded-xl p-4 text-white shadow-lg">
                       <MapPin className="w-8 h-8 mb-2" />
                       <div className="text-sm opacity-90">Area</div>
                       <div className="text-2xl font-bold">45,674 km²</div>
                     </div>
-                    <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-xl p-4 text-white shadow-lg">
+                    <div className="bg-gradient-to-br from-blue-500 to-sky-600 rounded-xl p-4 text-white shadow-lg">
                       <Compass className="w-8 h-8 mb-2" />
                       <div className="text-sm opacity-90">Capital</div>
                       <div className="text-xl font-bold">Bhuj</div>
                     </div>
-                    <div className="bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl p-4 text-white shadow-lg">
+                    <div className="bg-gradient-to-br from-teal-500 to-cyan-600 rounded-xl p-4 text-white shadow-lg">
                       <Sparkles className="w-8 h-8 mb-2" />
                       <div className="text-sm opacity-90">Languages</div>
                       <div className="text-lg font-bold">Kutchi, Gujarati</div>
@@ -130,10 +207,10 @@ export default function TravelGuidePage() {
             </h2>
             
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-orange-200">
+              <div className="bg-gradient-to-br from-orange-50 to-amber-50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-orange-200 hover:border-orange-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center">
-                    <Sun className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-amber-100 rounded-xl flex items-center justify-center border border-orange-200">
+                    <Sun className="w-6 h-6 text-orange-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 font-sora">Winter</h3>
                 </div>
@@ -147,35 +224,35 @@ export default function TravelGuidePage() {
                 </div>
               </div>
 
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-blue-200">
+              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-cyan-200 hover:border-cyan-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center">
-                    <Umbrella className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-xl flex items-center justify-center border border-cyan-200">
+                    <Umbrella className="w-6 h-6 text-cyan-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 font-sora">Monsoon</h3>
                 </div>
-                <div className="text-sm font-bold text-blue-600 mb-3">July to September</div>
+                <div className="text-sm font-bold text-cyan-600 mb-3">July to September</div>
                 <p className="text-gray-700 mb-4 font-medium">
                   Sparse rainfall (250-500mm annually). The Rann floods and becomes a seasonal wetland. Best for birdwatching as migratory birds arrive.
                 </p>
-                <div className="flex items-center gap-2 text-blue-600 font-semibold">
+                <div className="flex items-center gap-2 text-cyan-600 font-semibold">
                   <Info className="w-5 h-5" />
                   <span>For Nature Lovers</span>
                 </div>
               </div>
 
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-red-200">
+              <div className="bg-gradient-to-br from-rose-50 to-red-50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-rose-200 hover:border-rose-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-red-400 to-orange-500 rounded-xl flex items-center justify-center">
-                    <Thermometer className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-rose-100 to-red-100 rounded-xl flex items-center justify-center border border-rose-200">
+                    <Thermometer className="w-6 h-6 text-rose-600" />
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 font-sora">Summer</h3>
                 </div>
-                <div className="text-sm font-bold text-red-600 mb-3">March to June</div>
+                <div className="text-sm font-bold text-rose-600 mb-3">March to June</div>
                 <p className="text-gray-700 mb-4 font-medium">
                   Very hot with temperatures reaching 45°C-48°C. Not recommended for tourism. The Rann becomes completely dry and harsh.
                 </p>
-                <div className="flex items-center gap-2 text-red-600 font-semibold">
+                <div className="flex items-center gap-2 text-rose-600 font-semibold">
                   <AlertCircle className="w-5 h-5" />
                   <span>Avoid</span>
                 </div>
@@ -196,9 +273,9 @@ export default function TravelGuidePage() {
             </h2>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow">
-                <div className="w-14 h-14 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl flex items-center justify-center mb-4">
-                  <Plane className="w-7 h-7 text-white" />
+              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-cyan-200 hover:border-cyan-300 transition-all">
+                <div className="w-14 h-14 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-xl flex items-center justify-center mb-4 border border-cyan-200">
+                  <Plane className="w-7 h-7 text-cyan-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 font-sora">By Air</h3>
                 <p className="text-gray-700 font-medium mb-3">
@@ -211,9 +288,9 @@ export default function TravelGuidePage() {
                 </div>
               </div>
 
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow">
-                <div className="w-14 h-14 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-xl flex items-center justify-center mb-4">
-                  <Train className="w-7 h-7 text-white" />
+              <div className="bg-gradient-to-br from-sky-50 to-blue-50 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-sky-200 hover:border-sky-300 transition-all">
+                <div className="w-14 h-14 bg-gradient-to-br from-sky-100 to-blue-100 rounded-xl flex items-center justify-center mb-4 border border-sky-200">
+                  <Train className="w-7 h-7 text-sky-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 font-sora">By Train</h3>
                 <p className="text-gray-700 font-medium mb-3">
@@ -226,9 +303,9 @@ export default function TravelGuidePage() {
                 </div>
               </div>
 
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow">
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-4">
-                  <Bus className="w-7 h-7 text-white" />
+              <div className="bg-gradient-to-br from-teal-50 to-cyan-50 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-teal-200 hover:border-teal-300 transition-all">
+                <div className="w-14 h-14 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-xl flex items-center justify-center mb-4 border border-teal-200">
+                  <Bus className="w-7 h-7 text-teal-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 font-sora">By Bus</h3>
                 <p className="text-gray-700 font-medium mb-3">
@@ -241,9 +318,9 @@ export default function TravelGuidePage() {
                 </div>
               </div>
 
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-xl flex items-center justify-center mb-4">
-                  <Car className="w-7 h-7 text-white" />
+              <div className="bg-gradient-to-br from-blue-50 to-sky-50 backdrop-blur-sm rounded-2xl p-6 shadow-lg border-2 border-blue-200 hover:border-blue-300 transition-all">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-sky-100 rounded-xl flex items-center justify-center mb-4 border border-blue-200">
+                  <Car className="w-7 h-7 text-blue-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 font-sora">By Road</h3>
                 <p className="text-gray-700 font-medium mb-3">
@@ -270,7 +347,7 @@ export default function TravelGuidePage() {
               Getting Around Kutch
             </h2>
 
-            <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200">
+            <div className="bg-gradient-to-br from-white to-cyan-50/30 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-cyan-200">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 font-sora flex items-center gap-2">
@@ -284,6 +361,10 @@ export default function TravelGuidePage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span><strong>Rental Bikes/2-Wheelers:</strong> Affordable option for solo travelers. Cost: ₹500-800/day. Great for flexibility</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                       <span><strong>Taxis:</strong> Most convenient option. Book full-day or point-to-point. Cost: ₹3,000-5,000/day</span>
                     </li>
                     <li className="flex items-start gap-2">
@@ -294,7 +375,7 @@ export default function TravelGuidePage() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 font-sora flex items-center gap-2">
-                    <Bus className="w-6 h-6 text-indigo-600" />
+                    <Bus className="w-6 h-6 text-blue-600" />
                     Public Transport
                   </h3>
                   <ul className="space-y-3 text-gray-700">
@@ -329,12 +410,13 @@ export default function TravelGuidePage() {
             </h2>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl p-8 text-white shadow-xl">
-                <Hotel className="w-12 h-12 mb-4" />
-                <h3 className="text-2xl font-bold mb-3 font-sora">Budget</h3>
-                <div className="text-3xl font-bold mb-2">₹800-2,000</div>
-                <div className="text-sm opacity-90 mb-4">per night</div>
-                <ul className="space-y-2 text-white/90">
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 rounded-2xl p-8 shadow-lg border-2 border-amber-200 hover:border-amber-300 transition-all">
+                <Hotel className="w-12 h-12 mb-4 text-amber-600" />
+                <h3 className="text-2xl font-bold mb-3 font-sora text-gray-900">Budget</h3>
+                <div className="text-3xl font-bold mb-2 text-amber-600">₹800-2,000</div>
+                <div className="text-sm text-gray-600 mb-4">per night</div>
+                <ul className="space-y-2 text-gray-700">
+                  <li>• Homestays in Bhuj</li>
                   <li>• Guesthouses in Bhuj</li>
                   <li>• Basic hotels</li>
                   <li>• Government rest houses</li>
@@ -342,12 +424,12 @@ export default function TravelGuidePage() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl p-8 text-white shadow-xl">
-                <Hotel className="w-12 h-12 mb-4" />
-                <h3 className="text-2xl font-bold mb-3 font-sora">Mid-Range</h3>
-                <div className="text-3xl font-bold mb-2">₹2,000-5,000</div>
-                <div className="text-sm opacity-90 mb-4">per night</div>
-                <ul className="space-y-2 text-white/90">
+              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 shadow-lg border-2 border-cyan-200 hover:border-cyan-300 transition-all">
+                <Hotel className="w-12 h-12 mb-4 text-cyan-600" />
+                <h3 className="text-2xl font-bold mb-3 font-sora text-gray-900">Mid-Range</h3>
+                <div className="text-3xl font-bold mb-2 text-cyan-600">₹2,000-5,000</div>
+                <div className="text-sm text-gray-600 mb-4">per night</div>
+                <ul className="space-y-2 text-gray-700">
                   <li>• 3-star hotels in Bhuj</li>
                   <li>• Heritage properties</li>
                   <li>• Rann Utsav tents</li>
@@ -355,12 +437,12 @@ export default function TravelGuidePage() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl p-8 text-white shadow-xl">
-                <Hotel className="w-12 h-12 mb-4" />
-                <h3 className="text-2xl font-bold mb-3 font-sora">Luxury</h3>
-                <div className="text-3xl font-bold mb-2">₹5,000-15,000+</div>
-                <div className="text-sm opacity-90 mb-4">per night</div>
-                <ul className="space-y-2 text-white/90">
+              <div className="bg-gradient-to-br from-sky-50 to-teal-50 rounded-2xl p-8 shadow-lg border-2 border-sky-200 hover:border-sky-300 transition-all">
+                <Hotel className="w-12 h-12 mb-4 text-sky-600" />
+                <h3 className="text-2xl font-bold mb-3 font-sora text-gray-900">Luxury</h3>
+                <div className="text-3xl font-bold mb-2 text-sky-600">₹5,000-15,000+</div>
+                <div className="text-sm text-gray-600 mb-4">per night</div>
+                <ul className="space-y-2 text-gray-700">
                   <li>• Premium resorts</li>
                   <li>• Luxury tent cities</li>
                   <li>• Heritage palaces</li>
@@ -398,7 +480,7 @@ export default function TravelGuidePage() {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200">
+              <div className="bg-gradient-to-br from-orange-50 to-amber-50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-orange-200 hover:border-orange-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
                   <Utensils className="w-8 h-8 text-orange-600" />
                   <h3 className="text-2xl font-bold text-gray-900 font-sora">Must-Try Dishes</h3>
@@ -427,9 +509,9 @@ export default function TravelGuidePage() {
                 </ul>
               </div>
 
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-gray-200">
+              <div className="bg-gradient-to-br from-rose-50 to-pink-50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-rose-200 hover:border-rose-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
-                  <Heart className="w-8 h-8 text-red-600" />
+                  <Heart className="w-8 h-8 text-rose-600" />
                   <h3 className="text-2xl font-bold text-gray-900 font-sora">Dining Tips</h3>
                 </div>
                 <ul className="space-y-3 text-gray-700">
@@ -471,7 +553,7 @@ export default function TravelGuidePage() {
             </h2>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-green-200">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-green-200 hover:border-green-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
                   <Wallet className="w-10 h-10 text-green-600" />
                   <h3 className="text-2xl font-bold text-gray-900 font-sora">Budget Trip</h3>
@@ -487,7 +569,7 @@ export default function TravelGuidePage() {
                 </ul>
               </div>
 
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-blue-200">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-blue-200 hover:border-blue-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
                   <CreditCard className="w-10 h-10 text-blue-600" />
                   <h3 className="text-2xl font-bold text-gray-900 font-sora">Mid-Range Trip</h3>
@@ -503,12 +585,12 @@ export default function TravelGuidePage() {
                 </ul>
               </div>
 
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-purple-200">
+              <div className="bg-gradient-to-br from-sky-50 to-teal-50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-sky-200 hover:border-sky-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
-                  <Banknote className="w-10 h-10 text-purple-600" />
+                  <Banknote className="w-10 h-10 text-sky-600" />
                   <h3 className="text-2xl font-bold text-gray-900 font-sora">Luxury Trip</h3>
                 </div>
-                <div className="text-4xl font-bold text-purple-600 mb-2">₹15,000+</div>
+                <div className="text-4xl font-bold text-sky-600 mb-2">₹15,000+</div>
                 <div className="text-sm text-gray-600 mb-6">per person per day</div>
                 <ul className="space-y-2 text-gray-700 text-sm">
                   <li>• Luxury resorts</li>
@@ -534,7 +616,7 @@ export default function TravelGuidePage() {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-orange-200">
+              <div className="bg-gradient-to-br from-orange-50 to-amber-50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-orange-200 hover:border-orange-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
                   <AlertCircle className="w-8 h-8 text-orange-600" />
                   <h3 className="text-2xl font-bold text-gray-900 font-sora">Health & Safety</h3>
@@ -563,7 +645,7 @@ export default function TravelGuidePage() {
                 </ul>
               </div>
 
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-blue-200">
+              <div className="bg-gradient-to-br from-blue-50 to-sky-50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-blue-200 hover:border-blue-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
                   <Camera className="w-8 h-8 text-blue-600" />
                   <h3 className="text-2xl font-bold text-gray-900 font-sora">What to Pack</h3>
@@ -592,9 +674,9 @@ export default function TravelGuidePage() {
                 </ul>
               </div>
 
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-green-200">
+              <div className="bg-gradient-to-br from-emerald-50 to-green-50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-emerald-200 hover:border-emerald-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
-                  <Users className="w-8 h-8 text-green-600" />
+                  <Users className="w-8 h-8 text-emerald-600" />
                   <h3 className="text-2xl font-bold text-gray-900 font-sora">Cultural Etiquette</h3>
                 </div>
                 <ul className="space-y-3 text-gray-700">
@@ -621,30 +703,30 @@ export default function TravelGuidePage() {
                 </ul>
               </div>
 
-              <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl border border-purple-200">
+              <div className="bg-gradient-to-br from-cyan-50 to-teal-50 backdrop-blur-sm rounded-2xl p-8 shadow-lg border-2 border-cyan-200 hover:border-cyan-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
-                  <Phone className="w-8 h-8 text-purple-600" />
+                  <Phone className="w-8 h-8 text-cyan-600" />
                   <h3 className="text-2xl font-bold text-gray-900 font-sora">Connectivity</h3>
                 </div>
                 <ul className="space-y-3 text-gray-700">
                   <li className="flex items-start gap-2">
-                    <Info className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <Info className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-0.5" />
                     <span><strong>Mobile network:</strong> Good in cities, patchy in remote areas</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Info className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <Info className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-0.5" />
                     <span><strong>Internet:</strong> Available in hotels/resorts, limited in villages</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Info className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <Info className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-0.5" />
                     <span><strong>Download offline maps</strong> before visiting remote areas</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Info className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <Info className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-0.5" />
                     <span>Inform family about <strong>limited connectivity</strong> in advance</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <Info className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                    <Info className="w-5 h-5 text-cyan-600 flex-shrink-0 mt-0.5" />
                     <span>Tourist information: +91-2832-220002 (Bhuj office)</span>
                   </li>
                 </ul>
@@ -665,56 +747,56 @@ export default function TravelGuidePage() {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl p-8 text-white shadow-xl">
+              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 rounded-2xl p-8 shadow-lg border-2 border-cyan-200 hover:border-cyan-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
-                  <Clock className="w-10 h-10" />
-                  <h3 className="text-3xl font-bold font-sora">3-4 Days</h3>
+                  <Clock className="w-10 h-10 text-cyan-600" />
+                  <h3 className="text-3xl font-bold font-sora text-gray-900">3-4 Days</h3>
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <div className="font-bold text-lg mb-1">Day 1: Bhuj</div>
-                    <div className="text-white/90 text-sm">Aina Mahal, Prag Mahal, Bhuj Museum, local markets</div>
+                    <div className="font-bold text-lg mb-1 text-cyan-700">Day 1: Bhuj City Exploration</div>
+                    <div className="text-gray-700 text-sm">Explore Prag Mahal & Aina Mahal palaces, visit Swaminarayan Temple, Museum, leisurely walk around Hamirsar Talav, discover Smritivan Earthquake Memorial, and shop at Bhuj local bazaar</div>
                   </div>
                   <div>
-                    <div className="font-bold text-lg mb-1">Day 2: White Rann</div>
-                    <div className="text-white/90 text-sm">Sunrise at White Rann, Kalo Dungar, Dhordo village</div>
+                    <div className="font-bold text-lg mb-1 text-cyan-700">Day 2: Road to Heaven & White Rann</div>
+                    <div className="text-gray-700 text-sm">Early morning visit to Road to Heaven, mid-day exploration of Kalo Dungar (Black Hill), and evening to night at Dhordo White Rann</div>
                   </div>
                   <div>
-                    <div className="font-bold text-lg mb-1">Day 3: Craft Villages</div>
-                    <div className="text-white/90 text-sm">Nirona (Rogan art), Bhujodi (weaving), Ajrakhpur</div>
+                    <div className="font-bold text-lg mb-1 text-cyan-700">Day 3: Mandvi Beach</div>
+                    <div className="text-gray-700 text-sm">Relax at pristine Mandvi Beach and explore the magnificent nearby Vijay Vilas Palace</div>
                   </div>
                   <div>
-                    <div className="font-bold text-lg mb-1">Day 4: Mandvi</div>
-                    <div className="text-white/90 text-sm">Mandvi Beach, Vijay Vilas Palace, ship-building yard</div>
+                    <div className="font-bold text-lg mb-1 text-cyan-700">Day 4: Craft Villages & Gardens</div>
+                    <div className="text-gray-700 text-sm">Witness traditional weaving at Bhujodi village, experience authentic Ajrakh block printing at Ajrakhpur, and relax at Hiralaxmi Memorial Craft Park</div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl p-8 text-white shadow-xl">
+              <div className="bg-gradient-to-br from-sky-50 to-teal-50 rounded-2xl p-8 shadow-lg border-2 border-sky-200 hover:border-sky-300 transition-all">
                 <div className="flex items-center gap-3 mb-4">
-                  <Clock className="w-10 h-10" />
-                  <h3 className="text-3xl font-bold font-sora">5-7 Days</h3>
+                  <Clock className="w-10 h-10 text-sky-600" />
+                  <h3 className="text-3xl font-bold font-sora text-gray-900">5 Days</h3>
                 </div>
                 <div className="space-y-4">
                   <div>
-                    <div className="font-bold text-lg mb-1">Day 1-2: Bhuj & Surroundings</div>
-                    <div className="text-white/90 text-sm">Historic sites, museums, craft villages nearby</div>
+                    <div className="font-bold text-lg mb-1 text-sky-700">Day 1: Bhuj City Exploration</div>
+                    <div className="text-gray-700 text-sm">Explore Prag Mahal & Aina Mahal palaces, visit Swaminarayan Temple, Museum, leisurely walk around Hamirsar Talav, discover Smritivan Earthquake Memorial, and shop at Bhuj local bazaar</div>
                   </div>
                   <div>
-                    <div className="font-bold text-lg mb-1">Day 3: White Rann Circuit</div>
-                    <div className="text-white/90 text-sm">Full day at White Rann, Kalo Dungar, India Bridge</div>
+                    <div className="font-bold text-lg mb-1 text-sky-700">Day 2: Road to Heaven & White Rann</div>
+                    <div className="text-gray-700 text-sm">Early morning visit to Road to Heaven, mid-day exploration of Kalo Dungar (Black Hill), and evening to night at Dhordo White Rann</div>
                   </div>
                   <div>
-                    <div className="font-bold text-lg mb-1">Day 4: Western Kutch</div>
-                    <div className="text-white/90 text-sm">Narayan Sarovar, Koteshwar, Lakhpat Fort</div>
+                    <div className="font-bold text-lg mb-1 text-sky-700">Day 3: Mandvi Beach</div>
+                    <div className="text-gray-700 text-sm">Relax at pristine Mandvi Beach and explore the magnificent nearby Vijay Vilas Palace</div>
                   </div>
                   <div>
-                    <div className="font-bold text-lg mb-1">Day 5: Mandvi</div>
-                    <div className="text-white/90 text-sm">Beach, palace, shipyard, water sports</div>
+                    <div className="font-bold text-lg mb-1 text-sky-700">Day 4: Western Kutch Circuit</div>
+                    <div className="text-gray-700 text-sm">Journey through Western Kutch - visit the sacred Mata na Madh temple, explore the serene Narayan Sarovar lake, and discover the ancient Koteshwar Temple by the sea</div>
                   </div>
                   <div>
-                    <div className="font-bold text-lg mb-1">Day 6-7: Wildlife & Nature</div>
-                    <div className="text-white/90 text-sm">Chhari Dhand wetland, flamingo watching, village stays</div>
+                    <div className="font-bold text-lg mb-1 text-sky-700">Day 5: Craft Villages & Gardens</div>
+                    <div className="text-gray-700 text-sm">Discover traditional weaving at Bhujodi, experience Ajrakh block printing at Ajrakhpur, visit Hiralaxmi Memorial Craft Park</div>
                   </div>
                 </div>
               </div>
@@ -728,10 +810,10 @@ export default function TravelGuidePage() {
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <div className="bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 rounded-3xl p-12 text-white text-center shadow-2xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full blur-3xl opacity-50 animate-blob"></div>
-              <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-cyan-300 to-blue-400 rounded-full blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-indigo-300 to-purple-400 rounded-full blur-3xl opacity-40 animate-blob animation-delay-4000"></div>
+            <div className="bg-gradient-to-r from-cyan-500 via-sky-600 to-blue-600 rounded-3xl p-12 text-white text-center shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-80 h-80 bg-gradient-to-br from-sky-300 to-blue-400 rounded-full blur-3xl opacity-50 animate-blob"></div>
+              <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-br from-cyan-300 to-teal-400 rounded-full blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-blue-300 to-cyan-400 rounded-full blur-3xl opacity-40 animate-blob animation-delay-4000"></div>
               
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 font-sora">Need Help Planning Your Trip?</h2>
@@ -742,7 +824,7 @@ export default function TravelGuidePage() {
                 <div className="flex flex-wrap justify-center gap-4">
                   <a
                     href="tel:+919825034580"
-                    className="px-8 py-4 bg-white text-indigo-600 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2"
+                    className="px-8 py-4 bg-white text-cyan-600 rounded-full font-bold hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2"
                   >
                     <Phone size={20} />
                     Call Us Now
@@ -757,6 +839,19 @@ export default function TravelGuidePage() {
                 </div>
               </div>
             </div>
+          </motion.div>
+
+          {/* Footer Line */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center py-8"
+          >
+            <p className="text-gray-800 text-sm font-medium">
+              Designed with ❤️ for travelers seeking authentic Kutch
+            </p>
           </motion.div>
 
         </div>

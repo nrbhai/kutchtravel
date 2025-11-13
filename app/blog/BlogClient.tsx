@@ -286,6 +286,19 @@ export default function BlogClient() {
             </div>
           </div>
         </motion.div>
+
+        {/* Footer Line */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center py-8"
+        >
+          <p className="text-gray-800 text-sm font-medium">
+            Designed with ❤️ for travelers seeking authentic Kutch
+          </p>
+        </motion.div>
         </div>
       </div>
     </main>

@@ -161,6 +161,13 @@ export default function GalleryClient({ images }: { images: string[] }) {
           </div>
         </div>
       )}
+
+      {/* Footer Line */}
+      <div className="text-center py-8 mt-8">
+        <p className="text-gray-800 text-sm font-medium">
+          Designed with ❤️ for travelers seeking authentic Kutch
+        </p>
+      </div>
     </div>
   );
 }

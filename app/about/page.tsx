@@ -79,21 +79,21 @@ export default function AboutPage() {
 
       <div className="max-w-7xl mx-auto px-6 py-12">
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="mb-16">
-          <div className="bg-gradient-to-br from-indigo-500 to-purple-600 rounded-3xl p-10 shadow-2xl text-white overflow-hidden relative">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-pink-400 rounded-full blur-3xl opacity-30"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-yellow-400 rounded-full blur-3xl opacity-20"></div>
+          <div className="bg-white rounded-3xl p-10 shadow-xl border border-gray-100 overflow-hidden relative">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-100 rounded-full blur-3xl opacity-50"></div>
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-purple-100 rounded-full blur-3xl opacity-40"></div>
             <div className="relative z-10">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center">
+                <div className="w-14 h-14 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-2xl flex items-center justify-center">
                   <Heart className="text-white" size={28} />
                 </div>
-                <h2 className="text-4xl font-bold font-sora">Our Story</h2>
+                <h2 className="text-4xl font-bold font-sora bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Our Story</h2>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
-                <p className="text-lg text-white/95 leading-relaxed font-poppins">
+                <p className="text-lg text-gray-700 leading-relaxed font-poppins">
                   Born from a passion for showcasing the incredible beauty and rich cultural heritage of Kutch, we are dedicated to providing authentic and memorable experiences for travelers from around the world.
                 </p>
-                <p className="text-lg text-white/95 leading-relaxed font-poppins">
+                <p className="text-lg text-gray-700 leading-relaxed font-poppins">
                   From the pristine white salt desert of the Great Rann to the bustling markets of Bhuj, from ancient handicrafts to modern hospitality, we help you discover the true essence of Kutch.
                 </p>
               </div>
@@ -126,36 +126,36 @@ export default function AboutPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <motion.div variants={fadeUp} className="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl p-8 text-white shadow-xl hover:scale-105 transition-transform">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4">
-                <Users size={32} />
+            <motion.div variants={fadeUp} className="bg-white border border-blue-100 rounded-3xl p-8 shadow-xl hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl flex items-center justify-center mb-4">
+                <Users size={32} className="text-blue-600" />
               </div>
-              <h3 className="text-2xl font-bold mb-3 font-sora">Local Expertise</h3>
-              <p className="text-white/90 font-poppins">Deep knowledge of Kutch hidden gems and cultural nuances</p>
+              <h3 className="text-2xl font-bold mb-3 font-sora text-gray-900">Local Expertise</h3>
+              <p className="text-gray-600 font-poppins">Deep knowledge of Kutch hidden gems and cultural nuances</p>
             </motion.div>
 
-            <motion.div variants={fadeUp} className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl p-8 text-white shadow-xl hover:scale-105 transition-transform">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4">
-                <Sparkles size={32} />
+            <motion.div variants={fadeUp} className="bg-white border border-purple-100 rounded-3xl p-8 shadow-xl hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-2xl flex items-center justify-center mb-4">
+                <Sparkles size={32} className="text-purple-600" />
               </div>
-              <h3 className="text-2xl font-bold mb-3 font-sora">Authentic Experiences</h3>
-              <p className="text-white/90 font-poppins">Genuine connections with local communities and traditions</p>
+              <h3 className="text-2xl font-bold mb-3 font-sora text-gray-900">Authentic Experiences</h3>
+              <p className="text-gray-600 font-poppins">Genuine connections with local communities and traditions</p>
             </motion.div>
 
-            <motion.div variants={fadeUp} className="bg-gradient-to-br from-orange-500 to-red-500 rounded-3xl p-8 text-white shadow-xl hover:scale-105 transition-transform">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4">
-                <Clock size={32} />
+            <motion.div variants={fadeUp} className="bg-white border border-orange-100 rounded-3xl p-8 shadow-xl hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-100 to-red-100 rounded-2xl flex items-center justify-center mb-4">
+                <Clock size={32} className="text-orange-600" />
               </div>
-              <h3 className="text-2xl font-bold mb-3 font-sora">24/7 Support</h3>
-              <p className="text-white/90 font-poppins">Round-the-clock assistance for your travel needs</p>
+              <h3 className="text-2xl font-bold mb-3 font-sora text-gray-900">24/7 Support</h3>
+              <p className="text-gray-600 font-poppins">Round-the-clock assistance for your travel needs</p>
             </motion.div>
 
-            <motion.div variants={fadeUp} className="bg-gradient-to-br from-green-500 to-emerald-500 rounded-3xl p-8 text-white shadow-xl hover:scale-105 transition-transform">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mb-4">
-                <Heart size={32} />
+            <motion.div variants={fadeUp} className="bg-white border border-green-100 rounded-3xl p-8 shadow-xl hover:scale-105 transition-transform">
+              <div className="w-16 h-16 bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl flex items-center justify-center mb-4">
+                <Heart size={32} className="text-green-600" />
               </div>
-              <h3 className="text-2xl font-bold mb-3 font-sora">Personalized Service</h3>
-              <p className="text-white/90 font-poppins">Customized itineraries based on your interests</p>
+              <h3 className="text-2xl font-bold mb-3 font-sora text-gray-900">Personalized Service</h3>
+              <p className="text-gray-600 font-poppins">Customized itineraries based on your interests</p>
             </motion.div>
           </div>
         </motion.div>
@@ -203,8 +203,8 @@ export default function AboutPage() {
                 <Mail size={20} className="text-indigo-600" />
                 <div>
                   <p className="text-gray-600 text-sm">Email</p>
-                  <a href="mailto:info@kutchtravel.com" className="text-gray-900 font-semibold hover:text-indigo-600 transition-colors">
-                    info@kutchtravel.com
+                  <a href="mailto:rachhnn@gmail.com" className="text-gray-900 font-semibold hover:text-indigo-600 transition-colors">
+                    rachhnn@gmail.com
                   </a>
                 </div>
               </div>
@@ -227,56 +227,56 @@ export default function AboutPage() {
             </div>
           </motion.div>
 
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-gradient-to-br from-orange-500 to-pink-500 rounded-3xl p-8 shadow-xl text-white">
-            <h2 className="text-3xl font-bold mb-6 font-sora">Our Services</h2>
+          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="bg-white border border-orange-100 rounded-3xl p-8 shadow-xl">
+            <h2 className="text-3xl font-bold mb-6 font-sora bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent">Our Services</h2>
             <div className="space-y-4">
-              <div className="flex items-center gap-4 p-4 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 transition-colors">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+              <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-orange-50 to-pink-50 rounded-xl hover:shadow-md transition-shadow border border-orange-100">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-100 to-pink-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
                   🗺️
                 </div>
                 <div>
-                  <p className="font-bold text-lg">Customized Tour Packages</p>
-                  <p className="text-white/80 text-sm">Tailored to your preferences</p>
+                  <p className="font-bold text-lg text-gray-900">Customized Tour Packages</p>
+                  <p className="text-gray-600 text-sm">Tailored to your preferences</p>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 p-4 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 transition-colors">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+              <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl hover:shadow-md transition-shadow border border-blue-100">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
                   🏨
                 </div>
                 <div>
-                  <p className="font-bold text-lg">Accommodation Booking</p>
-                  <p className="text-white/80 text-sm">From budget to luxury stays</p>
+                  <p className="font-bold text-lg text-gray-900">Accommodation Booking</p>
+                  <p className="text-gray-600 text-sm">From budget to luxury stays</p>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 p-4 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 transition-colors">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+              <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl hover:shadow-md transition-shadow border border-purple-100">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
                   🚗
                 </div>
                 <div>
-                  <p className="font-bold text-lg">Transportation Services</p>
-                  <p className="text-white/80 text-sm">Comfortable vehicle options</p>
+                  <p className="font-bold text-lg text-gray-900">Transportation Services</p>
+                  <p className="text-gray-600 text-sm">Comfortable vehicle options</p>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 p-4 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 transition-colors">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+              <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl hover:shadow-md transition-shadow border border-green-100">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
                   🎨
                 </div>
                 <div>
-                  <p className="font-bold text-lg">Cultural Experience Tours</p>
-                  <p className="text-white/80 text-sm">Meet local artisans communities</p>
+                  <p className="font-bold text-lg text-gray-900">Cultural Experience Tours</p>
+                  <p className="text-gray-600 text-sm">Meet local artisans communities</p>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4 p-4 bg-white/20 backdrop-blur-sm rounded-xl hover:bg-white/30 transition-colors">
-                <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
+              <div className="flex items-center gap-4 p-4 bg-gradient-to-r from-yellow-50 to-orange-50 rounded-xl hover:shadow-md transition-shadow border border-yellow-100">
+                <div className="w-12 h-12 bg-gradient-to-br from-yellow-100 to-orange-100 rounded-xl flex items-center justify-center text-2xl flex-shrink-0">
                   📸
                 </div>
                 <div>
-                  <p className="font-bold text-lg">Photography Tours</p>
-                  <p className="text-white/80 text-sm">Capture Kutch beauty</p>
+                  <p className="font-bold text-lg text-gray-900">Photography Tours</p>
+                  <p className="text-gray-600 text-sm">Capture Kutch beauty</p>
                 </div>
               </div>
             </div>
@@ -310,6 +310,19 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+        </motion.div>
+
+        {/* Footer Line */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center py-8 mt-8"
+        >
+          <p className="text-gray-800 text-sm font-medium">
+            Designed with ❤️ for travelers seeking authentic Kutch
+          </p>
         </motion.div>
       </div>
     </main>

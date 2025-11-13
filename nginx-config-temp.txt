@@ -1,0 +1,32 @@
+server {
+    listen 80;
+    server_name travelkutch.org www.travelkutch.org srv1123496.hstgr.cloud;
+    
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+server {
+    listen 443 ssl;
+    server_name srv1123496.hstgr.cloud;
+    
+    ssl_certificate /etc/letsencrypt/live/srv1123496.hstgr.cloud/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/srv1123496.hstgr.cloud/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
