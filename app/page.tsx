@@ -738,7 +738,9 @@ export default function Home() {
                                 {destination.slug === 'dhordo' && 'Rann Utsav festival & tent city experience'}
                                 {destination.slug === 'kalo-dungar' && "Black Hills & India's magnetic hill"}
                                 {destination.slug === 'lakhpat' && 'Ancient fort ruins & Gurudwara'}
-                                {!['bhuj', 'white-rann', 'mandvi', 'dhordo', 'kalo-dungar', 'lakhpat'].includes(destination.slug) && 'Rich cultural heritage & scenic beauty'}
+                                {destination.slug === 'mata-na-madh' && 'Ancient Ashapura Mata temple & pilgrimage site'}
+                                {destination.slug === 'road-to-heaven' && 'Iconic straight highway through salt flats'}
+                                {!['bhuj', 'white-rann', 'mandvi', 'dhordo', 'kalo-dungar', 'lakhpat', 'mata-na-madh', 'road-to-heaven'].includes(destination.slug) && 'Rich cultural heritage & scenic beauty'}
                               </p>
                             </div>
                           </div>

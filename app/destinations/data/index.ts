@@ -48,12 +48,12 @@ export const DESTINATIONS: Destination[] = [
   bhuj,
   dhordo,
   kaloDungar,
+  mataNaMadh,
+  roadToHeaven,
   anjar,
   gandhidham,
   mundra,
   lakhpat,
-  mataNaMadh,
   kadiaDhrow,
-  narayanSarovarKoteshwar,
-  roadToHeaven
+  narayanSarovarKoteshwar
 ];
