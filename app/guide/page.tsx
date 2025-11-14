@@ -113,7 +113,7 @@ export default function TravelGuidePage() {
                 Kutch Travel Guide
               </h1>
               
-              <p className="text-xl md:text-2xl text-gray-800 mb-8 font-poppins leading-relaxed font-medium">
+              <p className="text-xl md:text-2xl text-gray-800 mb-8 font-inter leading-relaxed font-medium">
                 Everything you need to know for an unforgettable journey to the land of white deserts
               </p>
 
@@ -817,7 +817,7 @@ export default function TravelGuidePage() {
               
               <div className="relative z-10">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 font-sora">Need Help Planning Your Trip?</h2>
-                <p className="text-xl mb-8 max-w-2xl mx-auto font-poppins">
+                <p className="text-xl mb-8 max-w-2xl mx-auto font-inter">
                   Contact us for personalized itineraries, bookings, and local insights to make your Kutch journey unforgettable
                 </p>
                 

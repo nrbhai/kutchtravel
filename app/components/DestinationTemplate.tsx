@@ -89,7 +89,7 @@ export default function DestinationTemplate({
                 className="flex items-center gap-3 text-white/90"
               >
                 <span className="text-lg">📍</span>
-                <span className="text-base md:text-lg font-poppins font-medium">Kutch, Gujarat</span>
+                <span className="text-base md:text-lg font-inter font-medium">Kutch, Gujarat</span>
               </motion.div>
             </div>
           </div>
@@ -228,7 +228,7 @@ export default function DestinationTemplate({
               {/* Caption */}
               {gallery[selectedImage].caption && (
                 <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4 text-center">
-                  <p className="text-sm md:text-base font-poppins">
+                  <p className="text-sm md:text-base font-inter">
                     {gallery[selectedImage].caption}
                   </p>
                 </div>
@@ -236,7 +236,7 @@ export default function DestinationTemplate({
             </motion.div>
 
             {/* Image Counter */}
-            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm font-poppins">
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm font-inter">
               {selectedImage + 1} / {gallery.length}
             </div>
           </motion.div>

@@ -8,14 +8,22 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/admin/', '/_next/'],
+        disallow: ['/api/', '/admin/', '/_next/', '/private/'],
       },
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: ['/api/', '/admin/'],
+        crawlDelay: 0,
+        disallow: ['/api/', '/admin/', '/private/'],
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+        crawlDelay: 0,
+        disallow: ['/api/', '/admin/', '/private/'],
       },
     ],
     sitemap: 'https://kutchtravel.com/sitemap.xml',
+    host: 'https://kutchtravel.com',
   };
 }

@@ -104,7 +104,7 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
                 className="flex items-center gap-3 text-white/90 flex-wrap"
               >
                 <span className="text-lg">🏴‍☠️</span>
-                <span className="text-base md:text-lg font-poppins font-medium">
+                <span className="text-base md:text-lg font-inter font-medium">
                   {gem.discoveryLevel} • {gem.type} • {gem.difficulty}
                 </span>
               </motion.div>
@@ -135,7 +135,7 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
                 <h2 className={`text-xl md:text-2xl font-sora font-bold mb-4 ${colorSet.text} pl-4 border-l-4 ${colorSet.border}`}>
                   {section.heading}
                 </h2>
-                <div className="font-poppins text-slate-800">
+                <div className="font-inter text-slate-800">
                   {section.content && (
                     <p className="leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: section.content }} />
                   )}
@@ -326,13 +326,13 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
 
               {gem.gallery[selectedImage].caption && (
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                  <p className="text-white text-center text-sm md:text-base font-poppins">
+                  <p className="text-white text-center text-sm md:text-base font-inter">
                     {gem.gallery[selectedImage].caption}
                   </p>
                 </div>
               )}
 
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm font-poppins bg-black/50 px-4 py-2 rounded-full">
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm font-inter bg-black/50 px-4 py-2 rounded-full">
                 {selectedImage + 1} / {gem.gallery.length}
               </div>
             </motion.div>

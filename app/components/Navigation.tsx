@@ -75,7 +75,7 @@ export default function Navigation() {
               <h1 className="text-xl font-bold font-sora bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent whitespace-nowrap tracking-tight">
                 TravelKutch
               </h1>
-              <p className="text-xs text-gray-500 font-medium font-poppins tracking-wide">Discover the Magic</p>
+              <p className="text-xs text-gray-500 font-medium font-inter tracking-wide">Discover the Magic</p>
             </div>
           </Link>
 

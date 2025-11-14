@@ -138,11 +138,11 @@ export default function BlogPostClient() {
 
           {/* Content */}
           <div className="prose prose-lg max-w-none">
-            <div className="text-xl text-gray-700 leading-relaxed mb-8 font-poppins p-6 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl border-l-4 border-indigo-600">
+            <div className="text-xl text-gray-700 leading-relaxed mb-8 font-inter p-6 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-2xl border-l-4 border-indigo-600">
               {post.excerpt}
             </div>
 
-            <div className="text-gray-700 leading-relaxed space-y-6 font-poppins whitespace-pre-line">
+            <div className="text-gray-700 leading-relaxed space-y-6 font-inter whitespace-pre-line">
               {post.content}
             </div>
           </div>
@@ -226,7 +226,7 @@ export default function BlogPostClient() {
             
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 font-sora">Ready to Explore Kutch?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto font-poppins">
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto font-inter">
                 Plan your perfect Kutch adventure with our expert guidance
               </p>
               

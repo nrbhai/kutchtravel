@@ -112,7 +112,7 @@ export default function CraftTemplate({ craft }: CraftProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-lg md:text-xl text-white/90 font-poppins font-medium"
+                className="text-lg md:text-xl text-white/90 font-inter font-medium"
               >
                 {craft.subtitle}
               </motion.p>
@@ -143,7 +143,7 @@ export default function CraftTemplate({ craft }: CraftProps) {
                 <h2 className={`text-xl md:text-2xl font-sora font-bold mb-4 ${colorSet.text} pl-4 border-l-4 ${colorSet.border}`}>
                   {section.heading}
                 </h2>
-                <div className="font-poppins text-slate-800">
+                <div className="font-inter text-slate-800">
                   {section.content && (
                     <p className="leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: section.content }} />
                   )}
@@ -312,13 +312,13 @@ export default function CraftTemplate({ craft }: CraftProps) {
 
               {craft.gallery[selectedImage].caption && (
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                  <p className="text-white text-center text-sm md:text-base font-poppins">
+                  <p className="text-white text-center text-sm md:text-base font-inter">
                     {craft.gallery[selectedImage].caption}
                   </p>
                 </div>
               )}
 
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm font-poppins bg-black/50 px-4 py-2 rounded-full">
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm font-inter bg-black/50 px-4 py-2 rounded-full">
                 {selectedImage + 1} / {craft.gallery.length}
               </div>
             </motion.div>

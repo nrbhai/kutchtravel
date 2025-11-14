@@ -61,7 +61,7 @@ export default function BlogClient() {
               Kutch Travel Blog
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-900 mb-8 font-poppins leading-relaxed font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+            <p className="text-xl md:text-2xl text-gray-900 mb-8 font-inter leading-relaxed font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
               Discover insider tips, travel guides, and stories from the magical land of Kutch
             </p>
 
@@ -147,7 +147,7 @@ export default function BlogClient() {
                         {featuredPost.title}
                       </h2>
                       
-                      <p className="text-gray-700 mb-6 text-lg leading-relaxed font-poppins font-medium">
+                      <p className="text-gray-700 mb-6 text-lg leading-relaxed font-inter font-medium">
                         {featuredPost.excerpt}
                       </p>
                       
@@ -212,7 +212,7 @@ export default function BlogClient() {
                       {post.title}
                     </h3>
                     
-                    <p className="text-gray-700 mb-4 line-clamp-3 font-poppins font-medium flex-1">
+                    <p className="text-gray-700 mb-4 line-clamp-3 font-inter font-medium flex-1">
                       {post.excerpt}
                     </p>
                     
@@ -269,7 +269,7 @@ export default function BlogClient() {
             
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 font-sora">Stay Updated</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto font-poppins">
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto font-inter">
                 Get the latest travel tips, destination guides, and insider stories delivered to your inbox
               </p>
               

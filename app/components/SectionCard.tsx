@@ -35,7 +35,7 @@ export default function SectionCard({
       >
         {title}
       </h2>
-      <div className="font-poppins text-slate-900">{children}</div>
+      <div className="font-inter text-slate-900">{children}</div>
       
       {/* Section Image */}
       {image && (

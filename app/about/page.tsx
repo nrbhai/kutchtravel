@@ -45,7 +45,7 @@ export default function AboutPage() {
                 <br />
                 <span className="text-gray-900">Kutch Wonders</span>
               </h1>
-              <p className="text-xl text-gray-700 leading-relaxed font-poppins mb-8">
+              <p className="text-xl text-gray-700 leading-relaxed font-inter mb-8">
                 We are passionate local experts dedicated to showcasing the incredible beauty, rich heritage, and vibrant culture of Kutch, Gujarat.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -90,10 +90,10 @@ export default function AboutPage() {
                 <h2 className="text-4xl font-bold font-sora bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Our Story</h2>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
-                <p className="text-lg text-gray-700 leading-relaxed font-poppins">
+                <p className="text-lg text-gray-700 leading-relaxed font-inter">
                   Born from a passion for showcasing the incredible beauty and rich cultural heritage of Kutch, we are dedicated to providing authentic and memorable experiences for travelers from around the world.
                 </p>
-                <p className="text-lg text-gray-700 leading-relaxed font-poppins">
+                <p className="text-lg text-gray-700 leading-relaxed font-inter">
                   From the pristine white salt desert of the Great Rann to the bustling markets of Bhuj, from ancient handicrafts to modern hospitality, we help you discover the true essence of Kutch.
                 </p>
               </div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
                 Why Choose Us
               </span>
             </h2>
-            <p className="text-xl text-gray-600 font-poppins">We bring Kutch to life with expertise and passion</p>
+            <p className="text-xl text-gray-600 font-inter">We bring Kutch to life with expertise and passion</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -131,7 +131,7 @@ export default function AboutPage() {
                 <Users size={32} className="text-cyan-600" />
               </div>
               <h3 className="text-2xl font-bold mb-3 font-sora text-gray-900">Local Expertise</h3>
-              <p className="text-gray-700 font-poppins">Deep knowledge of Kutch hidden gems and cultural nuances</p>
+              <p className="text-gray-700 font-inter">Deep knowledge of Kutch hidden gems and cultural nuances</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="bg-gradient-to-br from-sky-50 to-cyan-50 border-2 border-sky-200 hover:border-sky-300 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all">
@@ -139,7 +139,7 @@ export default function AboutPage() {
                 <Sparkles size={32} className="text-sky-600" />
               </div>
               <h3 className="text-2xl font-bold mb-3 font-sora text-gray-900">Authentic Experiences</h3>
-              <p className="text-gray-700 font-poppins">Genuine connections with local communities and traditions</p>
+              <p className="text-gray-700 font-inter">Genuine connections with local communities and traditions</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="bg-gradient-to-br from-teal-50 to-cyan-50 border-2 border-teal-200 hover:border-teal-300 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all">
@@ -147,7 +147,7 @@ export default function AboutPage() {
                 <Clock size={32} className="text-teal-600" />
               </div>
               <h3 className="text-2xl font-bold mb-3 font-sora text-gray-900">24/7 Support</h3>
-              <p className="text-gray-700 font-poppins">Round-the-clock assistance for your travel needs</p>
+              <p className="text-gray-700 font-inter">Round-the-clock assistance for your travel needs</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="bg-gradient-to-br from-blue-50 to-sky-50 border-2 border-blue-200 hover:border-blue-300 rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all">
@@ -155,7 +155,7 @@ export default function AboutPage() {
                 <Heart size={32} className="text-blue-600" />
               </div>
               <h3 className="text-2xl font-bold mb-3 font-sora text-gray-900">Personalized Service</h3>
-              <p className="text-gray-700 font-poppins">Customized itineraries based on your interests</p>
+              <p className="text-gray-700 font-inter">Customized itineraries based on your interests</p>
             </motion.div>
           </div>
         </motion.div>
@@ -168,7 +168,7 @@ export default function AboutPage() {
               </div>
               Get in Touch
             </h2>
-            <p className="text-gray-700 mb-8 leading-relaxed font-poppins text-lg">
+            <p className="text-gray-700 mb-8 leading-relaxed font-inter text-lg">
               Ready to explore Kutch? Contact us for personalized travel planning and unforgettable experiences.
             </p>
 
@@ -289,7 +289,7 @@ export default function AboutPage() {
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-cyan-300 rounded-full blur-3xl opacity-30"></div>
             <div className="relative z-10">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 font-sora">Ready to Explore Kutch?</h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto font-poppins">
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto font-inter">
                 Let us plan your perfect Kutch adventure together. Contact us today for personalized recommendations and bookings.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

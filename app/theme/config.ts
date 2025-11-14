@@ -98,7 +98,7 @@ export const theme = {
   typography: {
     fonts: {
       heading: 'font-sora',
-      body: 'font-poppins',
+      body: 'font-inter',
       accent: 'font-space-grotesk',
     },
     

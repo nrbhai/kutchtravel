@@ -24,52 +24,64 @@ export default function GalleryClient({ images }: { images: string[] }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {images.length === 0 ? (
           <div className="col-span-full text-center py-16">
-            <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg max-w-md mx-auto">
+            <div className="bg-white/80 backdrop-blur-xl rounded-2xl p-8 border-2 border-cyan-200 shadow-lg max-w-md mx-auto">
               <div className="text-6xl mb-4">📷</div>
-              <h3 className="text-xl font-bold text-white mb-2">No Images Found</h3>
-              <p className="text-gray-100 text-sm">
-                Add photos to <code className="bg-white/10 backdrop-blur-xl px-2 py-1 rounded text-xs">public/images/gallery/</code> to see them here.
+              <h3 className="text-xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-2">No Images Found</h3>
+              <p className="text-gray-700 text-sm">
+                Add photos to <code className="bg-cyan-100 px-2 py-1 rounded text-xs text-cyan-700">public/images/gallery/</code> to see them here.
               </p>
             </div>
           </div>
         ) : (
-          images.map((src, i) => (
-            <div key={src} className="group">
-              <button 
-                onClick={() => {
-                  setIsLoading(true);
-                  setOpenIndex(i);
-                  setTimeout(() => setIsLoading(false), 300);
-                }}
-                className="relative block w-full h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white/10 backdrop-blur-xl border border-white/20"
-              >
-                <Image 
-                  src={src} 
-                  alt={`Gallery image ${i + 1}`} 
-                  fill 
-                  className="object-cover group-hover:scale-110 transition-transform duration-700" 
-                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" 
-                />
-                
-                {/* Hover Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="bg-white/10 backdrop-blur-xl rounded-lg px-3 py-2 border border-white/20">
-                      <p className="text-sm font-medium text-white">Photo {i + 1}</p>
-                      <p className="text-xs text-gray-100">Click to view full size</p>
+          images.map((src, i) => {
+            const colors = [
+              { border: 'border-cyan-300', hover: 'hover:border-cyan-500', gradient: 'from-cyan-600/20' },
+              { border: 'border-blue-300', hover: 'hover:border-blue-500', gradient: 'from-blue-600/20' },
+              { border: 'border-teal-300', hover: 'hover:border-teal-500', gradient: 'from-teal-600/20' },
+              { border: 'border-sky-300', hover: 'hover:border-sky-500', gradient: 'from-sky-600/20' },
+              { border: 'border-indigo-300', hover: 'hover:border-indigo-500', gradient: 'from-indigo-600/20' },
+              { border: 'border-purple-300', hover: 'hover:border-purple-500', gradient: 'from-purple-600/20' },
+            ];
+            const colorScheme = colors[i % colors.length];
+            
+            return (
+              <div key={src} className="group">
+                <button 
+                  onClick={() => {
+                    setIsLoading(true);
+                    setOpenIndex(i);
+                    setTimeout(() => setIsLoading(false), 300);
+                  }}
+                  className={`relative block w-full h-64 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 bg-white border-2 ${colorScheme.border} ${colorScheme.hover}`}
+                >
+                  <Image 
+                    src={src} 
+                    alt={`Gallery image ${i + 1}`} 
+                    fill 
+                    className="object-cover group-hover:scale-110 transition-transform duration-700" 
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" 
+                  />
+                  
+                  {/* Hover Overlay */}
+                  <div className={`absolute inset-0 bg-gradient-to-t ${colorScheme.gradient} via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`}>
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/50">
+                        <p className="text-sm font-medium text-gray-900">Photo {i + 1}</p>
+                        <p className="text-xs text-gray-600">Click to view full size</p>
+                      </div>
                     </div>
                   </div>
-                </div>
 
-                {/* Loading Indicator */}
-                {isLoading && openIndex === i && (
-                  <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
-                    <div className="w-8 h-8 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                  </div>
-                )}
-              </button>
-            </div>
-          ))
+                  {/* Loading Indicator */}
+                  {isLoading && openIndex === i && (
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                      <div className="w-8 h-8 border-2 border-cyan-500 border-t-transparent rounded-full animate-spin"></div>
+                    </div>
+                  )}
+                </button>
+              </div>
+            );
+          })
         )}
       </div>
 
@@ -81,14 +93,14 @@ export default function GalleryClient({ images }: { images: string[] }) {
             {/* Close Button */}
             <button 
               onClick={() => setOpenIndex(null)} 
-              className="absolute top-6 right-6 w-12 h-12 bg-white/20 backdrop-blur-sm text-white rounded-full hover:bg-white/30 transition-all flex items-center justify-center text-xl font-bold z-10"
+              className="absolute top-6 right-6 w-12 h-12 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 backdrop-blur-sm text-white rounded-full hover:from-cyan-500/50 hover:to-blue-500/50 transition-all flex items-center justify-center text-xl font-bold z-10 border border-white/20"
               title="Close (Esc)"
             >
               ✕
             </button>
 
             {/* Image Counter */}
-            <div className="absolute top-6 left-6 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium z-10">
+            <div className="absolute top-6 left-6 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 backdrop-blur-sm text-white px-5 py-2 rounded-full text-sm font-medium z-10 border border-white/20">
               {openIndex + 1} of {images.length}
             </div>
 
@@ -96,7 +108,7 @@ export default function GalleryClient({ images }: { images: string[] }) {
             {openIndex > 0 && (
               <button 
                 onClick={() => setOpenIndex(openIndex - 1)} 
-                className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm text-white rounded-full hover:bg-white/30 transition-all flex items-center justify-center text-xl z-10"
+                className="absolute left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 backdrop-blur-sm text-white rounded-full hover:from-cyan-500/50 hover:to-blue-500/50 transition-all flex items-center justify-center text-xl z-10 border border-white/20"
                 title="Previous (←)"
               >
                 ←
@@ -107,7 +119,7 @@ export default function GalleryClient({ images }: { images: string[] }) {
             {openIndex < images.length - 1 && (
               <button 
                 onClick={() => setOpenIndex(openIndex + 1)} 
-                className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm text-white rounded-full hover:bg-white/30 transition-all flex items-center justify-center text-xl z-10"
+                className="absolute right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 backdrop-blur-sm text-white rounded-full hover:from-cyan-500/50 hover:to-blue-500/50 transition-all flex items-center justify-center text-xl z-10 border border-white/20"
                 title="Next (→)"
               >
                 →
@@ -127,7 +139,7 @@ export default function GalleryClient({ images }: { images: string[] }) {
             </div>
 
             {/* Image Info */}
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-white/20 backdrop-blur-sm text-white px-6 py-3 rounded-full">
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 backdrop-blur-sm text-white px-6 py-3 rounded-full border border-white/20">
               <p className="text-sm font-medium">
                 📸 Kutch Gallery • Photo {openIndex + 1}
               </p>
@@ -164,7 +176,7 @@ export default function GalleryClient({ images }: { images: string[] }) {
 
       {/* Footer Line */}
       <div className="text-center py-8 mt-8">
-        <p className="text-gray-800 text-sm font-medium">
+        <p className="text-gray-700 text-sm font-medium font-inter">
           Designed with ❤️ for travelers seeking authentic Kutch
         </p>
       </div>

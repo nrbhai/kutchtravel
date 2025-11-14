@@ -146,7 +146,7 @@ function HiddenGemsClient() {
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full shadow-lg">
                   <span className="text-xl">🏴‍☠️</span>
-                  <span className="text-sm font-semibold text-indigo-600 font-poppins">Unexplored Treasures</span>
+                  <span className="text-sm font-semibold text-indigo-600 font-inter">Unexplored Treasures</span>
                 </div>
               </div>
             </motion.div>
@@ -160,18 +160,18 @@ function HiddenGemsClient() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full shadow-lg mb-4">
                 <span className="text-xl">✨</span>
-                <span className="text-sm font-semibold text-indigo-600 font-poppins">Secret Destinations</span>
+                <span className="text-sm font-semibold text-indigo-600 font-inter">Secret Destinations</span>
               </div>
 
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent font-sora leading-tight whitespace-nowrap">
                 Hidden Gems of Kutch
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-600 mb-8 font-poppins leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-600 mb-8 font-inter leading-relaxed">
                 Discover secret destinations and off-the-beaten-path adventures that only the most curious travelers find
               </p>
 
-              <div className="flex items-center justify-start md:justify-end gap-6 text-sm text-gray-500 font-poppins flex-wrap">
+              <div className="flex items-center justify-start md:justify-end gap-6 text-sm text-gray-500 font-inter flex-wrap">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-indigo-600 rounded-full animate-pulse"></span>
                   <span>{HIDDEN_GEMS.length} Secret Places</span>
@@ -301,7 +301,7 @@ function HiddenGemsClient() {
                         
                         {/* Floating Category Tag */}
                         <div className="absolute top-2 right-2">
-                          <span className={`backdrop-blur-sm border px-3 py-1 rounded-lg text-xs font-bold font-poppins shadow-md ${colors.tag}`}>
+                          <span className={`backdrop-blur-sm border px-3 py-1 rounded-lg text-xs font-bold font-inter shadow-md ${colors.tag}`}>
                             {gem.type || 'Hidden Gem'}
                           </span>
                         </div>
@@ -326,8 +326,8 @@ function HiddenGemsClient() {
                             <div className="flex items-start gap-2">
                               <span className="text-base shrink-0">✨</span>
                               <div className="min-w-0">
-                                <p className="text-[10px] font-bold text-cyan-700 uppercase tracking-wider font-poppins mb-0.5">About</p>
-                                <p className="text-xs text-gray-800 font-poppins leading-snug line-clamp-2">
+                                <p className="text-[10px] font-bold text-cyan-700 uppercase tracking-wider font-inter mb-0.5">About</p>
+                                <p className="text-xs text-gray-800 font-inter leading-snug line-clamp-2">
                                   {gem.sections[0]?.content || "Discover this amazing hidden gem in Kutch."}
                                 </p>
                               </div>
@@ -339,8 +339,8 @@ function HiddenGemsClient() {
                             <div className="flex items-start gap-2">
                               <span className="text-base shrink-0">🗺️</span>
                               <div className="min-w-0">
-                                <p className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider font-poppins mb-0.5">Discovery Level</p>
-                                <p className="text-xs text-gray-800 font-poppins font-semibold">
+                                <p className="text-[10px] font-bold text-emerald-700 uppercase tracking-wider font-inter mb-0.5">Discovery Level</p>
+                                <p className="text-xs text-gray-800 font-inter font-semibold">
                                   {gem.discoveryLevel || 'Off the beaten path'}
                                 </p>
                               </div>
@@ -352,7 +352,7 @@ function HiddenGemsClient() {
                         {/* Action Button */}
                         <div className="pt-2">
                           <div className={`flex items-center justify-between rounded-lg px-4 py-2.5 transition-colors duration-300 ${colors.button}`}>
-                            <span className="text-white font-poppins font-semibold text-sm">Explore</span>
+                            <span className="text-white font-inter font-semibold text-sm">Explore</span>
                             <span className="text-white text-lg transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                           </div>
                         </div>
@@ -412,20 +412,20 @@ function HiddenGemsClient() {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-sora">
               Ready for Your Adventure?
             </h2>
-            <p className="text-xl text-white/90 mb-8 font-poppins">
+            <p className="text-xl text-white/90 mb-8 font-inter">
               Explore all the amazing destinations that Kutch has to offer
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 href="/destinations"
-                className="inline-flex items-center gap-2 bg-white text-indigo-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-all duration-300 hover:scale-105 shadow-xl font-poppins"
+                className="inline-flex items-center gap-2 bg-white text-indigo-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-50 transition-all duration-300 hover:scale-105 shadow-xl font-inter"
               >
                 <span>View All Destinations</span>
                 <span>→</span>
               </Link>
               <Link 
                 href="/"
-                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 border-2 border-white/30 font-poppins"
+                className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all duration-300 border-2 border-white/30 font-inter"
               >
                 <span>Back to Home</span>
               </Link>

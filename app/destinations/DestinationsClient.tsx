@@ -232,7 +232,7 @@ function DestinationsClient() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="mb-8"
               >
-                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-purple-500/30">
+                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-base font-inter font-semibold tracking-wide shadow-xl shadow-purple-500/30">
                   <span>✨</span>
                   <span>All Destinations</span>
                 </span>
@@ -268,15 +268,15 @@ function DestinationsClient() {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="flex flex-col gap-4 mb-8"
               >
-                <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
+                <div className="flex items-center gap-3 text-slate-700 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
                   <span className="text-base">{DESTINATIONS.length}+ Destinations</span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
+                <div className="flex items-center gap-3 text-slate-700 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Rich Heritage</span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
+                <div className="flex items-center gap-3 text-slate-700 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Cultural Experiences</span>
                 </div>
@@ -397,7 +397,7 @@ function DestinationsClient() {
                         
                         {/* Floating Category Tag */}
                         <div className="absolute top-2 right-2">
-                          <span className={`backdrop-blur-sm border px-3 py-1 rounded-lg text-xs font-bold font-poppins shadow-md ${colors.tag}`}>
+                          <span className={`backdrop-blur-sm border px-3 py-1 rounded-lg text-xs font-bold font-inter shadow-md ${colors.tag}`}>
                             {destination.sections.find(s => s.heading === 'Category')?.content || 'Explore'}
                           </span>
                         </div>
@@ -422,8 +422,8 @@ function DestinationsClient() {
                             <div className="flex items-start gap-2">
                               <span className="text-base shrink-0">✨</span>
                               <div className="min-w-0">
-                                <p className="text-[10px] font-bold text-cyan-700 uppercase tracking-wider font-poppins mb-0.5">Famous For</p>
-                                <p className="text-xs text-gray-800 font-poppins leading-snug line-clamp-2">
+                                <p className="text-[10px] font-bold text-cyan-700 uppercase tracking-wider font-inter mb-0.5">Famous For</p>
+                                <p className="text-xs text-gray-800 font-inter leading-snug line-clamp-2">
                                   {destination.sections[0]?.content?.replace(/<[^>]*>/g, '') || destination.title}
                                 </p>
                               </div>
@@ -435,8 +435,8 @@ function DestinationsClient() {
                             <div className="flex items-start gap-2">
                               <span className="text-base shrink-0">🌤️</span>
                               <div className="min-w-0">
-                                <p className="text-[10px] font-bold text-blue-700 uppercase tracking-wider font-poppins mb-0.5">Best Season</p>
-                                <p className="text-xs text-gray-800 font-poppins font-semibold">
+                                <p className="text-[10px] font-bold text-blue-700 uppercase tracking-wider font-inter mb-0.5">Best Season</p>
+                                <p className="text-xs text-gray-800 font-inter font-semibold">
                                   November to February
                                 </p>
                               </div>
@@ -448,7 +448,7 @@ function DestinationsClient() {
                         {/* Action Button */}
                         <div className="pt-2">
                           <div className={`flex items-center justify-between rounded-lg px-4 py-2.5 transition-colors duration-300 ${colors.button}`}>
-                            <span className="text-white font-poppins font-semibold text-sm">View Details</span>
+                            <span className="text-white font-inter font-semibold text-sm">View Details</span>
                             <span className="text-white text-lg transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                           </div>
                         </div>

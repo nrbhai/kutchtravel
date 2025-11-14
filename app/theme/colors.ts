@@ -62,7 +62,7 @@ export const themeColors = {
 export const themeTypography = {
   fonts: {
     heading: "font-sora",
-    body: "font-poppins",
+    body: "font-inter",
     accent: "font-space-grotesk",
     display: "font-playfair",
   },

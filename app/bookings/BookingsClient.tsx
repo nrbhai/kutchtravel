@@ -81,7 +81,7 @@ export default function BookingsClient() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="mb-8"
               >
-                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-purple-500/30">
+                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-base font-inter font-semibold tracking-wide shadow-xl shadow-purple-500/30">
                   <span>🎫</span>
                   <span>Complete Travel Solutions</span>
                 </span>
@@ -96,7 +96,7 @@ export default function BookingsClient() {
               </p>
 
               {/* Quick Features */}
-              <div className="space-y-3 text-lg font-poppins text-gray-900">
+              <div className="space-y-3 text-lg font-inter text-gray-900">
                 <div className="flex items-center gap-3">
                   <span className="text-purple-600 text-2xl">•</span>
                   <span className="font-medium">Best price guarantee on all bookings</span>
@@ -174,7 +174,7 @@ export default function BookingsClient() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg flex items-center gap-3 font-poppins ${
+                className={`px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg flex items-center gap-3 font-inter ${
                   activeTab === tab.id
                     ? 'bg-gradient-to-r from-purple-600 to-indigo-700 text-white shadow-xl shadow-purple-500/30 transform scale-105'
                     : 'bg-white text-gray-900 hover:bg-purple-50 border-2 border-purple-200 hover:border-purple-400 hover:shadow-xl'
@@ -226,14 +226,14 @@ export default function BookingsClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link 
                 href="/destinations"
-                className="inline-flex items-center gap-2 bg-white text-purple-600 font-poppins font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-purple-200 hover:border-purple-400"
+                className="inline-flex items-center gap-2 bg-white text-purple-600 font-inter font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-purple-200 hover:border-purple-400"
               >
                 <span>Explore Destinations</span>
                 <span>→</span>
               </Link>
               <Link 
                 href="/about"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700 text-white font-poppins font-bold px-8 py-4 rounded-full shadow-xl shadow-purple-500/30 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700 text-white font-inter font-bold px-8 py-4 rounded-full shadow-xl shadow-purple-500/30 transition-all duration-300 transform hover:scale-105"
               >
                 <span>Contact Us</span>
                 <span>→</span>
@@ -256,7 +256,7 @@ function HotelsSection() {
         className="text-center mb-8"
       >
         <h2 className="text-3xl font-bold mb-4 font-sora bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Find Perfect Accommodation</h2>
-        <p className="text-gray-900 max-w-2xl mx-auto text-lg font-poppins leading-relaxed">
+        <p className="text-gray-900 max-w-2xl mx-auto text-lg font-inter leading-relaxed">
           Book hotels, resorts, and homestays in Kutch with our trusted partners. Best prices guaranteed!
         </p>
       </motion.div>
@@ -265,7 +265,7 @@ function HotelsSection() {
       <div className="bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 rounded-3xl p-8 shadow-xl border-2 border-purple-200/50">
         <div className="text-center mb-6">
           <h3 className="text-2xl font-semibold mb-2 font-sora text-gray-900">Search Hotels</h3>
-          <p className="text-gray-800 text-base font-poppins">Powered by Booking.com</p>
+          <p className="text-gray-800 text-base font-inter">Powered by Booking.com</p>
         </div>
         
         {/* Booking.com Widget Placeholder */}
@@ -273,7 +273,7 @@ function HotelsSection() {
           <p className="text-center text-gray-900 mb-4 text-2xl">
             🏨 Booking.com Widget Integration
           </p>
-          <p className="text-base text-gray-800 text-center mb-6 font-poppins">
+          <p className="text-base text-gray-800 text-center mb-6 font-inter">
             To integrate: Sign up for Booking.com Partner Program and replace this with their booking widget
           </p>
           <div className="mt-4 text-center">
@@ -281,7 +281,7 @@ function HotelsSection() {
               href="https://www.booking.com/searchresults.html?ss=kutch&checkin=2024-12-01&checkout=2024-12-03"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-full font-poppins font-bold transition-all duration-300 hover:scale-105 shadow-xl shadow-purple-500/30"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-full font-inter font-bold transition-all duration-300 hover:scale-105 shadow-xl shadow-purple-500/30"
             >
               <span>Search Hotels in Kutch</span>
               <span>→</span>
@@ -317,8 +317,8 @@ function HotelsSection() {
             <div className="p-6 bg-gradient-to-br from-purple-50/50 to-white">
               <h3 className="font-semibold text-lg mb-3 font-sora text-gray-900">{hotel.name}</h3>
               <div className="flex justify-between items-center">
-                <span className="text-purple-600 font-bold text-lg font-poppins">{hotel.price}</span>
-                <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-3 py-1 rounded-full text-sm font-poppins font-bold shadow-lg">★ {hotel.rating}</span>
+                <span className="text-purple-600 font-bold text-lg font-inter">{hotel.price}</span>
+                <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-3 py-1 rounded-full text-sm font-inter font-bold shadow-lg">★ {hotel.rating}</span>
               </div>
             </div>
           </motion.div>
@@ -338,7 +338,7 @@ function FlightsSection() {
         className="text-center mb-8"
       >
         <h2 className="text-3xl font-bold mb-4 font-sora bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Book Your Flight to Kutch</h2>
-        <p className="text-gray-900 max-w-2xl mx-auto text-lg font-poppins leading-relaxed">
+        <p className="text-gray-900 max-w-2xl mx-auto text-lg font-inter leading-relaxed">
           Find the best flight deals to Bhuj and other nearby airports. Compare prices from multiple airlines.
         </p>
       </motion.div>
@@ -347,14 +347,14 @@ function FlightsSection() {
       <div className="bg-gradient-to-br from-blue-50 via-cyan-50 to-sky-50 rounded-3xl p-8 shadow-xl border-2 border-blue-200/50">
         <div className="text-center mb-6">
           <h3 className="text-2xl font-semibold text-gray-900 mb-2 font-sora">Search Flights</h3>
-          <p className="text-gray-800 text-base font-poppins">Powered by Skyscanner</p>
+          <p className="text-gray-800 text-base font-inter">Powered by Skyscanner</p>
         </div>
         
         <div className="bg-white rounded-2xl p-8 border-2 border-dashed border-blue-300 shadow-lg">
           <p className="text-center text-gray-900 mb-4 text-2xl">
             ✈️ Skyscanner Widget Integration
           </p>
-          <p className="text-base text-gray-800 text-center mb-6 font-poppins">
+          <p className="text-base text-gray-800 text-center mb-6 font-inter">
             To integrate: Join Skyscanner Travel Partner Program and add their search widget here
           </p>
           <div className="mt-4 text-center">
@@ -362,7 +362,7 @@ function FlightsSection() {
               href="https://www.skyscanner.com/flights-to/bhuj/cheapest-flights-to-bhuj.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-full font-poppins font-bold transition-all duration-300 hover:scale-105 shadow-xl shadow-blue-500/30"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-full font-inter font-bold transition-all duration-300 hover:scale-105 shadow-xl shadow-blue-500/30"
             >
               <span>Search Flights to Bhuj</span>
               <span>→</span>
@@ -378,7 +378,7 @@ function FlightsSection() {
             <span className="text-4xl">✈️</span>
             <h3 className="text-2xl font-semibold font-sora text-gray-900">How to Reach Kutch</h3>
           </div>
-          <ul className="space-y-4 text-gray-900 font-poppins">
+          <ul className="space-y-4 text-gray-900 font-inter">
             <li className="flex items-start gap-2">
               <span className="text-blue-600">•</span>
               <span><strong>Bhuj Airport (BHJ):</strong> Main airport serving Kutch region</span>
@@ -403,7 +403,7 @@ function FlightsSection() {
             <span className="text-4xl">💡</span>
             <h3 className="text-2xl font-semibold font-sora text-gray-900">Flight Booking Tips</h3>
           </div>
-          <ul className="space-y-4 text-gray-900 font-poppins">
+          <ul className="space-y-4 text-gray-900 font-inter">
             <li className="flex items-start gap-2">
               <span className="text-cyan-600">•</span>
               <span>Book 2-3 weeks in advance for best prices</span>
@@ -437,7 +437,7 @@ function ToursSection() {
         className="text-center mb-8"
       >
         <h2 className="text-3xl font-bold mb-4 font-sora bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Discover Amazing Tours & Experiences</h2>
-        <p className="text-gray-900 max-w-2xl mx-auto text-lg font-poppins leading-relaxed">
+        <p className="text-gray-900 max-w-2xl mx-auto text-lg font-inter leading-relaxed">
           Book guided tours, cultural experiences, and adventure activities in Kutch with local experts.
         </p>
       </motion.div>
@@ -446,14 +446,14 @@ function ToursSection() {
       <div className="bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 rounded-3xl p-8 shadow-xl border-2 border-purple-200/50">
         <div className="text-center mb-6">
           <h3 className="text-2xl font-semibold text-gray-900 mb-2 font-sora">Book Tours & Activities</h3>
-          <p className="text-gray-800 text-base font-poppins">Powered by GetYourGuide</p>
+          <p className="text-gray-800 text-base font-inter">Powered by GetYourGuide</p>
         </div>
         
         <div className="bg-white rounded-2xl p-8 border-2 border-dashed border-purple-300 shadow-lg">
           <p className="text-center text-gray-900 mb-4 text-2xl">
             🎯 GetYourGuide Widget Integration
           </p>
-          <p className="text-base text-gray-800 text-center mb-6 font-poppins">
+          <p className="text-base text-gray-800 text-center mb-6 font-inter">
             To integrate: Join GetYourGuide Affiliate Program and embed their booking widget
           </p>
           <div className="mt-4 text-center">
@@ -461,7 +461,7 @@ function ToursSection() {
               href="https://www.getyourguide.com/s/?q=gujarat%20kutch"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-full font-poppins font-bold transition-all duration-300 hover:scale-105 shadow-xl shadow-purple-500/30"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-full font-inter font-bold transition-all duration-300 hover:scale-105 shadow-xl shadow-purple-500/30"
             >
               <span>Explore Tours in Kutch</span>
               <span>→</span>
@@ -488,7 +488,7 @@ function ToursSection() {
             className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-purple-100 hover:border-purple-300"
           >
             <h3 className="font-semibold text-lg mb-3 font-sora text-gray-900">{tour.name}</h3>
-            <div className="space-y-2 text-base text-gray-900 mb-4 font-poppins">
+            <div className="space-y-2 text-base text-gray-900 mb-4 font-inter">
               <div className="flex justify-between">
                 <span>Duration:</span>
                 <span className="font-semibold">{tour.duration}</span>
@@ -502,7 +502,7 @@ function ToursSection() {
                 <span className="text-gray-900 font-semibold">★ {tour.rating}</span>
               </div>
             </div>
-            <button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white py-3 rounded-full font-poppins font-bold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/30">
+            <button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white py-3 rounded-full font-inter font-bold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/30">
               Book Now
             </button>
           </motion.div>
@@ -522,7 +522,7 @@ function ShoppingSection() {
         className="text-center mb-8"
       >
         <h2 className="text-3xl font-bold mb-4 font-sora bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Travel Gear & Local Handicrafts</h2>
-        <p className="text-gray-900 max-w-2xl mx-auto text-lg font-poppins leading-relaxed">
+        <p className="text-gray-900 max-w-2xl mx-auto text-lg font-inter leading-relaxed">
           Shop for travel essentials, authentic Kutchi handicrafts, and local souvenirs.
         </p>
       </motion.div>
@@ -564,10 +564,10 @@ function ShoppingSection() {
           >
             <div className="text-5xl mb-4">{item.icon}</div>
             <h3 className="font-semibold text-lg mb-2 font-sora text-gray-900">{item.category}</h3>
-            <p className="text-gray-800 text-base mb-4 font-poppins">{item.description}</p>
+            <p className="text-gray-800 text-base mb-4 font-inter">{item.description}</p>
             <a 
               href={item.link}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 py-3 rounded-full font-poppins font-bold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/30 text-base"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-6 py-3 rounded-full font-inter font-bold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/30 text-base"
             >
               <span>Shop Now</span>
               <span>→</span>
@@ -622,14 +622,14 @@ function ShoppingSection() {
               <div className="p-6">
                 <h4 className="font-semibold mb-2 font-sora text-gray-900 text-lg">{product.name}</h4>
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xl font-bold text-purple-600 font-poppins">{product.price}</span>
-                  <span className="text-sm text-gray-500 line-through font-poppins">{product.originalPrice}</span>
+                  <span className="text-xl font-bold text-purple-600 font-inter">{product.price}</span>
+                  <span className="text-sm text-gray-500 line-through font-inter">{product.originalPrice}</span>
                 </div>
-                <div className="flex justify-between items-center text-sm text-gray-900 mb-4 font-poppins">
+                <div className="flex justify-between items-center text-sm text-gray-900 mb-4 font-inter">
                   <span>via {product.affiliate}</span>
                   <span className="font-semibold">★ {product.rating}</span>
                 </div>
-                <button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white py-3 rounded-full font-poppins font-bold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/30">
+                <button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white py-3 rounded-full font-inter font-bold transition-all duration-300 hover:scale-105 shadow-lg shadow-purple-500/30">
                   Buy Now
                 </button>
               </div>
@@ -639,7 +639,7 @@ function ShoppingSection() {
       </div>
 
       {/* Affiliate Disclaimer */}
-      <div className="bg-purple-50 border-2 border-purple-200 rounded-2xl p-6 text-base text-gray-900 font-poppins">
+      <div className="bg-purple-50 border-2 border-purple-200 rounded-2xl p-6 text-base text-gray-900 font-inter">
         <p className="font-bold mb-2 text-purple-900">🔔 Affiliate Disclosure:</p>
         <p>This page contains affiliate links. We may earn a small commission from purchases made through these links at no additional cost to you. This helps us maintain and improve our travel guides.</p>
       </div>

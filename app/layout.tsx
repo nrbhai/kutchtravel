@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Inter, Playfair_Display, Lora, Dancing_Script, Poppins, Space_Grotesk, Sora } from "next/font/google";
+import { Inter, Playfair_Display, Lora, Dancing_Script, Space_Grotesk, Sora } from "next/font/google";
 import type { Metadata, Viewport } from 'next';
 import ErrorBoundary from './components/ErrorBoundary';
 import { GoogleAnalytics } from './components/Analytics';
@@ -9,6 +9,7 @@ import { Suspense } from 'react';
 
 const inter = Inter({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
   variable: "--font-inter",
   display: 'swap',
 });
@@ -35,13 +36,6 @@ const dancing = Dancing_Script({
 });
 
 // Modern fonts for contemporary design
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
-  variable: "--font-poppins",
-  display: 'swap',
-});
-
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
@@ -65,6 +59,7 @@ export const metadata: Metadata = {
   keywords: [
     "Kutch travel guide",
     "White Rann of Kutch", 
+    "Rann Utsav 2025",
     "Bhuj tourism",
     "Mandvi beaches",
     "Gujarat travel",
@@ -72,7 +67,16 @@ export const metadata: Metadata = {
     "Kutch destinations",
     "Great Rann of Kutch",
     "Kutch culture",
-    "India travel guide"
+    "India travel guide",
+    "Kutch handicrafts",
+    "Ajrakh block printing",
+    "Bandhani tie dye",
+    "Kalo Dungar Black Hill",
+    "Desert camping Gujarat",
+    "Kutch photography",
+    "Gujarat tourism",
+    "Kutch hidden gems",
+    "Things to do in Kutch"
   ],
   authors: [{ name: "Kutch Travel Guide" }],
   creator: "Kutch Travel Guide",
@@ -151,7 +155,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="msapplication-TileColor" content="#0ea5e9" />
         <meta name="theme-color" content="#0ea5e9" />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} ${lora.variable} ${dancing.variable} ${poppins.variable} ${spaceGrotesk.variable} ${sora.variable}`}>
+      <body className={`${inter.variable} ${playfair.variable} ${lora.variable} ${dancing.variable} ${spaceGrotesk.variable} ${sora.variable}`}>
         {/* Work in Progress Banner */}
         <div className="bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 text-white py-3 px-4 text-center font-semibold shadow-lg sticky top-0 z-50">
           <p className="text-sm md:text-base">

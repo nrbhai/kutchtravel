@@ -42,7 +42,7 @@ const AutoplayCarousel = ({ images }: { images: { src: string; alt: string; capt
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
-          <div className="absolute bottom-4 left-4 text-gray-900 text-sm font-medium px-3 py-1 bg-white/80 rounded-full backdrop-blur-sm shadow-md">
+          <div className="absolute bottom-4 left-4 right-4 text-gray-900 text-sm font-medium px-3 py-1 bg-white/80 rounded-full backdrop-blur-sm shadow-md truncate">
             {image.caption}
           </div>
         </motion.div>
@@ -59,7 +59,8 @@ const AutoplayCarousel = ({ images }: { images: { src: string; alt: string; capt
                 ? 'bg-white scale-100' 
                 : 'bg-white/50 scale-75 hover:scale-90 hover:bg-white/70'
             }`}
-            aria-label={`Go to slide ${index + 1}`}
+            aria-label={`Go to image ${index + 1} of ${images.length}`}
+            aria-current={index === currentIndex ? 'true' : 'false'}
           />
         ))}
       </div>
@@ -111,7 +112,7 @@ const CraftCarousel = () => {
               <h3 className="text-2xl font-sora font-bold text-gray-900 mb-2">
                 {image.caption}
               </h3>
-              <p className="text-gray-700 font-poppins font-medium">Traditional Kutchi Craft</p>
+              <p className="text-gray-700 font-inter font-medium">Traditional Kutchi Craft</p>
             </div>
           </div>
         </motion.div>
@@ -338,7 +339,7 @@ export default function Home() {
   };
 
   return (
-    <main className="scroll-smooth selection:bg-blue-200 selection:text-gray-900 relative text-gray-900 dark:bg-gray-950 dark:text-gray-900">
+    <main className="scroll-smooth selection:bg-blue-200 selection:text-gray-900 relative text-gray-900 dark:bg-gray-950 dark:text-gray-900" style={{ scrollPaddingTop: '80px' }}>
       {/* 1️⃣ Modern Hero Section with Animated Mesh Background */}
       <section id="home" className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50">
         {/* Navigation - Position it absolutely over the hero */}
@@ -369,7 +370,7 @@ export default function Home() {
                 </span>
                 <motion.span 
                   variants={fadeUp} 
-                  className="block text-lg md:text-xl lg:text-2xl font-poppins font-medium bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent mt-4 drop-shadow-[0_3px_8px_rgba(0,0,0,0.3)] tracking-wide sparkle-wrap" 
+                  className="block text-lg md:text-xl lg:text-2xl font-inter font-medium bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent mt-4 drop-shadow-[0_3px_8px_rgba(0,0,0,0.3)] tracking-wide sparkle-wrap" 
                   tabIndex={0}
                 >
                   {subtitle.split("").map((ch: string, i: number) => (
@@ -390,11 +391,11 @@ export default function Home() {
                 </motion.span>
               </motion.h1>
 
-              <motion.p variants={fadeUp} className="mt-8 text-base md:text-lg lg:text-xl max-w-xl mx-auto lg:mx-0 font-space-grotesk font-medium leading-relaxed">
+              <motion.p variants={fadeUp} className="mt-8 text-base md:text-lg lg:text-xl max-w-xl mx-auto lg:mx-0 font-inter font-medium leading-relaxed">
                 <span className="text-gray-900 font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
                   Where salt meets sky, and stories meet silence
                 </span>
-                <span className="block text-sm md:text-base mt-5 font-poppins font-light text-gray-800">
+                <span className="block text-sm md:text-base mt-5 font-inter font-medium text-gray-800">
                   Practical guides, real photos, and local tips — not tourist brochures.
                 </span>
               </motion.p>
@@ -402,7 +403,7 @@ export default function Home() {
               <motion.div variants={fadeUp} className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
                 <Link 
                   href="/destinations" 
-                  className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-700 hover:via-blue-700 hover:to-indigo-700 text-white font-poppins font-semibold py-3 px-6 rounded-full shadow-xl shadow-blue-500/30 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden"
+                  className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-700 hover:via-blue-700 hover:to-indigo-700 text-white font-inter font-semibold py-3 px-6 rounded-full shadow-xl shadow-blue-500/30 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden"
                 >
                   <span className="relative z-10">Explore Destinations</span>
                   <span className="relative z-10 group-hover:translate-x-1 transition-transform">→</span>
@@ -410,7 +411,7 @@ export default function Home() {
                 </Link>
                 <a 
                   href="#destinations" 
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 hover:from-teal-600 hover:via-cyan-600 hover:to-blue-600 text-white font-poppins font-semibold py-3 px-6 rounded-full shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:scale-105 active:scale-95"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-teal-500 via-cyan-500 to-blue-500 hover:from-teal-600 hover:via-cyan-600 hover:to-blue-600 text-white font-inter font-semibold py-3 px-6 rounded-full shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:scale-105 active:scale-95"
                 >
                   <span>Quick Guide</span>
                   <span>✨</span>
@@ -521,7 +522,7 @@ export default function Home() {
             {/* Content Side */}
             <div className="space-y-6">
               <div className="space-y-3">
-                <span className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-sm font-poppins font-semibold tracking-wide shadow-lg shadow-cyan-500/30">
+                <span className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-sm font-inter font-semibold tracking-wide shadow-lg shadow-cyan-500/30">
                   <span>🗺️</span>
                   <span>Local Insights</span>
                 </span>
@@ -530,7 +531,7 @@ export default function Home() {
                   Explore Kutch
                 </h2>
                 
-                <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-poppins font-light">
+                <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-inter font-light">
                   Local-first insights to plan the perfect trip across seasons and regions. 
                   <span className="block mt-2 text-slate-900 font-medium">Get expert guidance for an authentic Kutch experience.</span>
                 </p>
@@ -540,7 +541,7 @@ export default function Home() {
               <div className="flex flex-wrap items-center gap-6 pt-4">
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
-                  <span className="text-sm font-poppins font-medium">Expert Tips</span>
+                  <span className="text-sm font-inter font-medium">Expert Tips</span>
                 </div>
                 <div className="w-px h-4 bg-gradient-to-b from-cyan-400 to-blue-500"></div>
                 <div className="flex items-center gap-2">
@@ -557,7 +558,7 @@ export default function Home() {
               {/* CTA Button */}
               <Link 
                 href="/destinations" 
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full font-poppins font-semibold text-base shadow-xl shadow-cyan-500/30 hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full font-inter font-semibold text-base shadow-xl shadow-cyan-500/30 hover:shadow-2xl hover:scale-105 transition-all duration-300"
               >
                 <span>Start Exploring</span>
                 <ArrowRight className="w-5 h-5" />
@@ -604,29 +605,29 @@ export default function Home() {
               className="text-left"
             >
               <div className="mb-8">
-                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-cyan-500/30">
+                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-base font-inter font-semibold tracking-wide shadow-xl shadow-cyan-500/30">
                   <span>✨</span>
                   <span>Handpicked Destinations</span>
                 </span>
               </div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold mb-8 leading-tight holographic whitespace-nowrap">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold mb-8 leading-tight holographic md:whitespace-nowrap">
                 Top Destinations
               </h2>
-              <p className="text-lg md:text-xl text-gray-900 leading-relaxed mb-8 font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+              <p className="text-lg md:text-xl text-gray-900 leading-relaxed mb-8 font-inter font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
                 Start with our handpicked favorites - the must-visit places that capture the essence of Kutch's beauty and heritage.
               </p>
               
               {/* Decorative Elements */}
               <div className="flex flex-col gap-4">
-                <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
+                <div className="flex items-center gap-3 text-slate-700 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Top 6 Featured</span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
+                <div className="flex items-center gap-3 text-slate-700 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Rich Heritage</span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-800 font-poppins font-medium">
+                <div className="flex items-center gap-3 text-slate-800 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-cyan-700 to-blue-800 rounded-full animate-pulse"></span>
                   <span className="text-base">Cultural Experiences</span>
                 </div>
@@ -704,7 +705,7 @@ export default function Home() {
                       
                       {/* Floating Category Tag */}
                       <div className="absolute top-2 right-2">
-                        <span className={`backdrop-blur-sm border px-3 py-1 rounded-lg text-xs font-bold font-poppins shadow-md ${colors.tag}`}>
+                        <span className={`backdrop-blur-sm border px-3 py-1 rounded-lg text-xs font-bold font-inter shadow-md ${colors.tag}`}>
                           {destinationCategories[destination.slug] || "Explore"}
                         </span>
                       </div>
@@ -729,8 +730,8 @@ export default function Home() {
                           <div className="flex items-start gap-2">
                             <span className="text-base shrink-0">✨</span>
                             <div className="min-w-0">
-                              <p className="text-[10px] font-bold text-cyan-700 uppercase tracking-wider font-poppins mb-0.5">Famous For</p>
-                              <p className="text-xs text-gray-800 font-poppins leading-snug">
+                              <p className="text-[10px] font-bold text-cyan-700 uppercase tracking-wider font-inter mb-0.5">Famous For</p>
+                              <p className="text-xs text-gray-800 font-inter leading-snug">
                                 {destination.slug === 'bhuj' && 'Historic palaces, museums & vibrant bazaars'}
                                 {destination.slug === 'white-rann' && 'Endless white salt desert & full moon nights'}
                                 {destination.slug === 'mandvi' && 'Pristine beaches & Vijay Vilas Palace'}
@@ -748,8 +749,8 @@ export default function Home() {
                           <div className="flex items-start gap-2">
                             <span className="text-base shrink-0">🌤️</span>
                             <div className="min-w-0">
-                              <p className="text-[10px] font-bold text-blue-700 uppercase tracking-wider font-poppins mb-0.5">Best Season</p>
-                              <p className="text-xs text-gray-800 font-poppins font-semibold">
+                              <p className="text-[10px] font-bold text-blue-700 uppercase tracking-wider font-inter mb-0.5">Best Season</p>
+                              <p className="text-xs text-gray-800 font-inter font-semibold">
                                 November to February
                               </p>
                             </div>
@@ -761,7 +762,7 @@ export default function Home() {
                       {/* Action Button */}
                       <div className="pt-2">
                         <div className={`flex items-center justify-between rounded-lg px-4 py-2.5 transition-colors duration-300 ${colors.button}`}>
-                          <span className="text-white font-poppins font-semibold text-sm">View Details</span>
+                          <span className="text-white font-inter font-semibold text-sm">View Details</span>
                           <span className="text-white text-lg transform group-hover:translate-x-1 transition-transform duration-300">→</span>
                         </div>
                       </div>
@@ -786,12 +787,12 @@ export default function Home() {
               <h3 className="text-3xl font-sora font-bold mb-4 bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 bg-clip-text text-transparent">
                 Explore More Destinations
               </h3>
-              <p className="text-gray-700 text-lg mb-8 font-poppins leading-relaxed">
+              <p className="text-gray-700 text-lg mb-8 font-inter leading-relaxed">
                 We've shown you just a glimpse! Discover {DESTINATIONS.length - 6} more incredible destinations waiting to be explored in Kutch.
               </p>
               <Link
                 href="/destinations"
-                className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 text-white px-10 py-5 rounded-full font-poppins font-bold text-lg hover:from-cyan-700 hover:via-sky-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-2xl shadow-cyan-500/30 group"
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 text-white px-10 py-5 rounded-full font-inter font-bold text-lg hover:from-cyan-700 hover:via-sky-700 hover:to-blue-700 transition-all duration-300 hover:scale-105 shadow-2xl shadow-cyan-500/30 group"
               >
                 <span>View All {DESTINATIONS.length}+ Destinations</span>
                 <span className="transform group-hover:translate-x-2 transition-transform duration-300 text-2xl">→</span>
@@ -832,7 +833,7 @@ export default function Home() {
               className="text-left order-1 lg:order-2"
             >
               <div className="mb-8">
-                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-base font-poppins font-semibold tracking-wide shadow-xl shadow-cyan-500/30">
+                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-base font-inter font-semibold tracking-wide shadow-xl shadow-cyan-500/30">
                   <span>🎨</span>
                   <span>Traditional Arts & Culture</span>
                 </span>
@@ -840,22 +841,22 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold mb-8 leading-tight holographic whitespace-nowrap">
                 Culture & Crafts
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-poppins font-light mb-8">
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-inter font-light mb-8">
                 Immerse yourself in the vibrant world of Kutchi traditions, where every thread tells a story 
                 <span className="block mt-3 text-slate-900 font-medium">and every craft carries centuries of heritage.</span>
               </p>
               
               {/* Decorative Elements */}
               <div className="flex flex-col gap-4">
-                <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
+                <div className="flex items-center gap-3 text-slate-700 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Traditional Textiles</span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-700 font-poppins font-medium">
+                <div className="flex items-center gap-3 text-slate-700 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Ancient Techniques</span>
                 </div>
-                <div className="flex items-center gap-3 text-slate-800 font-poppins font-medium">
+                <div className="flex items-center gap-3 text-slate-800 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-cyan-700 to-blue-800 rounded-full animate-pulse"></span>
                   <span className="text-base">Master Artisans</span>
                 </div>
@@ -863,158 +864,137 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Craft Cards Grid Below */}
+          {/* Craft Cards Grid Below - Compact Style */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {/* Bandhani */}
-                <Link href="/crafts/bandhani" className="group cursor-pointer">
-                  <div className="relative bg-gradient-to-br from-cyan-50/80 to-cyan-100/60 rounded-2xl p-8 border-2 border-cyan-200/40 hover:border-cyan-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div className="text-center">
-                      <div className="w-20 h-20 rounded-full mx-auto mb-5 overflow-hidden shadow-lg border-2 border-white/30">
-                        <Image 
-                          src="/images/crafts/bandhani.jpg" 
-                          alt="Bandhani"
-                          width={80}
-                          height={80}
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Bandhani</h3>
-                      <p className="text-sm text-gray-600">Tie-dye artistry with intricate dot patterns</p>
-                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-cyan-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                  </div>
-                </Link>
-
-                {/* Ajrakh */}
-                <Link href="/crafts/ajrakh" className="group cursor-pointer">
-                  <div className="relative bg-gradient-to-br from-indigo-50/80 to-indigo-100/60 rounded-2xl p-8 border-2 border-indigo-200/40 hover:border-indigo-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div className="text-center">
-                      <div className="w-20 h-20 rounded-full mx-auto mb-5 overflow-hidden shadow-lg border-2 border-white/30">
-                        <Image 
-                          src="/images/crafts/ajrakh.jpg" 
-                          alt="Ajrakh"
-                          width={80}
-                          height={80}
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Ajrakh</h3>
-                      <p className="text-sm text-gray-600">Block-printed geometric masterpieces</p>
-                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-indigo-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                  </div>
-                </Link>
-
-                {/* Rogan Art */}
-                <Link href="/crafts/rogan-art" className="group cursor-pointer">
-                  <div className="relative bg-gradient-to-br from-blue-50/80 to-blue-100/60 rounded-2xl p-8 border-2 border-blue-200/40 hover:border-blue-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div className="text-center">
-                      <div className="w-20 h-20 rounded-full mx-auto mb-5 overflow-hidden shadow-lg border-2 border-white/30">
-                        <Image 
-                          src="/images/crafts/rogan.jpg" 
-                          alt="Rogan Art"
-                          width={80}
-                          height={80}
-                          className="object-cover w-full h-full"
-                        />
-                      </div>
-                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Rogan Art</h3>
-                      <p className="text-sm text-gray-600">Painted fabric with castor oil colors</p>
-                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                  </div>
-                </Link>
-
-                {/* Mirror Work */}
-                <Link href="/crafts/mirror-work" className="group cursor-pointer">
-                  <div className="relative bg-gradient-to-br from-sky-50/80 to-sky-100/60 rounded-2xl p-8 border-2 border-sky-200/40 hover:border-sky-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div className="text-center">
-                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-sky-200 to-sky-300 shadow-lg border-2 border-white/30">
-                        <span className="text-4xl">✨</span>
-                      </div>
-                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Mirror Work</h3>
-                      <p className="text-sm text-gray-600">Shisha embroidery with tiny mirrors</p>
-                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-sky-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                  </div>
-                </Link>
+            {/* Bandhani */}
+            <Link href="/crafts/bandhani" className="group">
+              <div className="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-2xl border-2 border-cyan-200 hover:border-cyan-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-32 overflow-hidden m-3 rounded-xl">
+                  <Image 
+                    src="/images/crafts/bandhani.jpg" 
+                    alt="Bandhani"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="p-4 pt-2">
+                  <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Bandhani</h3>
+                  <p className="text-xs text-gray-600 line-clamp-2 font-inter">Tie-dye artistry with intricate dot patterns</p>
+                </div>
               </div>
+            </Link>
 
-              {/* Additional Crafts Row */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-6">
-                {/* Sudi Chappu Card */}
-                <Link href="/crafts/sudi-chappu" className="group cursor-pointer">
-                  <div className="relative bg-gradient-to-br from-blue-50/80 to-blue-100/60 rounded-2xl p-8 border-2 border-blue-200/40 hover:border-blue-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div className="text-center">
-                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-blue-200 to-blue-300 shadow-lg border-2 border-white/30">
-                        <span className="text-4xl">🔪</span>
-                      </div>
-                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Sudi Chappu</h3>
-                      <p className="text-sm text-gray-600">Traditional knife-making in Anjar</p>
-                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-blue-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                  </div>
-                </Link>
-
-                {/* Pottery Card */}
-                <Link href="/crafts/pottery" className="group cursor-pointer">
-                  <div className="relative bg-gradient-to-br from-cyan-50/80 to-cyan-100/60 rounded-2xl p-8 border-2 border-cyan-200/40 hover:border-cyan-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div className="text-center">
-                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-cyan-200 to-cyan-300 shadow-lg border-2 border-white/30">
-                        <span className="text-4xl">🏺</span>
-                      </div>
-                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Pottery</h3>
-                      <p className="text-sm text-gray-600">Clay craft traditions across villages</p>
-                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-cyan-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                  </div>
-                </Link>
-
-                {/* Leather Craft Card */}
-                <Link href="/crafts/leather-craft" className="group cursor-pointer">
-                  <div className="relative bg-gradient-to-br from-teal-50/80 to-teal-100/60 rounded-2xl p-8 border-2 border-teal-200/40 hover:border-teal-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div className="text-center">
-                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-teal-200 to-teal-300 shadow-lg border-2 border-white/30">
-                        <span className="text-4xl">👞</span>
-                      </div>
-                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Leather Craft</h3>
-                      <p className="text-sm text-gray-600">Traditional leather working and mojari shoes</p>
-                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-teal-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                  </div>
-                </Link>
-
-                {/* Weaving Card */}
-                <Link href="/crafts/weaving" className="group cursor-pointer">
-                  <div className="relative bg-gradient-to-br from-sky-50/80 to-sky-100/60 rounded-2xl p-8 border-2 border-sky-200/40 hover:border-sky-300/50 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-                    <div className="text-center">
-                      <div className="w-20 h-20 rounded-full mx-auto mb-5 flex items-center justify-center bg-gradient-to-br from-sky-200 to-sky-300 shadow-lg border-2 border-white/30">
-                        <span className="text-4xl">🧵</span>
-                      </div>
-                      <h3 className="font-bold text-gray-600 mb-3 text-lg">Weaving</h3>
-                      <p className="text-sm text-gray-600">Handloom textiles and traditional carpets</p>
-                      <p className="text-sm text-gray-800 mt-3 opacity-75">Click to learn more</p>
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-sky-200/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl"></div>
-                  </div>
-                </Link>
+            {/* Ajrakh */}
+            <Link href="/crafts/ajrakh" className="group">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-32 overflow-hidden m-3 rounded-xl">
+                  <Image 
+                    src="/images/crafts/ajrakh.jpg" 
+                    alt="Ajrakh"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="p-4 pt-2">
+                  <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Ajrakh</h3>
+                  <p className="text-xs text-gray-600 line-clamp-2 font-inter">Block-printed geometric masterpieces</p>
+                </div>
               </div>
-            </motion.div>
-          </div>
+            </Link>
+
+            {/* Rogan Art */}
+            <Link href="/crafts/rogan-art" className="group">
+              <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl border-2 border-indigo-200 hover:border-indigo-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-32 overflow-hidden m-3 rounded-xl">
+                  <Image 
+                    src="/images/crafts/rogan.jpg" 
+                    alt="Rogan Art"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="p-4 pt-2">
+                  <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Rogan Art</h3>
+                  <p className="text-xs text-gray-600 line-clamp-2 font-inter">Painted fabric with castor oil colors</p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Mirror Work */}
+            <Link href="/crafts/mirror-work" className="group">
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl border-2 border-purple-200 hover:border-purple-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-32 overflow-hidden m-3 rounded-xl bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center">
+                  <span className="text-5xl">✨</span>
+                </div>
+                <div className="p-4 pt-2">
+                  <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Mirror Work</h3>
+                  <p className="text-xs text-gray-600 line-clamp-2 font-inter">Shisha embroidery with tiny mirrors</p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Sudi Chappu */}
+            <Link href="/crafts/sudi-chappu" className="group">
+              <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl border-2 border-teal-200 hover:border-teal-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-32 overflow-hidden m-3 rounded-xl bg-gradient-to-br from-teal-200 to-teal-300 flex items-center justify-center">
+                  <span className="text-5xl">🔪</span>
+                </div>
+                <div className="p-4 pt-2">
+                  <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Sudi Chappu</h3>
+                  <p className="text-xs text-gray-600 line-clamp-2 font-inter">Traditional knife-making in Anjar</p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Pottery */}
+            <Link href="/crafts/pottery" className="group">
+              <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl border-2 border-amber-200 hover:border-amber-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-32 overflow-hidden m-3 rounded-xl bg-gradient-to-br from-amber-200 to-amber-300 flex items-center justify-center">
+                  <span className="text-5xl">🏺</span>
+                </div>
+                <div className="p-4 pt-2">
+                  <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Pottery</h3>
+                  <p className="text-xs text-gray-600 line-clamp-2 font-inter">Clay craft traditions across villages</p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Leather Craft */}
+            <Link href="/crafts/leather-craft" className="group">
+              <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl border-2 border-orange-200 hover:border-orange-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-32 overflow-hidden m-3 rounded-xl bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center">
+                  <span className="text-5xl">👞</span>
+                </div>
+                <div className="p-4 pt-2">
+                  <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Leather Craft</h3>
+                  <p className="text-xs text-gray-600 line-clamp-2 font-inter">Traditional leather working & mojari shoes</p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Weaving */}
+            <Link href="/crafts/weaving" className="group">
+              <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl border-2 border-emerald-200 hover:border-emerald-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
+                <div className="relative h-32 overflow-hidden m-3 rounded-xl bg-gradient-to-br from-emerald-200 to-emerald-300 flex items-center justify-center">
+                  <span className="text-5xl">🧵</span>
+                </div>
+                <div className="p-4 pt-2">
+                  <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Weaving</h3>
+                  <p className="text-xs text-gray-600 line-clamp-2 font-inter">Handloom textiles & traditional carpets</p>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        </div>
       </section>
 
       {/* divider */}
@@ -1045,14 +1025,14 @@ export default function Home() {
                 className="mb-12"
               >
                 <div className="mb-6">
-                  <span className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full text-sm font-poppins font-bold tracking-wide shadow-lg shadow-cyan-500/30 border border-cyan-400/30">
+                  <span className="inline-block px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 text-white rounded-full text-sm font-inter font-bold tracking-wide shadow-lg shadow-cyan-500/30 border border-cyan-400/30">
                     ✈️ Plan Your Journey
                   </span>
                 </div>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold mb-6 leading-tight bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 bg-clip-text text-transparent">
                   Travel Essentials
                 </h2>
-                <p className="text-xl text-gray-900 leading-relaxed font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+                <p className="text-xl text-gray-900 leading-relaxed font-inter font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
                   Your complete guide to experiencing Kutch like never before. We've curated everything 
                   you need for an unforgettable desert adventure.
                 </p>
@@ -1075,30 +1055,30 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-3xl md:text-4xl font-sora font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">When to Visit</h3>
-                      <p className="text-sm text-gray-600 font-poppins">Choose your perfect season</p>
+                      <p className="text-sm text-gray-600 font-inter">Choose your perfect season</p>
                     </div>
                   </div>
                   <div className="space-y-4">
                     <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border-2 border-cyan-200/60 hover:border-cyan-400/80 transition-all duration-300 hover:shadow-lg">
                       <div className="flex items-start justify-between mb-2">
-                        <h4 className="font-poppins font-bold text-cyan-900 text-lg">November - February</h4>
+                        <h4 className="font-inter font-bold text-cyan-900 text-lg">November - February</h4>
                         <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs rounded-full font-bold">BEST</span>
                       </div>
-                      <p className="text-sm text-slate-700 font-poppins leading-relaxed">Pleasant weather (10-25°C), world-famous Rann Utsav festival, perfect for desert camping under starlit skies, vibrant cultural performances, and exploring the white salt desert.</p>
+                      <p className="text-sm text-slate-700 font-inter leading-relaxed">Pleasant weather (10-25°C), world-famous Rann Utsav festival, perfect for desert camping under starlit skies, vibrant cultural performances, and exploring the white salt desert.</p>
                     </div>
                     <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border-2 border-indigo-200/60 hover:border-indigo-400/80 transition-all duration-300 hover:shadow-lg">
                       <div className="flex items-start justify-between mb-2">
-                        <h4 className="font-poppins font-bold text-indigo-900 text-lg">March - April</h4>
+                        <h4 className="font-inter font-bold text-indigo-900 text-lg">March - April</h4>
                         <span className="px-3 py-1 bg-gradient-to-r from-indigo-500 to-blue-500 text-white text-xs rounded-full font-bold">GOOD</span>
                       </div>
-                      <p className="text-sm text-slate-700 font-poppins leading-relaxed">Mild temperatures, fewer tourists means better deals, excellent for photography with clear skies, ideal for village visits and craft shopping without crowds.</p>
+                      <p className="text-sm text-slate-700 font-inter leading-relaxed">Mild temperatures, fewer tourists means better deals, excellent for photography with clear skies, ideal for village visits and craft shopping without crowds.</p>
                     </div>
                     <div className="bg-white/80 backdrop-blur-sm p-5 rounded-2xl border-2 border-red-200/60 hover:border-red-400/80 transition-all duration-300 hover:shadow-lg">
                       <div className="flex items-start justify-between mb-2">
-                        <h4 className="font-poppins font-bold text-red-900 text-lg">May - October</h4>
+                        <h4 className="font-inter font-bold text-red-900 text-lg">May - October</h4>
                         <span className="px-3 py-1 bg-gradient-to-r from-red-500 to-orange-500 text-white text-xs rounded-full font-bold">AVOID</span>
                       </div>
-                      <p className="text-sm text-slate-700 font-poppins leading-relaxed">Extremely hot (40-48°C) with scorching desert heat, monsoon brings occasional rains making roads challenging, many tourist facilities remain closed during this off-season.</p>
+                      <p className="text-sm text-slate-700 font-inter leading-relaxed">Extremely hot (40-48°C) with scorching desert heat, monsoon brings occasional rains making roads challenging, many tourist facilities remain closed during this off-season.</p>
                     </div>
                   </div>
                 </motion.div>
@@ -1117,7 +1097,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h3 className="text-3xl md:text-4xl font-sora font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">Getting There</h3>
-                      <p className="text-sm text-gray-600 font-poppins">All routes lead to Kutch</p>
+                      <p className="text-sm text-gray-600 font-inter">All routes lead to Kutch</p>
                     </div>
                   </div>
                   <div className="space-y-4">
@@ -1127,9 +1107,9 @@ export default function Home() {
                           <span className="text-2xl">✈️</span>
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-poppins font-bold text-blue-900 text-lg mb-2">By Air - Fastest Route</h4>
-                          <p className="text-sm text-slate-700 font-poppins leading-relaxed mb-2"><strong>Bhuj Airport (BHJ)</strong> - Direct flights from Mumbai, Ahmedabad, and Bengaluru. Just 60 km (1 hour) from the Great Rann of Kutch.</p>
-                          <p className="text-sm text-slate-700 font-poppins leading-relaxed"><strong>Ahmedabad Airport</strong> - Major international hub, 330 km away. Scenic 5-hour drive through Gujarat's countryside.</p>
+                          <h4 className="font-inter font-bold text-blue-900 text-lg mb-2">By Air - Fastest Route</h4>
+                          <p className="text-sm text-slate-700 font-inter leading-relaxed mb-2"><strong>Bhuj Airport (BHJ)</strong> - Direct flights from Mumbai, Ahmedabad, and Bengaluru. Just 60 km (1 hour) from the Great Rann of Kutch.</p>
+                          <p className="text-sm text-slate-700 font-inter leading-relaxed"><strong>Ahmedabad Airport</strong> - Major international hub, 330 km away. Scenic 5-hour drive through Gujarat's countryside.</p>
                         </div>
                       </div>
                     </div>
@@ -1139,9 +1119,9 @@ export default function Home() {
                           <span className="text-2xl">🚂</span>
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-poppins font-bold text-indigo-900 text-lg mb-2">By Train - Scenic Journey</h4>
-                          <p className="text-sm text-slate-700 font-poppins leading-relaxed mb-2"><strong>Bhuj Railway Station</strong> - Well connected to major cities. Overnight trains from Mumbai, Delhi, and Ahmedabad available.</p>
-                          <p className="text-sm text-slate-700 font-poppins leading-relaxed"><strong>Gandhidham Junction</strong> - Alternative station, 60 km from Bhuj with more train options.</p>
+                          <h4 className="font-inter font-bold text-indigo-900 text-lg mb-2">By Train - Scenic Journey</h4>
+                          <p className="text-sm text-slate-700 font-inter leading-relaxed mb-2"><strong>Bhuj Railway Station</strong> - Well connected to major cities. Overnight trains from Mumbai, Delhi, and Ahmedabad available.</p>
+                          <p className="text-sm text-slate-700 font-inter leading-relaxed"><strong>Gandhidham Junction</strong> - Alternative station, 60 km from Bhuj with more train options.</p>
                         </div>
                       </div>
                     </div>
@@ -1151,8 +1131,8 @@ export default function Home() {
                           <span className="text-2xl">🚗</span>
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-poppins font-bold text-teal-900 text-lg mb-2">By Road - Freedom to Explore</h4>
-                          <p className="text-sm text-slate-700 font-poppins leading-relaxed">Excellent highway network connects Kutch to Ahmedabad (330 km), Rajkot (250 km), and other Gujarat cities. State transport buses, private cabs, and self-drive options available. Road trip recommended for flexibility!</p>
+                          <h4 className="font-inter font-bold text-teal-900 text-lg mb-2">By Road - Freedom to Explore</h4>
+                          <p className="text-sm text-slate-700 font-inter leading-relaxed">Excellent highway network connects Kutch to Ahmedabad (330 km), Rajkot (250 km), and other Gujarat cities. State transport buses, private cabs, and self-drive options available. Road trip recommended for flexibility!</p>
                         </div>
                       </div>
                     </div>
@@ -1171,7 +1151,7 @@ export default function Home() {
             >
               <div className="bg-gradient-to-br from-orange-50/90 via-amber-50/90 to-yellow-50/90 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border-2 border-orange-200/50">
                 <div className="mb-6">
-                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-600 text-white rounded-full text-xs font-poppins font-bold mb-4 shadow-lg shadow-orange-500/30">
+                  <span className="inline-block px-4 py-2 bg-gradient-to-r from-orange-500 to-amber-600 text-white rounded-full text-xs font-inter font-bold mb-4 shadow-lg shadow-orange-500/30">
                     🏨 ACCOMMODATIONS
                   </span>
                   <h3 className="text-3xl md:text-4xl font-sora font-bold bg-gradient-to-r from-orange-600 to-amber-600 bg-clip-text text-transparent mb-2">Where to Stay</h3>
@@ -1187,7 +1167,7 @@ export default function Home() {
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
                       <span className="text-7xl mb-3 group-hover:scale-110 transition-transform duration-300">🏨</span>
                       <h4 className="text-gray-900 font-sora font-bold text-2xl mb-1">Luxury Hotels</h4>
-                      <p className="text-gray-700 font-poppins text-sm font-medium">Premium resorts & 5-star properties</p>
+                      <p className="text-gray-700 font-inter text-sm font-medium">Premium resorts & 5-star properties</p>
                     </div>
                   </div>
                   
@@ -1197,7 +1177,7 @@ export default function Home() {
                       <div className="absolute inset-0 flex flex-col items-center justify-center">
                         <span className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">🏡</span>
                         <h4 className="text-gray-900 font-sora font-bold text-lg">Homestays</h4>
-                        <p className="text-gray-700 font-poppins text-xs font-medium px-2 text-center">Authentic village life</p>
+                        <p className="text-gray-700 font-inter text-xs font-medium px-2 text-center">Authentic village life</p>
                       </div>
                     </div>
                     
@@ -1206,7 +1186,7 @@ export default function Home() {
                       <div className="absolute inset-0 flex flex-col items-center justify-center">
                         <span className="text-5xl mb-2 group-hover:scale-110 transition-transform duration-300">⛺</span>
                         <h4 className="text-gray-900 font-sora font-bold text-lg">Desert Camps</h4>
-                        <p className="text-gray-700 font-poppins text-xs font-medium px-2 text-center">Glamping under stars</p>
+                        <p className="text-gray-700 font-inter text-xs font-medium px-2 text-center">Glamping under stars</p>
                       </div>
                     </div>
                   </div>
@@ -1216,7 +1196,7 @@ export default function Home() {
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
                       <span className="text-7xl mb-3 group-hover:scale-110 transition-transform duration-300">🏰</span>
                       <h4 className="text-gray-900 font-sora font-bold text-2xl mb-1">Heritage Stays</h4>
-                      <p className="text-gray-700 font-poppins text-sm font-medium">Royal palaces & historic havelis</p>
+                      <p className="text-gray-700 font-inter text-sm font-medium">Royal palaces & historic havelis</p>
                     </div>
                   </div>
                 </div>
@@ -1225,14 +1205,14 @@ export default function Home() {
                   <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 border-2 border-orange-200/60">
                     <div className="flex items-center gap-3 mb-2">
                       <span className="text-2xl">💰</span>
-                      <h4 className="font-poppins font-bold text-orange-900">Budget Options</h4>
+                      <h4 className="font-inter font-bold text-orange-900">Budget Options</h4>
                     </div>
-                    <p className="text-xs text-gray-700 font-poppins">Starting from ₹800/night - Guesthouses, hostels, and budget hotels available in Bhuj and surrounding villages.</p>
+                    <p className="text-xs text-gray-700 font-inter">Starting from ₹800/night - Guesthouses, hostels, and budget hotels available in Bhuj and surrounding villages.</p>
                   </div>
                   
                   <Link 
                     href="/bookings"
-                    className="block w-full text-center bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 hover:from-orange-600 hover:via-amber-600 hover:to-yellow-600 text-white px-6 py-4 rounded-2xl font-poppins font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl shadow-orange-500/30"
+                    className="block w-full text-center bg-gradient-to-r from-orange-500 via-amber-500 to-yellow-500 hover:from-orange-600 hover:via-amber-600 hover:to-yellow-600 text-white px-6 py-4 rounded-2xl font-inter font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl shadow-orange-500/30"
                   >
                     <span className="flex items-center justify-center gap-2">
                       <span>Explore All Stays</span>
@@ -1258,7 +1238,7 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-3xl md:text-4xl font-sora font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">Packing Essentials</h3>
-                <p className="text-base text-gray-600 font-poppins">Travel smart, travel light</p>
+                <p className="text-base text-gray-600 font-inter">Travel smart, travel light</p>
               </div>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
@@ -1266,8 +1246,8 @@ export default function Home() {
                 <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300">👕</span>
                   <div>
-                    <h4 className="font-poppins font-bold text-cyan-900 mb-1 text-base">Clothing</h4>
-                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">Light cotton clothes, warm layers for nights</p>
+                    <h4 className="font-inter font-bold text-cyan-900 mb-1 text-base">Clothing</h4>
+                    <p className="text-xs text-slate-700 font-inter leading-relaxed">Light cotton clothes, warm layers for nights</p>
                   </div>
                 </div>
               </div>
@@ -1275,8 +1255,8 @@ export default function Home() {
                 <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300">👟</span>
                   <div>
-                    <h4 className="font-poppins font-bold text-indigo-900 mb-1 text-base">Footwear</h4>
-                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">Walking shoes, sandals, socks for salt flats</p>
+                    <h4 className="font-inter font-bold text-indigo-900 mb-1 text-base">Footwear</h4>
+                    <p className="text-xs text-slate-700 font-inter leading-relaxed">Walking shoes, sandals, socks for salt flats</p>
                   </div>
                 </div>
               </div>
@@ -1284,8 +1264,8 @@ export default function Home() {
                 <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300">☀️</span>
                   <div>
-                    <h4 className="font-poppins font-bold text-blue-900 mb-1 text-base">Sun Protection</h4>
-                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">SPF sunscreen, sunglasses, hat, lip balm</p>
+                    <h4 className="font-inter font-bold text-blue-900 mb-1 text-base">Sun Protection</h4>
+                    <p className="text-xs text-slate-700 font-inter leading-relaxed">SPF sunscreen, sunglasses, hat, lip balm</p>
                   </div>
                 </div>
               </div>
@@ -1293,8 +1273,8 @@ export default function Home() {
                 <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300">📸</span>
                   <div>
-                    <h4 className="font-poppins font-bold text-cyan-900 mb-1 text-base">Photography Gear</h4>
-                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">Camera, batteries, power bank, memory cards</p>
+                    <h4 className="font-inter font-bold text-cyan-900 mb-1 text-base">Photography Gear</h4>
+                    <p className="text-xs text-slate-700 font-inter leading-relaxed">Camera, batteries, power bank, memory cards</p>
                   </div>
                 </div>
               </div>
@@ -1302,8 +1282,8 @@ export default function Home() {
                 <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300">💧</span>
                   <div>
-                    <h4 className="font-poppins font-bold text-teal-900 mb-1 text-base">Hydration & Snacks</h4>
-                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">Water bottle, dry fruits, energy bars</p>
+                    <h4 className="font-inter font-bold text-teal-900 mb-1 text-base">Hydration & Snacks</h4>
+                    <p className="text-xs text-slate-700 font-inter leading-relaxed">Water bottle, dry fruits, energy bars</p>
                   </div>
                 </div>
               </div>
@@ -1311,8 +1291,8 @@ export default function Home() {
                 <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300">💊</span>
                   <div>
-                    <h4 className="font-poppins font-bold text-sky-900 mb-1 text-base">Medical Essentials</h4>
-                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">First aid kit, medicines, antiseptic</p>
+                    <h4 className="font-inter font-bold text-sky-900 mb-1 text-base">Medical Essentials</h4>
+                    <p className="text-xs text-slate-700 font-inter leading-relaxed">First aid kit, medicines, antiseptic</p>
                   </div>
                 </div>
               </div>
@@ -1320,8 +1300,8 @@ export default function Home() {
                 <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300">🔦</span>
                   <div>
-                    <h4 className="font-poppins font-bold text-blue-900 mb-1 text-base">Night Essentials</h4>
-                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">Flashlight, warm jacket, mosquito repellent</p>
+                    <h4 className="font-inter font-bold text-blue-900 mb-1 text-base">Night Essentials</h4>
+                    <p className="text-xs text-slate-700 font-inter leading-relaxed">Flashlight, warm jacket, mosquito repellent</p>
                   </div>
                 </div>
               </div>
@@ -1329,8 +1309,8 @@ export default function Home() {
                 <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
                   <span className="text-4xl group-hover:scale-110 transition-transform duration-300">📱</span>
                   <div>
-                    <h4 className="font-poppins font-bold text-teal-900 mb-1 text-base">Documents & Tech</h4>
-                    <p className="text-xs text-slate-700 font-poppins leading-relaxed">ID proof, bookings, offline maps, chargers</p>
+                    <h4 className="font-inter font-bold text-teal-900 mb-1 text-base">Documents & Tech</h4>
+                    <p className="text-xs text-slate-700 font-inter leading-relaxed">ID proof, bookings, offline maps, chargers</p>
                   </div>
                 </div>
               </div>
@@ -1346,7 +1326,7 @@ export default function Home() {
             className="group bg-gradient-to-br from-emerald-50/80 via-teal-50/80 to-cyan-50/80 backdrop-blur-xl rounded-3xl p-12 shadow-2xl mb-16 border-2 border-emerald-200/50 hover:border-emerald-300/70 hover:shadow-3xl transition-all duration-500"
           >
             <div className="text-center mb-10">
-              <span className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-full text-sm font-poppins font-bold tracking-wide mb-6 shadow-lg shadow-emerald-500/30 border border-emerald-400/30">
+              <span className="inline-block px-6 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white rounded-full text-sm font-inter font-bold tracking-wide mb-6 shadow-lg shadow-emerald-500/30 border border-emerald-400/30">
                 🛡️ TRAVEL SAFELY
               </span>
               <h3 className="text-3xl md:text-4xl font-sora font-bold bg-gradient-to-r from-emerald-600 via-teal-600 to-cyan-600 bg-clip-text text-transparent mb-4">Safety & Important Tips</h3>
@@ -1360,29 +1340,29 @@ export default function Home() {
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-100 to-teal-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-emerald-300 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-4xl">🌡️</span>
                 </div>
-                <h4 className="font-poppins font-bold mb-3 text-emerald-900 text-lg">Weather Check</h4>
-                <p className="text-sm text-slate-700 font-poppins leading-relaxed">Monitor weather conditions daily, especially during monsoon season for safe travel</p>
+                <h4 className="font-inter font-bold mb-3 text-emerald-900 text-lg">Weather Check</h4>
+                <p className="text-sm text-slate-700 font-inter leading-relaxed">Monitor weather conditions daily, especially during monsoon season for safe travel</p>
               </div>
               <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center border-2 border-teal-200/60 hover:border-teal-400/80 transition-all duration-300 hover:shadow-xl">
                 <div className="w-16 h-16 bg-gradient-to-br from-teal-100 to-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-teal-300 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-4xl">📱</span>
                 </div>
-                <h4 className="font-poppins font-bold mb-3 text-teal-900 text-lg">Stay Connected</h4>
-                <p className="text-sm text-slate-700 font-poppins leading-relaxed">Keep emergency contacts handy, local network coverage may be limited in remote areas</p>
+                <h4 className="font-inter font-bold mb-3 text-teal-900 text-lg">Stay Connected</h4>
+                <p className="text-sm text-slate-700 font-inter leading-relaxed">Keep emergency contacts handy, local network coverage may be limited in remote areas</p>
               </div>
               <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center border-2 border-cyan-200/60 hover:border-cyan-400/80 transition-all duration-300 hover:shadow-xl">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-cyan-300 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-4xl">💧</span>
                 </div>
-                <h4 className="font-poppins font-bold mb-3 text-cyan-900 text-lg">Stay Hydrated</h4>
-                <p className="text-sm text-slate-700 font-poppins leading-relaxed">Carry plenty of water bottles, desert climate can be extremely dehydrating in hot weather</p>
+                <h4 className="font-inter font-bold mb-3 text-cyan-900 text-lg">Stay Hydrated</h4>
+                <p className="text-sm text-slate-700 font-inter leading-relaxed">Carry plenty of water bottles, desert climate can be extremely dehydrating in hot weather</p>
               </div>
               <div className="group bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center border-2 border-blue-200/60 hover:border-blue-400/80 transition-all duration-300 hover:shadow-xl">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-2xl flex items-center justify-center mx-auto mb-4 border-2 border-blue-300 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-4xl">🗺️</span>
                 </div>
-                <h4 className="font-poppins font-bold mb-3 text-blue-900 text-lg">Local Guide</h4>
-                <p className="text-sm text-slate-700 font-poppins leading-relaxed">Consider hiring experienced local guides for remote areas and authentic village experiences</p>
+                <h4 className="font-inter font-bold mb-3 text-blue-900 text-lg">Local Guide</h4>
+                <p className="text-sm text-slate-700 font-inter leading-relaxed">Consider hiring experienced local guides for remote areas and authentic village experiences</p>
               </div>
             </div>
           </motion.div>
@@ -1397,21 +1377,21 @@ export default function Home() {
           >
             <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/20">
               <h3 className="text-3xl md:text-4xl font-sora font-bold text-gray-900 mb-4">Need Personalized Guidance?</h3>
-              <p className="text-slate-800 font-poppins mb-8 max-w-2xl mx-auto">
+              <p className="text-slate-800 font-inter mb-8 max-w-2xl mx-auto">
                 Get customized itineraries, local insights, and 24/7 support for your Kutch journey. 
                 Our local experts are here to help plan your perfect adventure.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/about"
-                  className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-poppins font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl shadow-cyan-500/30 flex items-center gap-2"
+                  className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white px-8 py-4 rounded-full font-inter font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl shadow-cyan-500/30 flex items-center gap-2"
                 >
                   <span>📞</span>
                   <span>Contact Our Experts</span>
                 </Link>
                 <Link
                   href="/destinations"
-                  className="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-700 hover:via-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-full font-poppins font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl shadow-blue-500/30 flex items-center gap-2"
+                  className="bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 hover:from-cyan-700 hover:via-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-full font-inter font-bold text-lg transition-all duration-300 hover:scale-105 shadow-xl shadow-blue-500/30 flex items-center gap-2"
                 >
                   <span>🗺️</span>
                   <span>Explore Destinations</span>
@@ -1439,10 +1419,16 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
+            <div className="mb-6 inline-block">
+              <span className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-700 text-white rounded-full text-sm font-inter font-semibold tracking-wide shadow-lg shadow-green-500/30">
+                <span>💬</span>
+                <span>Join Our Community</span>
+              </span>
+            </div>
             <h2 className="text-3xl md:text-4xl font-sora font-extrabold mb-6 holographic">
               Stay Connected
             </h2>
-            <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-poppins font-light">
+            <p className="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed font-inter font-medium">
               Join our community of Kutch explorers! Get exclusive updates on Rann Utsav, discover hidden gems, 
               and receive insider tips that will transform your journey through this magical desert land.
             </p>
@@ -1457,27 +1443,27 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
-                <h3 className="text-3xl font-sora font-bold text-gray-900 mb-6 flex items-center gap-3">
+              <div className="bg-white/80 backdrop-blur-md rounded-3xl p-8 border-2 border-cyan-200 shadow-lg">
+                <h3 className="text-2xl font-sora font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-6 flex items-center gap-3">
                   <span className="text-4xl">🌟</span>
                   What You'll Get
                 </h3>
-                <ul className="space-y-4 text-lg text-slate-800 font-poppins">
-                  <li className="flex items-start gap-3">
-                    <span className="text-gray-800 text-xl">✨</span>
-                    <span>Exclusive Rann Utsav festival updates and early bird offers</span>
+                <ul className="space-y-4 text-base text-gray-700 font-inter">
+                  <li className="flex items-start gap-4 p-3 bg-cyan-50 rounded-xl border border-cyan-100">
+                    <span className="text-cyan-600 text-2xl flex-shrink-0">✨</span>
+                    <span className="font-medium">Exclusive Rann Utsav festival updates and early bird offers</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-gray-800 text-xl">📸</span>
-                    <span>Stunning photo collections from hidden corners of Kutch</span>
+                  <li className="flex items-start gap-4 p-3 bg-blue-50 rounded-xl border border-blue-100">
+                    <span className="text-blue-600 text-2xl flex-shrink-0">📸</span>
+                    <span className="font-medium">Stunning photo collections from hidden corners of Kutch</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-gray-800 text-xl">🗺️</span>
-                    <span>Local insider tips and off-the-beaten-path recommendations</span>
+                  <li className="flex items-start gap-4 p-3 bg-teal-50 rounded-xl border border-teal-100">
+                    <span className="text-teal-600 text-2xl flex-shrink-0">🗺️</span>
+                    <span className="font-medium">Local insider tips and off-the-beaten-path recommendations</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-gray-800 text-xl">🎯</span>
-                    <span>Personalized travel guides and itinerary suggestions</span>
+                  <li className="flex items-start gap-4 p-3 bg-sky-50 rounded-xl border border-sky-100">
+                    <span className="text-sky-600 text-2xl flex-shrink-0">🎯</span>
+                    <span className="font-medium">Personalized travel guides and itinerary suggestions</span>
                   </li>
                 </ul>
               </div>
@@ -1488,21 +1474,23 @@ export default function Home() {
                   href="https://wa.me/919825034580"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-gray-900 px-8 py-4 rounded-2xl font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="group relative flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:via-emerald-600 hover:to-green-700 text-white px-6 py-4 rounded-2xl font-bold text-base shadow-xl shadow-green-500/40 hover:shadow-2xl hover:shadow-green-500/50 transition-all duration-300 overflow-hidden"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <span className="text-2xl">💬</span>
-                  Join WhatsApp Community
+                  <span className="text-xl">💬</span>
+                  <span className="relative z-10 whitespace-nowrap">Join Community</span>
+                  <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
                 </motion.a>
 
                 <motion.a
                   href="/about"
-                  className="flex items-center justify-center gap-3 bg-white/20 hover:bg-white/30 backdrop-blur-md text-gray-900 px-8 py-4 rounded-2xl font-bold text-lg border border-white/30 hover:border-white/50 transition-all duration-300"
+                  className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-6 py-4 rounded-2xl font-bold text-base border-2 border-white/20 shadow-lg shadow-cyan-500/30 hover:shadow-xl transition-all duration-300"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <span className="text-2xl">🎯</span>
+                  <span className="text-xl">🎯</span>
                   Plan Your Journey
                 </motion.a>
               </div>
@@ -1516,11 +1504,11 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+              <div className="bg-white/80 backdrop-blur-md rounded-3xl p-6 border-2 border-blue-200 shadow-lg">
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-6 text-center font-sora">
                   Explore the Magic of Kutch
                 </h3>
-                <div className="w-full h-80 rounded-2xl overflow-hidden border border-white/30 shadow-2xl">
+                <div className="w-full h-80 rounded-2xl overflow-hidden border-2 border-cyan-200 shadow-xl">
                   <iframe
                     title="Kutch Interactive Map"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d946493.0711048405!2d68.4!3d23.2!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950c4976e1d8b25%3A0x76e2f6be5b8c8a86!2sKutch%20District%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1735228800000!5m2!1sen!2sin"
@@ -1531,7 +1519,7 @@ export default function Home() {
                     className="border-0"
                   />
                 </div>
-                <p className="text-gray-100/80 text-center mt-4 text-sm">
+                <p className="text-gray-600 text-center mt-4 text-sm font-inter font-medium">
                   From the White Desert to ancient ports, discover your perfect Kutch adventure
                 </p>
               </div>
@@ -1567,7 +1555,7 @@ export default function Home() {
                   <h3 className="text-5xl md:text-6xl font-sora font-extrabold holographic drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)] mb-6">
                     Travel Kutch
                   </h3>
-                  <p className="text-xl text-gray-700 leading-relaxed mb-8 font-poppins">
+                  <p className="text-xl text-gray-700 leading-relaxed mb-8 font-inter">
                     Your gateway to the mystical land of Kutch — from the ethereal White Desert to ancient heritage sites. 
                     Discover authentic crafts, vibrant festivals, and the timeless stories that define Gujarat's cultural crown jewel.
                   </p>
@@ -1599,7 +1587,7 @@ export default function Home() {
                 className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white shadow-lg"
               >
                 <h4 className="text-2xl font-sora font-bold bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent mb-6">Explore</h4>
-                <ul className="space-y-3 font-poppins">
+                <ul className="space-y-3 font-inter">
                   {[
                     { name: "Home", href: "#home", icon: "🏠" },
                     { name: "Destinations", href: "/destinations", icon: "🗺️" },
@@ -1629,7 +1617,7 @@ export default function Home() {
                 className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white shadow-lg"
               >
                 <h4 className="text-2xl font-sora font-bold bg-gradient-to-r from-cyan-600 to-orange-600 bg-clip-text text-transparent mb-6">Connect</h4>
-                <div className="space-y-5 font-poppins">
+                <div className="space-y-5 font-inter">
                   <div className="flex items-start gap-3 text-gray-700">
                     <span className="text-2xl mt-1">📍</span>
                     <div>
@@ -1890,23 +1878,3 @@ export default function Home() {
     </main>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
