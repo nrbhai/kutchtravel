@@ -71,8 +71,10 @@ export const mandvi: Destination = {
         "<b><a href='/places/kashi-vishwanath' class='text-blue-400 hover:text-blue-300'>Kashi Vishwanath Temple & Beach:</a></b> 5km - Serene secluded beach with Shiv temple nearby",
         "<b><a href='/places/vijay-vilas-palace' class='text-blue-400 hover:text-blue-300'>Vijay Vilas Palace:</a></b> 8km - Royal palace with private beach and stunning architecture",
         "<b><a href='/places/asar-mata' class='text-blue-400 hover:text-blue-300'>Asar Mata Temple & Beach:</a></b> 10-12km - Serene and secluded temple site with peaceful beach",
-        "<b><a href='/places/ravalpir' class='text-blue-400 hover:text-blue-300'>Ravalpir Temple & Beach:</a></b> 15km - Sacred temple rebuilt in 1819 with clean beach nearby",
-        "<b><a href='/places/shyamji-krishnavarma' class='text-blue-400 hover:text-blue-300'>Shyamji Krishnavarma Memorial:</a></b> 3km - Kranti Tirth dedicated to the freedom fighter and scholar"
+        "<b>72 Jinalaya:</b> 2km - Beautiful Jain temple complex with intricate architecture",
+        "<b>Maska:</b> 25km - Coastal village with traditional crafts and local culture",
+        "<b><a href='/places/shyamji-krishnavarma' class='text-blue-400 hover:text-blue-300'>Shyamji Krishnavarma Memorial:</a></b> 3km - Kranti Tirth dedicated to the freedom fighter and scholar",
+        "<b><a href='/places/ravalpir' class='text-blue-400 hover:text-blue-300'>Ravalpir Temple & Beach:</a></b> 15km - Sacred temple rebuilt in 1819 with clean beach nearby"
       ],
       image: {
         src: "/images/mandvi/nearby.jpg",

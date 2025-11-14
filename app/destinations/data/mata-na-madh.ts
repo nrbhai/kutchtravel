@@ -65,11 +65,11 @@ export const mataNaMadh: Destination = {
       color: "#fff0f5",
       border: "border-l-4 border-gray-500 text-gray-700",
       list: [
-        "<b>Bhuj:</b> 50km - Cultural capital of Kutch",
-        "<b>Anjar:</b> 30km - Ancient town with temples",
-        "<b>Gandhidham:</b: 40km - Modern commercial city",
-        "<b>White Rann:</b> 80km - Famous salt desert",
-        "<b>Mandvi:</b> 70km - Coastal town with beaches"
+        "<b>Narayan Sarovar:</b> 45km - Sacred lake and temple",
+        "<b>Koteshwar:</b> 50km - Ancient Shiva temple by the sea",
+        "<b>Jakhau:</b> 60km - Coastal town and fishing harbor",
+        "<b>Lakhpat:</b> 70km - Historic fort and gurudwara",
+        "<b>Bhuj:</b> 130km - Cultural capital of Kutch"
       ],
       image: {
         src: "/images/mata-na-madh/nearby.jpg",
