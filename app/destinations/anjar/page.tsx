@@ -15,6 +15,7 @@ export default function Anjar() {
               <SectionCard
                 key={idx}
                 title={s.heading}
+                image={s.image}
               >
                 {s.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: s.content }} />}
                 {s.list && (

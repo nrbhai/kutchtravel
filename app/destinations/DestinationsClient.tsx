@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Navigation from '../components/Navigation';
 import { DESTINATIONS } from '@/app/destinations/data';
-import type { Destination } from '@/app/destinations/data';
+import type { Destination } from './data/index';
 
 // Animation variants
 const containerVariants = {
@@ -97,8 +97,10 @@ function DestinationsClient() {
   const [isLoading, setIsLoading] = useState(true);
 
   // Get unique categories
-  const categories = ['All', ...Array.from(new Set(DESTINATIONS.map(dest => 
-    dest.sections.find(section => section.heading === 'Category')?.content || 'Other'
+  const categories = ['All', ...Array.from(new Set(DESTINATIONS.map((dest: Destination) => 
+    Array.isArray(dest.sections)
+      ? dest.sections.find((section: { heading: string; content?: string }) => section.heading === 'Category')?.content || 'Other'
+      : 'Other'
   )))];
 
   // Filter destinations based on category and search term
@@ -106,22 +108,22 @@ function DestinationsClient() {
     let filtered = DESTINATIONS;
 
     if (category !== 'All') {
-      filtered = filtered.filter(dest => 
-        dest.sections.some(section => 
+      filtered = filtered.filter((dest: Destination) =>
+        Array.isArray(dest.sections) && dest.sections.some((section: { heading: string; content?: string }) =>
           section.heading === 'Category' && section.content === category
         )
       );
     }
 
     if (search) {
-      filtered = filtered.filter(dest =>
+      filtered = filtered.filter((dest: Destination) =>
         dest.title.toLowerCase().includes(search.toLowerCase()) ||
-        dest.sections.some(section => 
+        (Array.isArray(dest.sections) && dest.sections.some((section: { content?: string; list?: string[] }) =>
           section.content?.toLowerCase().includes(search.toLowerCase()) ||
-          section.list?.some(item => 
+          (Array.isArray(section.list) && section.list.some((item: string) =>
             item.toLowerCase().includes(search.toLowerCase())
-          )
-        )
+          ))
+        ))
       );
     }
 
@@ -398,7 +400,9 @@ function DestinationsClient() {
                         {/* Floating Category Tag */}
                         <div className="absolute top-2 right-2">
                           <span className={`backdrop-blur-sm border px-3 py-1 rounded-lg text-xs font-bold font-inter shadow-md ${colors.tag}`}>
-                            {destination.sections.find(s => s.heading === 'Category')?.content || 'Explore'}
+                            {(Array.isArray(destination.sections)
+                              ? destination.sections.find((s: { heading: string; content?: string }) => s.heading === 'Category')?.content
+                              : undefined) || 'Explore'}
                           </span>
                         </div>
                       </div>
