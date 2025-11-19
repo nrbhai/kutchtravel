@@ -68,83 +68,62 @@ export default function HiddenGemsKutchPage() {
               While the White Rann and Bhuj attract most tourists, Kutch has numerous hidden gems that offer equally breathtaking experiences without the crowds.
             </p>
 
-            {/* Hidden Gem 1 */}
+
+            {/* Hidden Gem 1: Kotay Sun Temple */}
             <div className="mb-10">
               <h2 className="text-3xl font-bold mb-4 text-gray-900 flex items-center gap-3">
                 <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold">1</span>
-                Chhari Dhand Wetland
+                Kotay Sun Temple
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                This seasonal wetland becomes a paradise for migratory birds during winter. Flamingos, pelicans, and countless other species make this their temporary home. The sight of thousands of flamingos against the backdrop of the desert is unforgettable.
+                Just an hour north of Bhuj, the Sun Temple of Kotay (also known as Ra Lakha) dates back to the 9th century CE. Built of yellow and red sandstone, this little-known temple stands on a platform facing west, surrounded by the desert plains of Kutch. The temple is adorned with intricate carvings, including the Navagrahas (nine planets) on the lintel, yaksha guardians on the pillars, and a jali (stone screen) window topped with a statue of Surya. The garbhagriha (sanctum) contains a plaque flanked by an image of Surya, though some scholars believe the temple may also be dedicated to Shiva. The site is peaceful, unguarded, and best visited with a local guide. The northern facade is the best preserved, featuring deities, apsaras, and mythological animals like yalis. 
               </p>
-
               <div className="relative h-80 rounded-2xl overflow-hidden my-6 bg-gradient-to-br from-blue-100 to-cyan-100">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Camera className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                    <p className="text-gray-500 font-semibold">Chhari Dhand Flamingos</p>
-                    <p className="text-sm text-gray-400">Image: Flamingos at wetland</p>
-                  </div>
-                </div>
+                <img src="/images/destinations/kotay-temple/kotay-sun-temple.jpg" alt="Kotay Sun Temple" className="object-cover w-full h-full" />
               </div>
-
               <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">
-                <h4 className="font-bold text-gray-900 mb-2">🦩 Best Time to Visit</h4>
-                <p className="text-gray-700">November to February when migratory birds arrive. Early morning offers the best light for photography.</p>
+                <h4 className="font-bold text-gray-900 mb-2">🛕 Visitor Info</h4>
+                <p className="text-gray-700">Kotay is about 25–40 km from Bhuj. The site is not well marked, so hire a local guide or taxi. There are no facilities at the temple—carry water and visit in the morning or late afternoon for the best experience.</p>
               </div>
             </div>
 
-            {/* Hidden Gem 2 */}
+
+            {/* Hidden Gem 2: Kadia Dhrow */}
             <div className="mb-10">
               <h2 className="text-3xl font-bold mb-4 text-gray-900 flex items-center gap-3">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold">2</span>
-                Koteshwar Temple
+                Kadia Dhrow Canyons
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Located at the westernmost point of India, this ancient Shiva temple sits right on the Arabian Sea coast. The dramatic coastline, the spiritual atmosphere, and the fact that you're standing at India's edge make this a profound experience.
+                Kadia Dhrow is a dramatic landscape of colorful canyons and rock formations, often called the "Grand Canyon of Kutch." It’s a paradise for photographers, geology enthusiasts, and anyone seeking a surreal, otherworldly experience.
               </p>
-
               <div className="relative h-80 rounded-2xl overflow-hidden my-6 bg-gradient-to-br from-purple-100 to-pink-100">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                    <p className="text-gray-500 font-semibold">Koteshwar Temple</p>
-                    <p className="text-sm text-gray-400">Image: Temple at sunset</p>
-                  </div>
-                </div>
+                <img src="/images/destinations/kadia-dhrow/kadia-dhrow-canyon.jpg" alt="Kadia Dhrow Canyon" className="object-cover w-full h-full" />
               </div>
-
               <div className="bg-purple-50 rounded-xl p-5 border border-purple-100">
-                <h4 className="font-bold text-gray-900 mb-2">🕉️ Spiritual Tip</h4>
-                <p className="text-gray-700">Visit during Mahashivratri for special celebrations. Dress modestly and respect temple customs.</p>
+                <h4 className="font-bold text-gray-900 mb-2">🪨 Geology Tip</h4>
+                <p className="text-gray-700">Best visited in the golden hours for stunning light and colors. Wear sturdy shoes for exploring the rocky terrain.</p>
               </div>
             </div>
-
-            {/* Hidden Gem 3 */}
+            {/* Hidden Gem 3: Bhujodi Village */}
             <div className="mb-10">
               <h2 className="text-3xl font-bold mb-4 text-gray-900 flex items-center gap-3">
-                <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold">3</span>
-                Fulay Island
+                <span className="bg-gradient-to-r from-orange-500 to-yellow-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold">3</span>
+                Bhujodi Village
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                Accessible during low tide, this small island near Mandvi offers pristine beaches and complete tranquility. It's perfect for a peaceful day trip with swimming and beachcombing.
+                Just 8 km southeast of Bhuj, Bhujodi is a vibrant artisan village renowned for its handwoven textiles and traditional crafts. Home to the Vankar community of weavers, the village offers visitors a chance to see artisans at work on their looms, shop for authentic shawls, stoles, and carpets, and learn about the region’s rich textile heritage. The Hiralaxmi Craft Park in Bhujodi is a must-visit for those interested in Kutch’s living traditions.
               </p>
-
               <div className="relative h-80 rounded-2xl overflow-hidden my-6 bg-gradient-to-br from-orange-100 to-yellow-100">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Camera className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                    <p className="text-gray-500 font-semibold">Fulay Island Beach</p>
-                    <p className="text-sm text-gray-400">Image: Pristine beach view</p>
-                  </div>
-                </div>
+                <img src="/images/destinations/bhujodi/bhujodi-weaving.jpg" alt="Bhujodi Weaving" className="object-cover w-full h-full" />
               </div>
-
               <div className="bg-orange-50 rounded-xl p-5 border border-orange-100">
-                <h4 className="font-bold text-gray-900 mb-2">🌊 Access Tip</h4>
-                <p className="text-gray-700">Check tide timings before visiting. Hire a local guide or boat from Mandvi. Carry water and snacks.</p>
+                <h4 className="font-bold text-gray-900 mb-2">🧶 Craft Tip</h4>
+                <p className="text-gray-700">Visit the village workshops and the Hiralaxmi Craft Park for demonstrations. Support local artisans by purchasing directly from them.</p>
               </div>
             </div>
+
+
 
             {/* Hidden Gem 4 */}
             <div className="mb-10">
@@ -172,29 +151,26 @@ export default function HiddenGemsKutchPage() {
               </div>
             </div>
 
-            {/* Hidden Gem 5 */}
+            {/* Hidden Gem 5: Koteshwar & Narayan Sarovar */}
             <div className="mb-10">
               <h2 className="text-3xl font-bold mb-4 text-gray-900 flex items-center gap-3">
                 <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-bold">5</span>
-                Narayan Sarovar
+                Koteshwar & Narayan Sarovar
               </h2>
               <p className="text-gray-700 leading-relaxed mb-6">
-                One of Hinduism's five sacred lakes, Narayan Sarovar is a spiritual and scenic destination. The lake is surrounded by temples and offers a peaceful retreat from busy tourist spots.
+                At the westernmost tip of India, Koteshwar Temple and Narayan Sarovar form a unique spiritual and scenic duo. Koteshwar is an ancient Shiva temple perched on the Arabian Sea, offering dramatic coastal views and a tranquil, sacred atmosphere. Just a few kilometers away, Narayan Sarovar is one of Hinduism’s five holy lakes, surrounded by temples and revered for its serenity. Visiting both sites together provides a blend of spiritual experience, history, and natural beauty—perfect for reflection and photography.
               </p>
-
-              <div className="relative h-80 rounded-2xl overflow-hidden my-6 bg-gradient-to-br from-indigo-100 to-purple-100">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                    <p className="text-gray-500 font-semibold">Narayan Sarovar</p>
-                    <p className="text-sm text-gray-400">Image: Sacred lake view</p>
-                  </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
+                <div className="relative h-64 rounded-2xl overflow-hidden bg-gradient-to-br from-indigo-100 to-purple-100">
+                  <img src="/images/destinations/koteshwar/koteshwar-temple.jpg" alt="Koteshwar Temple" className="object-cover w-full h-full" />
+                </div>
+                <div className="relative h-64 rounded-2xl overflow-hidden bg-gradient-to-br from-blue-100 to-purple-100">
+                  <img src="/images/destinations/narayan-sarovar-koteshwar/narayan-sarovar.jpg" alt="Narayan Sarovar" className="object-cover w-full h-full" />
                 </div>
               </div>
-
               <div className="bg-indigo-50 rounded-xl p-5 border border-indigo-100">
-                <h4 className="font-bold text-gray-900 mb-2">🙏 Visit Note</h4>
-                <p className="text-gray-700">Sacred site for Hindus. Combine with Koteshwar Temple visit as they're nearby.</p>
+                <h4 className="font-bold text-gray-900 mb-2">🛕 Travel Tip</h4>
+                <p className="text-gray-700">Plan to visit both Koteshwar and Narayan Sarovar together. Sunset at Koteshwar is especially beautiful, and the peaceful lake at Narayan Sarovar is ideal for quiet reflection. Facilities are limited, so carry essentials.</p>
               </div>
             </div>
 

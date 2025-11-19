@@ -1,379 +1,138 @@
-'use client';
 
-import { motion } from 'framer-motion';
+
 import Link from 'next/link';
-import { Calendar, Clock, User, ArrowLeft, Tag, Camera, Music, Tent, ShoppingBag } from 'lucide-react';
-import Navigation from '../../components/Navigation';
+import { Calendar, MapPin, Star, Moon, Gift, Sun, Music, ShoppingBag, Tent, Plane, Camera, Sparkles, Heart, Flag } from 'lucide-react';
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-};
 
-export default function RannUtsav2025GuidePage() {
-  return (
-    <main className="min-h-screen bg-gradient-to-br from-orange-50 via-pink-50 to-purple-50">
-      <Navigation />
-      
-      <article className="max-w-4xl mx-auto px-6 py-24">
-        <motion.div initial="hidden" animate="visible" variants={fadeUp}>
-          <Link href="/blog" className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 mb-6 transition-colors font-semibold">
-            <ArrowLeft className="w-5 h-5" />
-            Back to Blog
-          </Link>
+export default function Page() {
+	return (
+		<main className="min-h-screen bg-gradient-to-br from-orange-100 via-pink-100 to-purple-100 py-10">
+			<div className="max-w-3xl mx-auto">
+				{/* Hero Image */}
+				<div className="relative mb-8 rounded-3xl overflow-hidden shadow-2xl">
+					<img
+						src="/images/blog-images/white-rann-hero.jpg"
+						alt="Rann Utsav White Rann Hero"
+						className="w-full h-72 md:h-96 object-cover object-center"
+						style={{ filter: 'brightness(0.92) saturate(1.1)' }}
+					/>
+					<div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+					<div className="absolute bottom-0 left-0 p-6 md:p-10">
+						<h1 className="text-3xl md:text-5xl font-extrabold text-white drop-shadow-lg mb-2">Rann Utsav 2025-2026</h1>
+						<p className="text-lg md:text-2xl text-white/90 font-medium mb-2">The Ultimate Festival Guide</p>
+						<div className="flex flex-wrap gap-3 items-center">
+							<span className="inline-flex items-center gap-2 bg-white/90 rounded-full px-4 py-2 shadow text-base font-semibold text-pink-700">
+								<Calendar className="w-5 h-5 text-pink-600" /> Oct 23, 2025 – Mar 4, 2026
+							</span>
+							<span className="inline-flex items-center gap-2 bg-white/80 rounded-full px-4 py-2 shadow text-base font-semibold text-indigo-700">
+								<MapPin className="w-5 h-5 text-indigo-600" /> Dhordo, Kutch
+							</span>
+						</div>
+					</div>
+					<Link href="/blog" className="absolute top-4 left-4 bg-white/80 hover:bg-white/100 text-pink-700 font-semibold px-4 py-2 rounded-full shadow flex items-center gap-2">
+						<svg width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7" /></svg>
+						Back to Blog
+					</Link>
+				</div>
 
-          <div className="mb-6">
-            <span className="inline-block px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full text-sm font-bold text-white">
-              Events
-            </span>
-          </div>
+				{/* Modern Image Grid */}
+				<div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+					<div className="rounded-xl overflow-hidden shadow-lg">
+						<img src="/images/blog-images/white-rann-tent.jpg" alt="Tent City" className="object-cover w-full h-32 md:h-36" />
+					</div>
+					<div className="rounded-xl overflow-hidden shadow-lg">
+						<img src="/images/blog-images/white-rann-camera.jpg" alt="White Rann Photography" className="object-cover w-full h-32 md:h-36" />
+					</div>
+					<div className="rounded-xl overflow-hidden shadow-lg">
+						<img src="/images/blog-images/fullmoon.jpg" alt="Full Moon Night" className="object-cover w-full h-32 md:h-36" />
+					</div>
+					<div className="rounded-xl overflow-hidden shadow-lg">
+						<img src="/images/blog-images/rann-1.jpg" alt="Rann Utsav Landscape" className="object-cover w-full h-32 md:h-36" />
+					</div>
+				</div>
 
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 font-sora leading-tight bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
-            Rann Utsav 2025: Complete Festival Guide
-          </h1>
+				{/* Intro */}
+				<div className="bg-white/90 rounded-2xl shadow p-6 md:p-8 mb-8">
+					<p className="text-lg text-gray-700 mb-2">That's a great choice! Rann Utsav is a magnificent festival. Based on the latest information, here are the updates and details for the Rann Utsav 2025-2026 season:</p>
+				</div>
 
-          <div className="flex flex-wrap items-center gap-6 text-gray-600 mb-8">
-            <div className="flex items-center gap-2">
-              <User className="w-5 h-5" />
-              <div>
-                <div className="font-semibold text-gray-900">Karan Mehta</div>
-                <div className="text-sm">Festival Guide</div>
-              </div>
-            </div>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-5 h-5" />
-              <span>December 15, 2024</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5" />
-              <span>11 min read</span>
-            </div>
-          </div>
+								{/* Key Dates & Special Highlights Modern Cards */}
+								<div className="grid md:grid-cols-2 gap-6 mb-8">
+									{/* Key Dates Card */}
+									<div className="bg-gradient-to-br from-indigo-50 to-pink-50 rounded-2xl shadow border border-indigo-100 p-6 flex flex-col gap-2">
+										<h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-indigo-900"><Calendar className="w-6 h-6 text-indigo-500" /> Key Dates</h2>
+										<div className="flex items-center gap-2 text-gray-700"><Star className="w-5 h-5 text-yellow-500" /><b>Start:</b> Oct 23, 2025</div>
+										<div className="flex items-center gap-2 text-gray-700"><Star className="w-5 h-5 text-yellow-500" /><b>End:</b> Mar 4, 2026</div>
+										<div className="flex items-center gap-2 text-gray-700"><MapPin className="w-5 h-5 text-pink-500" /><b>Location:</b> Dhordo Village, Kutch, Gujarat</div>
+									</div>
+									{/* Special Highlights Redesigned */}
+									<div className="flex flex-col gap-3">
+										<h2 className="text-xl font-bold mb-2 flex items-center gap-2 text-pink-900"><Gift className="w-6 h-6 text-pink-500" /> Special Highlights</h2>
+										<div className="grid grid-cols-2 gap-3">
+											<div className="bg-white/90 rounded-xl shadow flex flex-col items-center p-4 text-center">
+												<Moon className="w-8 h-8 text-blue-500 mb-1" />
+												<div className="font-semibold text-gray-800">Full Moon Nights</div>
+												<div className="text-xs text-gray-500">Nov 4-6, Dec 3-5, 2025<br/>Jan 2-4, Feb 1-2, Mar 2-4, 2026</div>
+											</div>
+											<div className="bg-white/90 rounded-xl shadow flex flex-col items-center p-4 text-center">
+												<Sun className="w-8 h-8 text-yellow-400 mb-1" />
+												<div className="font-semibold text-gray-800">Diwali</div>
+												<div className="text-xs text-gray-500">Oct 23-26, 2025</div>
+											</div>
+											<div className="bg-white/90 rounded-xl shadow flex flex-col items-center p-4 text-center">
+												<Gift className="w-8 h-8 text-pink-400 mb-1" />
+												<div className="font-semibold text-gray-800">Christmas & New Year</div>
+												<div className="text-xs text-gray-500">Dec 19, 2025 – Jan 1, 2026</div>
+											</div>
+											<div className="bg-white/90 rounded-xl shadow flex flex-col items-center p-4 text-center">
+												<Flag className="w-8 h-8 text-red-500 mb-1" />
+												<div className="font-semibold text-gray-800">Republic Day</div>
+												<div className="text-xs text-gray-500">Jan 26, 2026</div>
+											</div>
+											<div className="bg-white/90 rounded-xl shadow flex flex-col items-center p-4 text-center">
+												<Sparkles className="w-8 h-8 text-green-500 mb-1" />
+												<div className="font-semibold text-gray-800">Kite Festival</div>
+												<div className="text-xs text-gray-500">Mid-Jan (dates vary)</div>
+											</div>
+											<div className="bg-white/90 rounded-xl shadow flex flex-col items-center p-4 text-center">
+												<Heart className="w-8 h-8 text-pink-500 mb-1" />
+												<div className="font-semibold text-gray-800">Valentine's Day</div>
+												<div className="text-xs text-gray-500">Feb 14, 2026</div>
+											</div>
+										</div>
+										<div className="mt-2 text-sm text-blue-700 bg-blue-50 rounded px-3 py-2 text-center">Tip: <b>Visit during a Full Moon Night</b> for magical views—the white salt desert sparkles like diamonds under the moonlight!</div>
+									</div>
+								</div>
 
-          {/* Hero Image Placeholder */}
-          <div className="relative h-96 rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-pink-100 to-purple-100">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <Music className="w-16 h-16 mx-auto mb-4 text-gray-400" />
-                <p className="text-gray-500 font-semibold">Rann Utsav Festival</p>
-                <p className="text-sm text-gray-400">Hero Image Placeholder</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+				{/* What to Expect */}
+				<div className="bg-white/90 rounded-2xl shadow p-6 md:p-8 mb-8">
+					<h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-indigo-800"><Tent className="w-7 h-7 text-indigo-500" /> What to Expect</h2>
+					<ul className="space-y-3 text-gray-800">
+						<li className="flex items-start gap-3"><Sun className="w-5 h-5 text-yellow-400 mt-1" /><span><b>The White Rann (Salt Marsh):</b> Witness the endless white salt desert at sunrise, sunset, and especially under the full moon.</span></li>
+						<li className="flex items-start gap-3"><Music className="w-5 h-5 text-pink-500 mt-1" /><span><b>Cultural Immersion:</b> Enjoy daily folk music, dance performances (Garba, Bhavai), and cultural parades.</span></li>
+						<li className="flex items-start gap-3"><ShoppingBag className="w-5 h-5 text-indigo-500 mt-1" /><span><b>Art & Craft:</b> Explore exhibitions and bazaars with Kutchi embroidery, leather goods, pottery, and more—buy directly from artisans.</span></li>
+						<li className="flex items-start gap-3"><Tent className="w-5 h-5 text-green-600 mt-1" /><span><b>Accommodation:</b> Stay in the Rann Utsav Tent City at Dhordo, with luxury tents/cottages and modern amenities.</span></li>
+						<li className="flex items-start gap-3"><Star className="w-5 h-5 text-yellow-500 mt-1" /><span><b>Activities & Adventure:</b> Camel cart rides, ATV rides, paramotoring, paintball, and sightseeing to Kala Dungar and villages like Hodko.</span></li>
+					</ul>
+				</div>
 
-        <motion.div initial="hidden" animate="visible" variants={fadeUp} className="prose prose-lg max-w-none">
-          <div className="bg-white rounded-2xl p-8 shadow-lg mb-8">
-            <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              The Rann Utsav is Gujarat's most spectacular cultural festival, celebrating the unique heritage of Kutch against the stunning backdrop of the White Rann.
-            </p>
+				{/* Planning Your Visit */}
+				<div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl shadow p-6 md:p-8 mb-8">
+					<h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-blue-900"><Plane className="w-7 h-7 text-blue-500" /> Planning Your Visit</h2>
+					<ul className="space-y-3 text-gray-800">
+						<li className="flex items-start gap-3"><Gift className="w-5 h-5 text-pink-500 mt-1" /><span><b>Packages:</b> Official packages for 1N/2D, 2N/3D, 3N/4D—usually include accommodation, meals, and sightseeing.</span></li>
+						<li className="flex items-start gap-3"><MapPin className="w-5 h-5 text-indigo-500 mt-1" /><span><b>Nearest City:</b> Bhuj (airport & railway), about 85 km from Tent City, Dhordo.</span></li>
+					</ul>
+				</div>
 
-            <h2 className="text-3xl font-bold mb-6 text-gray-900">Festival Overview</h2>
-            <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-6 mb-8 border border-indigo-100">
-              <p className="text-gray-700 leading-relaxed">
-                Running from November to February, the Rann Utsav transforms the White Desert into a vibrant carnival of culture, crafts, music, and tradition. The government sets up a massive tent city with all modern amenities while maintaining the rustic charm.
-              </p>
-            </div>
-
-            {/* Festival Grounds Placeholder */}
-            <div className="relative h-80 rounded-2xl overflow-hidden my-8 bg-gradient-to-br from-orange-100 to-pink-100">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <Tent className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                  <p className="text-gray-500 font-semibold">Tent City Overview</p>
-                  <p className="text-sm text-gray-400">Image: Festival grounds aerial view</p>
-                </div>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold mb-6 text-gray-900 mt-12">What to Experience</h2>
-
-            {/* Cultural Performances */}
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 flex items-center gap-3">
-                <Music className="w-8 h-8 text-pink-600" />
-                Cultural Performances
-              </h3>
-              <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
-                <li>Traditional folk dances performed every evening</li>
-                <li>Live music performances featuring local artists</li>
-                <li>Fire dance demonstrations under the stars</li>
-                <li>Traditional puppetry shows showcasing local stories</li>
-              </ul>
-
-              <div className="relative h-72 rounded-2xl overflow-hidden my-6 bg-gradient-to-br from-pink-100 to-red-100">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Music className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                    <p className="text-gray-500 font-semibold">Cultural Dance Performance</p>
-                    <p className="text-sm text-gray-400">Image: Folk dancers in action</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Adventure Activities */}
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 flex items-center gap-3">
-                <span className="text-3xl">🎪</span>
-                Adventure Activities
-              </h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">
-                  <h4 className="font-bold text-gray-900 mb-2">🐪 Camel Rides</h4>
-                  <p className="text-gray-700 text-sm">Explore the White Rann on camelback during sunset for magical views.</p>
-                </div>
-                <div className="bg-purple-50 rounded-xl p-5 border border-purple-100">
-                  <h4 className="font-bold text-gray-900 mb-2">🏍️ ATV Rides</h4>
-                  <p className="text-gray-700 text-sm">Thrilling quad bike rides across the salt desert.</p>
-                </div>
-                <div className="bg-orange-50 rounded-xl p-5 border border-orange-100">
-                  <h4 className="font-bold text-gray-900 mb-2">🪂 Paramotoring</h4>
-                  <p className="text-gray-700 text-sm">Aerial views of the Rann (weather permitting).</p>
-                </div>
-                <div className="bg-green-50 rounded-xl p-5 border border-green-100">
-                  <h4 className="font-bold text-gray-900 mb-2">🎈 Hot Air Balloons</h4>
-                  <p className="text-gray-700 text-sm">Sunrise balloon rides for breathtaking panoramas.</p>
-                </div>
-              </div>
-
-              <div className="relative h-72 rounded-2xl overflow-hidden my-6 bg-gradient-to-br from-blue-100 to-cyan-100">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Camera className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                    <p className="text-gray-500 font-semibold">Adventure Activities</p>
-                    <p className="text-sm text-gray-400">Image: Camel ride at sunset</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Shopping */}
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 flex items-center gap-3">
-                <ShoppingBag className="w-8 h-8 text-orange-600" />
-                Shopping
-              </h3>
-              <p className="text-gray-700 mb-4">
-                The festival features a vibrant market where you can purchase authentic handicrafts directly from artisans:
-              </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
-                <li>Traditional textiles with intricate embroidery</li>
-                <li>Handmade jewelry with mirror work and beads</li>
-                <li>Leather goods and footwear</li>
-                <li>Home decor items including wall hangings and cushions</li>
-                <li>Paintings and artwork by local artists</li>
-              </ul>
-
-              <div className="relative h-72 rounded-2xl overflow-hidden my-6 bg-gradient-to-br from-yellow-100 to-orange-100">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <ShoppingBag className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                    <p className="text-gray-500 font-semibold">Craft Market</p>
-                    <p className="text-sm text-gray-400">Image: Colorful handicraft stalls</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Food */}
-            <div className="mb-8">
-              <h3 className="text-2xl font-bold mb-4 text-gray-900 flex items-center gap-3">
-                <span className="text-3xl">🍽️</span>
-                Food & Dining
-              </h3>
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 mb-4 border border-green-100">
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
-                  <li>Traditional Gujarati thalis with unlimited servings</li>
-                  <li>Street food stalls offering local specialties</li>
-                  <li>Regional delicacies from across Kutch</li>
-                  <li>Modern cafes with fusion cuisine</li>
-                </ul>
-              </div>
-
-              <div className="relative h-72 rounded-2xl overflow-hidden my-6 bg-gradient-to-br from-red-100 to-pink-100">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <Camera className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                    <p className="text-gray-500 font-semibold">Festival Food</p>
-                    <p className="text-sm text-gray-400">Image: Traditional thali spread</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold mb-6 text-gray-900 mt-12">Accommodation Options</h2>
-            <div className="grid gap-6 mb-8">
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl p-6 border border-purple-100">
-                <h4 className="font-bold text-gray-900 mb-3 text-xl flex items-center gap-2">
-                  <Tent className="w-6 h-6 text-purple-600" />
-                  Premium Tents
-                </h4>
-                <p className="text-gray-700 mb-2">AC tents with attached bathrooms and modern amenities. Higher rates but maximum comfort.</p>
-                <p className="text-sm text-purple-600 font-semibold">₹5,000 - ₹8,000 per night</p>
-              </div>
-
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-6 border border-blue-100">
-                <h4 className="font-bold text-gray-900 mb-3 text-xl flex items-center gap-2">
-                  <Tent className="w-6 h-6 text-blue-600" />
-                  Standard Tents
-                </h4>
-                <p className="text-gray-700 mb-2">Clean and comfortable accommodations with shared facilities. Budget-friendly option.</p>
-                <p className="text-sm text-blue-600 font-semibold">₹2,500 - ₹4,000 per night</p>
-              </div>
-
-              <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl p-6 border border-orange-100">
-                <h4 className="font-bold text-gray-900 mb-3 text-xl flex items-center gap-2">
-                  <span className="text-2xl">🏨</span>
-                  Luxury Resorts
-                </h4>
-                <p className="text-gray-700 mb-2">Located outside the festival area. Premium experience with private transport to festival.</p>
-                <p className="text-sm text-orange-600 font-semibold">₹10,000+ per night</p>
-              </div>
-            </div>
-
-            {/* Accommodation Placeholder */}
-            <div className="relative h-72 rounded-2xl overflow-hidden my-8 bg-gradient-to-br from-indigo-100 to-purple-100">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <Tent className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                  <p className="text-gray-500 font-semibold">Tent Accommodations</p>
-                  <p className="text-sm text-gray-400">Image: Premium tent interior</p>
-                </div>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold mb-6 text-gray-900 mt-12">Booking Tips</h2>
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-xl p-6 mb-8 border border-yellow-100">
-              <ul className="list-disc list-inside space-y-3 text-gray-700">
-                <li><strong>Book Early:</strong> Reserve at least 2-3 months in advance</li>
-                <li><strong>Peak Times:</strong> Weekends and full moon nights fill up fastest</li>
-                <li><strong>Weekday Visits:</strong> Better rates and fewer crowds</li>
-                <li><strong>Package Deals:</strong> Often include transfers and meals</li>
-                <li><strong>Cancellation Policy:</strong> Check before booking as policies vary</li>
-              </ul>
-            </div>
-
-            <h2 className="text-3xl font-bold mb-6 text-gray-900 mt-12">Getting There</h2>
-            <div className="grid md:grid-cols-2 gap-4 mb-8">
-              <div className="bg-blue-50 rounded-xl p-5 border border-blue-100">
-                <h4 className="font-bold text-gray-900 mb-2">✈️ By Air</h4>
-                <p className="text-gray-700 text-sm">Nearest airport: Bhuj (75 km). Regular flights from major cities.</p>
-              </div>
-              <div className="bg-green-50 rounded-xl p-5 border border-green-100">
-                <h4 className="font-bold text-gray-900 mb-2">🚗 By Road</h4>
-                <p className="text-gray-700 text-sm">Well-connected by road. Special buses during festival season.</p>
-              </div>
-              <div className="bg-purple-50 rounded-xl p-5 border border-purple-100">
-                <h4 className="font-bold text-gray-900 mb-2">🚖 Taxi Services</h4>
-                <p className="text-gray-700 text-sm">Available from Bhuj airport and city. Book in advance.</p>
-              </div>
-              <div className="bg-orange-50 rounded-xl p-5 border border-orange-100">
-                <h4 className="font-bold text-gray-900 mb-2">🚌 Tour Packages</h4>
-                <p className="text-gray-700 text-sm">Many agencies offer all-inclusive packages with transport.</p>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold mb-6 text-gray-900 mt-12">What to Pack</h2>
-            <div className="grid md:grid-cols-3 gap-4 mb-8">
-              <div className="bg-gradient-to-br from-pink-50 to-red-50 rounded-xl p-5 border border-pink-100">
-                <h4 className="font-bold text-gray-900 mb-3">🧥 Clothing</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>Warm jacket for evenings</li>
-                  <li>Comfortable walking shoes</li>
-                  <li>Light cotton clothes for day</li>
-                  <li>Traditional wear (optional)</li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-5 border border-blue-100">
-                <h4 className="font-bold text-gray-900 mb-3">📱 Essentials</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>Power bank</li>
-                  <li>Flashlight/headlamp</li>
-                  <li>Sunscreen & sunglasses</li>
-                  <li>Water bottle</li>
-                </ul>
-              </div>
-              <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-5 border border-green-100">
-                <h4 className="font-bold text-gray-900 mb-3">📷 Photography</h4>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>Camera equipment</li>
-                  <li>Extra batteries</li>
-                  <li>Memory cards</li>
-                  <li>Tripod</li>
-                </ul>
-              </div>
-            </div>
-
-            <h2 className="text-3xl font-bold mb-6 text-gray-900 mt-12">Pro Tips</h2>
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start gap-3 bg-indigo-50 rounded-xl p-5 border border-indigo-100">
-                <span className="text-2xl">💡</span>
-                <div>
-                  <p className="font-bold text-gray-900 mb-1">Arrive Before Sunset</p>
-                  <p className="text-gray-700 text-sm">Capture golden hour and the transition to evening festivities.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 bg-purple-50 rounded-xl p-5 border border-purple-100">
-                <span className="text-2xl">🏘️</span>
-                <div>
-                  <p className="font-bold text-gray-900 mb-1">Visit Artisan Villages</p>
-                  <p className="text-gray-700 text-sm">During the day, explore nearby craft villages for authentic experiences.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 bg-orange-50 rounded-xl p-5 border border-orange-100">
-                <span className="text-2xl">🍽️</span>
-                <div>
-                  <p className="font-bold text-gray-900 mb-1">Try Local Food</p>
-                  <p className="text-gray-700 text-sm">Don't miss the traditional thalis and street food at the festival.</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 bg-green-50 rounded-xl p-5 border border-green-100">
-                <span className="text-2xl">🌕</span>
-                <div>
-                  <p className="font-bold text-gray-900 mb-1">Full Moon Nights</p>
-                  <p className="text-gray-700 text-sm">Book well in advance for full moon nights - they're the most popular!</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-3 bg-blue-50 rounded-xl p-5 border border-blue-100">
-                <span className="text-2xl">💵</span>
-                <div>
-                  <p className="font-bold text-gray-900 mb-1">Carry Cash</p>
-                  <p className="text-gray-700 text-sm">Card facilities may be limited. Bring sufficient cash for shopping and tips.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-3 mt-8">
-              <span className="px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-sm font-semibold">
-                <Tag className="w-4 h-4 inline mr-2" />
-                Rann Utsav
-              </span>
-              <span className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold">
-                <Tag className="w-4 h-4 inline mr-2" />
-                Festival
-              </span>
-              <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
-                <Tag className="w-4 h-4 inline mr-2" />
-                Events
-              </span>
-              <span className="px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-semibold">
-                <Tag className="w-4 h-4 inline mr-2" />
-                Culture
-              </span>
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="bg-gradient-to-r from-pink-600 via-purple-600 to-indigo-600 rounded-2xl p-8 text-white text-center">
-            <h3 className="text-2xl font-bold mb-4">Experience Rann Utsav 2025</h3>
-            <p className="mb-6 text-white/90">Join us for the most spectacular cultural festival in Gujarat!</p>
-            <Link href="/destinations/dhordo-white-rann" className="inline-block bg-white text-pink-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition-colors">
-              Plan Your Visit
-            </Link>
-          </div>
-        </motion.div>
-      </article>
-    </main>
-  );
+				{/* Call to Action */}
+				<div className="mt-8 p-6 bg-gradient-to-r from-pink-200 via-blue-100 to-purple-200 border-l-4 border-blue-400 text-blue-900 rounded-2xl shadow flex items-center gap-4">
+					<span className="font-bold text-lg">Want booking details or package options?</span>
+					<span className="ml-auto"><Plane className="w-7 h-7 text-blue-400" /></span>
+				</div>
+			</div>
+		</main>
+	);
 }
+
+

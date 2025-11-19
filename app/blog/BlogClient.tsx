@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Calendar, Clock, User, ArrowRight, Sparkles, BookOpen } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import { blogPosts, categories } from './data';
+import Image from 'next/image';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -122,14 +123,13 @@ export default function BlogClient() {
                 <div className="bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="relative h-80 md:h-auto overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 flex items-center justify-center">
-                        <div className="text-center text-white p-8">
-                          <Sparkles className="w-16 h-16 mx-auto mb-4 opacity-50" />
-                          <p className="text-lg font-semibold">Featured Article</p>
-                        </div>
-                        {/* Add animated gradient overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-purple-400/30 via-transparent to-pink-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      </div>
+                      <Image
+                        src={featuredPost.image}
+                        alt={featuredPost.title}
+                        fill
+                        className="object-cover"
+                        priority
+                      />
                       <div className="absolute top-4 left-4 px-4 py-2 bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-500 text-white font-bold text-sm rounded-full flex items-center gap-2 shadow-lg">
                         <Sparkles className="w-4 h-4" />
                         Featured
@@ -191,14 +191,13 @@ export default function BlogClient() {
                 <div className="bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-full flex flex-col border border-gray-200">
                   {/* Image */}
                   <div className="relative h-56 overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-indigo-600 flex items-center justify-center">
-                      <div className="text-center text-white p-6">
-                        <BookOpen className="w-12 h-12 mx-auto mb-2 opacity-50" />
-                        <p className="text-sm font-semibold opacity-75">Blog Post</p>
-                      </div>
-                      {/* Add animated gradient overlay */}
-                      <div className="absolute inset-0 bg-gradient-to-tr from-purple-400/30 via-transparent to-pink-400/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    </div>
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                      priority={false}
+                    />
                     <div className="absolute top-4 left-4">
                       <span className="px-3 py-1 bg-white/95 backdrop-blur-sm text-gray-900 text-xs font-bold rounded-full border border-gray-200 shadow-lg">
                         {post.category}

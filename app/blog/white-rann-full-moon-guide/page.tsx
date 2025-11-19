@@ -53,13 +53,13 @@ export default function WhiteRannFullMoonGuidePage() {
 
           {/* Hero Image Placeholder */}
           <div className="relative h-96 rounded-3xl overflow-hidden mb-12 bg-gradient-to-br from-blue-100 to-purple-100">
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="text-center">
-                <Camera className="w-16 h-16 mx-auto mb-4 text-gray-400" />
-                <p className="text-gray-500 font-semibold">White Rann at Full Moon</p>
-                <p className="text-sm text-gray-400">Hero Image Placeholder</p>
-              </div>
-            </div>
+            <Image
+              src="/images/blog-images/white-rann-hero.jpg"
+              alt="White Rann at Full Moon"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </motion.div>
 
@@ -81,13 +81,13 @@ export default function WhiteRannFullMoonGuidePage() {
 
             {/* Image Placeholder 1 */}
             <div className="relative h-80 rounded-2xl overflow-hidden my-8 bg-gradient-to-br from-indigo-100 to-blue-100">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                  <p className="text-gray-500 font-semibold">White Rann Landscape</p>
-                  <p className="text-sm text-gray-400">Image: Best viewing spots</p>
-                </div>
-              </div>
+              <Image
+                src="/images/blog-images/rann-1.jpg"
+                alt="White Rann Landscape - Best viewing spots"
+                fill
+                className="object-cover"
+                priority={false}
+              />
             </div>
 
             <h2 className="text-3xl font-bold mb-4 text-gray-900 mt-8">What to Expect</h2>
@@ -113,13 +113,13 @@ export default function WhiteRannFullMoonGuidePage() {
 
             {/* Image Placeholder 2 */}
             <div className="relative h-80 rounded-2xl overflow-hidden my-8 bg-gradient-to-br from-orange-100 to-pink-100">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <Camera className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                  <p className="text-gray-500 font-semibold">Photography Setup</p>
-                  <p className="text-sm text-gray-400">Image: Camera equipment and settings</p>
-                </div>
-              </div>
+              <Image
+                src="/images/blog-images/craft-1.jpg"
+                alt="Photography Setup - Camera equipment and settings"
+                fill
+                className="object-cover"
+                priority={false}
+              />
             </div>
 
             <h2 className="text-3xl font-bold mb-4 text-gray-900 mt-8">What to Bring</h2>
@@ -159,14 +159,16 @@ export default function WhiteRannFullMoonGuidePage() {
             </div>
 
             {/* Image Placeholder 3 */}
+
+            {/* Image: Tent 1 */}
             <div className="relative h-80 rounded-2xl overflow-hidden my-8 bg-gradient-to-br from-yellow-100 to-orange-100">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <Camera className="w-12 h-12 mx-auto mb-3 text-gray-400" />
-                  <p className="text-gray-500 font-semibold">Camping Under the Moon</p>
-                  <p className="text-sm text-gray-400">Image: Tent accommodations</p>
-                </div>
-              </div>
+              <Image
+                src="/images/blog-images/tent-1.jpg"
+                alt="Tent Accommodations - tent-1"
+                fill
+                className="object-cover"
+                priority={false}
+              />
             </div>
 
             <h2 className="text-3xl font-bold mb-4 text-gray-900 mt-8">Local Tip</h2>
