@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 // Ensure this object matches the Destination type. Update the type in index.ts if you add new fields.
 export const dhordo: Destination = {
   slug: "dhordo-white-rann",
-  title: "Dhordo — Gateway to the White Desert",
+    title: "Dhordo — Gateway to the White Desert",
   image: "/images/dhordo-white-rann/dhordo-main.jpg",
   sections: [
     {

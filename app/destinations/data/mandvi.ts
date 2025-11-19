@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 // Ensure this object matches the Destination type. Update the type in index.ts if you add new fields.
 export const mandvi: Destination = {
   slug: "mandvi",
-  title: "Mandvi — Where the Desert Meets the Sea",
+    title: "Mandvi — Where the Desert Meets the Sea",
   image: "/images/mandvi/mandvi1.jpg",
   sections: [
     {

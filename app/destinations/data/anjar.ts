@@ -2,7 +2,7 @@ import type { Destination } from "./index";
 
 export const anjar: Destination = {
   slug: "anjar",
-  title: "Anjar — History, Resilience, and Crafts",
+    title: "Anjar — History, Resilience, and Crafts",
   image: "/images/anjar/anjar.jpg",
   sections: [
     {

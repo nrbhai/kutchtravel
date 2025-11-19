@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 // Ensure this object matches the Destination type. Update the type in index.ts if you add new fields.
 export const roadToHeaven: Destination = {
   slug: "road-to-heaven",
-  title: "Road to Heaven — The Famous Straight Highway",
+    title: "Road to Heaven — The Famous Straight Highway",
   image: "/images/road-to-heaven/road-to-heaven1.jpg",
   sections: [
     {

@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 // Ensure this object matches the Destination type. Update the type in index.ts if you add new fields.
 export const kaloDungar: Destination = {
   slug: "kalo-dungar",
-  title: "Kalo Dungar — Highest Peak in Kutch",
+    title: "Kalo Dungar — Highest Peak in Kutch",
   image: "/images/kalo-dungar/kalo-dungar1.jpg",
   sections: [
     {

@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 // Ensure this object matches the Destination type. Update the type in index.ts if you add new fields.
 export const mundra: Destination = {
   slug: "mundra",
-  title: "Mundra — Port Town with Coastal Charm",
+    title: "Mundra — Port Town with Coastal Charm",
   image: "/images/mundra/mundra1.jpg",
   sections: [
     {

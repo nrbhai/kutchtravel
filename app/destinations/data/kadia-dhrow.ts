@@ -4,7 +4,7 @@ import type { Destination } from "./index";
 
 export const kadiaDhrow: Destination = {
   slug: "kadia-dhrow",
-  title: "Kadiya Dhro — The Grand Canyon of Gujarat",
+    title: "Kadiya Dhro — The Grand Canyon of Gujarat",
   image: "/images/kadia-dhrow/kadia-dhrow1.jpg",
   sections: [
     {

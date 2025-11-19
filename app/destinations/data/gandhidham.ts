@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 // Ensure this object matches the Destination type. Update the type in index.ts if you add new fields.
 export const gandhidham: Destination = {
   slug: "gandhidham",
-  title: "Gandhidham — Modern Gateway to Kutch",
+    title: "Gandhidham — Modern Gateway to Kutch",
   image: "/images/gandhidham/gandhidham1.jpg",
   sections: [
     {

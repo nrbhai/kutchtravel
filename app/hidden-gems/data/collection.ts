@@ -9,6 +9,7 @@ import { harappanSettlement } from "./harappan-settlement";
 import { secretBirdingSite } from "./kutch-bustard-bird-watching-site";
 import type { HiddenGem } from "./index";
 
+export const HIDDEN_GEMS: HiddenGem[] = [
   chhariDhand,
   fulayIsland,
   kotayTemple,
