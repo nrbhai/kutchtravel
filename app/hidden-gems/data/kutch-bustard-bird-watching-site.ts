@@ -1,6 +1,5 @@
 import type { HiddenGem } from "./index";
 
-
 export const secretBirdingSite: HiddenGem = {
   slug: "kutch-bustard-bird-watching-site",
   title: "Kutch Bustard Bird Watching Site",
@@ -75,5 +74,3 @@ export const secretBirdingSite: HiddenGem = {
     { src: "/images/hidden-gems/secret-birding-site/wildlife.jpg", caption: "Nilgai and Chinkara in the sanctuary" }
   ]
 };
-
-
