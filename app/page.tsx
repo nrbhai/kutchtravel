@@ -9,6 +9,7 @@ import { MapPin, Calendar, Camera, BookOpen, Users, Sparkles, Mountain, Waves, A
 import QuickGuide from "./components/QuickGuide";
 import Navigation from "./components/Navigation";
 import BookingWidget from "./components/BookingWidget";
+import TripWidget from "./components/TripWidget";
 import { DESTINATIONS } from "@/app/destinations/data";
 import { useState, useEffect } from "react";
 
@@ -131,6 +132,75 @@ const CraftCarousel = () => {
                 : 'bg-orange-300 scale-75 hover:scale-90 hover:bg-orange-400'
             }`}
             aria-label={`Go to craft ${index + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Gallery Carousel Component - Changes every 5 seconds
+const GalleryCarousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const galleryImages = [
+    { src: "/images/gallery/kutch1.jpg", alt: "Hamirsar Talav in Bhuj", caption: "Hamirsar Talav - Bhuj" },
+    { src: "/images/gallery/kutch2.jpg", alt: "Sunset at Mandvi Beach", caption: "Sunset at Mandvi Beach - Mandvi" },
+    { src: "/images/gallery/kutch3.jpg", alt: "White Rann at Dhordo", caption: "White Rann - Dhordo" },
+    { src: "/images/gallery/kutch4.jpg", alt: "Bharapar near Bhuj", caption: "Bharapar - Near Bhuj" },
+    { src: "/images/gallery/kutch5.jpg", alt: "Mandvi Road in Bhuj", caption: "Mandvi Road - Bhuj" },
+    { src: "/images/gallery/kutch6.jpg", alt: "Greenland Lake on Mirzapar Road", caption: "Greenland Lake - Mirzapar Road" },
+    { src: "/images/gallery/kutch7.jpg", alt: "Chattradi in Bhuj", caption: "Chattradi, Bhuj" },
+    { src: "/images/gallery/kutch8.jpg", alt: "Greenland Lake on Mirzapar Road", caption: "Greenland Lake - Mirzapar Road" },
+    { src: "/images/gallery/kutch9.jpg", alt: "Afternoon at Mandvi Beach", caption: "Afternoon at Mandvi Beach - Mandvi" },
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((current) => (current + 1) % galleryImages.length);
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(timer);
+  }, [galleryImages.length]);
+
+  return (
+    <div className="relative w-full h-full">
+      {galleryImages.map((image, index) => (
+        <motion.div
+          key={image.src}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: index === currentIndex ? 1 : 0 }}
+          transition={{ duration: 0.7 }}
+          className={`absolute inset-0 ${index === currentIndex ? 'z-10' : 'z-0'}`}
+        >
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            priority={index === 0}
+            sizes="(max-width: 1024px) 90vw, 45vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
+          <div className="absolute bottom-4 left-4 right-4 text-gray-900 text-sm font-medium px-3 py-1 bg-white/80 rounded-full backdrop-blur-sm shadow-md truncate">
+            {image.caption}
+          </div>
+        </motion.div>
+      ))}
+      
+      {/* Navigation dots */}
+      <div className="absolute bottom-4 right-4 z-20 flex gap-2">
+        {galleryImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className={`w-2 h-2 rounded-full transition-all ${
+              index === currentIndex 
+                ? 'bg-white scale-100' 
+                : 'bg-white/50 scale-75 hover:scale-90 hover:bg-white/70'
+            }`}
+            aria-label={`Go to image ${index + 1} of ${galleryImages.length}`}
+            aria-current={index === currentIndex ? 'true' : 'false'}
           />
         ))}
       </div>
@@ -420,14 +490,14 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            {/* Featured Image Carousel - Larger Size */}
+            {/* Gallery Image Carousel - 5 Second Intervals */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
               className="relative aspect-[4/3] w-full max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-2xl"
             >
-              <AutoplayCarousel images={heroImages} />
+              <GalleryCarousel />
             </motion.div>
           </div>
         </div>
@@ -806,7 +876,7 @@ export default function Home() {
       </section>
 
       {/* 4️⃣ Booking Widget Section */}
-      <section className="py-20 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
+      <section className="py-10 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
         <div className="max-w-5xl mx-auto px-4 relative z-10">
            <BookingWidget />
@@ -1233,6 +1303,11 @@ export default function Home() {
                 </div>
               </div>
             </motion.div>
+          </div>
+
+          {/* Trip.com Widget Section */}
+          <div className="mt-20 mb-20">
+            <TripWidget />
           </div>
 
           {/* Packing Essentials - Full Width Section */}
