@@ -120,6 +120,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
+    // REPLACE 'your-google-verification-code' with your actual code from Google Search Console
     google: 'your-google-verification-code',
     yandex: 'your-yandex-verification-code',
     yahoo: 'your-yahoo-verification-code',
