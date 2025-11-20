@@ -16,21 +16,31 @@ export default function BookingWidget({ aid = '2665264' }: BookingWidgetProps) {
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Construct Booking.com URL
+    // Construct Booking.com URL with split date parameters for better reliability
     const baseUrl = 'https://www.booking.com/searchresults.html';
     const params = new URLSearchParams({
       ss: destination,
       aid: aid,
       group_adults: guests.toString(),
       no_rooms: '1',
-      sb: '1'
+      sb: '1',
+      src: 'searchresults',
+      lang: 'en-us',
+      selected_currency: 'INR'
     });
 
     if (checkIn) {
-      params.append('checkin', checkIn);
+      const [year, month, day] = checkIn.split('-');
+      params.append('checkin_year', year);
+      params.append('checkin_month', month);
+      params.append('checkin_monthday', day);
     }
+    
     if (checkOut) {
-      params.append('checkout', checkOut);
+      const [year, month, day] = checkOut.split('-');
+      params.append('checkout_year', year);
+      params.append('checkout_month', month);
+      params.append('checkout_monthday', day);
     }
 
     // Open in new tab
