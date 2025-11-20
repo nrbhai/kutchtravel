@@ -806,8 +806,9 @@ export default function Home() {
       </section>
 
       {/* 4️⃣ Booking Widget Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="py-20 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
+        <div className="max-w-5xl mx-auto px-4 relative z-10">
            <BookingWidget />
         </div>
       </section>
