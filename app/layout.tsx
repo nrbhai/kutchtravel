@@ -124,6 +124,9 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code',
     yandex: 'your-yandex-verification-code',
     yahoo: 'your-yahoo-verification-code',
+    other: {
+      verification: 'a12e08e4f4a4e1856e3a2967f99db03c',
+    },
   },
   category: 'travel',
 };

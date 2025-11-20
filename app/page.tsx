@@ -8,6 +8,7 @@ import { Popover, Menu, MenuButton, MenuItem, MenuItems, PopoverButton, PopoverP
 import { MapPin, Calendar, Camera, BookOpen, Users, Sparkles, Mountain, Waves, ArrowRight } from "lucide-react";
 import QuickGuide from "./components/QuickGuide";
 import Navigation from "./components/Navigation";
+import BookingWidget from "./components/BookingWidget";
 import { DESTINATIONS } from "@/app/destinations/data";
 import { useState, useEffect } from "react";
 
@@ -804,7 +805,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4️⃣ Enhanced Culture & Crafts Section */}
+      {/* 4️⃣ Booking Widget Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4">
+           <BookingWidget />
+        </div>
+      </section>
+
+      {/* 5️⃣ Enhanced Culture & Crafts Section */}
       <section id="culture" className="relative overflow-hidden py-28">
         {/* Modern gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-teal-50 to-blue-50">
