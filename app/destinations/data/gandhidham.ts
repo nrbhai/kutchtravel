@@ -4,7 +4,7 @@ import type { Destination } from "./index";
 export const gandhidham: Destination = {
   slug: "gandhidham",
     title: "Gandhidham — Modern Gateway to Kutch",
-  image: "/images/gandhidham/gandhidham1.jpg",
+  image: "/images/gandhidham/gandhidham-main.jpg",
   sections: [
     {
       heading: "Overview",
@@ -65,11 +65,11 @@ export const gandhidham: Destination = {
       color: "bg-indigo-50",
       border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b><a href='/places/bhuj' class='text-blue-400 hover:text-blue-300'>Bhuj:</a></b> 25km - Cultural capital of Kutch",
+        "<b><a href='/places/bhuj' class='text-blue-400 hover:text-blue-300'>Bhuj:</a></b> 60km - Cultural capital of Kutch",
         "<b><a href='/places/anjar' class='text-blue-400 hover:text-blue-300'>Anjar:</a></b> 15km - Ancient town with temples",
         "<b><a href='/places/kandla' class='text-blue-400 hover:text-blue-300'>Kandla Port:</a></b> 10km - Major port city",
         "<b><a href='/places/adipur' class='text-blue-400 hover:text-blue-300'>Adipur:</a></b> 5km - Sister city with additional amenities",
-        "<b><a href='/places/white-rann' class='text-blue-400 hover:text-blue-300'>White Rann:</a></b> 75km - Famous salt desert"
+        "<b><a href='/places/white-rann' class='text-blue-400 hover:text-blue-300'>White Rann:</a></b> 140km - Famous salt desert"
       ],
       image: {
         src: "/images/gandhidham/nearby.jpg",
@@ -86,7 +86,7 @@ export const gandhidham: Destination = {
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d69.6697!3d23.2420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sGandhidham%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin",
   gallery: [
-    { src: "/images/gandhidham/gandhidham1.jpg", caption: "Gandhidham Railway Station" },
+    { src: "/images/gandhidham/gandhidham-main.jpg", caption: "Gandhidham Railway Station" },
     { src: "/images/gandhidham/gandhidham2.jpg", caption: "Modern City Planning" },
     { src: "/images/gandhidham/gandhidham3.jpg", caption: "Commercial Market Area" },
     { src: "/images/gandhidham/gandhidham4.jpg", caption: "Religious Sites" },

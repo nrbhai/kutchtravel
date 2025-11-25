@@ -42,6 +42,8 @@ import { kadiaDhrow } from "./kadia-dhrow";
 import { narayanSarovarKoteshwar } from "./narayan-sarovar-koteshwar";
 import { roadToHeaven } from "./road-to-heaven";
 
+import { dholavira } from "./dholavira";
+
 // All destination data must conform to the Destination type above.
 export const DESTINATIONS: Destination[] = [
   mandvi,
@@ -55,5 +57,6 @@ export const DESTINATIONS: Destination[] = [
   mundra,
   lakhpat,
   kadiaDhrow,
-  narayanSarovarKoteshwar
+  narayanSarovarKoteshwar,
+  dholavira
 ];

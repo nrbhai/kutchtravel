@@ -221,7 +221,8 @@ const destinationDescriptions: Record<string, string> = {
   'kadia-dhrow': 'A stunning small canyon with unique rock formations, offering dramatic landscapes and excellent opportunities for photography and exploration.',
   'mata-na-madh': 'A sacred pilgrimage site with an ancient temple dedicated to Ashapura Mata, surrounded by scenic landscapes.',
   'narayan-sarovar-koteshwar': 'A sacred lake and ancient temple complex, one of the five holy sarovars mentioned in Hindu scriptures.',
-  'road-to-heaven': 'A breathtaking scenic route through the desert landscape that feels like a pathway to the heavens.'
+  'road-to-heaven': 'A breathtaking scenic route through the desert landscape that feels like a pathway to the heavens.',
+  'dholavira': 'One of the largest Harappan sites, featuring advanced water management systems and ancient fortifications.'
 };
 
 // Create category labels for destinations
@@ -237,7 +238,8 @@ const destinationCategories: Record<string, string> = {
   'kadia-dhrow': 'Canyon',
   'mata-na-madh': 'Pilgrimage Site',
   'narayan-sarovar-koteshwar': 'Sacred Lake',
-  'road-to-heaven': 'Scenic Route'
+  'road-to-heaven': 'Scenic Route',
+  'dholavira': 'Archaeological Site'
 };
 
 // Hero carousel images
@@ -589,55 +591,9 @@ export default function Home() {
         <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.02] mix-blend-overlay"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Content Side */}
-            <div className="space-y-6">
-              <div className="space-y-3">
-                <span className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-sm font-inter font-semibold tracking-wide shadow-lg shadow-cyan-500/30">
-                  <span>🗺️</span>
-                  <span>Local Insights</span>
-                </span>
-                
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold holographic drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)] leading-tight">
-                  Explore Kutch
-                </h2>
-                
-                <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-inter font-light">
-                  Local-first insights to plan the perfect trip across seasons and regions. 
-                  <span className="block mt-2 text-slate-900 font-medium">Get expert guidance for an authentic Kutch experience.</span>
-                </p>
-              </div>
-
-              {/* Feature Points */}
-              <div className="flex flex-wrap items-center gap-6 pt-4">
-                <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
-                  <span className="text-sm font-inter font-medium">Expert Tips</span>
-                </div>
-                <div className="w-px h-4 bg-gradient-to-b from-cyan-400 to-blue-500"></div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 rounded-full animate-pulse"></span>
-                  <span className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600">Local Insights</span>
-                </div>
-                <div className="w-px h-4 bg-gradient-to-b from-cyan-400 via-sky-400 to-blue-400"></div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600 rounded-full animate-pulse"></span>
-                  <span className="text-sm text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-sky-600 to-blue-600">Season Guide</span>
-                </div>
-              </div>
-
-              {/* CTA Button */}
-              <Link 
-                href="/destinations" 
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full font-inter font-semibold text-base shadow-xl shadow-cyan-500/30 hover:shadow-2xl hover:scale-105 transition-all duration-300"
-              >
-                <span>Start Exploring</span>
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-
+          <div className="flex justify-center items-center">
             {/* Map Side */}
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-2xl border border-gray-200">
+            <div className="relative w-full max-w-4xl aspect-[16/9] rounded-2xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 shadow-2xl border border-gray-200">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d946413.6494866384!2d69.0!3d23.7337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39511930d634542d%3A0xe68c6f6693b7b2be!2sKutch%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin&z=9"
                 width="100%"
