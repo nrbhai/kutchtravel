@@ -5,6 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import Navigation from '../components/Navigation';
+import BookingWidget from '../components/BookingWidget';
+import TripWidget from '../components/TripWidget';
 
 // Animation variants
 const containerVariants = {
@@ -65,7 +67,7 @@ export default function BookingsClient() {
           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+        <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pt-20">
           {/* Two Column Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Content */}
@@ -154,7 +156,7 @@ export default function BookingsClient() {
       </div>
 
       {/* Booking Categories Tabs */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <motion.div 
           variants={containerVariants}
           initial="hidden"
@@ -262,31 +264,30 @@ function HotelsSection() {
       </motion.div>
 
       {/* Booking Widget Placeholder - Booking.com */}
+      {/* Curated Best Deals Section */}
+      <BestDealsSection />
+      <TripBestDealsSection />
+
+      {/* Booking Widget Section - Booking.com */}
       <div className="bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 rounded-3xl p-8 shadow-xl border-2 border-purple-200/50">
         <div className="text-center mb-6">
           <h3 className="text-2xl font-semibold mb-2 font-sora text-gray-900">Search Hotels</h3>
-          <p className="text-gray-800 text-base font-inter">Powered by Booking.com</p>
+          <p className="text-gray-800 text-base font-inter">Compare deals from top providers</p>
         </div>
         
-        {/* Booking.com Widget Placeholder */}
-        <div className="bg-white rounded-2xl p-8 border-2 border-dashed border-purple-300 shadow-lg">
-          <p className="text-center text-gray-900 mb-4 text-2xl">
-            🏨 Booking.com Widget Integration
-          </p>
-          <p className="text-base text-gray-800 text-center mb-6 font-inter">
-            To integrate: Sign up for Booking.com Partner Program and replace this with their booking widget
-          </p>
-          <div className="mt-4 text-center">
-            <a 
-              href="https://www.booking.com/searchresults.html?ss=kutch&checkin=2024-12-01&checkout=2024-12-03"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-full font-inter font-bold transition-all duration-300 hover:scale-105 shadow-xl shadow-purple-500/30"
-            >
-              <span>Search Hotels in Kutch</span>
-              <span>→</span>
-            </a>
+        <div className="space-y-12">
+          <BookingWidget />
+          
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center" aria-hidden="true">
+              <div className="w-full border-t border-gray-300"></div>
+            </div>
+            <div className="relative flex justify-center">
+              <span className="px-4 bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 text-sm text-gray-500 font-medium">OR COMPARE WITH</span>
+            </div>
           </div>
+
+          <TripWidget defaultTab="hotels" />
         </div>
       </div>
 
@@ -343,32 +344,59 @@ function FlightsSection() {
         </p>
       </motion.div>
 
+      {/* Popular Flight Routes */}
+      <div className="grid md:grid-cols-2 gap-6 mb-8">
+        {[
+          {
+            from: "Bhuj (BHJ)",
+            to: "Mumbai (BOM)",
+            duration: "1h 15m",
+            price: "₹3,500+",
+            image: "/images/flights/mumbai-skyline.jpg",
+            link: "https://www.booking.com/flights/index.html?aid=2665264"
+          },
+          {
+            from: "Bhuj (BHJ)",
+            to: "Delhi (DEL)",
+            duration: "2h 00m",
+            price: "₹5,500+",
+            image: "/images/flights/delhi-india-gate.jpg",
+            link: "https://www.booking.com/flights/index.html?aid=2665264"
+          }
+        ].map((flight, index) => (
+          <motion.a
+            key={index}
+            href={flight.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ y: -5 }}
+            className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-100 flex items-center justify-between group"
+          >
+            <div className="flex items-center gap-4">
+              <div className="h-12 w-12 bg-blue-50 rounded-full flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                ✈️
+              </div>
+              <div>
+                <h4 className="font-bold text-gray-900 font-sora">{flight.from} ⇄ {flight.to}</h4>
+                <p className="text-sm text-gray-500 font-inter">Non-stop • {flight.duration}</p>
+              </div>
+            </div>
+            <div className="text-right">
+              <p className="text-xs text-gray-500 font-inter">From</p>
+              <p className="text-lg font-bold text-blue-600 font-sora">{flight.price}</p>
+            </div>
+          </motion.a>
+        ))}
+      </div>
+
       {/* Flight Search Widget */}
       <div className="bg-gradient-to-br from-blue-50 via-cyan-50 to-sky-50 rounded-3xl p-8 shadow-xl border-2 border-blue-200/50">
         <div className="text-center mb-6">
           <h3 className="text-2xl font-semibold text-gray-900 mb-2 font-sora">Search Flights</h3>
-          <p className="text-gray-800 text-base font-inter">Powered by Skyscanner</p>
+          <p className="text-gray-800 text-base font-inter">Find the best flight deals</p>
         </div>
         
-        <div className="bg-white rounded-2xl p-8 border-2 border-dashed border-blue-300 shadow-lg">
-          <p className="text-center text-gray-900 mb-4 text-2xl">
-            ✈️ Skyscanner Widget Integration
-          </p>
-          <p className="text-base text-gray-800 text-center mb-6 font-inter">
-            To integrate: Join Skyscanner Travel Partner Program and add their search widget here
-          </p>
-          <div className="mt-4 text-center">
-            <a 
-              href="https://www.skyscanner.com/flights-to/bhuj/cheapest-flights-to-bhuj.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-full font-inter font-bold transition-all duration-300 hover:scale-105 shadow-xl shadow-blue-500/30"
-            >
-              <span>Search Flights to Bhuj</span>
-              <span>→</span>
-            </a>
-          </div>
-        </div>
+        <TripWidget defaultTab="flights" />
       </div>
 
       {/* Flight Information */}
@@ -443,31 +471,14 @@ function ToursSection() {
       </motion.div>
 
       {/* Tours Widget */}
+      {/* Tours Widget */}
       <div className="bg-gradient-to-br from-purple-50 via-indigo-50 to-blue-50 rounded-3xl p-8 shadow-xl border-2 border-purple-200/50">
         <div className="text-center mb-6">
           <h3 className="text-2xl font-semibold text-gray-900 mb-2 font-sora">Book Tours & Activities</h3>
-          <p className="text-gray-800 text-base font-inter">Powered by GetYourGuide</p>
+          <p className="text-gray-800 text-base font-inter">Discover unforgettable experiences</p>
         </div>
         
-        <div className="bg-white rounded-2xl p-8 border-2 border-dashed border-purple-300 shadow-lg">
-          <p className="text-center text-gray-900 mb-4 text-2xl">
-            🎯 GetYourGuide Widget Integration
-          </p>
-          <p className="text-base text-gray-800 text-center mb-6 font-inter">
-            To integrate: Join GetYourGuide Affiliate Program and embed their booking widget
-          </p>
-          <div className="mt-4 text-center">
-            <a 
-              href="https://www.getyourguide.com/s/?q=gujarat%20kutch"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-full font-inter font-bold transition-all duration-300 hover:scale-105 shadow-xl shadow-purple-500/30"
-            >
-              <span>Explore Tours in Kutch</span>
-              <span>→</span>
-            </a>
-          </div>
-        </div>
+        <TripWidget defaultTab="activities" />
       </div>
 
       {/* Popular Tours */}
@@ -659,6 +670,271 @@ function ShoppingSection() {
     </div>
   );
 }
+
+// Curated Best Deals Component
+function BestDealsSection() {
+  const bestDeals = [
+    {
+      id: 1,
+      name: "Rann Visamo Resort",
+      location: "Near White Rann",
+      rating: "9.2",
+      reviews: "Excellent",
+      price: "₹8,500",
+      image: "/images/hotels/rann-visamo-resort.jpg",
+      tags: ["Luxury Tents", "Cultural", "All Meals"],
+      link: "https://www.booking.com/hotel/in/rann-visamo-resort.html"
+    },
+    {
+      id: 2,
+      name: "The Fern Residency",
+      location: "Bhuj",
+      rating: "4.5",
+      reviews: "1,200+",
+      price: "₹4,500",
+      image: "/images/hotels/the-fern-residency-bhuj.jpg",
+      tags: ["City Center", "Pool", "Spa"],
+      link: "https://www.booking.com/hotel/in/the-fern-residency-bhuj.html"
+    },
+    {
+      id: 3,
+      name: "Serena Beach Resort",
+      location: "Mandvi",
+      rating: "4.7",
+      reviews: "850+",
+      price: "₹6,500",
+      image: "/images/hotels/serena-beach-resort.jpg",
+      tags: ["Beachfront", "Resort", "Family"],
+      link: "https://www.booking.com/hotel/in/serena-beach-resort.html"
+    },
+    {
+      id: 4,
+      name: "Ramee The Srinivas Palace",
+      location: "Bhuj",
+      rating: "8.6",
+      reviews: "750+",
+      price: "₹5,800",
+      image: "/images/hotels/ramee-srinivas-palace.jpg",
+      tags: ["Heritage", "Luxury", "City View"],
+      link: "https://www.booking.com/hotel/in/ramee-the-srinivas-palace.en-gb.html"
+    },
+    {
+      id: 5,
+      name: "La Casa De Rann",
+      location: "Bhuj",
+      rating: "8.8",
+      reviews: "Excellent",
+      price: "₹5,500",
+      image: "/images/hotels/la-casa-de-rann.jpg",
+      tags: ["Boutique", "Comfort", "Central"],
+      link: "https://www.booking.com/hotel/in/la-casa-de-rann.en-gb.html"
+    }
+  ];
+
+  return (
+    <div className="mb-16">
+      <div className="flex items-center justify-between mb-8">
+        <div>
+          <h3 className="text-2xl font-bold font-sora text-gray-900 flex items-center gap-2">
+            <span className="text-3xl">🔥</span> Today's Top Deals
+          </h3>
+          <p className="text-gray-600 font-inter mt-1">Handpicked stays with the best value</p>
+        </div>
+        <a href="https://www.booking.com/searchresults.html?ss=kutch" target="_blank" rel="noopener noreferrer" className="text-purple-600 font-bold hover:text-purple-700 transition-colors flex items-center gap-1">
+          View All Deals <span className="text-xl">→</span>
+        </a>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        {bestDeals.map((deal) => (
+          <motion.a
+            href={deal.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={deal.id}
+            whileHover={{ y: -8 }}
+            className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col cursor-pointer"
+          >
+            <div className="relative h-40 bg-gray-200 flex items-center justify-center text-center">
+              <Image
+                src={deal.image}
+                alt={deal.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
+              />
+              <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg text-xs font-bold text-gray-900 shadow-sm flex items-center gap-1 z-10">
+                <span className="text-yellow-500">★</span> {deal.rating}
+              </div>
+            </div>
+            
+            <div className="p-4 flex flex-col flex-grow">
+              <div className="mb-3">
+                <h4 className="font-bold text-gray-900 font-sora line-clamp-1" title={deal.name}>{deal.name}</h4>
+                <p className="text-gray-500 text-xs font-inter flex items-center gap-1 mt-1">
+                  <span>📍</span> {deal.location}
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-1 mb-4">
+                {deal.tags.map((tag, idx) => (
+                  <span key={idx} className="text-[10px] bg-purple-50 text-purple-700 px-2 py-1 rounded-full font-medium">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-gray-500">Avg. Price</p>
+                  <p className="font-bold text-purple-600 text-lg">{deal.price}</p>
+                </div>
+                <div
+                  className="bg-gray-900 hover:bg-black text-white text-xs font-bold px-4 py-2 rounded-xl transition-colors shadow-lg shadow-gray-900/20"
+                >
+                  Check
+                </div>
+              </div>
+            </div>
+          </motion.a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Trip.com Best Deals Component
+function TripBestDealsSection() {
+  const tripDeals = [
+    {
+      id: 1,
+      name: "Regenta Resort Bhuj",
+      location: "Bhuj",
+      rating: "9.5",
+      reviews: "Amazing",
+      price: "₹6,200",
+      image: "/images/hotels/regenta-resort-bhuj.jpg",
+      tags: ["Luxury", "Spa", "Pool"],
+      link: "https://www.trip.com/hotels/detail/?cityEnName=Bhuj&cityId=4657&hotelId=3037826&allianceid=7347712"
+    },
+    {
+      id: 2,
+      name: "Daze Off Studio House",
+      location: "Bhuj",
+      rating: "9.2",
+      reviews: "Wonderful",
+      price: "₹3,500",
+      image: "/images/hotels/daze-off.webp",
+      tags: ["Boutique", "Modern", "Studio"],
+      link: "https://www.trip.com/hotels/detail/?cityEnName=Bhuj&cityId=4657&hotelId=50183416&allianceid=7347712"
+    },
+    {
+      id: 3,
+      name: "Hotel Mangalam",
+      location: "Bhuj",
+      rating: "8.8",
+      reviews: "Very Good",
+      price: "₹3,200",
+      image: "/images/hotels/hotel-mangalam.jpg",
+      tags: ["Central", "Comfort", "Value"],
+      link: "https://www.trip.com/hotels/detail/?hotelId=777111&allianceid=7347712"
+    },
+    {
+      id: 4,
+      name: "The Presidential Suites",
+      location: "Bhuj",
+      rating: "9.0",
+      reviews: "Excellent",
+      price: "₹4,500",
+      image: "/images/hotels/presidential-suites.jpg",
+      tags: ["Suites", "Luxury", "Spacious"],
+      link: "https://www.trip.com/hotels/detail/?hotelId=102651194&allianceid=7347712"
+    },
+    {
+      id: 5,
+      name: "The Fern Residency",
+      location: "Bhuj",
+      rating: "8.5",
+      reviews: "Very Good",
+      price: "₹4,200",
+      image: "/images/hotels/fern-residency-trip.jpg",
+      tags: ["Business", "Comfort", "Gym"],
+      link: "https://www.trip.com/hotels/detail/?cityEnName=Bhuj&cityId=4657&hotelId=24116639&allianceid=7347712"
+    }
+  ];
+
+  return (
+    <div className="mb-16">
+      <div className="flex items-center justify-between mb-8">
+        <div>
+          <h3 className="text-2xl font-bold font-sora text-gray-900 flex items-center gap-2">
+            <span className="text-3xl">💎</span> Trip.com Favorites
+          </h3>
+          <p className="text-gray-600 font-inter mt-1">Top rated stays on Trip.com</p>
+        </div>
+        <a href="https://www.trip.com/hotels/list?city=30544&allianceid=7347712&sid=website" target="_blank" rel="noopener noreferrer" className="text-blue-600 font-bold hover:text-blue-700 transition-colors flex items-center gap-1">
+          View All on Trip.com <span className="text-xl">→</span>
+        </a>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        {tripDeals.map((deal) => (
+          <motion.a
+            href={deal.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={deal.id}
+            whileHover={{ y: -8 }}
+            className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-blue-100 flex flex-col cursor-pointer"
+          >
+            <div className="relative h-40 bg-gray-200 flex items-center justify-center text-center">
+              <Image
+                src={deal.image}
+                alt={deal.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 20vw"
+              />
+              <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg text-xs font-bold text-gray-900 shadow-sm flex items-center gap-1 z-10">
+                <span className="text-blue-500">★</span> {deal.rating}
+              </div>
+            </div>
+            
+            <div className="p-4 flex flex-col flex-grow">
+              <div className="mb-3">
+                <h4 className="font-bold text-gray-900 font-sora line-clamp-1" title={deal.name}>{deal.name}</h4>
+                <p className="text-gray-500 text-xs font-inter flex items-center gap-1 mt-1">
+                  <span>📍</span> {deal.location}
+                </p>
+              </div>
+
+              <div className="flex flex-wrap gap-1 mb-4">
+                {deal.tags.map((tag, idx) => (
+                  <span key={idx} className="text-[10px] bg-blue-50 text-blue-700 px-2 py-1 rounded-full font-medium">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="mt-auto pt-3 border-t border-gray-100 flex items-center justify-between">
+                <div>
+                  <p className="text-xs text-gray-500">Avg. Price</p>
+                  <p className="font-bold text-blue-600 text-lg">{deal.price}</p>
+                </div>
+                <div
+                  className="bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold px-4 py-2 rounded-xl transition-colors shadow-lg shadow-blue-600/20"
+                >
+                  Book
+                </div>
+              </div>
+            </div>
+          </motion.a>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 
 
 

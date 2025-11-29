@@ -46,7 +46,7 @@ export default function BlogClient() {
           <div className="absolute inset-0 bg-gradient-to-b from-white/20 via-transparent to-white/30"></div>
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-6 pt-20 pb-16 w-full">
+        <div className="relative z-20 max-w-[1600px] mx-auto px-6 pt-20 pb-16 w-full">
           <motion.div
             initial="hidden"
             animate="visible"
@@ -85,7 +85,7 @@ export default function BlogClient() {
         <div className="absolute top-40 right-10 w-64 h-64 bg-gradient-to-br from-cyan-300 to-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
         <div className="absolute bottom-60 left-20 w-72 h-72 bg-gradient-to-br from-purple-300 to-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 py-12">
         {/* Category Filter */}
         <motion.div
           initial="hidden"

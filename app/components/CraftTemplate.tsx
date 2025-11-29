@@ -53,7 +53,7 @@ export default function CraftTemplate({ craft }: CraftProps) {
     <main className="min-h-screen overflow-x-hidden bg-gradient-to-br from-purple-50/40 via-indigo-50/30 to-blue-50/40">
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-sm border-b border-slate-200 shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-14">
             <div className="flex">
               <Link href="/#culture" className="flex items-center gap-2 text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors">
@@ -87,7 +87,7 @@ export default function CraftTemplate({ craft }: CraftProps) {
           
           {/* Title Overlay */}
           <div className="absolute inset-0 flex items-end">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-10 md:pb-12 w-full">
+            <div className="max-w-[1600px] mx-auto px-6 lg:px-8 pb-10 md:pb-12 w-full">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -122,7 +122,7 @@ export default function CraftTemplate({ craft }: CraftProps) {
       </section>
 
       {/* Main Content Sections */}
-      <div className="max-w-6xl mx-auto px-6 py-12 md:py-16">
+      <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-16">
         <div className="space-y-6">
           {craft.sections.map((section, index) => {
             const sectionColors = [
@@ -167,7 +167,7 @@ export default function CraftTemplate({ craft }: CraftProps) {
 
       {/* Artisan Information */}
       {craft.artisanInfo && (
-        <div className="max-w-6xl mx-auto px-6 pb-8">
+        <div className="max-w-[1400px] mx-auto px-6 pb-8">
           <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl shadow-lg border-2 border-indigo-300">
             <h3 className="text-2xl font-bold text-indigo-900 mb-6 flex items-center gap-3">
               <span className="text-3xl">👨‍🎨</span>
@@ -199,7 +199,7 @@ export default function CraftTemplate({ craft }: CraftProps) {
       )}
 
       {/* Quick Facts */}
-      <section className="max-w-6xl mx-auto px-6 py-8 mb-8">
+      <section className="max-w-[1400px] mx-auto px-6 py-8 mb-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
           Quick Facts
         </h2>
@@ -227,7 +227,7 @@ export default function CraftTemplate({ craft }: CraftProps) {
       </section>
 
       {/* Gallery */}
-      <section className="max-w-6xl mx-auto px-6 py-8 mb-12">
+      <section className="max-w-[1400px] mx-auto px-6 py-8 mb-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
           Gallery
         </h2>
@@ -297,7 +297,7 @@ export default function CraftTemplate({ craft }: CraftProps) {
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              className="relative w-full h-full max-w-7xl max-h-[90vh] flex flex-col items-center justify-center"
+              className="relative w-full h-full max-w-[1600px] max-h-[90vh] flex flex-col items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative w-full h-full">

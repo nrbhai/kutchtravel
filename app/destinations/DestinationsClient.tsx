@@ -174,7 +174,7 @@ function DestinationsClient() {
           <Navigation />
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+        <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pt-20">
           {/* Two Column Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Auto-rotating Image Carousel */}
@@ -290,7 +290,7 @@ function DestinationsClient() {
       </div>
       {/* Category Filters and Search Section */}
       <div className="bg-pink-50/60 backdrop-blur-xl border-b border-pink-100 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-5">
+        <div className="max-w-[1600px] mx-auto px-4 py-5">
           {/* Search and Results Count Row */}
           <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-6">
             <div className="relative w-full max-w-md">
@@ -350,7 +350,7 @@ function DestinationsClient() {
       </div>
 
       {/* Main Content Container */}
-      <div className="max-w-7xl mx-auto px-4 py-8 space-y-8">
+      <div className="max-w-[1600px] mx-auto px-4 py-8 space-y-8">
 
         {/* Destinations Grid with Gradient Cards */}
         {filteredDestinations.length > 0 ? (

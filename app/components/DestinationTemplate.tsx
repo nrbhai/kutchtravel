@@ -36,7 +36,7 @@ export default function DestinationTemplate({
     <main className="min-h-screen overflow-x-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-sm border-b border-slate-200 shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-14">
             <div className="flex">
               <Link href="/" className="flex items-center gap-2 text-slate-600 hover:text-slate-900 text-sm font-medium">
@@ -72,7 +72,7 @@ export default function DestinationTemplate({
           
           {/* Title Overlay on Image */}
           <div className="absolute inset-0 flex items-end">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16 lg:pb-20 w-full">
+            <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pb-12 md:pb-16 lg:pb-20 w-full">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -113,12 +113,12 @@ export default function DestinationTemplate({
       </section>
 
       {/* Main Content */}
-      <div className="max-w-5xl mx-auto px-6 py-12 md:py-16">
+      <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-16">
         {description}
       </div>
 
       {/* Quick Facts */}
-      <section className="max-w-5xl mx-auto px-6 py-12">
+      <section className="max-w-[1400px] mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">Quick Facts</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {facts.map((fact, index) => {
@@ -149,7 +149,7 @@ export default function DestinationTemplate({
       </section>
 
       {/* Gallery */}
-      <section className="max-w-5xl mx-auto px-6 py-12">
+      <section className="max-w-[1400px] mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-teal-600 to-emerald-600 bg-clip-text text-transparent">Gallery</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {gallery.map((item, index) => (
@@ -231,7 +231,7 @@ export default function DestinationTemplate({
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ duration: 0.3 }}
-              className="relative max-w-7xl max-h-[90vh] w-full h-full"
+              className="relative max-w-[1600px] max-h-[90vh] w-full h-full"
               onClick={(e) => e.stopPropagation()}
             >
               <Image
@@ -260,7 +260,7 @@ export default function DestinationTemplate({
       </AnimatePresence>
 
       {/* Map Section */}
-      <section className="max-w-5xl mx-auto px-6 py-12">
+      <section className="max-w-[1400px] mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">Location & Nearby Cities</h2>
         <p className="text-gray-700 mb-6 text-lg">Explore the location and judge distances to nearby cities like Bhuj, Gandhidham, and other major destinations in Kutch.</p>
         <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-white p-2">

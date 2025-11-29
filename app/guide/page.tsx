@@ -10,6 +10,8 @@ import {
   Wallet, CreditCard, Banknote, Mountain, Waves
 } from 'lucide-react';
 import Navigation from '../components/Navigation';
+import BookingWidget from '../components/BookingWidget';
+import TripWidget from '../components/TripWidget';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -69,7 +71,7 @@ export default function TravelGuidePage() {
           <div className="absolute -bottom-20 left-1/3 w-96 h-96 bg-gradient-to-br from-blue-200 to-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-4000"></div>
         </div>
 
-        <div className="relative z-20 max-w-7xl mx-auto px-6 pt-24 pb-16 w-full">
+        <div className="relative z-20 max-w-[1600px] mx-auto px-6 pt-24 pb-16 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Map with Twinkling Stars */}
             <motion.div
@@ -142,7 +144,7 @@ export default function TravelGuidePage() {
         <div className="absolute bottom-60 left-20 w-80 h-80 bg-gradient-to-br from-sky-200 to-teal-300 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-blue-200 to-cyan-300 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-blob animation-delay-2000"></div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-6 py-12">
           
           {/* Quick Overview */}
           <motion.div
@@ -335,6 +337,17 @@ export default function TravelGuidePage() {
             </div>
           </motion.div>
 
+          {/* Trip.com Affiliate Widget */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="mb-16"
+          >
+            <TripWidget defaultTab="flights" />
+          </motion.div>
+
           {/* Local Transportation */}
           <motion.div
             initial="hidden"
@@ -465,6 +478,17 @@ export default function TravelGuidePage() {
                 </div>
               </div>
             </div>
+          </motion.div>
+
+          {/* Booking.com Affiliate Widget */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+            className="mb-16"
+          >
+            <BookingWidget />
           </motion.div>
 
           {/* Food & Cuisine */}

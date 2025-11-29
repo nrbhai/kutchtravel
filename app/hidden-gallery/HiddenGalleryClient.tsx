@@ -58,7 +58,7 @@ export default function HiddenGalleryClient({ images }: HiddenGalleryClientProps
   return (
     <>
       {/* Gallery Grid */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-[1600px] mx-auto px-6 py-16">
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">Secret Collection</h2>

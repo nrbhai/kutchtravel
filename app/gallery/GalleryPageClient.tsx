@@ -39,7 +39,7 @@ export default function GalleryPageClient() {
           <div className="blob blob-3 bg-teal-400/20"></div>
         </div>
         
-        <div className="relative max-w-7xl mx-auto px-6 pt-20">
+        <div className="relative max-w-[1600px] mx-auto px-6 pt-20">
           {/* Header Content */}
           <div className="text-center">
             <div className="mb-6 inline-block">
@@ -75,7 +75,7 @@ export default function GalleryPageClient() {
       </div>
 
       {/* Gallery Content */}
-      <main className="max-w-7xl mx-auto px-6 py-12">
+      <main className="max-w-[1600px] mx-auto px-6 py-12">
         {/* Instructions */}
         <div className="mb-10 p-6 bg-white/80 backdrop-blur-xl rounded-2xl border-2 border-cyan-200 shadow-lg">
           <h2 className="text-xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-4 flex items-center gap-2 font-sora">

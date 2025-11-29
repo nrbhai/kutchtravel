@@ -126,7 +126,7 @@ function HiddenGemsClient() {
           <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-indigo-200/30 to-blue-200/30 rounded-full blur-3xl" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 pt-20">
+        <div className="relative max-w-[1600px] mx-auto px-4 pt-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             {/* Left: Image Placeholder */}
             <motion.div
@@ -192,7 +192,7 @@ function HiddenGemsClient() {
 
       {/* Category Filters and Search Section */}
       <div className="bg-white/90 backdrop-blur-xl border-b border-gray-100 shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-5">
+        <div className="max-w-[1600px] mx-auto px-4 py-5">
           {/* Search and Results Count Row */}
           <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-6">
             <div className="relative w-full max-w-md">
@@ -252,7 +252,7 @@ function HiddenGemsClient() {
       </div>
 
       {/* Main Content Container */}
-      <div className="max-w-7xl mx-auto px-4 py-8 space-y-8">
+      <div className="max-w-[1600px] mx-auto px-4 py-8 space-y-8">
 
         {/* Hidden Gems Grid with Gradient Cards */}
         {filteredGems.length > 0 ? (
@@ -289,7 +289,7 @@ function HiddenGemsClient() {
                     <div className="flex flex-col">
                       
                       {/* Compact Image with Rounded Corners */}
-                      <div className="relative h-40 m-4 rounded-xl overflow-hidden">
+                      <div className="relative h-64 m-4 rounded-xl overflow-hidden">
                         <Image
                           src={gem.image}
                           alt={gem.title}

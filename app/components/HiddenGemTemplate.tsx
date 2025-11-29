@@ -53,7 +53,7 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
     <main className="min-h-screen overflow-x-hidden bg-gradient-to-br from-blue-50/50 via-purple-50/50 to-pink-50/50">
       {/* Navigation */}
       <nav className="bg-white/90 backdrop-blur-sm border-b border-slate-200 shadow-sm sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-14">
             <div className="flex">
               <Link href="/hidden-gems" className="flex items-center gap-2 text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors">
@@ -87,7 +87,7 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
           
           {/* Title Overlay */}
           <div className="absolute inset-0 flex items-end">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-10 md:pb-12 w-full">
+            <div className="max-w-[1600px] mx-auto px-6 lg:px-8 pb-10 md:pb-12 w-full">
               <motion.h1 
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -114,7 +114,7 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
       </section>
 
       {/* Main Content Sections */}
-      <div className="max-w-6xl mx-auto px-6 py-12 md:py-16">
+      <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-16">
         <div className="space-y-6">
           {gem.sections.map((section, index) => {
             const sectionColors = [
@@ -159,7 +159,7 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
 
       {/* Best Time & Warnings */}
       {(gem.bestTime || (gem.warnings && gem.warnings.length > 0)) && (
-        <div className="max-w-6xl mx-auto px-6 pb-8">
+        <div className="max-w-[1400px] mx-auto px-6 pb-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {gem.bestTime && (
               <div className="bg-gradient-to-br from-teal-50 to-emerald-50 p-6 rounded-2xl shadow-lg border-2 border-teal-300">
@@ -191,7 +191,7 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
       )}
 
       {/* Quick Facts */}
-      <section className="max-w-6xl mx-auto px-6 py-8 mb-8">
+      <section className="max-w-[1400px] mx-auto px-6 py-8 mb-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">
           Quick Facts
         </h2>
@@ -219,7 +219,7 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
       </section>
 
       {/* Gallery */}
-      <section className="max-w-6xl mx-auto px-6 py-8 mb-8">
+      <section className="max-w-[1400px] mx-auto px-6 py-8 mb-8">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-blue-600 via-teal-600 to-emerald-600 bg-clip-text text-transparent">
           Gallery
         </h2>
@@ -248,7 +248,7 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
       </section>
 
       {/* Map Section */}
-      <section className="max-w-6xl mx-auto px-6 py-8 mb-12">
+      <section className="max-w-[1400px] mx-auto px-6 py-8 mb-12">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">
           Location & Nearby Cities
         </h2>
@@ -311,7 +311,7 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.9 }}
-              className="relative w-full h-full max-w-7xl max-h-[90vh] flex flex-col items-center justify-center"
+              className="relative w-full h-full max-w-[1600px] max-h-[90vh] flex flex-col items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative w-full h-full">

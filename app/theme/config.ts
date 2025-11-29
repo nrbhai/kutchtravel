@@ -123,7 +123,7 @@ export const theme = {
   // Spacing
   spacing: {
     section: 'py-24 md:py-28',
-    container: 'max-w-7xl mx-auto px-6',
+    container: 'max-w-[1600px] mx-auto px-6',
     card: 'p-6 md:p-8',
   },
   

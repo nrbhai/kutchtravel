@@ -16,7 +16,7 @@ export function StructuredData() {
         "logo": "https://kutchtravel.com/images/logo.png",
         "image": "https://kutchtravel.com/images/og-image.jpg",
         "telephone": "+91-9825034580",
-        "email": "info@kutchtravel.com",
+        "email": "info@travelkutch.org",
         "sameAs": [
           "https://www.facebook.com/kutchtravel",
           "https://www.instagram.com/kutchtravel",
