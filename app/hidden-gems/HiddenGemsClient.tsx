@@ -289,7 +289,7 @@ function HiddenGemsClient() {
                     <div className="flex flex-col">
                       
                       {/* Compact Image with Rounded Corners */}
-                      <div className="relative h-64 m-4 rounded-xl overflow-hidden">
+                      <div className="relative aspect-[4/3] m-4 rounded-xl overflow-hidden">
                         <Image
                           src={gem.image}
                           alt={gem.title}
@@ -327,7 +327,7 @@ function HiddenGemsClient() {
                               <span className="text-base shrink-0">✨</span>
                               <div className="min-w-0">
                                 <p className="text-[10px] font-bold text-cyan-700 uppercase tracking-wider font-inter mb-0.5">About</p>
-                                <p className="text-xs text-gray-800 font-inter leading-snug line-clamp-2">
+                                <p className="text-xs text-gray-800 font-inter leading-snug line-clamp-4">
                                   {gem.sections[0]?.content || "Discover this amazing hidden gem in Kutch."}
                                 </p>
                               </div>

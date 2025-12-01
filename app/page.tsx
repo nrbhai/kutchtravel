@@ -907,14 +907,14 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             {/* Bandhani */}
             <Link href="/crafts/bandhani" className="group">
               <div className="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-2xl border-2 border-cyan-200 hover:border-cyan-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
-                <div className="relative h-32 overflow-hidden m-3 rounded-xl">
+                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl">
                   <Image 
-                    src="/images/crafts/bandhani.jpg" 
+                    src="/images/crafts/bandhani/bandhani1.jpg" 
                     alt="Bandhani"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -931,9 +931,9 @@ export default function Home() {
             {/* Ajrakh */}
             <Link href="/crafts/ajrakh" className="group">
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl border-2 border-blue-200 hover:border-blue-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
-                <div className="relative h-32 overflow-hidden m-3 rounded-xl">
+                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl">
                   <Image 
-                    src="/images/crafts/ajrakh.jpg" 
+                    src="/images/crafts/ajrakh/ajrakh1.jpg" 
                     alt="Ajrakh"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -950,9 +950,9 @@ export default function Home() {
             {/* Rogan Art */}
             <Link href="/crafts/rogan-art" className="group">
               <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-2xl border-2 border-indigo-200 hover:border-indigo-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
-                <div className="relative h-32 overflow-hidden m-3 rounded-xl">
+                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl">
                   <Image 
-                    src="/images/crafts/rogan.jpg" 
+                    src="/images/crafts/rogan/rogan1.jpg" 
                     alt="Rogan Art"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -969,8 +969,14 @@ export default function Home() {
             {/* Mirror Work */}
             <Link href="/crafts/mirror-work" className="group">
               <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl border-2 border-purple-200 hover:border-purple-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
-                <div className="relative h-32 overflow-hidden m-3 rounded-xl bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center">
-                  <span className="text-5xl">✨</span>
+                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center">
+                  <Image 
+                    src="/images/crafts/mirror/mirror1.webp" 
+                    alt="Mirror Work"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
                 </div>
                 <div className="p-4 pt-2">
                   <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Mirror Work</h3>
@@ -982,7 +988,7 @@ export default function Home() {
             {/* Sudi Chappu */}
             <Link href="/crafts/sudi-chappu" className="group">
               <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl border-2 border-teal-200 hover:border-teal-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
-                <div className="relative h-32 overflow-hidden m-3 rounded-xl bg-gradient-to-br from-teal-200 to-teal-300 flex items-center justify-center">
+                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl bg-gradient-to-br from-teal-200 to-teal-300 flex items-center justify-center">
                   <span className="text-5xl">🔪</span>
                 </div>
                 <div className="p-4 pt-2">
@@ -995,7 +1001,7 @@ export default function Home() {
             {/* Pottery */}
             <Link href="/crafts/pottery" className="group">
               <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl border-2 border-amber-200 hover:border-amber-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
-                <div className="relative h-32 overflow-hidden m-3 rounded-xl bg-gradient-to-br from-amber-200 to-amber-300 flex items-center justify-center">
+                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl bg-gradient-to-br from-amber-200 to-amber-300 flex items-center justify-center">
                   <span className="text-5xl">🏺</span>
                 </div>
                 <div className="p-4 pt-2">
@@ -1008,7 +1014,7 @@ export default function Home() {
             {/* Leather Craft */}
             <Link href="/crafts/leather-craft" className="group">
               <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl border-2 border-orange-200 hover:border-orange-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
-                <div className="relative h-32 overflow-hidden m-3 rounded-xl bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center">
+                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center">
                   <span className="text-5xl">👞</span>
                 </div>
                 <div className="p-4 pt-2">
@@ -1021,7 +1027,7 @@ export default function Home() {
             {/* Weaving */}
             <Link href="/crafts/weaving" className="group">
               <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl border-2 border-emerald-200 hover:border-emerald-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
-                <div className="relative h-32 overflow-hidden m-3 rounded-xl bg-gradient-to-br from-emerald-200 to-emerald-300 flex items-center justify-center">
+                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl bg-gradient-to-br from-emerald-200 to-emerald-300 flex items-center justify-center">
                   <span className="text-5xl">🧵</span>
                 </div>
                 <div className="p-4 pt-2">

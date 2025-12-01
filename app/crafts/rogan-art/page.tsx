@@ -11,7 +11,7 @@ export default function RoganArtPage() {
     slug: "rogan-art",
     title: "Rogan Art",
     subtitle: "Traditional Cloth Painting with Castor Oil",
-    image: "/images/crafts/rogan.jpg",
+    image: "/images/crafts/rogan/rogan1.jpg",
     icon: "🎨",
     category: "Painting",
     
@@ -93,13 +93,12 @@ export default function RoganArtPage() {
     ],
     
     gallery: [
-      { src: "/images/crafts/rogan.jpg", caption: "Traditional Tree of Life Design" },
-      { src: "/images/crafts/rogan-2.jpg", caption: "Abdul Gafur Khatri at Work" },
-      { src: "/images/crafts/rogan-3.jpg", caption: "Intricate Peacock Pattern" },
-      { src: "/images/crafts/rogan-4.jpg", caption: "Symmetrical Folding Technique" },
-      { src: "/images/crafts/rogan-5.jpg", caption: "Vibrant Colors from Natural Dyes" }
+      { src: "/images/crafts/rogan/rogan1.jpg", caption: "Traditional Tree of Life Design" },
+      { src: "/images/crafts/rogan/rogan2.jpg", caption: "Abdul Gafur Khatri at Work" },
+      { src: "/images/crafts/rogan/rogan3.jpg", caption: "Intricate Peacock Pattern" },
+      { src: "/images/crafts/rogan/rogan1.jpg", caption: "Symmetrical Folding Technique" },
+      { src: "/images/crafts/rogan/rogan2.jpg", caption: "Vibrant Colors from Natural Dyes" }
     ]
-  };
 
   return <CraftTemplate craft={craft} />;
 }

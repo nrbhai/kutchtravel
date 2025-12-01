@@ -10,7 +10,7 @@ export default function BandhaniPage() {
     slug: "bandhani",
     title: "Bandhani",
     subtitle: "Traditional Tie-Dye Art",
-    image: "/images/crafts/bandhani.jpg",
+    image: "/images/crafts/bandhani/bandhani1.jpg",
     icon: "🎨",
     category: "Textile Art",
     
@@ -81,11 +81,11 @@ export default function BandhaniPage() {
     ],
     
     gallery: [
-      { src: "/images/crafts/bandhani.jpg", caption: "Traditional Bandhani Fabric" },
-      { src: "/images/crafts/bandhani.jpg", caption: "Intricate Dot Patterns" },
-      { src: "/images/crafts/bandhani.jpg", caption: "Bandhani Saree" },
-      { src: "/images/crafts/bandhani.jpg", caption: "Artisan at Work" },
-      { src: "/images/crafts/bandhani.jpg", caption: "Colorful Bandhani Display" }
+      { src: "/images/crafts/bandhani/bandhani1.jpg", caption: "Traditional Bandhani Fabric" },
+      { src: "/images/crafts/bandhani/bandhani2.jpg", caption: "Intricate Dot Patterns" },
+      { src: "/images/crafts/bandhani/bandhani3.jpg", caption: "Bandhani Saree" },
+      { src: "/images/crafts/bandhani/bandhani4.webp", caption: "Artisan at Work" },
+      { src: "/images/crafts/bandhani/bandhani1.jpg", caption: "Colorful Bandhani Display" }
     ]
   };
 

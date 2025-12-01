@@ -6,12 +6,13 @@ export const metadata: Metadata = {
   description: 'Explore the dazzling Mirror Work embroidery of Kutch, where tiny mirrors are stitched into colorful fabric creating stunning traditional designs.',
 };
 
+
 export default function MirrorWorkPage() {
   const craft = {
     slug: "mirror-work",
     title: "Mirror Work (Shisha)",
     subtitle: "Sparkling Traditional Embroidery",
-    image: "/images/crafts/mirror-work.jpg",
+    image: "/images/crafts/mirror/mirror1.webp",
     icon: "✨",
     category: "Embroidery",
     
@@ -47,7 +48,7 @@ export default function MirrorWorkPage() {
           "Geometric patterns (triangles, diamonds, squares)",
           "Elephants and camels (regional animals)",
           "Human figures in traditional dress",
-          "Border patterns with continuous mirror arrangements"
+          "Border patterns with intricate details"
         ]
       },
       {
@@ -108,11 +109,11 @@ export default function MirrorWorkPage() {
     ],
     
     gallery: [
-      { src: "/images/crafts/mirror-work.jpg", caption: "Traditional Mirror Work Embroidery" },
-      { src: "/images/crafts/mirror-work-2.jpg", caption: "Rabari Style Mirror Work" },
-      { src: "/images/crafts/mirror-work-3.jpg", caption: "Artisan Creating Shisha Stitch" },
-      { src: "/images/crafts/mirror-work-4.jpg", caption: "Colorful Cushion Covers" },
-      { src: "/images/crafts/mirror-work-5.jpg", caption: "Traditional Chaniya Choli" }
+      { src: "/images/crafts/mirror/mirror1.webp", caption: " " },
+      { src: "/images/crafts/mirror/mirror2.webp", caption: " " },
+      { src: "/images/crafts/mirror/mirror3.webp", caption: " " },
+      { src: "/images/crafts/mirror/mirror4.webp", caption: " " },
+      { src: "/images/crafts/mirror/mirror5.webp", caption: " " }
     ]
   };
 
