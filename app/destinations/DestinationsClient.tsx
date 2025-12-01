@@ -387,7 +387,7 @@ function DestinationsClient() {
                     <div className="flex flex-col">
                       
                       {/* Compact Image with Rounded Corners */}
-                      <div className="relative h-40 m-4 rounded-xl overflow-hidden">
+                      <div className="relative aspect-[4/3] m-4 rounded-xl overflow-hidden">
                         <Image
                           src={destination.image}
                           alt={destination.title}
@@ -427,7 +427,7 @@ function DestinationsClient() {
                               <span className="text-base shrink-0">✨</span>
                               <div className="min-w-0">
                                 <p className="text-[10px] font-bold text-cyan-700 uppercase tracking-wider font-inter mb-0.5">Famous For</p>
-                                <p className="text-xs text-gray-800 font-inter leading-snug line-clamp-2">
+                                <p className="text-xs text-gray-800 font-inter leading-snug line-clamp-4">
                                   {destination.sections[0]?.content?.replace(/<[^>]*>/g, '') || destination.title}
                                 </p>
                               </div>
