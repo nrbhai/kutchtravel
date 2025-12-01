@@ -99,6 +99,7 @@ export default function RoganArtPage() {
       { src: "/images/crafts/rogan/rogan1.jpg", caption: "Symmetrical Folding Technique" },
       { src: "/images/crafts/rogan/rogan2.jpg", caption: "Vibrant Colors from Natural Dyes" }
     ]
+  };
 
   return <CraftTemplate craft={craft} />;
 }

@@ -94,6 +94,7 @@ export default function AjrakhPage() {
       { src: "/images/crafts/ajrakh/ajrakh4.jpg", caption: "Natural Dyeing Vats" },
       { src: "/images/crafts/ajrakh/ajrakh4.webp", caption: "Master Artisan at Work" }
     ]
+  };
 
   return <CraftTemplate craft={craft} />;
 }
