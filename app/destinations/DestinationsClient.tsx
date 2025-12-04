@@ -29,29 +29,6 @@ const cardVariants = {
   }
 };
 
-// Add this at the root of your CSS file or in your Tailwind config
-const styles = `
-  @keyframes subtle-zoom {
-    from {
-      transform: scale(1.1);
-    }
-    to {
-      transform: scale(1.15);
-    }
-  }
-  
-  .animate-subtle-zoom {
-    animation: subtle-zoom 15s ease-in-out infinite alternate;
-  }
-`;
-
-// Add the styles to the document
-if (typeof document !== 'undefined') {
-  const styleSheet = document.createElement('style');
-  styleSheet.textContent = styles;
-  document.head.appendChild(styleSheet);
-}
-
 const filterButtonVariants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { 
@@ -200,7 +177,6 @@ function DestinationsClient() {
                       times: [0, 0.1, 0.9, 1]
                     }}
                     className="absolute inset-0"
-                    style={{ display: index === 0 ? 'block' : 'none' }}
                   >
                     <Image
                       src={dest.image}

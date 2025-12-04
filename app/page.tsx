@@ -443,7 +443,7 @@ export default function Home() {
                 </span>
                 <motion.span 
                   variants={fadeUp} 
-                  className="block text-lg md:text-xl lg:text-2xl font-inter font-medium bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent mt-4 drop-shadow-[0_3px_8px_rgba(0,0,0,0.3)] tracking-wide sparkle-wrap" 
+                  className="block text-2xl md:text-3xl lg:text-4xl font-inter font-medium bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent mt-4 drop-shadow-[0_3px_8px_rgba(0,0,0,0.3)] tracking-wide sparkle-wrap" 
                   tabIndex={0}
                 >
                   {subtitle.split("").map((ch: string, i: number) => (
@@ -468,7 +468,7 @@ export default function Home() {
                 <span className="text-gray-900 font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
                   Where salt meets sky, and stories meet silence
                 </span>
-                <span className="block text-sm md:text-base mt-5 font-inter font-medium text-gray-800">
+                <span className="block text-sm md:text-base mt-5 font-inter font-medium text-blue-900">
                   Practical guides, real photos, and local tips — not tourist brochures.
                 </span>
               </motion.p>
@@ -529,56 +529,56 @@ export default function Home() {
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 lg:gap-8 relative">
             <Link href="/destinations" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-blue-50 via-indigo-50/80 to-blue-50 backdrop-blur-sm border border-blue-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-b from-blue-100/50 via-indigo-100/50 to-blue-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 backdrop-blur-sm border border-blue-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <MapPin className="w-8 h-8 text-blue-600 mb-3 transform group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium text-blue-900 font-sans tracking-wide">Destinations</span>
+                <MapPin className="w-8 h-8 text-white mb-3 transform group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-sm font-medium text-white font-sans tracking-wide">Destinations</span>
               </div>
             </Link>
             <Link href="/hidden-gems" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-cyan-50 via-teal-50/80 to-cyan-50 backdrop-blur-sm border border-cyan-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-b from-cyan-100/50 via-teal-100/50 to-cyan-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 backdrop-blur-sm border border-emerald-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Sparkles className="w-8 h-8 text-cyan-600 mb-3 transform group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium text-cyan-900 font-sans tracking-wide">Hidden Gems</span>
+                <Sparkles className="w-8 h-8 text-white mb-3 transform group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-sm font-medium text-white font-sans tracking-wide">Hidden Gems</span>
               </div>
             </Link>
             <Link href="/guide" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-teal-50 via-emerald-50/80 to-teal-50 backdrop-blur-sm border border-teal-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-b from-teal-100/50 via-emerald-100/50 to-teal-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-600 backdrop-blur-sm border border-violet-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <BookOpen className="w-8 h-8 text-teal-600 mb-3 transform group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium text-teal-900 font-sans tracking-wide">Travel Guide</span>
+                <BookOpen className="w-8 h-8 text-white mb-3 transform group-hover:scale-110 transition-transform duration-300" />
+                <span className="text-sm font-medium text-white font-sans tracking-wide">Travel Guide</span>
               </div>
             </Link>
             <Link href="/gallery" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-sky-50 via-blue-50/80 to-sky-50 backdrop-blur-sm border border-sky-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-b from-sky-100/50 via-blue-100/50 to-sky-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-pink-500 via-rose-500 to-red-600 backdrop-blur-sm border border-pink-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-pink-600 via-rose-600 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Camera className="w-8 h-8 text-sky-600 mb-3 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-sky-900 font-sans tracking-wide">Gallery</span>
+                <Camera className="w-8 h-8 text-white mb-3 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium text-white font-sans tracking-wide">Gallery</span>
               </div>
             </Link>
-            <Link href="/blog" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-cyan-50 via-sky-50/80 to-cyan-50 backdrop-blur-sm border border-cyan-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-b from-cyan-100/50 via-sky-100/50 to-cyan-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+            <Link href="/blog" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-amber-500 via-orange-500 to-red-600 backdrop-blur-sm border border-amber-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-amber-600 via-orange-600 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Waves className="w-8 h-8 text-cyan-600 mb-3 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-cyan-900 font-sans tracking-wide">Blog</span>
+                <Waves className="w-8 h-8 text-white mb-3 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium text-white font-sans tracking-wide">Blog</span>
               </div>
             </Link>
-            <Link href="/bookings" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-green-50 via-lime-50/80 to-green-50 backdrop-blur-sm border border-green-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-b from-green-100/50 via-lime-100/50 to-green-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+            <Link href="/bookings" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-lime-500 via-green-500 to-emerald-600 backdrop-blur-sm border border-lime-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-lime-600 via-green-600 to-emerald-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Calendar className="w-8 h-8 text-green-600 mb-3 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-green-900 font-sans tracking-wide">Booking</span>
+                <Calendar className="w-8 h-8 text-white mb-3 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium text-white font-sans tracking-wide">Booking</span>
               </div>
             </Link>
-            <Link href="/about" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-b from-orange-50 via-amber-50/80 to-orange-50 backdrop-blur-sm border border-orange-100 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-b from-orange-100/50 via-amber-100/50 to-orange-100/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+            <Link href="/about" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-orange-500 via-red-500 to-pink-600 backdrop-blur-sm border border-orange-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-red-600 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Users className="w-8 h-8 text-orange-600 mb-3 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-orange-900 font-sans tracking-wide">About/Contact</span>
+                <Users className="w-8 h-8 text-white mb-3 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium text-white font-sans tracking-wide">About/Contact</span>
               </div>
             </Link>
           </div>
