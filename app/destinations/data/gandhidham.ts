@@ -65,11 +65,11 @@ export const gandhidham: Destination = {
       color: "bg-indigo-50",
       border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b><a href='/places/bhuj' class='text-blue-400 hover:text-blue-300'>Bhuj:</a></b> 60km - Cultural capital of Kutch",
-        "<b><a href='/places/anjar' class='text-blue-400 hover:text-blue-300'>Anjar:</a></b> 15km - Ancient town with temples",
-        "<b><a href='/places/kandla' class='text-blue-400 hover:text-blue-300'>Kandla Port:</a></b> 10km - Major port city",
-        "<b><a href='/places/adipur' class='text-blue-400 hover:text-blue-300'>Adipur:</a></b> 5km - Sister city with additional amenities",
-        "<b><a href='/places/white-rann' class='text-blue-400 hover:text-blue-300'>White Rann:</a></b> 140km - Famous salt desert"
+        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 60km - Cultural capital of Kutch",
+        "<b><a href='/destinations/anjar' class='text-blue-600 hover:text-blue-800'>Anjar:</a></b> 15km - Ancient town with temples",
+        "<b><a href='/destinations/kandla' class='text-blue-600 hover:text-blue-800'>Kandla Port:</a></b> 10km - Major port city",
+        "<b><a href='/destinations/adipur' class='text-blue-600 hover:text-blue-800'>Adipur:</a></b> 5km - Sister city with additional amenities",
+        "<b><a href='/destinations/dhordo' class='text-blue-600 hover:text-blue-800'>White Rann (Dhordo):</a></b> 140km - Famous salt desert"
       ],
       image: {
         src: "/images/gandhidham/nearby.jpg",

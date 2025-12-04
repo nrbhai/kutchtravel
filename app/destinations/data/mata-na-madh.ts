@@ -65,11 +65,11 @@ export const mataNaMadh: Destination = {
       color: "#fff0f5",
       border: "border-l-4 border-gray-500 text-gray-700",
       list: [
-        "<b>Narayan Sarovar:</b> 45km - Sacred lake and temple",
-        "<b>Koteshwar:</b> 50km - Ancient Shiva temple by the sea",
-        "<b>Jakhau:</b> 60km - Coastal town and fishing harbor",
-        "<b>Lakhpat:</b> 70km - Historic fort and gurudwara",
-        "<b>Bhuj:</b> 130km - Cultural capital of Kutch"
+        "<b><a href='/destinations/narayan-sarovar-koteshwar' class='text-blue-600 hover:text-blue-800'>Narayan Sarovar:</a></b> 45km - Sacred lake and temple",
+        "<b><a href='/destinations/narayan-sarovar-koteshwar' class='text-blue-600 hover:text-blue-800'>Koteshwar:</a></b> 50km - Ancient Shiva temple by the sea",
+        "<b><a href='/destinations/jakhau' class='text-blue-600 hover:text-blue-800'>Jakhau:</a></b> 60km - Coastal town and fishing harbor",
+        "<b><a href='/destinations/lakhpat' class='text-blue-600 hover:text-blue-800'>Lakhpat:</a></b> 70km - Historic fort and gurudwara",
+        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 130km - Cultural capital of Kutch"
       ],
       image: {
         src: "/images/mata-na-madh/nearby.jpg",

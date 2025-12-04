@@ -20,7 +20,6 @@ export interface Place {
 }
 
 // Import all place data
-import { kotaySuryaMandir } from './kotay-surya-mandir';
 import { dhrangMekanDada } from './dhrang-mekan-dada';
 import { abjibapaChhatardi } from './abjibapa-chhatardi';
 import { rudramataDam } from './rudramata-dam';
@@ -31,9 +30,9 @@ import { hanumanTekri } from './hanuman-tekri';
 import { kashiVishwanath } from './kashi-vishwanath';
 import { asarMata } from './asar-mata';
 import { ravalpir } from './ravalpir';
+import { jinalaya72 } from './72-jinalaya';
 
 export const places: Place[] = [
-  kotaySuryaMandir,
   dhrangMekanDada,
   abjibapaChhatardi,
   rudramataDam,
@@ -43,7 +42,8 @@ export const places: Place[] = [
   hanumanTekri,
   kashiVishwanath,
   asarMata,
-  ravalpir
+  ravalpir,
+  jinalaya72
 ];
 
 export function getPlaceBySlug(slug: string): Place | undefined {
@@ -51,7 +51,6 @@ export function getPlaceBySlug(slug: string): Place | undefined {
 }
 
 export {
-  kotaySuryaMandir,
   dhrangMekanDada,
   abjibapaChhatardi,
   rudramataDam,
@@ -61,5 +60,6 @@ export {
   hanumanTekri,
   kashiVishwanath,
   asarMata,
-  ravalpir
+  ravalpir,
+  jinalaya72
 };

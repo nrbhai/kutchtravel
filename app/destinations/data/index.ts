@@ -41,6 +41,9 @@ import { mataNaMadh } from "./mata-na-madh";
 import { kadiaDhrow } from "./kadia-dhrow";
 import { narayanSarovarKoteshwar } from "./narayan-sarovar-koteshwar";
 import { roadToHeaven } from "./road-to-heaven";
+import { jakhau } from "./jakhau";
+import { kandla } from "./kandla";
+import { adipur } from "./adipur";
 
 import { dholavira } from "./dholavira";
 
@@ -58,5 +61,8 @@ export const DESTINATIONS: Destination[] = [
   lakhpat,
   kadiaDhrow,
   narayanSarovarKoteshwar,
+  jakhau,
+  kandla,
+  adipur,
   dholavira
 ];

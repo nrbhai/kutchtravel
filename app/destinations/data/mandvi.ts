@@ -35,7 +35,7 @@ export const mandvi: Destination = {
         "<b>Mandvi Beach:</b> Clean white sandy beach with wooden sailboats and scenic wind farms",
         "<b>Traditional Shipbuilding Yard:</b> 400-year-old ship construction center where dhows are still built using traditional techniques",
         "<b>Rukmavati Bridge:</b> Historic 1883 bridge, longest existing structure of its kind in India",
-        "<b>72 Jinalaya:</b> Beautiful Jain temple complex with intricate architecture",
+        "<b><a href='/places/72-jinalaya' class='text-blue-400 hover:text-blue-300'>72 Jinalaya:</a></b> Beautiful Jain temple complex with intricate architecture",
         "<b>Shyamji Krishna Varma Memorial:</b> Kranti Tirth dedicated to the freedom fighter and scholar",
         "<b>Topansar Lake:</b> Central city lake attracting thousands of seagulls every winter",
         "<b>Mandvi Fort:</b> Remains of the original fortified town with 8m high stone walls",
@@ -71,7 +71,7 @@ export const mandvi: Destination = {
         "<b><a href='/places/kashi-vishwanath' class='text-blue-400 hover:text-blue-300'>Kashi Vishwanath Temple & Beach:</a></b> 5km - Serene secluded beach with Shiv temple nearby",
         "<b><a href='/places/vijay-vilas-palace' class='text-blue-400 hover:text-blue-300'>Vijay Vilas Palace:</a></b> 8km - Royal palace with private beach and stunning architecture",
         "<b><a href='/places/asar-mata' class='text-blue-400 hover:text-blue-300'>Asar Mata Temple & Beach:</a></b> 10-12km - Serene and secluded temple site with peaceful beach",
-        "<b>72 Jinalaya:</b> 2km - Beautiful Jain temple complex with intricate architecture",
+        "<b><a href='/places/72-jinalaya' class='text-blue-400 hover:text-blue-300'>72 Jinalaya:</a></b> 2km - Beautiful Jain temple complex with intricate architecture",
         "<b>Maska:</b> 25km - Coastal village with traditional crafts and local culture",
         "<b><a href='/places/shyamji-krishnavarma' class='text-blue-400 hover:text-blue-300'>Shyamji Krishnavarma Memorial:</a></b> 3km - Kranti Tirth dedicated to the freedom fighter and scholar",
         "<b><a href='/places/ravalpir' class='text-blue-400 hover:text-blue-300'>Ravalpir Temple & Beach:</a></b> 15km - Sacred temple rebuilt in 1819 with clean beach nearby"

@@ -64,11 +64,11 @@ export const roadToHeaven: Destination = {
       color: "#fff0f5",
       border: "border-l-4 border-gray-500 text-gray-700",
       list: [
-        "<b>Dhordo:</b> 5km - Gateway to White Rann",
-        "<b>Kalo Dungar:</b> 30km - Highest point in Kutch",
-        "<b>Dholavira:</b> 120km - Ancient Harappan site",
-        "<b>Bhuj:</b> 80km - Cultural capital of Kutch",
-        "<b>White Rann:</b> 2km - Famous salt desert"
+        "<b><a href='/destinations/dhordo' class='text-blue-600 hover:text-blue-800'>Dhordo:</a></b> 54km - Gateway to White Rann and Rann Utsav",
+        "<b><a href='/destinations/kalo-dungar' class='text-blue-600 hover:text-blue-800'>Kalo Dungar:</a></b> 35km - Highest point in Kutch with panoramic views",
+        "<b><a href='/destinations/dholavira' class='text-blue-600 hover:text-blue-800'>Dholavira:</a></b> 90km - Ancient Harappan archaeological site",
+        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 85km - Cultural capital of Kutch",
+        "<b>White Rann:</b> 60km - Famous salt desert and natural wonder"
       ],
       image: {
         src: "/images/road-to-heaven/nearby.jpg",

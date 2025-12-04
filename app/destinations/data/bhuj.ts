@@ -69,7 +69,7 @@ export const bhuj: Destination = {
       color: "bg-indigo-50",
       border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b><a href='/places/kotay-surya-mandir' class='text-blue-400 hover:text-blue-300'>Kotay Surya Mandir:</a></b> 22km - Ancient 10th century Sun temple ruins with archaeological significance",
+        "<b><a href='/hidden-gems/kotay-temple' class='text-blue-400 hover:text-blue-300'>Kotay Surya Mandir:</a></b> 22km - Ancient 10th century Sun temple ruins with archaeological significance",
         "<b><a href='/places/dhrang-mekan-dada' class='text-blue-400 hover:text-blue-300'>Dhrang - Mekan Dada:</a></b> 25km - Sacred shrine and pilgrimage site",
         "<b><a href='/places/abjibapa-chhatardi' class='text-blue-400 hover:text-blue-300'>Abjibapa ni Chatardi Baladia:</a></b> 20km - Historical cenotaph and heritage site",
         "<b><a href='/places/rudramata-dam' class='text-blue-400 hover:text-blue-300'>Rudramata Dam:</a></b> 15km - Scenic dam with water reservoir and peaceful surroundings",
