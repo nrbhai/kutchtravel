@@ -14,77 +14,89 @@ export default function DhrangMekanDada() {
             color="bg-amber-50"
             border="border-l-4 border-amber-600 text-amber-800"
             image={{
-              src: "/images/places/dhrang-mekan-dada/shrine-exterior.jpg",
-              alt: "Dhrang Mekan Dada shrine exterior"
+              src: "/images/places/dhrang-mekan-dada/overview.jpg",
+              alt: "Dhrang Mekan Dada shrine"
             }}
           >
-            <p className="leading-relaxed">{dhrangMekanDada.significance}</p>
+            <p className="leading-relaxed">
+              <b>Sant Mekan Dada</b> (1667–1730 AD) was a revered Hindu saint and humanitarian from the Kutch region. 
+              Born in Khombhadi village, he dedicated his life to serving the people of the Rann of Kutch. He is often 
+              worshipped as an incarnation of Lakshman by the Ahir community and founded the Makadbanth Kapdi sect.
+            </p>
+            <p className="leading-relaxed mt-4">
+              His resting place in Dhrang village has become a major pilgrimage site, symbolizing selfless service 
+              and compassion for all living beings.
+            </p>
           </SectionCard>
 
           <SectionCard 
-            title="Spiritual Significance"
+            title="The Legend of Laliyo & Motiyo"
+            color="bg-orange-50"
+            border="border-l-4 border-orange-600 text-orange-800"
+            image={{
+              src: "/images/places/dhrang-mekan-dada/laliyo-motiyo.jpg",
+              alt: "Laliyo the donkey and Motiyo the dog"
+            }}
+          >
+            <p className="leading-relaxed text-lg font-medium text-orange-900 mb-4">
+              "The Saint, The Dog, and The Donkey"
+            </p>
+            <p className="leading-relaxed">
+              Mekan Dada is famously remembered for his two loyal animal companions who helped him save countless lives 
+              in the harsh desert:
+            </p>
+            <ul className="list-disc list-inside mt-4 space-y-4">
+              <li>
+                <b>Laliyo (The Donkey):</b> A strong donkey who would carry gallons of water and food supplies on his back.
+              </li>
+              <li>
+                <b>Motiyo (The Dog):</b> An intelligent dog trained to guide Laliyo. Motiyo would sniff out travelers 
+                lost in the vast Rann, and lead Laliyo to them to provide life-saving water and food.
+              </li>
+            </ul>
+            <p className="leading-relaxed mt-4 italic text-gray-700">
+              Together, this trio spent their lives roaming the desert, providing "Annadana" (food) and "Jaldana" (water) 
+              to hungry, thirsty, and lost nomads.
+            </p>
+          </SectionCard>
+
+          <SectionCard 
+            title="Teachings & Philosophy"
             color="bg-purple-50"
             border="border-l-4 border-purple-600 text-purple-800"
             image={{
-              src: "/images/places/dhrang-mekan-dada/devotional-area.jpg",
-              alt: "Devotional area at the shrine"
+              src: "/images/places/dhrang-mekan-dada/teachings.jpg",
+              alt: "Spiritual teachings"
             }}
           >
             <ul className="list-none space-y-4">
-              <li><b>Sacred Shrine:</b> Revered pilgrimage site dedicated to Mekan Dada, a respected spiritual figure in local traditions</li>
-              <li><b>Regional Importance:</b> Attracts devotees from across Kutch and neighboring regions throughout the year</li>
-              <li><b>Peaceful Atmosphere:</b> Serene environment conducive to prayer, meditation, and spiritual contemplation</li>
-              <li><b>Local Traditions:</b> Important center for traditional religious practices and community gatherings</li>
-              <li><b>Spiritual Heritage:</b> Represents the rich spiritual and cultural heritage of the Kutch region</li>
+              <li><b>Humanitarian Service:</b> Believed in serving humanity ("Seva") as the highest form of worship.</li>
+              <li><b>Social Equality:</b> Preached against untouchability and superstitions, welcoming people of all castes and religions.</li>
+              <li><b>Poetry:</b> Composed hymns and bhajans reflecting Hindu philosophy and local wisdom.</li>
+              <li><b>Kapdi Sect:</b> Founded the Makadbanth (or Mastani) Kapdi sect, one of the ten branches of the Kapdi community.</li>
             </ul>
           </SectionCard>
 
           <SectionCard 
-            title="Pilgrimage Experience"
-            color="bg-blue-50"
-            border="border-l-4 border-blue-600 text-blue-800"
+            title="Mekan Dada Fair"
+            color="bg-rose-50"
+            border="border-l-4 border-rose-600 text-rose-800"
             image={{
-              src: "/images/places/dhrang-mekan-dada/pilgrims.jpg",
-              alt: "Pilgrims at Dhrang Mekan Dada"
+              src: "/images/places/dhrang-mekan-dada/fair.jpg",
+              alt: "Annual Fair"
             }}
           >
-            <ul className="list-none space-y-4">
-              <li><b>Devotional Practices:</b> Visitors can participate in daily prayers and traditional rituals</li>
-              <li><b>Peaceful Setting:</b> Located in rural Kutch, offering tranquility away from urban areas</li>
-              <li><b>Community Connection:</b> Experience local devotional practices and community spirit</li>
-              <li><b>Scenic Journey:</b> The 25km drive from Bhuj offers beautiful views of rural Kutch landscape</li>
-              <li><b>Spiritual Retreat:</b> Ideal for those seeking spiritual solace and connection</li>
-            </ul>
-          </SectionCard>
-
-          <SectionCard 
-            title="Best Time to Visit"
-            color="bg-emerald-50"
-            border="border-l-4 border-emerald-600 text-emerald-800"
-            image={{
-              src: "/images/places/dhrang-mekan-dada/seasonal.jpg",
-              alt: "Best season to visit the shrine"
-            }}
-          >
-            <p className="leading-relaxed">{dhrangMekanDada.bestTimeToVisit}</p>
-          </SectionCard>
-
-          <SectionCard 
-            title="How to Reach"
-            color="bg-cyan-50"
-            border="border-l-4 border-cyan-600 text-cyan-800"
-            image={{
-              src: "/images/places/dhrang-mekan-dada/route-landscape.jpg",
-              alt: "Scenic route through rural Kutch"
-            }}
-          >
-            <p className="leading-relaxed">{dhrangMekanDada.howToReach}</p>
+            <p className="leading-relaxed">
+              Every year on <b>Maha Shivaratri</b>, a grand fair is organized at the Samadhi memorial in Dhrang. 
+              The event attracts thousands of devotees from across Gujarat and beyond. It is a vibrant display of 
+              Kutchi culture, featuring traditional music, bhajans, and community feasts in honor of the saint.
+            </p>
           </SectionCard>
 
           <SectionCard 
             title="Visitor Information"
-            color="bg-rose-50"
-            border="border-l-4 border-rose-600 text-rose-800"
+            color="bg-blue-50"
+            border="border-l-4 border-blue-600 text-blue-800"
             image={{
               src: "/images/places/dhrang-mekan-dada/facilities.jpg",
               alt: "Visitor facilities at the shrine"
@@ -92,42 +104,21 @@ export default function DhrangMekanDada() {
           >
             <ul className="list-none space-y-4">
               <li><b>Distance from Bhuj:</b> 25km via local roads</li>
-              <li><b>Coordinates:</b> {dhrangMekanDada.coordinates}</li>
-              <li><b>Transportation:</b> Private vehicle recommended; limited public transport</li>
-              <li><b>Best Visiting Time:</b> Early morning for spiritual practices</li>
-              <li><b>Dress Code:</b> Modest clothing recommended for shrine visit</li>
-              <li><b>Duration:</b> Allow 1-2 hours for visit and prayers</li>
-              <li><b>Facilities:</b> Basic amenities available at the shrine</li>
-            </ul>
-          </SectionCard>
-
-          <SectionCard 
-            title="Local Tips"
-            color="bg-indigo-50"
-            border="border-l-4 border-indigo-600 text-indigo-800"
-            image={{
-              src: "/images/places/dhrang-mekan-dada/local-culture.jpg",
-              alt: "Local cultural practices at the shrine"
-            }}
-          >
-            <ul className="list-none space-y-4">
-              <li><b>Respectful Behavior:</b> Maintain silence and respect during prayers and ceremonies</li>
-              <li><b>Photography:</b> Ask permission before taking photos, especially during religious activities</li>
-              <li><b>Offerings:</b> Traditional offerings can be made at the shrine</li>
-              <li><b>Local Guidance:</b> Consider visiting with locals who can explain the traditions and significance</li>
-              <li><b>Rural Setting:</b> Be prepared for basic facilities; carry water and essentials</li>
+              <li><b>Visiting Hours:</b> Open all day; morning and evening aartis are special.</li>
+              <li><b>Best Time:</b> October to March; Maha Shivaratri for the fair.</li>
+              <li><b>Etiquette:</b> Dress modestly and maintain silence near the Samadhi.</li>
+              <li><b>Facilities:</b> Basic amenities and dharmashalas (pilgrim rest houses) available.</li>
             </ul>
           </SectionCard>
         </div>
       }
       facts={[
-        "Important pilgrimage site in Kutch region",
-        "Dedicated to Mekan Dada, a revered spiritual figure",
-        "Located 25km from Bhuj in rural Kutch",
-        "Attracts devotees from across the region",
-        "Peaceful atmosphere ideal for spiritual practices",
-        "Scenic drive through rural Kutch landscape",
-        "Best visited October to March"
+        "Home of Sant Mekan Dada (1667–1730)",
+        "Famous for Laliyo (Donkey) & Motiyo (Dog)",
+        "Historic humanitarian site in Rann of Kutch",
+        "Grand Fair on Maha Shivaratri",
+        "Center of Makadbanth Kapdi sect",
+        "Symbol of social equality and service"
       ]}
       mapUrl={dhrangMekanDada.mapUrl || dhrangMekanDada.directMapUrl || ""}
       gallery={dhrangMekanDada.gallery}
