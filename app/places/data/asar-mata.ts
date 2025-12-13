@@ -4,7 +4,7 @@ export const asarMata: Place = {
   slug: "asar-mata",
   title: "Asar Mata Temple & Beach",
   shortDescription: "Serene temple site with peaceful beach offering spiritual tranquility and natural beauty",
-  image: "/images/places/asar-mata/main.JPG",
+  image: "/images/places/asar-mata/main.jpg",
   location: "10-12km from Mandvi",
   distanceFromMandvi: "10-12km northeast",
   parentDestination: "mandvi",

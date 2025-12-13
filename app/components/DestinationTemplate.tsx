@@ -39,7 +39,7 @@ export default function DestinationTemplate({
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-14">
             <div className="flex">
-              <Link href="/" className="flex items-center gap-2 text-slate-600 hover:text-slate-900 text-sm font-medium">
+              <Link href="/destinations" className="flex items-center gap-2 text-slate-600 hover:text-slate-900 text-sm font-medium">
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back</span>
               </Link>

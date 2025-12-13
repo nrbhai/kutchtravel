@@ -4,7 +4,7 @@ export const vandeMataram: Place = {
   slug: "vande-mataram-memorial",
   title: "Vande Mataram Memorial",
   shortDescription: "Memorial at Bhujodi village commemorating India's freedom struggle",
-  image: "/images/places/vande-mataram/main.JPG",
+  image: "/images/places/vande-mataram-memorial/main.jpg",
   location: "8km from Bhuj at Bhujodi village",
   distanceFromBhuj: "8km",
   parentDestination: "bhuj",
@@ -14,7 +14,7 @@ export const vandeMataram: Place = {
   bestTimeToVisit: "October to March for pleasant weather. Visit early morning or evening for the best experience and comfortable exploration.",
   howToReach: "Drive 8km to Bhujodi village from Bhuj via good roads. Bhujodi is well-connected and can be reached by auto-rickshaw, taxi, or private vehicle. The village is also famous for textile shopping.",
   gallery: [
-    { src: "/images/places/vande-mataram/memorial.jpg", caption: "Freedom struggle memorial at Bhujodi" },
-    { src: "/images/places/vande-mataram/main.JPG", caption: "Memorial structure and surroundings" }
+    { src: "/images/places/vande-mataram-memorial/memorial.jpg", caption: "Freedom struggle memorial at Bhujodi" },
+    { src: "/images/places/vande-mataram-memorial/main.jpg", caption: "Memorial structure and surroundings" }
   ]
 };

@@ -36,7 +36,7 @@ export default function AboutPage() {
           <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-gradient-to-br from-blue-200/40 to-cyan-200/40 rounded-full blur-3xl opacity-60 mix-blend-multiply animate-blob"></div>
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gradient-to-br from-cyan-200/40 to-teal-200/40 rounded-full blur-3xl opacity-60 mix-blend-multiply animate-blob animation-delay-2000"></div>
           <div className="absolute -bottom-32 left-1/2 w-[500px] h-[500px] bg-gradient-to-br from-teal-200/40 to-blue-200/40 rounded-full blur-3xl opacity-60 mix-blend-multiply animate-blob animation-delay-4000"></div>
-          <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.02] mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-[url('/images/noise.jpg')] opacity-[0.02] mix-blend-overlay"></div>
         </div>
 
         <div className="relative max-w-[1600px] mx-auto px-6 pt-24 lg:pt-32">

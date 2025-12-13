@@ -4,7 +4,7 @@ import type { HiddenGem } from "./index";
 export const secretBirdingSite: HiddenGem = {
   slug: "kutch-bustard-bird-watching-site",
   title: "Kutch Bustard Bird Watching Site",
-  image: "/images/hidden-gems/secret-birding-site/main.jpg",
+  image: "/images/hidden-gems/kutch-bustard-bird-watching-site/main.jpg",
   difficulty: "Moderate",
   type: "Wildlife",
   discoveryLevel: "Local Favorite",
@@ -68,11 +68,11 @@ export const secretBirdingSite: HiddenGem = {
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d70.1234!3d23.7890!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sKutch%20Bustard%20Sanctuary!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin",
   gallery: [
-    { src: "/images/hidden-gems/secret-birding-site/main.jpg", caption: "Kutch Bustard Sanctuary landscape" },
-    { src: "/images/hidden-gems/secret-birding-site/bustard.jpg", caption: "Great Indian Bustard in grassland" },
-    { src: "/images/hidden-gems/secret-birding-site/florican.jpg", caption: "Lesser Florican display" },
-    { src: "/images/hidden-gems/secret-birding-site/winter-flock.jpg", caption: "Winter migratory birds at Jakhau creek" },
-    { src: "/images/hidden-gems/secret-birding-site/wildlife.jpg", caption: "Nilgai and Chinkara in the sanctuary" }
+    { src: "/images/hidden-gems/kutch-bustard-bird-watching-site/main.jpg", caption: "Kutch Bustard Sanctuary landscape" },
+    { src: "/images/hidden-gems/kutch-bustard-bird-watching-site/bustard.jpg", caption: "Great Indian Bustard in grassland" },
+    { src: "/images/hidden-gems/kutch-bustard-bird-watching-site/florican.jpg", caption: "Lesser Florican display" },
+    { src: "/images/hidden-gems/kutch-bustard-bird-watching-site/winter-flock.jpg", caption: "Winter migratory birds at Jakhau creek" },
+    { src: "/images/hidden-gems/kutch-bustard-bird-watching-site/wildlife.jpg", caption: "Nilgai and Chinkara in the sanctuary" }
   ]
 };
 

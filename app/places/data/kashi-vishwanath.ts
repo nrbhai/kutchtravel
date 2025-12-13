@@ -4,7 +4,7 @@ export const kashiVishwanath: Place = {
   slug: "kashi-vishwanath",
   title: "Kashi Vishwanath Temple & Beach",
   shortDescription: "Serene secluded beach with sacred Shiv temple nearby offering spiritual and coastal beauty",
-  image: "/images/places/kashi-vishwanath/main.JPG",
+  image: "/images/places/kashi-vishwanath/main.jpg",
   location: "5km from Mandvi",
   distanceFromMandvi: "5km east",
   parentDestination: "mandvi",

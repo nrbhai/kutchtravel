@@ -588,7 +588,7 @@ export default function Home() {
       {/* 2️⃣ Enhanced Explore Kutch Section */}
       <section id="explore-kutch" className="relative overflow-hidden py-12 bg-gradient-to-br from-blue-50/40 via-cyan-50/30 to-teal-50/40">
         {/* Background decorative elements */}
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.02] mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url('/images/noise.jpg')] opacity-[0.02] mix-blend-overlay"></div>
         
         <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center">
@@ -833,7 +833,7 @@ export default function Home() {
 
       {/* 4️⃣ Booking Widget Section */}
       <section className="py-10 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url('/images/noise.jpg')] opacity-[0.03] mix-blend-overlay"></div>
         <div className="max-w-[1600px] mx-auto px-4 relative z-10">
            <BookingWidget />
         </div>
@@ -971,7 +971,7 @@ export default function Home() {
               <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl border-2 border-purple-200 hover:border-purple-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
                 <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center">
                   <Image 
-                    src="/images/crafts/mirror/mirror1.webp" 
+                    src="/images/crafts/mirror/mirror1.jpg" 
                     alt="Mirror Work"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"

@@ -47,7 +47,7 @@ import { adipur } from "./adipur";
 
 import { dholavira } from "./dholavira";
 import { hajiPir } from "./haji-pir";
-import { matangMatiyaDev } from "./matang-matiya-dev";
+// import { matangMatiyaDev } from "./matang-matiya-dev";
 import { bhadreshwar } from "./bhadreshwar";
 
 // All destination data must conform to the Destination type above.
@@ -69,6 +69,6 @@ export const DESTINATIONS: Destination[] = [
   adipur,
   dholavira,
   hajiPir,
-  matangMatiyaDev,
+//   matangMatiyaDev,
   bhadreshwar
 ];

@@ -4,7 +4,7 @@ export const jadura: Place = {
   slug: "jadura",
   title: "Jadura Sunset Point",
   shortDescription: "Scenic sunset viewpoint offering panoramic vistas of the surrounding landscape",
-  image: "/images/places/jadura/main.JPG",
+  image: "/images/places/jadura/main.jpg",
   location: "5km from Bhuj",
   distanceFromBhuj: "5km west",
   parentDestination: "bhuj",

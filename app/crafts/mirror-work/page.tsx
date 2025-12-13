@@ -12,7 +12,7 @@ export default function MirrorWorkPage() {
     slug: "mirror-work",
     title: "Mirror Work (Shisha)",
     subtitle: "Sparkling Traditional Embroidery",
-    image: "/images/crafts/mirror/mirror1.webp",
+    image: "/images/crafts/mirror/mirror1.jpg",
     icon: "✨",
     category: "Embroidery",
     
@@ -109,11 +109,11 @@ export default function MirrorWorkPage() {
     ],
     
     gallery: [
-      { src: "/images/crafts/mirror/mirror1.webp", caption: " " },
-      { src: "/images/crafts/mirror/mirror2.webp", caption: " " },
-      { src: "/images/crafts/mirror/mirror3.webp", caption: " " },
-      { src: "/images/crafts/mirror/mirror4.webp", caption: " " },
-      { src: "/images/crafts/mirror/mirror5.webp", caption: " " }
+      { src: "/images/crafts/mirror/mirror1.jpg", caption: " " },
+      { src: "/images/crafts/mirror/mirror2.jpg", caption: " " },
+      { src: "/images/crafts/mirror/mirror3.jpg", caption: " " },
+      { src: "/images/crafts/mirror/mirror4.jpg", caption: " " },
+      { src: "/images/crafts/mirror/mirror5.jpg", caption: " " },
     ]
   };
 

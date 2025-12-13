@@ -2,78 +2,43 @@ import type { Destination } from "./index";
 
 export const adipur: Destination = {
   slug: "adipur",
-  title: "Adipur — Sister City of Gandhidham",
+  title: "Adipur — City of Memories",
   image: "/images/adipur/adipur1.jpg",
   sections: [
     {
       heading: "Overview",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
-      content: "Adipur is a well-planned residential city located just 5km from Gandhidham. Established alongside Gandhidham in 1947, Adipur serves as a sister city providing additional residential areas, educational institutions, and amenities. The city is known for its organized layout, green spaces, and quality of life.",
+      content: "Adipur is a unique township in Kutch, originally established as a refugee camp. Located about 5km from Gandhidham, it serves as a residential twin city. The town is famous for its distinct culture, including a fascinating tradition of Charlie Chaplin impersonators and the sacred Gandhi Samadhi.",
       image: {
-        src: "/images/adipur/city-overview.jpg",
-        alt: "Adipur city overview"
+        src: "/images/adipur/adipur1.jpg",
+        alt: "Adipur city landmark"
       }
     },
     {
-      heading: "History & Development",
-      color: "bg-purple-50",
-      border: "border-l-4 border-purple-600 text-purple-800",
-      content: "Like Gandhidham, Adipur was established in 1947 to rehabilitate Sindhi refugees after the partition of India. The city was planned with modern urban principles, featuring wide roads, organized sectors, and ample green spaces. Over the decades, Adipur has grown into a thriving residential hub complementing the commercial activities of nearby Gandhidham.",
-      image: {
-        src: "/images/adipur/development.jpg",
-        alt: "Urban development in Adipur"
-      }
-    },
-    {
-      heading: "Residential Areas",
-      color: "bg-emerald-50",
-      border: "border-l-4 border-emerald-600 text-emerald-800",
-      list: [
-        "<b>Planned Sectors:</b> Well-organized residential sectors with modern amenities",
-        "<b>Housing Options:</b> Variety of residential properties from apartments to independent houses",
-        "<b>Green Spaces:</b> Parks and gardens throughout the city",
-        "<b>Infrastructure:</b> Good roads, water supply, and electricity",
-        "<b>Community Living:</b> Peaceful residential environment",
-        "<b>Growing City:</b> Continuous development and expansion"
-      ],
-      image: {
-        src: "/images/adipur/residential.jpg",
-        alt: "Residential areas in Adipur"
-      }
-    },
-    {
-      heading: "Education & Healthcare",
+      heading: "History & Heritage",
       color: "bg-amber-50",
       border: "border-l-4 border-amber-600 text-amber-800",
-      list: [
-        "<b>Schools:</b> Numerous primary and secondary schools",
-        "<b>Colleges:</b> Higher education institutions and professional colleges",
-        "<b>Hospitals:</b> Medical facilities and healthcare centers",
-        "<b>Clinics:</b> Private medical practitioners and diagnostic centers",
-        "<b>Libraries:</b> Public and private libraries",
-        "<b>Coaching Centers:</b> Educational support and competitive exam preparation"
-      ],
+      content: "Founded in 1947 after the partition of India, Adipur was created to resettle Sindhi Hindu refugees from Pakistan. The settlement was the vision of Bhai Pratap Dialdas, who requested land from Mahatma Gandhi. The Maharaja of Kutch donated 15,000 acres for this purpose. The Sindhu Resettlement Corporation (SRC) was formed to manage the town's administration, making it a planned settlement with deep historical roots.",
       image: {
-        src: "/images/adipur/education.jpg",
-        alt: "Educational institutions in Adipur"
+        src: "/images/adipur/adipur4.jpg",
+        alt: "Historical significance of Adipur"
       }
     },
     {
-      heading: "Amenities & Facilities",
-      color: "bg-cyan-50",
-      border: "border-l-4 border-cyan-600 text-cyan-800",
+      heading: "Culture & Institutions",
+      color: "bg-purple-50",
+      border: "border-l-4 border-purple-600 text-purple-800",
       list: [
-        "<b>Shopping:</b> Local markets and shopping centers",
-        "<b>Restaurants:</b> Variety of dining options and eateries",
-        "<b>Banks:</b> Multiple banks and ATMs",
-        "<b>Religious Places:</b> Temples, gurudwaras, and other places of worship",
-        "<b>Sports Facilities:</b> Playgrounds and sports complexes",
-        "<b>Community Centers:</b> Social and cultural gathering spaces"
+        "<b>Gandhi Samadhi:</b> A revered memorial dedicated to Mahatma Gandhi",
+        "<b>Indian Institute of Sindhology:</b> Center for preserving Sindhi language, art, and culture",
+        "<b>Charlie Chaplin Connection:</b> Home to a unique club of Charlie Chaplin impersonators",
+        "<b>Education Hub:</b> Hosts numerous colleges and schools managed by the Tolani/Gandhidham Collegiate Board",
+        "<b>Cultural Mix:</b> A melting pot of Sindhi and Kutchi traditions"
       ],
       image: {
-        src: "/images/adipur/amenities.jpg",
-        alt: "City amenities in Adipur"
+        src: "/images/adipur/adipur3.jpg",
+        alt: "Cultural and educational center"
       }
     },
     {
@@ -81,62 +46,46 @@ export const adipur: Destination = {
       color: "bg-indigo-50",
       border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b><a href='/destinations/gandhidham' class='text-blue-600 hover:text-blue-800'>Gandhidham:</a></b> 5km - Commercial hub and railway junction",
-        "<b><a href='/destinations/kandla' class='text-blue-600 hover:text-blue-800'>Kandla Port:</a></b> 8km - Major seaport",
-        "<b><a href='/destinations/anjar' class='text-blue-600 hover:text-blue-800'>Anjar:</a></b> 20km - Ancient town with temples",
-        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 65km - Cultural capital of Kutch",
-        "<b><a href='/destinations/mundra' class='text-blue-600 hover:text-blue-800'>Mundra:</a></b> 45km - Port city"
+        "<b><a href='/destinations/gandhidham' class='text-blue-600 hover:text-blue-800'>Gandhidham:</a></b> 5km - Commercial twin city",
+        "<b><a href='/destinations/kandla' class='text-blue-600 hover:text-blue-800'>Kandla Port:</a></b> 8km - Major economic hub",
+        "<b><a href='/destinations/anjar' class='text-blue-600 hover:text-blue-800'>Anjar:</a></b> 20km - Historic town renowned for metalwork",
+        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 50km - District headquarters"
       ],
       image: {
-        src: "/images/adipur/nearby.jpg",
-        alt: "Nearby destinations around Adipur"
+        src: "/images/adipur/adipur2.jpg",
+        alt: "Nearby attractions"
       }
     },
     {
       heading: "Best Time to Visit",
       color: "bg-rose-50",
       border: "border-l-4 border-rose-600 text-rose-800",
-      content: "October to March offers the most pleasant weather for visiting Adipur. The cooler months are ideal for exploring the city and enjoying outdoor activities. As a residential city, Adipur can be visited year-round, though summers (April-June) can be quite hot.",
-      image: {
-        src: "/images/adipur/seasonal.jpg",
-        alt: "Best season to visit Adipur"
-      }
+      content: "The winter months from October to March are pleasant for visiting. The town comes alive during cultural festivals and events celebrating Sindhi heritage."
     },
     {
-      heading: "How to Reach & Visitor Information",
+      heading: "How to Reach",
       color: "bg-teal-50",
       border: "border-l-4 border-teal-600 text-teal-800",
       list: [
-        "<b>From Gandhidham:</b> 5km via local roads (10-15 minutes)",
-        "<b>From Bhuj:</b> 65km via NH-8A (approximately 1.5 hours)",
-        "<b>Railway:</b> Gandhidham Railway Station (5km)",
-        "<b>Airport:</b> Bhuj Airport (65km)",
-        "<b>Local Transport:</b> Auto-rickshaws, taxis, and buses",
-        "<b>Accommodation:</b> Hotels and guesthouses available",
-        "<b>Purpose:</b> Primarily residential; good for extended stays"
-      ],
-      image: {
-        src: "/images/adipur/transport.jpg",
-        alt: "Transportation in Adipur"
-      }
+        "<b>From Gandhidham:</b> 5-8 km via local roads (10-15 mins)",
+        "<b>From Bhuj:</b> 50 km via NH-8A (approx. 1 hour)",
+        "<b>Railway:</b> Adipur Junction and Gandhidham Railway Station nearby",
+        "<b>Airport:</b> Kandla Airport (limited connectivity) or Bhuj Airport (50 km)"
+      ]
     }
   ],
   facts: [
-    "Sister city of Gandhidham, established in 1947",
-    "Well-planned residential city with modern amenities",
-    "Located just 5km from Gandhidham",
-    "Good educational and healthcare facilities",
-    "Peaceful residential environment",
-    "Well-connected to major cities in Kutch",
-    "Growing urban center with quality of life"
+    "Established in 1947 for Sindhi refugees",
+    "Vision of Bhai Pratap Dialdas",
+    "Home to the Indian Institute of Sindhology",
+    "Known for Gandhi Samadhi and Chaplin fans",
+    "Educational hub of the region"
   ],
-  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d70.0897!3d23.0420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sAdipur%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin",
+  mapUrl: "https://maps.google.com/maps?q=23.0722,70.0886&hl=en&z=14&output=embed",
   gallery: [
-    { src: "/images/adipur/adipur1.jpg", caption: "Adipur City View" },
-    { src: "/images/adipur/adipur2.jpg", caption: "Residential Areas" },
-    { src: "/images/adipur/adipur3.jpg", caption: "Educational Institutions" },
-    { src: "/images/adipur/adipur4.jpg", caption: "City Parks" },
-    { src: "/images/adipur/adipur5.jpg", caption: "Commercial Areas" },
-    { src: "/images/adipur/adipur6.jpg", caption: "Community Spaces" }
+    { src: "/images/adipur/adipur1.jpg", caption: "Landmark of Adipur" },
+    { src: "/images/adipur/adipur2.jpg", caption: "Town View" },
+    { src: "/images/adipur/adipur3.jpg", caption: "Educational Institute" },
+    { src: "/images/adipur/adipur4.jpg", caption: "Historical Site" }
   ]
 };

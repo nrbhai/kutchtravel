@@ -4,7 +4,7 @@ export const gangeshwarMahadev: Place = {
   slug: "gangeshwar-mahadev",
   title: "Gangeshwar Mahadev",
   shortDescription: "Hilltop temple offering trekking opportunities and panoramic views of Kutch",
-  image: "/images/places/gangeshwar-mahadev/main.JPG",
+  image: "/images/places/gangeshwar-mahadev/main.jpg",
   location: "10km from Bhuj",
   distanceFromBhuj: "10km east",
   parentDestination: "bhuj",
