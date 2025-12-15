@@ -840,7 +840,7 @@ export default function Home() {
       </section>
 
       {/* 5️⃣ Enhanced Culture & Crafts Section */}
-      <section id="culture" className="relative overflow-hidden py-28">
+      <section id="culture" className="relative overflow-hidden py-28 scroll-mt-28">
         {/* Modern gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-teal-50 to-blue-50">
           <div className="blob blob-1 w-[500px] h-[500px] top-0 left-0 opacity-30"></div>
@@ -988,8 +988,14 @@ export default function Home() {
             {/* Sudi Chappu */}
             <Link href="/crafts/sudi-chappu" className="group">
               <div className="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl border-2 border-teal-200 hover:border-teal-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
-                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl bg-gradient-to-br from-teal-200 to-teal-300 flex items-center justify-center">
-                  <span className="text-5xl">🔪</span>
+                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl">
+                  <Image 
+                    src="/images/crafts/sudi/sudi-hero.jpg" 
+                    alt="Sudi Chappu"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
                 </div>
                 <div className="p-4 pt-2">
                   <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Sudi Chappu</h3>
@@ -1001,8 +1007,14 @@ export default function Home() {
             {/* Pottery */}
             <Link href="/crafts/pottery" className="group">
               <div className="bg-gradient-to-br from-amber-50 to-amber-100 rounded-2xl border-2 border-amber-200 hover:border-amber-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
-                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl bg-gradient-to-br from-amber-200 to-amber-300 flex items-center justify-center">
-                  <span className="text-5xl">🏺</span>
+                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl">
+                  <Image 
+                    src="/images/crafts/pottery/pottery1.jpg" 
+                    alt="Pottery"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
                 </div>
                 <div className="p-4 pt-2">
                   <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Pottery</h3>
@@ -1014,8 +1026,14 @@ export default function Home() {
             {/* Leather Craft */}
             <Link href="/crafts/leather-craft" className="group">
               <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl border-2 border-orange-200 hover:border-orange-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
-                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl bg-gradient-to-br from-orange-200 to-orange-300 flex items-center justify-center">
-                  <span className="text-5xl">👞</span>
+                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl">
+                  <Image 
+                    src="/images/crafts/leather/leather-hero.png" 
+                    alt="Leather Craft"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
                 </div>
                 <div className="p-4 pt-2">
                   <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Leather Craft</h3>
@@ -1027,8 +1045,14 @@ export default function Home() {
             {/* Weaving */}
             <Link href="/crafts/weaving" className="group">
               <div className="bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-2xl border-2 border-emerald-200 hover:border-emerald-400 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
-                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl bg-gradient-to-br from-emerald-200 to-emerald-300 flex items-center justify-center">
-                  <span className="text-5xl">🧵</span>
+                <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl">
+                  <Image 
+                    src="/images/crafts/weaving/weaving-hero.png" 
+                    alt="Weaving"
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  />
                 </div>
                 <div className="p-4 pt-2">
                   <h3 className="font-bold text-gray-800 mb-2 text-base font-sora">Weaving</h3>

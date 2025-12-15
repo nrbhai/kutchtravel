@@ -12,6 +12,7 @@ type CraftProps = {
     title: string;
     subtitle: string;
     image: string;
+    imageFit?: "cover" | "contain" | "fill" | "none" | "scale-down";
     icon: string;
     category: string;
     sections: {
@@ -56,10 +57,10 @@ export default function CraftTemplate({ craft }: CraftProps) {
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-14">
             <div className="flex">
-              <Link href="/#culture" className="flex items-center gap-2 text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors">
+              <a href="/#culture" className="flex items-center gap-2 text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors">
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to Culture & Crafts</span>
-              </Link>
+              </a>
             </div>
             <div className="flex items-center gap-4">
               <Link href="/" className="text-sm font-medium text-slate-600 hover:text-purple-700 transition-colors">
@@ -72,14 +73,14 @@ export default function CraftTemplate({ craft }: CraftProps) {
 
       {/* Hero Section */}
       <section className="relative w-full">
-        <div className="relative h-[45vh] md:h-[50vh] w-full overflow-hidden">
+        <div className="relative h-[45vh] md:h-[50vh] w-full overflow-hidden bg-gray-900">
           <Image
             src={craft.image}
             alt={craft.title}
             fill
             sizes="100vw"
             priority
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: craft.imageFit || "cover" }}
             className="hover:scale-105 transition-transform duration-1000"
           />
           {/* Gradient Overlays */}

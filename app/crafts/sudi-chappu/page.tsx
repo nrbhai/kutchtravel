@@ -11,7 +11,8 @@ export default function SudiChappuPage() {
     slug: "sudi-chappu",
     title: "Sudi Chappu",
     subtitle: "Traditional Knife Making Art",
-    image: "/images/crafts/sudi-chappu.jpg",
+    image: "/images/crafts/sudi/sudi-hero.jpg",
+    imageFit: "contain" as "contain",
     icon: "🔪",
     category: "Metalwork",
     
@@ -66,6 +67,7 @@ export default function SudiChappuPage() {
         heading: "Buying Tips",
         list: [
           "Visit the knife-making street (Lohar Gali) in Anjar town",
+          "For buying in Bhuj contact : Opal Variety : 9825728452",
           "Buy directly from the forge to ensure authenticity",
           "Test the sharpness - a good blade cuts paper effortlessly",
           "Check the handle fitting - should be tight with no wobble",
@@ -101,11 +103,12 @@ export default function SudiChappuPage() {
     ],
     
     gallery: [
-      { src: "/images/crafts/sudi-chappu.jpg", caption: "Traditional Anjar Knife" },
-      { src: "/images/crafts/sudi-chappu-2.jpg", caption: "Artisan Forging Blade" },
-      { src: "/images/crafts/sudi-chappu-3.jpg", caption: "Buffalo Horn Handle Details" },
-      { src: "/images/crafts/sudi-chappu-4.jpg", caption: "Collection of Different Styles" },
-      { src: "/images/crafts/sudi-chappu-5.jpg", caption: "Traditional Coal Forge" }
+      { src: "/images/crafts/sudi/Sudi1.jpeg", caption: "Traditional Anjar Knife" },
+      { src: "/images/crafts/sudi/sudi-hero.jpg", caption: "Collection of Knives" },
+      { src: "/images/crafts/sudi/sudi2.jpeg", caption: "Artisan Forging Blade" },
+      { src: "/images/crafts/sudi/sudi3.jpeg", caption: "Detailed Craftsmanship" },
+      { src: "/images/crafts/sudi/sudi4.jpeg", caption: "Blade Detail" },
+      { src: "/images/crafts/sudi/sudi-5.png", caption: "Forging Process" }
     ]
   };
 
