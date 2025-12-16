@@ -6,7 +6,11 @@ export const hajiPir: Destination = {
   image: "/images/haji-pir/hajipir1.jpg",
   sections: [
     {
-      heading: "Famous For",
+      heading: "Category",
+      content: "Sacred Shrine"
+    },
+    {
+      heading: "Significance",
       content: "Communal harmony, spiritual significance, and the annual Urs festival.",
       image: {
         src: "/images/haji-pir/hajipir2.jpg",

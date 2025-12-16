@@ -5,12 +5,25 @@ import Image from "next/image";
 import Link from "next/link";
 import SectionCard from "@/app/components/SectionCard";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, X } from "lucide-react";
+import { ArrowLeft, X, ExternalLink } from "lucide-react";
 import { theme } from "@/app/theme/config";
+
+type Section = {
+  heading: string;
+  content?: string;
+  list?: string[];
+  color?: string;
+  border?: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
+};
 
 type Props = {
   title: string;
-  description: React.ReactNode;
+  description?: React.ReactNode;
+  sections?: Section[];
   image: string;
   facts: string[];
   mapUrl: string;
@@ -24,6 +37,7 @@ type Props = {
 export default function DestinationTemplate({
   title,
   description,
+  sections,
   image,
   facts,
   mapUrl,
@@ -114,7 +128,57 @@ export default function DestinationTemplate({
 
       {/* Main Content */}
       <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-16">
-        {description}
+        {sections ? (
+          <div className="space-y-8">
+            {sections.map((section, index) => {
+              const isAccommodation = section.heading.toLowerCase().includes('accommodation') || 
+                                    section.heading.toLowerCase().includes('where to stay');
+              
+              const CardContent = (
+                <SectionCard 
+                  key={index}
+                  title={section.heading}
+                  image={section.image}
+                  color={section.color}
+                  border={section.border}
+                >
+                  {section.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />}
+                  {section.list && (
+                    <ul className="list-none space-y-4">
+                      {section.list.map((item, itemIndex) => (
+                        <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }} />
+                      ))}
+                    </ul>
+                  )}
+                  {isAccommodation && (
+                    <div className="mt-4 flex items-center text-blue-600 font-medium animate-pulse">
+                      <span>View Deals on Booking.com</span>
+                      <ExternalLink className="w-5 h-5 ml-2" />
+                    </div>
+                  )}
+                </SectionCard>
+              );
+
+              if (isAccommodation) {
+                return (
+                  <a 
+                    key={index}
+                    href={`https://www.booking.com/searchresults.html?ss=${encodeURIComponent(title)}&aid=2665264`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block group cursor-pointer"
+                  >
+                    {CardContent}
+                  </a>
+                );
+              }
+
+              return CardContent;
+            })}
+          </div>
+        ) : (
+          description
+        )}
       </div>
 
       {/* Quick Facts */}

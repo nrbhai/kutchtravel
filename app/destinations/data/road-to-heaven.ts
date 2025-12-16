@@ -7,7 +7,11 @@ export const roadToHeaven: Destination = {
   image: "/images/road-to-heaven/road-to-heaven1.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Scenic Route"
+    },
+    {
+      heading: "A Drive Through the Infinite",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "The Road to Heaven is one of India's most photogenic highways, a perfectly straight blacktop that cuts through the White Rann salt flats. This iconic stretch near Dhordo has earned its celestial name for the surreal experience of driving through endless white desert with nothing but sky above.",

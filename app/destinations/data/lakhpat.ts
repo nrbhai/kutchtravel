@@ -7,7 +7,11 @@ export const lakhpat: Destination = {
   image: "/images/lakhpat/lakhpat1.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Historic Fort"
+    },
+    {
+      heading: "The Ghost Town of Kutch",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Standing at the edge of India where the Kori Creek meets the Arabian Sea, Lakhpat tells one of history's most dramatic tales of rise and fall. This once-mighty port town, surrounded by magnificent 7km stone walls, now shelters just 566 souls among ruins that whisper of its golden age. What makes Lakhpat extraordinary isn't just its fortress-like walls or proximity to Pakistan—it's the story of how nature's fury transformed India's busiest port into a hauntingly beautiful ghost town that feels frozen in time.",

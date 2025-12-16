@@ -7,11 +7,15 @@ export const bhuj: Destination = {
   image: "/images/bhuj/bhuj1.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Heritage City"
+    },
+    {
+      heading: "The Heart of Kutch",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       image: {
-        src: "/images/bhuj/bhuj-aerial.jpg",
+        src: "/images/bhuj/bhuj10.jpg",
         alt: "Aerial view of Bhuj city with its historic architecture"
       },
       content: "Nestled in the heart of India's largest district, Bhuj stands as the vibrant cultural capital where centuries of royal heritage come alive on every street corner. This remarkable city has witnessed the rise and fall of kingdoms, survived devastating earthquakes, and emerged stronger each time while preserving its soul. From the glittering mirrors of ancient palaces to the bustling bazaars where master craftsmen create magic with fabric and thread, Bhuj offers an authentic glimpse into the rich tapestry of Kutchi culture. Set against the backdrop of Bhujia Hill at 110 meters elevation, this resilient city serves as your gateway to understanding the true spirit of Kutch."
@@ -21,7 +25,7 @@ export const bhuj: Destination = {
       color: "bg-purple-50",
       border: "border-l-4 border-purple-600 text-purple-800",
       image: {
-        src: "/images/bhuj/bhujia-fort.jpg",
+        src: "/images/bhuj/bhuj3.jpg",
         alt: "Historic Bhujia Fort overlooking the city"
       },
       content: "Bhuj's story reads like a tale of determination and cultural pride spanning over five centuries. The city's foundations were laid when the visionary Rao Hamir claimed this strategic location in 1510, followed by Rao Khengarji I who elevated it to capital status in 1549 with great ceremony on January 25, 1548. Under Rao Godji I's leadership in 1723, protective walls embraced the growing city, while the iconic Bhujia Fort rose during Rao Deshalji I's prosperous reign from 1718-1741. Though nature tested Bhuj's resolve with devastating earthquakes in 1819 and 2001, each time the indomitable spirit of its people rebuilt not just structures, but strengthened the very essence of Kutchi culture that makes this city so captivating today."
@@ -31,7 +35,7 @@ export const bhuj: Destination = {
       color: "bg-amber-50",
       border: "border-l-4 border-amber-600 text-amber-800",
       image: {
-        src: "/images/bhuj/prag-mahal.jpg",
+        src: "/images/bhuj/bhuj2.jpg",
         alt: "The magnificent Prag Mahal palace"
       },
       list: [
@@ -51,7 +55,7 @@ export const bhuj: Destination = {
       color: "bg-emerald-50",
       border: "border-l-4 border-emerald-600 text-emerald-800",
       image: {
-        src: "/images/bhuj/handicrafts.jpg",
+        src: "/images/bhuj/bhuj8.jpg",
         alt: "Traditional Kutchi handicrafts and artisans at work"
       },
       list: [
@@ -79,7 +83,7 @@ export const bhuj: Destination = {
         "<b><a href='/places/hanuman-tekri' class='text-blue-400 hover:text-blue-300'>Hanuman Tekri Kodki:</a></b> 10km - Hanuman temple and excellent sunset viewpoint"
       ],
       image: {
-        src: "/images/bhuj/nearby.jpg",
+        src: "/images/bhuj/bhuj4.jpg",
         alt: "Nearby attractions around Bhuj — Cultural Heart of Kutch"
       }
     },
@@ -88,7 +92,7 @@ export const bhuj: Destination = {
       color: "bg-cyan-50",
       border: "border-l-4 border-cyan-600 text-cyan-800",
       image: {
-        src: "/images/bhuj/railway-station.jpg",
+        src: "/images/bhuj/bhuj9.jpg",
         alt: "Bhuj Railway Station - A major connectivity hub"
       },
       list: [
@@ -110,7 +114,7 @@ export const bhuj: Destination = {
         "<b>Local Services:</b> Good hospitals, banks, and tourist facilities"
       ],
       image: {
-        src: "/images/bhuj/info.jpg",
+        src: "/images/bhuj/bhuj5.jpg",
         alt: "Travel information about Bhuj — Cultural Heart of Kutch"
       }
     },
@@ -119,7 +123,7 @@ export const bhuj: Destination = {
       color: "bg-teal-50",
       border: "border-l-4 border-teal-600 text-teal-800",
       image: {
-        src: "/images/bhuj/winter-palace.jpg",
+        src: "/images/bhuj/bhuj1.jpg",
         alt: "Bhuj palace during the winter season - perfect time to visit"
       },
       content: "The months from October through March transform Bhuj into a comfortable exploration paradise, with daytime temperatures ranging from a pleasant 11-38°C. This ancient city experiences one of India's most unpredictable climate patterns—while the average rainfall hovers around 370mm annually, Mother Nature keeps everyone guessing with years that might see as little as 9.6mm or as much as 1,311mm! Winter months from December to February offer crisp mornings perfect for palace visits, while summer months from March to June can push the mercury well above 40°C, making early morning and evening explorations the wisest choice."
@@ -129,7 +133,7 @@ export const bhuj: Destination = {
       color: "bg-lime-50",
       border: "border-l-4 border-lime-600 text-lime-800",
       image: {
-        src: "/images/bhuj/hotel-view.jpg",
+        src: "/images/bhuj/bhuj10.jpg",
         alt: "Luxury accommodation in Bhuj with traditional architecture"
       },
       list: [
@@ -156,7 +160,7 @@ export const bhuj: Destination = {
   { src: "/images/bhuj/bhuj3.jpg", caption: "Swaminarayan Temple" },
   { src: "/images/bhuj/bhuj4.jpg", caption: "Bhujodi Village Weaving" },
   { src: "/images/bhuj/bhuj5.jpg", caption: "Hamirsar Lake" },
-  { src: "/images/bhuj/bhuj6.jpg", caption: "Traditional Bandhani Work" }
+  { src: "/images/bhuj/bhuj8.jpg", caption: "Traditional Bandhani Work" }
   ]
 };
 

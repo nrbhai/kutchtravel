@@ -7,7 +7,11 @@ export const gandhidham: Destination = {
   image: "/images/gandhidham/gandhidham-main.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Commercial Hub"
+    },
+    {
+      heading: "Significance",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Gandhidham is a modern planned city that serves as the commercial and transportation hub of Kutch. Named after Mahatma Gandhi, this well-organized city offers modern amenities while maintaining connections to traditional Kutchi culture and crafts.",

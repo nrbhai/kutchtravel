@@ -1,5 +1,5 @@
 import DestinationTemplate from "@/app/components/DestinationTemplate";
-import SectionCard from "@/app/components/SectionCard";
+
 import { lakhpat } from "@/app/destinations/data/lakhpat";
 import { generateDestinationStructuredData, generateBreadcrumbStructuredData } from "@/app/utils/seo";
 import type { Metadata } from 'next';
@@ -40,30 +40,6 @@ export default function Lakhpat() {
     { name: lakhpat.title }
   ]);
 
-  // Format description content
-  const description = (
-    <div className="space-y-8">
-      {lakhpat.sections.map((section, index) => (
-        <SectionCard 
-          key={index}
-          title={section.heading}
-          image={section.image}
-          color={section.color}
-          border={section.border}
-        >
-          {section.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />}
-          {section.list && (
-            <ul className="list-none space-y-4">
-              {section.list.map((item, itemIndex) => (
-                <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }} />
-              ))}
-            </ul>
-          )}
-        </SectionCard>
-      ))}
-    </div>
-  );
-
   return (
     <>
       <script
@@ -75,7 +51,7 @@ export default function Lakhpat() {
       <DestinationTemplate
         title={lakhpat.title}
         image={lakhpat.image}
-        description={description}
+        sections={lakhpat.sections}
         facts={lakhpat.facts}
         mapUrl={lakhpat.mapUrl}
         gallery={lakhpat.gallery}

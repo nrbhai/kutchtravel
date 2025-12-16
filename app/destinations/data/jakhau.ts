@@ -6,7 +6,11 @@ export const jakhau: Destination = {
   image: "/images/jakhau/jakhau1.png",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Port & Beach"
+    },
+    {
+      heading: "Significance",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Jakhau is a historic village and thriving port located in the Abdasa Taluka of Kutch, about 17 km from Naliya. Named after the legendary Jakh Botera (72 shipwrecked saints), the village has a rich maritime history dating back to the Middle Ages when it was a major trade hub. Today, it is primarily known for its busy fishing harbor, salt production, and deep cultural roots.",

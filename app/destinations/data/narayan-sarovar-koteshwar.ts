@@ -7,7 +7,11 @@ export const narayanSarovarKoteshwar: Destination = {
   image: "/images/narayan-sarovar-koteshwar/narayan-sarovar1.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Sacred Lake"
+    },
+    {
+      heading: "Spiritual Significance",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Narayan Sarovar Koteshwar is a sacred destination combining a holy lake and ancient temple complex. This spiritual site holds great religious significance and offers visitors a peaceful retreat in a beautiful natural setting near the Pakistan border.",

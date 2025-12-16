@@ -8,7 +8,11 @@ export const kadiaDhrow: Destination = {
   image: "/images/kadia-dhrow/kadia-dhrow1.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Canyon"
+    },
+    {
+      heading: "The Grand Canyon of Kutch",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: `Kadiya Dhro (also known as Kaliya Dhrow or Mamai Dev Kaliya Dhrow) is a significant natural and geological site located in the Kutch district of Gujarat, India. Often called the "Grand Canyon of India" or the "Grand Canyon of Gujarat," it is famous for its dramatic and colorful rock formations created by centuries of river erosion.`,

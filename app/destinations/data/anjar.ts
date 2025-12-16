@@ -6,7 +6,11 @@ export const anjar: Destination = {
   image: "/images/anjar/anjar.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Historic Town"
+    },
+    {
+      heading: "Significance",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: `🏰 <b>Anjar, Kutch: History, Resilience, and Crafts</b><br>

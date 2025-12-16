@@ -6,7 +6,11 @@ export const kandla: Destination = {
   image: "/images/kandla/kandla1.png",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Major Port"
+    },
+    {
+      heading: "Significance",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Kandla, officially known as Deendayal Port, is a major seaport located in the Kutch district of Gujarat, near Gandhidham. Situated on the Kandla Creek, it is one of India's principal ports on the western coast and the largest port by volume of cargo handled. It serves as a vital gateway for international trade, particularly for Northern India.",

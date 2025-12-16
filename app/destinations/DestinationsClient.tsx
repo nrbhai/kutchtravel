@@ -68,10 +68,26 @@ const getCategoryStyle = (category: string) => {
 };
 
 function DestinationsClient() {
+
+  // Carousel state
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const carouselImages = Array.from({ length: 10 }, (_, i) => ({
+    src: `/images/carousel/kutch${i + 11}.jpg`,
+    slug: `kutch-highlight-${i + 11}`
+  }));
+
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>(DESTINATIONS);
   const [activeFilter, setActiveFilter] = useState<string>('All');
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [isLoading, setIsLoading] = useState(true);
+
+  // Auto-rotate carousel
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % carouselImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [carouselImages.length]);
 
   // Get unique categories
   const categories = ['All', ...Array.from(new Set(DESTINATIONS.map((dest: Destination) => 
@@ -151,47 +167,37 @@ function DestinationsClient() {
           <Navigation />
         </div>
         
-        <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+        <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-20">
           {/* Two Column Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Column - Auto-rotating Image Carousel */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl order-2 lg:order-1"
+              className="relative h-[300px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl order-2 lg:order-1"
             >
-              <div className="relative h-full">
-                {DESTINATIONS.slice(0, 6).map((dest, index) => (
+                <div className="relative h-full">
+                {carouselImages.map((image, index) => (
                   <motion.div
-                    key={dest.slug}
+                    key={image.slug}
                     initial={{ opacity: 0 }}
                     animate={{ 
-                      opacity: [0, 1, 1, 0],
-                      scale: [1.1, 1, 1, 1.1]
+                      opacity: index === currentImageIndex ? 1 : 0,
+                      scale: index === currentImageIndex ? 1.05 : 1
                     }}
-                    transition={{
-                      duration: 5,
-                      repeat: Infinity,
-                      delay: index * 5,
-                      times: [0, 0.1, 0.9, 1]
-                    }}
-                    className="absolute inset-0"
+                    transition={{ duration: 0.8 }}
+                    className={`absolute inset-0 ${index === currentImageIndex ? 'z-10' : 'z-0'}`}
                   >
                     <Image
-                      src={dest.image}
-                      alt={dest.title}
+                      src={image.src}
+                      alt={`Kutch Highlight ${index + 1}`}
                       fill
                       className="object-cover"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       priority={index === 0}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-                    <div className="absolute bottom-6 left-6 right-6">
-                      <h3 className="text-2xl font-sora font-bold text-white" style={{ textShadow: '2px 4px 8px rgba(0,0,0,0.6)' }}>
-                        {dest.title}
-                      </h3>
-                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                   </motion.div>
                 ))}
               </div>
@@ -208,9 +214,9 @@ function DestinationsClient() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="mb-8"
+                className="mb-6 md:mb-8"
               >
-                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-base font-inter font-semibold tracking-wide shadow-xl shadow-purple-500/30">
+                <span className="inline-flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-purple-600 to-indigo-700 text-white rounded-full text-sm md:text-base font-inter font-semibold tracking-wide shadow-xl shadow-purple-500/30">
                   <span>✨</span>
                   <span>All Destinations</span>
                 </span>
@@ -220,7 +226,7 @@ function DestinationsClient() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight font-sora tracking-tight relative"
+                className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-6 leading-tight font-sora tracking-tight relative"
               >
                 <span className="inline-block blur-xl absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 opacity-50 mix-blend-overlay" aria-hidden="true">
                   Discover Kutch
@@ -234,7 +240,7 @@ function DestinationsClient() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-lg md:text-xl text-gray-900 leading-relaxed mb-8 font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
+                className="text-base md:text-xl text-gray-900 leading-relaxed mb-6 md:mb-8 font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]"
               >
                 From ancient temples to pristine landscapes, explore the hidden treasures of Gujarat's largest district
               </motion.p>
@@ -244,19 +250,19 @@ function DestinationsClient() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="flex flex-col gap-4 mb-8"
+                className="flex flex-col gap-3 md:gap-4 mb-8"
               >
                 <div className="flex items-center gap-3 text-slate-700 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
-                  <span className="text-base">{DESTINATIONS.length}+ Destinations</span>
+                  <span className="text-sm md:text-base">{DESTINATIONS.length}+ Destinations</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-700 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
-                  <span className="text-base">Rich Heritage</span>
+                  <span className="text-sm md:text-base">Rich Heritage</span>
                 </div>
                 <div className="flex items-center gap-3 text-slate-700 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-purple-600 to-indigo-700 rounded-full animate-pulse"></span>
-                  <span className="text-base">Cultural Experiences</span>
+                  <span className="text-sm md:text-base">Cultural Experiences</span>
                 </div>
               </motion.div>
             </motion.div>
@@ -265,10 +271,10 @@ function DestinationsClient() {
         </div>
       </div>
       {/* Category Filters and Search Section */}
-      <div className="bg-pink-50/60 backdrop-blur-xl border-b border-pink-100 shadow-sm">
-        <div className="max-w-[1600px] mx-auto px-4 py-5">
+      <div className="bg-pink-50/60 backdrop-blur-xl border-b border-pink-100 shadow-sm sticky top-0 z-40">
+        <div className="max-w-[1600px] mx-auto px-4 py-4 md:py-5">
           {/* Search and Results Count Row */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-6">
+          <div className="flex flex-col sm:flex-row gap-4 justify-between items-center mb-4 md:mb-6">
             <div className="relative w-full max-w-md">
               <input
                 type="text"
@@ -301,25 +307,27 @@ function DestinationsClient() {
             </p>
           </div>
 
-          {/* Category Filters */}
-          <div className="relative">
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-              {categories.map((category) => (
-                <motion.button
-                  key={category}
-                  variants={filterButtonVariants}
-                  whileHover="hover"
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => handleFilterChange(category)}
-                  className={`w-full px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm border ${
-                    activeFilter === category
-                      ? getCategoryStyle(category)
-                      : 'bg-white/80 text-gray-600 hover:bg-pink-50 border-pink-200 hover:text-gray-900'
-                  }`}
-                >
-                  <span className="line-clamp-1">{category}</span>
-                </motion.button>
-              ))}
+          {/* Category Filters - Horizontal Scroll on Mobile */}
+          <div className="relative -mx-4 px-4 sm:mx-0 sm:px-0">
+            <div className="flex overflow-x-auto pb-4 sm:pb-0 sm:overflow-visible scrollbar-hide">
+              <div className="flex sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2 sm:gap-2 min-w-max sm:min-w-0 w-full">
+                {categories.map((category) => (
+                  <motion.button
+                    key={category}
+                    variants={filterButtonVariants}
+                    whileHover="hover"
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => handleFilterChange(category)}
+                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm border whitespace-nowrap ${
+                      activeFilter === category
+                        ? getCategoryStyle(category)
+                        : 'bg-white/80 text-gray-600 hover:bg-pink-50 border-pink-200 hover:text-gray-900'
+                    }`}
+                  >
+                    {category}
+                  </motion.button>
+                ))}
+              </div>
             </div>
           </div>
         </div>

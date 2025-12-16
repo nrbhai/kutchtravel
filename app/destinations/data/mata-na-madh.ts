@@ -7,7 +7,11 @@ export const mataNaMadh: Destination = {
   image: "/images/mata-na-madh/mata-na-madh1.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Pilgrimage Site"
+    },
+    {
+      heading: "Spiritual Significance",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Mata na Madh is the spiritual heart of Kutch, home to the ancient Ashapura Mata temple that has been a pilgrimage center for over a thousand years. This sacred destination attracts devotees from across Gujarat and offers a deep insight into the religious and cultural traditions of Kutch.",

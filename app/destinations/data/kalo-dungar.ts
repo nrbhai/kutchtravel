@@ -7,7 +7,11 @@ export const kaloDungar: Destination = {
   image: "/images/kalo-dungar/kalo-dungar1.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Scenic Peak"
+    },
+    {
+      heading: "The Black Hill",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Rising 462 meters above the salt-white plains of Kutch, Kalo Dungar—literally 'Black Hill' in the local tongue—commands the most spectacular views in all of Gujarat's desert district. This isn't just Kutch's highest peak; it's a place where ancient spirituality meets modern mystery. At its summit sits a remarkable 400-year-old temple where devoted priests continue an extraordinary ritual of feeding wild jackals each evening. Below on the winding access road, visitors experience one of India's most famous optical illusions—a gravity-defying stretch where cars seem to roll uphill on their own. From sacred legends to scientific phenomena, Kalo Dungar offers experiences you'll find nowhere else on Earth.",

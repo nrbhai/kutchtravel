@@ -6,7 +6,11 @@ export const adipur: Destination = {
   image: "/images/adipur/adipur1.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Planned City"
+    },
+    {
+      heading: "Significance",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Adipur is a unique township in Kutch, originally established as a refugee camp. Located about 5km from Gandhidham, it serves as a residential twin city. The town is famous for its distinct culture, including a fascinating tradition of Charlie Chaplin impersonators and the sacred Gandhi Samadhi.",

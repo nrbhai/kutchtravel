@@ -7,7 +7,11 @@ export const dhordo: Destination = {
   image: "/images/dhordo-white-rann/dhordo-main.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "White Desert"
+    },
+    {
+      heading: "The White Desert Village",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Dhordo serves as the main gateway to the famous White Rann of Kutch, offering visitors their first glimpse of the surreal salt desert. This small village transforms into a bustling festival ground during Rann Utsav, with luxury tents and cultural performances under the starlit sky.",

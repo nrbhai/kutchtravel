@@ -6,7 +6,11 @@ export const bhadreshwar: Destination = {
   image: "/images/bhadreshwar/bhadreshwar1.jpg",
   sections: [
     {
-      heading: "Famous For",
+      heading: "Category",
+      content: "Jain Heritage"
+    },
+    {
+      heading: "Significance",
       content: "Ancient Jain architecture, Vasai Jain Tirth, and historical significance.",
       image: {
         src: "/images/bhadreshwar/bhadreshwar2.jpg",

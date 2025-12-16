@@ -6,7 +6,11 @@ export const dholavira: Destination = {
   image: "/images/dholavira/dholavira.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Archaeological Site"
+    },
+    {
+      heading: "The Harappan Metropolis",
       color: "bg-amber-50",
       border: "border-l-4 border-amber-600 text-amber-800",
       content: "Dholavira is one of the most significant archaeological sites of the Indus Valley Civilization (Harappan Civilization). Located on Khadir Bet island in the Rann of Kutch, this UNESCO World Heritage site offers a fascinating glimpse into advanced urban planning, water conservation systems, and the lifestyle of an ancient civilization that thrived over 4,500 years ago.",

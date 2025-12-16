@@ -7,7 +7,11 @@ export const mandvi: Destination = {
   image: "/images/mandvi/mandvi1.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Beach Town"
+    },
+    {
+      heading: "The Jewel of Kutch Coast",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "At the magical confluence where the Rukmavati River embraces the Gulf of Kutch, Mandvi unfolds as a coastal gem that has witnessed centuries of maritime glory. This enchanting town, born from the vision of Rao Khengarji I in 1580, once commanded the seas as one of India's most powerful ports, its merchant fleets sailing to distant lands laden with treasures. Today, Mandvi captivates visitors with its unique dual personality—a place where ancient dhow builders still craft vessels using techniques passed down through 400 years, while pristine beaches and royal palaces create an atmosphere of timeless elegance. Here, the rhythmic sound of waves mingles with the hammering of shipwrights, creating a symphony that speaks of Mandvi's enduring love affair with the sea.",

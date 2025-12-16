@@ -1,5 +1,5 @@
 import DestinationTemplate from "@/app/components/DestinationTemplate";
-import SectionCard from "@/app/components/SectionCard";
+
 import { bhuj } from "@/app/destinations/data/bhuj";
 import { generateDestinationStructuredData, generateBreadcrumbStructuredData } from "@/app/utils/seo";
 import type { Metadata } from 'next';
@@ -41,30 +41,6 @@ export default function Bhuj() {
     { name: bhuj.title }
   ]);
 
-  // Format description content
-  const description = (
-    <div className="space-y-8">
-      {bhuj.sections.map((section, index) => (
-        <SectionCard 
-          key={index}
-          title={section.heading}
-          image={section.image}
-          color={section.color}
-          border={section.border}
-        >
-          {section.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />}
-          {section.list && (
-            <ul className="list-none space-y-4">
-              {section.list.map((item, itemIndex) => (
-                <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }} />
-              ))}
-            </ul>
-          )}
-        </SectionCard>
-      ))}
-    </div>
-  );
-
   return (
     <>
       <script
@@ -76,7 +52,7 @@ export default function Bhuj() {
       <DestinationTemplate
         title={bhuj.title}
         image={bhuj.image}
-        description={description}
+        sections={bhuj.sections}
         facts={bhuj.facts}
         mapUrl={bhuj.mapUrl}
         gallery={bhuj.gallery}

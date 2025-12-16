@@ -144,15 +144,15 @@ const GalleryCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const galleryImages = [
-    { src: "/images/gallery/kutch1.jpg", alt: "Hamirsar Talav in Bhuj", caption: "Hamirsar Talav - Bhuj" },
-    { src: "/images/gallery/kutch2.jpg", alt: "Sunset at Mandvi Beach", caption: "Sunset at Mandvi Beach - Mandvi" },
-    { src: "/images/gallery/kutch3.jpg", alt: "White Rann at Dhordo", caption: "White Rann - Dhordo" },
-    { src: "/images/gallery/kutch4.jpg", alt: "Bharapar near Bhuj", caption: "Bharapar - Near Bhuj" },
-    { src: "/images/gallery/kutch5.jpg", alt: "Mandvi Road in Bhuj", caption: "Mandvi Road - Bhuj" },
-    { src: "/images/gallery/kutch6.jpg", alt: "Greenland Lake on Mirzapar Road", caption: "Greenland Lake - Mirzapar Road" },
-    { src: "/images/gallery/kutch7.jpg", alt: "Chattradi in Bhuj", caption: "Chattradi, Bhuj" },
-    { src: "/images/gallery/kutch8.jpg", alt: "Greenland Lake on Mirzapar Road", caption: "Greenland Lake - Mirzapar Road" },
-    { src: "/images/gallery/kutch9.jpg", alt: "Afternoon at Mandvi Beach", caption: "Afternoon at Mandvi Beach - Mandvi" },
+    { src: "/images/carousel/kutch1.jpg", alt: "Road to Heaven", caption: "Road to Heaven" },
+    { src: "/images/carousel/kutch2.jpg", alt: "Kadiya Dhrow Canyon", caption: "Kadiya Dhrow Canyon" },
+    { src: "/images/carousel/kutch3.jpg", alt: "White Rann at Dhordo", caption: "White Rann - Dhordo" },
+    { src: "/images/carousel/kutch4.jpg", alt: "Bharapar near Bhuj", caption: "Bharapar - Near Bhuj" },
+    { src: "/images/carousel/kutch5.jpg", alt: "Mandvi Road in Bhuj", caption: "Mandvi Road - Bhuj" },
+    { src: "/images/carousel/kutch6.jpg", alt: "Greenland Lake on Mirzapar Road", caption: "Greenland Lake - Mirzapar Road" },
+    { src: "/images/carousel/kutch7.jpg", alt: "Chattradi in Bhuj", caption: "Chattradi, Bhuj" },
+    { src: "/images/carousel/kutch8.jpg", alt: "Greenland Lake on Mirzapar Road", caption: "Greenland Lake - Mirzapar Road" },
+    { src: "/images/carousel/kutch9.jpg", alt: "Afternoon at Mandvi Beach", caption: "Afternoon at Mandvi Beach - Mandvi" },
   ];
 
   useEffect(() => {
@@ -464,8 +464,8 @@ export default function Home() {
                 </motion.span>
               </motion.h1>
 
-              <motion.p variants={fadeUp} className="mt-8 text-base md:text-lg lg:text-xl max-w-xl mx-auto lg:mx-0 font-inter font-medium leading-relaxed">
-                <span className="text-gray-900 font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
+              <motion.p variants={fadeUp} className="mt-8 text-base md:text-lg lg:text-xl max-w-4xl mx-auto lg:mx-0 font-inter font-medium leading-relaxed">
+                <span className="text-gray-900 font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)] text-xl md:text-2xl lg:text-3xl whitespace-nowrap">
                   Where salt meets sky, and stories meet silence
                 </span>
                 <span className="block text-sm md:text-base mt-5 font-inter font-medium text-blue-900">
@@ -831,13 +831,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4️⃣ Booking Widget Section */}
-      <section className="py-10 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.jpg')] opacity-[0.03] mix-blend-overlay"></div>
-        <div className="max-w-[1600px] mx-auto px-4 relative z-10">
-           <BookingWidget />
-        </div>
-      </section>
+
 
       {/* 5️⃣ Enhanced Culture & Crafts Section */}
       <section id="culture" className="relative overflow-hidden py-28 scroll-mt-28">
@@ -1064,6 +1058,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Booking Widget Section */}
+      <section className="py-10 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/noise.jpg')] opacity-[0.03] mix-blend-overlay"></div>
+        <div className="max-w-[1600px] mx-auto px-4 relative z-10">
+           <BookingWidget />
+        </div>
+      </section>
+
       {/* divider */}
       <div className="max-w-6xl mx-auto px-6">
         <div className="h-px w-full bg-gradient-to-r from-transparent via-gray-200 to-transparent dark:via-gray-800" />
@@ -1229,10 +1231,15 @@ export default function Home() {
                 
                 {/* Placeholder Images Grid */}
                 <div className="space-y-4">
-                  <div className="group relative aspect-video rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                  <a 
+                    href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&aid=2665264&label=main_page_luxury&sb=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block group relative aspect-video rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+                  >
                     <Image 
                       src="/images/luxury-hotel.jpg" 
-                      alt="Luxury Hotels in Kutch" 
+                      alt="Luxury Hotels in Bhuj" 
                       fill 
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -1241,13 +1248,18 @@ export default function Home() {
                       <h4 className="text-white font-sora font-bold text-2xl mb-1 drop-shadow-md">Luxury Hotels</h4>
                       <p className="text-gray-200 font-inter text-sm font-medium drop-shadow-sm">Premium resorts & 5-star properties</p>
                     </div>
-                  </div>
+                  </a>
                   
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                    <a 
+                      href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&nflt=ht_id%3D220&aid=2665264&label=main_page_homestay&sb=1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+                    >
                       <Image 
                         src="/images/homestay-village.jpg" 
-                        alt="Homestays in Kutch" 
+                        alt="Homestays in Bhuj" 
                         fill 
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
                       />
@@ -1256,9 +1268,14 @@ export default function Home() {
                         <h4 className="text-white font-sora font-bold text-lg drop-shadow-md">Homestays</h4>
                         <p className="text-gray-200 font-inter text-xs font-medium px-1 drop-shadow-sm">Authentic village life</p>
                       </div>
-                    </div>
+                    </a>
                     
-                    <div className="group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                    <a 
+                      href="https://www.booking.com/searchresults.html?ss=Rann+of+Kutch&aid=2665264&label=main_page_desert_camp&sb=1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+                    >
                       <Image 
                         src="/images/desert-camp-tent.jpg" 
                         alt="Desert Camps in Kutch" 
@@ -1270,13 +1287,18 @@ export default function Home() {
                         <h4 className="text-white font-sora font-bold text-lg drop-shadow-md">Desert Camps</h4>
                         <p className="text-gray-200 font-inter text-xs font-medium px-1 drop-shadow-sm">Glamping under stars</p>
                       </div>
-                    </div>
+                    </a>
                   </div>
                   
-                  <div className="group relative aspect-video rounded-2xl overflow-hidden shadow-lg cursor-pointer">
+                  <a 
+                    href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&aid=2665264&label=main_page_heritage&sb=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block group relative aspect-video rounded-2xl overflow-hidden shadow-lg cursor-pointer"
+                  >
                     <Image 
                       src="/images/heritage-palace.jpg" 
-                      alt="Heritage Stays in Kutch" 
+                      alt="Heritage Stays in Bhuj" 
                       fill 
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
                     />
@@ -1285,7 +1307,7 @@ export default function Home() {
                       <h4 className="text-white font-sora font-bold text-2xl mb-1 drop-shadow-md">Heritage Stays</h4>
                       <p className="text-gray-200 font-inter text-sm font-medium drop-shadow-sm">Royal palaces & historic havelis</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
                 
                 <div className="mt-8 space-y-4">

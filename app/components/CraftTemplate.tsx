@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
+import Navigation from "@/app/components/Navigation";
 
 type CraftProps = {
   craft: {
@@ -50,211 +51,191 @@ export default function CraftTemplate({ craft }: CraftProps) {
     }
   };
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": craft.title,
+    "description": craft.subtitle,
+    "image": `https://kutchtravel.com${craft.image}`,
+    "author": {
+      "@type": "Organization",
+      "name": "Kutch Travel Guide"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Kutch Travel Guide",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://kutchtravel.com/icon.svg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://kutchtravel.com/crafts/${craft.slug}`
+    }
+  };
+
   return (
-    <main className="min-h-screen overflow-x-hidden bg-gradient-to-br from-purple-50/40 via-indigo-50/30 to-blue-50/40">
-      {/* Navigation */}
-      <nav className="bg-white/90 backdrop-blur-sm border-b border-slate-200 shadow-sm sticky top-0 z-50">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-14">
-            <div className="flex">
-              <a href="/#culture" className="flex items-center gap-2 text-purple-600 hover:text-purple-800 text-sm font-medium transition-colors">
-                <ArrowLeft className="w-4 h-4" />
-                <span>Back to Culture & Crafts</span>
-              </a>
-            </div>
-            <div className="flex items-center gap-4">
-              <Link href="/" className="text-sm font-medium text-slate-600 hover:text-purple-700 transition-colors">
-                Home
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <main className="min-h-screen bg-gradient-to-br from-orange-50 via-white to-rose-50 selection:bg-rose-200 selection:text-rose-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative w-full">
-        <div className="relative h-[45vh] md:h-[50vh] w-full overflow-hidden bg-gray-900">
-          <Image
-            src={craft.image}
-            alt={craft.title}
-            fill
-            sizes="100vw"
-            priority
-            style={{ objectFit: craft.imageFit || "cover" }}
-            className="hover:scale-105 transition-transform duration-1000"
-          />
-          {/* Gradient Overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
-          
-          {/* Title Overlay */}
-          <div className="absolute inset-0 flex items-end">
-            <div className="max-w-[1600px] mx-auto px-6 lg:px-8 pb-10 md:pb-12 w-full">
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="flex items-center gap-4 mb-4"
-              >
-                <span className="text-5xl">{craft.icon}</span>
-                <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium border border-white/30">
-                  {craft.category}
-                </span>
-              </motion.div>
-              <motion.h1 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-sora text-white tracking-tight mb-3 leading-tight"
-                style={{ textShadow: "2px 4px 12px rgba(0,0,0,0.7)" }}
-              >
-                {craft.title}
-              </motion.h1>
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-lg md:text-xl text-white/90 font-inter font-medium"
-              >
-                {craft.subtitle}
-              </motion.p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Main Content Sections */}
-      <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-16">
-        <div className="space-y-6">
-          {craft.sections.map((section, index) => {
-            const sectionColors = [
-              { bg: "bg-purple-50", text: "text-purple-900", border: "border-purple-400" },
-              { bg: "bg-indigo-50", text: "text-indigo-900", border: "border-indigo-400" },
-              { bg: "bg-blue-50", text: "text-blue-900", border: "border-blue-400" },
-              { bg: "bg-violet-50", text: "text-violet-900", border: "border-violet-400" },
-              { bg: "bg-fuchsia-50", text: "text-fuchsia-900", border: "border-fuchsia-400" },
-              { bg: "bg-cyan-50", text: "text-cyan-900", border: "border-cyan-400" },
-            ];
-            const colorSet = sectionColors[index % sectionColors.length];
-
-            return (
-              <section 
-                key={index}
-                className={`${colorSet.bg} py-8 px-6 rounded-2xl shadow-lg border-2 ${colorSet.border} hover:shadow-xl transition-all duration-300`}
-              >
-                <h2 className={`text-xl md:text-2xl font-sora font-bold mb-4 ${colorSet.text} pl-4 border-l-4 ${colorSet.border}`}>
-                  {section.heading}
-                </h2>
-                <div className="font-inter text-slate-800">
-                  {section.content && (
-                    <p className="leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: section.content }} />
-                  )}
-                  {section.list && (
-                    <ul className="list-none space-y-3">
-                      {section.list.map((item, itemIndex) => (
-                        <li 
-                          key={itemIndex} 
-                          className="leading-relaxed flex items-start gap-2"
-                          dangerouslySetInnerHTML={{ __html: `<span class="text-lg mr-1">•</span>${item}` }}
-                        />
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </section>
-            );
-          })}
+      {/* Back Button Bar */}
+      <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-rose-100 py-3">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link href="/#culture" className="inline-flex items-center gap-2 text-rose-700 hover:text-rose-900 font-medium transition-colors">
+            <ArrowLeft className="w-5 h-5" />
+            Back to Culture & Crafts
+          </Link>
         </div>
       </div>
 
-      {/* Artisan Information */}
-      {craft.artisanInfo && (
-        <div className="max-w-[1400px] mx-auto px-6 pb-8">
-          <div className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-2xl shadow-lg border-2 border-indigo-300">
-            <h3 className="text-2xl font-bold text-indigo-900 mb-6 flex items-center gap-3">
-              <span className="text-3xl">👨‍🎨</span>
-              Artisan Information
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {craft.artisanInfo.villages && craft.artisanInfo.villages.length > 0 && (
-                <div>
-                  <h4 className="font-bold text-indigo-800 mb-3 text-lg">Villages & Centers</h4>
-                  <ul className="space-y-2">
-                    {craft.artisanInfo.villages.map((village, idx) => (
-                      <li key={idx} className="text-indigo-700 flex items-start gap-2">
-                        <span className="mt-1">📍</span>
-                        <span>{village}</span>
+      {/* Hero Section */}
+      <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden leading-none">
+        <Image
+          src={craft.image}
+          alt={craft.title}
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center text-white p-6 max-w-4xl">
+            <motion.h1 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-5xl md:text-7xl font-bold font-sora mb-4 tracking-tight text-orange-50"
+            >
+              {craft.title}
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl md:text-2xl font-light tracking-wide text-rose-100"
+            >
+              {craft.subtitle}
+            </motion.p>
+          </div>
+        </div>
+      </div>
+
+      {/* Main Content Sections */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 space-y-32">
+        {craft.sections.map((section, index) => {
+          const isEven = index % 2 === 0;
+          // Fallback to hero image if gallery is empty, or cycle gallery
+          const imageSrc = craft.gallery.length > 0 
+            ? craft.gallery[index % craft.gallery.length].src 
+            : craft.image;
+
+          return (
+            <div key={index} className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 lg:gap-20 items-center`}>
+              
+              {/* Text Side */}
+              <div className="flex-1 space-y-6">
+                <div className="inline-block relative">
+                  <span className="absolute -inset-1 bg-rose-100 transform -skew-x-12" />
+                  <h2 className="relative text-3xl md:text-4xl font-bold font-sora text-rose-900">{section.heading}</h2>
+                </div>
+                
+                {section.content && (
+                  <p className="text-lg text-gray-700 leading-relaxed font-space-grotesk" dangerouslySetInnerHTML={{ __html: section.content }} />
+                )}
+                
+                {section.list && (
+                  <ul className="grid grid-cols-1 gap-3 mt-4">
+                    {section.list.map((item, i) => (
+                      <li key={i} className="flex items-center gap-3 text-gray-700 font-medium">
+                        <span className="h-2 w-2 rounded-full bg-rose-500 flex-shrink-0" />
+                        {item}
                       </li>
                     ))}
                   </ul>
+                )}
+              </div>
+
+              {/* Image Side */}
+              <div className="flex-1 w-full">
+                <div className={`relative h-[400px] w-full rounded-2xl overflow-hidden shadow-2xl transform transition-transform duration-700 hover:scale-[1.02] ${isEven ? 'rotate-2' : '-rotate-2'}`}>
+                  <Image
+                    src={imageSrc}
+                    alt={section.heading}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                 </div>
-              )}
-              {craft.artisanInfo.workshops && (
-                <div>
-                  <h4 className="font-bold text-indigo-800 mb-3 text-lg">Workshop Information</h4>
-                  <p className="text-indigo-700">{craft.artisanInfo.workshops}</p>
+                {/* Decorative dots */}
+                <div className={`absolute -z-10 h-32 w-32 opacity-20 ${isEven ? '-bottom-10 -right-10' : '-top-10 -left-10'}`}>
+                   <div className="grid grid-cols-4 gap-2">
+                     {[...Array(16)].map((_, i) => (
+                       <div key={i} className="h-2 w-2 rounded-full bg-rose-500" />
+                     ))}
+                   </div>
                 </div>
-              )}
+              </div>
+
             </div>
-          </div>
-        </div>
-      )}
+          );
+        })}
 
-      {/* Quick Facts */}
-      <section className="max-w-[1400px] mx-auto px-6 py-8 mb-8">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
-          Quick Facts
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {craft.facts.map((fact, index) => {
-            const colors = [
-              { bg: "bg-purple-50", text: "text-purple-900", border: "border-purple-300", shadow: "hover:shadow-purple-200/50" },
-              { bg: "bg-indigo-50", text: "text-indigo-900", border: "border-indigo-300", shadow: "hover:shadow-indigo-200/50" },
-              { bg: "bg-blue-50", text: "text-blue-900", border: "border-blue-300", shadow: "hover:shadow-blue-200/50" },
-              { bg: "bg-violet-50", text: "text-violet-900", border: "border-violet-300", shadow: "hover:shadow-violet-200/50" },
-              { bg: "bg-fuchsia-50", text: "text-fuchsia-900", border: "border-fuchsia-300", shadow: "hover:shadow-fuchsia-200/50" },
-            ];
-            const colorSet = colors[index % colors.length];
-            
-            return (
-              <div 
-                key={index} 
-                className={`p-5 rounded-2xl border-2 ${colorSet.bg} ${colorSet.border} transition-all duration-300 hover:shadow-xl ${colorSet.shadow} hover:scale-[1.02]`}
-              >
-                <p className={`${colorSet.text} text-sm md:text-base font-medium leading-relaxed`}>{fact}</p>
-              </div>
-            );
-          })}
+        {/* Facts Section */}
+        <div className="bg-gradient-to-br from-rose-50 via-white to-orange-50 rounded-3xl p-8 md:p-12 text-gray-900 shadow-xl relative overflow-hidden border border-rose-100">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-rose-200 rounded-full mix-blend-multiply filter blur-3xl opacity-50 transform translate-x-1/2 -translate-y-1/2"></div>
+            <div className="relative z-10 text-center max-w-3xl mx-auto">
+                <h3 className="text-3xl font-bold font-sora mb-8 text-rose-900">Did You Know?</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                     {craft.facts.map((fact, i) => (
+                        <div key={i} className="flex gap-4">
+                            <span className="text-2xl">✨</span>
+                            <p className="font-medium text-lg">{fact}</p>
+                        </div>
+                     ))}
+                </div>
+            </div>
         </div>
-      </section>
+        
+        {/* Gallery Grid */}
+        <section className="py-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8 text-rose-900 text-center font-sora">
+              Gallery
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {craft.gallery.map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group shadow-md hover:shadow-2xl transition-all duration-300 border border-rose-100"
+                  onClick={() => setSelectedImage(index)}
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.caption}
+                    fill
+                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                    <span className="text-white text-xs font-medium line-clamp-2">{item.caption}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+        </section>
 
-      {/* Gallery */}
-      <section className="max-w-[1400px] mx-auto px-6 py-8 mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
-          Gallery
-        </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {craft.gallery.map((item, index) => (
-            <motion.div
-              key={index}
-              className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group shadow-md hover:shadow-2xl transition-all duration-300"
-              onClick={() => setSelectedImage(index)}
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Image
-                src={item.src}
-                alt={item.caption}
-                fill
-                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
-                <span className="text-white text-xs font-medium line-clamp-2">{item.caption}</span>
-              </div>
-            </motion.div>
-          ))}
+        {/* Footer Line */}
+        <div className="border-t border-rose-200/50 pt-8 text-center pb-8">
+             <p className="text-gray-800 text-sm font-medium">Designed with ❤️ for travelers seeking authentic Kutch</p>
         </div>
-      </section>
+      </div>
 
       {/* Lightbox Modal */}
       <AnimatePresence>

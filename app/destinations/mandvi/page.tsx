@@ -1,5 +1,5 @@
 import DestinationTemplate from "@/app/components/DestinationTemplate";
-import SectionCard from "@/app/components/SectionCard";
+
 import { mandvi } from "@/app/destinations/data/mandvi";
 import { generateDestinationStructuredData, generateBreadcrumbStructuredData } from "@/app/utils/seo";
 import type { Metadata } from 'next';
@@ -40,30 +40,6 @@ export default function Mandvi() {
     { name: mandvi.title }
   ]);
 
-  // Format description content
-  const description = (
-    <div className="space-y-8">
-      {mandvi.sections.map((section, index) => (
-        <SectionCard 
-          key={index}
-          title={section.heading}
-          image={section.image}
-          color={section.color}
-          border={section.border}
-        >
-          {section.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />}
-          {section.list && (
-            <ul className="list-none space-y-4">
-              {section.list.map((item, itemIndex) => (
-                <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }} />
-              ))}
-            </ul>
-          )}
-        </SectionCard>
-      ))}
-    </div>
-  );
-
   return (
     <>
       <script
@@ -75,7 +51,7 @@ export default function Mandvi() {
       <DestinationTemplate
         title={mandvi.title}
         image={mandvi.image}
-        description={description}
+        sections={mandvi.sections}
         facts={mandvi.facts}
         mapUrl={mandvi.mapUrl}
         gallery={mandvi.gallery}

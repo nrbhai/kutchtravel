@@ -12,7 +12,7 @@ export default function BookingWidget({ aid = '2665264', label = 'website' }: Bo
   
   const handleBooking = () => {
     // Redirect to Booking.com with affiliate ID and label
-    const bookingUrl = `https://www.booking.com/?aid=${aid}&label=${label}`;
+    const bookingUrl = `https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&aid=${aid}&label=${label}&sb=1`;
     window.open(bookingUrl, '_blank');
   };
 

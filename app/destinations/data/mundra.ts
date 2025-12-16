@@ -7,7 +7,11 @@ export const mundra: Destination = {
   image: "/images/mundra/mundra1.jpg",
   sections: [
     {
-      heading: "Overview",
+      heading: "Category",
+      content: "Port City"
+    },
+    {
+      heading: "Significance",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Mundra is a bustling port town on the coast of Kutch, known for its commercial port, beautiful beaches, and traditional fishing communities. The town offers a unique blend of industrial development and coastal beauty, making it an interesting destination for visitors.",
