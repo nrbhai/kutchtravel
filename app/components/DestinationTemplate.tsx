@@ -163,7 +163,7 @@ export default function DestinationTemplate({
                 return (
                   <a 
                     key={index}
-                    href={`https://www.booking.com/searchresults.html?ss=${encodeURIComponent(title)}&aid=2665264`}
+                    href={`https://www.booking.com/searchresults.html?ss=${encodeURIComponent(title + ", Gujarat")}&aid=2665264&sb=1`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block group cursor-pointer"
