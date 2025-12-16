@@ -68,7 +68,7 @@ export default function BookingsClient() {
                 </span>
               </motion.div>
               
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-[0.9] font-sora tracking-tight text-gray-900">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight font-sora tracking-tight text-gray-900">
                 Book Your <br/>
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600">
                   Next Adventure
@@ -243,27 +243,19 @@ function HotelsSection() {
       <BestDealsSection />
 
       {/* Booking Widget Section - Booking.com */}
-      <div className="bg-white rounded-[2rem] p-4 md:p-8 shadow-xl shadow-purple-900/5 ring-1 ring-black/5">
-        <div className="text-center mb-6">
-          <h3 className="text-xl md:text-2xl font-bold mb-1 font-sora text-gray-900">Search Hotels</h3>
-          <p className="text-gray-500 text-sm md:text-base font-inter">Compare deals from top providers</p>
-        </div>
-        
-        <div className="space-y-8 md:space-y-12">
-          <BookingWidget />
+      {/* Container removed to allow full width design in BookingWidget */}
+      <BookingWidget />
           
-          <div className="relative">
-            <div className="absolute inset-0 flex items-center" aria-hidden="true">
-              <div className="w-full border-t border-gray-100"></div>
-            </div>
-            <div className="relative flex justify-center">
-              <span className="px-4 bg-white text-xs font-bold tracking-widest text-gray-400 uppercase">Or verify with</span>
-            </div>
-          </div>
-
-          <TripWidget defaultTab="hotels" />
+      <div className="relative my-8 md:my-12">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-gray-100"></div>
+        </div>
+        <div className="relative flex justify-center">
+          <span className="px-4 bg-white text-xs font-bold tracking-widest text-gray-400 uppercase">Or verify with</span>
         </div>
       </div>
+
+      <TripWidget defaultTab="hotels" />
     </div>
   );
 }
@@ -329,14 +321,8 @@ function FlightsSection() {
       </div>
 
       {/* Flight Search Widget */}
-      <div className="bg-white rounded-[2rem] p-4 md:p-8 shadow-xl shadow-blue-900/5 ring-1 ring-black/5">
-        <div className="text-center mb-6">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-1 font-sora">Search Flights</h3>
-          <p className="text-gray-500 text-sm md:text-base font-inter">Find the best flight deals</p>
-        </div>
-        
-        <TripWidget defaultTab="flights" />
-      </div>
+      {/* Container removed to allow full width design */}
+      <TripWidget defaultTab="flights" />
 
       {/* Flight Information */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -394,14 +380,8 @@ function ToursSection() {
       </motion.div>
 
       {/* Tours Widget */}
-      <div className="bg-white rounded-[2rem] p-4 md:p-8 shadow-xl shadow-purple-900/5 ring-1 ring-black/5">
-        <div className="text-center mb-6">
-          <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-1 font-sora">Book Activities</h3>
-          <p className="text-gray-500 text-sm md:text-base font-inter">Discover unforgettable experiences</p>
-        </div>
-        
-        <TripWidget defaultTab="activities" />
-      </div>
+      {/* Container removed to allow full width design */}
+      <TripWidget defaultTab="activities" />
 
       {/* Popular Tours - Sleek Mobile Stack */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

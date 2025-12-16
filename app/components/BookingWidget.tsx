@@ -6,117 +6,135 @@ import { ExternalLink, Hotel, Star, Shield, Clock, MapPin, CheckCircle } from 'l
 interface BookingWidgetProps {
   aid?: string;
   label?: string;
+  compact?: boolean;
 }
 
-export default function BookingWidget({ aid = '2665264', label = 'website' }: BookingWidgetProps) {
+export default function BookingWidget({ aid = '304142', label = 'gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYwLTRjZjYtOTgxZC0zMjg5NTBjMzUyMTbYAgHgAgE', compact = false }: BookingWidgetProps) {
   
   const handleBooking = () => {
-    // Redirect to Booking.com with affiliate ID and label
-    const bookingUrl = `https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&aid=${aid}&label=${label}&sb=1`;
+    // Redirect to Booking.com with specific search parameters
+    const bookingUrl = `https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=${label}&aid=${aid}&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0`;
     window.open(bookingUrl, '_blank');
   };
 
-  return (
-    <div className="w-full my-16 relative z-10">
-      {/* Decorative background glow */}
-      <div className="absolute -inset-2 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 rounded-[2rem] opacity-20 blur-2xl -z-10"></div>
-      
-      <div className="bg-white rounded-[2rem] shadow-2xl overflow-hidden border border-gray-100 flex flex-col lg:flex-row min-h-[500px]">
-        {/* Left Side - Image Section */}
-        <div className="lg:w-2/5 relative min-h-[300px] lg:min-h-full">
-          <Image
-            src="/images/destinations/bhuj-overview.jpg" // Using an existing high-quality image
-            alt="Luxury Hotel Stay in Kutch"
-            fill
-            className="object-cover"
-            sizes="(max-width: 1024px) 100vw, 40vw"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-blue-900/80 via-blue-900/20 to-transparent"></div>
+  if (compact) {
+    return (
+      <div className="bg-white rounded-2xl shadow-lg border border-blue-800 overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-[#003580] p-4 flex items-center gap-2">
+           <div className="bg-white/20 p-1.5 rounded-lg">
+             <Hotel className="w-5 h-5 text-white" />
+           </div>
+           <span className="text-white font-bold text-sm tracking-wide">Booking.com Official Partner</span>
+        </div>
+        
+        <div className="p-6 flex flex-col flex-grow">
+          <h3 className="text-xl font-sora font-bold text-gray-900 mb-2">Find Perfect Stays</h3>
+          <p className="text-gray-600 text-sm mb-6 flex-grow">
+            From heritage palaces in Bhuj to desert camps in the Rann. Best prices guaranteed.
+          </p>
           
-          {/* Overlay Content */}
-          <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
-                Recommended
-              </span>
-              <div className="flex text-yellow-400">
-                <Star className="w-4 h-4 fill-current" />
-                <Star className="w-4 h-4 fill-current" />
-                <Star className="w-4 h-4 fill-current" />
-                <Star className="w-4 h-4 fill-current" />
-                <Star className="w-4 h-4 fill-current" />
-              </div>
-            </div>
-            <h3 className="text-3xl font-sora font-bold leading-tight mb-2">
-              Find Your Perfect Stay
-            </h3>
-            <p className="text-blue-100 font-inter text-sm">
-              From heritage palaces to desert tents
-            </p>
+          <button
+            onClick={handleBooking}
+            className="w-full bg-[#003580] hover:bg-[#00224f] text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-blue-900/20 flex items-center justify-center gap-2 transition-colors group"
+          >
+            <span>Search Deals</span>
+            <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </button>
+          
+          <div className="mt-4 flex items-center justify-center gap-3 text-xs text-gray-400 border-t border-gray-100 pt-4">
+             <span className="flex items-center gap-1"><Shield className="w-3 h-3" /> Secure Booking</span>
+             <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3" /> Free Cancellation</span>
           </div>
         </div>
+      </div>
+    );
+  }
 
-        {/* Right Side - Content Section */}
-        <div className="lg:w-3/5 p-8 md:p-12 lg:p-16 flex flex-col justify-center bg-gradient-to-br from-white to-blue-50/30">
+  return (
+    <div className="w-full my-8 md:my-12 relative z-10">
+      {/* Booking.com Blue Background Container */}
+      <div className="bg-[#003580] rounded-[2rem] shadow-2xl overflow-hidden flex flex-col lg:flex-row min-h-[500px] relative">
+        
+        {/* Genius Badge / Deal Badge */}
+        <div className="absolute top-6 right-6 z-20 bg-[#febb02] text-[#003580] px-4 py-2 rounded-lg font-bold shadow-lg transform rotate-3 flex items-center gap-2">
+          <span className="text-xl">⚡</span>
+          <span>Unlock Mobile Deals</span>
+        </div>
+
+        {/* Left Side - Content Section */}
+        <div className="lg:w-3/5 p-8 md:p-12 lg:p-16 flex flex-col justify-center relative z-10">
           <div className="mb-8">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-blue-100 rounded-xl">
-                <Hotel className="w-8 h-8 text-blue-600" />
+            <div className="flex items-center gap-3 mb-6">
+              <div className="bg-white/10 p-2 rounded-lg backdrop-blur-sm border border-white/20">
+                <Image src="/images/booking-logo-white.png" width={120} height={20} alt="Booking.com" className="opacity-90 invert brightness-0 grayscale-0" style={{ filter: 'brightness(0) invert(1)' }} />
               </div>
-              <span className="text-blue-600 font-bold tracking-wide uppercase text-sm">Official Booking Partner</span>
+              <span className="text-blue-200 font-bold tracking-wide uppercase text-xs border border-blue-400/30 px-3 py-1 rounded-full">Official Partner</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-sora font-extrabold text-gray-900 mb-6 leading-tight">
-              Experience Kutch in <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">Comfort & Style</span>
+            
+            <h2 className="text-4xl md:text-5xl font-sora font-extrabold text-white mb-6 leading-tight">
+              Find the perfect place to stay in <span className="text-[#febb02]">Kutch</span>
             </h2>
-            <p className="text-lg text-gray-600 font-inter leading-relaxed">
-              Whether you're looking for a luxurious palace stay in Bhuj, a traditional Bhunga in the White Rann, or a comfortable city hotel, we have the widest range of accommodations.
+            <p className="text-lg text-blue-100 font-inter leading-relaxed max-w-xl">
+              From luxury palaces in Bhuj to desert tents in the White Rann. Look for properties with the 'Genius' badge for extra discounts.
             </p>
           </div>
 
-          {/* Features Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
-            <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
-              <Shield className="w-6 h-6 text-green-500 shrink-0" />
-              <div>
-                <h4 className="font-bold text-gray-900">Best Price Guarantee</h4>
-                <p className="text-sm text-gray-500">We match any price</p>
-              </div>
+          {/* Trust Indicators */}
+          <div className="grid grid-cols-2 gap-x-8 gap-y-4 mb-10 text-white/90">
+            <div className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-[#febb02]" />
+              <span className="font-medium text-sm">Best Price Guarantee</span>
             </div>
-            <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
-              <CheckCircle className="w-6 h-6 text-blue-500 shrink-0" />
-              <div>
-                <h4 className="font-bold text-gray-900">Free Cancellation</h4>
-                <p className="text-sm text-gray-500">Flexible booking options</p>
-              </div>
+            <div className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-[#febb02]" />
+              <span className="font-medium text-sm">2M+ Properties</span>
             </div>
-            <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
-              <MapPin className="w-6 h-6 text-red-500 shrink-0" />
-              <div>
-                <h4 className="font-bold text-gray-900">Top Locations</h4>
-                <p className="text-sm text-gray-500">Stay near attractions</p>
-              </div>
+            <div className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-[#febb02]" />
+              <span className="font-medium text-sm">No Booking Fees</span>
             </div>
-            <div className="flex items-start gap-4 p-4 rounded-xl bg-white border border-blue-100 shadow-sm hover:shadow-md transition-shadow">
-              <Star className="w-6 h-6 text-yellow-500 shrink-0" />
-              <div>
-                <h4 className="font-bold text-gray-900">Real Reviews</h4>
-                <p className="text-sm text-gray-500">Verified guest ratings</p>
-              </div>
+            <div className="flex items-center gap-3">
+              <CheckCircle className="w-5 h-5 text-[#febb02]" />
+              <span className="font-medium text-sm">24/7 Support</span>
             </div>
           </div>
 
           {/* CTA Button */}
           <button
             onClick={handleBooking}
-            className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-6 px-8 rounded-2xl shadow-xl shadow-blue-500/30 transform transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-4 text-xl group"
+            className="w-full sm:w-auto bg-[#febb02] hover:bg-[#eac95b] text-[#003580] font-black py-5 px-10 rounded-xl shadow-xl shadow-black/20 transform transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-3 text-xl group"
           >
-            <span>Find Deals on Booking.com</span>
-            <ExternalLink className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            <span className="text-2xl">🔍</span>
+            <span>Search Deals on Booking.com</span>
+            <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform opacity-70" />
           </button>
+        </div>
+
+        {/* Right Side - Image Section with Overlay */}
+        <div className="lg:w-2/5 relative min-h-[300px] lg:min-h-full overflow-hidden">
+          <Image
+            src="/images/destinations/bhuj-overview.jpg"
+            alt="Luxury Hotel Stay in Kutch"
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 40vw"
+          />
+          {/* Blue Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#003580] via-[#003580]/40 to-transparent lg:bg-gradient-to-l lg:from-[#003580] lg:via-[#003580]/20 lg:to-transparent"></div>
           
-          <p className="text-center mt-4 text-sm text-gray-500">
-            Secure booking • No booking fees • 24/7 Customer Support
-          </p>
+          {/* Floating Cards */}
+          <div className="absolute bottom-8 right-8 left-8 lg:left-auto lg:w-72 bg-white rounded-2xl p-4 shadow-2xl animate-float hidden md:block">
+            <div className="flex items-start gap-3">
+              <div className="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center shrink-0">
+                <span className="text-2xl">🏨</span>
+              </div>
+              <div>
+                <p className="font-bold text-gray-900 text-sm">Rann Visamo Resort</p>
+                <div className="flex text-[#febb02] text-xs my-1">★★★★★</div>
+                <p className="text-gray-500 text-xs">Recently booked by 3 people</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -17,6 +17,10 @@ export type HiddenGem = {
     border: string;
     content?: string;
     list?: string[];
+    image?: {
+      src: string;
+      alt: string;
+    };
   }>;
   facts: string[];
   mapUrl: string;

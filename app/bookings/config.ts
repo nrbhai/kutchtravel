@@ -1,46 +1,91 @@
 export const heroImages = [
   { 
-    src: '/images/bhuj/bhuj.jpg', 
-    title: 'Heritage Hotels in Bhuj',
-    subtitle: 'Experience Royal Living'
+    src: '/images/hotels/regenta-resort-bhuj.jpg', 
+    title: 'Regenta Resort Bhuj',
+    subtitle: 'Luxury Living'
   },
   { 
-    src: '/images/mandvi/mandvi.jpg', 
-    title: 'Beach Resorts in Mandvi',
-    subtitle: 'Relax by the Arabian Sea'
+    src: '/images/hotels/regenta1.jpg', 
+    title: 'Regenta Resort - Pool View',
+    subtitle: 'Relax by the Pool'
   },
   { 
-    src: '/images/dhordo-white-rann/dhordo.jpg', 
-    title: 'Desert Camps at White Rann',
-    subtitle: 'Under the Moonlit Sky'
+    src: '/images/hotels/holiday-village-gdm.jpg', 
+    title: 'Holiday Village Resort',
+    subtitle: 'Traditional Village Experience'
   },
   { 
-    src: '/images/lakhpat/lakhpat.jpg', 
-    title: 'Historic Stays in Lakhpat',
-    subtitle: 'Journey Through Time'
+    src: '/images/hotels/fdr-bhuj.jpg', 
+    title: 'The Fern Residency',
+    subtitle: 'Modern Comfort'
   },
   { 
-    src: '/images/gandhidham/gandhidham.jpg', 
-    title: 'Modern Hotels in Gandhidham',
-    subtitle: 'Business & Leisure'
+    src: '/images/hotels/fern-residency-bhuj.jpg', 
+    title: 'Fern Residency Bhuj',
+    subtitle: 'Elegant Interiors'
   },
   { 
-    src: '/images/mundra/mundra.jpg', 
-    title: 'Coastal Resorts in Mundra',
-    subtitle: 'Gateway to the Sea'
+    src: '/images/hotels/fern-residency-trip.jpg', 
+    title: 'Fern Residency - Exterior',
+    subtitle: 'Iconic Architecture'
+  },
+  { 
+    src: '/images/hotels/hillview.jpg', 
+    title: 'Hotel Hill View',
+    subtitle: 'Scenic Vistas'
+  },
+  { 
+    src: '/images/hotels/hotel-mangalam.jpg', 
+    title: 'Hotel Mangalam',
+    subtitle: 'Warm Hospitality'
+  },
+  { 
+    src: '/images/hotels/kutch-courtyard.jpg', 
+    title: 'Kutch Courtyard',
+    subtitle: 'Cultural Stay'
+  },
+  { 
+    src: '/images/hotels/la-kamp-resort.jpg', 
+    title: 'La Kamp Resort',
+    subtitle: 'Nature Retreat'
+  },
+  { 
+    src: '/images/hotels/poddar-gdm.jpg', 
+    title: 'Poddar International',
+    subtitle: 'Business Class'
+  },
+  { 
+    src: '/images/hotels/presidential-suites.jpg', 
+    title: 'Presidential Suites',
+    subtitle: 'Unmatched Luxury'
+  },
+  { 
+    src: '/images/hotels/quality-inn-gdm.jpg', 
+    title: 'Quality Inn Palms',
+    subtitle: 'Comfort & Convenience'
+  },
+  { 
+    src: '/images/hotels/the-fern-residency-bhuj.jpg', 
+    title: 'The Fern Residency',
+    subtitle: 'Premium Accommodation'
+  },
+  { 
+    src: '/images/hotels/times-square.jpg', 
+    title: 'Times Square',
+    subtitle: 'Central Location'
   }
 ];
 
 export const accommodationDeals = [
   {
     id: 1,
-    name: "Rann Visamo Resort",
-    location: "Near White Rann",
-    rating: "9.2",
-    price: "₹8,500",
-    image: "/images/hotels/rann-visamo-resort.jpg",
-    tags: ["Luxury Tents"],
-    link: "https://www.booking.com/hotel/in/rann-visamo-resort.html",
+    name: "Kutch Courtyard",
+    location: "Bhuj",
+    rating: "9.0",
+    price: "₹4,200",
+    image: "/images/hotels/kutch-courtyard.jpg",
+    tags: ["Cultural"],
+    link: "https://www.booking.com/hotel/in/kutch-courtyard.html",
     dealType: "Best Seller"
   },
   {
@@ -56,13 +101,13 @@ export const accommodationDeals = [
   },
   {
     id: 3,
-    name: "Serena Beach Resort",
-    location: "Mandvi",
-    rating: "8.8",
-    price: "₹6,500",
-    image: "/images/hotels/serena-beach-resort.jpg",
-    tags: ["Beachfront"],
-    link: "https://www.booking.com/hotel/in/serena-beach-resort.html",
+    name: "La Kamp Resort",
+    location: "Kutch",
+    rating: "8.6",
+    price: "₹5,500",
+    image: "/images/hotels/la-kamp-resort.jpg",
+    tags: ["Resort"],
+    link: "https://www.booking.com/hotel/in/la-kamp-resort.html",
     dealType: "Luxury"
   },
   {
@@ -78,14 +123,14 @@ export const accommodationDeals = [
   },
   {
     id: 5,
-    name: "White Rann Resort",
-    location: "Dhordo",
-    rating: "9.0",
-    price: "₹9,000",
-    image: "/images/hotels/white-rann-resort.jpg",
-    tags: ["Desert Camp"],
-    link: "https://www.booking.com/hotel/in/white-rann-resort.html",
-    dealType: "Premium"
+    name: "Quality Inn Palms",
+    location: "Gandhidham",
+    rating: "8.3",
+    price: "₹3,800",
+    image: "/images/hotels/quality-inn-gdm.jpg",
+    tags: ["Business"],
+    link: "https://www.booking.com/hotel/in/quality-inn-palms.html",
+    dealType: "Value"
   },
   {
     id: 6,
@@ -93,21 +138,21 @@ export const accommodationDeals = [
     location: "Gandhidham",
     rating: "8.7",
     price: "₹6,000",
-    image: "/images/hotels/radisson-hotel-kandla.jpg",
+    image: "/images/hotels/radisson-gdm.avif",
     tags: ["Business"],
     link: "https://www.booking.com/hotel/in/radisson-kandla.html",
     dealType: ""
   },
   {
     id: 7,
-    name: "Click Hotel",
+    name: "Times Square",
     location: "Bhuj",
     rating: "8.2",
-    price: "₹3,200",
-    image: "/images/hotels/click-hotel-bhuj.jpg",
-    tags: ["Budget"],
-    link: "https://www.booking.com/hotel/in/click-hotel-bhuj.html",
-    dealType: "Value"
+    price: "₹3,500",
+    image: "/images/hotels/times-square.jpg",
+    tags: ["City Center"],
+    link: "https://www.booking.com/hotel/in/times-square.html",
+    dealType: ""
   },
   {
     id: 8,
@@ -115,7 +160,7 @@ export const accommodationDeals = [
     location: "Gandhidham",
     rating: "8.3",
     price: "₹4,800",
-    image: "/images/hotels/holiday-village-resort.jpg",
+    image: "/images/hotels/holiday-village-gdm.jpg",
     tags: ["Family"],
     link: "https://www.booking.com/hotel/in/holiday-village-resort-gandhidham.html",
     dealType: ""

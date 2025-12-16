@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Popover, Menu, MenuButton, MenuItem, MenuItems, PopoverButton, PopoverPanel } from "@headlessui/react";
-import { MapPin, Calendar, Camera, BookOpen, Users, Sparkles, Mountain, Waves, ArrowRight } from "lucide-react";
+import { MapPin, Calendar, Camera, BookOpen, Users, Sparkles, Mountain, Waves, ArrowRight, Palette } from "lucide-react";
 import QuickGuide from "./components/QuickGuide";
 import Navigation from "./components/Navigation";
 import BookingWidget from "./components/BookingWidget";
@@ -574,6 +574,13 @@ export default function Home() {
                 <span className="text-sm font-medium text-white font-sans tracking-wide">Booking</span>
               </div>
             </Link>
+            <Link href="#culture" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-fuchsia-500 via-purple-500 to-indigo-600 backdrop-blur-sm border border-fuchsia-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-600 via-purple-600 to-indigo-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div className="relative z-10">
+                <Palette className="w-8 h-8 text-white mb-3 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium text-white font-sans tracking-wide">Crafts</span>
+              </div>
+            </Link>
             <Link href="/about" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-orange-500 via-red-500 to-pink-600 backdrop-blur-sm border border-orange-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-red-600 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
@@ -1059,10 +1066,17 @@ export default function Home() {
       </section>
 
       {/* Booking Widget Section */}
-      <section className="py-10 bg-gradient-to-b from-white via-blue-50/30 to-white relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-b from-white via-blue-50/20 to-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/noise.jpg')] opacity-[0.03] mix-blend-overlay"></div>
-        <div className="max-w-[1600px] mx-auto px-4 relative z-10">
-           <BookingWidget />
+        <div className="max-w-5xl mx-auto px-4 relative z-10">
+           <div className="text-center mb-10">
+              <h2 className="text-3xl font-sora font-bold text-gray-900 mb-2">Plan Your Journey</h2>
+              <p className="text-gray-600">Find the best deals on hotels and flights</p>
+           </div>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <BookingWidget compact={true} />
+              <TripWidget compact={true} />
+           </div>
         </div>
       </section>
 
@@ -1232,7 +1246,7 @@ export default function Home() {
                 {/* Placeholder Images Grid */}
                 <div className="space-y-4">
                   <a 
-                    href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&aid=2665264&label=main_page_luxury&sb=1"
+                    href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYwLTRjZjYtOTgxZC0zMjg5NTBjMzUyMTbYAgHgAgE&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block group relative aspect-video rounded-2xl overflow-hidden shadow-lg cursor-pointer"
@@ -1252,7 +1266,7 @@ export default function Home() {
                   
                   <div className="grid grid-cols-2 gap-4">
                     <a 
-                      href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&nflt=ht_id%3D220&aid=2665264&label=main_page_homestay&sb=1"
+                      href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYwLTRjZjYtOTgxZC0zMjg5NTBjMzUyMTbYAgHgAgE&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer"
@@ -1271,7 +1285,7 @@ export default function Home() {
                     </a>
                     
                     <a 
-                      href="https://www.booking.com/searchresults.html?ss=Rann+of+Kutch&aid=2665264&label=main_page_desert_camp&sb=1"
+                      href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYwLTRjZjYtOTgxZC0zMjg5NTBjMzUyMTbYAgHgAgE&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer"
@@ -1291,7 +1305,7 @@ export default function Home() {
                   </div>
                   
                   <a 
-                    href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&aid=2665264&label=main_page_heritage&sb=1"
+                    href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYwLTRjZjYtOTgxZC0zMjg5NTBjMzUyMTbYAgHgAgE&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block group relative aspect-video rounded-2xl overflow-hidden shadow-lg cursor-pointer"

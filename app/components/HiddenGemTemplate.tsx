@@ -20,6 +20,10 @@ type HiddenGemProps = {
       border?: string;
       content?: string;
       list?: string[];
+      image?: {
+        src: string;
+        alt: string;
+      };
     }[];
     facts: string[];
     mapUrl: string;
@@ -115,7 +119,7 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
 
       {/* Main Content Sections */}
       <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-16">
-        <div className="space-y-6">
+        <div className="space-y-12">
           {gem.sections.map((section, index) => {
             const sectionColors = [
               { bg: "bg-blue-50", text: "text-blue-900", border: "border-blue-400" },
@@ -126,29 +130,48 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
               { bg: "bg-cyan-50", text: "text-cyan-900", border: "border-cyan-400" },
             ];
             const colorSet = sectionColors[index % sectionColors.length];
+            const isReverse = index % 2 !== 0;
 
             return (
               <section 
                 key={index}
-                className={`${colorSet.bg} py-8 px-6 rounded-2xl shadow-lg border-2 ${colorSet.border} hover:shadow-xl transition-all duration-300`}
+                className={`${colorSet.bg} rounded-2xl shadow-lg border-2 ${colorSet.border} hover:shadow-xl transition-all duration-300 overflow-hidden`}
               >
-                <h2 className={`text-xl md:text-2xl font-sora font-bold mb-4 ${colorSet.text} pl-4 border-l-4 ${colorSet.border}`}>
-                  {section.heading}
-                </h2>
-                <div className="font-inter text-slate-800">
-                  {section.content && (
-                    <p className="leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: section.content }} />
-                  )}
-                  {section.list && (
-                    <ul className="list-none space-y-3">
-                      {section.list.map((item, itemIndex) => (
-                        <li 
-                          key={itemIndex} 
-                          className="leading-relaxed flex items-start gap-2"
-                          dangerouslySetInnerHTML={{ __html: `<span class="text-lg mr-1">•</span>${item}` }}
-                        />
-                      ))}
-                    </ul>
+                <div className={`flex flex-col ${isReverse ? 'lg:flex-row-reverse' : 'lg:flex-row'}`}>
+                  {/* Content Container */}
+                  <div className={`p-8 lg:p-10 flex-1 flex flex-col justify-center`}>
+                    <h2 className={`text-xl md:text-2xl font-sora font-bold mb-4 ${colorSet.text} pl-4 border-l-4 ${colorSet.border}`}>
+                      {section.heading}
+                    </h2>
+                    <div className="font-inter text-slate-800">
+                      {section.content && (
+                        <p className="leading-relaxed mb-4 text-lg" dangerouslySetInnerHTML={{ __html: section.content }} />
+                      )}
+                      {section.list && (
+                        <ul className="list-none space-y-3">
+                          {section.list.map((item, itemIndex) => (
+                            <li 
+                              key={itemIndex} 
+                              className="leading-relaxed flex items-start gap-2"
+                              dangerouslySetInnerHTML={{ __html: `<span class="text-lg mr-1">•</span>${item}` }}
+                            />
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Image Container */}
+                  {section.image && (
+                    <div className="relative w-full lg:w-2/5 min-h-[300px] lg:min-h-full">
+                      <Image
+                        src={section.image.src}
+                        alt={section.image.alt}
+                        fill
+                        className="object-cover hover:scale-105 transition-transform duration-700"
+                        sizes="(max-width: 1024px) 100vw, 40vw"
+                      />
+                    </div>
                   )}
                 </div>
               </section>

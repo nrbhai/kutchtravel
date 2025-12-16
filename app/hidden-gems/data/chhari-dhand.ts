@@ -12,7 +12,11 @@ export const chhariDhand: HiddenGem = {
       heading: "Overview",
       color: "#f0fdf4",
       border: "border-l-4 border-gray-500 text-gray-700",
-      content: "Chhari Dhand is a seasonal wetland and bird sanctuary that transforms into a paradise for migratory birds during winter months. This hidden gem offers pristine birdwatching opportunities away from crowds."
+      content: "Chhari Dhand is a seasonal wetland and bird sanctuary that transforms into a paradise for migratory birds during winter months. This hidden gem offers pristine birdwatching opportunities away from crowds.",
+      image: {
+        src: "/images/hidden-gems/chhari-dhand/chhari.jpg",
+        alt: "Panoramic view of Chhari Dhand wetland"
+      }
     },
     {
       heading: "Wildlife & Birds",
@@ -25,7 +29,11 @@ export const chhariDhand: HiddenGem = {
         "<b>Best Viewing:</b> Early morning and late afternoon",
         "<b>Photography:</b> Excellent opportunities for bird photography",
         "<b>Binoculars:</b> Essential for detailed bird observation"
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/chhari-dhand/chhari2.jpg",
+        alt: "Migratory birds at Chhari Dhand"
+      }
     },
     {
       heading: "Access & Adventure",
@@ -38,7 +46,11 @@ export const chhariDhand: HiddenGem = {
         "<b>Local Guide:</b> Helpful for spotting rare species",
         "<b>Camping:</b> Possible with permissions from forest department",
         "<b>Water Levels:</b> Vary seasonally, best after monsoons"
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/chhari-dhand/Chhari-Dhand1.jpg",
+        alt: "Off-road terrain near Chhari Dhand"
+      }
     },
     {
       heading: "How to Reach",
@@ -50,7 +62,11 @@ export const chhariDhand: HiddenGem = {
         "<b>Vehicle Type:</b> SUV or 4WD essential for final approach",
         "<b>Fuel:</b> Fill up in Bhuj, no fuel stations nearby",
         "<b>Permits:</b> Forest department permission may be required"
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/chhari-dhand/chhari1.jpg",
+        alt: "Landscape view of Chhari Dhand"
+      }
     },
     {
       heading: "Visitor Information",
