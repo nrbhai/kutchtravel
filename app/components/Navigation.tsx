@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Popover, Menu, MenuButton, MenuItem, MenuItems, PopoverButton, PopoverPanel } from "@headlessui/react";
 import { 
@@ -64,12 +65,15 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-14">
           
           {/* Logo/Brand */}
-          <Link href="/" className="group flex items-center space-x-2">
-            <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105 group-hover:rotate-3">
-                <MapPin className="w-5 h-5 text-white" />
-              </div>
-              <div className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-pulse shadow-md" />
+          <Link href="/" className="group flex items-center space-x-3">
+            <div className="relative w-[77px] h-[77px] flex-shrink-0 p-2 overflow-visible transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3">
+              <Image
+                src="/images/logo-v3.jpg"
+                alt="Travel Kutch Logo"
+                fill
+                className="object-contain shadow-md"
+                priority
+              />
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold font-sora bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent whitespace-nowrap tracking-tight">

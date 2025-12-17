@@ -428,16 +428,29 @@ export default function Home() {
         </div>
 
         {/* Content grid container */}
+        
         <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Text Content */}
             <motion.div 
-              className="text-center lg:text-left"
+              className="text-center lg:text-left relative"
               initial="hidden" 
               animate="visible" 
               variants={stagger}
             >
-              <motion.h1 variants={fadeUp} className="font-sora leading-tight tracking-tight">
+              {/* Local Watermark for Text Section */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.15]">
+                 <div className="relative w-[600px] h-[600px] grayscale mix-blend-multiply">
+                    <Image
+                       src="/images/logo-v3.jpg"
+                       alt="Travel Kutch Watermark"
+                       fill
+                       className="object-contain"
+                    />
+                 </div>
+              </div>
+
+              <motion.h1 variants={fadeUp} className="font-sora leading-tight tracking-tight relative z-10">
                 <span className="block text-5xl md:text-6xl lg:text-8xl font-extrabold holographic drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]">
                   Discover Kutch
                 </span>
@@ -626,6 +639,8 @@ export default function Home() {
           <div className="blob blob-1 w-[500px] h-[500px] top-0 right-0 opacity-30"></div>
           <div className="blob blob-2 w-[400px] h-[400px] bottom-0 left-0 opacity-30"></div>
         </div>
+
+
 
         <div className="relative max-w-[1600px] mx-auto px-6">
           {/* Two Column Layout: Title Left, Carousel Right */}
@@ -848,6 +863,8 @@ export default function Home() {
           <div className="blob blob-2 w-[400px] h-[400px] bottom-0 right-0 opacity-30"></div>
         </div>
 
+
+
         <div className="relative max-w-[1600px] mx-auto px-6">
           {/* Two Column Layout: Carousel Left, Title Right */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
@@ -1066,12 +1083,12 @@ export default function Home() {
       </section>
 
       {/* Booking Widget Section */}
-      <section className="py-16 bg-gradient-to-b from-white via-blue-50/20 to-white relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-br from-[#2c3e50] via-[#000000] to-[#2c3e50] relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('/images/noise.jpg')] opacity-[0.03] mix-blend-overlay"></div>
         <div className="max-w-5xl mx-auto px-4 relative z-10">
            <div className="text-center mb-10">
-              <h2 className="text-3xl font-sora font-bold text-gray-900 mb-2">Plan Your Journey</h2>
-              <p className="text-gray-600">Find the best deals on hotels and flights</p>
+              <h2 className="text-3xl font-sora font-bold text-white mb-2">Plan Your Journey</h2>
+              <p className="text-gray-300">Find the best deals on hotels and flights</p>
            </div>
            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <BookingWidget compact={true} />

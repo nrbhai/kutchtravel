@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -27,6 +28,14 @@ export default function Footer() {
                 viewport={{ once: true }}
                 className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 border border-white shadow-lg"
               >
+                <div className="mb-6 relative w-[77px] h-[77px] flex-shrink-0 p-2">
+                  <Image
+                    src="/images/logo-v3.jpg"
+                    alt="Travel Kutch Logo"
+                    fill
+                    className="object-contain shadow-lg"
+                  />
+                </div>
                 <h3 className="text-5xl md:text-6xl font-sora font-extrabold holographic drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)] mb-6">
                   Travel Kutch
                 </h3>
