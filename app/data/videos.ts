@@ -43,7 +43,7 @@ export const KUTCH_SHORTS: KutchShort[] = [
   {
     id: 'khari-nadi-waterfall-vibe',
     videoUrl: '/videos/travelkutch-sercret-waterfall.mp4',
-    thumbnailUrl: '/images/destinations/kadia-dhrow.jpg',
+    thumbnailUrl: '/images/destinations/Nakhatrana River.JPG',
     title: 'Secret Khari Nadi Waterfall',
     location: 'Khari Nadi, Near Bhuj',
     description: 'A hidden wonder found deep in the riverbed. Requires an adventurous 2km trek along the Khari Nadi riverbed to reach this secluded waterfall.',
