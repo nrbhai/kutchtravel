@@ -37,7 +37,7 @@ export default function BookingsClient() {
       <div className="relative overflow-hidden bg-white">
         {/* Navigation */}
         <div className="absolute top-0 left-0 right-0 z-50">
-          <Navigation />
+          <Navigation variant="solid" />
         </div>
         
         {/* Background Blobs - Optimized for mobile */}

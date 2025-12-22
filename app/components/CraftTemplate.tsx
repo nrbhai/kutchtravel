@@ -81,13 +81,13 @@ export default function CraftTemplate({ craft }: CraftProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <Navigation />
+      <Navigation variant="solid" />
 
       {/* Back Button Bar */}
-      <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-md border-b border-rose-100 py-3">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/#culture" className="inline-flex items-center gap-2 text-rose-700 hover:text-rose-900 font-medium transition-colors">
-            <ArrowLeft className="w-5 h-5" />
+      <div className="sticky top-[64px] z-40 bg-white/80 backdrop-blur-md border-b border-rose-100 py-3">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
+          <Link href="/#culture" className="inline-flex items-center gap-2 text-rose-700 hover:text-rose-900 font-medium transition-colors group">
+            <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
             Back to Culture & Crafts
           </Link>
         </div>

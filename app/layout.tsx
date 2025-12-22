@@ -167,15 +167,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </p>
         </div>
         
-        {/* Global Logo Wallpaper */}
-        <div 
-          className="fixed inset-0 z-[-1] opacity-[0.03] pointer-events-none"
-          style={{
-            backgroundImage: "url('/images/logo-v3.jpg')",
-            backgroundRepeat: "repeat",
-            backgroundSize: "200px" 
-          }}
-        />
 
         <ErrorBoundary>
           <Suspense fallback={<div>Loading...</div>}>

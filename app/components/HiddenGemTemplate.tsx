@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, X, ChevronLeft, ChevronRight } from "lucide-react";
+import Navigation from "@/app/components/Navigation";
+import ShortsGallery from "./ShortsGallery";
 
 type HiddenGemProps = {
   gem: {
@@ -55,24 +57,17 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-gradient-to-br from-blue-50/50 via-purple-50/50 to-pink-50/50">
-      {/* Navigation */}
-      <nav className="bg-white/90 backdrop-blur-sm border-b border-slate-200 shadow-sm sticky top-0 z-50">
+      <Navigation variant="solid" />
+
+      {/* Contextual Navigation Bar */}
+      <div className="bg-white/60 backdrop-blur-md border-b border-gray-200 py-3 sticky top-[64px] z-40">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-14">
-            <div className="flex">
-              <Link href="/hidden-gems" className="flex items-center gap-2 text-slate-600 hover:text-slate-900 text-sm font-medium transition-colors">
-                <ArrowLeft className="w-4 h-4" />
-                <span>Back to Hidden Gems</span>
-              </Link>
-            </div>
-            <div className="flex items-center gap-4">
-              <Link href="/" className="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">
-                Home
-              </Link>
-            </div>
-          </div>
+          <Link href="/hidden-gems" className="inline-flex items-center gap-2 text-slate-600 hover:text-indigo-600 text-sm font-medium transition-colors group">
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            <span>Back to Hidden Gems</span>
+          </Link>
         </div>
-      </nav>
+      </div>
 
       {/* Hero Section - Compact */}
       <section className="relative w-full">
@@ -240,6 +235,8 @@ export default function HiddenGemTemplate({ gem }: HiddenGemProps) {
           })}
         </div>
       </section>
+
+      <ShortsGallery destinationSlug={gem.slug} />
 
       {/* Gallery */}
       <section className="max-w-[1400px] mx-auto px-6 py-8 mb-8">

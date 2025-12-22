@@ -10,6 +10,7 @@ import QuickGuide from "./components/QuickGuide";
 import Navigation from "./components/Navigation";
 import BookingWidget from "./components/BookingWidget";
 import TripWidget from "./components/TripWidget";
+import ShortsGallery from "./components/ShortsGallery";
 import { DESTINATIONS } from "@/app/destinations/data";
 import { useState, useEffect } from "react";
 
@@ -853,7 +854,7 @@ export default function Home() {
         </div>
       </section>
 
-
+      <ShortsGallery />
 
       {/* 5️⃣ Enhanced Culture & Crafts Section */}
       <section id="culture" className="relative overflow-hidden py-28 scroll-mt-28">

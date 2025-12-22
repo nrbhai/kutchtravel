@@ -22,7 +22,6 @@ import {
   MenuIcon,
   Globe
 } from 'lucide-react';
-import GoogleTranslate from './GoogleTranslate';
 
 // Animation variants
 const panelVars = {
@@ -49,235 +48,145 @@ const DESTINATIONS = [
   { title: 'Mundra', slug: 'mundra', icon: Ship, category: 'Port City' }
 ];
 
-export default function Navigation() {
+interface NavigationProps {
+  variant?: 'transparent' | 'solid';
+}
+
+export default function Navigation({ variant = 'transparent' }: NavigationProps) {
+  const isSolid = variant === 'solid';
+
   return (
     <motion.nav 
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative w-full z-50"
+      className={`relative w-full z-50 transition-colors duration-300 ${
+        isSolid ? 'bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm' : 'bg-transparent'
+      }`}
     >
-      {/* Transparent Background */}
-      <div className="absolute inset-0 bg-transparent">
-      </div>
-      
       <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-14">
+        <div className="flex items-center justify-between h-16">
           
           {/* Logo/Brand */}
           <Link href="/" className="group flex items-center space-x-3">
-            <div className="relative w-[77px] h-[77px] flex-shrink-0 p-2 overflow-visible transition-transform duration-300 group-hover:scale-105 group-hover:rotate-3">
+            <div className="relative w-14 h-14 flex-shrink-0 p-1 overflow-visible transition-transform duration-300 group-hover:scale-110">
               <Image
                 src="/images/logo-v3.jpg"
                 alt="Travel Kutch Logo"
                 fill
-                className="object-contain shadow-md"
+                className="object-contain shadow-sm rounded-lg"
                 priority
               />
             </div>
-            <div className="hidden sm:block">
+            <div className="hidden xs:block">
               <h1 className="text-xl font-bold font-sora bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent whitespace-nowrap tracking-tight">
                 TravelKutch
               </h1>
-              <p className="text-xs text-gray-500 font-medium font-inter tracking-wide">Discover the Magic</p>
+              <p className={`text-[10px] font-medium font-inter tracking-wide ${isSolid ? 'text-gray-500' : 'text-gray-400'}`}>Discover the Magic</p>
             </div>
           </Link>
 
-          {/* Home Button */}
-          <Link 
-            href="/"
-            className="group relative flex items-center space-x-2 px-4 py-2 rounded-xl bg-transparent hover:bg-white/10 backdrop-blur-sm transition-all duration-300 hover:scale-105"
-          >
-            <Home className="w-4 h-4 text-indigo-600 group-hover:text-indigo-700 transition-colors duration-300" />
-            <span className="text-sm font-semibold font-sora text-gray-700 group-hover:text-indigo-700 transition-colors duration-300">
-              Home
-            </span>
-          </Link>
+          {/* Nav Links - Desktop */}
+          <div className="hidden lg:flex items-center space-x-1">
+            {[
+              { name: 'Home', href: '/', icon: Home },
+              { name: 'Destinations', href: '/destinations', icon: MapPin },
+              { name: 'Hidden Gems', href: '/hidden-gems', icon: Sparkles },
+              { name: 'Bookings', href: '/bookings', icon: Calendar },
+              { name: 'Blog', href: '/blog', icon: BookOpen },
+              { name: 'About', href: '/about', icon: Users },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105 ${
+                  isSolid 
+                    ? 'text-gray-700 hover:bg-gray-100' 
+                    : 'text-gray-100 hover:bg-white/10 backdrop-blur-sm'
+                }`}
+              >
+                <item.icon className="w-4 h-4" />
+                <span className="text-sm font-semibold font-sora">{item.name}</span>
+              </Link>
+            ))}
+          </div>
 
-          {/* Mobile Menu */}
-          <Menu as="div" className="lg:hidden relative">
-            {({ open }) => (
-              <>
-                <MenuButton
-                  className="flex items-center justify-center w-12 h-12 rounded-xl bg-white/20 hover:bg-white/30 transition-all duration-300 hover:scale-105"
-                  aria-label="Open menu"
-                  aria-expanded={open}
-                >
-                  <motion.div
-                    animate={{ rotate: open ? 90 : 0 }}
-                    transition={{ duration: 0.3 }}
+          <div className="flex items-center space-x-4">
+            
+            {/* Mobile Menu Button */}
+            <Menu as="div" className="lg:hidden relative">
+              {({ open }) => (
+                <>
+                  <MenuButton
+                    className={`flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-300 hover:scale-105 ${
+                      isSolid ? 'bg-gray-100 text-gray-900' : 'bg-white/20 text-white hover:bg-white/30'
+                    }`}
+                    aria-label="Open menu"
+                    aria-expanded={open}
                   >
-                    <MenuIcon className="w-6 h-6 text-gray-100" />
-                  </motion.div>
-                </MenuButton>
-
-                <AnimatePresence>
-                  {open && (
-                    <MenuItems
-                      static
-                      as={motion.div}
-                      key="mobile-menu"
-                      initial={{ opacity: 0, scale: 0.95, y: -10 }}
-                      animate={{ opacity: 1, scale: 1, y: 0 }}
-                      exit={{ opacity: 0, scale: 0.95, y: -10 }}
-                      anchor="bottom end"
-                      className="absolute right-0 mt-4 w-80 max-w-[95vw] origin-top-right overflow-hidden rounded-2xl border border-white/40 bg-white/98 backdrop-blur-xl shadow-2xl z-50"
+                    <motion.div
+                      animate={{ rotate: open ? 90 : 0 }}
+                      transition={{ duration: 0.3 }}
                     >
-                      <div className="bg-gradient-to-r from-gray-600 via-gray-600 to-gray-700 p-4">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-10 h-10 bg-white/30 rounded-lg flex items-center justify-center">
-                            <MapPin className="w-5 h-5 text-white" />
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-white">TravelKutch</h3>
-                            <p className="text-gray-100 text-sm">Explore the Magic</p>
+                      <MenuIcon className="w-6 h-6" />
+                    </motion.div>
+                  </MenuButton>
+
+                  <AnimatePresence>
+                    {open && (
+                      <MenuItems
+                        static
+                        as={motion.div}
+                        key="mobile-menu"
+                        initial={{ opacity: 0, scale: 0.95, y: -10 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 0.95, y: -10 }}
+                        anchor="bottom end"
+                        className="absolute right-0 mt-4 w-80 max-w-[95vw] origin-top-right overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl z-50"
+                      >
+                        <div className="bg-gradient-to-r from-indigo-600 to-purple-700 p-6">
+                          <div className="flex items-center space-x-3">
+                            <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+                              <MapPin className="w-5 h-5 text-white" />
+                            </div>
+                            <div>
+                              <h3 className="font-bold text-white">TravelKutch</h3>
+                              <p className="text-indigo-100 text-sm">Explore the Magic</p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      
-                      <div className="p-4 space-y-2">
-                        <MenuItem>
-                          {({ active }) => (
-                            <Link 
-                              className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-300 ${active ? "bg-gradient-to-r from-gray-50 to-gray-50 scale-105" : ""}`} 
-                              href="/"
-                            >
-                              <Home className="w-5 h-5 text-gray-300" />
-                              <span className="font-semibold text-white">Home</span>
-                            </Link>
-                          )}
-                        </MenuItem>
-
-                        {/* Mobile Destinations Menu */}
-                        <MenuItem>
-                          {({ active }) => (
-                            <details className={`group rounded-xl ${active ? "bg-gradient-to-r from-gray-50 to-gray-50" : ""}`}>
-                              <summary className="flex items-center space-x-3 px-4 py-3 cursor-pointer list-none">
-                                <MapPin className="w-5 h-5 text-gray-300" />
-                                <span className="font-medium text-gray-100">Destinations</span>
-                                <ChevronDown className="w-4 h-4 text-gray-200 ml-auto group-open:rotate-180 transition-transform duration-300" />
-                              </summary>
-                              <div className="mt-2 ml-6 space-y-1 max-h-60 overflow-auto">
-                                {DESTINATIONS.map((destination) => {
-                                  const Icon = destination.icon;
-                                  return (
-                                    <Link
-                                      key={destination.slug}
-                                      href={`/destinations/${destination.slug}`}
-                                      className="flex items-center space-x-3 px-4 py-2 rounded-lg hover:bg-gray-500/20 transition-colors"
-                                    >
-                                      <div className="w-8 h-8 bg-gradient-to-br from-gray-400 to-gray-500 rounded-lg flex items-center justify-center">
-                                        <Icon className="w-4 h-4 text-white" />
-                                      </div>
-                                      <div>
-                                        <div className="font-medium text-white text-sm">{destination.title}</div>
-                                        <div className="text-xs text-gray-200">{destination.category}</div>
-                                      </div>
-                                    </Link>
-                                  );
-                                })}
-                                <Link
-                                  href="/destinations"
-                                  className="flex items-center justify-center space-x-2 w-full py-2 mt-2 bg-gradient-to-r from-gray-600 to-gray-700 text-white rounded-lg text-sm font-semibold"
+                        
+                        <div className="p-4 space-y-1">
+                          {[
+                            { name: 'Home', href: '/', icon: Home },
+                            { name: 'Destinations', href: '/destinations', icon: MapPin },
+                            { name: 'Hidden Gems', href: '/hidden-gems', icon: Sparkles },
+                            { name: 'Bookings', href: '/bookings', icon: Calendar },
+                            { name: 'Blog', href: '/blog', icon: BookOpen },
+                            { name: 'About', href: '/about', icon: Users },
+                          ].map((item) => (
+                            <MenuItem key={item.href}>
+                              {({ active }) => (
+                                <Link 
+                                  className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-300 ${
+                                    active ? "bg-indigo-50 text-indigo-700 scale-[1.02]" : "text-gray-700"
+                                  }`} 
+                                  href={item.href}
                                 >
-                                  <MapPin className="w-4 h-4" />
-                                  <span>View All</span>
+                                  <item.icon className={`w-5 h-5 ${active ? "text-indigo-600" : "text-gray-400"}`} />
+                                  <span className="font-semibold font-sora">{item.name}</span>
                                 </Link>
-                              </div>
-                            </details>
-                          )}
-                        </MenuItem>
-
-                        <MenuItem>
-                          {({ active }) => (
-                            <Link 
-                              className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-300 ${active ? "bg-gradient-to-r from-gray-50 to-gray-50 scale-105" : ""}`} 
-                              href="/hidden-gems"
-                            >
-                              <Sparkles className="w-5 h-5 text-gray-700" />
-                              <span className="font-semibold text-white">Hidden Gems</span>
-                            </Link>
-                          )}
-                        </MenuItem>
-
-                        <MenuItem>
-                          {({ active }) => (
-                            <Link 
-                              className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-300 ${active ? "bg-gradient-to-r from-gray-50 to-gray-50 scale-105" : ""}`} 
-                              href="/bookings"
-                            >
-                              <Calendar className="w-5 h-5 text-gray-600" />
-                              <span className="font-medium text-gray-100">Bookings</span>
-                            </Link>
-                          )}
-                        </MenuItem>
-                        
-                        <MenuItem>
-                          {({ active }) => (
-                            <Link 
-                              className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-300 ${active ? "bg-gradient-to-r from-gray-50 to-gray-50 scale-105" : ""}`} 
-                              href="/#culture"
-                            >
-                              <Camera className="w-5 h-5 text-gray-600" />
-                              <span className="font-medium text-gray-100">Culture</span>
-                            </Link>
-                          )}
-                        </MenuItem>
-                        
-                        <MenuItem>
-                          {({ active }) => (
-                            <Link 
-                              className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-300 ${active ? "bg-gradient-to-r from-gray-50 to-gray-50 scale-105" : ""}`} 
-                              href="/gallery"
-                            >
-                              <Camera className="w-5 h-5 text-gray-300" />
-                              <span className="font-medium text-gray-100">Gallery</span>
-                            </Link>
-                          )}
-                        </MenuItem>
-                        
-                        <MenuItem>
-                          {({ active }) => (
-                            <Link 
-                              className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-300 ${active ? "bg-gradient-to-r from-gray-50 to-gray-50 scale-105" : ""}`} 
-                              href="/#guide"
-                            >
-                              <BookOpen className="w-5 h-5 text-gray-600" />
-                              <span className="font-medium text-gray-100">Guide</span>
-                            </Link>
-                          )}
-                        </MenuItem>
-                        
-                        <MenuItem>
-                          {({ active }) => (
-                            <Link 
-                              className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-300 ${active ? "bg-gradient-to-r from-gray-50 to-gray-50 scale-105" : ""}`} 
-                              href="/blog"
-                            >
-                              <BookOpen className="w-5 h-5 text-gray-600" />
-                              <span className="font-medium text-gray-100">Blog</span>
-                            </Link>
-                          )}
-                        </MenuItem>
-                        
-                        <MenuItem>
-                          {({ active }) => (
-                            <Link 
-                              className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-300 ${active ? "bg-gradient-to-r from-gray-50 to-gray-50 scale-105" : ""}`} 
-                              href="/about"
-                            >
-                              <Users className="w-5 h-5 text-gray-600" />
-                              <span className="font-medium text-gray-100">About</span>
-                            </Link>
-                          )}
-                        </MenuItem>
-                      </div>
-                    </MenuItems>
-                  )}
-                </AnimatePresence>
-              </>
-            )}
-          </Menu>
+                              )}
+                            </MenuItem>
+                          ))}
+                        </div>
+                      </MenuItems>
+                    )}
+                  </AnimatePresence>
+                </>
+              )}
+            </Menu>
+          </div>
         </div>
       </div>
     </motion.nav>

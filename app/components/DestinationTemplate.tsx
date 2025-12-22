@@ -6,7 +6,8 @@ import Link from "next/link";
 import SectionCard from "@/app/components/SectionCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowLeft, X, ExternalLink } from "lucide-react";
-import { theme } from "@/app/theme/config";
+import Navigation from "@/app/components/Navigation";
+import ShortsGallery from "./ShortsGallery"; // Added import
 
 type Section = {
   heading: string;
@@ -48,24 +49,17 @@ export default function DestinationTemplate({
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
-      {/* Navigation */}
-      <nav className="bg-white/90 backdrop-blur-sm border-b border-slate-200 shadow-sm sticky top-0 z-50">
+      <Navigation variant="solid" />
+
+      {/* Contextual Navigation Bar */}
+      <div className="bg-white/60 backdrop-blur-md border-b border-slate-200 py-3 sticky top-[64px] z-40">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-14">
-            <div className="flex">
-              <Link href="/destinations" className="flex items-center gap-2 text-slate-600 hover:text-slate-900 text-sm font-medium">
-                <ArrowLeft className="w-4 h-4" />
-                <span>Back</span>
-              </Link>
-            </div>
-            <div className="flex items-center">
-              <Link href="/" className="text-sm font-medium text-slate-600 hover:text-slate-900">
-                Home
-              </Link>
-            </div>
-          </div>
+          <Link href="/destinations" className="inline-flex items-center gap-2 text-slate-600 hover:text-indigo-600 text-sm font-medium transition-colors group">
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            <span>Back to Destinations</span>
+          </Link>
         </div>
-      </nav>
+      </div>
 
       {/* Hero Section - Immersive Image */}
       <section className="relative w-full">
@@ -211,6 +205,7 @@ export default function DestinationTemplate({
           })}
         </div>
       </section>
+      <ShortsGallery destinationSlug={title.toLowerCase()} />
 
       {/* Gallery */}
       <section className="max-w-[1400px] mx-auto px-6 py-12">
