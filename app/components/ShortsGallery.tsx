@@ -311,6 +311,29 @@ export default function ShortsGallery({ destinationSlug }: { destinationSlug?: s
   const [isMuted, setIsMuted] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
+  // Handle browser back button
+  useEffect(() => {
+    const handlePopState = () => {
+      if (selectedShort) {
+        setSelectedShort(null);
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, [selectedShort]);
+
+  const handleOpenVideo = (short: KutchShort, index: number) => {
+    setSelectedShort({ short, index });
+    // Push a new state so the back button works
+    window.history.pushState({ videoOpen: true }, '', window.location.href);
+  };
+
+  const handleCloseVideo = () => {
+    // Go back in history to close the modal (triggers popstate)
+    window.history.back();
+  };
+
   const filteredShorts = destinationSlug 
     ? KUTCH_SHORTS.filter(s => s.id.includes(destinationSlug) || s.location.toLowerCase().includes(destinationSlug.toLowerCase()))
     : KUTCH_SHORTS;
@@ -370,7 +393,7 @@ export default function ShortsGallery({ destinationSlug }: { destinationSlug?: s
             <div key={short.id} className="snap-start">
               <VideoCard 
                 short={short} 
-                onSelect={(s) => setSelectedShort({ short: s, index })} 
+                onSelect={(s) => handleOpenVideo(s, index)} 
               />
             </div>
           ))}
@@ -391,7 +414,7 @@ export default function ShortsGallery({ destinationSlug }: { destinationSlug?: s
           <FullScreenPlayer 
             shorts={filteredShorts}
             initialIndex={selectedShort.index}
-            onClose={() => setSelectedShort(null)}
+            onClose={handleCloseVideo}
             isMuted={isMuted}
             setIsMuted={setIsMuted}
           />

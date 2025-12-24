@@ -14,62 +14,7 @@ import ShortsGallery from "./components/ShortsGallery";
 import { DESTINATIONS } from "@/app/destinations/data";
 import { useState, useEffect } from "react";
 
-// Autoplay Carousel Component
-const AutoplayCarousel = ({ images }: { images: { src: string; alt: string; caption: string }[] }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((current) => (current + 1) % images.length);
-    }, 4000); // Change image every 4 seconds
-
-    return () => clearInterval(timer);
-  }, [images.length]);
-
-  return (
-    <div className="relative w-full h-full">
-      {images.map((image, index) => (
-        <motion.div
-          key={image.src}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: index === currentIndex ? 1 : 0 }}
-          transition={{ duration: 0.7 }}
-          className={`absolute inset-0 ${index === currentIndex ? 'z-10' : 'z-0'}`}
-        >
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            priority={index === 0}
-            sizes="(max-width: 1024px) 90vw, 45vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent"></div>
-          <div className="absolute bottom-4 left-4 right-4 text-gray-900 text-sm font-medium px-3 py-1 bg-white/80 rounded-full backdrop-blur-sm shadow-md truncate">
-            {image.caption}
-          </div>
-        </motion.div>
-      ))}
-      
-      {/* Navigation dots */}
-      <div className="absolute bottom-4 right-4 z-20 flex gap-2">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              index === currentIndex 
-                ? 'bg-white scale-100' 
-                : 'bg-white/50 scale-75 hover:scale-90 hover:bg-white/70'
-            }`}
-            aria-label={`Go to image ${index + 1} of ${images.length}`}
-            aria-current={index === currentIndex ? 'true' : 'false'}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
 
 // Craft Carousel Component - Changes every 5 seconds
 const CraftCarousel = () => {
@@ -644,17 +589,16 @@ export default function Home() {
 
 
         <div className="relative max-w-[1600px] mx-auto px-6">
-          {/* Two Column Layout: Title Left, Carousel Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-            {/* Left Column - Title */}
+          {/* Centered Title Section - Carousel Removed */}
+          <div className="max-w-4xl mx-auto mb-20">
             <motion.div 
               initial="hidden" 
               whileInView="visible" 
               viewport={{ once: true }} 
               variants={fadeUp} 
-              className="text-left"
+              className="text-center"
             >
-              <div className="mb-8">
+              <div className="mb-8 flex justify-center">
                 <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-base font-inter font-semibold tracking-wide shadow-xl shadow-cyan-500/30">
                   <span>✨</span>
                   <span>Handpicked Destinations</span>
@@ -667,8 +611,8 @@ export default function Home() {
                 Start with our handpicked favorites - the must-visit places that capture the essence of Kutch's beauty and heritage.
               </p>
               
-              {/* Decorative Elements */}
-              <div className="flex flex-col gap-4">
+              {/* Decorative Elements Centered */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <div className="flex items-center gap-3 text-slate-700 font-inter font-medium">
                   <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
                   <span className="text-base">Top 6 Featured</span>
@@ -682,23 +626,6 @@ export default function Home() {
                   <span className="text-base">Cultural Experiences</span>
                 </div>
               </div>
-            </motion.div>
-
-            {/* Right Column - Auto-rotating Image Carousel */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl"
-            >
-              <AutoplayCarousel 
-                images={DESTINATIONS.slice(0, 6).map(dest => ({
-                  src: dest.image,
-                  alt: dest.title,
-                  caption: dest.title
-                }))}
-              />
             </motion.div>
           </div>
 
