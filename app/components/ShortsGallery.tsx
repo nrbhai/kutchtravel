@@ -16,6 +16,7 @@ import {
   Bookmark
 } from 'lucide-react';
 import { KUTCH_SHORTS, KutchShort } from '@/app/data/videos';
+import MetallicHeading from './MetallicHeading';
 
 // --- Video Interface for Card ---
 const VideoCard = ({ short, onSelect }: { short: KutchShort, onSelect: (short: KutchShort) => void }) => {
@@ -54,7 +55,7 @@ const VideoCard = ({ short, onSelect }: { short: KutchShort, onSelect: (short: K
     <motion.div
       ref={containerRef}
       whileHover={{ y: -8 }}
-      className="relative flex-shrink-0 w-[260px] md:w-[300px] aspect-[9/16] rounded-[2rem] overflow-hidden bg-gray-100 shadow-xl cursor-pointer group"
+      className="relative flex-shrink-0 w-[260px] md:w-[300px] aspect-[9/16] rounded-[2rem] overflow-hidden bg-gray-900 shadow-xl cursor-pointer group"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       onClick={() => onSelect(short)}
@@ -350,20 +351,24 @@ export default function ShortsGallery({ destinationSlug }: { destinationSlug?: s
   };
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gray-50/50">
+    <section className="py-24 relative overflow-hidden bg-black/20">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="flex items-end justify-between mb-12">
           <div className="max-w-xl">
-             <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-100 rounded-full text-cyan-700 text-xs font-bold tracking-widest uppercase mb-4">
-                <Play className="w-3 h-3 fill-cyan-700" />
+             <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-950/30 border border-cyan-800/30 rounded-full text-cyan-400 text-xs font-bold tracking-widest uppercase mb-4">
+                <Play className="w-3 h-3 fill-cyan-400" />
                 Kutch Shorts
              </div>
-             <h2 className="text-4xl md:text-5xl font-black font-sora text-gray-900 tracking-tight leading-tight">
-               Experience <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-blue-600">The Vibe</span>
-             </h2>
-             <p className="mt-4 text-gray-600 font-inter font-medium text-lg">
+             <MetallicHeading 
+               text="Experience The Vibe"
+               as="h2"
+               variant="gold"
+               className="text-4xl md:text-5xl font-black font-sora tracking-tight leading-tight"
+               animationDuration="12s"
+             />
+             <p className="mt-4 text-gray-400 font-inter font-medium text-lg">
                Immersive vertical clips showcasing the soul of our homeland.
              </p>
           </div>
@@ -371,13 +376,13 @@ export default function ShortsGallery({ destinationSlug }: { destinationSlug?: s
           <div className="hidden md:flex gap-3">
              <button 
                onClick={() => scroll('left')}
-               className="w-12 h-12 rounded-2xl bg-white border border-gray-200 flex items-center justify-center text-gray-900 hover:bg-cyan-50 hover:text-cyan-600 hover:border-cyan-200 transition-all shadow-sm"
+               className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-cyan-950/30 hover:text-cyan-400 hover:border-cyan-500/30 transition-all shadow-sm"
              >
                <ChevronLeft className="w-6 h-6" />
              </button>
              <button 
                onClick={() => scroll('right')}
-               className="w-12 h-12 rounded-2xl bg-white border border-gray-200 flex items-center justify-center text-gray-900 hover:bg-cyan-50 hover:text-cyan-600 hover:border-cyan-200 transition-all shadow-sm"
+               className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-cyan-950/30 hover:text-cyan-400 hover:border-cyan-500/30 transition-all shadow-sm"
              >
                <ChevronRight className="w-6 h-6" />
              </button>
@@ -399,8 +404,8 @@ export default function ShortsGallery({ destinationSlug }: { destinationSlug?: s
           ))}
           
           {/* View More Placeholder */}
-          <div className="flex-shrink-0 w-[260px] md:w-[300px] aspect-[9/16] rounded-[2rem] border-4 border-dashed border-gray-200 flex flex-col items-center justify-center text-gray-400 gap-4 hover:border-cyan-300 hover:text-cyan-500 transition-all group">
-             <div className="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center group-hover:bg-cyan-50 transition-colors">
+          <div className="flex-shrink-0 w-[260px] md:w-[300px] aspect-[9/16] rounded-[2rem] border-4 border-dashed border-white/10 flex flex-col items-center justify-center text-gray-500 gap-4 hover:border-cyan-500/30 hover:text-cyan-400 transition-all group">
+             <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-cyan-950/30 transition-colors">
                 <ChevronRight className="w-8 h-8" />
              </div>
              <span className="font-bold font-sora uppercase tracking-widest text-sm">More Coming Soon</span>

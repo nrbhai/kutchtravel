@@ -11,13 +11,13 @@ export const theme = {
     brand: {
       primary: {
         bg: 'bg-blue-600',
-        text: 'text-blue-600',
+        text: 'text-blue-400',
         border: 'border-blue-600',
         hover: 'hover:bg-blue-700',
       },
       secondary: {
         bg: 'bg-indigo-600',
-        text: 'text-indigo-600',
+        text: 'text-indigo-400',
         border: 'border-indigo-600',
         hover: 'hover:bg-indigo-700',
       },
@@ -25,72 +25,72 @@ export const theme = {
 
     // Badge styles
     badges: {
-      primary: 'from-blue-500 to-blue-600',
-      secondary: 'from-indigo-500 to-indigo-600',
-      featured: 'from-amber-500 to-amber-600',
-      accent: 'from-emerald-500 to-emerald-600',
+      primary: 'from-blue-600 to-blue-700',
+      secondary: 'from-indigo-600 to-indigo-700',
+      featured: 'from-amber-600 to-amber-700',
+      accent: 'from-emerald-600 to-emerald-700',
     },
 
     // Section colors
     sections: {
       overview: {
-        bg: 'bg-gradient-to-br from-blue-50 to-blue-100/40',
-        border: 'border-blue-300',
-        text: 'text-blue-800',
+        bg: 'bg-gradient-to-br from-blue-950/40 to-black',
+        border: 'border-blue-900/40',
+        text: 'text-blue-100',
       },
       history: {
-        bg: 'bg-gradient-to-br from-amber-50 to-amber-100/40',
-        border: 'border-amber-300',
-        text: 'text-amber-800',
+        bg: 'bg-gradient-to-br from-amber-950/40 to-black',
+        border: 'border-amber-900/40',
+        text: 'text-amber-100',
       },
       geography: {
-        bg: 'bg-gradient-to-br from-emerald-50 to-emerald-100/40',
-        border: 'border-emerald-300',
-        text: 'text-emerald-800',
+        bg: 'bg-gradient-to-br from-emerald-950/40 to-black',
+        border: 'border-emerald-900/40',
+        text: 'text-emerald-100',
       },
       culture: {
-        bg: 'bg-gradient-to-br from-purple-50 to-purple-100/40',
-        border: 'border-purple-300',
-        text: 'text-purple-800',
+        bg: 'bg-gradient-to-br from-purple-950/40 to-black',
+        border: 'border-purple-900/40',
+        text: 'text-purple-100',
       },
       bestTimeToVisit: {
-        bg: 'bg-gradient-to-br from-cyan-50 to-cyan-100/40',
-        border: 'border-cyan-300',
-        text: 'text-cyan-800',
+        bg: 'bg-gradient-to-br from-cyan-950/40 to-black',
+        border: 'border-cyan-900/40',
+        text: 'text-cyan-100',
       },
       howToReach: {
-        bg: 'bg-gradient-to-br from-rose-50 to-rose-100/40',
-        border: 'border-rose-300',
-        text: 'text-rose-800',
+        bg: 'bg-gradient-to-br from-rose-950/40 to-black',
+        border: 'border-rose-900/40',
+        text: 'text-rose-100',
       },
       default: {
-        bg: 'bg-gradient-to-br from-slate-50 to-slate-100/40',
-        border: 'border-slate-300',
-        text: 'text-slate-800',
+        bg: 'bg-gradient-to-br from-gray-950/40 to-black',
+        border: 'border-white/10',
+        text: 'text-gray-100',
       },
     },
 
     // Text colors
     text: {
-      primary: 'text-slate-900',
-      secondary: 'text-slate-600',
-      muted: 'text-slate-400',
+      primary: 'text-gray-100',
+      secondary: 'text-gray-300',
+      muted: 'text-gray-400',
       link: 'text-blue-400',
       linkHover: 'hover:text-blue-300',
     },
 
     // Background colors
     background: {
-      main: 'bg-white',
-      card: 'bg-white',
-      nav: 'bg-white',
+      main: 'bg-black',
+      card: 'bg-black/40',
+      nav: 'bg-black/80',
     },
 
     // Border colors
     border: {
-      light: 'border-slate-200',
-      DEFAULT: 'border-slate-300',
-      dark: 'border-slate-400',
+      light: 'border-white/10',
+      DEFAULT: 'border-white/20',
+      dark: 'border-white/30',
     },
   },
   
@@ -141,7 +141,7 @@ export const theme = {
       '2xl': 'rounded-2xl',
     },
     transition: 'transition-all duration-300',
-    glass: 'backdrop-blur-2xl bg-white/10 border border-white/20',
+    glass: 'backdrop-blur-2xl bg-black/40 border border-white/10',
     glow: 'shadow-[0_0_100px_rgba(139,92,246,0.4)]',
     blob: {
       opacity: 'opacity-30',

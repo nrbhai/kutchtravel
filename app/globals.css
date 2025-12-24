@@ -99,37 +99,52 @@ html {
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  /* Premium Black Background */
+  --background: oklch(0.10 0.02 260); 
+  /* Gold Foreground/Text */
+  --foreground: oklch(0.97 0.02 85);
+
+  --card: oklch(0.12 0.02 260);
+  --card-foreground: oklch(0.97 0.02 85);
+  
+  --popover: oklch(0.12 0.02 260);
+  --popover-foreground: oklch(0.97 0.02 85);
+  
+  /* Primary Gold */
+  --primary: oklch(0.75 0.18 85); 
+  --primary-foreground: oklch(0.10 0.02 260);
+  
+  /* Secondary Dark Gold/Bronze */
+  --secondary: oklch(0.35 0.10 85);
+  --secondary-foreground: oklch(0.97 0.02 85);
+  
+  --muted: oklch(0.20 0.02 260);
+  --muted-foreground: oklch(0.70 0.05 85);
+  
+  --accent: oklch(0.25 0.05 85);
+  --accent-foreground: oklch(0.97 0.02 85);
+  
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  
+  --border: oklch(0.30 0.05 85);
+  --input: oklch(0.30 0.05 85);
+  --ring: oklch(0.75 0.18 85);
+  
+  --chart-1: oklch(0.75 0.18 85);
+  --chart-2: oklch(0.65 0.15 85);
+  --chart-3: oklch(0.55 0.12 85);
+  --chart-4: oklch(0.45 0.10 85);
+  --chart-5: oklch(0.85 0.15 85);
+  
+  --sidebar: oklch(0.12 0.02 260);
+  --sidebar-foreground: oklch(0.97 0.02 85);
+  --sidebar-primary: oklch(0.75 0.18 85);
+  --sidebar-primary-foreground: oklch(0.10 0.02 260);
+  --sidebar-accent: oklch(0.20 0.02 260);
+  --sidebar-accent-foreground: oklch(0.97 0.02 85);
+  --sidebar-border: oklch(0.30 0.05 85);
+  --sidebar-ring: oklch(0.75 0.18 85);
+  
   --font-inter: 'Inter', sans-serif;
   --font-playfair: 'Playfair Display', serif;
   --font-dancing: 'Dancing Script', cursive;
@@ -210,16 +225,32 @@ html {
   }
   
   body {
-    @apply bg-white text-gray-900 min-h-screen;
+    @apply bg-background text-foreground min-h-screen selection:bg-primary/30 selection:text-primary-foreground;
     font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   }
   
-  /* Headings use Sora font and dark gray */
+  /* Gold Shine Animation */
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  /* Headings use Sora font and metallic gold gradient */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-sora), ui-sans-serif, system-ui, sans-serif;
-    @apply text-gray-900 font-bold;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    @apply font-bold;
   }
+  
+  /* Apply the gold effect to headings, unless they have a child span that needs it (to avoid double application) 
+     Actually, applying to the text node via the element is best. 
+     If a span is inside, let it inherit or target it if needed.
+     The safe way: Target the elements that actually contain text. 
+     But to be robust: Apply to h1-h6 AND spans inside them. */
+  /* Global H1-H6 styling removed to use explicit metallic-gold class */
+
+  /* Exclude spans that are just strictly layout or icons if they break? 
+     For now, assuming spans in headings are for text styling. */
   
   /* Paragraphs use Inter and medium gray */
   p {
@@ -662,4 +693,123 @@ html {
 
 .animate-blob {
   animation: blob 20s infinite;
+}
+
+/* Silver Metallic Effect */
+.metallic-silver {
+  background: linear-gradient(
+    to right,
+    #99a1af 0%,
+    #e2e8f0 25%,
+    #cbd5e1 50%,
+    #e2e8f0 75%,
+    #99a1af 100%
+  ) !important;
+  background-size: 200% auto !important;
+  color: transparent !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: shine 3s linear infinite !important;
+  filter: drop-shadow(0 2px 4px rgba(255,255,255,0.2)) !important;
+}
+
+/* Silver Metallic Effect - High Specificity Override */
+body .metallic-silver,
+body h1 > span.metallic-silver,
+body h2 > span.metallic-silver,
+body span.metallic-silver {
+  background: linear-gradient(
+    to right,
+    #99a1af 0%,
+    #e2e8f0 25%,
+    #cbd5e1 50%,
+    #e2e8f0 75%,
+    #99a1af 100%
+  ) !important;
+  background-size: 200% auto !important;
+  color: transparent !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: shine 3s linear infinite !important;
+  filter: drop-shadow(0 2px 4px rgba(255,255,255,0.2)) !important;
+}
+
+body .metallic-silver-embossed,
+body h1 > span.metallic-silver-embossed,
+body h2 > span.metallic-silver-embossed,
+body span.metallic-silver-embossed {
+  background: linear-gradient(
+    to right,
+    #99a1af 0%,
+    #e2e8f0 25%,
+    #cbd5e1 50%,
+    #e2e8f0 75%,
+    #99a1af 100%
+  ) !important;
+  background-size: 200% auto !important;
+  color: transparent !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: shine 3s linear infinite !important;
+  filter: drop-shadow(-1px -1px 0px rgba(255,255,255,0.5)) drop-shadow(1px 1px 1px rgba(0,0,0,0.8)) !important;
+}
+
+@keyframes shine-gold {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+/* High Specificity Metallic Gold */
+/* High Specificity Metallic Gold */
+.metallic-gold,
+h1.metallic-gold,
+h2.metallic-gold,
+h3.metallic-gold,
+h4.metallic-gold,
+h5.metallic-gold,
+h6.metallic-gold,
+span.metallic-gold {
+  background: linear-gradient(
+    to right,
+    #BF953F 0%,
+    #FCF6BA 25%,
+    #B38728 50%,
+    #FBF5B7 75%,
+    #AA771C 100%
+  ) !important;
+  background-size: 200% auto !important;
+  color: transparent !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: shine 12s linear infinite !important;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)) !important;
+  display: inline-block !important;
+  width: fit-content !important;
+}
+
+/* Metallic Silver with Light Green Effect */
+body .metallic-silver-green,
+body h1 > span.metallic-silver-green,
+body span.metallic-silver-green {
+  background: linear-gradient(
+    to right,
+    #94a3b8 0%,
+    #e2e8f0 25%,
+    #86efac 50%,
+    #e2e8f0 75%,
+    #94a3b8 100%
+  ) !important;
+  background-size: 200% auto !important;
+  color: transparent !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  animation: shine 12s linear infinite !important;
+  filter: drop-shadow(0 2px 4px rgba(255,255,255,0.2)) !important;
 }

@@ -48,13 +48,13 @@ export default function DestinationTemplate({
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50">
+    <main className="min-h-screen overflow-x-hidden bg-gradient-to-br from-blue-950 via-purple-950 to-pink-950">
       <Navigation variant="solid" />
 
       {/* Contextual Navigation Bar */}
-      <div className="bg-white/60 backdrop-blur-md border-b border-slate-200 py-3 sticky top-[64px] z-40">
+      <div className="bg-black/80 backdrop-blur-md border-b border-white/10 py-3 sticky top-[64px] z-40">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/destinations" className="inline-flex items-center gap-2 text-slate-600 hover:text-indigo-600 text-sm font-medium transition-colors group">
+          <Link href="/destinations" className="inline-flex items-center gap-2 text-gray-300 hover:text-white text-sm font-medium transition-colors group">
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <span>Back to Destinations</span>
           </Link>
@@ -145,7 +145,7 @@ export default function DestinationTemplate({
                     </ul>
                   )}
                   {isAccommodation && (
-                    <div className="mt-4 flex items-center text-blue-600 font-medium animate-pulse">
+                    <div className="mt-4 flex items-center text-blue-400 font-medium animate-pulse">
                       <span>View Deals on Booking.com</span>
                       <ExternalLink className="w-5 h-5 ml-2" />
                     </div>
@@ -180,16 +180,16 @@ export default function DestinationTemplate({
         <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 bg-clip-text text-transparent">Quick Facts</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {facts.map((fact, index) => {
-            // Array of color combinations
+            // Array of color combinations - dark theme
             const colors = [
-              { bg: "bg-blue-50", text: "text-blue-800", border: "border-blue-200" },
-              { bg: "bg-purple-50", text: "text-purple-800", border: "border-purple-200" },
-              { bg: "bg-emerald-50", text: "text-emerald-800", border: "border-emerald-200" },
-              { bg: "bg-amber-50", text: "text-amber-800", border: "border-amber-200" },
-              { bg: "bg-rose-50", text: "text-rose-800", border: "border-rose-200" },
-              { bg: "bg-indigo-50", text: "text-indigo-800", border: "border-indigo-200" },
-              { bg: "bg-cyan-50", text: "text-cyan-800", border: "border-cyan-200" },
-              { bg: "bg-teal-50", text: "text-teal-800", border: "border-teal-200" },
+              { bg: "bg-blue-950/40", text: "text-blue-100", border: "border-blue-900/40" },
+              { bg: "bg-purple-950/40", text: "text-purple-100", border: "border-purple-900/40" },
+              { bg: "bg-emerald-950/40", text: "text-emerald-100", border: "border-emerald-900/40" },
+              { bg: "bg-amber-950/40", text: "text-amber-100", border: "border-amber-900/40" },
+              { bg: "bg-rose-950/40", text: "text-rose-100", border: "border-rose-900/40" },
+              { bg: "bg-indigo-950/40", text: "text-indigo-100", border: "border-indigo-900/40" },
+              { bg: "bg-cyan-950/40", text: "text-cyan-100", border: "border-cyan-900/40" },
+              { bg: "bg-teal-950/40", text: "text-teal-100", border: "border-teal-900/40" },
             ];
             // Get color set based on index
             const colorSet = colors[index % colors.length];
@@ -321,8 +321,8 @@ export default function DestinationTemplate({
       {/* Map Section */}
       <section className="max-w-[1400px] mx-auto px-6 py-12">
         <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent">Location & Nearby Cities</h2>
-        <p className="text-gray-700 mb-6 text-lg">Explore the location and judge distances to nearby cities like Bhuj, Gandhidham, and other major destinations in Kutch.</p>
-        <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 bg-white p-2">
+        <p className="text-gray-300 mb-6 text-lg">Explore the location and judge distances to nearby cities like Bhuj, Gandhidham, and other major destinations in Kutch.</p>
+        <div className="rounded-2xl overflow-hidden shadow-2xl border border-white/20 bg-white/10 p-2">
           <iframe
             src={mapUrl.replace(/!4f[\d.]+/i, '!4f9.5').replace(/!2i\d+!2i\d+!4f[\d.]+/i, '!2i1024!2i768!4f9.5')}
             width="100%"

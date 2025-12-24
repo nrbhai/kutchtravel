@@ -19,29 +19,32 @@ export default function BookingWidget({ aid = '304142', label = 'gen173rf-10CAEo
 
   if (compact) {
     return (
-      <div className="bg-white rounded-2xl shadow-lg border border-blue-800 overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow duration-300">
-        <div className="bg-[#003580] p-4 flex items-center gap-2">
-           <div className="bg-white/20 p-1.5 rounded-lg">
-             <Hotel className="w-5 h-5 text-white" />
+      <div className="bg-[#003580] rounded-2xl shadow-lg border border-blue-600/30 overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-[#00224f] p-4 flex items-center justify-between gap-2">
+           <div className="flex items-center gap-3">
+             <div className="bg-white/10 p-1.5 rounded-lg border border-white/10">
+               <Hotel className="w-5 h-5 text-white" />
+             </div>
+             <span className="text-white font-bold text-lg tracking-wide">Booking.com</span>
            </div>
-           <span className="text-white font-bold text-sm tracking-wide">Booking.com Official Partner</span>
+           <span className="text-[#febb02] font-black text-sm tracking-wider uppercase">PARTNER</span>
         </div>
         
         <div className="p-6 flex flex-col flex-grow">
-          <h3 className="text-xl font-sora font-bold text-gray-900 mb-2">Find Perfect Stays</h3>
-          <p className="text-gray-600 text-sm mb-6 flex-grow">
+          <h3 className="text-xl font-sora font-bold text-white mb-2">Find Perfect Stays</h3>
+          <p className="text-blue-100 text-sm mb-6 flex-grow font-inter">
             From heritage palaces in Bhuj to desert camps in the Rann. Best prices guaranteed.
           </p>
           
           <button
             onClick={handleBooking}
-            className="w-full bg-[#003580] hover:bg-[#00224f] text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-blue-900/20 flex items-center justify-center gap-2 transition-colors group"
+            className="w-full bg-[#febb02] hover:bg-[#eac95b] text-[#003580] font-black py-3 px-4 rounded-xl shadow-lg shadow-black/20 flex items-center justify-center gap-2 transition-colors group"
           >
             <span>Search Deals</span>
             <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
           
-          <div className="mt-4 flex items-center justify-center gap-3 text-xs text-gray-400 border-t border-gray-100 pt-4">
+          <div className="mt-4 flex items-center justify-center gap-3 text-xs text-blue-200 border-t border-blue-400/20 pt-4">
              <span className="flex items-center gap-1"><Shield className="w-3 h-3" /> Secure Booking</span>
              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3" /> Free Cancellation</span>
           </div>

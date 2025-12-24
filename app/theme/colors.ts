@@ -5,57 +5,57 @@
  */
 
 export const themeColors = {
-  // Background gradients - light and clean
+  // Background gradients - dark and premium
   background: {
-    main: "bg-gradient-to-br from-gray-50 via-slate-100 to-zinc-50",
-    section: "bg-white/80 backdrop-blur-xl",
-    card: "bg-white/90 backdrop-blur-xl",
-    hover: "hover:bg-white",
+    main: "bg-black",
+    section: "bg-black/40 backdrop-blur-xl",
+    card: "bg-black/40 backdrop-blur-xl",
+    hover: "hover:bg-white/5",
   },
 
-  // Text colors - dark on light
+  // Text colors - light on dark
   text: {
-    primary: "text-gray-900",
-    secondary: "text-gray-700",
-    tertiary: "text-gray-600",
+    primary: "text-gray-100",
+    secondary: "text-gray-300",
+    tertiary: "text-gray-400",
     muted: "text-gray-500",
-    accent: "text-gray-800",
+    accent: "text-white",
   },
 
-  // Border colors - subtle light borders
+  // Border colors - subtle dark borders
   border: {
-    light: "border-gray-200",
-    medium: "border-gray-300",
-    accent: "border-gray-400",
-    accentAlt: "border-gray-500",
+    light: "border-white/10",
+    medium: "border-white/20",
+    accent: "border-white/30",
+    accentAlt: "border-white/40",
   },
 
-  // Heading colors - dark text
+  // Heading colors - light text
   heading: {
-    gradient: "text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800",
-    solid: "text-gray-900",
-    secondary: "text-gray-700",
+    gradient: "text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-200 to-yellow-400",
+    solid: "text-white",
+    secondary: "text-gray-200",
   },
 
   // Link colors - subtle
   link: {
-    default: "text-gray-600",
-    hover: "hover:text-gray-900",
+    default: "text-blue-400",
+    hover: "hover:text-blue-300",
   },
 
-  // Button colors - light theme
+  // Button colors - dark theme
   button: {
-    primary: "bg-gradient-to-r from-gray-800 to-gray-900 text-white hover:from-gray-700 hover:to-gray-800",
-    secondary: "bg-white/80 backdrop-blur-xl text-gray-900 hover:bg-white",
-    ghost: "text-gray-600 hover:text-gray-900",
+    primary: "bg-gradient-to-r from-amber-600 to-orange-600 text-white hover:from-amber-500 hover:to-orange-500",
+    secondary: "bg-white/10 backdrop-blur-xl text-white hover:bg-white/20",
+    ghost: "text-gray-400 hover:text-white",
   },
 
   // Icon colors
   icon: {
-    primary: "text-gray-600",
-    secondary: "text-gray-700",
-    tertiary: "text-gray-500",
-    muted: "text-gray-400",
+    primary: "text-gray-100",
+    secondary: "text-gray-300",
+    tertiary: "text-gray-400",
+    muted: "text-gray-500",
   },
 };
 

@@ -61,7 +61,7 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       className={`relative w-full z-50 transition-colors duration-300 ${
-        isSolid ? 'bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm' : 'bg-transparent'
+        isSolid ? 'bg-black/80 backdrop-blur-md border-b border-white/10 shadow-sm' : 'bg-transparent'
       }`}
     >
       <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,10 +79,10 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
               />
             </div>
             <div className="hidden xs:block">
-              <h1 className="text-xl font-bold font-sora bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent whitespace-nowrap tracking-tight">
+              <h1 className="text-xl font-bold font-sora bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 bg-clip-text text-transparent whitespace-nowrap tracking-tight">
                 TravelKutch
               </h1>
-              <p className={`text-[10px] font-medium font-inter tracking-wide ${isSolid ? 'text-gray-500' : 'text-gray-400'}`}>Discover the Magic</p>
+              <p className={`text-[10px] font-medium font-inter tracking-wide ${isSolid ? 'text-gray-400' : 'text-gray-400'}`}>Discover the Magic</p>
             </div>
           </Link>
 
@@ -102,7 +102,7 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
                 href={item.href}
                 className={`flex items-center space-x-2 px-4 py-2 rounded-xl transition-all duration-300 hover:scale-105 ${
                   isSolid 
-                    ? 'text-gray-700 hover:bg-gray-100' 
+                    ? 'text-gray-300 hover:bg-white/10 hover:text-white' 
                     : 'text-gray-100 hover:bg-white/10 backdrop-blur-sm'
                 }`}
               >
@@ -120,7 +120,7 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
                 <>
                   <MenuButton
                     className={`flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-300 hover:scale-105 ${
-                      isSolid ? 'bg-gray-100 text-gray-900' : 'bg-white/20 text-white hover:bg-white/30'
+                      isSolid ? 'bg-white/10 text-white' : 'bg-white/20 text-white hover:bg-white/30'
                     }`}
                     aria-label="Open menu"
                     aria-expanded={open}
@@ -143,16 +143,16 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
                         animate={{ opacity: 1, scale: 1, y: 0 }}
                         exit={{ opacity: 0, scale: 0.95, y: -10 }}
                         anchor="bottom end"
-                        className="absolute right-0 mt-4 w-80 max-w-[95vw] origin-top-right overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl z-50"
+                        className="absolute right-0 mt-4 w-80 max-w-[95vw] origin-top-right overflow-hidden rounded-2xl border border-white/10 bg-black/90 backdrop-blur-xl shadow-2xl z-50"
                       >
-                        <div className="bg-gradient-to-r from-indigo-600 to-purple-700 p-6">
+                        <div className="bg-gradient-to-r from-orange-950 to-amber-950 p-6 border-b border-white/5">
                           <div className="flex items-center space-x-3">
-                            <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                              <MapPin className="w-5 h-5 text-white" />
+                            <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                              <MapPin className="w-5 h-5 text-amber-400" />
                             </div>
                             <div>
                               <h3 className="font-bold text-white">TravelKutch</h3>
-                              <p className="text-indigo-100 text-sm">Explore the Magic</p>
+                              <p className="text-gray-400 text-sm">Explore the Magic</p>
                             </div>
                           </div>
                         </div>
@@ -171,11 +171,11 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
                               {({ active }) => (
                                 <Link 
                                   className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-300 ${
-                                    active ? "bg-indigo-50 text-indigo-700 scale-[1.02]" : "text-gray-700"
+                                    active ? "bg-white/10 text-amber-400 scale-[1.02]" : "text-gray-300"
                                   }`} 
                                   href={item.href}
                                 >
-                                  <item.icon className={`w-5 h-5 ${active ? "text-indigo-600" : "text-gray-400"}`} />
+                                  <item.icon className={`w-5 h-5 ${active ? "text-amber-400" : "text-gray-400"}`} />
                                   <span className="font-semibold font-sora">{item.name}</span>
                                 </Link>
                               )}

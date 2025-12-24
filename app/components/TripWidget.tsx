@@ -44,29 +44,32 @@ export default function TripWidget({
 
   if (compact) {
     return (
-      <div className="bg-white rounded-2xl shadow-lg border border-orange-100 overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow duration-300">
-        <div className="bg-orange-600 p-4 flex items-center gap-2">
-           <div className="bg-white/20 p-1.5 rounded-lg">
-             <Plane className="w-5 h-5 text-white" />
+      <div className="bg-[#450a0a] rounded-2xl shadow-lg border border-red-600/30 overflow-hidden flex flex-col h-full hover:shadow-xl transition-shadow duration-300">
+        <div className="bg-[#7f1d1d] p-4 flex items-center justify-between gap-2">
+           <div className="flex items-center gap-3">
+             <div className="bg-white/10 p-1.5 rounded-lg border border-white/10">
+               <Plane className="w-5 h-5 text-white" />
+             </div>
+             <span className="text-white font-bold text-lg tracking-wide">Trip.com</span>
            </div>
-           <span className="text-white font-bold text-sm tracking-wide">Trip.com Official Partner</span>
+           <span className="text-[#febb02] font-black text-sm tracking-wider uppercase">PARTNER</span>
         </div>
         
-        <div className="p-6 flex flex-col flex-grow">
-          <h3 className="text-xl font-sora font-bold text-gray-900 mb-2">Flights & Activities</h3>
-          <p className="text-gray-600 text-sm mb-6 flex-grow">
+          <div className="p-6 flex flex-col flex-grow">
+          <h3 className="text-xl font-sora font-bold text-white mb-2">Flights & Activities</h3>
+          <p className="text-red-100 text-sm mb-6 flex-grow font-inter">
             Best flight deals to Bhuj/Ahmedabad and curated Kutch experiences.
           </p>
           
           <button
             onClick={() => handleTripRedirect('flights')}
-            className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-orange-500/20 flex items-center justify-center gap-2 transition-colors group"
+            className="w-full bg-[#dc2626] hover:bg-[#b91c1c] text-white font-bold py-3 px-4 rounded-xl shadow-lg shadow-red-900/30 flex items-center justify-center gap-2 transition-colors group"
           >
             <span>Search Trip.com</span>
             <ExternalLink className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
           
-          <div className="mt-4 flex items-center justify-center gap-3 text-xs text-gray-400 border-t border-gray-100 pt-4">
+          <div className="mt-4 flex items-center justify-center gap-3 text-xs text-red-200 border-t border-red-400/20 pt-4">
              <span className="flex items-center gap-1"><Globe className="w-3 h-3" /> Global Partner</span>
              <span className="flex items-center gap-1"><CheckCircle className="w-3 h-3" /> 24/7 Support</span>
           </div>
