@@ -11,6 +11,7 @@ Write-Host "🚀 Starting deployment to $serverIP..." -ForegroundColor Cyan
 $deployCommands = @"
 cd ~/kutchtravel
 git pull origin main
+rm -rf .next
 npm install
 npm run build
 pm2 restart kutchtravel
@@ -23,6 +24,7 @@ Write-Host "📦 Pulling latest changes and rebuilding..." -ForegroundColor Yell
 ssh root@$serverIP @"
 cd ~/kutchtravel
 git pull origin main
+rm -rf .next
 npm install
 npm run build
 pm2 restart kutchtravel

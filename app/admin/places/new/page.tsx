@@ -132,8 +132,7 @@ export default function NewPlacePage() {
                 required
                 value={formData.shortDescription}
                 onChange={(e) => setFormData(prev => ({ ...prev, shortDescription: e.target.value }))}
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 dark:text-white"
-                className="h-20"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 dark:text-white h-20"
               />
             </div>
           </div>
