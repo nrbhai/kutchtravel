@@ -1,5 +1,4 @@
 import DestinationTemplate from "@/app/components/DestinationTemplate";
-import SectionCard from "@/app/components/SectionCard";
 import { narayanSarovarKoteshwar } from "@/app/destinations/data/narayan-sarovar-koteshwar";
 import { generateDestinationStructuredData, generateBreadcrumbStructuredData } from "@/app/utils/seo";
 import type { Metadata } from 'next';
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: `${narayanSarovarKoteshwar.title} - Sacred Lakes & Temples`,
-    description: 'Explore the divine sanctuaries of Narayan Sarovar and Koteshwar, ancient pilgrimage sites steeped in mythology and spirituality.',
+    description: 'Explore the divine sanctuaries of Narayan Sarovar and Koteshwar, ancient pilgrimage sites steeped in mythology and spiritual heritage.',
     images: [narayanSarovarKoteshwar.image],
   },
 };
@@ -41,30 +40,6 @@ export default function NarayanSarovarKoteshwar() {
     { name: narayanSarovarKoteshwar.title }
   ]);
 
-  // Format description content
-  const description = (
-    <div className="space-y-8">
-      {narayanSarovarKoteshwar.sections.map((section, index) => (
-        <SectionCard 
-          key={index}
-          title={section.heading}
-          image={section.image}
-          color={section.color}
-          border={section.border}
-        >
-          {section.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />}
-          {section.list && (
-            <ul className="list-none space-y-4">
-              {section.list.map((item, itemIndex) => (
-                <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }} />
-              ))}
-            </ul>
-          )}
-        </SectionCard>
-      ))}
-    </div>
-  );
-
   return (
     <>
       <script
@@ -76,7 +51,8 @@ export default function NarayanSarovarKoteshwar() {
       <DestinationTemplate
         title={narayanSarovarKoteshwar.title}
         image={narayanSarovarKoteshwar.image}
-        description={description}
+        description={narayanSarovarKoteshwar.sections[1].content || ""}
+        sections={narayanSarovarKoteshwar.sections}
         facts={narayanSarovarKoteshwar.facts}
         mapUrl={narayanSarovarKoteshwar.mapUrl}
         gallery={narayanSarovarKoteshwar.gallery}

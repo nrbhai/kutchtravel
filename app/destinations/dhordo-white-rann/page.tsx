@@ -1,5 +1,4 @@
 import DestinationTemplate from "@/app/components/DestinationTemplate";
-import SectionCard from "@/app/components/SectionCard";
 import { dhordo } from "@/app/destinations/data/dhordo";
 import { generateDestinationStructuredData, generateBreadcrumbStructuredData } from "@/app/utils/seo";
 import type { Metadata } from 'next';
@@ -41,30 +40,6 @@ export default function DhordoWhiteRann() {
     { name: dhordo.title }
   ]);
 
-  // Format description content
-  const description = (
-    <div className="space-y-8">
-      {dhordo.sections.map((section, index) => (
-        <SectionCard 
-          key={index}
-          title={section.heading}
-          image={section.image}
-          color={section.color}
-          border={section.border}
-        >
-          {section.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />}
-          {section.list && (
-            <ul className="list-none space-y-4">
-              {section.list.map((item, itemIndex) => (
-                <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }} />
-              ))}
-            </ul>
-          )}
-        </SectionCard>
-      ))}
-    </div>
-  );
-
   return (
     <>
       <script
@@ -76,7 +51,8 @@ export default function DhordoWhiteRann() {
       <DestinationTemplate
         title={dhordo.title}
         image={dhordo.image}
-        description={description}
+        description={dhordo.sections[0].content || ""}
+        sections={dhordo.sections}
         facts={dhordo.facts}
         mapUrl={dhordo.mapUrl}
         gallery={dhordo.gallery}

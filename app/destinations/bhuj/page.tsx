@@ -1,8 +1,7 @@
-import DestinationTemplate from "@/app/components/DestinationTemplate";
-
 import { bhuj } from "@/app/destinations/data/bhuj";
 import { generateDestinationStructuredData, generateBreadcrumbStructuredData } from "@/app/utils/seo";
 import type { Metadata } from 'next';
+import BhujClient from "./BhujClient";
 
 // Generate metadata for this destination
 export const metadata: Metadata = {
@@ -49,14 +48,7 @@ export default function Bhuj() {
           __html: JSON.stringify([structuredData, breadcrumbData]),
         }}
       />
-      <DestinationTemplate
-        title={bhuj.title}
-        image={bhuj.image}
-        sections={bhuj.sections}
-        facts={bhuj.facts}
-        mapUrl={bhuj.mapUrl}
-        gallery={bhuj.gallery}
-      />
+      <BhujClient data={bhuj} />
     </>
   );
 }

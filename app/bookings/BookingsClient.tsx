@@ -9,82 +9,82 @@ import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
 import Navigation from '../components/Navigation';
 import BookingWidget from '../components/BookingWidget';
 import TripWidget from '../components/TripWidget';
+import MetallicHeading from '../components/MetallicHeading';
 import { heroImages, accommodationDeals } from './config';
+import { Sparkles, Calendar, Search, MapPin, Tag, Clock } from 'lucide-react';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-// Animation variants
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: { 
-    opacity: 1,
-    transition: { 
-      staggerChildren: 0.1,
-      delayChildren: 0.2 
-    }
-  }
-};
-
 export default function BookingsClient() {
   const [activeTab, setActiveTab] = useState('hotels');
 
   return (
-    <div className="min-h-screen bg-white selection:bg-purple-200 selection:text-purple-900">
+    <div className="min-h-screen bg-background text-white selection:bg-amber-500/30 selection:text-amber-200">
       {/* Header Section */}
-      <div className="relative overflow-hidden bg-white">
+      <div className="relative overflow-hidden min-h-[90vh] flex items-center">
         {/* Navigation */}
         <div className="absolute top-0 left-0 right-0 z-50">
-          <Navigation variant="solid" />
+          <Navigation />
         </div>
         
-        {/* Background Blobs - Optimized for mobile */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="blob blob-1 w-[300px] h-[300px] md:w-[500px] md:h-[500px] top-0 left-0 opacity-20 blur-3xl"></div>
-          <div className="blob blob-2 w-[250px] h-[250px] md:w-[400px] md:h-[400px] bottom-0 right-0 opacity-20 blur-3xl"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-transparent to-white/80"></div>
+        {/* Background Elements */}
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-20 mix-blend-overlay"></div>
+          {/* Animated gradient blobs */}
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-900/20 rounded-full blur-[100px] animate-blob mix-blend-screen"></div>
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-purple-900/20 rounded-full blur-[120px] animate-blob animation-delay-2000 mix-blend-screen"></div>
+          <div className="absolute inset-0 bg-radial-gradient from-transparent to-background/90"></div>
         </div>
         
-        <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 md:pt-32 md:pb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="relative z-10 max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Left Column - Content */}
             <motion.div 
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-left order-2 lg:order-1 relative z-10"
+              className="text-left order-2 lg:order-1"
             >
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="mb-6"
+                className="mb-8"
               >
-                <span className="inline-flex items-center gap-2 px-4 py-2 bg-black/5 backdrop-blur-md border border-black/10 rounded-full text-sm font-inter font-semibold tracking-wide text-gray-900">
-                  <span className="animate-pulse text-purple-600">●</span>
-                  <span>Complete Travel Solutions</span>
+                <span className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-sm font-medium tracking-wide text-amber-400">
+                  <Sparkles className="w-4 h-4 animate-pulse" />
+                  <span>Curated Travel Solutions</span>
                 </span>
               </motion.div>
               
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight font-sora tracking-tight text-gray-900">
-                Book Your <br/>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600">
-                  Next Adventure
-                </span>
-              </h1>
+              <div className="mb-6">
+                <MetallicHeading 
+                  text="Book Your Next"
+                  variant="gold"
+                  as="h1"
+                  className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight font-sora block"
+                />
+                 <MetallicHeading 
+                  text="Golden Adventure"
+                  variant="silver"
+                  as="span"
+                  className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight font-sora block mt-2"
+                />
+              </div>
               
-              <p className="text-lg md:text-xl text-gray-600 max-w-xl leading-relaxed mb-8 font-inter font-medium">
-                Unlock exclusive deals on hotels, flights, and curated experiences in Kutch.
+              <p className="text-lg md:text-xl text-gray-400 max-w-xl leading-relaxed mb-10 font-inter font-light">
+                Unlock exclusive deals on premium stays, flights, and curated cultural experiences in the land of the White Desert.
               </p>
 
-              {/* Quick Features - Horizontal Scroll on Mobile */}
-              <div className="flex overflow-x-auto pb-4 gap-4 no-scrollbar items-center">
-                 {['Best Prices', 'Curated Stays', '24/7 Support'].map((feat, i) => (
-                   <div key={i} className="flex-shrink-0 flex items-center gap-2 bg-gray-50 px-4 py-2 rounded-lg border border-gray-100">
-                     <span className="text-purple-600 text-lg">✓</span>
-                     <span className="font-semibold text-sm text-gray-900 font-inter">{feat}</span>
+              {/* Quick Features */}
+              <div className="flex flex-wrap gap-4">
+                 {['Best Price Guarantee', 'Luxury Selection', '24/7 Concierge'].map((feat, i) => (
+                   <div key={i} className="flex items-center gap-3 bg-white/5 px-6 py-3 rounded-full border border-white/10 hover:border-amber-500/30 transition-colors">
+                     <span className="text-amber-500 text-lg">✓</span>
+                     <span className="font-semibold text-sm text-gray-300 font-inter">{feat}</span>
                    </div>
                  ))}
               </div>
@@ -95,7 +95,7 @@ export default function BookingsClient() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative h-[45vh] md:h-[500px] w-full rounded-[2rem] overflow-hidden shadow-2xl order-1 lg:order-2 ring-4 ring-white/50"
+              className="relative h-[50vh] md:h-[600px] w-full rounded-[2rem] overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.3)] order-1 lg:order-2 border border-white/10"
             >
               <Swiper
                 modules={[Autoplay, Pagination, EffectFade]}
@@ -113,18 +113,18 @@ export default function BookingsClient() {
                       src={img.src}
                       alt={img.title}
                       fill
-                      className="object-cover"
+                      className="object-cover transition-transform duration-[10s] hover:scale-110"
                       sizes="(max-width: 768px) 100vw, 50vw"
                       priority={index === 0}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                       <p className="text-xs font-bold text-white/80 uppercase tracking-widest mb-1 font-inter">Featured</p>
-                      <h3 className="text-2xl md:text-3xl font-sora font-bold text-white leading-tight">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent opacity-90"></div>
+                    <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+                       <p className="text-xs font-bold text-amber-500 uppercase tracking-[0.2em] mb-3 font-inter">Featured Stay</p>
+                      <h3 className="text-3xl md:text-4xl font-sora font-bold text-white leading-tight mb-2">
                         {img.title}
                       </h3>
                       {img.subtitle && (
-                        <p className="text-white/80 text-sm md:text-base mt-2 font-inter">{img.subtitle}</p>
+                        <p className="text-gray-300 text-sm md:text-base font-inter border-l-2 border-amber-500 pl-3">{img.subtitle}</p>
                       )}
                     </div>
                   </SwiperSlide>
@@ -135,26 +135,26 @@ export default function BookingsClient() {
         </div>
       </div>
 
-      {/* Booking Categories Tabs - Sticky & Scrollable */}
-      <div className="sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-y border-gray-100 shadow-sm py-4">
+      {/* Booking Categories Tabs - Sticky */}
+      <div className="sticky top-0 z-40 bg-black/80 backdrop-blur-xl border-y border-white/10 py-4">
         <div className="max-w-[1600px] mx-auto px-4 overflow-x-auto no-scrollbar">
-          <div className="flex md:justify-center gap-3 min-w-max">
+          <div className="flex md:justify-center gap-4 min-w-max">
             {[
               { id: 'hotels', label: 'Hotels', icon: '🏨' },
               { id: 'flights', label: 'Flights', icon: '✈️' },
-              { id: 'tours', label: 'Tours', icon: '🎯' },
-              { id: 'shopping', label: 'Shopping', icon: '🛍️' }
+              { id: 'tours', label: 'Experiences', icon: '✨' },
+              { id: 'shopping', label: 'Shop', icon: '🛍️' }
             ].map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`px-6 py-3 rounded-2xl font-bold transition-all duration-300 flex items-center gap-2 font-sora text-sm md:text-base ${
+                className={`px-8 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-3 font-sora text-sm md:text-base border ${
                   activeTab === tab.id
-                    ? 'bg-gray-900 text-white shadow-lg scale-105'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                    ? 'bg-amber-500 text-black shadow-[0_0_20px_rgba(245,158,11,0.4)] scale-105 border-amber-400'
+                    : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border-white/5'
                 }`}
               >
-                <span className="text-lg">{tab.icon}</span>
+                <span className="text-lg filter drop-shadow-md">{tab.icon}</span>
                 {tab.label}
               </button>
             ))}
@@ -162,7 +162,7 @@ export default function BookingsClient() {
         </div>
       </div>
 
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         {/* Content Sections */}
         <motion.div
           key={activeTab}
@@ -178,46 +178,8 @@ export default function BookingsClient() {
         </motion.div>
       </div>
 
-      {/* Call to Action */}
-      <motion.div 
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-        className="relative overflow-hidden mt-20 bg-white py-20"
-      >
-        {/* Background blobs */}
-        <div className="absolute inset-0">
-          <div className="blob blob-3 w-[400px] h-[400px] top-0 right-0 opacity-20"></div>
-          <div className="blob blob-1 w-[300px] h-[300px] bottom-0 left-0 opacity-20"></div>
-        </div>
-        
-        <div className="relative max-w-4xl mx-auto text-center px-4">
-          <div className="bg-gradient-to-r from-purple-50 via-indigo-50 to-blue-50 rounded-3xl p-12 border-2 border-purple-100/50 shadow-2xl">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6 font-sora bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 bg-clip-text text-transparent">
-              Need Help Planning?
-            </h2>
-            <p className="text-lg md:text-xl text-gray-900 leading-relaxed mb-8 font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.4)]">
-              Our travel experts are here to help you plan the perfect Kutch adventure
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
-                href="/destinations"
-                className="inline-flex items-center gap-2 bg-white text-purple-600 font-inter font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border-2 border-purple-200 hover:border-purple-400"
-              >
-                <span>Explore Destinations</span>
-                <span>→</span>
-              </Link>
-              <Link 
-                href="/about"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 hover:from-purple-700 hover:via-indigo-700 hover:to-blue-700 text-white font-inter font-bold px-8 py-4 rounded-full shadow-xl shadow-purple-500/30 transition-all duration-300 transform hover:scale-105"
-              >
-                <span>Contact Us</span>
-                <span>→</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </motion.div>
+      {/* Footer CTA */}
+      <FooterCTA />
     </div>
   );
 }
@@ -225,34 +187,30 @@ export default function BookingsClient() {
 // Hotels Section Component
 function HotelsSection() {
   return (
-    <div className="space-y-8 md:space-y-12">
+    <div className="space-y-16">
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="text-center mb-6 md:mb-10 px-2"
+        className="text-center px-2"
       >
-        <h2 className="text-3xl md:text-4xl font-black mb-3 font-sora text-gray-900 leading-tight">
-          Find Perfect <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-indigo-600">Accommodation</span>
-        </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-inter leading-relaxed">
-          Book hotels, resorts, and homestays in Kutch with our trusted partners. Best prices guaranteed!
+        <div className="inline-block">
+            <MetallicHeading text="Sanctuaries of Comfort" variant="gold" as="h2" className="text-3xl md:text-5xl font-black mb-6" />
+        </div>
+        <p className="text-gray-400 max-w-2xl mx-auto text-lg font-inter leading-relaxed">
+          From royal heritage palaces to eco-friendly desert resorts, find your perfect abode in Kutch.
         </p>
       </motion.div>
 
-      {/* Curated Best Deals Section - Expanded Grid */}
+      {/* Curated Best Deals Section */}
       <BestDealsSection />
 
-      {/* Booking Widget Section - Booking.com */}
-      {/* Container removed to allow full width design in BookingWidget */}
-      <BookingWidget />
-          
-      <div className="relative my-8 md:my-12">
-        <div className="absolute inset-0 flex items-center" aria-hidden="true">
-          <div className="w-full border-t border-gray-100"></div>
-        </div>
-        <div className="relative flex justify-center">
-          <span className="px-4 bg-white text-xs font-bold tracking-widest text-gray-400 uppercase">Or verify with</span>
-        </div>
+      {/* Booking Widget Wrapper - Just for spacing, aesthetic provided by widget itself or contained mostly */}
+      <div className="bg-white/5 backdrop-blur-md rounded-[2rem] p-6 md:p-10 border border-white/10 shadow-2xl">
+         <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold font-sora text-white mb-2">Search Availability</h3>
+            <p className="text-gray-400 text-sm">Powered by our trusted partners</p>
+         </div>
+         <BookingWidget />
       </div>
 
       <TripWidget defaultTab="hotels" />
@@ -263,20 +221,16 @@ function HotelsSection() {
 // Flights Section Component
 function FlightsSection() {
   return (
-    <div className="space-y-8 md:space-y-12">
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="text-center mb-6 md:mb-10 px-2"
-      >
-        <h2 className="text-3xl md:text-4xl font-black mb-3 font-sora text-gray-900">Book Your <span className="text-blue-600">Flight</span></h2>
-        <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-inter leading-relaxed">
-          Find the best flight deals to Bhuj and other nearby airports. Compare prices from multiple airlines.
+    <div className="space-y-16">
+      <div className="text-center px-2">
+         <MetallicHeading text="Wings to Kutch" variant="gold" as="h2" className="text-3xl md:text-5xl font-black mb-6 mx-auto block" />
+        <p className="text-gray-400 max-w-2xl mx-auto text-lg font-inter leading-relaxed">
+          Seamless connectivity to the land of white sands. Compare prices and book effortlessly.
         </p>
-      </motion.div>
+      </div>
 
-      {/* Popular Flight Routes - Modern Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 mb-4">
+      {/* Popular Flight Routes - Premium Dark Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         {[
           {
             from: "Bhuj (BHJ)",
@@ -301,61 +255,62 @@ function FlightsSection() {
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
-            className="bg-white rounded-[1.5rem] p-5 md:p-6 shadow-xl shadow-blue-900/5 border border-blue-50 flex items-center justify-between group"
+            className="bg-white/5 backdrop-blur-md rounded-[2rem] p-8 shadow-xl border border-white/10 flex items-center justify-between group hover:border-amber-500/50 transition-colors"
           >
-            <div className="flex items-center gap-4">
-              <div className="h-12 w-12 bg-blue-50 rounded-2xl flex items-center justify-center text-2xl group-hover:rotate-12 transition-transform">
+            <div className="flex items-center gap-6">
+              <div className="h-14 w-14 bg-gradient-to-br from-amber-500 to-orange-600 rounded-2xl flex items-center justify-center text-2xl text-black shadow-lg group-hover:rotate-12 transition-transform">
                 ✈️
               </div>
               <div>
-                <h4 className="font-bold text-gray-900 font-sora text-sm md:text-base">{flight.from} ⇄ {flight.to}</h4>
-                <p className="text-xs text-gray-500 font-inter font-medium mt-1">Non-stop • {flight.duration}</p>
+                <h4 className="font-bold text-white font-sora text-lg mb-1">{flight.from} ⇄ {flight.to}</h4>
+                <p className="text-sm text-gray-400 font-inter font-medium flex items-center gap-2">
+                   <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span> Non-stop • {flight.duration}
+                </p>
               </div>
             </div>
-            <div className="text-right bg-blue-50 px-3 py-2 rounded-xl">
-              <p className="text-[10px] text-blue-600 font-bold uppercase tracking-wider font-inter">Start</p>
-              <p className="text-base font-black text-blue-700 font-sora">{flight.price}</p>
+            <div className="text-right bg-white/5 px-4 py-3 rounded-xl border border-white/5">
+              <p className="text-[10px] text-amber-500 font-bold uppercase tracking-wider font-inter mb-1">From</p>
+              <p className="text-xl font-black text-white font-sora">{flight.price}</p>
             </div>
           </motion.a>
         ))}
       </div>
 
-      {/* Flight Search Widget */}
-      {/* Container removed to allow full width design */}
-      <TripWidget defaultTab="flights" />
+      <div className="bg-white/5 backdrop-blur-md rounded-[2rem] p-6 md:p-10 border border-white/10 shadow-2xl">
+         <TripWidget defaultTab="flights" />
+      </div>
 
-      {/* Flight Information */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div className="bg-blue-50/50 rounded-[2rem] p-6 md:p-8 border-none">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-3xl md:text-4xl">✈️</span>
-            <h3 className="text-xl md:text-2xl font-bold font-sora text-gray-900">Reach Kutch</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="bg-gradient-to-br from-blue-900/20 to-indigo-900/20 rounded-[2rem] p-8 border border-white/10 backdrop-blur-sm">
+          <div className="flex items-center gap-4 mb-6">
+            <span className="text-4xl">✈️</span>
+            <h3 className="text-2xl font-bold font-sora text-white">Reach Kutch</h3>
           </div>
-          <ul className="space-y-4 text-gray-700 font-inter text-sm md:text-base font-medium">
+          <ul className="space-y-4 text-gray-300 font-inter text-base font-light">
             <li className="flex items-start gap-3">
-              <span className="text-blue-600 text-lg">•</span>
-              <span><strong>Bhuj Airport (BHJ):</strong> Main airport serving Kutch region</span>
+              <span className="text-amber-500 text-lg">›</span>
+              <span><strong>Bhuj Airport (BHJ):</strong> The gateway to Kutch, well connected to Mumbai.</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-blue-600 text-lg">•</span>
-              <span><strong>From Mumbai:</strong> Direct flights available (1.5 hours)</span>
+              <span className="text-amber-500 text-lg">›</span>
+              <span><strong>Kandla Airport (IXY):</strong> Alternative option near Gandhidham.</span>
             </li>
           </ul>
         </div>
         
-        <div className="bg-cyan-50/50 rounded-[2rem] p-6 md:p-8 border-none">
-          <div className="flex items-center gap-3 mb-4">
-            <span className="text-3xl md:text-4xl">💡</span>
-            <h3 className="text-xl md:text-2xl font-bold font-sora text-gray-900">Smart Tips</h3>
+        <div className="bg-gradient-to-br from-emerald-900/20 to-teal-900/20 rounded-[2rem] p-8 border border-white/10 backdrop-blur-sm">
+          <div className="flex items-center gap-4 mb-6">
+            <span className="text-4xl">💡</span>
+            <h3 className="text-2xl font-bold font-sora text-white">Smart Tips</h3>
           </div>
-          <ul className="space-y-4 text-gray-700 font-inter text-sm md:text-base font-medium">
+          <ul className="space-y-4 text-gray-300 font-inter text-base font-light">
             <li className="flex items-start gap-3">
-              <span className="text-cyan-600 text-lg">•</span>
-              <span>Book 2-3 weeks in advance for best prices</span>
+              <span className="text-emerald-400 text-lg">›</span>
+              <span>Book 3-4 weeks in advance for Rann Utsav (Dec-Feb).</span>
             </li>
             <li className="flex items-start gap-3">
-              <span className="text-cyan-600 text-lg">•</span>
-              <span>Winter season (Nov-Feb) is peak time</span>
+              <span className="text-emerald-400 text-lg">›</span>
+              <span>Early morning flights offer spectacular aerial views of the salt desert.</span>
             </li>
           </ul>
         </div>
@@ -367,56 +322,54 @@ function FlightsSection() {
 // Tours Section Component
 function ToursSection() {
   return (
-    <div className="space-y-8 md:space-y-12">
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="text-center mb-6 md:mb-10"
-      >
-        <h2 className="text-3xl md:text-4xl font-black mb-3 font-sora text-gray-900">Discover <span className="text-purple-600">Amazing Tours</span></h2>
-        <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-inter leading-relaxed">
-          Book guided tours, cultural experiences, and adventure activities in Kutch with local experts.
+    <div className="space-y-16">
+      <div className="text-center">
+         <MetallicHeading text="Curated Experiences" variant="gold" as="h2" className="text-3xl md:text-5xl font-black mb-6 mx-auto block" />
+        <p className="text-gray-400 max-w-2xl mx-auto text-lg font-inter leading-relaxed">
+          Embark on guided journeys through time, tradition, and terrain with our expert local partners.
         </p>
-      </motion.div>
+      </div>
 
-      {/* Tours Widget */}
-      {/* Container removed to allow full width design */}
-      <TripWidget defaultTab="activities" />
+      <div className="bg-white/5 backdrop-blur-md rounded-[2rem] p-6 md:p-10 border border-white/10 shadow-2xl">
+         <TripWidget defaultTab="activities" />
+      </div>
 
-      {/* Popular Tours - Sleek Mobile Stack */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {/* Popular Tours - Premium Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {[
-          { name: "White Rann Full Moon Tour", duration: "2 Days", price: "₹8,500", rating: "4.8" },
-          { name: "Kutch Heritage Village Tour", duration: "1 Day", price: "₹3,200", rating: "4.6" },
-          { name: "Desert Safari & Camel Ride", duration: "Half Day", price: "₹2,800", rating: "4.9" }
+          { name: "White Rann Full Moon Night", duration: "2 Days", price: "₹8,500", rating: "4.9", tag: "Exclusive" },
+          { name: "Heritage Walk of Bhuj", duration: "1 Day", price: "₹3,200", rating: "4.7", tag: "Cultural" },
+          { name: "Wild Ass Sanctuary Safari", duration: "Full Day", price: "₹4,500", rating: "4.8", tag: "Adventure" }
         ].map((tour, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-white rounded-[1.5rem] p-6 shadow-xl shadow-purple-900/5 hover:shadow-2xl transition-all duration-300 border border-gray-50"
+            className="bg-black/40 backdrop-blur-md rounded-[2rem] p-1 border border-white/10 hover:border-amber-500/50 transition-colors group"
           >
-            <div className="flex justify-between items-start mb-4">
-              <div className="p-3 bg-purple-50 rounded-2xl text-2xl">⚡</div>
-              <span className="bg-black text-white px-3 py-1 rounded-full text-xs font-bold font-inter">Best Seller</span>
-            </div>
-            
-            <h3 className="font-bold text-lg mb-3 font-sora text-gray-900 line-clamp-2">{tour.name}</h3>
-            
-            <div className="flex items-center gap-4 text-sm text-gray-500 mb-6 font-inter font-medium">
-               <span className="flex items-center gap-1">⏱️ {tour.duration}</span>
-               <span className="flex items-center gap-1">⭐ {tour.rating}</span>
-            </div>
+            <div className="bg-white/5 rounded-[1.8rem] p-6 h-full flex flex-col">
+              <div className="flex justify-between items-start mb-6">
+                <div className="p-3 bg-amber-500/10 rounded-2xl text-amber-500 text-xl border border-amber-500/20">✨</div>
+                <span className="bg-amber-500 text-black px-3 py-1 rounded-full text-xs font-bold font-inter uppercase tracking-wide">{tour.tag}</span>
+              </div>
+              
+              <h3 className="font-bold text-xl mb-4 font-sora text-white leading-snug group-hover:text-amber-400 transition-colors">{tour.name}</h3>
+              
+              <div className="flex items-center gap-6 text-sm text-gray-400 mb-8 font-inter font-medium">
+                 <span className="flex items-center gap-2"><Clock className="w-4 h-4 text-amber-500" /> {tour.duration}</span>
+                 <span className="flex items-center gap-2"><span className="text-yellow-400">★</span> {tour.rating}</span>
+              </div>
 
-            <div className="flex items-center justify-between mt-auto">
-               <div>
-                  <p className="text-xs text-gray-400 font-bold uppercase">Price</p>
-                  <p className="text-xl font-black text-purple-600 font-sora">{tour.price}</p>
-               </div>
-               <button className="bg-black text-white px-6 py-3 rounded-xl font-bold text-sm hover:opacity-80 transition-opacity">
-                 Book
-               </button>
+              <div className="flex items-center justify-between mt-auto pt-6 border-t border-white/5">
+                 <div>
+                    <p className="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Starting from</p>
+                    <p className="text-2xl font-black text-white font-sora">{tour.price}</p>
+                 </div>
+                 <button className="bg-white text-black px-6 py-3 rounded-xl font-bold text-sm hover:bg-amber-500 transition-colors shadow-lg">
+                   Book Now
+                 </button>
+              </div>
             </div>
           </motion.div>
         ))}
@@ -428,76 +381,84 @@ function ToursSection() {
 // Shopping Section Component
 function ShoppingSection() {
   return (
-    <div className="space-y-8 md:space-y-12">
-      <motion.div 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="text-center mb-6 md:mb-10"
-      >
-        <h2 className="text-3xl md:text-4xl font-black mb-3 font-sora text-gray-900">Local <span className="text-indigo-600">Treasures</span></h2>
-        <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg font-inter leading-relaxed">
-          Shop for travel essentials, authentic Kutchi handicrafts, and local souvenirs.
+    <div className="space-y-16">
+      <div className="text-center">
+         <MetallicHeading text="Treasures of Kutch" variant="gold" as="h2" className="text-3xl md:text-5xl font-black mb-6 mx-auto block" />
+        <p className="text-gray-400 max-w-2xl mx-auto text-lg font-inter leading-relaxed">
+          Bring a piece of heritage home. Shop authentic handicrafts, textiles, and travel essentials.
         </p>
-      </motion.div>
+      </div>
 
-      {/* Shopping Categories - Minimalist Grid */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
         {[
-          { category: "Travel Gear", icon: "🎒" },
-          { category: "Handicrafts", icon: "🎨" },
-          { category: "Clothing", icon: "👕" },
-          { category: "Souvenirs", icon: "🛍️" }
+          { category: "Travel Gear", icon: "🎒", desc: "For the Explorer" },
+          { category: "Handicrafts", icon: "🎨", desc: "Artisan Made" },
+          { category: "Textiles", icon: "🧣", desc: "Bandhani & Ajrakh" },
+          { category: "Souvenirs", icon: "🛍️", desc: "Memories" }
         ].map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: index * 0.1 }}
-            className="bg-white rounded-[1.5rem] p-6 shadow-lg hover:shadow-xl transition-all text-center border border-gray-100 flex flex-col items-center justify-center gap-3 aspect-square"
+            className="bg-white/5 backdrop-blur-md rounded-[2rem] p-8 text-center border border-white/10 hover:border-amber-500/50 hover:bg-white/10 transition-all cursor-pointer group"
           >
-            <span className="text-4xl">{item.icon}</span>
-            <h3 className="font-bold text-gray-900 font-sora">{item.category}</h3>
+            <span className="text-5xl mb-4 block group-hover:scale-110 transition-transform">{item.icon}</span>
+            <h3 className="font-bold text-white font-sora text-xl mb-1">{item.category}</h3>
+            <p className="text-xs text-amber-500 font-inter uppercase tracking-widest">{item.desc}</p>
           </motion.div>
         ))}
       </div>
 
-      {/* Featured Products - Sleek Product Cards */}
-      <div className="bg-white rounded-[2rem] p-4 md:p-8 shadow-xl shadow-indigo-900/5 ring-1 ring-black/5">
-        <h3 className="text-2xl font-bold text-center mb-8 font-sora text-gray-900">Featured Products</h3>
+      {/* Featured Products */}
+      <div className="bg-gradient-to-b from-white/5 to-transparent rounded-[2.5rem] p-8 md:p-12 border border-white/10">
+        <h3 className="text-2xl font-bold mb-10 font-sora text-white flex items-center gap-3">
+           <Sparkles className="w-6 h-6 text-amber-500" /> Featured Collections
+        </h3>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { 
-              name: "Professional Travel Camera", 
-              price: "₹45,000", 
-              originalPrice: "₹52,000",
-              affiliate: "Amazon",
-              rating: "4.5"
+              name: "Kutchi Embroidered Bag", 
+              price: "₹2,500", 
+              tag: "Handmade",
+              rating: "4.9"
             },
             { 
-              name: "Kutchi Bandhani Saree", 
-              price: "₹3,500", 
-              originalPrice: "₹4,200",
-              affiliate: "Local Artisan",
+              name: "Ajrakh Block Print Stole", 
+              price: "₹1,800", 
+              tag: "Natural Dye",
               rating: "4.8"
+            },
+             { 
+              name: "Bandhani Silk Saree", 
+              price: "₹12,000", 
+              tag: "Premium Silk",
+              rating: "5.0"
             }
           ].map((product, index) => (
             <motion.div
               key={index}
-              className="bg-gray-50 rounded-2xl overflow-hidden group"
+              className="bg-black/40 rounded-3xl overflow-hidden group border border-white/5 hover:border-amber-500/30 transition-all"
             >
-              <div className="relative h-48 bg-gray-200 group-hover:bg-gray-300 transition-colors">
-                 <div className="absolute inset-0 flex items-center justify-center text-4xl">📸</div>
-              </div>
-              <div className="p-4">
-                 <h4 className="font-bold text-gray-900 mb-1 font-sora">{product.name}</h4>
-                 <div className="flex items-center gap-2 mb-4">
-                    <span className="text-indigo-600 font-black text-lg">{product.price}</span>
-                    <span className="text-gray-400 text-sm line-through decoration-2">{product.originalPrice}</span>
+              <div className="relative h-64 bg-gray-800 group-hover:bg-gray-700 transition-colors flex items-center justify-center overflow-hidden">
+                 <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-20"></div>
+                 <span className="text-6xl grayscale group-hover:grayscale-0 transition-all duration-500">🛍️</span>
+                 <div className="absolute top-4 right-4 bg-amber-500 text-black text-xs font-bold px-3 py-1 rounded-full">
+                    {product.tag}
                  </div>
-                 <button className="w-full bg-black text-white py-3 rounded-xl font-bold text-sm hover:scale-[1.02] transition-transform">
-                   Buy Now
-                 </button>
+              </div>
+              <div className="p-6">
+                 <div className="flex justify-between items-start mb-2">
+                    <h4 className="font-bold text-white font-sora text-lg">{product.name}</h4>
+                    <span className="text-yellow-400 text-xs font-bold flex items-center gap-1">★ {product.rating}</span>
+                 </div>
+                 <div className="flex items-center justify-between mt-6">
+                    <span className="text-amber-500 font-black text-xl font-sora">{product.price}</span>
+                    <button className="bg-white text-black px-6 py-2 rounded-full font-bold text-sm hover:bg-amber-400 transition-colors">
+                      View
+                    </button>
+                 </div>
               </div>
             </motion.div>
           ))}
@@ -510,19 +471,19 @@ function ShoppingSection() {
 // Curated Best Deals Component
 function BestDealsSection() {
   return (
-    <div className="mb-8 md:mb-16">
-      <div className="flex items-center justify-between mb-6 px-2">
+    <div className="mb-12">
+      <div className="flex items-center justify-between mb-8 px-2">
         <div>
-          <h3 className="text-xl md:text-2xl font-bold font-sora text-gray-900 flex items-center gap-2">
-            <span className="text-2xl">🔥</span> Top Deals
+          <h3 className="text-2xl font-bold font-sora text-white flex items-center gap-3">
+             <span className="text-amber-500 text-2xl">⚡</span> Limited Time Offers
           </h3>
         </div>
-        <a href="https://www.booking.com/searchresults.html?ss=kutch" target="_blank" rel="noopener noreferrer" className="text-purple-600 text-sm font-bold hover:underline transition-all">
-          View All →
+        <a href="https://www.booking.com/searchresults.html?ss=kutch" target="_blank" rel="noopener noreferrer" className="text-amber-500 text-sm font-bold hover:text-white transition-colors flex items-center gap-2">
+          View All Offers <span className="text-lg">→</span>
         </a>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-2 md:px-0">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {accommodationDeals.map((deal) => (
           <motion.a
             href={deal.link}
@@ -531,44 +492,37 @@ function BestDealsSection() {
             key={deal.id}
             whileTap={{ scale: 0.98 }}
             whileHover={{ y: -5 }}
-            className="group block bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 flex flex-col h-full"
+            className="group block bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-amber-500/50 shadow-lg flex flex-col h-full transition-colors"
           >
-            <div className="relative aspect-[4/5] md:aspect-[4/3] w-full bg-gray-200 overflow-hidden">
+            <div className="relative aspect-[4/5] w-full bg-gray-900 overflow-hidden">
               <Image
                 src={deal.image}
                 alt={deal.name}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
                 sizes="(max-width: 768px) 50vw, 25vw"
               />
-              <div className="absolute top-2 right-2 bg-black/70 backdrop-blur-sm px-2 py-1 rounded-lg text-[10px] font-bold text-white flex items-center gap-1 z-10">
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
+              
+              <div className="absolute top-2 right-2 bg-black/60 backdrop-blur-md px-2 py-1 rounded-lg text-xs font-bold text-white flex items-center gap-1 z-10 border border-white/10">
                 <span className="text-yellow-400">★</span> {deal.rating}
               </div>
+              
               {deal.dealType && (
-                <div className="absolute top-2 left-2 bg-purple-600 px-2 py-1 rounded-lg text-[10px] font-bold text-white z-10 shadow-lg">
+                <div className="absolute top-2 left-2 bg-amber-500 text-black px-2 py-1 rounded-lg text-[10px] font-black uppercase tracking-wider z-10 shadow-lg">
                   {deal.dealType}
                 </div>
               )}
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3 pt-12 md:hidden">
-                 <h4 className="font-bold text-white font-sora text-sm mb-0.5 leading-tight">{deal.name}</h4>
-                 <p className="text-white/80 text-xs font-inter">{deal.price}</p>
-              </div>
-            </div>
-            
-            <div className="p-3 md:p-4 flex flex-col flex-grow hidden md:flex">
-              <h4 className="font-bold text-gray-900 font-sora text-sm md:text-base mb-1 truncate">{deal.name}</h4>
-               <p className="text-gray-500 text-xs font-inter mb-2 flex items-center gap-1">
-                 <span>📍</span> {deal.location}
-               </p>
-
-              <div className="flex items-center justify-between mt-auto pt-2 border-t border-gray-50">
-                <div>
-                  <p className="text-[10px] text-gray-400 font-bold uppercase">Avg. Price</p>
-                  <p className="font-bold text-purple-600 text-base">{deal.price}</p>
-                </div>
-                <div className="bg-gray-50 group-hover:bg-purple-50 group-hover:text-purple-600 p-1.5 rounded-full transition-colors">
-                  <span className="text-sm">↗️</span>
-                </div>
+              
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                 <h4 className="font-bold text-white font-sora text-base mb-1 leading-tight group-hover:text-amber-400 transition-colors">{deal.name}</h4>
+                 <p className="text-gray-300 text-xs font-inter flex items-center gap-1 mb-2">
+                   <MapPin className="w-3 h-3 text-amber-500" /> {deal.location}
+                 </p>
+                 <div className="flex items-center justify-between border-t border-white/20 pt-2 mt-2">
+                    <p className="font-black text-amber-500 text-lg font-sora">{deal.price}</p>
+                    <span className="bg-white/20 p-1.5 rounded-full text-white text-xs">↗</span>
+                 </div>
               </div>
             </div>
           </motion.a>
@@ -576,4 +530,46 @@ function BestDealsSection() {
       </div>
     </div>
   );
+}
+
+function FooterCTA() {
+  return (
+      <motion.div 
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="relative overflow-hidden mt-32 bg-black py-24 border-t border-white/10"
+      >
+        <div className="relative max-w-4xl mx-auto text-center px-4">
+          <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-[3rem] p-12 md:p-20 border border-white/10 shadow-[0_0_100px_rgba(0,0,0,0.8)] relative overflow-hidden">
+             
+             {/* Glows */}
+             <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-[100px]"></div>
+             <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px]"></div>
+
+            <div className="relative z-10">
+                <MetallicHeading text="Craft Your Dream Journey" variant="gold" as="h2" className="text-3xl md:text-5xl font-black mb-8 mx-auto block" />
+                <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-12 font-inter font-light max-w-2xl mx-auto">
+                Need a bespoke itinerary? Our travel artisans are ready to curate your perfect Kutch experience.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <Link 
+                    href="/destinations"
+                    className="group bg-amber-500 text-black font-inter font-bold px-10 py-4 rounded-full shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] transition-all duration-300 transform hover:scale-105"
+                >
+                    <span className="flex items-center gap-2">Explore Destinations <span className="group-hover:translate-x-1 transition-transform">→</span></span>
+                </Link>
+                <Link 
+                    href="/about"
+                    className="group bg-transparent border border-white/30 text-white hover:bg-white/10 font-inter font-bold px-10 py-4 rounded-full transition-all duration-300"
+                >
+                    <span className="flex items-center gap-2">Contact Experts <span className="group-hover:translate-x-1 transition-transform">→</span></span>
+                </Link>
+                </div>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+  )
 }

@@ -2,87 +2,63 @@ import type { HiddenGem } from "./index";
 
 export const harappanSettlement: HiddenGem = {
   slug: "harappan-settlement",
-  title: "Ancient Harappan Settlement Ruins",
+  title: "Desalpar Gunthli — The Fortified Harappan Outpost",
   image: "/images/hidden-gems/harappan-settlement/main.jpg",
-  difficulty: "Expert",
+  difficulty: "Moderate",
   type: "Heritage",
-  discoveryLevel: "Secret",
-  coordinates: { lat: 23.7849, lng: 68.9234 },
-  bestTime: "October to March (Dry season essential)",
-  warnings: [
-    "⚠️ ARCHAEOLOGICAL PROTECTED SITE - Permits required from ASI",
-    "🚫 ILLEGAL ACCESS - Entry without permission results in heavy fines",
-    "🗿 NO COLLECTION - Removing artifacts is a criminal offense",
-    "🌡️ EXTREME HEAT - Summer temperatures exceed 50°C",
-    "🚧 UNSTABLE RUINS - Risk of structural collapse in ancient walls"
-  ],
+  discoveryLevel: "Explorer",
   sections: [
     {
-      heading: "Archaeological Wonder",
-      color: "text-gray-800",
-      border: "border-gray-200",
-      content: "Hidden deep in the Kutch desert lies one of the most significant undiscovered Harappan settlements, dating back 4,500 years. This remote archaeological site contains pristine ruins of the Indus Valley Civilization, with intact street layouts, sophisticated drainage systems, and unexcavated structures that could rewrite history. Access requires special permits and archaeological supervision."
+      heading: "Overview",
+      color: "#fff7ed",
+      border: "border-l-4 border-amber-500 text-gray-700",
+      content: "Desalpar Gunthli (or Gunthli) is a massive fortified Harappan settlement located in Nakhatrana taluka. Often overshadowed by Dholavira, this site is historically significant as a strategic trading outpost with massive stone fortifications still visible today. It sits on the banks of the Bamu-Chela stream, offering a glimpse into the ancient civilization's defensive architecture."
     },
     {
       heading: "Historical Significance", 
-      color: "text-gray-800",
-      border: "border-gray-200",
-      content: "Recent ground-penetrating radar surveys have revealed a settlement larger than Dholavira, with unique urban planning features not seen in other Harappan sites. The preservation is exceptional due to the desert climate, with original bricks, seals, and pottery still in situ. Several structures show evidence of advanced metallurgy and water management technologies."
+      color: "#f0f9ff",
+      border: "border-l-4 border-indigo-500 text-gray-700",
+      content: "Excavations in the 1960s revealed a well-planned citadel with walls up to 4 meters thick. Key discoveries include a unique copper seal, distinct 'reserved slip ware' pottery (rare in other Kutch sites), and evidence of trade with other contemporary civilizations. The site effectively guarded the trade routes of Kutch 4,000 years ago."
     },
     {
-      heading: "Discovery Details",
-      color: "text-gray-800", 
-      border: "border-gray-200",
+      heading: "What to See",
+      color: "#fcfce5", 
+      border: "border-l-4 border-yellow-500 text-gray-700",
       list: [
-        "🏺 Over 200 intact pottery vessels discovered in sealed chambers",
-        "📿 Unique Harappan seals with undeciphered script variations",
-        "🏗️ Three-story structures with original wooden beams preserved",
-        "💧 Advanced water harvesting system still functional after 4,500 years",
-        "⚱️ Ceremonial burial site with unprecedented grave goods",
-        "🔥 Bronze-working furnaces with original copper ingots"
+        "<b>The Fortification Wall:</b> Massive stone blocks forming the ancient defense perimeter.",
+        "<b>Architectural Remains:</b> Foundations of houses with bathrooms and complex drainage systems.",
+        "<b>The Stream:</b> The seasonal Bamu-Chela stream that served as the lifeline for the settlement.",
+        "<b>Pottery Shards:</b> Visitors can still spot ancient painted grey ware shards scattered on the surface (Observation only - Do not collect)."
       ]
     },
     {
-      heading: "Access & Permissions",
-      color: "text-gray-800",
-      border: "border-gray-200", 
-      content: "Accessing this site requires written permission from the Archaeological Survey of India (ASI) regional office in Ahmedabad. Applications must be submitted 3 months in advance with detailed research proposals. Only accredited archaeologists, researchers, or educational institutions are granted access. Commercial photography and videography are strictly prohibited."
-    },
-    {
-      heading: "Expedition Requirements",
-      color: "text-gray-800",
-      border: "border-gray-200",
-      list: [
-        "🎓 Archaeological supervision mandatory (ASI-certified guide required)",
-        "📋 Valid research permits and insurance documentation", 
-        "🚙 4WD vehicles essential for 15km desert approach road",
-        "⛺ Self-sufficient camping gear (no facilities available)",
-        "💧 Minimum 5 liters water per person per day",
-        "📡 Satellite communication device for emergencies",
-        "🏥 First aid kit with snake bite treatment",
-        "🌡️ Desert survival equipment and temperature monitoring"
-      ]
+      heading: "Access & Visiting",
+      color: "#f0fdf4",
+      border: "border-l-4 border-emerald-500 text-gray-700", 
+      content: "Unlike Dholavira, Desalpar is not a ticketed tourist site, which adds to its 'hidden' charm. It is an open archaeological mound near Gunthli village. It is recommended to visit with a local guide who can point out the structural details."
     }
   ],
   facts: [
-    "🏛️ Potentially the largest undiscovered Harappan settlement in Gujarat",
-    "📅 Dates to 2600-1900 BCE (Mature Harappan period)",
-    "🔍 Only 15% of the site has been scientifically excavated",
-    "🚫 Strictly protected under the Ancient Monuments Act",
-    "👥 Maximum 12 researchers allowed on site simultaneously",
-    "🌍 Could be nominated for UNESCO World Heritage status",
-    "📚 Referenced in only 3 archaeological journals worldwide"
+    "Location: Nakhatrana Taluka, 25km from Nakhatrana",
+    "Period: Mature Harappan (2600-1900 BCE)",
+    "Key Find: Steatite, Copper & Terracotta seals",
+    "Feature: Massive stone fortification wall",
+    "Status: Protected Archaeological Site"
   ],
-  mapUrl: "https://maps.google.com/maps?q=23.7849,68.9234&hl=en&z=15&output=embed",
+  coordinates: { lat: 23.58, lng: 69.15 }, 
+  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14695.123456789!2d69.1500!3d23.5800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39510123456789%3A0xabcdef12345678!2sDesalpar%20Gunthli!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin",
+  bestTime: "Winter (November to February)",
+  warnings: [
+    "Do NOT take any pottery or stones from the site",
+    "No facilities (water/food) at the site; carry your own",
+    "Respect the local village culture",
+    "Site is open-air with no shade - visit early morning",
+    "Approach roads can be narrow"
+  ],
   gallery: [
-    { src: "/images/hidden-gems/harappan-settlement/ruins1.jpg", caption: "Intact street layout showing advanced urban planning" },
-    { src: "/images/hidden-gems/harappan-settlement/pottery.jpg", caption: "Perfectly preserved Harappan pottery in original storage chambers" },
-    { src: "/images/hidden-gems/harappan-settlement/seals.jpg", caption: "Unique script variations on newly discovered seals" },
-    { src: "/images/hidden-gems/harappan-settlement/drainage.jpg", caption: "4,500-year-old drainage system still functional" },
-    { src: "/images/hidden-gems/harappan-settlement/excavation.jpg", caption: "Current excavation work revealing three-story structures" },
-    { src: "/images/hidden-gems/harappan-settlement/artifacts.jpg", caption: "Bronze tools and ornaments found in residential quarters" },
-    { src: "/images/hidden-gems/harappan-settlement/desert-approach.jpg", caption: "Remote desert approach requiring expert navigation" }
+    { src: "/images/hidden-gems/harappan-settlement/ruins1.jpg", caption: "Remains of the massive stone walls" },
+    { src: "/images/hidden-gems/harappan-settlement/pottery.jpg", caption: "The mound of Desalpar Gunthli" },
+    { src: "/images/hidden-gems/harappan-settlement/drainage.jpg", caption: "Ancient drainage line visible in ruins" },
+    { src: "/images/hidden-gems/harappan-settlement/desert-approach.jpg", caption: "The landscape surrounding Nakhatrana" }
   ]
 };
-
-

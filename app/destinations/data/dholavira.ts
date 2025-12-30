@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 export const dholavira: Destination = {
   slug: "dholavira",
   title: "Dholavira — Ancient Harappan Metropolis",
-  image: "/images/dholavira/dholavira.jpg",
+  image: "/images/dholavira/dholavira1.jpg",
   sections: [
     {
       heading: "Category",
@@ -15,7 +15,7 @@ export const dholavira: Destination = {
       border: "border-l-4 border-amber-600 text-amber-800",
       content: "Dholavira is one of the most significant archaeological sites of the Indus Valley Civilization (Harappan Civilization). Located on Khadir Bet island in the Rann of Kutch, this UNESCO World Heritage site offers a fascinating glimpse into advanced urban planning, water conservation systems, and the lifestyle of an ancient civilization that thrived over 4,500 years ago.",
       image: {
-        src: "/images/dholavira/dholavira-1.jpg",
+        src: "/images/dholavira/dholavira1.jpg",
         alt: "Overview of Dholavira Archaeological Site"
       }
     },
@@ -25,58 +25,130 @@ export const dholavira: Destination = {
       border: "border-l-4 border-stone-600 text-stone-800",
       content: "Discovered in 1968 by archaeologist J.P. Joshi, Dholavira is the fifth largest Harappan site in the Indian subcontinent. It was occupied from c. 2650 BCE to 1450 BCE. The city is distinguished by its unique water management system, multi-layered defensive mechanisms, and extensive use of stone in construction.",
       image: {
-        src: "/images/dholavira/dholavira-3.jpg",
+        src: "/images/dholavira/dholavira2.jpg",
         alt: "Ancient ruins of Dholavira"
       }
     },
     {
-      heading: "Key Attractions",
+      heading: "Places of Interest",
       color: "bg-orange-50",
       border: "border-l-4 border-orange-600 text-orange-800",
       list: [
-        "<b>The Citadel:</b> The fortified upper town where the rulers likely lived",
-        "<b>Water Reservoirs:</b> Sophisticated water conservation system with 16 reservoirs",
-        "<b>The Signboard:</b> One of the longest Indus script inscriptions found",
-        "<b>Middle & Lower Town:</b> Well-planned residential areas for officials and commoners",
-        "<b>Archaeological Museum:</b> Houses artifacts like seals, beads, and pottery found at the site",
-        "<b>Fossil Park:</b> Nearby park showcasing wood fossils from the Jurassic era"
+        "<b>The Citadel:</b> The fortified upper town with massive stone walls where the rulers likely lived",
+        "<b>Water Reservoirs:</b> Sophisticated water conservation system with 16 majestic reservoirs",
+        "<b>The Signboard:</b> One of the longest Indus script inscriptions found near the North Gate",
+        "<b>Middle & Lower Town:</b> Well-planned residential areas demonstrating advanced urban hierarchy",
+        "<b>Archaeological Museum:</b> On-site museum housing seals, beads, pottery, and artifacts",
+        "<b>Fossil Park:</b> Nearby park showcasing 160-million-year-old wood fossils from the Jurassic era"
       ],
       image: {
-        src: "/images/dholavira/dholavira.jpg",
+        src: "/images/dholavira/dholavira3.jpg",
         alt: "Water reservoirs at Dholavira"
       }
     },
     {
-      heading: "Travel Information",
-      color: "bg-blue-50",
-      border: "border-l-4 border-blue-600 text-blue-800",
+      heading: "Food & Crafts",
+      color: "bg-emerald-50",
+      border: "border-l-4 border-emerald-600 text-emerald-800",
       list: [
-        "<b>Distance from Bhuj:</b> ~215 km (4-5 hours drive)",
-        "<b>Best Time to Visit:</b> October to March (Winter)",
-        "<b>Entry Fee:</b> Nominal fee for Indian and foreign tourists",
-        "<b>Guide:</b> Local guides are available and recommended",
-        "<b>Road:</b> Connected via the new 'Road to Heaven' (Khavda-Dholavira road)"
+        "<b>Local Kutchi Cuisine:</b> Simple, traditional meals available at local guesthouses and homestays",
+        "<b>Handicrafts in Khadir Bet:</b> Local women create beautiful embroidery and beadwork unique to this island region",
+        "<b>Souvenirs:</b> Replicas of Harappan seals and pottery are popular keepsakes",
+        "<b>Flamingo City:</b> In winter, nearby areas host thousands of migratory flamingos"
       ],
       image: {
-        src: "/images/dholavira/dholavira-1.jpg",
-        alt: "Road to Dholavira"
+        src: "/images/dholavira/dholavira4.jpg",
+        alt: "Crafts and culture near Dholavira"
+      }
+    },
+    {
+      heading: "Nearby Destinations",
+      color: "bg-indigo-50",
+      border: "border-l-4 border-indigo-600 text-indigo-800",
+      list: [
+        "<b><a href='/places/road-to-heaven' class='text-blue-600 hover:text-blue-800'>Road to Heaven:</a></b> 10km - The breathtaking stretch of road connecting Khavda to Khadir Bet",
+        "<b><a href='/places/kalo-dungar' class='text-blue-600 hover:text-blue-800'>Kalo Dungar:</a></b> 90km - The highest peak in Kutch offering panoramic views",
+        "<b><a href='/places/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 215km - The district headquarters and cultural hub",
+        "<b><a href='/places/rapar' class='text-blue-600 hover:text-blue-800'>Rapar:</a></b> 90km - Nearest major town with markets and transport connections"
+      ],
+      image: {
+        src: "/images/dholavira/dholavira5.jpg",
+        alt: "Nearby attractions around Dholavira"
+      }
+    },
+    {
+      heading: "How to Reach",
+      color: "bg-cyan-50",
+      border: "border-l-4 border-cyan-600 text-cyan-800",
+      list: [
+        "<b>By Road:</b> Connected via the stunning 'Road to Heaven' from Khavda, or via Rapar (215km from Bhuj)",
+        "<b>By Rail:</b> Nearest major railway station is Bhuj (215km) or Samakhiali (140km)",
+        "<b>By Air:</b> Bhuj Airport (215km) is the nearest domestic airport",
+        "<b>Local Transport:</b> Private taxi or personal vehicle is highly recommended due to limited bus frequency"
+      ],
+      image: {
+        src: "/images/dholavira/dholavira6.jpg",
+        alt: "Transportation to Dholavira"
+      }
+    },
+    {
+      heading: "Travel Information",
+      color: "bg-rose-50",
+      border: "border-l-4 border-rose-600 text-rose-800",
+      list: [
+        "<b>Distance from Bhuj:</b> ~215 km (4.5 hours drive)",
+        "<b>Road Conditions:</b> Excellent new highway (Road to Heaven) makes the journey scenic",
+        "<b>Entry Fee:</b> Nominal fee for Indian and foreign tourists for the site and museum",
+        "<b>Guide:</b> ASI-approved guides are available at the entrance and highly recommended",
+        "<b>Facilities:</b> Basic restrooms and canteen available near the museum"
+      ],
+      image: {
+        src: "/images/dholavira/dholavira1.jpg",
+        alt: "Travel information for Dholavira"
+      }
+    },
+    {
+      heading: "Best Time to Visit",
+      color: "bg-teal-50",
+      border: "border-l-4 border-teal-600 text-teal-800",
+      content: "The best time to visit is from October to March when the weather is pleasant (15°C to 30°C). Winters are perfect for exploring the expansive site without the harsh desert sun. Summers (April-June) are extremely hot, and monsoons can make the causeway roads tricky, though the site itself looks greener.",
+      image: {
+        src: "/images/dholavira/dholavira2.jpg",
+        alt: "Winter season at Dholavira"
+      }
+    },
+    {
+      heading: "Accommodation & Local Tips",
+      color: "bg-lime-50",
+      border: "border-l-4 border-lime-600 text-lime-800",
+      list: [
+        "<b>Stay Options:</b> Guesthouses run by Gujarat Tourism (Toran) and private homestays in Dholavira village",
+        "<b>Advance Booking:</b> Highly recommended during winter and Rann Utsav season",
+        "<b>Carry Essentials:</b> Bring water, hat, and walking shoes as the site requires extensive walking",
+        "<b>Sunset Views:</b> The sun setting over the Rann from Dholavira is spectacular",
+        "<b>Network:</b> Mobile network coverage can be patchy in some areas"
+      ],
+      image: {
+        src: "/images/dholavira/dholavira3.jpg",
+        alt: "Accommodation near Dholavira"
       }
     }
   ],
   facts: [
-    "UNESCO World Heritage Site (declared in 2021)",
+    "UNESCO World Heritage Site (2021)",
     "One of the 5 largest Harappan sites",
-    "Known for: Advanced Water Management System",
-    "Location: Khadir Bet, Great Rann of Kutch",
-    "Age: ~4,500 years old"
+    "Famous for: Ancient Water Management System",
+    "Location: Khadir Bet Island, Great Rann",
+    "Age: ~4,500 years old (c. 2650-1450 BCE)",
+    "Distinguishing Feature: Built with stone instead of brick"
   ],
-  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.0!2d70.2!3d23.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3951633333333333%3A0x3333333333333333!2sDholavira!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin",
+  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117036.07923485744!2d70.2136!3d23.8856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3951633333333333%3A0x3333333333333333!2sDholavira!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin",
   gallery: [
-    { src: "/images/dholavira/dholavira.jpg", caption: "The Grand Reservoirs" },
-    { src: "/images/dholavira/dholavira-1.jpg", caption: "The Northern Gate" },
-    { src: "/images/dholavira/dholavira-3.jpg", caption: "Indus Script Signboard" },
-    { src: "/images/dholavira/dholavira.jpg", caption: "Circular Structures" },
-    { src: "/images/dholavira/dholavira-1.jpg", caption: "Archaeological Museum" },
-    { src: "/images/dholavira/dholavira-3.jpg", caption: "Road to Heaven Landscape" }
+    { src: "/images/dholavira/dholavira1.jpg", caption: "The Northern Gate" },
+    { src: "/images/dholavira/dholavira2.jpg", caption: "Advanced Water Reservoirs" },
+    { src: "/images/dholavira/dholavira3.jpg", caption: "Indus Script Signboard" },
+    { src: "/images/dholavira/dholavira4.jpg", caption: "The Elevated Citadel" },
+    { src: "/images/dholavira/dholavira5.jpg", caption: "Archaeological Museum" },
+    { src: "/images/dholavira/dholavira6.jpg", caption: "Road to Heaven Landscape" }
   ]
 };

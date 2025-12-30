@@ -13,6 +13,17 @@ export interface Place {
   bestTimeToVisit: string;
   howToReach: string;
   parentDestination: string; // Required - the main destination this place belongs to
+  sections?: Array<{
+    heading: string;
+    content?: string;
+    list?: string[];
+    color?: string;
+    border?: string;
+    image?: {
+      src: string;
+      alt: string;
+    };
+  }>;
   gallery: Array<{
     src: string;
     caption: string;

@@ -2,106 +2,84 @@ import type { HiddenGem } from "./index";
 
 export const chhariDhand: HiddenGem = {
   slug: "chhari-dhand",
-  title: "Chhari Dhand — Kutch's Secret Wetland Paradise",
+  title: "Chhari Dhand — The Wetland Oasis & Fulay Village",
   image: "/images/hidden-gems/chhari-dhand/chhari1.jpg",
-  difficulty: "Easy",
+  difficulty: "Moderate",
   type: "Wildlife",
   discoveryLevel: "Local Favorite",
   sections: [
     {
       heading: "Overview",
-      color: "#f0fdf4",
-      border: "border-l-4 border-gray-500 text-gray-700",
-      content: "Chhari Dhand is a seasonal wetland and bird sanctuary that transforms into a paradise for migratory birds during winter months. This hidden gem offers pristine birdwatching opportunities away from crowds.",
-      image: {
-        src: "/images/hidden-gems/chhari-dhand/chhari.jpg",
-        alt: "Panoramic view of Chhari Dhand wetland"
-      }
+      color: "#f0fdfa",
+      border: "border-l-4 border-emerald-500 text-gray-700",
+      content: "Chhari Dhand (meaning 'shallow wetland') is a breathtaking seasonal oasis on the edge of the Banni nature reserve. Unlike the white salt desert, this area transforms into a lush paradise after monsoons, hosting over 370 bird species. Fulay Village serves as the historic gateway to this protected conservation reserve."
     },
     {
-      heading: "Wildlife & Birds",
+      heading: "Why Visit?",
       color: "#f0f9ff",
-      border: "border-l-4 border-gray-500 text-gray-700",
+      border: "border-l-4 border-blue-500 text-gray-700",
       list: [
-        "<b>Migratory Birds:</b> Flamingos, pelicans, cranes, and ducks (Nov-Mar)",
-        "<b>Resident Species:</b> Herons, egrets, kingfishers, and raptors",
-        "<b>Wildlife:</b> Desert foxes, jackals, and various reptiles",
-        "<b>Best Viewing:</b> Early morning and late afternoon",
-        "<b>Photography:</b> Excellent opportunities for bird photography",
-        "<b>Binoculars:</b> Essential for detailed bird observation"
-      ],
-      image: {
-        src: "/images/hidden-gems/chhari-dhand/chhari2.jpg",
-        alt: "Migratory birds at Chhari Dhand"
-      }
+        "<b>Birdwatcher's Paradise:</b> A world-class site for spotting Flamingos, Pelicans, Cranes, and Raptors.",
+        "<b>Golden Grasslands:</b> Experience the famous Banni grasslands, turning golden-yellow in winter.",
+        "<b>Fossil Exploration:</b> The nearby rocky patches (Kiya Dhrow) are rich in Jurassic-era fossils.",
+        "<b>Cultural Connect:</b> Meet the pastoral Maldhari community in Fulay and see their traditional mud homes (Bhungas).",
+        "<b>Pure Solitude:</b> Miles away from the tourist rush, offering absolute silence and starry nights."
+      ]
     },
     {
-      heading: "Access & Adventure",
-      color: "#fffbeb",
-      border: "border-l-4 border-gray-500 text-gray-300",
+      heading: "Getting There (The Fulay Route)",
+      color: "#fff7ed",
+      border: "border-l-4 border-amber-500 text-gray-700",
       list: [
-        "<b>Access Route:</b> Off-road driving required from Fulay village",
-        "<b>Vehicle:</b> 4WD recommended for sandy terrain",
-        "<b>Walking Trails:</b> Nature walks around the wetland perimeter",
-        "<b>Local Guide:</b> Helpful for spotting rare species",
-        "<b>Camping:</b> Possible with permissions from forest department",
-        "<b>Water Levels:</b> Vary seasonally, best after monsoons"
-      ],
-      image: {
-        src: "/images/hidden-gems/chhari-dhand/Chhari-Dhand1.jpg",
-        alt: "Off-road terrain near Chhari Dhand"
-      }
+        "<b>Base Point:</b> Bhuj is the nearest city (approx. 75-80 km).",
+        "<b>Route:</b> Bhuj -> Nakhatrana Highway -> Turn right via Deshpar -> Fulay Village.",
+        "<b>The Last Mile:</b> The wetland is ~10km from Fulay Village on dirt tracks. High-ground clearance vehicle (SUV) highly recommended.",
+        "<b>Check Post:</b> Forest Department entry point is near Fulay. Permits might be checked here."
+      ]
     },
     {
-      heading: "How to Reach",
+      heading: "Best Experiences",
       color: "#f0f5ff",
-      border: "border-l-4 border-gray-500 text-gray-300",
+      border: "border-l-4 border-indigo-500 text-gray-700",
       list: [
-        "<b>From Bhuj:</b> 45km via Fulay village (1.5 hours drive)",
-        "<b>From Fulay:</b> 8km off-road track (requires local guidance)",
-        "<b>Vehicle Type:</b> SUV or 4WD essential for final approach",
-        "<b>Fuel:</b> Fill up in Bhuj, no fuel stations nearby",
-        "<b>Permits:</b> Forest department permission may be required"
-      ],
-      image: {
-        src: "/images/hidden-gems/chhari-dhand/chhari1.jpg",
-        alt: "Landscape view of Chhari Dhand"
-      }
+        "<b>Sunrise/Sunset:</b> The best time for photography when the water reflects the stained-glass sky.",
+        "<b>Watch Towers:</b> Climb the distinct watchtowers for a 360-degree view of the marsh and desert.",
+        "<b>Picnic:</b> Carry your own food for a peaceful picnic (strict no-littering zone).",
+        "<b>Winter Visit:</b> Peak season is November to February when water levels are optimal."
+      ]
     },
     {
-      heading: "Visitor Information",
-      color: "#fef7ff",
-      border: "border-l-4 border-gray-500 text-gray-700",
+      heading: "Essential Tips",
+      color: "#fdf4ff",
+      border: "border-l-4 border-purple-500 text-gray-700",
       list: [
-        "<b>Entry Fee:</b> Usually free, donations to conservation welcomed",
-        "<b>Timing:</b> Dawn to dusk for best wildlife viewing",
-        "<b>What to Bring:</b> Binoculars, camera with telephoto lens, water",
-        "<b>Weather:</b> Can be windy, bring warm clothes in winter",
-        "<b>Respect Wildlife:</b> Maintain distance, no loud noises"
+        "<b>No Facilities:</b> There are NO food stalls or washrooms at the wetland itself.",
+        "<b>Carry Water:</b> Hydration is key in the dry desert air.",
+        "<b>Dress Code:</b> Wear earth tones (greens, browns) to blend in; avoid bright colors that startle birds.",
+        "<b>Guide:</b> Hiring a local guide from Fulay is recommended to navigate the tracks and spot wildlife."
       ]
     }
   ],
   facts: [
-    "Seasonal wetland: Fills during monsoon, dries by summer",
-    "Over 200 bird species recorded",
-    "Critical habitat for migratory waterfowl",
-    "Best visits: December to February",
-    "Local name: 'Dhand' means seasonal lake"
+    "Status: Conservation Reserve (since 2008)",
+    "Size: ~80 sq km seasonal wetland",
+    "Bird Species: 370+ recorded",
+    "Key Species: Greater Flamingo, Great Indian Bustard",
+    "Gateway: Fulay Village (Nakhatrana Taluka)"
   ],
-  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d69.8234!3d23.4567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sChhari%20Dhand%2C%20Kutch!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin",
-  coordinates: { lat: 23.4567, lng: 69.8234 },
-  bestTime: "December to February",
+  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d69.3512!3d23.5412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3951a5c6e8e8e8e8%3A0x1234567890abcdef!2sChhari%20Dhand%20Bird%20Sanctuary!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin",
+  coordinates: { lat: 23.5412, lng: 69.3512 },
+  bestTime: "November to February",
   warnings: [
-    "Off-road driving skills required",
-    "No mobile network in remote areas",
-    "Carry sufficient water and snacks",
-    "Inform locals about your visit plans"
+    "Roads can be rough and sandy",
+    "Mobile network is intermittent to non-existent",
+    "Do not drive off defined tracks (ecologically sensitive)",
+    "Wetlands can be muddy/slippery"
   ],
   gallery: [
-    { src: "/images/hidden-gems/chhari-dhand/chhari1.jpg", caption: "Flamingos at Chhari Dhand" },
-    { src: "/images/hidden-gems/chhari-dhand/chhari2.jpg", caption: "Sunrise over the wetland" },
-    { src: "/images/hidden-gems/chhari-dhand/chhari3.jpg", caption: "Migratory birds feeding" },
-    { src: "/images/hidden-gems/chhari-dhand/chhari4.jpg", caption: "Desert landscape surrounding the dhand" }
+    { src: "/images/hidden-gems/chhari-dhand/chhari1.jpg", caption: "Thousands of Flamingos painting the water pink" },
+    { src: "/images/hidden-gems/chhari-dhand/chhari2.jpg", caption: "Golden hour over the Banni grasslands" },
+    { src: "/images/hidden-gems/chhari-dhand/chhari3.jpg", caption: "A watchful eagle atop the watchtower" },
+    { src: "/images/hidden-gems/chhari-dhand/chhari4.jpg", caption: "The rugged beauty of Fulay village surroundings" }
   ]
 };
-

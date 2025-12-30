@@ -1,9 +1,8 @@
 import type { Destination } from "./index";
 
-// Ensure this object matches the Destination type. Update the type in index.ts if you add new fields.
 export const roadToHeaven: Destination = {
   slug: "road-to-heaven",
-    title: "Road to Heaven — The Famous Straight Highway",
+  title: "Road to Heaven — A Drive Through Eternity",
   image: "/images/road-to-heaven/road-to-heaven1.jpg",
   sections: [
     {
@@ -14,20 +13,20 @@ export const roadToHeaven: Destination = {
       heading: "A Drive Through the Infinite",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
-      content: "The Road to Heaven is one of India's most photogenic highways, a perfectly straight blacktop that cuts through the White Rann salt flats. This iconic stretch near Dhordo has earned its celestial name for the surreal experience of driving through endless white desert with nothing but sky above.",
+      content: "The 'Road to Heaven' is arguably India's most surreal highway—a 30km stretch of jet-black tarmac cutting perfectly straight through the blinding white expanse of the Great Rann of Kutch. Connecting Khavda to Dholavira, this engineering marvel offers the illusion of driving directly into the sky. With the white desert stretching infinitely on both sides and the blue horizon merging with the salt, it is a photographer's dream and a driver's paradise.",
       image: {
-        src: "/images/road-to-heaven/overview.jpg",
-        alt: "Overview of Road to Heaven — The Famous Straight Highway"
+        src: "/images/road-to-heaven/road-to-heaven2.jpg",
+        alt: "Overview of Road to Heaven"
       }
     },
     {
       heading: "History",
       color: "bg-purple-50",
       border: "border-l-4 border-purple-600 text-purple-800",
-      content: "This highway was built as part of the infrastructure development for Rann Utsav and to connect Dhordo with other parts of Kutch. The road's unique location through the salt flats and its perfect straightness have made it a popular destination for photographers and travelers seeking unique experiences.",
+      content: "This strategic road was constructed recently to improve connectivity between the mainland and the island of Khadir Bet (home to Dholavira). Previously, reaching Dholavira required a long detour via Rapar. The construction of this causeway across the salt flats was an engineering challenge but has now unlocked one of the most stunning drives in the world.",
       image: {
-        src: "/images/road-to-heaven/history.jpg",
-        alt: "Historical view of Road to Heaven — The Famous Straight Highway"
+        src: "/images/road-to-heaven/road-to-heaven8.jpg",
+        alt: "Construction of the Road to Heaven"
       }
     },
     {
@@ -35,16 +34,15 @@ export const roadToHeaven: Destination = {
       color: "bg-amber-50",
       border: "border-l-4 border-amber-600 text-amber-800",
       list: [
-        "<b>Straight Highway:</b> Perfectly straight road through salt flats",
-        "<b>Photography Spot:</b> Iconic location for landscape photography",
-        "<b>Sunset Views:</b> Spectacular sunsets over the white desert",
-        "<b>Reflection Photography:</b> Perfect reflections during wet season",
-        "<b>Drone Photography:</b> Popular spot for aerial photography",
-        "<b>Desert Experience:</b> Unique driving experience through salt flats"
+        "<b>The Straight Stretch:</b> A 30km perfectly straight road with water/salt on both sides",
+        "<b>Selfie Point:</b> Designated stops where you can safely park and walk onto the salt flats",
+        "<b>Ekal Mata Temple:</b> A solitary temple located near the start of the stretch",
+        "<b>Flamingo Colonies:</b> In winter, the water bodies alongside the road turn pink with thousands of flamingos",
+        "<b>Chipper Point:</b> A popular spot for drone photography capturing the symmetry of the road"
       ],
       image: {
-        src: "/images/road-to-heaven/attractions.jpg",
-        alt: "Main attractions in Road to Heaven — The Famous Straight Highway"
+        src: "/images/road-to-heaven/road-to-heaven6.jpg",
+        alt: "Main attractions on Road to Heaven"
       }
     },
     {
@@ -52,52 +50,98 @@ export const roadToHeaven: Destination = {
       color: "bg-emerald-50",
       border: "border-l-4 border-emerald-600 text-emerald-800",
       list: [
-        "<b>Basic Refreshments:</b> Simple snacks and drinks available",
-        "<b>Photography Services:</b> Local guides offering photo services",
-        "<b>Desert Souvenirs:</b> Salt crystals and desert-themed items",
-        "<b>Traditional Crafts:</b> Handmade items from nearby villages",
-        "<b>Photography Equipment:</b: Basic camera accessories and guides"
+        "<b>Limited Options:</b> There are NO restaurants on the 30km stretch itself",
+        "<b>Khavda Sweets:</b> Try the famous 'Mavo' at Khavda town before entering the road",
+        "<b>Dholavira Crafts:</b> Authentic embroidery and beadwork available at the destination end (Dholavira)",
+        "<b>Carry Snacks:</b> It is highly recommended to carry water and dry snacks"
       ],
       image: {
-        src: "/images/road-to-heaven/crafts.jpg",
-        alt: "Traditional crafts and cuisine of Road to Heaven — The Famous Straight Highway"
+        src: "/images/road-to-heaven/road-to-heaven7.jpg",
+        alt: "Local food near Road to Heaven"
       }
     },
     {
       heading: "Nearby Destinations",
-      color: "#fff0f5",
-      border: "border-l-4 border-gray-500 text-gray-700",
+      color: "bg-indigo-50",
+      border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b><a href='/destinations/dhordo' class='text-blue-600 hover:text-blue-800'>Dhordo:</a></b> 54km - Gateway to White Rann and Rann Utsav",
-        "<b><a href='/destinations/kalo-dungar' class='text-blue-600 hover:text-blue-800'>Kalo Dungar:</a></b> 35km - Highest point in Kutch with panoramic views",
-        "<b><a href='/destinations/dholavira' class='text-blue-600 hover:text-blue-800'>Dholavira:</a></b> 90km - Ancient Harappan archaeological site",
-        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 85km - Cultural capital of Kutch",
-        "<b>White Rann:</b> 60km - Famous salt desert and natural wonder"
+        "<b><a href='/destinations/dholavira' class='text-blue-600 hover:text-blue-800'>Dholavira:</a></b> 10km - The UNESCO World Heritage site awaits at the end of the road",
+        "<b><a href='/destinations/kalo-dungar' class='text-blue-600 hover:text-blue-800'>Kalo Dungar:</a></b> 40km - The Black Hill offering top-down views of the same landscape",
+        "<b><a href='/destinations/dhordo' class='text-blue-600 hover:text-blue-800'>Dhordo:</a></b> 60km - Base for the Rann Utsav",
+        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 85km - The start/end point for most journeys"
       ],
       image: {
-        src: "/images/road-to-heaven/nearby.jpg",
-        alt: "Nearby attractions around Road to Heaven — The Famous Straight Highway"
+        src: "/images/road-to-heaven/road-to-heaven3.jpg",
+        alt: "Nearby attractions"
+      }
+    },
+    {
+      heading: "How to Reach",
+      color: "bg-cyan-50",
+      border: "border-l-4 border-cyan-600 text-cyan-800",
+      list: [
+        "<b>By Road:</b> Drive north from Bhuj towards Khavda (70km), then take the right turn towards Dholavira",
+        "<b>Vehicle:</b> Any car can handle the road, but a high-clearance vehicle is better for stopping on the shoulders",
+        "<b>Fuel:</b> Fill up at Bhuj or Khavda; there are no pumps on the Road to Heaven"
+      ],
+      image: {
+        src: "/images/road-to-heaven/road-to-heaven4.jpg",
+        alt: "Transportation"
+      }
+    },
+    {
+      heading: "Travel Information",
+      color: "bg-rose-50",
+      border: "border-l-4 border-rose-600 text-rose-800",
+      list: [
+        "<b>Best Time for Photos:</b> Sunrise or Sunset for the golden reflection on the water/salt",
+        "<b>Safety:</b> Do not speed; strong crosswinds are common. Do not drive off-road onto the salt crust as vehicles can sink",
+        "<b>Mobile Network:</b> Connectivity is intermittent or non-existent on the stretch",
+        "<b>Duration:</b> Plan for 1 hour to enjoy the drive and take photos"
+      ],
+      image: {
+        src: "/images/road-to-heaven/road-to-heaven9.jpg",
+        alt: "Travel information"
+      }
+    },
+    {
+      heading: "Best Time to Visit",
+      color: "bg-teal-50",
+      border: "border-l-4 border-teal-600 text-teal-800",
+      content: "October to March. In winter, the water level is perfect—neither too dry nor flooded—creating the beautiful mirror effect. The flamingos arrive around November. Summer is brutally hot, and monsoon can sometimes submerge parts of the shoulders.",
+      image: {
+        src: "/images/road-to-heaven/road-to-heaven10.jpg",
+        alt: "Best season to visit"
+      }
+    },
+    {
+      heading: "Accommodation & Local Tips",
+      color: "bg-lime-50",
+      border: "border-l-4 border-lime-600 text-lime-800",
+      list: [
+        "<b>Stay:</b> Dholavira (at the end of the road) has homestays and the Toran Resort. Khavda (at the start) has basic facilities.",
+        "<b>Tip:</b> Combine this drive with a visit to the Fossil Park and Chipar Point in Dholavira."
+      ],
+      image: {
+        src: "/images/road-to-heaven/road-to-heaven5.jpg",
+        alt: "Accommodation options"
       }
     }
   ],
   facts: [
-    "Road Length: Approximately 15km straight stretch",
-    "Best months: October to March",
-    "Famous for: Straight highway through salt flats",
-    "Photography: Most photogenic road in India",
-    "Access: Easy road access, popular tourist destination"
+    "Length: 30km Causeway",
+    "Route: Khavda to Dholavira",
+    "Highlight: Driving through the Rann",
+    "Best Time: Sunrise/Sunset",
+    "Warning: No fuel/food on stretch"
   ],
-  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d69.6697!3d23.2420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sRoad%20to%20Heaven%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin",
+  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14749.1!2d70.0!3d23.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3951!2sRoad+To+Heaven!5e0!3m2!1sen!2sin",
   gallery: [
-  { src: "/images/road-to-heaven/road-to-heaven1.jpg", caption: "Straight Highway Through Salt Flats" },
-  { src: "/images/road-to-heaven/road-to-heaven2.jpg", caption: "Sunset Photography" },
-  { src: "/images/road-to-heaven/road-to-heaven3.jpg", caption: "Reflection Photography" },
-  { src: "/images/road-to-heaven/road-to-heaven4.jpg", caption: "Drone Aerial View" },
-  { src: "/images/road-to-heaven/road-to-heaven5.jpg", caption: "Desert Driving Experience" },
-  { src: "/images/road-to-heaven/road-to-heaven6.jpg", caption: "Iconic Road Photography" }
+    { src: "/images/road-to-heaven/road-to-heaven1.jpg", caption: "The Infinite Straight Road" },
+    { src: "/images/road-to-heaven/road-to-heaven2.jpg", caption: "Sunset Reflections" },
+    { src: "/images/road-to-heaven/road-to-heaven3.jpg", caption: "Flamingos near the road" },
+    { src: "/images/road-to-heaven/road-to-heaven4.jpg", caption: "Aerial Drone Shot" },
+    { src: "/images/road-to-heaven/road-to-heaven5.jpg", caption: "Salt Flats on Both Sides" },
+    { src: "/images/road-to-heaven/road-to-heaven6.jpg", caption: "Travellers enjoying the view" }
   ]
 };
-
-
-
-

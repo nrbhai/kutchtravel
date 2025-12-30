@@ -2,111 +2,143 @@ import type { Destination } from "./index";
 
 export const kandla: Destination = {
   slug: "kandla",
-  title: "Kandla (Deendayal Port) — Major Seaport",
-  image: "/images/kandla/kandla1.png",
+  title: "Kandla — India's Major Gateway",
+  image: "/images/kandla/kandla1.jpg",
   sections: [
     {
       heading: "Category",
-      content: "Major Port"
+      content: "Major Seaport"
     },
     {
       heading: "Significance",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
-      content: "Kandla, officially known as Deendayal Port, is a major seaport located in the Kutch district of Gujarat, near Gandhidham. Situated on the Kandla Creek, it is one of India's principal ports on the western coast and the largest port by volume of cargo handled. It serves as a vital gateway for international trade, particularly for Northern India.",
+      content: "Kandla, officially renamed Deendayal Port, is a colossus of maritime trade. Located on the Kandla Creek, it is the largest port in India by volume of cargo handled. It serves as the primary maritime gateway for the entire northern and western hinterland of India, playing a critical role in the nation's economy.",
       image: {
         src: "/images/kandla/kandla1.jpg",
-        alt: "Kandla Port overview"
+        alt: "Kandla Port Entrance"
       }
     },
     {
       heading: "History",
-      color: "bg-amber-50",
-      border: "border-l-4 border-amber-600 text-amber-800",
-      content: "Constructed in the 1950s following India's independence, Kandla Port was established to serve western India after the Port of Karachi went to Pakistan during partition. It was renamed Deendayal Port in 2017 under the Indian Ports Act, 1908. The port has consistently been India's largest by cargo volume and hosts the first Special Economic Zone (SEZ) in India and Asia, established in 1965.",
+      color: "bg-purple-50",
+      border: "border-l-4 border-purple-600 text-purple-800",
+      content: "The story of Kandla is one of post-independence resilience. After the partition in 1947, India lost the Port of Karachi to Pakistan. To fill this void for western India, Kandla was envisioned and constructed in the 1950s. In 1965, it became Asia's first Special Economic Zone (SEZ). In 2017, it was renamed Deendayal Port Trust to honor Pandit Deendayal Upadhyaya.",
       image: {
-        src: "/images/kandla/kandla4.jpg",
-        alt: "Historical view of Kandla"
+        src: "/images/kandla/kandla3.jpg",
+        alt: "Historic view of port"
       }
     },
     {
-      heading: "Port Operations",
-      color: "bg-cyan-50",
-      border: "border-l-4 border-cyan-600 text-cyan-800",
+      heading: "Places of Interest",
+      color: "bg-amber-50",
+      border: "border-l-4 border-amber-600 text-amber-800",
       list: [
-        "<b>Major Cargo Hub:</b> India's largest port by volume, handling over 132 million tonnes annually",
-        "<b>Diverse Cargo:</b> Handles petroleum, chemicals, iron, steel, salt, textiles, and grains",
-        "<b>Strategic Location:</b> Natural tidal harbor well-protected from monsoon waves",
-        "<b>SEZ:</b> Home to Kandla Port Special Economic Zone (KASEZ), the largest multi-product SEZ",
-        "<b>Connectivity:</b> Connected to deep water by a dredged channel"
+        "<b>Port View Points:</b> Designated areas to view massive cargo ships and cranes (requires permission)",
+        "<b>Kandla Creek:</b> The natural creek sheltered from the open sea",
+        "<b>Salt Pans:</b> Vast stretches of salt production visible around the port area",
+        "<b>Gandhi Samadhi (Adipur):</b> Located nearby, a significant memorial",
+        "<b>Ambe Dham:</b> A beautiful temple in the vicinity"
       ],
       image: {
         src: "/images/kandla/kandla2.jpg",
-        alt: "Container terminal operations"
+        alt: "Port Operations"
       }
     },
     {
-      heading: "Economic Impact",
+      heading: "Food & Crafts",
       color: "bg-emerald-50",
       border: "border-l-4 border-emerald-600 text-emerald-800",
-      content: "Deendayal Port is a cornerstone of the regional and national economy. It facilitates massive volumes of trade, supporting industries across Northern and Western India. The port's activity drives employment and business opportunities in the nearby cities of Gandhidham and Adipur.",
+      list: [
+        "<b>Industrial Hub:</b> Kandla is primarily industrial; for crafts, head to nearby Gandhidham or Anjar",
+        "<b>Local Food:</b> Simple canteens serve workers; fine dining is available in Gandhidham",
+        "<b>Kutchi Snacks:</b> Roadside stalls offer Dabeli and Fafda"
+      ],
       image: {
-        src: "/images/kandla/kandla3.jpg",
-        alt: "Economic activity at the port"
+        src: "/images/kandla/kandla4.jpg",
+        alt: "Local industrial area"
       }
     },
     {
       heading: "Nearby Destinations",
-      color: "bg-purple-50",
-      border: "border-l-4 border-purple-600 text-purple-800",
+      color: "bg-indigo-50",
+      border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b><a href='/destinations/gandhidham' class='text-blue-600 hover:text-blue-800'>Gandhidham:</a></b> 10km - The main commercial and residential hub serving the port",
-        "<b><a href='/destinations/adipur' class='text-blue-600 hover:text-blue-800'>Adipur:</a></b> 8km - Residential sister city",
-        "<b><a href='/destinations/anjar' class='text-blue-600 hover:text-blue-800'>Anjar:</a></b> 25km - Historical town known for its culture",
-        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 70km - District headquarters and major tourist center"
+        "<b><a href='/destinations/gandhidham' class='text-blue-600 hover:text-blue-800'>Gandhidham:</a></b> 10km - The twin city and commercial support hub",
+        "<b><a href='/destinations/anjar' class='text-blue-600 hover:text-blue-800'>Anjar:</a></b> 25km - Historic cultural town",
+        "<b><a href='/destinations/bhadreshwar' class='text-blue-600 hover:text-blue-800'>Bhadreshwar:</a></b> 35km - Ancient Jain pilgrimage site on the coast",
+        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 70km - District headquarters"
       ],
       image: {
         src: "/images/kandla/kandla5.jpg",
-        alt: "Nearby attractions"
+        alt: "Nearby destinations"
       }
     },
     {
       heading: "How to Reach",
-      color: "bg-indigo-50",
-      border: "border-l-4 border-indigo-600 text-indigo-800",
+      color: "bg-cyan-50",
+      border: "border-l-4 border-cyan-500 text-cyan-800",
       list: [
-        "<b>From Gandhidham:</b> 10km via NH-8A (15-20 min)",
-        "<b>From Bhuj:</b> 70km via NH-8A (1.5 hours)",
-        "<b>From Ahmedabad:</b> 350km via NH-27 and NH-8A",
-        "<b>Railway:</b> Gandhidham Railway Station is the nearest major railhead",
-        "<b>Airport:</b> Bhuj Airport (70km) or Kandla Airport (limited flights)"
-      ]
+        "<b>By Air:</b> Kandla Airport (IXY) has daily flights to Mumbai and Ahmedabad.",
+        "<b>By Rail:</b> Gandhidham Junction (12km) is the main railway hub.",
+        "<b>By Road:</b> NH-8A connects Kandla directly to Ahmedabad and the rest of India."
+      ],
+      image: {
+        src: "/images/kandla/kandla1.jpg",
+        alt: "Transport"
+      }
     },
     {
-      heading: "Visitor Information",
-      color: "bg-teal-50",
-      border: "border-l-4 border-teal-600 text-teal-800",
+      heading: "Travel Information",
+      color: "bg-rose-50",
+      border: "border-l-4 border-rose-500 text-rose-800",
       list: [
-        "<b>Restricted Access:</b> Port areas are restricted; permissions required for entry",
-        "<b>Business Visits:</b> Common for trade and logistics professionals",
-        "<b>Accommodation:</b> Hotels available in Gandhidham",
-        "<b>Sightseeing:</b> Limited tourist access inside port; view from outside designated areas"
-      ]
+        "<b>Restricted Area:</b> The core port area is restricted. Tourists cannot enter without a pass.",
+        "<b>Permission:</b> Business visitors need passes from the Port Trust authority.",
+        "<b>Best for:</b> Industrial tourism and logistics enthusiasts."
+      ],
+      image: {
+        src: "/images/kandla/kandla2.jpg",
+        alt: "Travel info"
+      }
+    },
+    {
+      heading: "Best Time to Visit",
+      color: "bg-teal-50",
+      border: "border-l-4 border-teal-500 text-teal-800",
+      content: "October to March. The weather is pleasant. Business visits happen year-round.",
+      image: {
+        src: "/images/kandla/kandla3.jpg",
+        alt: "Best Season"
+      }
+    },
+    {
+      heading: "Accommodation & Local Tips",
+      color: "bg-lime-50",
+      border: "border-l-4 border-lime-500 text-lime-800",
+      list: [
+        "<b>Stay:</b> Stay in Gandhidham (Radisson, Ramada) which is just 15 mins away.",
+        "<b>Tip:</b> Visit the Kandla SEZ (if permitted) to see India's first special economic zone."
+      ],
+      image: {
+        src: "/images/kandla/kandla4.jpg",
+        alt: "Accommodation"
+      }
     }
   ],
   facts: [
-    "Officially named Deendayal Port",
-    "India's largest port by cargo volume",
-    "Established in 1950s to replace Karachi Port",
-    "Hosts India's first Special Economic Zone (KASEZ)",
-    "Major hub for petroleum, chemicals, and grains"
+    "Volume: Largest Port in India",
+    "Est: 1950s (Post-Partition)",
+    "Feature: First SEZ in Asia",
+    "Location: Gulf of Kutch",
+    "Status: Major Economic Hub"
   ],
-  mapUrl: "https://maps.google.com/maps?q=23.0027,70.2186&hl=en&z=14&output=embed",
+  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d118147!2d70.21!3d23.00!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950c7659d806cbb%3A0x83e20042730aef48!2sDeendayal%20Port!5e0!3m2!1sen!2sin",
   gallery: [
-    { src: "/images/kandla/kandla1.jpg", caption: "Deendayal Port Overview" },
-    { src: "/images/kandla/kandla2.jpg", caption: "Cargo Handling Operations" },
-    { src: "/images/kandla/kandla3.jpg", caption: "Port Infrastructure" },
-    { src: "/images/kandla/kandla4.jpg", caption: "Industrial Activity" },
-    { src: "/images/kandla/kandla5.jpg", caption: "Port Area" }
+    { src: "/images/kandla/kandla1.jpg", caption: "Deendayal Port Entrance" },
+    { src: "/images/kandla/kandla2.jpg", caption: "Ships at Harbor" },
+    { src: "/images/kandla/kandla3.jpg", caption: "Cargo Handling" },
+    { src: "/images/kandla/kandla4.jpg", caption: "Industrial Zone" },
+    { src: "/images/kandla/kandla5.jpg", caption: "Kandla Creek View" }
   ]
 };

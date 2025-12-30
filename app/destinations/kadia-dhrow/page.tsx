@@ -1,26 +1,25 @@
 import DestinationTemplate from "@/app/components/DestinationTemplate";
-import SectionCard from "@/app/components/SectionCard";
 import { kadiaDhrow } from "@/app/destinations/data/kadia-dhrow";
 import { generateDestinationStructuredData, generateBreadcrumbStructuredData } from "@/app/utils/seo";
 import type { Metadata } from 'next';
 
 // Generate metadata for this destination
 export const metadata: Metadata = {
-  title: `${kadiaDhrow.title} - Ancient Buddhist Site`,
-  description: 'Explore Kadia Dhrow, the ancient Buddhist archaeological site in Kutch. Discover caves, stupas, and centuries of Buddhist heritage. Complete guide to this historical treasure.',
+  title: `${kadiaDhrow.title} - Grand Canyon of Gujarat`,
+  description: 'Explore Kadia Dhrow, a stunning geological marvel in Kutch. Often called the Grand Canyon of India, it features colorful rock formations and river pools.',
   keywords: [
-    'Kadia Dhrow caves',
-    'Buddhist sites Kutch',
-    'Ancient caves Gujarat',
-    'Buddhist heritage',
-    'Archaeological site',
-    'Kutch Buddhism',
-    'Historical caves',
-    'Kadia Dhrow guide'
+    'Kadia Dhrow',
+    'Grand Canyon of India',
+    'Kadiya Dhrow',
+    'Kutch geological sites',
+    'Hidden gems Kutch',
+    'Kodki caves',
+    'Gujarat Grand Canyon',
+    'Kutch photography'
   ],
   openGraph: {
-    title: `${kadiaDhrow.title} - Ancient Buddhist Site`,
-    description: 'Discover Kadia Dhrow, an ancient Buddhist site with remarkable caves and archaeological treasures.',
+    title: `${kadiaDhrow.title} - Grand Canyon of India`,
+    description: 'Discover the colorful canyons and rock formations of Kadia Dhrow, a hidden geological masterpiece in Kutch.',
     images: [kadiaDhrow.image],
   },
 };
@@ -28,7 +27,7 @@ export const metadata: Metadata = {
 export default function KadiaDhrow() {
   const structuredData = generateDestinationStructuredData({
     title: kadiaDhrow.title,
-    description: "An ancient Buddhist archaeological site featuring historic caves and stupas, revealing centuries of Buddhist influence in Kutch.",
+    description: "A geological wonder featuring multi-colored canyon walls carved by wind and water, known as the Grand Canyon of India.",
     image: kadiaDhrow.image,
     slug: "kadia-dhrow",
     facts: kadiaDhrow.facts,
@@ -41,30 +40,6 @@ export default function KadiaDhrow() {
     { name: kadiaDhrow.title }
   ]);
 
-  // Format description content
-  const description = (
-    <div className="space-y-8">
-      {kadiaDhrow.sections.map((section, index) => (
-        <SectionCard 
-          key={index}
-          title={section.heading}
-          image={section.image}
-          color={section.color}
-          border={section.border}
-        >
-          {section.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />}
-          {section.list && (
-            <ul className="list-none space-y-4">
-              {section.list.map((item, itemIndex) => (
-                <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }} />
-              ))}
-            </ul>
-          )}
-        </SectionCard>
-      ))}
-    </div>
-  );
-
   return (
     <>
       <script
@@ -76,7 +51,8 @@ export default function KadiaDhrow() {
       <DestinationTemplate
         title={kadiaDhrow.title}
         image={kadiaDhrow.image}
-        description={description}
+        description={kadiaDhrow.sections[1].content || ""}
+        sections={kadiaDhrow.sections}
         facts={kadiaDhrow.facts}
         mapUrl={kadiaDhrow.mapUrl}
         gallery={kadiaDhrow.gallery}

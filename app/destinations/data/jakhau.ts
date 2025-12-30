@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 export const jakhau: Destination = {
   slug: "jakhau",
   title: "Jakhau — Historic Port & Fishing Harbor",
-  image: "/images/jakhau/jakhau1.png",
+  image: "/images/jakhau/jakhau1.jpg",
   sections: [
     {
       heading: "Category",
@@ -13,78 +13,130 @@ export const jakhau: Destination = {
       heading: "Significance",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
-      content: "Jakhau is a historic village and thriving port located in the Abdasa Taluka of Kutch, about 17 km from Naliya. Named after the legendary Jakh Botera (72 shipwrecked saints), the village has a rich maritime history dating back to the Middle Ages when it was a major trade hub. Today, it is primarily known for its busy fishing harbor, salt production, and deep cultural roots.",
+      content: "Jakhau is a historic port town located in the Abdasa Taluka of Kutch. It is named after the legendary 'Jakh Botera' (72 saints) who are believed to have landed here. Once a bustling trade hub connecting Kutch to Zanzibar and Mumbai, today it is one of Gujarat's busiest fishing harbors and home to a strategic Coast Guard station. The town retains an old-world charm with its weather-beaten boats and rustic coastal life.",
       image: {
         src: "/images/jakhau/jakhau1.jpg",
         alt: "Jakhau Port View"
       }
     },
     {
-      heading: "History & Legend",
-      color: "bg-amber-50",
-      border: "border-l-4 border-amber-600 text-amber-800",
-      content: "The village derives its name from the Jakh Botera, a group of 72 saint-warriors who are believed to have been shipwrecked on the Kutch coast. They are revered for saving the locals from the tyranny of a cruel ruler, Jam Punara. Jakhau was historically a prosperous port exporting salt, cotton, and castor oil, though trade later shifted to Mandvi and Mumbai due to silting. The port was also impacted by the 1998 cyclone but remains a vital fishing center.",
+      heading: "History",
+      color: "bg-purple-50",
+      border: "border-l-4 border-purple-600 text-purple-800",
+      content: "The legend of Jakhau revolves around the 72 horse-riding saints (Jakhs) who came from the west (possibly Iran or Byzantium) in the 10th century. They helped the local population fight against the tyrannical ruler Jam Punara. The Jakh Botera temple nearby is a testament to this legend. Historically, Jakhau was a major gateway for spice and textile trade before silting reduced its capacity for large ships.",
       image: {
-        src: "/images/jakhau/jakhau1.jpg",
-        alt: "Historical context of Jakhau"
+        src: "/images/jakhau/jakhau2.jpg",
+        alt: "Historic Coastline of Jakhau"
       }
     },
     {
-      heading: "Port of Jakhau",
-      color: "bg-cyan-50",
-      border: "border-l-4 border-cyan-600 text-cyan-800",
+      heading: "Places of Interest",
+      color: "bg-amber-50",
+      border: "border-l-4 border-amber-600 text-amber-800",
       list: [
-        "<b>Fishing Hub:</b> A major center for Gujarat's fishing community with hundreds of boats",
-        "<b>Trade History:</b> Formerly a key port for trade with Mumbai and coasting steamers",
-        "<b>Location:</b> Situated on Godia Creek, offering shelter to fishing vessels",
-        "<b>Modern Activity:</b> Operates under the Gujarat Maritime Board",
-        "<b>Coast Guard:</b> Strategic location with Indian Coast Guard presence"
-      ]
-    },
-    {
-      heading: "Nearby Attractions",
-      color: "bg-purple-50",
-      border: "border-l-4 border-purple-600 text-purple-800",
-      list: [
-        "<b><a href='/destinations/narayan-sarovar-koteshwar' class='text-blue-600 hover:text-blue-800'>Narayan Sarovar:</a></b> Sacred pilgrimage site nearby",
-        "<b><a href='/destinations/narayan-sarovar-koteshwar' class='text-blue-600 hover:text-blue-800'>Koteshwar:</a></b> Ancient Shiva temple overlooking the sea",
-        "<b><a href='/destinations/lakhpat' class='text-blue-600 hover:text-blue-800'>Lakhpat:</a></b> Historic fortified town",
-        "<b>Naliya:</b> Taluka headquarters known for the Great Indian Bustard Sanctuary nearby"
+        "<b>Jakhau Port:</b> Witness hundreds of colorful fishing boats and the daily catch auction",
+        "<b>Jakh Botera Temple:</b> The main shrine dedicated to the 72 saints, located on a hillock nearby",
+        "<b>Old Jakhau Lighthouse:</b> Offers panoramic views of the Arabian Sea and salt pans",
+        "<b>Salt Pans:</b> The area surrounding the port is famous for large-scale salt production",
+        "<b>Godia Creek:</b> A scenic creek often visited by migratory birds"
       ],
       image: {
         src: "/images/jakhau/jakhau1.jpg",
+        alt: "Main attractions in Jakhau"
+      }
+    },
+    {
+      heading: "Food & Crafts",
+      color: "bg-emerald-50",
+      border: "border-l-4 border-emerald-600 text-emerald-800",
+      list: [
+        "<b>Fresh Seafood:</b> Being a fishing harbor, it's the best place in Kutch for fresh fish and prawns (for non-vegetarians)",
+        "<b>Local Kutchi Food:</b> Simple vegetarian thalis are available in the village dharamshalas",
+        "<b>Dried Fish Market:</b> A major center for drying and processing fish for export"
+      ],
+      image: {
+        src: "/images/jakhau/jakhau2.jpg",
+        alt: "Fishing culture and food"
+      }
+    },
+    {
+      heading: "Nearby Destinations",
+      color: "bg-indigo-50",
+      border: "border-l-4 border-indigo-600 text-indigo-800",
+      list: [
+        "<b><a href='/destinations/narayan-sarovar-koteshwar' class='text-blue-600 hover:text-blue-800'>Koteshwar:</a></b> 45km - Ancient Shiva temple on the sea",
+        "<b><a href='/destinations/lakhpat' class='text-blue-600 hover:text-blue-800'>Lakhpat:</a></b> 60km - Historic fort town",
+        "<b><a href='/destinations/mandvi' class='text-blue-600 hover:text-blue-800'>Mandvi:</a></b> 90km - Popular beach destination",
+        "<b>Naliya:</b> 17km - The taluka headquarters known for the Great Indian Bustard Sanctuary"
+      ],
+      image: {
+        src: "/images/jakhau/jakhau1.jpg", // Reusing placeholder
         alt: "Nearby attractions"
       }
     },
     {
-      heading: "Best Time to Visit",
-      color: "bg-rose-50",
-      border: "border-l-4 border-rose-600 text-rose-800",
-      content: "The best time to visit is between October and March when the weather is pleasant. The annual fair dedicated to Jakh Botera is also a significant cultural event worth witnessing."
+      heading: "How to Reach",
+      color: "bg-cyan-50",
+      border: "border-l-4 border-cyan-600 text-cyan-800",
+      list: [
+        "<b>By Road:</b> 110km west of Bhuj via Naliya. The road is well-maintained.",
+        "<b>From Naliya:</b> Just a 20-minute drive (17km).",
+        "<b>Nearest Airport:</b> Bhuj (110km) or Kandla (160km).",
+        "<b>By Bus:</b> GSRTC buses run regularly from Bhuj to Naliya; from Naliya, autorickshaws or shuttles go to Jakhau."
+      ],
+      image: {
+        src: "/images/jakhau/jakhau2.jpg",
+        alt: "Transportation to Jakhau"
+      }
     },
     {
-      heading: "How to Reach",
-      color: "bg-indigo-50",
-      border: "border-l-4 border-indigo-600 text-indigo-800",
+      heading: "Travel Information",
+      color: "bg-rose-50",
+      border: "border-l-4 border-rose-600 text-rose-800",
       list: [
-        "<b>From Bhuj:</b> Approximately 110 km via Naliya",
-        "<b>From Naliya:</b> 17 km west-southwest",
-        "<b>By Road:</b> Connected by National Highway 41",
-        "<b>Nearest Airport:</b> Bhuj Airport (110 km)",
-        "<b>Nearest Railway:</b> Bhuj Railway Station"
-      ]
+        "<b>Permits:</b> The port area is under Coast Guard surveillance; carry ID proof. Photography might be restricted in sensitive zones.",
+        "<b>Facilities:</b> Jakhau village has basic shops, but the port area is purely commercial/industrial.",
+        "<b>Fuel:</b> Fill up at Naliya; limited options at Jakhau."
+      ],
+      image: {
+        src: "/images/jakhau/jakhau1.jpg",
+        alt: "Travel guidelines"
+      }
+    },
+    {
+      heading: "Best Time to Visit",
+      color: "bg-teal-50",
+      border: "border-l-4 border-teal-600 text-teal-800",
+      content: "October to March. The weather is pleasant. September marks the Jakh Botera fair, which attracts thousands of pilgrims and is a cultural spectacle.",
+      image: {
+        src: "/images/jakhau/jakhau2.jpg",
+        alt: "Best season to visit"
+      }
+    },
+    {
+      heading: "Accommodation & Local Tips",
+      color: "bg-lime-50",
+      border: "border-l-4 border-lime-600 text-lime-800",
+      list: [
+        "<b>Stay:</b> No hotels in Jakhau. Stay at Naliya (basic guest houses) or make a day trip from Bhuj/Mandvi.",
+        "<b>Tip:</b> Visit nearby Pingleshwar Beach for a more secluded seaside experience."
+      ],
+      image: {
+        src: "/images/jakhau/jakhau1.jpg",
+        alt: "Accommodation options"
+      }
     }
   ],
   facts: [
-    "Named after the legendary 72 Jakh Botera saints",
-    "Historic port active since mediaeval times",
-    "Major fishing harbor in Kutch",
-    "Located near Naliya (17 km)",
-    "Cultural blend of maritime and folk traditions"
+    "Famous for: Ancient Port & 72 Saints",
+    "Population: Fishing Community",
+    "Location: Abdasa Taluka",
+    "Strategic: Coast Guard Station",
+    "Fair: Jakh Botera in September"
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d68.6697!3d23.2420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sJakhau%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin",
   gallery: [
-    { src: "/images/jakhau/jakhau1.jpg", caption: "Jakhau Port Area" },
-    { src: "/images/jakhau/jakhau1.png", caption: "Scenes from Jakhau" }
+    { src: "/images/jakhau/jakhau1.jpg", caption: "Jakhau Fishing Harbour" },
+    { src: "/images/jakhau/jakhau2.jpg", caption: "Sunset at Jakhau Coast" }
   ]
 };

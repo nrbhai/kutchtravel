@@ -1,10 +1,9 @@
 import type { Destination } from "./index";
 
-// Ensure this object matches the Destination type. Update the type in index.ts if you add new fields.
 export const gandhidham: Destination = {
   slug: "gandhidham",
-    title: "Gandhidham — Modern Gateway to Kutch",
-  image: "/images/gandhidham/gandhidham-main.jpg",
+  title: "Gandhidham — The Modern Hub of Kutch",
+  image: "/images/gandhidham/gandhidham1.jpg",
   sections: [
     {
       heading: "Category",
@@ -14,20 +13,20 @@ export const gandhidham: Destination = {
       heading: "Significance",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
-      content: "Gandhidham is a modern planned city that serves as the commercial and transportation hub of Kutch. Named after Mahatma Gandhi, this well-organized city offers modern amenities while maintaining connections to traditional Kutchi culture and crafts.",
+      content: "Gandhidham is the economic powerhouse of Kutch and a master-planned city established in 1947 to resettle Sindhi partition refugees. Named after Mahatma Gandhi, it serves as the crucial link between the Kandla International Port and the rest of India. Unlike the ancient towns of Kutch, Gandhidham offers broad avenues, modern amenities, and a cosmopolitan atmosphere, making it a comfortable base for business travelers and tourists alike.",
       image: {
-        src: "/images/gandhidham/overview.jpg",
-        alt: "Overview of Gandhidham — Modern Gateway to Kutch"
+        src: "/images/gandhidham/gandhidham2.jpg",
+        alt: "Overview of Gandhidham"
       }
     },
     {
       heading: "History",
       color: "bg-purple-50",
       border: "border-l-4 border-purple-600 text-purple-800",
-      content: "Gandhidham was established in 1947 as a planned city to rehabilitate Sindhi refugees who migrated from Pakistan after partition. The city was designed with modern urban planning principles and has grown into a major commercial center, serving as the gateway to Kutch for many visitors.",
+      content: "The city's history is a testament to the resilience of the Sindhi community. After the partition of India in 1947, Bhai Pratap Dialdas appealed to Mahatma Gandhi for land to resettle refugees from Sindh. The Maharaja of Kutch donated 15,000 acres, and the city was born. It was planned by a team of Italian architects, giving it a unique sector-based layout distinct from other Indian towns.",
       image: {
-        src: "/images/gandhidham/history.jpg",
-        alt: "Historical view of Gandhidham — Modern Gateway to Kutch"
+        src: "/images/gandhidham/gandhidham3.jpg",
+        alt: "Historical view of Gandhidham"
       }
     },
     {
@@ -35,16 +34,15 @@ export const gandhidham: Destination = {
       color: "bg-amber-50",
       border: "border-l-4 border-amber-600 text-amber-800",
       list: [
-        "<b>Gandhidham Railway Station:</b> Major railway junction connecting Kutch to rest of India",
-        "<b>Commercial Markets:</b> Modern shopping centers and traditional markets",
-        "<b>Religious Sites:</b> Temples and gurudwaras reflecting diverse communities",
-        "<b>Educational Institutions:</b> Schools and colleges serving the region",
-        "<b>Industrial Areas:</b> Manufacturing and processing units",
-        "<b>Transportation Hub:</b> Bus stands and connectivity to all parts of Kutch"
+        "<b>Gandhi Samadhi:</b> A peaceful memorial dedicated to Mahatma Gandhi at Adipur (5km away)",
+        "<b>Kandla Port:</b> One of India's busiest major ports (view from outside)",
+        "<b>Purneshwar Temple:</b> A beautiful ancient Shiva temple nearby",
+        "<b>Shivaji Park:</b> A popular recreational spot for locals",
+        "<b>Shopping Markets:</b> The main market areas are bustling with electronics, textiles, and imported goods"
       ],
       image: {
-        src: "/images/gandhidham/attractions.jpg",
-        alt: "Main attractions in Gandhidham — Modern Gateway to Kutch"
+        src: "/images/gandhidham/gandhidham4.jpg",
+        alt: "Main attractions in Gandhidham"
       }
     },
     {
@@ -52,16 +50,14 @@ export const gandhidham: Destination = {
       color: "bg-emerald-50",
       border: "border-l-4 border-emerald-600 text-emerald-800",
       list: [
-        "<b>Multi-cuisine Food:</b> Gujarati, Sindhi, Punjabi, and other regional cuisines",
-        "<b>Modern Restaurants:</b> Contemporary dining options",
-        "<b>Traditional Crafts:</b> Kutchi handicrafts and textiles",
-        "<b>Commercial Goods:</b> Modern products and traditional items",
-        "<b>Textile Markets:</b> Wholesale and retail textile trading",
-        "<b>Electronics & Appliances:</b> Modern consumer goods"
+        "<b>Sindhi Cuisine:</b> Being a Sindhi-majority city, try authentic Dal Pakwan, Koki, and Sai Bhaji",
+        "<b>Street Food:</b> The Dabeli here is exceptional, competing with nearby Mandvi",
+        "<b>Sweets:</b> Local bakeries offer delicious Sindhi sweets like Sev Barfi and Tosh",
+        "<b>Shopping:</b> Excellent place to buy electronic goods and modern textiles due to port proximity"
       ],
       image: {
-        src: "/images/gandhidham/crafts.jpg",
-        alt: "Traditional crafts and cuisine of Gandhidham — Modern Gateway to Kutch"
+        src: "/images/gandhidham/gandhidham5.jpg",
+        alt: "Food and shopping in Gandhidham"
       }
     },
     {
@@ -69,36 +65,84 @@ export const gandhidham: Destination = {
       color: "bg-indigo-50",
       border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 60km - Cultural capital of Kutch",
-        "<b><a href='/destinations/anjar' class='text-blue-600 hover:text-blue-800'>Anjar:</a></b> 15km - Ancient town with temples",
-        "<b><a href='/destinations/kandla' class='text-blue-600 hover:text-blue-800'>Kandla Port:</a></b> 10km - Major port city",
-        "<b><a href='/destinations/adipur' class='text-blue-600 hover:text-blue-800'>Adipur:</a></b> 5km - Sister city with additional amenities",
-        "<b><a href='/destinations/dhordo' class='text-blue-600 hover:text-blue-800'>White Rann (Dhordo):</a></b> 140km - Famous salt desert"
+        "<b><a href='/destinations/anjar' class='text-blue-600 hover:text-blue-800'>Anjar:</a></b> 15km - Historic town famous for knife work and block printing",
+        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 55km - The cultural capital and district headquarters",
+        "<b><a href='/destinations/mandvi' class='text-blue-600 hover:text-blue-800'>Mandvi:</a></b> 100km - Beach town with the royal palace",
+        "<b><a href='/destinations/bhadreshwar' class='text-blue-600 hover:text-blue-800'>Bhadreshwar:</a></b> 35km - Ancient Jain temple and Vasai Tirth"
       ],
       image: {
-        src: "/images/gandhidham/nearby.jpg",
-        alt: "Nearby attractions around Gandhidham — Modern Gateway to Kutch"
+        src: "/images/gandhidham/gandhidham6.jpg",
+        alt: "Nearby attractions"
+      }
+    },
+    {
+      heading: "How to Reach",
+      color: "bg-cyan-50",
+      border: "border-l-4 border-cyan-600 text-cyan-800",
+      list: [
+        "<b>By Rail:</b> Gandhidham Junction is the busiest station in Kutch, with direct trains to Mumbai, Delhi, Bangalore, and Ahmedabad",
+        "<b>By Air:</b> Kandla Airport (IXY) is just 6km away with daily flights to Mumbai and Ahmedabad",
+        "<b>By Road:</b> Well connected to Ahmedabad via NH41; luxury buses are frequently available"
+      ],
+      image: {
+        src: "/images/gandhidham/gandhidham7.jpg",
+        alt: "Transportation hub"
+      }
+    },
+    {
+      heading: "Travel Information",
+      color: "bg-rose-50",
+      border: "border-l-4 border-rose-600 text-rose-800",
+      list: [
+        "<b>Connectivity:</b> Excellent 4G/5G coverage throughout the city",
+        "<b>Medical:</b> High-quality private hospitals and medical facilities are available",
+        "<b>ATMs/Banks:</b> Widespread availability of banking services",
+        "<b>Vibe:</b> Cosmopolitan, fast-paced, and business-oriented"
+      ],
+      image: {
+        src: "/images/gandhidham/gandhidham2.jpg",
+        alt: "Travel information"
+      }
+    },
+    {
+      heading: "Best Time to Visit",
+      color: "bg-teal-50",
+      border: "border-l-4 border-teal-600 text-teal-800",
+      content: "October to March is ideal. As a commercial city, business travel happens year-round, but tourism is best during winter. Summers (April-June) can be extremely hot.",
+      image: {
+        src: "/images/gandhidham/gandhidham4.jpg",
+        alt: "Best season to visit"
+      }
+    },
+    {
+      heading: "Accommodation & Local Tips",
+      color: "bg-lime-50",
+      border: "border-l-4 border-lime-600 text-lime-800",
+      list: [
+        "<b>Luxury & Business Hotels:</b> Gandhidham has the highest density of premium hotels (Radisson, Ramada, etc.) in Kutch",
+        "<b>Tip:</b> Great base for travelers who prefer modern luxury over heritage hotels found in Bhuj",
+        "<b>Transport:</b> Auto-rickshaws and app-based taxis are easily available"
+      ],
+      image: {
+        src: "/images/gandhidham/gandhidham7.jpg",
+        alt: "Accommodation options"
       }
     }
   ],
   facts: [
-    "Founded: 1947 as planned city",
-    "Population: ~200,000",
-    "Best months: October to March",
-    "Famous for: Transportation hub and commercial center",
-    "Railway: Major junction with connections to Mumbai, Delhi, and other cities"
+    "Founded: 1947 (Planned City)",
+    "Population: ~4 Lakhs",
+    "Key Role: Port City & Railway Hub",
+    "Culture: Strong Sindhi influence",
+    "Connection: Gateway to Kutch economy"
   ],
-  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d69.6697!3d23.2420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sGandhidham%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin",
+  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d70.1337!3d23.0754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950b8b8b8b8b8b8%3A0x8b8b8b8b8b8b8b8b!2sGandhidham!5e0!3m2!1sen!2sin",
   gallery: [
-    { src: "/images/gandhidham/gandhidham-main.jpg", caption: "Gandhidham Railway Station" },
-    { src: "/images/gandhidham/gandhidham2.jpg", caption: "Modern City Planning" },
-    { src: "/images/gandhidham/gandhidham3.jpg", caption: "Commercial Market Area" },
-    { src: "/images/gandhidham/gandhidham4.jpg", caption: "Religious Sites" },
-    { src: "/images/gandhidham/gandhidham5.jpg", caption: "Educational Institutions" },
-    { src: "/images/gandhidham/gandhidham6.jpg", caption: "Transportation Hub" }
+    { src: "/images/gandhidham/gandhidham1.jpg", caption: "Gandhidham Railway Station" },
+    { src: "/images/gandhidham/gandhidham2.jpg", caption: "Gandhi Samadhi Adipur" },
+    { src: "/images/gandhidham/gandhidham3.jpg", caption: "Kandla Port Entrance" },
+    { src: "/images/gandhidham/gandhidham4.jpg", caption: "Modern Business District" },
+    { src: "/images/gandhidham/gandhidham5.jpg", caption: "Sindhi Cuisine (Dal Pakwan)" },
+    { src: "/images/gandhidham/gandhidham6.jpg", caption: "City Landscape" }
   ]
 };
-
-
-
-

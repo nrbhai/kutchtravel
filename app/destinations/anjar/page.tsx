@@ -1,31 +1,19 @@
-"use client";
 import DestinationTemplate from "@/app/components/DestinationTemplate";
-import SectionCard from "@/app/components/SectionCard";
 import { anjar } from "@/app/destinations/data/anjar";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: `${anjar.title} - Historic Town of Kutch`,
+  description: 'Explore Anjar, the oldest town of Kutch. Famous for the legend of Jesal-Toral, historic architecture, and traditional metal crafts.',
+};
 
 export default function Anjar() {
   return (
     <DestinationTemplate
       title={anjar.title}
       image={anjar.image}
-      description={
-        <div className="space-y-8">
-          {anjar.sections.map((s, idx) => {
-            return (
-              <SectionCard
-                key={idx}
-                title={s.heading}
-                image={s.image}
-              >
-                {s.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: s.content }} />}
-                {s.list && (
-                  <ul className="list-disc pl-5 space-y-2" dangerouslySetInnerHTML={{ __html: s.list.map((it) => `<li>${it}</li>`).join("") }} />
-                )}
-              </SectionCard>
-            );
-          })}
-        </div>
-      }
+      description={anjar.sections[1].content || ""}
+      sections={anjar.sections}
       facts={anjar.facts}
       mapUrl={anjar.mapUrl}
       gallery={anjar.gallery}

@@ -1,5 +1,4 @@
 import DestinationTemplate from "@/app/components/DestinationTemplate";
-import SectionCard from "@/app/components/SectionCard";
 import { kaloDungar } from "@/app/destinations/data/kalo-dungar";
 import { generateDestinationStructuredData, generateBreadcrumbStructuredData } from "@/app/utils/seo";
 import type { Metadata } from 'next';
@@ -40,30 +39,6 @@ export default function KaloDungar() {
     { name: kaloDungar.title }
   ]);
 
-  // Format description content
-  const description = (
-    <div className="space-y-8">
-      {kaloDungar.sections.map((section, index) => (
-        <SectionCard 
-          key={index}
-          title={section.heading}
-          image={section.image}
-          color={section.color}
-          border={section.border}
-        >
-          {section.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />}
-          {section.list && (
-            <ul className="list-none space-y-4">
-              {section.list.map((item, itemIndex) => (
-                <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }} />
-              ))}
-            </ul>
-          )}
-        </SectionCard>
-      ))}
-    </div>
-  );
-
   return (
     <>
       <script
@@ -75,7 +50,8 @@ export default function KaloDungar() {
       <DestinationTemplate
         title={kaloDungar.title}
         image={kaloDungar.image}
-        description={description}
+        description={kaloDungar.sections[0].content || "Highest point in Kutch."}
+        sections={kaloDungar.sections}
         facts={kaloDungar.facts}
         mapUrl={kaloDungar.mapUrl}
         gallery={kaloDungar.gallery}
@@ -83,4 +59,3 @@ export default function KaloDungar() {
     </>
   );
 }
-

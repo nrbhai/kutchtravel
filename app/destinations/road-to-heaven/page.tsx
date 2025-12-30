@@ -1,5 +1,4 @@
 import DestinationTemplate from "@/app/components/DestinationTemplate";
-import SectionCard from "@/app/components/SectionCard";
 import { roadToHeaven } from "@/app/destinations/data/road-to-heaven";
 import { generateDestinationStructuredData, generateBreadcrumbStructuredData } from "@/app/utils/seo";
 import type { Metadata } from 'next';
@@ -41,30 +40,6 @@ export default function RoadToHeaven() {
     { name: roadToHeaven.title }
   ]);
 
-  // Format description content
-  const description = (
-    <div className="space-y-8">
-      {roadToHeaven.sections.map((section, index) => (
-        <SectionCard 
-          key={index}
-          title={section.heading}
-          image={section.image}
-          color={section.color}
-          border={section.border}
-        >
-          {section.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />}
-          {section.list && (
-            <ul className="list-none space-y-4">
-              {section.list.map((item, itemIndex) => (
-                <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }} />
-              ))}
-            </ul>
-          )}
-        </SectionCard>
-      ))}
-    </div>
-  );
-
   return (
     <>
       <script
@@ -76,7 +51,8 @@ export default function RoadToHeaven() {
       <DestinationTemplate
         title={roadToHeaven.title}
         image={roadToHeaven.image}
-        description={description}
+        description={roadToHeaven.sections[1].content || ""}
+        sections={roadToHeaven.sections}
         facts={roadToHeaven.facts}
         mapUrl={roadToHeaven.mapUrl}
         gallery={roadToHeaven.gallery}
