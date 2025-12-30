@@ -6,7 +6,7 @@ export default function VijayVilasPalace() {
   return (
     <DestinationTemplate
       title="Vijay Vilas Palace"
-      image="/images/places/vijay-vilas-palace/main.jpg"
+      image="/images/places/vijay-vilas-palace/main.webp"
       description={
         <div className="space-y-8">
           <SectionCard 
@@ -14,7 +14,7 @@ export default function VijayVilasPalace() {
             color="bg-indigo-50"
             border="border-l-4 border-indigo-600 text-indigo-800"
             image={{
-              src: "/images/places/vijay-vilas-palace/palace-exterior.jpg",
+              src: "/images/places/vijay-vilas-palace/palace-exterior.webp",
               alt: "Majestic exterior of Vijay Vilas Palace"
             }}
           >
@@ -31,7 +31,7 @@ export default function VijayVilasPalace() {
             color="bg-purple-50"
             border="border-l-4 border-purple-600 text-purple-800"
             image={{
-              src: "/images/places/vijay-vilas-palace/architecture.jpg",
+              src: "/images/places/vijay-vilas-palace/architecture.webp",
               alt: "Intricate architectural details and jali work"
             }}
           >
@@ -49,7 +49,7 @@ export default function VijayVilasPalace() {
             color="bg-emerald-50"
             border="border-l-4 border-emerald-600 text-emerald-800"
             image={{
-              src: "/images/places/vijay-vilas-palace/attractions.jpg",
+              src: "/images/places/vijay-vilas-palace/attractions.webp",
               alt: "Palace gardens and private beach"
             }}
           >
@@ -67,7 +67,7 @@ export default function VijayVilasPalace() {
             color="bg-amber-50"
             border="border-l-4 border-amber-600 text-amber-800"
             image={{
-              src: "/images/places/vijay-vilas-palace/history.jpg",
+              src: "/images/places/vijay-vilas-palace/history.webp",
               alt: "Historical photographs of the palace"
             }}
           >
@@ -84,7 +84,7 @@ export default function VijayVilasPalace() {
             color="bg-cyan-50"
             border="border-l-4 border-cyan-600 text-cyan-800"
             image={{
-              src: "/images/places/vijay-vilas-palace/seasonal.jpg",
+              src: "/images/places/vijay-vilas-palace/seasonal.webp",
               alt: "Palace during the best visiting season"
             }}
           >
@@ -100,7 +100,7 @@ export default function VijayVilasPalace() {
             color="bg-rose-50"
             border="border-l-4 border-rose-600 text-rose-800"
             image={{
-              src: "/images/places/vijay-vilas-palace/visitor-info.jpg",
+              src: "/images/places/vijay-vilas-palace/visitor-info.webp",
               alt: "Visitor facilities and entrance"
             }}
           >

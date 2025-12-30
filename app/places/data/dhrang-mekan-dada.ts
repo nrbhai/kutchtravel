@@ -4,7 +4,7 @@ export const dhrangMekanDada: Place = {
   slug: "dhrang-mekan-dada",
   title: "Dhrang - The Legend of Mekan Dada",
   shortDescription: "Sacred shrine of the saint Mekan Dada and his loyal animal companions, Laliyo and Motiyo",
-  image: "/images/places/dhrang-mekan-dada/main.JPG",
+  image: "/images/places/dhrang-mekan-dada/main.webp",
   location: "25km from Bhuj",
   distanceFromBhuj: "25km",
   parentDestination: "bhuj",
@@ -14,9 +14,9 @@ export const dhrangMekanDada: Place = {
   bestTimeToVisit: "October to March. The annual fair on Maha Shivaratri is the most culturally vibrant time to visit.",
   howToReach: "Drive 25km from Bhuj via local roads. The route offers scenic views of rural Kutch landscape. Private vehicle recommended as public transport is limited.",
   gallery: [
-    { src: "/images/places/dhrang-mekan-dada/shrine.jpg", caption: "Samadhi of Mekan Dada" },
-    { src: "/images/places/dhrang-mekan-dada/temple.jpg", caption: "The Temple Complex" },
-    { src: "/images/places/dhrang-mekan-dada/laliyo-motiyo.jpg", caption: "Statues of Laliyo (Donkey) and Motiyo (Dog)" },
-    { src: "/images/places/dhrang-mekan-dada/fair.jpg", caption: "Devotees at the Mekan Dada Fair" }
+    { src: "/images/places/dhrang-mekan-dada/shrine.webp", caption: "Samadhi of Mekan Dada" },
+    { src: "/images/places/dhrang-mekan-dada/temple.webp", caption: "The Temple Complex" },
+    { src: "/images/places/dhrang-mekan-dada/laliyo-motiyo.webp", caption: "Statues of Laliyo (Donkey) and Motiyo (Dog)" },
+    { src: "/images/places/dhrang-mekan-dada/fair.webp", caption: "Devotees at the Mekan Dada Fair" }
   ]
 };

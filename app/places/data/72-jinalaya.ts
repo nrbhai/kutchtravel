@@ -4,7 +4,7 @@ export const jinalaya72: Place = {
   slug: "72-jinalaya",
   title: "72 Jinalaya - Bounter Jinalaya Mahatirth",
   shortDescription: "Magnificent Jain temple complex with 72 shrines, stunning white marble architecture, and serene spiritual ambiance",
-  image: "/images/places/72-jinalaya/main.jpg",
+  image: "/images/places/72-jinalaya/main.webp",
   location: "2km from Mandvi",
   distanceFromMandvi: "2km north",
   distanceFromBhuj: "60km south",
@@ -16,13 +16,13 @@ export const jinalaya72: Place = {
   bestTimeToVisit: "October to March for pleasant weather. Early morning visits (6 AM - 9 AM) offer the most peaceful atmosphere for prayer and meditation. The white marble gleams beautifully in the soft morning light. Avoid visiting during the harsh summer months (April-June) as the marble can become extremely hot.",
   howToReach: "Located just 2km north of Mandvi town center, easily accessible by auto-rickshaw, taxi, or private vehicle. The temple complex has ample parking facilities. From Bhuj, it's approximately 60km via the Mandvi road. The complex also provides accommodation (Dharamsala) and dining facilities (Bhojanalaya) for pilgrims and visitors.",
   gallery: [
-    { src: "/images/places/72-jinalaya/main.jpg", caption: "The magnificent 72 Jinalaya temple complex with its distinctive white marble architecture" },
-    { src: "/images/places/72-jinalaya/main-temple.jpg", caption: "Main temple dedicated to Lord Mahavir, the 24th Tirthankara" },
-    { src: "/images/places/72-jinalaya/marble-carvings.jpg", caption: "Intricate marble carvings and detailed stonework" },
-    { src: "/images/places/72-jinalaya/octagonal-design.jpg", caption: "The octagonal layout housing 72 individual shrines" },
-    { src: "/images/places/72-jinalaya/pillars.jpg", caption: "Ornate pillars with exquisite craftsmanship" },
-    { src: "/images/places/72-jinalaya/dome.jpg", caption: "Inner dome with intricate detailing and precious gemstones" },
-    { src: "/images/places/72-jinalaya/courtyard.jpg", caption: "Serene courtyard within the temple complex" },
-    { src: "/images/places/72-jinalaya/aerial-view.jpg", caption: "Aerial view showing the 80-acre complex" }
+    { src: "/images/places/72-jinalaya/main.webp", caption: "The magnificent 72 Jinalaya temple complex with its distinctive white marble architecture" },
+    { src: "/images/places/72-jinalaya/main-temple.webp", caption: "Main temple dedicated to Lord Mahavir, the 24th Tirthankara" },
+    { src: "/images/places/72-jinalaya/marble-carvings.webp", caption: "Intricate marble carvings and detailed stonework" },
+    { src: "/images/places/72-jinalaya/octagonal-design.webp", caption: "The octagonal layout housing 72 individual shrines" },
+    { src: "/images/places/72-jinalaya/pillars.webp", caption: "Ornate pillars with exquisite craftsmanship" },
+    { src: "/images/places/72-jinalaya/dome.webp", caption: "Inner dome with intricate detailing and precious gemstones" },
+    { src: "/images/places/72-jinalaya/courtyard.webp", caption: "Serene courtyard within the temple complex" },
+    { src: "/images/places/72-jinalaya/aerial-view.webp", caption: "Aerial view showing the 80-acre complex" }
   ]
 };

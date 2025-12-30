@@ -15,7 +15,7 @@ export async function GET() {
     const files = fs.readdirSync(galleryPath);
     
     // Filter for image files and create full paths
-    const imageExtensions = ['.jpg', '.jpeg', '.png', '.webp', '.gif'];
+    const imageExtensions = ['.webp', '.webp', '.png', '.webp', '.gif'];
     const images = files
       .filter(file => {
         const ext = path.extname(file).toLowerCase();

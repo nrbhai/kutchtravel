@@ -5,21 +5,20 @@ import { generateDestinationStructuredData, generateBreadcrumbStructuredData } f
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: `${mandvi.title} - Coastal Gem of Kutch`,
-  description: 'Explore Mandvi, the coastal paradise of Kutch. Visit the magnificent Vijay Vilas Palace, pristine beaches, and historic shipyards. Complete travel guide with heritage sites and local attractions.',
+  title: 'Mandvi Beach & Palace Guide | Things to Do & Itinerary',
+  description: 'Plan your trip to Mandvi, Kutch. Complete travel guide covering Vijay Vilas Palace, Wind Farm Beach, Shipbuilding Yard, and Dabeli food spots. Includes 1-day itinerary and travel tips.',
   keywords: [
-    'Mandvi tourism',
-    'Vijay Vilas Palace',
-    'Mandvi Beach',
-    'Mandvi shipyard',
-    'Kutch beaches',
-    'Mandvi heritage',
-    'Mandvi travel guide',
-    'Wind farms Mandvi'
+    'Mandvi beach Kutch',
+    'Vijay Vilas Palace entry fee',
+    'places to visit in Mandvi',
+    'Mandvi shipbuilding yard',
+    'Mandvi resorts',
+    'how to reach Mandvi from Bhuj',
+    'Mandvi Dabeli'
   ],
   openGraph: {
-    title: `${mandvi.title} - Coastal Gem of Kutch`,
-    description: 'Discover Mandvi, the coastal paradise of Kutch with royal palace, pristine beaches and historic shipyards.',
+    title: 'Mandvi Beach & Palace Guide | Things to Do & Itinerary',
+    description: 'The only beach destination in Kutch worth visiting. Royal palaces, wooden ships, and sunset beaches.',
     images: [mandvi.image],
   },
 };

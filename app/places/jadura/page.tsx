@@ -14,7 +14,7 @@ export default function Jadura() {
             color="bg-orange-50"
             border="border-l-4 border-orange-600 text-orange-800"
             image={{
-              src: "/images/places/jadura/sunset-point.jpg",
+              src: "/images/places/jadura/sunset-point.webp",
               alt: "Jadura sunset point panoramic view"
             }}
           >
@@ -31,7 +31,7 @@ export default function Jadura() {
             color="bg-purple-50"
             border="border-l-4 border-purple-600 text-purple-800"
             image={{
-              src: "/images/places/jadura/panoramic-views.jpg",
+              src: "/images/places/jadura/panoramic-views.webp",
               alt: "Panoramic landscape views"
             }}
           >
@@ -49,7 +49,7 @@ export default function Jadura() {
             color="bg-blue-50"
             border="border-l-4 border-blue-600 text-blue-800"
             image={{
-              src: "/images/places/jadura/activities.jpg",
+              src: "/images/places/jadura/activities.webp",
               alt: "Activities at Jadura"
             }}
           >
@@ -67,7 +67,7 @@ export default function Jadura() {
             color="bg-emerald-50"
             border="border-l-4 border-emerald-600 text-emerald-800"
             image={{
-              src: "/images/places/jadura/golden-hour.jpg",
+              src: "/images/places/jadura/golden-hour.webp",
               alt: "Golden hour at Jadura"
             }}
           >
@@ -83,7 +83,7 @@ export default function Jadura() {
             color="bg-amber-50"
             border="border-l-4 border-amber-600 text-amber-800"
             image={{
-              src: "/images/places/jadura/route.jpg",
+              src: "/images/places/jadura/route.webp",
               alt: "Route to Jadura"
             }}
           >
@@ -95,7 +95,7 @@ export default function Jadura() {
             color="bg-cyan-50"
             border="border-l-4 border-cyan-600 text-cyan-800"
             image={{
-              src: "/images/places/jadura/visitor-tips.jpg",
+              src: "/images/places/jadura/visitor-tips.webp",
               alt: "Visitor tips and information"
             }}
           >

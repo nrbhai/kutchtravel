@@ -4,7 +4,7 @@ export const hanumanTekri: Place = {
   slug: "hanuman-tekri",
   title: "Hanuman Tekri Kodki",
   shortDescription: "Hanuman temple with excellent sunset viewpoint and panoramic views",
-  image: "/images/places/hanuman-tekri/temple.jpg",
+  image: "/images/places/hanuman-tekri/temple.webp",
   location: "10km from Bhuj",
   distanceFromBhuj: "10km",
   parentDestination: "bhuj",
@@ -15,9 +15,9 @@ export const hanumanTekri: Place = {
   bestTimeToVisit: "October to March, especially during sunset hours",
   howToReach: "Drive 10km from Bhuj followed by short trek to hilltop temple",
   gallery: [
-    { src: "/images/places/hanuman-tekri/temple.jpg", caption: "Hanuman temple on hilltop" },
-    { src: "/images/places/hanuman-tekri/sunset.JPG", caption: "Spectacular sunset views" },
-    { src: "/images/places/hanuman-tekri/IMG_20190210_180619.jpg", caption: "Temple architecture details" },
-    { src: "/images/places/hanuman-tekri/IMG_20190210_180657.jpg", caption: "Panoramic views from temple" }
+    { src: "/images/places/hanuman-tekri/temple.webp", caption: "Hanuman temple on hilltop" },
+    { src: "/images/places/hanuman-tekri/sunset.webp", caption: "Spectacular sunset views" },
+    { src: "/images/places/hanuman-tekri/IMG_20190210_180619.webp", caption: "Temple architecture details" },
+    { src: "/images/places/hanuman-tekri/IMG_20190210_180657.webp", caption: "Panoramic views from temple" }
   ]
 };

@@ -8,19 +8,8 @@ import Footer from '../components/Footer';
 import Image from 'next/image';
 import MetallicHeading from '../components/MetallicHeading';
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-};
-
-const stagger = {
-  visible: { transition: { staggerChildren: 0.15 } }
-};
-
-const scaleIn = {
-  hidden: { opacity: 0, scale: 0.8 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } }
-};
+import { fadeUp, stagger, scaleIn } from '../../lib/animations';
+import BackgroundEffects from '../components/BackgroundEffects';
 
 export default function AboutPage() {
   return (
@@ -33,12 +22,7 @@ export default function AboutPage() {
         </div>
         
         {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-20 mix-blend-overlay"></div>
-          <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-amber-900/20 rounded-full blur-[100px] mix-blend-screen animate-blob"></div>
-          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-purple-900/20 rounded-full blur-[100px] mix-blend-screen animate-blob animation-delay-2000"></div>
-          <div className="absolute inset-0 bg-radial-gradient from-transparent to-background/90"></div>
-        </div>
+        <BackgroundEffects />
 
         <div className="relative max-w-[1600px] mx-auto px-6 pt-24 lg:pt-32 w-full">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -104,7 +88,7 @@ export default function AboutPage() {
                   {/* Placeholder for Team Image */}
                   <div className="absolute inset-0">
                     <Image
-                      src="/images/team.jpg"
+                      src="/images/team.webp"
                       alt="Team Kutch Travel"
                       fill
                       className="object-cover opacity-80 hover:scale-105 transition-transform duration-700"

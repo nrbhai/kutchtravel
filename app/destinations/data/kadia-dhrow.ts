@@ -3,143 +3,127 @@ import type { Destination } from "./index";
 export const kadiaDhrow: Destination = {
   slug: "kadia-dhrow",
   title: "Kadia Dhro — The Grand Canyon of India",
-  image: "/images/kadia-dhrow/kadia-dhrow1.jpg",
+  image: "/images/kadia-dhrow/kadia-dhrow1.webp",
   sections: [
     {
-      heading: "Category",
-      content: "Geological Wonder"
-    },
-    {
-      heading: "The Grand Canyon of Kutch",
-      color: "bg-blue-50",
-      border: "border-l-4 border-blue-600 text-blue-800",
-      content: "Kadia Dhro (often spelled Kadiya Dhrow) is one of Gujarat's most spectacular hidden gems. Carved over centuries by the wind and the seasonal Bhaiad River, this landscape of multi-colored rock formations resembles a miniature Grand Canyon. The vibrant bands of red, orange, and yellow sandstone create a surreal, almost painting-like environment that shot to international fame after being featured by The New York Times in 2021.",
+      heading: "Overview",
+      content: "Kadia Dhro (or Kadiya Dhrow) is Kutch's most spectacular hidden gem, often called the 'Grand Canyon of India'. This geological marvel features stunning multi-colored rock formations carved by wind and water over centuries. The riverbed displays vibrant bands of red, yellow, and orange sandstone, creating a surreal landscape that looks like a painting come to life. Once an obscure spot, it is now a must-visit for nature lovers.",
       image: {
-        src: "/images/kadia-dhrow/kadia-dhrow4.jpg",
+        src: "/images/kadia-dhrow/kadia-dhrow4.webp",
         alt: "Overview of Kadia Dhro Canyon"
       }
     },
     {
-      heading: "History",
-      color: "bg-purple-50",
-      border: "border-l-4 border-purple-600 text-purple-800",
-      content: "For generations, this spot was a quiet secret known only to local villagers and herders from nearby Kodki. The unique rock strata date back over 150 million years to the Jurassic period. Its modern 'discovery' happened thanks to social media and travel enthusiasts who revealed its alien-like beauty to the world, transforming it from an obscure riverbed to a must-visit geological marvel.",
-      image: {
-        src: "/images/kadia-dhrow/kadia-dhrow12.jpg",
-        alt: "Geological layers of Kadia Dhro"
-      }
-    },
-    {
-      heading: "Places of Interest",
-      color: "bg-amber-50",
-      border: "border-l-4 border-amber-600 text-amber-800",
-      list: [
-        "<b>The River Bed:</b> Walk along the dried (or flowing) riverbed to see the cliffs from below",
-        "<b>Viewpoints:</b> Hike up the small rocky outcrops for panoramic top-down views",
-        "<b>Crocodile Sightings:</b> Freshwater crocodiles are often spotted in the deeper pools (maintain distance!)",
-        "<b>Rock Formations:</b> Intricate wind-carved shapes resembling nature's sculptures",
-        "<b>Photography:</b> The colors pop vibrantly during the golden hour (sunrise/sunset)"
-      ],
-      image: {
-        src: "/images/kadia-dhrow/kadia-dhrow5.jpg",
-        alt: "Main viewpoints at Kadia Dhro"
-      }
-    },
-    {
-      heading: "Food & Crafts",
-      color: "bg-emerald-50",
-      border: "border-l-4 border-emerald-600 text-emerald-800",
-      list: [
-        "<b>No Facilities:</b> This is a raw, natural site with zero commercial shops nearby",
-        "<b>Bhuj Cuisine:</b> Bring packed food from Bhuj (famous Dabeli or Gujarati snacks)",
-        "<b>Cleanliness:</b> Strictly no littering; please carry all your trash back with you"
-      ],
-      image: {
-        src: "/images/kadia-dhrow/kadia-dhrow2.jpg",
-        alt: "Natural surroundings of Kadia Dhro"
-      }
-    },
-    {
-      heading: "Nearby Destinations",
-      color: "bg-indigo-50",
-      border: "border-l-4 border-indigo-600 text-indigo-800",
-      list: [
-        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 40km - The nearest city and base for the trip",
-        "<b><a href='/destinations/dhordo' class='text-blue-600 hover:text-blue-800'>White Rann:</a></b> 80km - Typically combined on a longer day trip",
-        "<b><a href='/destinations/kalo-dungar' class='text-blue-600 hover:text-blue-800'>Kalo Dungar:</a></b> 90km - The highest peak of Kutch"
-      ],
-      image: {
-        src: "/images/kadia-dhrow/kadia-dhrow6.jpg",
-        alt: "Nearby attractions"
-      }
+        heading: "Who Should Visit",
+        color: "bg-pink-50",
+        border: "border-l-4 border-pink-600 text-pink-800",
+        list: [
+            "<b>Photographers:</b> For the dramatic colors and rock textures (Best light at Sunrise/Sunset).",
+            "<b>Hikers & Explorers:</b> Requires a bit of walking on uneven rocky terrain.",
+            "<b>Geology Enthusiasts:</b> To study the unique Jurassic-era sedimentary rock layers.",
+            "<b>Note:</b> NOT suitable for elderly or those with mobility issues due to rough terrain."
+        ]
     },
     {
       heading: "How to Reach",
       color: "bg-cyan-50",
       border: "border-l-4 border-cyan-600 text-cyan-800",
       list: [
-        "<b>By Road:</b> Drive 35km from Bhuj towards Kodki village. The last 4-5km is an off-road track",
-        "<b>Vehicle:</b> An SUV or high-clearance vehicle is highly recommended",
-        "<b>Guide:</b> Google Maps works, but asking locals at Kodki village is helpful as trails change"
+        "<b>From Bhuj:</b> 45km | 1 Hr. Take the road towards Kodki village.",
+        "<b>The Last Mile:</b> The final 3-4 km is an unpaved dirt track. High-ground clearance cars (SUVs) are recommended, though normal cars can make it with careful driving.",
+        "<b>Navigation:</b> Google Maps is generally accurate, but ask locals in nearby villages if unsure."
       ],
       image: {
-        src: "/images/kadia-dhrow/kadia-dhrow13.jpg",
-        alt: "Off-road track to Kadia Dhro"
+        src: "/images/kadia-dhrow/kadia-dhrow13.webp",
+        alt: "Dirt road to Kadia Dhro"
       }
     },
     {
-      heading: "Travel Information",
-      color: "bg-rose-50",
-      border: "border-l-4 border-rose-600 text-rose-800",
+      heading: "Top Things to Do",
+      color: "bg-amber-50",
+      border: "border-l-4 border-amber-600 text-amber-800",
       list: [
-        "<b>Safety:</b> Avoid edge of cliffs (loose rocks) and stay away from water if crocodiles are present",
-        "<b>Timing:</b> Best visited early morning or late afternoon to avoid midday heat",
-        "<b>Network:</b> Mobile signal is weak or non-existent in the canyon area",
-        "<b>Footwear:</b> Wear sturdy shoes; the terrain is rocky and uneven"
+        "<b>Canyon Hike:</b> (1-2 Hours) Walk down into the riverbed (if dry) to see the towering rock pillars from below.",
+        "<b>Photography:</b> Climb the small cliffs for a panoramic top-down shot of the colorful bands.",
+        "<b>Crocodile Spotting:</b> Be careful! Freshwater crocodiles live in the deeper water pools of the river.",
+        "<b>Sunset View:</b> The rocks glow golden-red during the evening golden hour."
       ],
       image: {
-        src: "/images/kadia-dhrow/kadia-dhrow11.jpg",
-        alt: "Travel safety tips"
+        src: "/images/kadia-dhrow/kadia-dhrow5.webp",
+        alt: "Main viewpoints at Kadia Dhro"
       }
+    },
+    {
+        heading: "Local Tips & Common Mistakes",
+        color: "bg-yellow-50",
+        border: "border-l-4 border-yellow-600 text-yellow-800",
+        list: [
+            "<b>No Facilities:</b> There are ZERO shops, toilets, or water stalls. Carry everything you need.",
+            "<b>Network:</b> Mobile signal is very weak or non-existent in the canyon.",
+            "<b>Littering:</b> Please bring a trash bag. Do not ruin this pristine site with plastic.",
+            "<b>Safety:</b> Do not go too close to the water edge due to crocodiles and slippery moss."
+        ]
     },
     {
       heading: "Best Time to Visit",
       color: "bg-teal-50",
       border: "border-l-4 border-teal-600 text-teal-800",
-      content: "Winter (November to February) is comfortable. Monsoon (July-September) is breathtaking as the river flows and greenery sprouts, but the approach road can be muddy and difficult. Late afternoons offer the best light for photography.",
+      content: "<strong>November to February:</strong> Best weather for hiking. \n\n<strong>Monsoon (July-Sept):</strong> The landscape is lush green and the river flows, looking mesmerizing, BUT the approach road becomes very muddy and difficult.",
       image: {
-        src: "/images/kadia-dhrow/kadia-dhrow3.jpg",
-        alt: "Best season to visit"
+        src: "/images/kadia-dhrow/kadia-dhrow3.webp",
+        alt: "River flowing in monsoon"
       }
     },
     {
-      heading: "Accommodation & Local Tips",
-      color: "bg-lime-50",
-      border: "border-l-4 border-lime-600 text-lime-800",
+      heading: "Suggested Itinerary (Half Day)",
+      color: "bg-indigo-50",
+      border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b>Stay:</b> No accommodation at the site. Stay in Bhuj and make a half-day trip",
-        "<b>Tip:</b> Combine with a visit to the Vande Mataram Memorial near Bhujodi"
+          "<b>7:00 AM:</b> Depart from Bhuj with packed breakfast.",
+          "<b>8:00 AM:</b> Reach Kadia Dhro. Park safely.",
+          "<b>8:15 AM - 10:30 AM:</b> Hike, explore, and photography.",
+          "<b>11:00 AM:</b> Visit nearby Rakhal Van (reserved forest) if timing permits.",
+          "<b>12:30 PM:</b> Return to Bhuj for lunch."
+      ]
+    },
+    {
+      heading: "Nearby Destinations",
+      color: "bg-slate-50",
+      border: "border-l-4 border-slate-600 text-slate-800",
+      list: [
+        "<b><a href='/destinations/bhuj' class='text-blue-500 hover:underline'>Bhuj:</a></b> (45km) The base city.",
+        "<b><a href='/destinations/dhordo' class='text-blue-500 hover:underline'>White Rann:</a></b> (80km) Can be done on the same day if you start very early."
       ],
       image: {
-        src: "/images/kadia-dhrow/kadia-dhrow7.jpg",
-        alt: "Accommodation options"
+        src: "/images/kadia-dhrow/kadia-dhrow6.webp",
+        alt: "Nearby attractions"
       }
+    },
+    {
+      heading: "Frequently Asked Questions",
+      list: [
+        "<b>Q: Is the road suitable for a small hatchback car?</b><br>A: You can drive a small car up to Kodki. The last 3-4 kms are rough. Many people take their hatchbacks carefully, but an SUV is safer. You might have to walk the last 1km if the car can't make it.",
+        "<b>Q: Is there any entry fee?</b><br>A: No, Kadia Dhro is a natural geological site and there is currently no entry fee or official ticketing.",
+        "<b>Q: Is it safe for solo travelers?</b><br>A: Generally yes, but it is a remote area with no network. It is always better to go in a group or with a local guide for safety.",
+        "<b>Q: Can we camp there?</b><br>A: Camping is not officially regulated, but not recommended due to the presence of crocodiles in the water and lack of safety at night."
+      ]
     }
   ],
   facts: [
-    "Nickname: Grand Canyon of India",
-    "Feature: Multi-colored rock canyons",
-    "Hidden Gem: Featured in NYT 2021 list",
-    "Wildlife: Crocodiles in river pools",
-    "Access: Off-road driving required"
+    "Ideal For: Trekkers, Photographers",
+    "Best Time: Winter & Monsoon (Cautiously)",
+    "Feature: Colorful Rock Stratification",
+    "Warning: No Food/Water Available",
+    "Distance from Bhuj: 45 km",
+    "Wildlife: Freshwater Crocodiles"
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d69.6697!3d23.2420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sKadia%20Dhrow!5e0!3m2!1sen!2sin",
   gallery: [
-    { src: "/images/kadia-dhrow/kadia-dhrow1.jpg", caption: "Spectacular Canyon Colors" },
-    { src: "/images/kadia-dhrow/kadia-dhrow2.jpg", caption: "Natural Rock Sculptures" },
-    { src: "/images/kadia-dhrow/kadia-dhrow3.jpg", caption: "River flowing through canyon" },
-    { src: "/images/kadia-dhrow/kadia-dhrow4.jpg", caption: "Rugged Landscape" },
-    { src: "/images/kadia-dhrow/kadia-dhrow5.jpg", caption: "Aerial View" },
-    { src: "/images/kadia-dhrow/kadia-dhrow6.jpg", caption: "Crocodile in water pool" }
+    { src: "/images/kadia-dhrow/kadia-dhrow1.webp", caption: "Spectacular Canyon Colors" },
+    { src: "/images/kadia-dhrow/kadia-dhrow2.webp", caption: "Natural Rock Sculptures" },
+    { src: "/images/kadia-dhrow/kadia-dhrow3.webp", caption: "River flowing through canyon" },
+    { src: "/images/kadia-dhrow/kadia-dhrow4.webp", caption: "Rugged Landscape" },
+    { src: "/images/kadia-dhrow/kadia-dhrow5.webp", caption: "Aerial View" },
+    { src: "/images/kadia-dhrow/kadia-dhrow6.webp", caption: "Crocodile in water pool" }
   ]
 };

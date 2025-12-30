@@ -122,7 +122,7 @@ export default function TripWidget({
         {/* Left Side - Image Section */}
         <div className="lg:w-2/5 relative min-h-[300px] lg:min-h-full group order-2 lg:order-1">
           <Image
-            src="/images/destinations/white-rann-hero.jpg"
+            src="/images/destinations/white-rann-hero.webp"
             alt="Travel to Kutch"
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"

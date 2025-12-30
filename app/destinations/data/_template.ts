@@ -3,14 +3,14 @@ import type { Destination } from "./index";
 export const destination: Destination = {
   slug: "destination-slug",
   title: "Destination Title — Subtitle",
-  image: "/images/destination-slug/main.jpg",
+  image: "/images/destination-slug/main.webp",
   sections: [
     {
       heading: "Overview",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       image: {
-        src: "/images/destination-slug/overview.jpg",
+        src: "/images/destination-slug/overview.webp",
         alt: "Overview image description"
       },
       content: "Main overview content here..."
@@ -20,7 +20,7 @@ export const destination: Destination = {
       color: "bg-purple-50",
       border: "border-l-4 border-purple-600 text-purple-800",
       image: {
-        src: "/images/destination-slug/history.jpg",
+        src: "/images/destination-slug/history.webp",
         alt: "Historical image description"
       },
       content: "Historical content here..."
@@ -30,7 +30,7 @@ export const destination: Destination = {
       color: "bg-amber-50",
       border: "border-l-4 border-amber-600 text-amber-800",
       image: {
-        src: "/images/destination-slug/attractions.jpg",
+        src: "/images/destination-slug/attractions.webp",
         alt: "Key attractions image"
       },
       list: [
@@ -44,7 +44,7 @@ export const destination: Destination = {
       color: "bg-emerald-50",
       border: "border-l-4 border-emerald-600 text-emerald-800",
       image: {
-        src: "/images/destination-slug/culture.jpg",
+        src: "/images/destination-slug/culture.webp",
         alt: "Local culture and crafts"
       },
       list: [
@@ -62,7 +62,7 @@ export const destination: Destination = {
         "<b><a href='/places/place-2' class='text-blue-400 hover:text-blue-300'>Place 2:</a></b> Description and distance"
       ],
       image: {
-        src: "/images/destination-slug/nearby.jpg",
+        src: "/images/destination-slug/nearby.webp",
         alt: "Nearby attractions"
       }
     },
@@ -71,7 +71,7 @@ export const destination: Destination = {
       color: "bg-cyan-50",
       border: "border-l-4 border-cyan-600 text-cyan-800",
       image: {
-        src: "/images/destination-slug/transport.jpg",
+        src: "/images/destination-slug/transport.webp",
         alt: "Transportation options"
       },
       list: [
@@ -90,11 +90,11 @@ export const destination: Destination = {
   mapUrl: "GOOGLE_MAPS_EMBED_URL",
   gallery: [
     {
-      src: "/images/destination-slug/gallery1.jpg",
+      src: "/images/destination-slug/gallery1.webp",
       caption: "Gallery image 1 description"
     },
     {
-      src: "/images/destination-slug/gallery2.jpg",
+      src: "/images/destination-slug/gallery2.webp",
       caption: "Gallery image 2 description"
     }
   ]

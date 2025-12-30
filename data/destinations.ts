@@ -16,7 +16,7 @@ export const DESTINATIONS: Destination[] = [
     category: "Nature",
     excerpt:
       "A vast salt desert that glows under the moonlight and stretches endlessly across Gujarat’s western edge.",
-    heroImage: "/images/white-rann-hero.jpg",
+    heroImage: "/images/white-rann-hero.webp",
     bestTime: "November to February",
     content: `
       <p>The White Rann is Kutch’s signature landscape — a surreal salt desert that reflects the sky like a mirror. 
@@ -38,7 +38,7 @@ export const DESTINATIONS: Destination[] = [
     category: "Coastal Kutch",
     excerpt:
       "Golden sands, calm tides, and the charm of an old port town with palaces and shipyards.",
-    heroImage: "/images/mandvi.jpg",
+    heroImage: "/images/mandvi.webp",
     bestTime: "October to March",
     content: `
       <p>Mandvi sits where the desert meets the sea. It’s known for its quiet beaches, wind farms, and 
@@ -60,7 +60,7 @@ export const DESTINATIONS: Destination[] = [
     category: "Heritage",
     excerpt:
       "A cultural capital with palaces, temples, markets, and living crafts in every lane.",
-    heroImage: "/images/bhuj.jpg",
+    heroImage: "/images/bhuj.webp",
     bestTime: "October to February",
     content: `
       <p>Bhuj blends old-world grandeur and resilience. Visit Aina Mahal and Prag Mahal for their Indo-European 
@@ -80,7 +80,7 @@ export const DESTINATIONS: Destination[] = [
     category: "Heritage",
     excerpt:
       "One of the world’s oldest Harappan archaeological sites, perfectly preserved in the Rann’s silence.",
-    heroImage: "/images/dholavira.jpg",
+    heroImage: "/images/dholavira.webp",
     bestTime: "November to February",
     content: `
       <p>Dholavira tells stories older than time. Its excavated ruins reveal planned streets, water systems, and 
@@ -102,7 +102,7 @@ export const DESTINATIONS: Destination[] = [
     category: "Nature",
     excerpt:
       "Kutch’s highest point offering surreal desert panoramas and magnetic hills.",
-    heroImage: "/images/kala-dungar.jpg",
+    heroImage: "/images/kala-dungar.webp",
     bestTime: "Year-round",
     content: `
       <p>Kala Dungar stands 460 meters above the Rann, offering spectacular views of the white desert below. 
@@ -123,7 +123,7 @@ export const DESTINATIONS: Destination[] = [
     category: "Scenic Route",
     excerpt:
       "The famous straight highway through the Rann — pure horizon, perfect symmetry, endless sky.",
-    heroImage: "/images/road-to-heaven.jpg",
+    heroImage: "/images/road-to-heaven.webp",
     bestTime: "October to February",
     content: `
       <p>This stretch near Dhordo earned its nickname for good reason. A perfectly straight blacktop slicing through 
@@ -143,7 +143,7 @@ export const DESTINATIONS: Destination[] = [
     category: "Religious",
     excerpt:
       "Spiritual heart of Kutch — the centuries-old Ashapura Mata temple drawing pilgrims from across Gujarat.",
-    heroImage: "/images/mata-na-madh.jpg",
+    heroImage: "/images/mata-na-madh.webp",
     bestTime: "All year",
     content: `
       <p>The Ashapura Mata temple at Mata na Madh has been a pilgrimage center for over a thousand years. 
@@ -163,7 +163,7 @@ export const DESTINATIONS: Destination[] = [
     category: "Nature & Heritage",
     excerpt:
       "Ancient Buddhist caves carved into a hill near Zinzuwada — serenity meets mystery.",
-    heroImage: "/images/kadia-dhrow.jpg",
+    heroImage: "/images/kadia-dhrow.webp",
     bestTime: "October to March",
     content: `
       <p>Kadia Dhrow hides rock-cut caves dating back to the 3rd century. With stone pillars, meditation cells, and 

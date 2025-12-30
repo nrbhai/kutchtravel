@@ -11,7 +11,7 @@ export default function SudiChappuPage() {
     slug: "sudi-chappu",
     title: "Sudi Chappu",
     subtitle: "Traditional Knife Making Art",
-    image: "/images/crafts/sudi/sudi-hero.jpg",
+    image: "/images/crafts/sudi/sudi-hero.webp",
     imageFit: "contain" as "contain",
     icon: "🔪",
     category: "Metalwork",
@@ -103,11 +103,11 @@ export default function SudiChappuPage() {
     ],
     
     gallery: [
-      { src: "/images/crafts/sudi/Sudi1.jpeg", caption: "Traditional Anjar Knife" },
-      { src: "/images/crafts/sudi/sudi-hero.jpg", caption: "Collection of Knives" },
-      { src: "/images/crafts/sudi/sudi2.jpeg", caption: "Artisan Forging Blade" },
-      { src: "/images/crafts/sudi/sudi3.jpeg", caption: "Detailed Craftsmanship" },
-      { src: "/images/crafts/sudi/sudi4.jpeg", caption: "Blade Detail" },
+      { src: "/images/crafts/sudi/Sudi1.webp", caption: "Traditional Anjar Knife" },
+      { src: "/images/crafts/sudi/sudi-hero.webp", caption: "Collection of Knives" },
+      { src: "/images/crafts/sudi/sudi2.webp", caption: "Artisan Forging Blade" },
+      { src: "/images/crafts/sudi/sudi3.webp", caption: "Detailed Craftsmanship" },
+      { src: "/images/crafts/sudi/sudi4.webp", caption: "Blade Detail" },
       { src: "/images/crafts/sudi/sudi-5.png", caption: "Forging Process" }
     ]
   };

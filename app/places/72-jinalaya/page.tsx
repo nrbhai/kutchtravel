@@ -54,7 +54,7 @@ export default function Jinalaya72Page() {
         color="bg-orange-50"
         border="border-l-4 border-orange-600 text-orange-800"
         image={{
-          src: "/images/places/72-jinalaya/temple-complex.jpg",
+          src: "/images/places/72-jinalaya/temple-complex.webp",
           alt: "72 Jinalaya temple complex overview"
         }}
       >
@@ -66,7 +66,7 @@ export default function Jinalaya72Page() {
         color="bg-purple-50"
         border="border-l-4 border-purple-600 text-purple-800"
         image={{
-          src: "/images/places/72-jinalaya/marble-architecture.jpg",
+          src: "/images/places/72-jinalaya/marble-architecture.webp",
           alt: "White marble architecture and intricate carvings"
         }}
       >
@@ -85,7 +85,7 @@ export default function Jinalaya72Page() {
         color="bg-blue-50"
         border="border-l-4 border-blue-600 text-blue-800"
         image={{
-          src: "/images/places/72-jinalaya/facilities.jpg",
+          src: "/images/places/72-jinalaya/facilities.webp",
           alt: "Dharamsala and visitor facilities"
         }}
       >
@@ -103,7 +103,7 @@ export default function Jinalaya72Page() {
         color="bg-emerald-50"
         border="border-l-4 border-emerald-600 text-emerald-800"
         image={{
-          src: "/images/places/72-jinalaya/seasonal.jpg",
+          src: "/images/places/72-jinalaya/seasonal.webp",
           alt: "Best season to visit 72 Jinalaya"
         }}
       >
@@ -115,7 +115,7 @@ export default function Jinalaya72Page() {
         color="bg-cyan-50"
         border="border-l-4 border-cyan-600 text-cyan-800"
         image={{
-          src: "/images/places/72-jinalaya/route.jpg",
+          src: "/images/places/72-jinalaya/route.webp",
           alt: "Route to 72 Jinalaya from Mandvi"
         }}
       >
@@ -127,7 +127,7 @@ export default function Jinalaya72Page() {
         color="bg-amber-50"
         border="border-l-4 border-amber-600 text-amber-800"
         image={{
-          src: "/images/places/72-jinalaya/guidelines.jpg",
+          src: "/images/places/72-jinalaya/guidelines.webp",
           alt: "Visitor guidelines and temple etiquette"
         }}
       >

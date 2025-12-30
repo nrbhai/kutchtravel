@@ -10,11 +10,11 @@ export const metadata = {
 
 export default function BandhaniPage() {
   const images = [
-    "/images/crafts/bandhani/bandhani2.jpg",
-    "/images/crafts/bandhani/bandhani3.jpg",
+    "/images/crafts/bandhani/bandhani2.webp",
+    "/images/crafts/bandhani/bandhani3.webp",
     "/images/crafts/bandhani/bandhani4.webp",
-    "/images/crafts/bandhani/bandhani5.jpg",
-    "/images/crafts/bandhani/bandhani1.jpg", 
+    "/images/crafts/bandhani/bandhani5.webp",
+    "/images/crafts/bandhani/bandhani1.webp", 
   ];
 
   const sections = [
@@ -71,7 +71,7 @@ export default function BandhaniPage() {
     "@type": "Article",
     "headline": "Bandhani - Traditional Tie-Dye Art of Kutch",
     "description": "Discover the ancient art of Bandhani tie-dye from Kutch, Gujarat. Learn about traditional techniques, patterns, and master artisans.",
-    "image": "https://kutchtravel.com/images/crafts/bandhani/bandhani1.jpg",
+    "image": "https://kutchtravel.com/images/crafts/bandhani/bandhani1.webp",
     "author": {
       "@type": "Organization",
       "name": "Kutch Travel Guide"
@@ -111,7 +111,7 @@ export default function BandhaniPage() {
       {/* Hero Section */}
       <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
         <Image
-          src="/images/crafts/bandhani/bandhani1.jpg"
+          src="/images/crafts/bandhani/bandhani1.webp"
           alt="Bandhani Craft"
           fill
           className="object-cover"

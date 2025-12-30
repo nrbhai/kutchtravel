@@ -22,11 +22,11 @@ const CraftCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const craftImages = [
-    { src: "/images/crafts/bandhani.jpg", alt: "Bandhani Tie-Dye", caption: "Bandhani - Traditional Tie-Dye", hasImage: true },
-    { src: "/images/crafts/ajrakh.jpg", alt: "Ajrakh Block Printing", caption: "Ajrakh - Block Printing Art", hasImage: true },
-    { src: "/images/crafts/rogan.jpg", alt: "Rogan Art", caption: "Rogan Art - Painted Textiles", hasImage: true },
+    { src: "/images/crafts/bandhani.webp", alt: "Bandhani Tie-Dye", caption: "Bandhani - Traditional Tie-Dye", hasImage: true },
+    { src: "/images/crafts/ajrakh.webp", alt: "Ajrakh Block Printing", caption: "Ajrakh - Block Printing Art", hasImage: true },
+    { src: "/images/crafts/rogan.webp", alt: "Rogan Art", caption: "Rogan Art - Painted Textiles", hasImage: true },
     { src: "/images/crafts/bandhani2.webp", alt: "Bandhani Variants", caption: "Bandhani - Colorful Patterns", hasImage: true },
-    { src: "/images/crafts/rogan2.jpg", alt: "Rogan Art Designs", caption: "Rogan Art - Intricate Designs", hasImage: true },
+    { src: "/images/crafts/rogan2.webp", alt: "Rogan Art Designs", caption: "Rogan Art - Intricate Designs", hasImage: true },
   ];
 
   useEffect(() => {
@@ -91,15 +91,15 @@ const GalleryCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const galleryImages = [
-    { src: "/images/carousel/kutch1.jpg", alt: "Road to Heaven", caption: "Road to Heaven" },
-    { src: "/images/carousel/kutch2.jpg", alt: "Kadiya Dhrow Canyon", caption: "Kadiya Dhrow Canyon" },
-    { src: "/images/carousel/kutch3.jpg", alt: "White Rann at Dhordo", caption: "White Rann - Dhordo" },
-    { src: "/images/carousel/kutch4.jpg", alt: "Bharapar near Bhuj", caption: "Bharapar - Near Bhuj" },
-    { src: "/images/carousel/kutch5.jpg", alt: "Mandvi Road in Bhuj", caption: "Mandvi Road - Bhuj" },
-    { src: "/images/carousel/kutch6.jpg", alt: "Greenland Lake on Mirzapar Road", caption: "Greenland Lake - Mirzapar Road" },
-    { src: "/images/carousel/kutch7.jpg", alt: "Chattradi in Bhuj", caption: "Chattradi, Bhuj" },
-    { src: "/images/carousel/kutch8.jpg", alt: "Greenland Lake on Mirzapar Road", caption: "Greenland Lake - Mirzapar Road" },
-    { src: "/images/carousel/kutch9.jpg", alt: "Afternoon at Mandvi Beach", caption: "Afternoon at Mandvi Beach - Mandvi" },
+    { src: "/images/carousel/kutch1.webp", alt: "Road to Heaven", caption: "Road to Heaven" },
+    { src: "/images/carousel/kutch2.webp", alt: "Kadiya Dhrow Canyon", caption: "Kadiya Dhrow Canyon" },
+    { src: "/images/carousel/kutch3.webp", alt: "White Rann at Dhordo", caption: "White Rann - Dhordo" },
+    { src: "/images/carousel/kutch4.webp", alt: "Bharapar near Bhuj", caption: "Bharapar - Near Bhuj" },
+    { src: "/images/carousel/kutch5.webp", alt: "Mandvi Road in Bhuj", caption: "Mandvi Road - Bhuj" },
+    { src: "/images/carousel/kutch6.webp", alt: "Greenland Lake on Mirzapar Road", caption: "Greenland Lake - Mirzapar Road" },
+    { src: "/images/carousel/kutch7.webp", alt: "Chattradi in Bhuj", caption: "Chattradi, Bhuj" },
+    { src: "/images/carousel/kutch8.webp", alt: "Greenland Lake on Mirzapar Road", caption: "Greenland Lake - Mirzapar Road" },
+    { src: "/images/carousel/kutch9.webp", alt: "Afternoon at Mandvi Beach", caption: "Afternoon at Mandvi Beach - Mandvi" },
   ];
 
   useEffect(() => {
@@ -192,22 +192,22 @@ const destinationCategories: Record<string, string> = {
 // Hero carousel images
 const heroImages = [
   {
-    src: "/images/destinations/white-rann-hero.jpg",
+    src: "/images/destinations/white-rann-hero.webp",
     alt: "The mesmerizing White Rann of Kutch under a starlit sky",
     caption: "White Rann Desert"
   },
   {
-    src: "/images/destinations/bhuj-overview.jpg",
+    src: "/images/destinations/bhuj-overview.webp",
     alt: "Panoramic view of Bhuj city and its heritage",
     caption: "Bhuj Heritage"
   },
   {
-    src: "/images/destinations/mandvi.jpg",
+    src: "/images/destinations/mandvi.webp",
     alt: "The beautiful coastal town of Mandvi",
     caption: "Mandvi"
   },
   {
-    src: "/images/destinations/kalo-dungar.jpg",
+    src: "/images/destinations/kalo-dungar.webp",
     alt: "Panoramic view from Kalo Dungar, the Black Hill",
     caption: "Kalo Dungar"
   }
@@ -389,7 +389,7 @@ export default function Home() {
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.15]">
                  <div className="relative w-[600px] h-[600px] grayscale mix-blend-multiply">
                     <Image
-                       src="/images/logo-v3.jpg"
+                       src="/images/logo-v3.webp"
                        alt="Travel Kutch Watermark"
                        fill
                        className="object-contain"
@@ -419,7 +419,7 @@ export default function Home() {
                   Where salt meets sky, and stories meet silence
                 </span>
                 <span className="block text-sm md:text-base mt-5 font-inter font-medium text-primary">
-                  Practical guides, real photos, and local tips — not tourist brochures.
+                  Your complete Kutch tour guide with real photos and local tips — not just brochures.
                 </span>
               </motion.p>
 
@@ -478,7 +478,7 @@ export default function Home() {
       {/* Feature Tabs Grid Section */}
       <section className="relative -mt-20 mb-12 z-20">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6 lg:gap-8 relative">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 grid-mobile-2 gap-4 md:gap-6 lg:gap-8 relative">
             <Link href="/destinations" 
               className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-yellow-600 via-amber-500 to-yellow-700 backdrop-blur-sm border border-amber-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
               <div className="absolute inset-0 bg-gradient-to-br from-yellow-600 via-amber-600 to-yellow-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
@@ -546,7 +546,7 @@ export default function Home() {
       {/* 2️⃣ Enhanced Explore Kutch Section */}
       <section id="explore-kutch" className="relative overflow-hidden py-12 bg-background">
         {/* Background decorative elements */}
-        <div className="absolute inset-0 bg-[url('/images/noise.jpg')] opacity-[0.05] mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url('/images/noise.webp')] opacity-[0.05] mix-blend-overlay"></div>
         
         <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center">
@@ -631,7 +631,7 @@ export default function Home() {
             whileInView="visible" 
             viewport={{ once: true, margin: "-10% 0px" }} 
             variants={stagger} 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-20 max-w-[120rem] mx-auto px-4 sm:px-8 lg:px-12"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-mobile-1 gap-12 mt-20 max-w-[120rem] mx-auto px-4 sm:px-8 lg:px-12"
           >
             {DESTINATIONS.slice(0, 6).map((destination, index) => {
               // Define unique colors for each card (Dark Theme Adapted)
@@ -860,7 +860,7 @@ export default function Home() {
               <div className="bg-gradient-to-br from-cyan-950/30 to-cyan-900/10 rounded-2xl border border-cyan-800/50 hover:border-cyan-500 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
                 <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl border border-white/5">
                   <Image 
-                    src="/images/crafts/bandhani/bandhani1.jpg" 
+                    src="/images/crafts/bandhani/bandhani1.webp" 
                     alt="Bandhani"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -879,7 +879,7 @@ export default function Home() {
               <div className="bg-gradient-to-br from-blue-950/30 to-blue-900/10 rounded-2xl border border-blue-800/50 hover:border-blue-500 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
                 <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl border border-white/5">
                   <Image 
-                    src="/images/crafts/ajrakh/ajrakh1.jpg" 
+                    src="/images/crafts/ajrakh/ajrakh1.webp" 
                     alt="Ajrakh"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -898,7 +898,7 @@ export default function Home() {
               <div className="bg-gradient-to-br from-indigo-950/30 to-indigo-900/10 rounded-2xl border border-indigo-800/50 hover:border-indigo-500 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
                 <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl border border-white/5">
                   <Image 
-                    src="/images/crafts/rogan/rogan1.jpg" 
+                    src="/images/crafts/rogan/rogan1.webp" 
                     alt="Rogan Art"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -917,7 +917,7 @@ export default function Home() {
               <div className="bg-gradient-to-br from-purple-950/30 to-purple-900/10 rounded-2xl border border-purple-800/50 hover:border-purple-500 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
                 <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl bg-gradient-to-br from-purple-900/50 to-purple-800/50 flex items-center justify-center border border-white/5">
                   <Image 
-                    src="/images/crafts/mirror/mirror1.jpg" 
+                    src="/images/crafts/mirror/mirror1.webp" 
                     alt="Mirror Work"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -936,7 +936,7 @@ export default function Home() {
               <div className="bg-gradient-to-br from-teal-950/30 to-teal-900/10 rounded-2xl border border-teal-800/50 hover:border-teal-500 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
                 <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl border border-white/5">
                   <Image 
-                    src="/images/crafts/sudi/sudi-hero.jpg" 
+                    src="/images/crafts/sudi/sudi-hero.webp" 
                     alt="Sudi Chappu"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -955,7 +955,7 @@ export default function Home() {
               <div className="bg-gradient-to-br from-amber-950/30 to-amber-900/10 rounded-2xl border border-amber-800/50 hover:border-amber-500 transition-all duration-300 overflow-hidden hover:shadow-xl hover:-translate-y-1">
                 <div className="relative aspect-[4/3] overflow-hidden m-3 rounded-xl border border-white/5">
                   <Image 
-                    src="/images/crafts/pottery/pottery1.jpg" 
+                    src="/images/crafts/pottery/pottery1.webp" 
                     alt="Pottery"
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -1012,7 +1012,7 @@ export default function Home() {
 
       {/* Booking Widget Section */}
       <section className="py-16 bg-gradient-to-br from-[#2c3e50] via-[#000000] to-[#2c3e50] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/noise.jpg')] opacity-[0.03] mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url('/images/noise.webp')] opacity-[0.03] mix-blend-overlay"></div>
         <div className="max-w-5xl mx-auto px-4 relative z-10">
            <div className="text-center mb-10">
               <MetallicHeading 
@@ -1213,7 +1213,7 @@ export default function Home() {
                     className="block group relative aspect-video rounded-2xl overflow-hidden shadow-lg cursor-pointer border border-white/10"
                   >
                     <Image 
-                      src="/images/luxury-hotel.jpg" 
+                      src="/images/luxury-hotel.webp" 
                       alt="Luxury Hotels in Bhuj" 
                       fill 
                       className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -1233,7 +1233,7 @@ export default function Home() {
                       className="block group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer border border-white/10"
                     >
                       <Image 
-                        src="/images/homestay-village.jpg" 
+                        src="/images/homestay-village.webp" 
                         alt="Homestays in Bhuj" 
                         fill 
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -1252,7 +1252,7 @@ export default function Home() {
                       className="block group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer border border-white/10"
                     >
                       <Image 
-                        src="/images/desert-camp-tent.jpg" 
+                        src="/images/desert-camp-tent.webp" 
                         alt="Desert Camps in Kutch" 
                         fill 
                         className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -1272,7 +1272,7 @@ export default function Home() {
                     className="block group relative aspect-video rounded-2xl overflow-hidden shadow-lg cursor-pointer border border-white/10"
                   >
                     <Image 
-                      src="/images/heritage-palace.jpg" 
+                      src="/images/heritage-palace.webp" 
                       alt="Heritage Stays in Bhuj" 
                       fill 
                       className="object-cover transition-transform duration-700 group-hover:scale-110"

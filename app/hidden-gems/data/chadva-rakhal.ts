@@ -3,7 +3,7 @@ import type { HiddenGem } from "./index";
 export const chadvaRakhal: HiddenGem = {
   slug: "chadva-rakhal",
   title: "Chadva Rakhal — The Royal Crocodile Forest",
-  image: "/images/hidden-gems/chadva-rakhal/main.jpg",
+  image: "/images/hidden-gems/chadva-rakhal/main.webp",
   difficulty: "Easy",
   type: "Nature",
   discoveryLevel: "Local Favorite",
@@ -60,9 +60,9 @@ export const chadvaRakhal: HiddenGem = {
     "No littering allowed."
   ],
   gallery: [
-    { src: "/images/hidden-gems/chadva-rakhal/main.jpg", caption: "Pragsar Lake - The heart of Chadva Rakhal" },
-    { src: "/images/hidden-gems/chadva-rakhal/croc.jpg", caption: "A Mugger Crocodile basking in the sun" },
-    { src: "/images/hidden-gems/chadva-rakhal/forest.jpg", caption: "Dense forest canopy of the Rakhal" },
-    { src: "/images/hidden-gems/chadva-rakhal/sunset.jpg", caption: "Tranquil sunset over the lake" }
+    { src: "/images/hidden-gems/chadva-rakhal/main.webp", caption: "Pragsar Lake - The heart of Chadva Rakhal" },
+    { src: "/images/hidden-gems/chadva-rakhal/croc.webp", caption: "A Mugger Crocodile basking in the sun" },
+    { src: "/images/hidden-gems/chadva-rakhal/forest.webp", caption: "Dense forest canopy of the Rakhal" },
+    { src: "/images/hidden-gems/chadva-rakhal/sunset.webp", caption: "Tranquil sunset over the lake" }
   ]
 };

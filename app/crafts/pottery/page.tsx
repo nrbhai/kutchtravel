@@ -11,7 +11,7 @@ export default function PotteryPage() {
     slug: "pottery",
     title: "Kutch Pottery",
     subtitle: "Ancient Terracotta Art & Craft",
-    image: "/images/crafts/pottery/pottery1.jpg",
+    image: "/images/crafts/pottery/pottery1.webp",
     imageFit: "contain" as "contain",
     icon: "🏺",
     category: "Pottery",
@@ -108,10 +108,10 @@ export default function PotteryPage() {
     ],
     
     gallery: [
-      { src: "/images/crafts/pottery/pottery4.jpeg", caption: "Traditional Kutch Pottery" },
-      { src: "/images/crafts/pottery/pottery1.jpg", caption: "Potter at Work on Wheel" },
-      { src: "/images/crafts/pottery/pottery2.JPG", caption: "Terracotta Horse" },
-      { src: "/images/crafts/pottery/pottery3.jpg", caption: "Hand-Painted Vessels" },
+      { src: "/images/crafts/pottery/pottery4.webp", caption: "Traditional Kutch Pottery" },
+      { src: "/images/crafts/pottery/pottery1.webp", caption: "Potter at Work on Wheel" },
+      { src: "/images/crafts/pottery/pottery2.webp", caption: "Terracotta Horse" },
+      { src: "/images/crafts/pottery/pottery3.webp", caption: "Hand-Painted Vessels" },
       { src: "/images/crafts/pottery/pottery-hero.png", caption: "Pottery Collection" }
     ]
   };

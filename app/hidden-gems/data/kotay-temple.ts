@@ -3,7 +3,7 @@ import type { HiddenGem } from "./index";
 export const kotayTemple: HiddenGem = {
   slug: "kotay-temple",
   title: "Surya Mandir Kotay — Archaeological Heritage Site",
-  image: "/images/hidden-gems/kotay-temple/kotay1.jpg",
+  image: "/images/hidden-gems/kotay-temple/kotay1.webp",
   difficulty: "Easy",
   type: "Heritage",
   discoveryLevel: "Local Favorite",
@@ -89,10 +89,10 @@ export const kotayTemple: HiddenGem = {
     "Be mindful of villagers' daily life and privacy"
   ],
   gallery: [
-    { src: "/images/hidden-gems/kotay-temple/kotay1.jpg", caption: "10th century Sun temple ruins at Kotai village" },
-    { src: "/images/hidden-gems/kotay-temple/kotay2.jpg", caption: "Intricate stone carvings and Navagraha sculptures" },
-    { src: "/images/hidden-gems/kotay-temple/kotay3.jpg", caption: "Beautiful flower garden and trees beside the ancient temple complex" },
-    { src: "/images/hidden-gems/kotay-temple/kotay4.jpg", caption: "Multiple temple ruins on the shore of Greater Rann of Kutch" }
+    { src: "/images/hidden-gems/kotay-temple/kotay1.webp", caption: "10th century Sun temple ruins at Kotai village" },
+    { src: "/images/hidden-gems/kotay-temple/kotay2.webp", caption: "Intricate stone carvings and Navagraha sculptures" },
+    { src: "/images/hidden-gems/kotay-temple/kotay3.webp", caption: "Beautiful flower garden and trees beside the ancient temple complex" },
+    { src: "/images/hidden-gems/kotay-temple/kotay4.webp", caption: "Multiple temple ruins on the shore of Greater Rann of Kutch" }
   ]
 };
 

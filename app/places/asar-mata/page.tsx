@@ -15,7 +15,7 @@ export default function AsarMata() {
             color="bg-teal-50"
             border="border-l-4 border-teal-600 text-teal-800"
             image={{
-              src: "/images/places/asar-mata/temple-overview.jpg",
+              src: "/images/places/asar-mata/temple-overview.webp",
               alt: "Asar Mata Temple and surrounding beach area"
             }}
           >
@@ -27,7 +27,7 @@ export default function AsarMata() {
             color="bg-orange-50"
             border="border-l-4 border-orange-600 text-orange-800"
             image={{
-              src: "/images/places/asar-mata/temple-deity.jpg",
+              src: "/images/places/asar-mata/temple-deity.webp",
               alt: "Goddess Asar Mata shrine"
             }}
           >
@@ -45,7 +45,7 @@ export default function AsarMata() {
             color="bg-sky-50"
             border="border-l-4 border-sky-600 text-sky-800"
             image={{
-              src: "/images/places/asar-mata/beach-view.jpg",
+              src: "/images/places/asar-mata/beach-view.webp",
               alt: "Secluded beach near Asar Mata Temple"
             }}
           >
@@ -63,7 +63,7 @@ export default function AsarMata() {
             color="bg-violet-50"
             border="border-l-4 border-violet-600 text-violet-800"
             image={{
-              src: "/images/places/asar-mata/seasonal.jpg",
+              src: "/images/places/asar-mata/seasonal.webp",
               alt: "Best season to visit Asar Mata"
             }}
           >
@@ -75,7 +75,7 @@ export default function AsarMata() {
             color="bg-lime-50"
             border="border-l-4 border-lime-600 text-lime-800"
             image={{
-              src: "/images/places/asar-mata/route.jpg",
+              src: "/images/places/asar-mata/route.webp",
               alt: "Route to Asar Mata from Mandvi"
             }}
           >
@@ -87,7 +87,7 @@ export default function AsarMata() {
             color="bg-pink-50"
             border="border-l-4 border-pink-600 text-pink-800"
             image={{
-              src: "/images/places/asar-mata/facilities.jpg",
+              src: "/images/places/asar-mata/facilities.webp",
               alt: "Visitor facilities at Asar Mata"
             }}
           >

@@ -15,7 +15,7 @@ interface SEOProps {
 export function generateMetadata({
   title,
   description,
-  image = '/images/og-image.jpg',
+  image = '/images/og-image.webp',
   url,
   type = 'website',
   keywords = [],
@@ -117,5 +117,56 @@ export function generateBreadcrumbStructuredData(items: Array<{ name: string; ur
       "name": item.name,
       "item": item.url ? `https://kutchtravel.com${item.url}` : undefined
     }))
+  };
+}
+
+export function generateEventStructuredData(event: {
+  name: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+  location: {
+    name: string;
+    address: string;
+  };
+  image: string;
+  offers?: {
+    price: string;
+    currency: string;
+    url: string;
+  };
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": event.name,
+    "startDate": event.startDate,
+    "endDate": event.endDate,
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "location": {
+      "@type": "Place",
+      "name": event.location.name,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": event.location.address,
+        "addressLocality": "Kutch",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN"
+      }
+    },
+    "image": [event.image],
+    "description": event.description,
+    "offers": event.offers ? {
+      "@type": "Offer",
+      "url": event.offers.url,
+      "price": event.offers.price,
+      "priceCurrency": event.offers.currency,
+      "availability": "https://schema.org/InStock"
+    } : undefined,
+    "organizer": {
+      "@type": "Organization",
+      "name": "Kutch Tourism"
+    }
   };
 }

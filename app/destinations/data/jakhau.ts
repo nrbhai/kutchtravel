@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 export const jakhau: Destination = {
   slug: "jakhau",
   title: "Jakhau — Historic Port & Fishing Harbor",
-  image: "/images/jakhau/jakhau1.jpg",
+  image: "/images/jakhau/jakhau1.webp",
   sections: [
     {
       heading: "Category",
@@ -15,7 +15,7 @@ export const jakhau: Destination = {
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Jakhau is a historic port town located in the Abdasa Taluka of Kutch. It is named after the legendary 'Jakh Botera' (72 saints) who are believed to have landed here. Once a bustling trade hub connecting Kutch to Zanzibar and Mumbai, today it is one of Gujarat's busiest fishing harbors and home to a strategic Coast Guard station. The town retains an old-world charm with its weather-beaten boats and rustic coastal life.",
       image: {
-        src: "/images/jakhau/jakhau1.jpg",
+        src: "/images/jakhau/jakhau1.webp",
         alt: "Jakhau Port View"
       }
     },
@@ -25,7 +25,7 @@ export const jakhau: Destination = {
       border: "border-l-4 border-purple-600 text-purple-800",
       content: "The legend of Jakhau revolves around the 72 horse-riding saints (Jakhs) who came from the west (possibly Iran or Byzantium) in the 10th century. They helped the local population fight against the tyrannical ruler Jam Punara. The Jakh Botera temple nearby is a testament to this legend. Historically, Jakhau was a major gateway for spice and textile trade before silting reduced its capacity for large ships.",
       image: {
-        src: "/images/jakhau/jakhau2.jpg",
+        src: "/images/jakhau/jakhau2.webp",
         alt: "Historic Coastline of Jakhau"
       }
     },
@@ -41,7 +41,7 @@ export const jakhau: Destination = {
         "<b>Godia Creek:</b> A scenic creek often visited by migratory birds"
       ],
       image: {
-        src: "/images/jakhau/jakhau1.jpg",
+        src: "/images/jakhau/jakhau1.webp",
         alt: "Main attractions in Jakhau"
       }
     },
@@ -55,7 +55,7 @@ export const jakhau: Destination = {
         "<b>Dried Fish Market:</b> A major center for drying and processing fish for export"
       ],
       image: {
-        src: "/images/jakhau/jakhau2.jpg",
+        src: "/images/jakhau/jakhau2.webp",
         alt: "Fishing culture and food"
       }
     },
@@ -70,7 +70,7 @@ export const jakhau: Destination = {
         "<b>Naliya:</b> 17km - The taluka headquarters known for the Great Indian Bustard Sanctuary"
       ],
       image: {
-        src: "/images/jakhau/jakhau1.jpg", // Reusing placeholder
+        src: "/images/jakhau/jakhau1.webp", // Reusing placeholder
         alt: "Nearby attractions"
       }
     },
@@ -85,7 +85,7 @@ export const jakhau: Destination = {
         "<b>By Bus:</b> GSRTC buses run regularly from Bhuj to Naliya; from Naliya, autorickshaws or shuttles go to Jakhau."
       ],
       image: {
-        src: "/images/jakhau/jakhau2.jpg",
+        src: "/images/jakhau/jakhau2.webp",
         alt: "Transportation to Jakhau"
       }
     },
@@ -99,7 +99,7 @@ export const jakhau: Destination = {
         "<b>Fuel:</b> Fill up at Naliya; limited options at Jakhau."
       ],
       image: {
-        src: "/images/jakhau/jakhau1.jpg",
+        src: "/images/jakhau/jakhau1.webp",
         alt: "Travel guidelines"
       }
     },
@@ -109,7 +109,7 @@ export const jakhau: Destination = {
       border: "border-l-4 border-teal-600 text-teal-800",
       content: "October to March. The weather is pleasant. September marks the Jakh Botera fair, which attracts thousands of pilgrims and is a cultural spectacle.",
       image: {
-        src: "/images/jakhau/jakhau2.jpg",
+        src: "/images/jakhau/jakhau2.webp",
         alt: "Best season to visit"
       }
     },
@@ -122,7 +122,7 @@ export const jakhau: Destination = {
         "<b>Tip:</b> Visit nearby Pingleshwar Beach for a more secluded seaside experience."
       ],
       image: {
-        src: "/images/jakhau/jakhau1.jpg",
+        src: "/images/jakhau/jakhau1.webp",
         alt: "Accommodation options"
       }
     }
@@ -136,7 +136,7 @@ export const jakhau: Destination = {
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d68.6697!3d23.2420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sJakhau%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin",
   gallery: [
-    { src: "/images/jakhau/jakhau1.jpg", caption: "Jakhau Fishing Harbour" },
-    { src: "/images/jakhau/jakhau2.jpg", caption: "Sunset at Jakhau Coast" }
+    { src: "/images/jakhau/jakhau1.webp", caption: "Jakhau Fishing Harbour" },
+    { src: "/images/jakhau/jakhau2.webp", caption: "Sunset at Jakhau Coast" }
   ]
 };

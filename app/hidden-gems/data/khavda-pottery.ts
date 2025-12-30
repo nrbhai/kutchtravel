@@ -3,7 +3,7 @@ import type { HiddenGem } from "./index";
 export const khavdaPottery: HiddenGem = {
   slug: "khavda-pottery",
   title: "Khavda Pottery Village — Living Heritage Craft",
-  image: "/images/hidden-gems/khavda-pottery/khavda1.jpg",
+  image: "/images/hidden-gems/khavda-pottery/khavda1.webp",
   difficulty: "Easy",
   type: "Culture",
   discoveryLevel: "Emerging",
@@ -82,10 +82,10 @@ export const khavdaPottery: HiddenGem = {
     "Purchase authentic pieces to support local economy"
   ],
   gallery: [
-    { src: "/images/hidden-gems/khavda-pottery/khavda1.jpg", caption: "Master potter at work" },
-    { src: "/images/hidden-gems/khavda-pottery/khavda2.jpg", caption: "Traditional pottery kiln" },
-    { src: "/images/hidden-gems/khavda-pottery/khavda3.jpg", caption: "Beautiful handcrafted pottery" },
-    { src: "/images/hidden-gems/khavda-pottery/khavda4.jpg", caption: "Village pottery workshop" }
+    { src: "/images/hidden-gems/khavda-pottery/khavda1.webp", caption: "Master potter at work" },
+    { src: "/images/hidden-gems/khavda-pottery/khavda2.webp", caption: "Traditional pottery kiln" },
+    { src: "/images/hidden-gems/khavda-pottery/khavda3.webp", caption: "Beautiful handcrafted pottery" },
+    { src: "/images/hidden-gems/khavda-pottery/khavda4.webp", caption: "Village pottery workshop" }
   ]
 };
 

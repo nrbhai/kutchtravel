@@ -76,6 +76,9 @@ export const metadata: Metadata = {
     "Kutch photography",
     "Gujarat tourism",
     "Kutch hidden gems",
+    "Kutch tour",
+    "Kutch trip",
+    "Kutch tour packages",
     "Things to do in Kutch"
   ],
   authors: [{ name: "Kutch Travel Guide" }],
@@ -94,7 +97,7 @@ export const metadata: Metadata = {
     siteName: 'Kutch Travel Guide',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/images/og-image.webp',
         width: 1200,
         height: 630,
         alt: 'Kutch Travel Guide - White Rann and Destinations',
@@ -105,7 +108,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Discover Kutch — Beyond the White Desert',
     description: 'Complete travel guide to Kutch, Gujarat. Discover destinations, culture, and hidden gems.',
-    images: ['/images/twitter-card.jpg'],
+    images: ['/images/twitter-card.webp'],
     creator: '@kutchtravel',
   },
   robots: {
@@ -129,6 +132,15 @@ export const metadata: Metadata = {
     },
   },
   category: 'travel',
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Kutch Travel',
+  },
+  formatDetection: {
+    telephone: false,
+  },
 };
 
 export const viewport: Viewport = {
@@ -145,21 +157,8 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="Kutch Travel" />
-        <meta name="application-name" content="Kutch Travel" />
-        <meta name="msapplication-TileColor" content="#0ea5e9" />
-        <meta name="theme-color" content="#0ea5e9" />
-      </head>
-      <body className={`${inter.variable} ${playfair.variable} ${lora.variable} ${dancing.variable} ${spaceGrotesk.variable} ${sora.variable}`}>
+
+      <body suppressHydrationWarning className={`${inter.variable} ${playfair.variable} ${lora.variable} ${dancing.variable} ${spaceGrotesk.variable} ${sora.variable}`}>
         {/* Work in Progress Banner */}
         <div className="bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 text-white py-3 px-4 text-center font-semibold shadow-lg sticky top-0 z-50">
           <p className="text-sm md:text-base">

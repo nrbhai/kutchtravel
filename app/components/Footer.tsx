@@ -30,7 +30,7 @@ export default function Footer() {
               >
                 <div className="mb-6 relative w-[77px] h-[77px] flex-shrink-0 p-2">
                   <Image
-                    src="/images/logo-v3.jpg"
+                    src="/images/logo-v3.webp"
                     alt="Travel Kutch Logo"
                     fill
                     className="object-contain shadow-lg rounded-full"

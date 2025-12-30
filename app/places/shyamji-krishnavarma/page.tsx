@@ -6,7 +6,7 @@ export default function ShyamjiKrishnavarma() {
   return (
     <DestinationTemplate
       title="Shyamji Krishna Varma Memorial - Kranti Tirth"
-      image="/images/places/shyamji-krishnavarma/main.jpg"
+      image="/images/places/shyamji-krishnavarma/main.webp"
       description={
         <div className="space-y-8">
           <SectionCard 
@@ -14,7 +14,7 @@ export default function ShyamjiKrishnavarma() {
             color="bg-red-50"
             border="border-l-4 border-red-600 text-red-800"
             image={{
-              src: "/images/places/shyamji-krishnavarma/memorial-exterior.jpg",
+              src: "/images/places/shyamji-krishnavarma/memorial-exterior.webp",
               alt: "Kranti Tirth memorial exterior"
             }}
           >
@@ -32,7 +32,7 @@ export default function ShyamjiKrishnavarma() {
             color="bg-amber-50"
             border="border-l-4 border-amber-600 text-amber-800"
             image={{
-              src: "/images/places/shyamji-krishnavarma/biography.jpg",
+              src: "/images/places/shyamji-krishnavarma/biography.webp",
               alt: "Life and works of Shyamji Krishna Varma"
             }}
           >
@@ -51,7 +51,7 @@ export default function ShyamjiKrishnavarma() {
             color="bg-blue-50"
             border="border-l-4 border-blue-600 text-blue-800"
             image={{
-              src: "/images/places/shyamji-krishnavarma/india-house-replica.jpg",
+              src: "/images/places/shyamji-krishnavarma/india-house-replica.webp",
               alt: "India House replica at the memorial"
             }}
           >
@@ -70,7 +70,7 @@ export default function ShyamjiKrishnavarma() {
             color="bg-green-50"
             border="border-l-4 border-green-600 text-green-800"
             image={{
-              src: "/images/places/shyamji-krishnavarma/historical-exhibits.jpg",
+              src: "/images/places/shyamji-krishnavarma/historical-exhibits.webp",
               alt: "Historical exhibits and documents"
             }}
           >
@@ -88,7 +88,7 @@ export default function ShyamjiKrishnavarma() {
             color="bg-purple-50"
             border="border-l-4 border-purple-600 text-purple-800"
             image={{
-              src: "/images/places/shyamji-krishnavarma/seasonal.jpg",
+              src: "/images/places/shyamji-krishnavarma/seasonal.webp",
               alt: "Memorial during the best visiting season"
             }}
           >
@@ -105,7 +105,7 @@ export default function ShyamjiKrishnavarma() {
             color="bg-cyan-50"
             border="border-l-4 border-cyan-600 text-cyan-800"
             image={{
-              src: "/images/places/shyamji-krishnavarma/visitor-facilities.jpg",
+              src: "/images/places/shyamji-krishnavarma/visitor-facilities.webp",
               alt: "Visitor facilities and entrance"
             }}
           >

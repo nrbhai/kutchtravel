@@ -14,7 +14,7 @@ export default function GangeshwarMahadev() {
             color="bg-orange-50"
             border="border-l-4 border-orange-600 text-orange-800"
             image={{
-              src: "/images/places/gangeshwar-mahadev/temple-hill.jpg",
+              src: "/images/places/gangeshwar-mahadev/temple-hill.webp",
               alt: "Gangeshwar Mahadev temple on hill"
             }}
           >
@@ -31,7 +31,7 @@ export default function GangeshwarMahadev() {
             color="bg-purple-50"
             border="border-l-4 border-purple-600 text-purple-800"
             image={{
-              src: "/images/places/gangeshwar-mahadev/temple-deity.jpg",
+              src: "/images/places/gangeshwar-mahadev/temple-deity.webp",
               alt: "Lord Shiva temple"
             }}
           >
@@ -49,7 +49,7 @@ export default function GangeshwarMahadev() {
             color="bg-green-50"
             border="border-l-4 border-green-600 text-green-800"
             image={{
-              src: "/images/places/gangeshwar-mahadev/trekking-path.jpg",
+              src: "/images/places/gangeshwar-mahadev/trekking-path.webp",
               alt: "Trekking trails to the temple"
             }}
           >
@@ -67,7 +67,7 @@ export default function GangeshwarMahadev() {
             color="bg-blue-50"
             border="border-l-4 border-blue-600 text-blue-800"
             image={{
-              src: "/images/places/gangeshwar-mahadev/seasonal-view.jpg",
+              src: "/images/places/gangeshwar-mahadev/seasonal-view.webp",
               alt: "Temple during the best season"
             }}
           >
@@ -83,7 +83,7 @@ export default function GangeshwarMahadev() {
             color="bg-cyan-50"
             border="border-l-4 border-cyan-600 text-cyan-800"
             image={{
-              src: "/images/places/gangeshwar-mahadev/route.jpg",
+              src: "/images/places/gangeshwar-mahadev/route.webp",
               alt: "Route to Gangeshwar Mahadev"
             }}
           >
@@ -95,7 +95,7 @@ export default function GangeshwarMahadev() {
             color="bg-amber-50"
             border="border-l-4 border-amber-600 text-amber-800"
             image={{
-              src: "/images/places/gangeshwar-mahadev/visitor-tips.jpg",
+              src: "/images/places/gangeshwar-mahadev/visitor-tips.webp",
               alt: "Visitor information and tips"
             }}
           >

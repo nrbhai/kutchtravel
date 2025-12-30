@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 export const bhadreshwar: Destination = {
   slug: "bhadreshwar",
   title: "Bhadreshwar Jain Temple",
-  image: "/images/bhadreshwar/bhadreshwar1.jpg",
+  image: "/images/bhadreshwar/bhadreshwar1.webp",
   sections: [
     {
       heading: "Category",
@@ -13,7 +13,7 @@ export const bhadreshwar: Destination = {
       heading: "Significance",
       content: "Ancient Jain architecture, Vasai Jain Tirth, and historical significance.",
       image: {
-        src: "/images/bhadreshwar/bhadreshwar2.jpg",
+        src: "/images/bhadreshwar/bhadreshwar2.webp",
         alt: "Bhadreshwar Jain Temple"
       }
     },
@@ -63,7 +63,7 @@ export const bhadreshwar: Destination = {
       caption: "Main Temple Structure"
     },
     {
-      src: "/images/bhadreshwar/bhadreshwar2.jpg",
+      src: "/images/bhadreshwar/bhadreshwar2.webp",
       caption: "Temple Architecture Details"
     }
   ]

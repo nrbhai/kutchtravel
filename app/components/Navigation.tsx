@@ -71,7 +71,7 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
           <Link href="/" className="group flex items-center space-x-3">
             <div className="relative w-14 h-14 flex-shrink-0 p-1 overflow-visible transition-transform duration-300 group-hover:scale-110">
               <Image
-                src="/images/logo-v3.jpg"
+                src="/images/logo-v3.webp"
                 alt="Travel Kutch Logo"
                 fill
                 className="object-contain shadow-sm rounded-lg"
@@ -87,15 +87,14 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
           </Link>
 
           {/* Nav Links - Desktop */}
-          <div className="hidden lg:flex items-center space-x-1">
+          <div className="hidden lg:flex nav-desktop items-center space-x-1">
             {[
               { name: 'Home', href: '/', icon: Home },
               { name: 'Destinations', href: '/destinations', icon: MapPin },
-              { name: 'Hidden Gems', href: '/hidden-gems', icon: Sparkles },
-              { name: 'History', href: '/history', icon: Castle },
-              { name: 'Bookings', href: '/bookings', icon: Calendar },
-              { name: 'Blog', href: '/blog', icon: BookOpen },
-              { name: 'About', href: '/about', icon: Users },
+              { name: 'Festivals', href: '/festivals', icon: Sparkles },
+              { name: 'Culture', href: '/culture', icon: Users },
+              { name: 'Food', href: '/food', icon: Users },
+              { name: 'Itineraries', href: '/plan', icon: MapPin },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -115,7 +114,7 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
           <div className="flex items-center space-x-4">
             
             {/* Mobile Menu Button */}
-            <Menu as="div" className="lg:hidden relative">
+            <Menu as="div" className="lg:hidden nav-mobile-trigger relative">
               {({ open }) => (
                 <>
                   <MenuButton
@@ -161,10 +160,10 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
                           {[
                             { name: 'Home', href: '/', icon: Home },
                             { name: 'Destinations', href: '/destinations', icon: MapPin },
-                            { name: 'Hidden Gems', href: '/hidden-gems', icon: Sparkles },
-                            { name: 'History', href: '/history', icon: Castle },
-                            { name: 'Bookings', href: '/bookings', icon: Calendar },
-                            { name: 'Blog', href: '/blog', icon: BookOpen },
+                            { name: 'Festivals', href: '/festivals', icon: Sparkles },
+                            { name: 'Culture', href: '/culture', icon: Users },
+                            { name: 'Food', href: '/food', icon: Users },
+                            { name: 'Itineraries', href: '/plan', icon: MapPin },
                             { name: 'About', href: '/about', icon: Users },
                           ].map((item) => (
                             <MenuItem key={item.href}>

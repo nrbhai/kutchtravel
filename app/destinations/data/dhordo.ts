@@ -4,156 +4,149 @@ import type { Destination } from "./index";
 export const dhordo: Destination = {
   slug: "dhordo-white-rann",
     title: "Dhordo — Gateway to the White Desert",
-  image: "/images/dhordo-white-rann/dhordo-main.jpg",
+  image: "/images/dhordo-white-rann/dhordo-main.webp",
   sections: [
     {
-      heading: "Category",
-      content: "White Desert"
-    },
-    {
-      heading: "The White Desert Village",
-      color: "bg-blue-50",
-      border: "border-l-4 border-blue-600 text-blue-800",
-      content: "Dhordo serves as the main gateway to the famous White Rann of Kutch, offering visitors their first glimpse of the surreal salt desert. This small village transforms into a bustling festival ground during Rann Utsav, with luxury tents and cultural performances under the starlit sky.",
+      heading: "Overview",
+      content: "Dhordo is the gateway to the world-famous White Rann of Kutch—a vast salt marsh that transforms into a shimmering surreal landscape under the moonlight. Once a quiet hamlet, it is now the epicenter of the Rann Utsav (Nov-Feb), hosting the magnificent Tent City. Whether you want to witness a sunrise where the salt meets the sky or experience Kutchi culture at its vibrant best, Dhordo is the place to be. It serves as both a destination and a base for exploring the northern desert region.",
       image: {
-        src: "/images/dhordo-white-rann/overview.jpg",
-        alt: "Overview of Dhordo — Gateway to the White Desert"
+        src: "/images/dhordo-white-rann/overview.webp",
+        alt: "Panoramic view of White Rann salt desert at sunset"
       }
     },
     {
-      heading: "History",
-      color: "bg-purple-50",
-      border: "border-l-4 border-purple-600 text-purple-800",
-      content: "Dhordo has been a traditional stopping point for travelers crossing the Rann for centuries. The village gained prominence when it became the official venue for Rann Utsav in 2006, transforming from a simple desert settlement into a world-class tourism destination.",
-      image: {
-        src: "/images/dhordo-white-rann/history.jpg",
-        alt: "Historical view of Dhordo — Gateway to the White Desert"
-      }
-    },
-    {
-      heading: "Places of Interest",
-      color: "bg-amber-50",
-      border: "border-l-4 border-amber-600 text-amber-800",
-      list: [
-        "<b>White Rann:</b> Vast salt desert stretching to the horizon",
-        "<b>Rann Utsav Tent City:</b> Luxury accommodation during the festival",
-        "<b>Sunset Point:</b> Perfect spot for watching the sun set over the salt flats",
-        "<b>Full Moon Viewing:</b> Magical experience during full moon nights",
-        "<b>Cultural Performances:</b> Traditional dance and music shows",
-        "<b>Camel Safari:</b> Traditional mode of exploring the desert",
-        "<b>Handicraft Bazaar:</b> Local artisans selling traditional crafts"
-      ],
-      image: {
-        src: "/images/dhordo-white-rann/attractions.jpg",
-        alt: "Main attractions in Dhordo — Gateway to the White Desert"
-      }
-    },
-    {
-      heading: "Food & Crafts",
-      color: "bg-emerald-50",
-      border: "border-l-4 border-emerald-600 text-emerald-800",
-      list: [
-        "<b>Local Food:</b> Traditional Kutchi thali, Bajra roti, and desert specialties",
-        "<b>Rann Utsav Cuisine:</b> Multi-cuisine options during the festival",
-        "<b>Bandhani Textiles:</b> Traditional tie-dye fabrics",
-        "<b>Mirror Work:</b> Intricate embroidery with mirrors",
-        "<b>Wooden Crafts:</b> Traditional furniture and decorative items",
-        "<b>Silver Jewelry:</b> Kutchi silver ornaments and accessories"
-      ],
-      image: {
-        src: "/images/dhordo-white-rann/crafts.jpg",
-        alt: "Traditional crafts and cuisine of Dhordo — Gateway to the White Desert"
-      }
-    },
-    {
-      heading: "Nearby Destinations",
-      color: "bg-indigo-50",
-      border: "border-l-4 border-indigo-600 text-indigo-800",
-      list: [
-        "<b><a href='/places/kalo-dungar' class='text-blue-400 hover:text-blue-300'>Kalo Dungar:</a></b> 48km - Highest point in Kutch with panoramic views",
-        "<b><a href='/places/dholavira' class='text-blue-400 hover:text-blue-300'>Dholavira:</a></b> 88km - Ancient Harappan archaeological site",
-        "<b><a href='/places/bhuj' class='text-blue-400 hover:text-blue-300'>Bhuj:</a></b> 81km - Cultural capital of Kutch",
-        "<b><a href='/places/hodka' class='text-blue-400 hover:text-blue-300'>Hodka Village:</a></b> 15km - Traditional village with mud houses",
-        "<b><a href='/places/road-to-heaven' class='text-blue-400 hover:text-blue-300'>Road to Heaven:</a></b> 54km - Famous straight highway through the Rann"
-      ],
-      image: {
-        src: "/images/dhordo-white-rann/nearby.jpg",
-        alt: "Nearby attractions around Dhordo — Gateway to the White Desert"
-      }
+        heading: "Who Should Visit",
+        color: "bg-pink-50",
+        border: "border-l-4 border-pink-600 text-pink-800",
+        list: [
+            "<b>Photographers:</b> The infinite white horizon offers unique perspective shots.",
+            "<b>Families:</b> The Rann Utsav offers activities like camel cart rides, ATV rides, and cultural shows.",
+            "<b>Couples:</b> Full moon nights on the white desert are incredibly romantic.",
+            "<b>Culture Enthusiasts:</b> A great place to see authentic folk dance, music, and crafts in one place."
+        ]
     },
     {
       heading: "How to Reach",
       color: "bg-cyan-50",
       border: "border-l-4 border-cyan-600 text-cyan-800",
       list: [
-        "<b>By Air:</b> Bhuj Airport (81km) - Nearest airport with domestic flights",
-        "<b>By Rail:</b> Bhuj Railway Station (81km) - Connect via taxi or bus",
-        "<b>By Road:</b> Well-connected by roads, organized tour buses during Rann Utsav",
-        "<b>During Festival:</b> Special shuttle services from Bhuj to Dhordo"
+        "<b>From Bhuj (Nearest City):</b> 81km | 1.5 - 2 Hours. The road is well-maintained tar. Taxis charge ₹2500-3000 for a round trip. ST Buses are available but sparse.",
+        "<b>Access & Permits:</b> A PERMIT IS MANDATORY. Obtain it online at rannpermit.com or at the Bhirandiyara check post (en route).",
+        "<b>During Rann Utsav:</b> Special AC buses run from Bhuj Airport/Railway Station to Dhordo Tent City for booked guests.",
+        "<b>Nearest Transport Hubs:</b> Bhuj Airport (80km) and Bhuj Railway Station (80km)."
       ],
       image: {
-        src: "/images/dhordo-white-rann/transport.jpg",
-        alt: "Transportation hub in Dhordo — Gateway to the White Desert"
+        src: "/images/dhordo-white-rann/transport.webp",
+        alt: "Road leading to the White Rann"
       }
     },
     {
-      heading: "Travel Information",
-      color: "bg-rose-50",
-      border: "border-l-4 border-rose-600 text-rose-800",
+      heading: "Top Things to Do",
+      color: "bg-amber-50",
+      border: "border-l-4 border-amber-600 text-amber-800",
       list: [
-        "<b>Distance from Bhuj:</b> 81km (1.6 hours drive)",
-        "<b>Distance from Ahmedabad:</b> 412km (7.8 hours drive)",
-        "<b>Road Conditions:</b> Good tarmac roads, final stretch through desert",
-        "<b>Fuel Stations:</b> Last petrol pump at Khavda (30km before Dhordo)",
-        "<b>Mobile Network:</b> Limited connectivity, BSNL works best"
+        "<b>White Rann Viewpoint:</b> (Evening/Morning) Walk on the salt crust. Best visited during Sunrise (6:30-7:30 AM) or Sunset (5:30-6:30 PM) for magical colors.",
+        "<b>Full Moon Walk:</b> (Night) If visiting during Full Moon, the desert glows silver. It's a once-in-a-lifetime experience. Open till late night.",
+        "<b>Rann Utsav Activities:</b> (Evening) Enjoy Paramotoring, ATV rides, and Rifle shooting near the Tent City.",
+        "<b>Cultural Shows:</b> (8 PM - 10 PM) Free for Tent City guests, ticketed for others. Witness energetic Garba and Sufi performances.",
+        "<b>Magnetic Hill (Kalo Dungar):</b> (48km away) Combine your trip with the highest point in Kutch."
       ],
       image: {
-        src: "/images/dhordo-white-rann/info.jpg",
-        alt: "Travel information about Dhordo — Gateway to the White Desert"
+        src: "/images/dhordo-white-rann/attractions.webp",
+        alt: "Tourists exploring the White Rann salt flats"
       }
+    },
+    {
+        heading: "Local Tips & Common Mistakes",
+        color: "bg-yellow-50",
+        border: "border-l-4 border-yellow-600 text-yellow-800",
+        list: [
+            "<b>Timing:</b> Do NOT visit in the afternoon (12-4 PM). The blinding white reflection and heat are unbearable.",
+            "<b>Footwear:</b> Wear sandals or washable shoes. The salt can ruin expensive leather.",
+            "<b>Permits:</b> Don't forget your ID proof (physical copy recommended) at the checkpoint.",
+            "<b>Hydration:</b> It's a dry desert; carry plenty of water even in winter."
+        ]
     },
     {
       heading: "Best Time to Visit",
       color: "bg-teal-50",
       border: "border-l-4 border-teal-600 text-teal-800",
-      content: "November to February during Rann Utsav is peak season with perfect weather (5-20°C) and full moon nights. October and March offer good weather but limited facilities. Avoid monsoon (June-September) when area gets flooded and summer (April-May) due to extreme heat.",
+      content: "<strong>November to February (Winter):</strong> The BEST time. Rann Utsav is on, weather is pleasant (10-25°C), and the salt is dry and firm.\n\n<strong>October & March:</strong> Shoulder season. It can get hot during the day. Salt might be slightly wet/slushy.\n\n<strong>April to September (Summer/Monsoon):</strong> CLOSED/NOT RECOMMENDED. The Rann is flooded with water and extremely hot. The 'White' look vanishes.",
       image: {
-        src: "/images/dhordo-white-rann/season.jpg",
-        alt: "Best season to visit Dhordo — Gateway to the White Desert"
+        src: "/images/dhordo-white-rann/season.webp",
+        alt: "Rann Utsav tents under the moonlight"
       }
     },
     {
-      heading: "Accommodation & Local Tips",
-      color: "bg-lime-50",
-      border: "border-l-4 border-lime-600 text-lime-800",
+      heading: "Suggested Itinerary (Day Trip)",
+      color: "bg-indigo-50",
+      border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b>Stay Options:</b> Luxury tent city during Rann Utsav, Hodka village homestays",
-        "<b>Booking:</b> Advance booking essential for Rann Utsav accommodation",
-        "<b>What to Bring:</b> Warm clothes for winter nights, sunscreen, water bottle",
-        "<b>Photography:</b> Best shots during sunrise, sunset, and full moon nights",
-        "<b>Entry Fee:</b> Entry charges apply during Rann Utsav season"
+          "<b>2:00 PM:</b> Depart from Bhuj. Get permit approved online beforehand.",
+          "<b>3:30 PM:</b> Stop at Bhirandiyara for 'Mava' (sweet) tea.",
+          "<b>4:30 PM:</b> Reach Dhordo. Park vehicle. Enter the White Rann.",
+          "<b>5:30 PM:</b> Enjoy Sunset and photography on the salt flats.",
+          "<b>7:00 PM:</b> Enjoy snacks/dinner at the Rann Utsav food court.",
+          "<b>8:30 PM:</b> Drive back to Bhuj (Arrival by 10 PM)."
+      ]
+    },
+    {
+      heading: "Food & Culture",
+      color: "bg-emerald-50",
+      border: "border-l-4 border-emerald-600 text-emerald-800",
+      list: [
+        "<b>Food:</b> The region is strictly vegetarian. Try 'Bajra no Rotlo' with 'Ringan no Olo' at village resorts nearby.",
+        "<b>Crafts:</b> Dhordo and nearby Hodka are famous for 'Mud Work' (Lippan Kaam) and leather embroidery.",
+        "<b>Shopping:</b> The Rann Utsav Craft Bazaar is expensive but has good variety. For better rates, buy from village artisans directly."
       ],
       image: {
-        src: "/images/dhordo-white-rann/accommodation.jpg",
-        alt: "Accommodation options in Dhordo — Gateway to the White Desert"
+        src: "/images/dhordo-white-rann/crafts.webp",
+        alt: "Traditional Kutchi mud work (Lippan Art)"
       }
+    },
+    {
+      heading: "Nearby Destinations",
+      color: "bg-slate-50",
+      border: "border-l-4 border-slate-600 text-slate-800",
+      list: [
+        "<b><a href='/destinations/kalo-dungar' class='text-blue-500 hover:underline'>Kalo Dungar:</a></b> (50km | 1 hr) Panoramic view of the Rann from the top.",
+        "<b>Hodka Village:</b> (15km) Beautiful mud resorts and local crafts.",
+        "<b>Gandhi Nu Gam:</b> (30km) Handicraft village rebuilt after the earthquake."
+      ],
+      image: {
+        src: "/images/dhordo-white-rann/nearby.webp",
+        alt: "Kalo Dungar view point"
+      }
+    },
+    {
+        heading: "Frequently Asked Questions",
+        color: "bg-gray-50",
+        border: "border-l-4 border-gray-600 text-gray-800",
+        list: [
+            "<b>Can I drive my own car on the salt?</b> No, vehicles are not allowed on the salt crust. You must park at the designated area and walk or take a camel cart.",
+            "<b>Is there an entry fee?</b> Yes, apart from the permit, there might be a small parking fee.",
+            "<b>Are washrooms available?</b> Yes, clean portable washrooms are available near the Rann entry point during the festival.",
+            "<b>Is it safe at night?</b> Yes, it is very safe and well-guarded by BSF and local police."
+        ]
     }
   ],
   facts: [
-    "Rann Utsav Duration: November to February",
-    "Best Time: October to March",
-    "Famous for: White salt desert and Rann Utsav festival",
-    "Accommodation: Luxury tents during festival season",
-    "Activities: Camel safari, cultural shows, handicraft shopping"
+    "Ideal For: Families, Photographers, Couples",
+    "Best Time: Nov to Feb (Rann Utsav)",
+    "Permit: MANDATORY (Apply Online)",
+    "Distance: 81km from Bhuj",
+    "Key Event: Full Moon Nights",
+    "Stay: Tents (Dhordo) or Mud Bhungas (Hodka)",
+    "Note: Closed/Flooded in Monsoon"
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d69.6697!3d23.2420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sDhordo%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin",
   gallery: [
-  { src: "/images/dhordo-white-rann/dhordo1.jpg", caption: "White Rann Salt Desert" },
-  { src: "/images/dhordo-white-rann/dhordo2.jpg", caption: "Rann Utsav Tent City" },
-  { src: "/images/dhordo-white-rann/dhordo3.jpg", caption: "Sunset over the White Rann" },
-  { src: "/images/dhordo-white-rann/dhordo4.jpg", caption: "Full Moon Night at Dhordo" },
-  { src: "/images/dhordo-white-rann/dhordo5.jpg", caption: "Cultural Performance" },
-  { src: "/images/dhordo-white-rann/dhordo6.jpg", caption: "Camel Safari in the Desert" }
+  { src: "/images/dhordo-white-rann/dhordo1.webp", caption: "White Rann Salt Desert" },
+  { src: "/images/dhordo-white-rann/dhordo2.webp", caption: "Rann Utsav Tent City" },
+  { src: "/images/dhordo-white-rann/dhordo3.webp", caption: "Sunset over the White Rann" },
+  { src: "/images/dhordo-white-rann/dhordo4.webp", caption: "Full Moon Night at Dhordo" },
+  { src: "/images/dhordo-white-rann/dhordo5.webp", caption: "Cultural Performance" },
+  { src: "/images/dhordo-white-rann/dhordo6.webp", caption: "Camel Safari in the Desert" }
   ]
 };
 

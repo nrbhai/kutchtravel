@@ -107,7 +107,7 @@ export default function NewDestinationPage() {
                 value={formData.image}
                 onChange={(e) => setFormData(prev => ({ ...prev, image: e.target.value }))}
                 className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 dark:text-white"
-                placeholder="/images/dholavira/main.jpg"
+                placeholder="/images/dholavira/main.webp"
               />
             </div>
              <div>

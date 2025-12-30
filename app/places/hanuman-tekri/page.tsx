@@ -14,7 +14,7 @@ export default function HanumanTekri() {
             color="bg-orange-50"
             border="border-l-4 border-orange-600 text-orange-800"
             image={{
-              src: "/images/places/hanuman-tekri/temple-hill.jpg",
+              src: "/images/places/hanuman-tekri/temple-hill.webp",
               alt: "Hanuman Tekri temple on hilltop"
             }}
           >
@@ -32,7 +32,7 @@ export default function HanumanTekri() {
             color="bg-red-50"
             border="border-l-4 border-red-600 text-red-800"
             image={{
-              src: "/images/places/hanuman-tekri/hanuman-deity.jpg",
+              src: "/images/places/hanuman-tekri/hanuman-deity.webp",
               alt: "Lord Hanuman deity"
             }}
           >
@@ -50,7 +50,7 @@ export default function HanumanTekri() {
             color="bg-purple-50"
             border="border-l-4 border-purple-600 text-purple-800"
             image={{
-              src: "/images/places/hanuman-tekri/sunset-views.jpg",
+              src: "/images/places/hanuman-tekri/sunset-views.webp",
               alt: "Sunset views from Hanuman Tekri"
             }}
           >
@@ -68,7 +68,7 @@ export default function HanumanTekri() {
             color="bg-blue-50"
             border="border-l-4 border-blue-600 text-blue-800"
             image={{
-              src: "/images/places/hanuman-tekri/golden-hour.jpg",
+              src: "/images/places/hanuman-tekri/golden-hour.webp",
               alt: "Temple during golden hour"
             }}
           >
@@ -84,7 +84,7 @@ export default function HanumanTekri() {
             color="bg-emerald-50"
             border="border-l-4 border-emerald-600 text-emerald-800"
             image={{
-              src: "/images/places/hanuman-tekri/route-kodki.jpg",
+              src: "/images/places/hanuman-tekri/route-kodki.webp",
               alt: "Route to Kodki village"
             }}
           >
@@ -96,7 +96,7 @@ export default function HanumanTekri() {
             color="bg-amber-50"
             border="border-l-4 border-amber-600 text-amber-800"
             image={{
-              src: "/images/places/hanuman-tekri/visitor-facilities.jpg",
+              src: "/images/places/hanuman-tekri/visitor-facilities.webp",
               alt: "Visitor facilities and information"
             }}
           >

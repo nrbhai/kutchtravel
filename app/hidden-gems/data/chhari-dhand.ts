@@ -3,7 +3,7 @@ import type { HiddenGem } from "./index";
 export const chhariDhand: HiddenGem = {
   slug: "chhari-dhand",
   title: "Chhari Dhand — The Wetland Oasis & Fulay Village",
-  image: "/images/hidden-gems/chhari-dhand/chhari1.jpg",
+  image: "/images/hidden-gems/chhari-dhand/chhari1.webp",
   difficulty: "Moderate",
   type: "Wildlife",
   discoveryLevel: "Local Favorite",
@@ -77,9 +77,9 @@ export const chhariDhand: HiddenGem = {
     "Wetlands can be muddy/slippery"
   ],
   gallery: [
-    { src: "/images/hidden-gems/chhari-dhand/chhari1.jpg", caption: "Thousands of Flamingos painting the water pink" },
-    { src: "/images/hidden-gems/chhari-dhand/chhari2.jpg", caption: "Golden hour over the Banni grasslands" },
-    { src: "/images/hidden-gems/chhari-dhand/chhari3.jpg", caption: "A watchful eagle atop the watchtower" },
-    { src: "/images/hidden-gems/chhari-dhand/chhari4.jpg", caption: "The rugged beauty of Fulay village surroundings" }
+    { src: "/images/hidden-gems/chhari-dhand/chhari1.webp", caption: "Thousands of Flamingos painting the water pink" },
+    { src: "/images/hidden-gems/chhari-dhand/chhari2.webp", caption: "Golden hour over the Banni grasslands" },
+    { src: "/images/hidden-gems/chhari-dhand/chhari3.webp", caption: "A watchful eagle atop the watchtower" },
+    { src: "/images/hidden-gems/chhari-dhand/chhari4.webp", caption: "The rugged beauty of Fulay village surroundings" }
   ]
 };

@@ -13,14 +13,14 @@ import type { Destination } from "./index";
 export const yourDestination: Destination = {
   slug: "your-destination-slug",
   title: "Your Destination — Subtitle",
-  image: "/images/your-destination-slug/main.jpg",
+  image: "/images/your-destination-slug/main.webp",
   sections: [
     {
       heading: "Overview",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
       image: {
-        src: "/images/your-destination-slug/overview.jpg",
+        src: "/images/your-destination-slug/overview.webp",
         alt: "Overview description"
       },
       content: "Main overview content..."
@@ -30,7 +30,7 @@ export const yourDestination: Destination = {
       color: "bg-purple-50",
       border: "border-l-4 border-purple-600 text-purple-800",
       image: {
-        src: "/images/your-destination-slug/history.jpg",
+        src: "/images/your-destination-slug/history.webp",
         alt: "Historical image description"
       },
       content: "Historical content..."
@@ -40,7 +40,7 @@ export const yourDestination: Destination = {
       color: "bg-amber-50",
       border: "border-l-4 border-amber-600 text-amber-800",
       image: {
-        src: "/images/your-destination-slug/attractions.jpg",
+        src: "/images/your-destination-slug/attractions.webp",
         alt: "Key attractions"
       },
       list: [
@@ -53,7 +53,7 @@ export const yourDestination: Destination = {
       color: "bg-emerald-50",
       border: "border-l-4 border-emerald-600 text-emerald-800",
       image: {
-        src: "/images/your-destination-slug/culture.jpg",
+        src: "/images/your-destination-slug/culture.webp",
         alt: "Local culture"
       },
       list: [
@@ -70,7 +70,7 @@ export const yourDestination: Destination = {
         "<b><a href='/places/place-2' class='text-blue-400 hover:text-blue-300'>Place 2:</a></b> Distance and description"
       ],
       image: {
-        src: "/images/your-destination-slug/nearby.jpg",
+        src: "/images/your-destination-slug/nearby.webp",
         alt: "Nearby attractions"
       }
     },
@@ -79,7 +79,7 @@ export const yourDestination: Destination = {
       color: "bg-cyan-50",
       border: "border-l-4 border-cyan-600 text-cyan-800",
       image: {
-        src: "/images/your-destination-slug/transport.jpg",
+        src: "/images/your-destination-slug/transport.webp",
         alt: "Transportation options"
       },
       list: [
@@ -98,11 +98,11 @@ export const yourDestination: Destination = {
   mapUrl: "GOOGLE_MAPS_EMBED_URL",
   gallery: [
     {
-      src: "/images/your-destination-slug/gallery1.jpg",
+      src: "/images/your-destination-slug/gallery1.webp",
       caption: "Gallery image 1 description"
     },
     {
-      src: "/images/your-destination-slug/gallery2.jpg",
+      src: "/images/your-destination-slug/gallery2.webp",
       caption: "Gallery image 2 description"
     }
   ]
@@ -207,14 +207,14 @@ export default function YourDestination() {
 
 1. Create a new folder in `public/images/your-destination-slug/`
 2. Add required images:
-   - main.jpg (hero image)
-   - overview.jpg
-   - history.jpg
-   - attractions.jpg
-   - culture.jpg
-   - nearby.jpg
-   - transport.jpg
-   - gallery1.jpg, gallery2.jpg, etc.
+   - main.webp (hero image)
+   - overview.webp
+   - history.webp
+   - attractions.webp
+   - culture.webp
+   - nearby.webp
+   - transport.webp
+   - gallery1.webp, gallery2.webp, etc.
 
 ## Step 4: Color Scheme Reference
 
@@ -282,7 +282,7 @@ export const DESTINATIONS: Destination[] = [
    - Gallery images: 1280x720px
 
 3. **Format:**
-   - Use .jpg for photographs
+   - Use .webp for photographs
    - Use .png for graphics/illustrations
    - Optimize all images for web
 

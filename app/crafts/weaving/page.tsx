@@ -11,7 +11,7 @@ export default function WeavingPage() {
     slug: "weaving",
     title: "Traditional Weaving",
     subtitle: "Handloom Textiles & Fabric Art",
-    image: "/images/crafts/weaving.jpg",
+    image: "/images/crafts/weaving.webp",
     icon: "🧵",
     category: "Weaving",
     
@@ -128,11 +128,11 @@ export default function WeavingPage() {
     ],
     
     gallery: [
-      { src: "/images/crafts/weaving.jpg", caption: "Traditional Handloom Weaving" },
-      { src: "/images/crafts/weaving-2.jpg", caption: "Weaver Working on Pit Loom" },
-      { src: "/images/crafts/weaving-3.jpg", caption: "Tangaliya Shawl Detail" },
-      { src: "/images/crafts/weaving-4.jpg", caption: "Colorful Woven Textiles" },
-      { src: "/images/crafts/weaving-5.jpg", caption: "Natural Dyed Yarns" }
+      { src: "/images/crafts/weaving.webp", caption: "Traditional Handloom Weaving" },
+      { src: "/images/crafts/weaving-2.webp", caption: "Weaver Working on Pit Loom" },
+      { src: "/images/crafts/weaving-3.webp", caption: "Tangaliya Shawl Detail" },
+      { src: "/images/crafts/weaving-4.webp", caption: "Colorful Woven Textiles" },
+      { src: "/images/crafts/weaving-5.webp", caption: "Natural Dyed Yarns" }
     ]
   };
 

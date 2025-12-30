@@ -66,6 +66,7 @@ export default function GoldenTemplate({ data }: Props) {
           alt={data.title}
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-gray-950"></div>

@@ -4,7 +4,7 @@ export const asarMata: Place = {
   slug: "asar-mata",
   title: "Asar Mata Temple & Beach",
   shortDescription: "Serene temple site with peaceful beach offering spiritual tranquility and natural beauty",
-  image: "/images/places/asar-mata/main.jpg",
+  image: "/images/places/asar-mata/main.webp",
   location: "10-12km from Mandvi",
   distanceFromMandvi: "10-12km northeast",
   parentDestination: "mandvi",
@@ -13,9 +13,9 @@ export const asarMata: Place = {
   bestTimeToVisit: "October to March for comfortable weather. Early morning temple visits followed by beach walks provide the most serene experience.",
   howToReach: "Drive 10-12km northeast from Mandvi via coastal roads. Private vehicle recommended as the location is somewhat remote. The temple and beach are accessed via a short walk from the parking area.",
   gallery: [
-    { src: "/images/places/asar-mata/temple.jpg", caption: "Asar Mata temple overlooking the coast" },
-    { src: "/images/places/asar-mata/beach.jpg", caption: "Tranquil beach near the temple" },
-    { src: "/images/places/asar-mata/devotees.jpg", caption: "Devotees at the sacred shrine" },
-    { src: "/images/places/asar-mata/coastal.jpg", caption: "Pristine coastline view" }
+    { src: "/images/places/asar-mata/temple.webp", caption: "Asar Mata temple overlooking the coast" },
+    { src: "/images/places/asar-mata/beach.webp", caption: "Tranquil beach near the temple" },
+    { src: "/images/places/asar-mata/devotees.webp", caption: "Devotees at the sacred shrine" },
+    { src: "/images/places/asar-mata/coastal.webp", caption: "Pristine coastline view" }
   ]
 };

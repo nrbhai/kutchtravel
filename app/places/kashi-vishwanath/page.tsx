@@ -63,7 +63,7 @@ export default function KashiVishwanath() {
               color="bg-blue-50"
               border="border-l-4 border-blue-600 text-blue-800"
               image={{
-                src: "/images/places/kashi-vishwanath/overview.jpg",
+                src: "/images/places/kashi-vishwanath/overview.webp",
                 alt: "Overview of Kashi Vishwanath Temple and Beach"
               }}
             >
@@ -75,7 +75,7 @@ export default function KashiVishwanath() {
               color="bg-purple-50"
               border="border-l-4 border-purple-600 text-purple-800"
               image={{
-                src: "/images/places/kashi-vishwanath/temple-architecture.jpg",
+                src: "/images/places/kashi-vishwanath/temple-architecture.webp",
                 alt: "Traditional Kutchi temple architecture"
               }}
             >
@@ -93,7 +93,7 @@ export default function KashiVishwanath() {
               color="bg-emerald-50"
               border="border-l-4 border-emerald-600 text-emerald-800"
               image={{
-                src: "/images/places/kashi-vishwanath/beach-view.jpg",
+                src: "/images/places/kashi-vishwanath/beach-view.webp",
                 alt: "Secluded beach with pristine waters"
               }}
             >
@@ -111,7 +111,7 @@ export default function KashiVishwanath() {
               color="bg-amber-50"
               border="border-l-4 border-amber-600 text-amber-800"
               image={{
-                src: "/images/places/kashi-vishwanath/seasonal.jpg",
+                src: "/images/places/kashi-vishwanath/seasonal.webp",
                 alt: "Best season to visit Kashi Vishwanath"
               }}
             >
@@ -123,7 +123,7 @@ export default function KashiVishwanath() {
               color="bg-cyan-50"
               border="border-l-4 border-cyan-600 text-cyan-800"
               image={{
-                src: "/images/places/kashi-vishwanath/route.jpg",
+                src: "/images/places/kashi-vishwanath/route.webp",
                 alt: "Route to Kashi Vishwanath from Mandvi"
               }}
             >
@@ -135,7 +135,7 @@ export default function KashiVishwanath() {
               color="bg-rose-50"
               border="border-l-4 border-rose-600 text-rose-800"
               image={{
-                src: "/images/places/kashi-vishwanath/facilities.jpg",
+                src: "/images/places/kashi-vishwanath/facilities.webp",
                 alt: "Visitor facilities at Kashi Vishwanath"
               }}
             >

@@ -9,10 +9,7 @@ import MetallicHeading from '../../components/MetallicHeading';
 import { getBlogPostBySlug, blogPosts } from '../data';
 import Image from 'next/image';
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-};
+import { fadeUp } from '../../../lib/animations';
 
 // Simple Markdown Renderer Component
 const MarkdownRenderer = ({ content }: { content: string }) => {

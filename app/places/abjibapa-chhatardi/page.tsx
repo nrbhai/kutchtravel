@@ -14,7 +14,7 @@ export default function AbjibapaChhatardi() {
             color="bg-amber-50"
             border="border-l-4 border-amber-600 text-amber-800"
             image={{
-              src: "/images/places/abjibapa-chhatardi/cenotaph-overview.jpg",
+              src: "/images/places/abjibapa-chhatardi/cenotaph-overview.webp",
               alt: "Abjibapa ni Chhatardi cenotaph overview"
             }}
           >
@@ -32,7 +32,7 @@ export default function AbjibapaChhatardi() {
             color="bg-purple-50"
             border="border-l-4 border-purple-600 text-purple-800"
             image={{
-              src: "/images/places/abjibapa-chhatardi/architecture-details.jpg",
+              src: "/images/places/abjibapa-chhatardi/architecture-details.webp",
               alt: "Architectural details of the cenotaph"
             }}
           >
@@ -50,7 +50,7 @@ export default function AbjibapaChhatardi() {
             color="bg-blue-50"
             border="border-l-4 border-blue-600 text-blue-800"
             image={{
-              src: "/images/places/abjibapa-chhatardi/cultural-heritage.jpg",
+              src: "/images/places/abjibapa-chhatardi/cultural-heritage.webp",
               alt: "Cultural heritage site"
             }}
           >
@@ -67,7 +67,7 @@ export default function AbjibapaChhatardi() {
             color="bg-emerald-50"
             border="border-l-4 border-emerald-600 text-emerald-800"
             image={{
-              src: "/images/places/abjibapa-chhatardi/seasonal.jpg",
+              src: "/images/places/abjibapa-chhatardi/seasonal.webp",
               alt: "Best season to visit"
             }}
           >
@@ -84,7 +84,7 @@ export default function AbjibapaChhatardi() {
             color="bg-cyan-50"
             border="border-l-4 border-cyan-600 text-cyan-800"
             image={{
-              src: "/images/places/abjibapa-chhatardi/route.jpg",
+              src: "/images/places/abjibapa-chhatardi/route.webp",
               alt: "Route from Bhuj"
             }}
           >
@@ -100,7 +100,7 @@ export default function AbjibapaChhatardi() {
             color="bg-rose-50"
             border="border-l-4 border-rose-600 text-rose-800"
             image={{
-              src: "/images/places/abjibapa-chhatardi/visitor-info.jpg",
+              src: "/images/places/abjibapa-chhatardi/visitor-info.webp",
               alt: "Visitor information"
             }}
           >

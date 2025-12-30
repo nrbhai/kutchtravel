@@ -84,11 +84,11 @@ function DestinationsClient() {
   // Carousel state
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const carouselImages = [
-    { src: "/images/destinations/white-rann-hero.jpg", alt: "White Rann" },
-    { src: "/images/destinations/bhuj-overview.jpg", alt: "Bhuj Heritage" },
-    { src: "/images/destinations/mandvi.jpg", alt: "Mandvi Beach" },
-    { src: "/images/destinations/kalo-dungar.jpg", alt: "Kalo Dungar" },
-    { src: "/images/carousel/kutch14.jpg", alt: "Kutch Landscape" },
+    { src: "/images/destinations/white-rann-hero.webp", alt: "White Rann" },
+    { src: "/images/destinations/bhuj-overview.webp", alt: "Bhuj Heritage" },
+    { src: "/images/destinations/mandvi.webp", alt: "Mandvi Beach" },
+    { src: "/images/destinations/kalo-dungar.webp", alt: "Kalo Dungar" },
+    { src: "/images/carousel/kutch14.webp", alt: "Kutch Landscape" },
   ];
 
   const [filteredDestinations, setFilteredDestinations] = useState<Destination[]>(DESTINATIONS);

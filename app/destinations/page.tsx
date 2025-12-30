@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'All Destinations in Kutch | Complete Travel Guide',
     description: 'Explore all 12+ destinations in Kutch, Gujarat. From the White Rann to historic Bhuj and pristine beaches.',
-    images: ['/images/destinations-overview.jpg'],
+    images: ['/images/destinations-overview.webp'],
   },
 };
 

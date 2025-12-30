@@ -14,7 +14,7 @@ export function StructuredData() {
         "description": "Complete travel guide to Kutch, Gujarat - Explore White Rann, Bhuj, Mandvi and 12+ destinations",
         "url": "https://kutchtravel.com",
         "logo": "https://kutchtravel.com/images/logo.png",
-        "image": "https://kutchtravel.com/images/og-image.jpg",
+        "image": "https://kutchtravel.com/images/og-image.webp",
         "telephone": "+91-9825034580",
         "email": "info@travelkutch.org",
         "sameAs": [

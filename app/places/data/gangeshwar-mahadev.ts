@@ -4,7 +4,7 @@ export const gangeshwarMahadev: Place = {
   slug: "gangeshwar-mahadev",
   title: "Gangeshwar Mahadev",
   shortDescription: "Hilltop temple offering trekking opportunities and panoramic views of Kutch",
-  image: "/images/places/gangeshwar-mahadev/main.jpg",
+  image: "/images/places/gangeshwar-mahadev/main.webp",
   location: "10km from Bhuj",
   distanceFromBhuj: "10km east",
   parentDestination: "bhuj",
@@ -13,9 +13,9 @@ export const gangeshwarMahadev: Place = {
   bestTimeToVisit: "October to March for comfortable trekking. Early morning visits offer the best views and pleasant climbing conditions. Avoid midday heat during summer months.",
   howToReach: "Drive 10km east from Bhuj, then trek uphill for 20-30 minutes. The initial approach is by vehicle, followed by a moderate trek to reach the temple. Wear comfortable trekking shoes.",
   gallery: [
-    { src: "/images/places/gangeshwar-mahadev/temple.jpg", caption: "Shiva temple atop the hill" },
-    { src: "/images/places/gangeshwar-mahadev/panoramic.jpg", caption: "Panoramic view of Kutch from temple" },
-    { src: "/images/places/gangeshwar-mahadev/trek.jpg", caption: "Trekking path to the temple" },
-    { src: "/images/places/gangeshwar-mahadev/sunset.jpg", caption: "Sunset view from Gangeshwar hill" }
+    { src: "/images/places/gangeshwar-mahadev/temple.webp", caption: "Shiva temple atop the hill" },
+    { src: "/images/places/gangeshwar-mahadev/panoramic.webp", caption: "Panoramic view of Kutch from temple" },
+    { src: "/images/places/gangeshwar-mahadev/trek.webp", caption: "Trekking path to the temple" },
+    { src: "/images/places/gangeshwar-mahadev/sunset.webp", caption: "Sunset view from Gangeshwar hill" }
   ]
 };

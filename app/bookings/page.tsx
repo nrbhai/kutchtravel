@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Book Your Kutch Adventure | Hotels, Flights, Tours & Shopping',
     description: 'Book everything you need for your Kutch trip. Best deals on hotels, flights, tours and travel gear.',
-    images: ['/images/bookings-overview.jpg'],
+    images: ['/images/bookings-overview.webp'],
   },
 };
 

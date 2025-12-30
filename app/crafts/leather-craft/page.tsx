@@ -11,7 +11,7 @@ export default function LeatherCraftPage() {
     slug: "leather-craft",
     title: "Leather Craft",
     subtitle: "Traditional Leatherwork & Mojari Making",
-    image: "/images/crafts/leather-craft.jpg",
+    image: "/images/crafts/leather-craft.webp",
     icon: "👞",
     category: "Leatherwork",
     
@@ -116,11 +116,11 @@ export default function LeatherCraftPage() {
     ],
     
     gallery: [
-      { src: "/images/crafts/leather-craft.jpg", caption: "Traditional Embroidered Mojari" },
-      { src: "/images/crafts/leather-craft-2.jpg", caption: "Artisan Stitching Leather" },
-      { src: "/images/crafts/leather-craft-3.jpg", caption: "Mirror Work Detail" },
-      { src: "/images/crafts/leather-craft-4.jpg", caption: "Leather Bags Collection" },
-      { src: "/images/crafts/leather-craft-5.jpg", caption: "Traditional Leatherworking Tools" }
+      { src: "/images/crafts/leather-craft.webp", caption: "Traditional Embroidered Mojari" },
+      { src: "/images/crafts/leather-craft-2.webp", caption: "Artisan Stitching Leather" },
+      { src: "/images/crafts/leather-craft-3.webp", caption: "Mirror Work Detail" },
+      { src: "/images/crafts/leather-craft-4.webp", caption: "Leather Bags Collection" },
+      { src: "/images/crafts/leather-craft-5.webp", caption: "Traditional Leatherworking Tools" }
     ]
   };
 

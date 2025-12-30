@@ -4,159 +4,146 @@ import type { Destination } from "./index";
 export const mandvi: Destination = {
   slug: "mandvi",
     title: "Mandvi — Where the Desert Meets the Sea",
-  image: "/images/mandvi/mandvi1.jpg",
+  image: "/images/mandvi/mandvi1.webp",
   sections: [
     {
-      heading: "Category",
-      content: "Beach Town"
-    },
-    {
-      heading: "The Jewel of Kutch Coast",
-      color: "bg-blue-50",
-      border: "border-l-4 border-blue-600 text-blue-800",
-      content: "At the magical confluence where the Rukmavati River embraces the Gulf of Kutch, Mandvi unfolds as a coastal gem that has witnessed centuries of maritime glory. This enchanting town, born from the vision of Rao Khengarji I in 1580, once commanded the seas as one of India's most powerful ports, its merchant fleets sailing to distant lands laden with treasures. Today, Mandvi captivates visitors with its unique dual personality—a place where ancient dhow builders still craft vessels using techniques passed down through 400 years, while pristine beaches and royal palaces create an atmosphere of timeless elegance. Here, the rhythmic sound of waves mingles with the hammering of shipwrights, creating a symphony that speaks of Mandvi's enduring love affair with the sea.",
+      heading: "Overview",
+      content: "Mandvi is the only premier beach destination in Kutch, offering a perfect relaxed break from the arid desert landscape. Once a major port for the spice trade, it is now a popular day-trip and weekend getaway from Bhuj (1 hour away). Known for its pristine beaches, the royal Vijay Vilas Palace, and a 400-year-old shipbuilding tradition, Mandvi is where history meets the Arabian Sea. A typical visit lasts 1 to 2 days, making it ideal for unwinding after exploring the White Rann.",
       image: {
-        src: "/images/mandvi/overview.jpg",
-        alt: "Overview of Mandvi — Where the Desert Meets the Sea"
+        src: "/images/mandvi/overview.webp",
+        alt: "Mandvi Beach and Vijay Vilas Palace - The Jewel of Kutch"
       }
     },
     {
-      heading: "History",
-      color: "bg-purple-50",
-      border: "border-l-4 border-purple-600 text-purple-800",
-      content: "Mandvi's maritime saga began when the ambitious Rao Khengarji I recognized this river mouth's strategic potential in 1580, establishing what would become a legendary trading empire. Positioned perfectly where desert caravan routes met ocean highways, Mandvi blossomed into an extraordinary commercial powerhouse. By the 1700s, local merchants commanded an impressive armada of 400 vessels that carried spices, textiles, and precious goods across vast distances to East Africa, the Malabar coast, and the Persian Gulf. Such was Mandvi's prosperity that it actually overshadowed the regional capital Bhuj in terms of wealth and influence. The town's maritime legacy carries a fascinating footnote: Kanji Malam, a skilled navigator from Mandvi, served as the local guide who helped Vasco da Gama navigate to India in 1497—connecting Mandvi to one of history's most pivotal maritime expeditions.",
-      image: {
-        src: "/images/mandvi/history.jpg",
-        alt: "Historical view of Mandvi — Where the Desert Meets the Sea"
-      }
-    },
-    {
-      heading: "Places of Interest",
-      color: "bg-amber-50",
-      border: "border-l-4 border-amber-600 text-amber-800",
-      list: [
-        "<b>Vijay Vilas Palace:</b> Royal palace built in 1920 with Rajput architecture, private beach, and filming location for Hindi movies",
-        "<b>Mandvi Beach:</b> Clean white sandy beach with wooden sailboats and scenic wind farms",
-        "<b>Traditional Shipbuilding Yard:</b> 400-year-old ship construction center where dhows are still built using traditional techniques",
-        "<b>Rukmavati Bridge:</b> Historic 1883 bridge, longest existing structure of its kind in India",
-        "<b><a href='/places/72-jinalaya' class='text-blue-400 hover:text-blue-300'>72 Jinalaya:</a></b> Beautiful Jain temple complex with intricate architecture",
-        "<b>Shyamji Krishna Varma Memorial:</b> Kranti Tirth dedicated to the freedom fighter and scholar",
-        "<b>Topansar Lake:</b> Central city lake attracting thousands of seagulls every winter",
-        "<b>Mandvi Fort:</b> Remains of the original fortified town with 8m high stone walls",
-        "<b>Wind Farms Beach:</b> Asia's first wind mill project from 1983 with scenic coastline views"
-      ],
-      image: {
-        src: "/images/mandvi/attractions.jpg",
-        alt: "Main attractions in Mandvi — Where the Desert Meets the Sea"
-      }
-    },
-    {
-      heading: "Food & Crafts",
-      color: "bg-emerald-50",
-      border: "border-l-4 border-emerald-600 text-emerald-800",
-      list: [
-        "<b>Dabeli - Mandvi's Culinary Gift:</b> Savor the original Kutchi burger created right here in the 1960s by the innovative Keshavji Gabha Chudasama",
-        "<b>Ocean's Fresh Bounty:</b> Indulge in the day's catch of fish, crabs, and Arabian Sea treasures prepared with authentic coastal spices",
-        "<b>Living Shipbuilding Heritage:</b> Witness master craftsmen perpetuating four centuries of dhow-building wisdom using traditional hand tools",
-        "<b>Vibrant Bandhani Artistry:</b> Discover exquisite tie-dye textiles in the colorful stalls of Bandhni Bazaar",
-        "<b>Local Industrial Heritage:</b> Explore traditional bentonite mining and oil production that have sustained local communities",
-        "<b>Textile Legacy:</b> Experience cotton processing and textile production that connects to Mandvi's trading past"
-      ],
-      image: {
-        src: "/images/mandvi/crafts.jpg",
-        alt: "Traditional crafts and cuisine of Mandvi — Where the Desert Meets the Sea"
-      }
-    },
-    {
-      heading: "Nearby Destinations",
-      color: "bg-indigo-50",
-      border: "border-l-4 border-indigo-600 text-indigo-800",
-      list: [
-        "<b><a href='/places/kashi-vishwanath' class='text-blue-400 hover:text-blue-300'>Kashi Vishwanath Temple & Beach:</a></b> 5km - Serene secluded beach with Shiv temple nearby",
-        "<b><a href='/places/vijay-vilas-palace' class='text-blue-400 hover:text-blue-300'>Vijay Vilas Palace:</a></b> 8km - Royal palace with private beach and stunning architecture",
-        "<b><a href='/places/asar-mata' class='text-blue-400 hover:text-blue-300'>Asar Mata Temple & Beach:</a></b> 10-12km - Serene and secluded temple site with peaceful beach",
-        "<b><a href='/places/72-jinalaya' class='text-blue-400 hover:text-blue-300'>72 Jinalaya:</a></b> 2km - Beautiful Jain temple complex with intricate architecture",
-        "<b>Maska:</b> 25km - Coastal village with traditional crafts and local culture",
-        "<b><a href='/places/shyamji-krishnavarma' class='text-blue-400 hover:text-blue-300'>Shyamji Krishnavarma Memorial:</a></b> 3km - Kranti Tirth dedicated to the freedom fighter and scholar",
-        "<b><a href='/places/ravalpir' class='text-blue-400 hover:text-blue-300'>Ravalpir Temple & Beach:</a></b> 15km - Sacred temple rebuilt in 1819 with clean beach nearby"
-      ],
-      image: {
-        src: "/images/mandvi/nearby.jpg",
-        alt: "Nearby attractions around Mandvi — Where the Desert Meets the Sea"
-      }
+        heading: "Who Should Visit",
+        color: "bg-pink-50",
+        border: "border-l-4 border-pink-600 text-pink-800",
+        list: [
+            "<b>Families:</b> Safe beaches with camel rides and water sports keep kids entertained.",
+            "<b>Couples:</b> Romantic sunsets at the Wind Farm Beach and royal palace vibes.",
+            "<b>History Buffs:</b> The living heritage of the Dhow shipbuilding yard is fascinating.",
+            "<b>Relaxed Travelers:</b> Anyone looking to escape the desert heat and chill by the ocean."
+        ]
     },
     {
       heading: "How to Reach",
       color: "bg-cyan-50",
       border: "border-l-4 border-cyan-600 text-cyan-800",
       list: [
-        "<b>By Air:</b> Bhuj Airport (58km) - Daily flights from Mumbai, Delhi, Ahmedabad",
-        "<b>By Rail:</b> Nearest station is Bhuj (58km) - No direct rail connectivity to Mandvi",
-        "<b>By Road:</b> Well-connected by highways from Bhuj, Gandhidham, and other major cities",
-        "<b>Local Transport:</b> Auto-rickshaws, taxis, and rental vehicles available"
+        "<b>From Bhuj (Most Popular):</b> 58km | 1 hr 15 mins. The road is excellent (NH 341). State buses run every 30 mins, but a private taxi (₹1500-2000 return) allows you to stop at places en route.",
+        "<b>From Gandhidham:</b> 100km | 2 hours. Good for those arriving by train to Gandhidham.",
+        "<b>By Air/Train:</b> Nearest airport and railway station are in Bhuj. No direct flights/trains to Mandvi.",
+        "<b>Local Transport:</b> Auto-rickshaws are the best way to get around Mandvi town (₹50-100 per ride)."
       ],
       image: {
-        src: "/images/mandvi/transport.jpg",
-        alt: "Transportation hub in Mandvi — Where the Desert Meets the Sea"
+        src: "/images/mandvi/transport.webp",
+        alt: "Road to Mandvi - Scenic coastal drive"
       }
     },
     {
-      heading: "Travel Information",
-      color: "bg-rose-50",
-      border: "border-l-4 border-rose-600 text-rose-800",
+      heading: "Top Things to Do",
+      color: "bg-amber-50",
+      border: "border-l-4 border-amber-600 text-amber-800",
       list: [
-        "<b>Distance from Bhuj Airport:</b> 58km (approximately 1.2 hours drive)",
-        "<b>Distance from Bhuj city:</b> 58km south of Bhuj (1.2 hours drive)",
-        "<b>Distance from Ahmedabad:</b> 382km (approximately 7.5 hours drive)",
-        "<b>Distance from Gandhidham:</b> 101km (approximately 2 hours drive)",
-        "<b>Coordinates:</b> Located at 22.83°N 69.36°E where Rukmavati River meets Gulf of Kutch"
+        "<b>Vijay Vilas Palace:</b> (1-2 Hours) Visit in the afternoon (3 PM - 5 PM) to see the royal grandeur. Famous for 'Hum Dil De Chuke Sanam' shoot. Entry: ₹50. Phone cameras allowed.",
+        "<b>Mandvi Wind Farm Beach:</b> (Evening) The best sunset point. Enjoy camel rides, horse rides, and street food. It gets crowded on weekends, so go a bit further down for peace.",
+        "<b>Shipbuilding Yard:</b> (30-45 Mins) Visit in the morning. Watch craftsmen build massive wooden ships by hand on the banks of Rukmavati River. Free to watch from the bridge.",
+        "<b>72 Jinalaya:</b> (45 Mins) A stunning Jain temple complex 10km from town. Best visited on the way to/from Mundra. Peaceful and photogenic architecture.",
+        "<b>Shyamji Krishna Varma Memorial:</b> (1 Hour) Interactive museum dedicated to the freedom fighter. Great for history lovers. Closed on Thursdays."
       ],
       image: {
-        src: "/images/mandvi/info.jpg",
-        alt: "Travel information about Mandvi — Where the Desert Meets the Sea"
+        src: "/images/mandvi/attractions.webp",
+        alt: "Tourists enjoying Mandvi Beach"
       }
+    },
+    {
+        heading: "Local Tips & Common Mistakes",
+        color: "bg-yellow-50",
+        border: "border-l-4 border-yellow-600 text-yellow-800",
+        list: [
+            "<b>Timing:</b> Don't visit the beach at noon (12-3 PM); it's too hot. Mornings and evenings are perfect.",
+            "<b>Palace:</b> The Vijay Vilas Palace closes strictly at 6 PM. Arrive by 4:30 PM to enjoy it fully.",
+            "<b>Swimming:</b> Mandvi beaches are generally safe, but avoid swimming near the rocky patches. The wind farm beach has strong breezes.",
+            "<b>Food:</b> Don't leave without eating Dabeli at a local street stall (e.g., Joshi's) - it tastes different here!"
+        ]
     },
     {
       heading: "Best Time to Visit",
       color: "bg-teal-50",
       border: "border-l-4 border-teal-600 text-teal-800",
-      content: "Plan your coastal escape between October and March when Mandvi transforms into a seaside paradise with comfortable temperatures ranging from 14-34°C. The town's location along the Arabian Sea creates a more moderate climate than the harsh inland desert, though it still experiences the characteristic unpredictability of coastal weather—annual rainfall averages 538mm but can swing dramatically from a parched 1.1mm to a deluge of 1,635mm depending on monsoon patterns. Summer months from March to June bring intense heat reaching 43°C, while the monsoon season from June to September delivers refreshing but sometimes heavy rainfall that brings the landscape to vibrant life.",
+      content: "<strong>October to March (Winter):</strong> Best time. Days are pleasant (20-30°C) and evenings are cool. Perfect for beach activities.\n\n<strong>April to June (Summer):</strong> Hot and humid. Day temps hit 35-40°C. Good for evening beach walks but avoid day sightseeing.\n\n<strong>July to September (Monsoon):</strong> Mandvi looks beautiful with green surroundings and dramatic clouds, but swimming is restricted due to rough seas.",
       image: {
-        src: "/images/mandvi/season.jpg",
-        alt: "Best season to visit Mandvi — Where the Desert Meets the Sea"
+        src: "/images/mandvi/season.webp",
+        alt: "Mandvi beach during winter sunset"
       }
     },
     {
-      heading: "Accommodation & Local Tips",
-      color: "bg-lime-50",
-      border: "border-l-4 border-lime-600 text-lime-800",
+      heading: "Suggested Itinerary (1 Day)",
+      color: "bg-indigo-50",
+      border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b>Accommodation Variety:</b> Choose from charming beach resorts, heritage properties, comfortable guesthouses, and budget-friendly options",
-        "<b>Community Spirit:</b> Experience the warmth of approximately 51,000 residents, primarily Hindu with a vibrant Jain community",
-        "<b>Language Bridge:</b> Enjoy easy communication with locals speaking Gujarati, Hindi, Kutchi, and English in tourist areas",
-        "<b>Shopping Treasures:</b> Browse authentic handicrafts, stunning Bandhani textiles, and miniature ship models at the bustling Bandhni Bazaar",
-        "<b>Peaceful Environment:</b> Relax in this generally safe destination while following common-sense travel precautions"
+          "<b>10:00 AM:</b> Arrive in Mandvi. Visit the Shipbuilding Yard.",
+          "<b>11:30 AM:</b> Explore Shyamji Krishna Varma Memorial.",
+          "<b>01:00 PM:</b> Authentic Gujarati Thali lunch at Osho or a local dining hall.",
+          "<b>03:30 PM:</b> Head to Vijay Vilas Palace. Explore the interiors and royal grounds.",
+          "<b>05:30 PM:</b> Reach Wind Farm Beach. Enjoy water sports, sunset, and Dabeli for a snack.",
+          "<b>07:30 PM:</b> Return to Bhuj."
+      ]
+    },
+    {
+      heading: "Food & Culture",
+      color: "bg-emerald-50",
+      border: "border-l-4 border-emerald-600 text-emerald-800",
+      list: [
+        "<b>Dabeli:</b> Mandvi is the BIRTHPLACE of Dabeli. Try the authentic version which is less sweet and more spicy than elsewhere.",
+        "<b>Kutchi Thali:</b> Unlimited vegetarian meal. Try 'Rotla' (millet bread) with 'Olo' (roasted eggplant).",
+        "<b>Bandhani:</b> Mandvi has a small but authentic Bandhani manufacturing community. Prices here can be lower than Bhuj."
       ],
       image: {
-        src: "/images/mandvi/accommodation.jpg",
-        alt: "Accommodation options in Mandvi — Where the Desert Meets the Sea"
+        src: "/images/mandvi/crafts.webp",
+        alt: "Famous Kutchi Dabeli of Mandvi"
       }
+    },
+    {
+      heading: "Nearby Destinations",
+      color: "bg-slate-50",
+      border: "border-l-4 border-slate-600 text-slate-800",
+      list: [
+        "<b><a href='/destinations/mundra' class='text-blue-500 hover:underline'>Mundra:</a></b> (45km | 1 hr) Historic port town with colonial charm.",
+        "<b><a href='/places/72-jinalaya' class='text-blue-500 hover:underline'>72 Jinalaya:</a></b> (10km | 20 mins) A must-visit detour for architecture lovers.",
+        "<b>Ambe Dham:</b> (20km) A large temple complex worth a quick stop."
+      ],
+      image: {
+        src: "/images/mandvi/nearby.webp",
+        alt: "Nearby scenic spots around Mandvi"
+      }
+    },
+    {
+        heading: "Frequently Asked Questions",
+        color: "bg-gray-50",
+        border: "border-l-4 border-gray-600 text-gray-800",
+        list: [
+            "<b>Is one day enough for Mandvi?</b> Yes, you can cover all major spots (Palace, Beach, Shipyard) in a relaxed day trip from Bhuj.",
+            "<b>Can we stay in Mandvi?</b> Absolutely. There are luxury tented resorts near the beach and heritage hotels like the Beach Camp at Vijay Vilas Palace.",
+            "<b>Is it crowded?</b> It gets crowded on weekends and holidays. Weekdays are very peaceful.",
+            "<b>Are there changing rooms at the beach?</b> Yes, basic changing facilities and paid showers are available at the main Wind Farm beach."
+        ]
     }
   ],
   facts: [
-    "Maritime Birth: Established in 1580 by the visionary Rao Khengarji I",
-    "Coastal Community: Home to approximately 51,000 residents with rich Hindu and Jain traditions",
-    "Strategic Position: Perfectly situated where the Rukmavati River greets the Gulf of Kutch",
-    "Bhuj Connection: Located 58km south of the cultural capital via scenic road routes",
-    "Dual Fame: Renowned for majestic Vijay Vilas Palace and living 400-year shipbuilding heritage",
-    "Coastal Climate: Enjoys hot semi-arid weather moderated by refreshing sea breezes",
-    "Culinary Legacy: Proudly claims to be the birthplace of beloved Dabeli in the 1960s"
+    "Ideal For: Families, Couples & History Lovers",
+    "Best Time: October to March (Pleasant Weather)",
+    "Distance: 58km from Bhuj (1 Hr drive)",
+    "Famous For: Vijay Vilas Palace & Beach",
+    "Unique Heritage: 400-year-old Dhow Shipbuilding",
+    "Food Speciality: Birthplace of Kutchi Dabeli",
+    "Ideal Duration: 1 Full Day or 1 Night Stay"
   ],
   mapUrl:
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58976.01309221809!2d69.3378!3d22.8288!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sMandvi%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin",
   gallery: [
-  { src: "/images/mandvi/mandvi1.jpg", caption: "Vijay Vilas Palace" },
-  { src: "/images/mandvi/mandvi2.jpg", caption: "Mandvi Beach" },
+  { src: "/images/mandvi/mandvi1.webp", caption: "Vijay Vilas Palace" },
+  { src: "/images/mandvi/mandvi2.webp", caption: "Mandvi Beach" },
   ],
 };
 

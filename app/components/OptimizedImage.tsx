@@ -10,7 +10,7 @@ interface OptimizedImageProps extends Omit<ImageProps, 'alt'> {
 
 const OptimizedImage = memo(function OptimizedImage({
   alt,
-  fallback = '/images/placeholder.jpg',
+  fallback = '/images/placeholder.webp',
   aspectRatio,
   critical = false,
   className = '',

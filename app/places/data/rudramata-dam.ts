@@ -4,7 +4,7 @@ export const rudramataDam: Place = {
   slug: "rudramata-dam",
   title: "Rudramata Dam & Rakshak Van",
   shortDescription: "Scenic dam with water reservoir and the patriotic Rakshak Van offering peaceful surroundings",
-  image: "/images/places/rudramata-dam/Rudra1.jpg",
+  image: "/images/places/rudramata-dam/Rudra1.webp",
   location: "15km from Bhuj",
   distanceFromBhuj: "15km southwest",
   parentDestination: "bhuj",
@@ -14,9 +14,9 @@ export const rudramataDam: Place = {
   bestTimeToVisit: "October to March for pleasant weather. Monsoon and post-monsoon months (July-October) offer full water levels and lush green surroundings.",
   howToReach: "Drive 15km southwest from Bhuj via good motorable roads. Regular bus services available. The dam is easily accessible by private vehicle or taxi.",
   gallery: [
-    { src: "/images/places/rudramata-dam/Rudra2.jpg", caption: "Peaceful water reservoir surrounded by hills" },
-    { src: "/images/places/rudramata-dam/Rudra3.jpg", caption: "Beautiful sunset reflections over the water" },
-    { src: "/images/places/rudramata-dam/Rudra4.jpg", caption: "Migratory birds at the reservoir" },
-    { src: "/images/places/rudramata-dam/Rudra5.jpg", caption: "Dam structure with surrounding landscape" }
+    { src: "/images/places/rudramata-dam/Rudra2.webp", caption: "Peaceful water reservoir surrounded by hills" },
+    { src: "/images/places/rudramata-dam/Rudra3.webp", caption: "Beautiful sunset reflections over the water" },
+    { src: "/images/places/rudramata-dam/Rudra4.webp", caption: "Migratory birds at the reservoir" },
+    { src: "/images/places/rudramata-dam/Rudra5.webp", caption: "Dam structure with surrounding landscape" }
   ]
 };

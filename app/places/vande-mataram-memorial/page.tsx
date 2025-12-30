@@ -14,7 +14,7 @@ export default function VandeMataramMemorial() {
             color="bg-red-50"
             border="border-l-4 border-red-600 text-red-800"
             image={{
-              src: "/images/places/vande-mataram-memorial/memorial-exterior.jpg",
+              src: "/images/places/vande-mataram-memorial/memorial-exterior.webp",
               alt: "Vande Mataram Memorial exterior"
             }}
           >
@@ -31,7 +31,7 @@ export default function VandeMataramMemorial() {
             color="bg-amber-50"
             border="border-l-4 border-amber-600 text-amber-800"
             image={{
-              src: "/images/places/vande-mataram-memorial/freedom-struggle.jpg",
+              src: "/images/places/vande-mataram-memorial/freedom-struggle.webp",
               alt: "Freedom struggle exhibits"
             }}
           >
@@ -49,7 +49,7 @@ export default function VandeMataramMemorial() {
             color="bg-blue-50"
             border="border-l-4 border-blue-600 text-blue-800"
             image={{
-              src: "/images/places/vande-mataram-memorial/memorial-features.jpg",
+              src: "/images/places/vande-mataram-memorial/memorial-features.webp",
               alt: "Memorial features and architecture"
             }}
           >
@@ -67,7 +67,7 @@ export default function VandeMataramMemorial() {
             color="bg-green-50"
             border="border-l-4 border-green-600 text-green-800"
             image={{
-              src: "/images/places/vande-mataram-memorial/seasonal.jpg",
+              src: "/images/places/vande-mataram-memorial/seasonal.webp",
               alt: "Memorial during the best season"
             }}
           >
@@ -83,7 +83,7 @@ export default function VandeMataramMemorial() {
             color="bg-purple-50"
             border="border-l-4 border-purple-600 text-purple-800"
             image={{
-              src: "/images/places/vande-mataram-memorial/bhujodi-route.jpg",
+              src: "/images/places/vande-mataram-memorial/bhujodi-route.webp",
               alt: "Route to Bhujodi village"
             }}
           >
@@ -95,7 +95,7 @@ export default function VandeMataramMemorial() {
             color="bg-cyan-50"
             border="border-l-4 border-cyan-600 text-cyan-800"
             image={{
-              src: "/images/places/vande-mataram-memorial/visitor-info.jpg",
+              src: "/images/places/vande-mataram-memorial/visitor-info.webp",
               alt: "Visitor information"
             }}
           >

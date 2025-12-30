@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 export const dholavira: Destination = {
   slug: "dholavira",
   title: "Dholavira — Ancient Harappan Metropolis",
-  image: "/images/dholavira/dholavira1.jpg",
+  image: "/images/dholavira/dholavira1.webp",
   sections: [
     {
       heading: "Category",
@@ -15,7 +15,7 @@ export const dholavira: Destination = {
       border: "border-l-4 border-amber-600 text-amber-800",
       content: "Dholavira is one of the most significant archaeological sites of the Indus Valley Civilization (Harappan Civilization). Located on Khadir Bet island in the Rann of Kutch, this UNESCO World Heritage site offers a fascinating glimpse into advanced urban planning, water conservation systems, and the lifestyle of an ancient civilization that thrived over 4,500 years ago.",
       image: {
-        src: "/images/dholavira/dholavira1.jpg",
+        src: "/images/dholavira/dholavira1.webp",
         alt: "Overview of Dholavira Archaeological Site"
       }
     },
@@ -25,7 +25,7 @@ export const dholavira: Destination = {
       border: "border-l-4 border-stone-600 text-stone-800",
       content: "Discovered in 1968 by archaeologist J.P. Joshi, Dholavira is the fifth largest Harappan site in the Indian subcontinent. It was occupied from c. 2650 BCE to 1450 BCE. The city is distinguished by its unique water management system, multi-layered defensive mechanisms, and extensive use of stone in construction.",
       image: {
-        src: "/images/dholavira/dholavira2.jpg",
+        src: "/images/dholavira/dholavira2.webp",
         alt: "Ancient ruins of Dholavira"
       }
     },
@@ -42,7 +42,7 @@ export const dholavira: Destination = {
         "<b>Fossil Park:</b> Nearby park showcasing 160-million-year-old wood fossils from the Jurassic era"
       ],
       image: {
-        src: "/images/dholavira/dholavira3.jpg",
+        src: "/images/dholavira/dholavira3.webp",
         alt: "Water reservoirs at Dholavira"
       }
     },
@@ -57,7 +57,7 @@ export const dholavira: Destination = {
         "<b>Flamingo City:</b> In winter, nearby areas host thousands of migratory flamingos"
       ],
       image: {
-        src: "/images/dholavira/dholavira4.jpg",
+        src: "/images/dholavira/dholavira4.webp",
         alt: "Crafts and culture near Dholavira"
       }
     },
@@ -72,7 +72,7 @@ export const dholavira: Destination = {
         "<b><a href='/places/rapar' class='text-blue-600 hover:text-blue-800'>Rapar:</a></b> 90km - Nearest major town with markets and transport connections"
       ],
       image: {
-        src: "/images/dholavira/dholavira5.jpg",
+        src: "/images/dholavira/dholavira5.webp",
         alt: "Nearby attractions around Dholavira"
       }
     },
@@ -87,7 +87,7 @@ export const dholavira: Destination = {
         "<b>Local Transport:</b> Private taxi or personal vehicle is highly recommended due to limited bus frequency"
       ],
       image: {
-        src: "/images/dholavira/dholavira6.jpg",
+        src: "/images/dholavira/dholavira6.webp",
         alt: "Transportation to Dholavira"
       }
     },
@@ -103,7 +103,7 @@ export const dholavira: Destination = {
         "<b>Facilities:</b> Basic restrooms and canteen available near the museum"
       ],
       image: {
-        src: "/images/dholavira/dholavira1.jpg",
+        src: "/images/dholavira/dholavira1.webp",
         alt: "Travel information for Dholavira"
       }
     },
@@ -113,7 +113,7 @@ export const dholavira: Destination = {
       border: "border-l-4 border-teal-600 text-teal-800",
       content: "The best time to visit is from October to March when the weather is pleasant (15°C to 30°C). Winters are perfect for exploring the expansive site without the harsh desert sun. Summers (April-June) are extremely hot, and monsoons can make the causeway roads tricky, though the site itself looks greener.",
       image: {
-        src: "/images/dholavira/dholavira2.jpg",
+        src: "/images/dholavira/dholavira2.webp",
         alt: "Winter season at Dholavira"
       }
     },
@@ -129,7 +129,7 @@ export const dholavira: Destination = {
         "<b>Network:</b> Mobile network coverage can be patchy in some areas"
       ],
       image: {
-        src: "/images/dholavira/dholavira3.jpg",
+        src: "/images/dholavira/dholavira3.webp",
         alt: "Accommodation near Dholavira"
       }
     }
@@ -144,11 +144,11 @@ export const dholavira: Destination = {
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117036.07923485744!2d70.2136!3d23.8856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3951633333333333%3A0x3333333333333333!2sDholavira!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin",
   gallery: [
-    { src: "/images/dholavira/dholavira1.jpg", caption: "The Northern Gate" },
-    { src: "/images/dholavira/dholavira2.jpg", caption: "Advanced Water Reservoirs" },
-    { src: "/images/dholavira/dholavira3.jpg", caption: "Indus Script Signboard" },
-    { src: "/images/dholavira/dholavira4.jpg", caption: "The Elevated Citadel" },
-    { src: "/images/dholavira/dholavira5.jpg", caption: "Archaeological Museum" },
-    { src: "/images/dholavira/dholavira6.jpg", caption: "Road to Heaven Landscape" }
+    { src: "/images/dholavira/dholavira1.webp", caption: "The Northern Gate" },
+    { src: "/images/dholavira/dholavira2.webp", caption: "Advanced Water Reservoirs" },
+    { src: "/images/dholavira/dholavira3.webp", caption: "Indus Script Signboard" },
+    { src: "/images/dholavira/dholavira4.webp", caption: "The Elevated Citadel" },
+    { src: "/images/dholavira/dholavira5.webp", caption: "Archaeological Museum" },
+    { src: "/images/dholavira/dholavira6.webp", caption: "Road to Heaven Landscape" }
   ]
 };

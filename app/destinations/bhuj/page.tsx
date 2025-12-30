@@ -5,21 +5,20 @@ import BhujClient from "./BhujClient";
 
 // Generate metadata for this destination
 export const metadata: Metadata = {
-  title: `${bhuj.title} - Cultural Capital of Kutch`,
-  description: 'Discover Bhuj, the cultural capital of Kutch. Explore Aina Mahal, Prag Mahal, Kutch Museum, and rich artisan traditions. Complete travel guide with heritage sites and local culture.',
+  title: 'Bhuj City Guide | Palaces, Museums & Handicraft Shopping',
+  description: 'The ultimate guide to Bhuj, Kutch. Visit Aina Mahal, Prag Mahal, and Bhujodi. Best places for shopping Bandhani and Rogan art. Includes 2-day itinerary and hotel tips.',
   keywords: [
-    'Bhuj tourism',
-    'Bhuj palace',
-    'Aina Mahal',
-    'Prag Mahal', 
-    'Kutch Museum',
-    'Bhuj heritage',
-    'Kutch handicrafts',
-    'Bhuj travel guide'
+    'Bhuj city guide',
+    'Aina Mahal entry fee',
+    'Prag Mahal timings',
+    'shopping in Bhuj',
+    'Bhujodi village guide',
+    'best places to eat in Bhuj',
+    'how to reach Bhuj'
   ],
   openGraph: {
-    title: `${bhuj.title} - Cultural Capital of Kutch`,
-    description: 'Discover Bhuj, the cultural capital of Kutch with magnificent palaces and rich heritage.',
+    title: 'Bhuj City Guide | Palaces, History & Handicrafts',
+    description: 'Explore the royal heart of Kutch. Complete guide to palaces, museums, and artisan villages.',
     images: [bhuj.image],
   },
 };

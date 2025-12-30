@@ -3,141 +3,129 @@ import type { Destination } from "./index";
 export const anjar: Destination = {
   slug: "anjar",
   title: "Anjar — The Oldest Town of Kutch",
-  image: "/images/anjar/anjar1.jpg",
+  image: "/images/anjar/anjar1.webp",
   sections: [
     {
-      heading: "Category",
-      content: "Historic Town"
-    },
-    {
-      heading: "Significance",
-      color: "bg-blue-50",
-      border: "border-l-4 border-blue-600 text-blue-800",
-      content: "Anjar is the oldest capital of Kutch, founded in 650 AD. It is famous for the legendary tale of Jesal and Toral, whose samadhis (shrines) are a major pilgrimage site. The town is also renowned for its unique metal handicrafts (knives and nutcrackers) and textile traditions.",
+      heading: "Overview",
+      content: "Anjar is the oldest capital of Kutch, with a history dating back to 650 AD. It is a town of legends, most famously that of 'Jesal and Toral', a robber-turned-saint and the queen who reformed him. Unlike the modern Gandhidham next door, Anjar retains a rustic, old-world charm with narrow bazaars famous for metalwork and textiles. It is a spiritual center and a shopper's delight for traditional Kutchi items.",
       image: {
-        src: "/images/anjar/anjar4.jpg", // overview
-        alt: "Overview of Anjar Town"
+        src: "/images/anjar/anjar4.webp",
+        alt: "Old town streets of Anjar"
       }
     },
     {
-      heading: "Jesal-Toral Legend",
-      color: "bg-purple-50",
-      border: "border-l-4 border-purple-600 text-purple-800",
-      content: "The shrines of Jesal Jadeja (a reformed outlaw) and Sati Toral (the queen who reformed him) are the heart of Anjar. It is believed that their two graves are slowly inching closer to each other, and when they meet, the world will end (Pralay).",
-      image: {
-        src: "/images/anjar/anjar2.jpg", 
-        alt: "Jesal Toral Samadhi Shrine"
-      }
-    },
-    {
-      heading: "Places of Interest",
-      color: "bg-amber-50",
-      border: "border-l-4 border-amber-600 text-amber-800",
-      list: [
-        "<b>Jesal Toral Samadhi:</b> The main spiritual attraction",
-        "<b>Bileshwar Mahadev Temple:</b> An ancient Shiva temple",
-        "<b>Market Place:</b> Famous for Anjar's swords, knives, and printed textiles",
-        "<b>Vira Balak Smarak:</b> A memorial dedicated to 185 schoolchildren who died in the 2001 earthquake"
-      ],
-      image: {
-        src: "/images/anjar/anjar6.jpg", // earthquake memorial
-        alt: "Vira Balak Smarak"
-      }
-    },
-    {
-      heading: "Food & Crafts",
-      color: "bg-emerald-50",
-      border: "border-l-4 border-emerald-600 text-emerald-800",
-      list: [
-        "<b>Metalwork:</b> Anjar is famous for nutcrackers (sudi) and knives decorated with brass work",
-        "<b>Block Printing:</b> A distinct style of Batik and block printing is found here",
-        "<b>Ghughra:</b> A sweet or savory snack popular in the local market"
-      ],
-      image: {
-        src: "/images/anjar/anjar3.jpg",
-        alt: "Anjar Crafts"
-      }
-    },
-    {
-      heading: "Nearby Destinations",
-      color: "bg-indigo-50",
-      border: "border-l-4 border-indigo-600 text-indigo-800",
-      list: [
-        "<b><a href='/destinations/gandhidham' class='text-blue-600 hover:text-blue-800'>Gandhidham:</a></b> 15km - Modern commercial hub",
-        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 40km - District HQ",
-        "<b><a href='/destinations/bhadreshwar' class='text-blue-600 hover:text-blue-800'>Bhadreshwar:</a></b> 25km - Jain Temple"
-      ],
-      image: {
-        src: "/images/anjar/anjar7.jpg", // aerial/nearby
-        alt: "Nearby Places"
-      }
+        heading: "Who Should Visit",
+        color: "bg-pink-50",
+        border: "border-l-4 border-pink-600 text-pink-800",
+        list: [
+            "<b>History & Culture Buffs:</b> To witness the legendary shrines of Jesal-Toral.",
+            "<b>Shoppers:</b> Famous for 'Anjar Knives', metal nutcrackers, and Batik prints.",
+            "<b>Pilgrims:</b> A major stop for devotees visiting local temples.",
+            "<b>Offbeat Travelers:</b> Those looking for authentic, non-touristy Kutch vibes."
+        ]
     },
     {
       heading: "How to Reach",
       color: "bg-cyan-50",
-      border: "border-l-4 border-cyan-500 text-cyan-800",
+      border: "border-l-4 border-cyan-600 text-cyan-800",
       list: [
-        "<b>By Road:</b> 40km from Bhuj and 15km from Gandhidham. Frequent buses and taxes available.",
-        "<b>By Rail:</b> Anjar has its own railway station, though Gandhidham (15km) has more connections.",
-        "<b>By Air:</b> Nearest airport is Kandla (20km) or Bhuj (40km)."
+        "<b>From Bhuj:</b> 42km | 45 Mins. Frequent buses and shared taxis available.",
+        "<b>From Gandhidham:</b> 15km | 20 Mins. It's practically a suburb of Gandhidham now.",
+        "<b>By Train:</b> Anjar (AJE) is a station on the Bhuj-Gandhidham line, but Gandhidham Junction has better connectivity."
       ],
       image: {
-        src: "/images/anjar/anjar1.jpg",
-        alt: "Transport"
+        src: "/images/anjar/anjar1.webp",
+        alt: "Anjar Railway Station"
       }
     },
     {
-      heading: "Travel Information",
-      color: "bg-rose-50",
-      border: "border-l-4 border-rose-500 text-rose-800",
+      heading: "Top Things to Do",
+      color: "bg-amber-50",
+      border: "border-l-4 border-amber-600 text-amber-800",
       list: [
-        "<b>Timings:</b> Jesal Toral shrine is open from 6 AM to 8 PM.",
-        "<b>Shopping:</b> Markets close on Sunday afternoons or Mondays in some areas.",
-        "<b>Vibe:</b> Historic, busy market town."
+        "<b>Jesal Toral Samadhi:</b> (30-45 Mins) The heart of Anjar. Visit the shrines of the legendary couple. Open 6 AM - 8 PM.",
+        "<b>Bazaar Walk:</b> (1 Hour) Explore the Ganga Bazaar line for 'Sudi' (Nutcrackers) and Pen-Knives. Anjar's steel quality is legendary.",
+        "<b>Bileshwar Mahadev:</b> (30 Mins) An ancient Shiva temple with beautiful architecture.",
+        "<b>Vira Balak Smarak:</b> (45 Mins) A moving memorial dedicated to 185 schoolchildren who perished in the 2001 earthquake."
       ],
       image: {
-        src: "/images/anjar/anjar4.jpg",
-        alt: "Info"
+        src: "/images/anjar/anjar2.webp",
+        alt: "Jesal Toral Samadhi Shrine"
       }
+    },
+    {
+        heading: "Local Tips & Common Mistakes",
+        color: "bg-yellow-50",
+        border: "border-l-4 border-yellow-600 text-yellow-800",
+        list: [
+            "<b>Market Hours:</b> The market often takes a strict siesta from 1 PM to 4 PM. Plan morning or evening visits.",
+            "<b>Combined Trip:</b> Combine Anjar with Gandhidham or Bhadreshwar; it's small enough for a half-day trip.",
+            "<b>Knives on Flights:</b> If you buy the famous Anjar knives, PUT THEM IN CHECK-IN BAGGAGE. They will be confiscated in carry-on."
+        ]
     },
     {
       heading: "Best Time to Visit",
       color: "bg-teal-50",
-      border: "border-l-4 border-teal-500 text-teal-800",
-      content: "Fairly good year-round, but October to March is pleasant. The Jesal Toral fair (Mela) is a significant event to witness.",
+      border: "border-l-4 border-teal-600 text-teal-800",
+      content: "<strong>October to March:</strong> Best weather. The 'Jesal Toral Mela' (Fair) usually happens around March (Holi), which is a great cultural experience but crowded.",
       image: {
-        src: "/images/anjar/anjar2.jpg",
-        alt: "Best Season"
+        src: "/images/anjar/anjar4.webp",
+        alt: "Market in winter"
       }
     },
     {
-      heading: "Accommodation & Local Tips",
-      color: "bg-lime-50",
-      border: "border-l-4 border-lime-500 text-lime-800",
+      heading: "Food & Culture",
+      color: "bg-emerald-50",
+      border: "border-l-4 border-emerald-600 text-emerald-800",
       list: [
-        "<b>Stay:</b> Gandhidham (20 mins away) has better hotels than Anjar itself.",
-        "<b>Buy:</b> Buy a traditional Anjar knife or Sudi as a souvenir."
+        "<b>Ghughra:</b> Anjar is famous for its spicy 'Ghughra' (stuffed pastry snack). Try it at street stalls.",
+        "<b>Dabeli:</b> Like all Kutch towns, Anjar has its own Dabeli variants.",
+        "<b>Metal Craft:</b> Watch artisans make knives and betel nut crackers by hand."
       ],
       image: {
-        src: "/images/anjar/anjar5.jpg",
-        alt: "Accommodation"
+        src: "/images/anjar/anjar3.webp",
+        alt: "Traditional Anjar Metalwork"
       }
+    },
+    {
+      heading: "Nearby Destinations",
+      color: "bg-slate-50",
+      border: "border-l-4 border-slate-600 text-slate-800",
+      list: [
+        "<b><a href='/destinations/gandhidham' class='text-blue-500 hover:underline'>Gandhidham:</a></b> (15km) Modern city for stay and food.",
+        "<b><a href='/destinations/bhuj' class='text-blue-500 hover:underline'>Bhuj:</a></b> (42km) The main capital.",
+        "<b>Bhadreshwar:</b> (35km) Historic Jain temple and seaside spot."
+      ],
+      image: {
+        src: "/images/anjar/anjar7.webp",
+        alt: "Nearby Gandhidham"
+      }
+    },
+    {
+        heading: "Frequently Asked Questions",
+        color: "bg-gray-50",
+        border: "border-l-4 border-gray-600 text-gray-800",
+        list: [
+            "<b>Is Anjar worth a stop?</b> Yes, for 1-2 hours if you love history or want to buy unique metal/textile souvenirs.",
+            "<b>Can I stay in Anjar?</b> It's better to stay in Gandhidham (20 mins away) which has far better hotels."
+        ]
     }
   ],
   facts: [
-    "Founded: 650 AD",
-    "Fame: Jesal-Toral Shrine",
-    "Craft: Knife Making & Batik",
-    "Event: Jesal Toral Fair",
-    "Location: Near Gandhidham"
+    "Founded: 650 AD (Oldest Capital)",
+    "Famous For: Jesal-Toral Shrine",
+    "Craft: Knives & Metalwork",
+    "Food: Spicy Ghughra",
+    "Distance from Bhuj: 42 km",
+    "Vibe: Rustic & Historic"
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14777!2d70.0!3d23.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AAnjar!5e0!3m2!1sen!2sin",
   gallery: [
-    { src: "/images/anjar/anjar1.jpg", caption: "Anjar Town Gate" },
-    { src: "/images/anjar/anjar2.jpg", caption: "Jesal Toral Shrine" },
-    { src: "/images/anjar/anjar3.jpg", caption: "Traditional Handicrafts" },
-    { src: "/images/anjar/anjar4.jpg", caption: "Market Streets" },
-    { src: "/images/anjar/anjar5.jpg", caption: "Historic Architecture" },
-    { src: "/images/anjar/anjar6.jpg", caption: "Vira Balak Smarak" }
+    { src: "/images/anjar/anjar1.webp", caption: "Anjar Town Gate" },
+    { src: "/images/anjar/anjar2.webp", caption: "Jesal Toral Shrine" },
+    { src: "/images/anjar/anjar3.webp", caption: "Traditional Handicrafts" },
+    { src: "/images/anjar/anjar4.webp", caption: "Market Streets" },
+    { src: "/images/anjar/anjar5.webp", caption: "Historic Architecture" },
+    { src: "/images/anjar/anjar6.webp", caption: "Vira Balak Smarak" }
   ]
 };

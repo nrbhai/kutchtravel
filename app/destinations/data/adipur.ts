@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 export const adipur: Destination = {
   slug: "adipur",
   title: "Adipur — City of Memories",
-  image: "/images/adipur/adipur1.jpg",
+  image: "/images/adipur/adipur1.webp",
   sections: [
     {
       heading: "Category",
@@ -15,7 +15,7 @@ export const adipur: Destination = {
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Adipur is a unique township in Kutch, originally established as a refugee camp. Located about 5km from Gandhidham, it serves as a residential twin city. The town is famous for its distinct culture, including a fascinating tradition of Charlie Chaplin impersonators and the sacred Gandhi Samadhi.",
       image: {
-        src: "/images/adipur/adipur1.jpg",
+        src: "/images/adipur/adipur1.webp",
         alt: "Adipur city landmark"
       }
     },
@@ -25,7 +25,7 @@ export const adipur: Destination = {
       border: "border-l-4 border-amber-600 text-amber-800",
       content: "Founded in 1947 after the partition of India, Adipur was created to resettle Sindhi Hindu refugees from Pakistan. The settlement was the vision of Bhai Pratap Dialdas, who requested land from Mahatma Gandhi. The Maharaja of Kutch donated 15,000 acres for this purpose. The Sindhu Resettlement Corporation (SRC) was formed to manage the town's administration, making it a planned settlement with deep historical roots.",
       image: {
-        src: "/images/adipur/adipur4.jpg",
+        src: "/images/adipur/adipur4.webp",
         alt: "Historical significance of Adipur"
       }
     },
@@ -41,7 +41,7 @@ export const adipur: Destination = {
         "<b>Cultural Mix:</b> A melting pot of Sindhi and Kutchi traditions"
       ],
       image: {
-        src: "/images/adipur/adipur3.jpg",
+        src: "/images/adipur/adipur3.webp",
         alt: "Cultural and educational center"
       }
     },
@@ -56,7 +56,7 @@ export const adipur: Destination = {
         "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 50km - District headquarters"
       ],
       image: {
-        src: "/images/adipur/adipur2.jpg",
+        src: "/images/adipur/adipur2.webp",
         alt: "Nearby attractions"
       }
     },
@@ -87,9 +87,9 @@ export const adipur: Destination = {
   ],
   mapUrl: "https://maps.google.com/maps?q=23.0722,70.0886&hl=en&z=14&output=embed",
   gallery: [
-    { src: "/images/adipur/adipur1.jpg", caption: "Landmark of Adipur" },
-    { src: "/images/adipur/adipur2.jpg", caption: "Town View" },
-    { src: "/images/adipur/adipur3.jpg", caption: "Educational Institute" },
-    { src: "/images/adipur/adipur4.jpg", caption: "Historical Site" }
+    { src: "/images/adipur/adipur1.webp", caption: "Landmark of Adipur" },
+    { src: "/images/adipur/adipur2.webp", caption: "Town View" },
+    { src: "/images/adipur/adipur3.webp", caption: "Educational Institute" },
+    { src: "/images/adipur/adipur4.webp", caption: "Historical Site" }
   ]
 };

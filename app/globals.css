@@ -813,3 +813,36 @@ body span.metallic-silver-green {
   animation: shine 12s linear infinite !important;
   filter: drop-shadow(0 2px 4px rgba(255,255,255,0.2)) !important;
 }
+/* explicit mobile overrides */
+@media (max-width: 1024px) {
+  .nav-desktop {
+    display: none !important;
+  }
+  .nav-mobile-trigger {
+    display: flex !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .nav-desktop {
+    display: flex !important;
+  }
+  .nav-mobile-trigger {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-mobile-1 {
+    grid-template-columns: 1fr !important;
+  }
+  .grid-mobile-2 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .flex-mobile-col {
+    flex-direction: column !important;
+  }
+  .w-mobile-full {
+    width: 100% !important;
+  }
+}

@@ -15,7 +15,7 @@ export default function Ravalpir() {
             color="bg-indigo-50"
             border="border-l-4 border-indigo-600 text-indigo-800"
             image={{
-              src: "/images/places/ravalpir/temple-beach.jpg",
+              src: "/images/places/ravalpir/temple-beach.webp",
               alt: "Ravalpir Temple with beach view"
             }}
           >
@@ -27,7 +27,7 @@ export default function Ravalpir() {
             color="bg-orange-50"
             border="border-l-4 border-orange-600 text-orange-800"
             image={{
-              src: "/images/places/ravalpir/temple-architecture.jpg",
+              src: "/images/places/ravalpir/temple-architecture.webp",
               alt: "Ravalpir Temple architecture after 1819 reconstruction"
             }}
           >
@@ -46,7 +46,7 @@ export default function Ravalpir() {
             color="bg-teal-50"
             border="border-l-4 border-teal-600 text-teal-800"
             image={{
-              src: "/images/places/ravalpir/beach-view.jpg",
+              src: "/images/places/ravalpir/beach-view.webp",
               alt: "Pristine beach near Ravalpir Temple"
             }}
           >
@@ -65,7 +65,7 @@ export default function Ravalpir() {
             color="bg-purple-50"
             border="border-l-4 border-purple-600 text-purple-800"
             image={{
-              src: "/images/places/ravalpir/devotees.jpg",
+              src: "/images/places/ravalpir/devotees.webp",
               alt: "Devotees at Ravalpir Temple"
             }}
           >
@@ -82,7 +82,7 @@ export default function Ravalpir() {
             color="bg-emerald-50"
             border="border-l-4 border-emerald-600 text-emerald-800"
             image={{
-              src: "/images/places/ravalpir/seasonal.jpg",
+              src: "/images/places/ravalpir/seasonal.webp",
               alt: "Best season to visit Ravalpir"
             }}
           >
@@ -94,7 +94,7 @@ export default function Ravalpir() {
             color="bg-amber-50"
             border="border-l-4 border-amber-600 text-amber-800"
             image={{
-              src: "/images/places/ravalpir/route.jpg",
+              src: "/images/places/ravalpir/route.webp",
               alt: "Route to Ravalpir from Mandvi"
             }}
           >
@@ -106,7 +106,7 @@ export default function Ravalpir() {
             color="bg-sky-50"
             border="border-l-4 border-sky-600 text-sky-800"
             image={{
-              src: "/images/places/ravalpir/facilities.jpg",
+              src: "/images/places/ravalpir/facilities.webp",
               alt: "Visitor facilities at Ravalpir"
             }}
           >

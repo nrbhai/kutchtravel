@@ -13,7 +13,7 @@ export const KUTCH_SHORTS: KutchShort[] = [
   {
     id: 'nadappa-caves-vibe',
     videoUrl: '/videos/travelkutch-naddapa.mp4',
-    thumbnailUrl: '/videos/naddappa.jpg',
+    thumbnailUrl: '/videos/naddappa.webp',
     title: 'Secret Nadappa Caves',
     location: 'Nadappa, Kutch',
     description: 'Exploring the legendary thin and sharp caves of Nadappa, a hidden geological marvel of Kutch.',
@@ -23,7 +23,7 @@ export const KUTCH_SHORTS: KutchShort[] = [
   {
     id: 'pingleshwar-beach-vibe',
     videoUrl: '/videos/travelkutch-pingleshwar.mp4',
-    thumbnailUrl: '/images/destinations/beach5.jpg',
+    thumbnailUrl: '/images/destinations/beach5.webp',
     title: 'Pingleshwar Beach Serenity',
     location: 'Pingleshwar, Kutch',
     description: 'A beautiful and secluded rocky beach near the ancient temple (1km away). Experience the raw, untamed beauty of Kutch\'s coastline.',
@@ -33,7 +33,7 @@ export const KUTCH_SHORTS: KutchShort[] = [
   {
     id: 'kadiya-dhrow-canyon-vibe',
     videoUrl: '/videos/travelkutch-kadiadhrow.mp4',
-    thumbnailUrl: '/images/destinations/kadia-dhrow.jpg',
+    thumbnailUrl: '/images/destinations/kadia-dhrow.webp',
     title: 'The Great Canyon of Kutch',
     location: 'Kadiya Dhrow, Nakhatrana',
     description: 'Breathtaking views of the ancient multi-colored rock formations at Kadiya Dhrow, often called the Grand Canyon of India.',
@@ -43,7 +43,7 @@ export const KUTCH_SHORTS: KutchShort[] = [
   {
     id: 'khari-nadi-waterfall-vibe',
     videoUrl: '/videos/travelkutch-sercret-waterfall.mp4',
-    thumbnailUrl: '/images/destinations/Nakhatrana River.JPG',
+    thumbnailUrl: '/images/destinations/Nakhatrana River.webp',
     title: 'Secret Khari Nadi Waterfall',
     location: 'Khari Nadi, Near Bhuj',
     description: 'A hidden wonder found deep in the riverbed. Requires an adventurous 2km trek along the Khari Nadi riverbed to reach this secluded waterfall.',
@@ -53,7 +53,7 @@ export const KUTCH_SHORTS: KutchShort[] = [
   {
     id: 'white-rann-sunset',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-sunset-over-the-desert-4251-large.mp4', // Placeholder
-    thumbnailUrl: '/images/destinations/white-rann-hero.jpg',
+    thumbnailUrl: '/images/destinations/white-rann-hero.webp',
     title: 'Sunset at White Rann',
     location: 'Dhordo, Great Rann of Kutch',
     description: 'Experience the magical transition from orange to white at the Great Rann.',
@@ -63,7 +63,7 @@ export const KUTCH_SHORTS: KutchShort[] = [
   {
     id: 'mandvi-beach-vibe',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-young-woman-walking-on-the-beach-at-sunset-41481-large.mp4', // Placeholder
-    thumbnailUrl: '/images/destinations/mandvi.jpg',
+    thumbnailUrl: '/images/destinations/mandvi.webp',
     title: 'Mandvi Beach Bliss',
     location: 'Mandvi, Kutch',
     description: 'Golden sands and the rhythmic sound of the Arabian Sea.',
@@ -73,7 +73,7 @@ export const KUTCH_SHORTS: KutchShort[] = [
   {
     id: 'bhuj-palace-tour',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-ancient-temple-architecture-detail-40432-large.mp4', // Placeholder
-    thumbnailUrl: '/images/destinations/bhuj-overview.jpg',
+    thumbnailUrl: '/images/destinations/bhuj-overview.webp',
     title: 'Bhuj Heritage',
     location: 'Aina Mahal, Bhuj',
     description: 'Walking through the mirror-filled halls of history.',
@@ -83,7 +83,7 @@ export const KUTCH_SHORTS: KutchShort[] = [
   {
     id: 'kalo-dungar-view',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-sun-shining-through-mountain-peaks-33887-large.mp4', // Placeholder
-    thumbnailUrl: '/images/destinations/kalo-dungar.jpg',
+    thumbnailUrl: '/images/destinations/kalo-dungar.webp',
     title: 'Top of the World',
     location: 'Kalo Dungar',
     description: 'Standing at the highest point of Kutch, looking towards Pakistan.',
@@ -93,7 +93,7 @@ export const KUTCH_SHORTS: KutchShort[] = [
   {
     id: 'ajrakh-art-process',
     videoUrl: 'https://assets.mixkit.co/videos/preview/mixkit-artisan-painting-intricate-details-on-a-ceramic-pot-40431-large.mp4', // Placeholder
-    thumbnailUrl: '/images/crafts/ajrakh.jpg',
+    thumbnailUrl: '/images/crafts/ajrakh.webp',
     title: 'The Soul of Ajrakh',
     location: 'Ajrakhpur Village',
     description: 'Watch the rhythmic block printing that takes weeks to master.',

@@ -14,7 +14,7 @@ export default function DhrangMekanDada() {
             color="bg-amber-50"
             border="border-l-4 border-amber-600 text-amber-800"
             image={{
-              src: "/images/places/dhrang-mekan-dada/overview.jpg",
+              src: "/images/places/dhrang-mekan-dada/overview.webp",
               alt: "Dhrang Mekan Dada shrine"
             }}
           >
@@ -34,7 +34,7 @@ export default function DhrangMekanDada() {
             color="bg-orange-50"
             border="border-l-4 border-orange-600 text-orange-800"
             image={{
-              src: "/images/places/dhrang-mekan-dada/laliyo-motiyo.jpg",
+              src: "/images/places/dhrang-mekan-dada/laliyo-motiyo.webp",
               alt: "Laliyo the donkey and Motiyo the dog"
             }}
           >
@@ -65,7 +65,7 @@ export default function DhrangMekanDada() {
             color="bg-purple-50"
             border="border-l-4 border-purple-600 text-purple-800"
             image={{
-              src: "/images/places/dhrang-mekan-dada/teachings.jpg",
+              src: "/images/places/dhrang-mekan-dada/teachings.webp",
               alt: "Spiritual teachings"
             }}
           >
@@ -82,7 +82,7 @@ export default function DhrangMekanDada() {
             color="bg-rose-50"
             border="border-l-4 border-rose-600 text-rose-800"
             image={{
-              src: "/images/places/dhrang-mekan-dada/fair.jpg",
+              src: "/images/places/dhrang-mekan-dada/fair.webp",
               alt: "Annual Fair"
             }}
           >
@@ -98,7 +98,7 @@ export default function DhrangMekanDada() {
             color="bg-blue-50"
             border="border-l-4 border-blue-600 text-blue-800"
             image={{
-              src: "/images/places/dhrang-mekan-dada/facilities.jpg",
+              src: "/images/places/dhrang-mekan-dada/facilities.webp",
               alt: "Visitor facilities at the shrine"
             }}
           >

@@ -116,7 +116,7 @@ export default function BookingWidget({ aid = '304142', label = 'gen173rf-10CAEo
         {/* Right Side - Image Section with Overlay */}
         <div className="lg:w-2/5 relative min-h-[300px] lg:min-h-full overflow-hidden">
           <Image
-            src="/images/destinations/bhuj-overview.jpg"
+            src="/images/destinations/bhuj-overview.webp"
             alt="Luxury Hotel Stay in Kutch"
             fill
             className="object-cover"

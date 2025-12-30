@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Hidden Gems of Kutch - Secret Destinations',
     description: 'Discover secret destinations and hidden gems that only the most curious travelers find in Kutch.',
-    images: ['/images/hidden-gems-og.jpg'],
+    images: ['/images/hidden-gems-og.webp'],
   },
 };
 

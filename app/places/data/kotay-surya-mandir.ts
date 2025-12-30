@@ -4,7 +4,7 @@ export const kotaySuryaMandir: Place = {
   slug: "kotay-surya-mandir",
   title: "Surya Mandir Kotay — Archaeological Heritage Site",
   shortDescription: "Historic 10th century Sun temple complex with exceptional medieval architecture and archaeological significance",
-  image: "/images/places/kotay-surya-mandir/kotay1.jpg",
+  image: "/images/places/kotay-surya-mandir/kotay1.webp",
   location: "Kotai Village, 22km from Bhuj on Greater Rann shore",
   distanceFromBhuj: "22km northeast (45 minutes drive)",
   parentDestination: "bhuj",
@@ -14,9 +14,9 @@ export const kotaySuryaMandir: Place = {
   bestTimeToVisit: "October to March for pleasant weather. Best visiting hours: 7-11 AM for morning light or 4-6 PM for beautiful sunset views over the Rann",
   howToReach: "Drive 22km northeast from Bhuj via Kotay village road (45 minutes). SUV or high-clearance vehicle recommended due to rough unmade road with ups and downs. Small cars not suitable. Two-wheelers are manageable. Village locals can provide temple history and customs.",
   gallery: [
-    { src: "/images/places/kotay-surya-mandir/kotay1.jpg", caption: "10th century Sun temple ruins at Kotai village" },
-    { src: "/images/places/kotay-surya-mandir/kotay2.jpg", caption: "Intricate stone carvings and Navagraha sculptures" },
-    { src: "/images/places/kotay-surya-mandir/kotay3.jpg", caption: "Beautiful flower garden and trees beside the ancient temple complex" },
-    { src: "/images/places/kotay-surya-mandir/kotay4.jpg", caption: "Multiple temple ruins on the shore of Greater Rann of Kutch" }
+    { src: "/images/places/kotay-surya-mandir/kotay1.webp", caption: "10th century Sun temple ruins at Kotai village" },
+    { src: "/images/places/kotay-surya-mandir/kotay2.webp", caption: "Intricate stone carvings and Navagraha sculptures" },
+    { src: "/images/places/kotay-surya-mandir/kotay3.webp", caption: "Beautiful flower garden and trees beside the ancient temple complex" },
+    { src: "/images/places/kotay-surya-mandir/kotay4.webp", caption: "Multiple temple ruins on the shore of Greater Rann of Kutch" }
   ]
 };

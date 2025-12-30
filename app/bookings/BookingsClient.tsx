@@ -237,7 +237,7 @@ function FlightsSection() {
             to: "Mumbai (BOM)",
             duration: "1h 15m",
             price: "₹3,500+",
-            image: "/images/flights/mumbai-skyline.jpg",
+            image: "/images/flights/mumbai-skyline.webp",
             link: "https://www.booking.com/flights/index.html?aid=2665264"
           },
           {
@@ -245,7 +245,7 @@ function FlightsSection() {
             to: "Delhi (DEL)",
             duration: "2h 00m",
             price: "₹5,500+",
-            image: "/images/flights/delhi-india-gate.jpg",
+            image: "/images/flights/delhi-india-gate.webp",
             link: "https://www.booking.com/flights/index.html?aid=2665264"
           }
         ].map((flight, index) => (

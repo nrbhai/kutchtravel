@@ -58,7 +58,7 @@ The Blog link has been added to the mobile menu in the Navigation component.
   readTime: '8 min read',
   category: 'Destinations',
   tags: ['Tag1', 'Tag2', 'Tag3'],
-  image: '/images/folder/image.jpg',
+  image: '/images/folder/image.webp',
   featured: true // Optional
 }
 ```

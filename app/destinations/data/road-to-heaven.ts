@@ -3,7 +3,7 @@ import type { Destination } from "./index";
 export const roadToHeaven: Destination = {
   slug: "road-to-heaven",
   title: "Road to Heaven — A Drive Through Eternity",
-  image: "/images/road-to-heaven/road-to-heaven1.jpg",
+  image: "/images/road-to-heaven/road-to-heaven1.webp",
   sections: [
     {
       heading: "Category",
@@ -15,7 +15,7 @@ export const roadToHeaven: Destination = {
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "The 'Road to Heaven' is arguably India's most surreal highway—a 30km stretch of jet-black tarmac cutting perfectly straight through the blinding white expanse of the Great Rann of Kutch. Connecting Khavda to Dholavira, this engineering marvel offers the illusion of driving directly into the sky. With the white desert stretching infinitely on both sides and the blue horizon merging with the salt, it is a photographer's dream and a driver's paradise.",
       image: {
-        src: "/images/road-to-heaven/road-to-heaven2.jpg",
+        src: "/images/road-to-heaven/road-to-heaven2.webp",
         alt: "Overview of Road to Heaven"
       }
     },
@@ -25,7 +25,7 @@ export const roadToHeaven: Destination = {
       border: "border-l-4 border-purple-600 text-purple-800",
       content: "This strategic road was constructed recently to improve connectivity between the mainland and the island of Khadir Bet (home to Dholavira). Previously, reaching Dholavira required a long detour via Rapar. The construction of this causeway across the salt flats was an engineering challenge but has now unlocked one of the most stunning drives in the world.",
       image: {
-        src: "/images/road-to-heaven/road-to-heaven8.jpg",
+        src: "/images/road-to-heaven/road-to-heaven8.webp",
         alt: "Construction of the Road to Heaven"
       }
     },
@@ -41,7 +41,7 @@ export const roadToHeaven: Destination = {
         "<b>Chipper Point:</b> A popular spot for drone photography capturing the symmetry of the road"
       ],
       image: {
-        src: "/images/road-to-heaven/road-to-heaven6.jpg",
+        src: "/images/road-to-heaven/road-to-heaven6.webp",
         alt: "Main attractions on Road to Heaven"
       }
     },
@@ -56,7 +56,7 @@ export const roadToHeaven: Destination = {
         "<b>Carry Snacks:</b> It is highly recommended to carry water and dry snacks"
       ],
       image: {
-        src: "/images/road-to-heaven/road-to-heaven7.jpg",
+        src: "/images/road-to-heaven/road-to-heaven7.webp",
         alt: "Local food near Road to Heaven"
       }
     },
@@ -71,7 +71,7 @@ export const roadToHeaven: Destination = {
         "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 85km - The start/end point for most journeys"
       ],
       image: {
-        src: "/images/road-to-heaven/road-to-heaven3.jpg",
+        src: "/images/road-to-heaven/road-to-heaven3.webp",
         alt: "Nearby attractions"
       }
     },
@@ -85,7 +85,7 @@ export const roadToHeaven: Destination = {
         "<b>Fuel:</b> Fill up at Bhuj or Khavda; there are no pumps on the Road to Heaven"
       ],
       image: {
-        src: "/images/road-to-heaven/road-to-heaven4.jpg",
+        src: "/images/road-to-heaven/road-to-heaven4.webp",
         alt: "Transportation"
       }
     },
@@ -100,7 +100,7 @@ export const roadToHeaven: Destination = {
         "<b>Duration:</b> Plan for 1 hour to enjoy the drive and take photos"
       ],
       image: {
-        src: "/images/road-to-heaven/road-to-heaven9.jpg",
+        src: "/images/road-to-heaven/road-to-heaven9.webp",
         alt: "Travel information"
       }
     },
@@ -110,7 +110,7 @@ export const roadToHeaven: Destination = {
       border: "border-l-4 border-teal-600 text-teal-800",
       content: "October to March. In winter, the water level is perfect—neither too dry nor flooded—creating the beautiful mirror effect. The flamingos arrive around November. Summer is brutally hot, and monsoon can sometimes submerge parts of the shoulders.",
       image: {
-        src: "/images/road-to-heaven/road-to-heaven10.jpg",
+        src: "/images/road-to-heaven/road-to-heaven10.webp",
         alt: "Best season to visit"
       }
     },
@@ -123,7 +123,7 @@ export const roadToHeaven: Destination = {
         "<b>Tip:</b> Combine this drive with a visit to the Fossil Park and Chipar Point in Dholavira."
       ],
       image: {
-        src: "/images/road-to-heaven/road-to-heaven5.jpg",
+        src: "/images/road-to-heaven/road-to-heaven5.webp",
         alt: "Accommodation options"
       }
     }
@@ -137,11 +137,11 @@ export const roadToHeaven: Destination = {
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14749.1!2d70.0!3d23.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3951!2sRoad+To+Heaven!5e0!3m2!1sen!2sin",
   gallery: [
-    { src: "/images/road-to-heaven/road-to-heaven1.jpg", caption: "The Infinite Straight Road" },
-    { src: "/images/road-to-heaven/road-to-heaven2.jpg", caption: "Sunset Reflections" },
-    { src: "/images/road-to-heaven/road-to-heaven3.jpg", caption: "Flamingos near the road" },
-    { src: "/images/road-to-heaven/road-to-heaven4.jpg", caption: "Aerial Drone Shot" },
-    { src: "/images/road-to-heaven/road-to-heaven5.jpg", caption: "Salt Flats on Both Sides" },
-    { src: "/images/road-to-heaven/road-to-heaven6.jpg", caption: "Travellers enjoying the view" }
+    { src: "/images/road-to-heaven/road-to-heaven1.webp", caption: "The Infinite Straight Road" },
+    { src: "/images/road-to-heaven/road-to-heaven2.webp", caption: "Sunset Reflections" },
+    { src: "/images/road-to-heaven/road-to-heaven3.webp", caption: "Flamingos near the road" },
+    { src: "/images/road-to-heaven/road-to-heaven4.webp", caption: "Aerial Drone Shot" },
+    { src: "/images/road-to-heaven/road-to-heaven5.webp", caption: "Salt Flats on Both Sides" },
+    { src: "/images/road-to-heaven/road-to-heaven6.webp", caption: "Travellers enjoying the view" }
   ]
 };

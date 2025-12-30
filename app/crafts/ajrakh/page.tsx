@@ -10,7 +10,7 @@ export default function AjrakhPage() {
     slug: "ajrakh",
     title: "Ajrakh",
     subtitle: "Ancient Block Printing Art",
-    image: "/images/crafts/ajrakh/ajrakh1.jpg",
+    image: "/images/crafts/ajrakh/ajrakh1.webp",
     icon: "🖌️",
     category: "Block Printing",
     
@@ -88,10 +88,10 @@ export default function AjrakhPage() {
     ],
     
     gallery: [
-      { src: "/images/crafts/ajrakh/ajrakh1.jpg", caption: "Traditional Ajrakh Block Print" },
-      { src: "/images/crafts/ajrakh/ajrakh2.jpg", caption: "Intricate Geometric Patterns" },
-      { src: "/images/crafts/ajrakh/ajrakh3.jpg", caption: "Block Printing Process" },
-      { src: "/images/crafts/ajrakh/ajrakh4.jpg", caption: "Natural Dyeing Vats" },
+      { src: "/images/crafts/ajrakh/ajrakh1.webp", caption: "Traditional Ajrakh Block Print" },
+      { src: "/images/crafts/ajrakh/ajrakh2.webp", caption: "Intricate Geometric Patterns" },
+      { src: "/images/crafts/ajrakh/ajrakh3.webp", caption: "Block Printing Process" },
+      { src: "/images/crafts/ajrakh/ajrakh4.webp", caption: "Natural Dyeing Vats" },
       { src: "/images/crafts/ajrakh/ajrakh4.webp", caption: "Master Artisan at Work" }
     ]
   };

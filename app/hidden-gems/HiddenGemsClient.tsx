@@ -9,25 +9,8 @@ import MetallicHeading from '../components/MetallicHeading';
 import { HIDDEN_GEMS } from './data/collection';
 
 // Animation variants
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
-};
-
-const cardVariants = {
-  hidden: { 
-    opacity: 0, 
-    y: 50 
-  },
-  visible: { 
-    opacity: 1, 
-    y: 0
-  }
-};
+import { containerVariants, cardVariants } from '../../lib/animations';
+import BackgroundEffects from '../components/BackgroundEffects';
 
 const filterButtonVariants = {
   hidden: { opacity: 0, scale: 0.8 },
@@ -122,11 +105,7 @@ function HiddenGemsClient() {
         </div>
         
         {/* Dark Theme Background Elements */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] bg-purple-900/10 rounded-full blur-[120px] mix-blend-screen" />
-          <div className="absolute -bottom-[20%] -left-[10%] w-[600px] h-[600px] bg-indigo-900/10 rounded-full blur-[100px] mix-blend-screen" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[url('/images/noise.jpg')] opacity-[0.03] mix-blend-overlay"></div>
-        </div>
+        <BackgroundEffects color1="bg-purple-900/10" color2="bg-indigo-900/10" opacity={0.03} />
 
         <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -139,7 +118,7 @@ function HiddenGemsClient() {
               className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border border-white/10 group"
             >
               <Image
-                src={HIDDEN_GEMS[0]?.image || "/images/kutch-landscape.jpg"}
+                src={HIDDEN_GEMS[0]?.image || "/images/kutch-landscape.webp"}
                 alt="Hidden Gems of Kutch"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-1000"
@@ -412,7 +391,7 @@ function HiddenGemsClient() {
         <div className="absolute inset-0 bg-gradient-to-t from-black to-background z-10"></div>
         <div className="relative bg-gradient-to-br from-indigo-900 to-purple-900 py-32">
           {/* Noise and Texture */}
-          <div className="absolute inset-0 bg-[url('/images/noise.jpg')] opacity-10 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-[url('/images/noise.webp')] opacity-10 mix-blend-overlay"></div>
           
           <div className="relative z-20 max-w-4xl mx-auto px-6 text-center">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 font-sora">

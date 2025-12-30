@@ -4,7 +4,7 @@ import type { Destination } from "./index";
 export const lakhpat: Destination = {
   slug: "lakhpat",
   title: "Lakhpat — Ghost Town of the Indus",
-  image: "/images/lakhpat/lakhpat1.jpg",
+  image: "/images/lakhpat/lakhpat1.webp",
   sections: [
     {
       heading: "Category",
@@ -16,7 +16,7 @@ export const lakhpat: Destination = {
       border: "border-l-4 border-blue-600 text-blue-800",
       content: "Standing at the edge of India where the Kori Creek meets the Arabian Sea, Lakhpat tells one of history's most dramatic tales of rise and fall. This once-mighty port town, surrounded by magnificent 7km stone walls, now shelters just 566 souls among ruins that whisper of its golden age. What makes Lakhpat extraordinary isn't just its fortress-like walls or proximity to Pakistan—it's the story of how nature's fury transformed India's busiest port into a hauntingly beautiful ghost town that feels frozen in time.",
       image: {
-        src: "/images/lakhpat/overview.jpg",
+        src: "/images/lakhpat/overview.webp",
         alt: "Overview of Lakhpat — Ghost Town of the Indus"
       }
     },
@@ -26,7 +26,7 @@ export const lakhpat: Destination = {
       border: "border-l-4 border-purple-600 text-purple-800",
       content: "Lakhpat's story reads like an epic novel of prosperity, catastrophe, and resilience. Taking its name from 13th-century ruler Rao Lakha of Sindh, this strategic settlement flourished when the mighty Indus River flowed directly through it. By the early 1800s, it was an economic powerhouse—imagine a bustling metropolis of 15,000 traders, sailors, and merchants generating astronomical wealth from rice exports and maritime commerce. Then came 1819, the year that changed everything. A devastating earthquake created the Allahbund dam, forcing the Indus to abandon its ancient course. Overnight, Lakhpat's lifeline vanished. Within a single year, two-thirds of its population fled this suddenly landlocked town. Today's Lakhpat stands as a powerful reminder of how quickly fortunes can change, its empty streets and crumbling walls creating an atmosphere that's both melancholic and mesmerizing.",
       image: {
-        src: "/images/lakhpat/history.jpg",
+        src: "/images/lakhpat/history.webp",
         alt: "Historical view of Lakhpat — Ghost Town of the Indus"
       }
     },
@@ -44,7 +44,7 @@ export const lakhpat: Destination = {
         "<b>Sunset Creek Views:</b> Experience magical golden hours over Kori Creek, where silence is broken only by distant bird calls and gentle waves"
       ],
       image: {
-        src: "/images/lakhpat/attractions.jpg",
+        src: "/images/lakhpat/attractions.webp",
         alt: "Main attractions in Lakhpat — Ghost Town of the Indus"
       }
     },
@@ -61,7 +61,7 @@ export const lakhpat: Destination = {
         "<b>Archaeological Discoveries:</b> Discover connections to the Indus Valley Civilization through recent excavations in nearby Khatiya village"
       ],
       image: {
-        src: "/images/lakhpat/crafts.jpg",
+        src: "/images/lakhpat/crafts.webp",
         alt: "Traditional crafts and cuisine of Lakhpat — Ghost Town of the Indus"
       }
     },
@@ -77,7 +77,7 @@ export const lakhpat: Destination = {
         "<b><a href='/places/white-rann' class='text-blue-400 hover:text-blue-300'>White Rann:</a></b> 100km - Famous salt desert and Rann Utsav venue"
       ],
       image: {
-        src: "/images/lakhpat/nearby.jpg",
+        src: "/images/lakhpat/nearby.webp",
         alt: "Nearby attractions around Lakhpat — Ghost Town of the Indus"
       }
     },
@@ -93,7 +93,7 @@ export const lakhpat: Destination = {
         "<b>BSF Checkpoint:</b> Security screening at Border Security Force post"
       ],
       image: {
-        src: "/images/lakhpat/transport.jpg",
+        src: "/images/lakhpat/transport.webp",
         alt: "Transportation hub in Lakhpat — Ghost Town of the Indus"
       }
     },
@@ -110,7 +110,7 @@ export const lakhpat: Destination = {
         "<b>Fuel:</b> Fill tank in Bhuj or Nakhatrana before visiting"
       ],
       image: {
-        src: "/images/lakhpat/info.jpg",
+        src: "/images/lakhpat/info.webp",
         alt: "Travel information about Lakhpat — Ghost Town of the Indus"
       }
     },
@@ -120,7 +120,7 @@ export const lakhpat: Destination = {
       border: "border-l-4 border-teal-600 text-teal-800",
       content: "The period from October through March offers the most rewarding experience, with daytime temperatures ranging from a comfortable 20-30°C. Lakhpat's desert location means scorching summers can reach 42°C, making exploration quite challenging from April to June. The monsoon months bring limited rainfall to this arid region, but October onwards provides perfect conditions for photography, walking the fort walls, and soaking in the profound atmosphere of this historical gem. Winter mornings are particularly magical when mist rolls in from the creek, adding an ethereal quality to the ruins.",
       image: {
-        src: "/images/lakhpat/season.jpg",
+        src: "/images/lakhpat/season.webp",
         alt: "Best season to visit Lakhpat — Ghost Town of the Indus"
       }
     },
@@ -138,7 +138,7 @@ export const lakhpat: Destination = {
         "<b>Local Insights:</b> Consider hiring a knowledgeable guide in Bhuj who can share the rich oral histories and hidden stories of Lakhpat's golden age"
       ],
       image: {
-        src: "/images/lakhpat/accommodation.jpg",
+        src: "/images/lakhpat/accommodation.webp",
         alt: "Accommodation options in Lakhpat — Ghost Town of the Indus"
       }
     }
@@ -155,12 +155,12 @@ export const lakhpat: Destination = {
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58900.123456789!2d68.77!3d23.82!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sLakhpat%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin",
   gallery: [
-  { src: "/images/lakhpat/lakhpat1.jpg", caption: "Lakhpat Fort Walls" },
-  { src: "/images/lakhpat/lakhpat2.jpg", caption: "Kori Creek Views" },
-  { src: "/images/lakhpat/lakhpat3.jpg", caption: "Ancient Fort Gates" },
-  { src: "/images/lakhpat/lakhpat4.jpg", caption: "Gurudwara Sahib" },
-  { src: "/images/lakhpat/lakhpat5.jpg", caption: "Fort Architecture" },
-  { src: "/images/lakhpat/lakhpat6.jpg", caption: "Sunset over Kori Creek" }
+  { src: "/images/lakhpat/lakhpat1.webp", caption: "Lakhpat Fort Walls" },
+  { src: "/images/lakhpat/lakhpat2.webp", caption: "Kori Creek Views" },
+  { src: "/images/lakhpat/lakhpat3.webp", caption: "Ancient Fort Gates" },
+  { src: "/images/lakhpat/lakhpat4.webp", caption: "Gurudwara Sahib" },
+  { src: "/images/lakhpat/lakhpat5.webp", caption: "Fort Architecture" },
+  { src: "/images/lakhpat/lakhpat6.webp", caption: "Sunset over Kori Creek" }
   ]
 };
 

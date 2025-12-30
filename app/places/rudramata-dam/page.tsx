@@ -14,7 +14,7 @@ export default function RudramataDam() {
             color="bg-blue-50"
             border="border-l-4 border-blue-600 text-blue-800"
             image={{
-              src: "/images/places/rudramata-dam/Rudra2.jpg",
+              src: "/images/places/rudramata-dam/Rudra2.webp",
               alt: "Rudramata Dam water reservoir"
             }}
           >
@@ -31,7 +31,7 @@ export default function RudramataDam() {
             color="bg-orange-50"
             border="border-l-4 border-orange-600 text-orange-800"
             image={{
-              src: "/images/places/rudramata-dam/Rudra3.jpg", // We will need to check if this image exists or use a generic one/placeholder
+              src: "/images/places/rudramata-dam/Rudra3.webp", // We will need to check if this image exists or use a generic one/placeholder
               alt: "Rakshak Van Memorial"
             }}
           >
@@ -57,7 +57,7 @@ export default function RudramataDam() {
             color="bg-emerald-50"
             border="border-l-4 border-emerald-600 text-emerald-800"
             image={{
-              src: "/images/places/rudramata-dam/Rudra4.jpg",
+              src: "/images/places/rudramata-dam/Rudra4.webp",
               alt: "Water reservoir and surrounding landscape"
             }}
           >
@@ -75,7 +75,7 @@ export default function RudramataDam() {
             color="bg-purple-50"
             border="border-l-4 border-purple-600 text-purple-800"
             image={{
-              src: "/images/places/rudramata-dam/Rudra5.jpg",
+              src: "/images/places/rudramata-dam/Rudra5.webp",
               alt: "Activities at the dam"
             }}
           >
@@ -94,7 +94,7 @@ export default function RudramataDam() {
             color="bg-amber-50"
             border="border-l-4 border-amber-600 text-amber-800"
             image={{
-              src: "/images/places/rudramata-dam/Rudra6.jpg",
+              src: "/images/places/rudramata-dam/Rudra6.webp",
               alt: "Dam during the best season"
             }}
           >
@@ -110,7 +110,7 @@ export default function RudramataDam() {
             color="bg-cyan-50"
             border="border-l-4 border-cyan-600 text-cyan-800"
             image={{
-              src: "/images/places/rudramata-dam/Rudra7.jpg",
+              src: "/images/places/rudramata-dam/Rudra7.webp",
               alt: "Route to Rudramata Dam"
             }}
           >
@@ -122,7 +122,7 @@ export default function RudramataDam() {
             color="bg-rose-50"
             border="border-l-4 border-rose-600 text-rose-800"
             image={{
-              src: "/images/places/rudramata-dam/Rudra8.jpg",
+              src: "/images/places/rudramata-dam/Rudra8.webp",
               alt: "Visitor facilities"
             }}
           >

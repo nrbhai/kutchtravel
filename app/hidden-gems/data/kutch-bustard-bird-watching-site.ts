@@ -3,7 +3,7 @@ import type { HiddenGem } from "./index";
 export const secretBirdingSite: HiddenGem = {
   slug: "kutch-bustard-bird-watching-site",
   title: "Lala-Parjan Sanctuary — The Bustard's Last Refuge",
-  image: "/images/hidden-gems/secret-birding-site/main.jpg",
+  image: "/images/hidden-gems/secret-birding-site/main.webp",
   difficulty: "Easy",
   type: "Wildlife",
   discoveryLevel: "Local Favorite", // Kept as Local Favorite or could be 'Explorer' due to rarity
@@ -63,9 +63,9 @@ export const secretBirdingSite: HiddenGem = {
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.755478204646!2d68.831234!3d23.341234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3951a5c6e8e8e8e8%3A0x1234567890abcdef!2sKutch%20Bustard%20Sanctuary!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin",
   gallery: [
-    { src: "/images/hidden-gems/secret-birding-site/bustard.jpg", caption: "Great Indian Bustard - The flagship species" },
-    { src: "/images/hidden-gems/secret-birding-site/main.jpg", caption: "Golden grasslands of Lala-Parjan" },
-    { src: "/images/hidden-gems/secret-birding-site/wildlife.jpg", caption: "Chinkara grazing in the sanctuary" },
-    { src: "/images/hidden-gems/secret-birding-site/florican.jpg", caption: "The elusive Lesser Florican" }
+    { src: "/images/hidden-gems/secret-birding-site/bustard.webp", caption: "Great Indian Bustard - The flagship species" },
+    { src: "/images/hidden-gems/secret-birding-site/main.webp", caption: "Golden grasslands of Lala-Parjan" },
+    { src: "/images/hidden-gems/secret-birding-site/wildlife.webp", caption: "Chinkara grazing in the sanctuary" },
+    { src: "/images/hidden-gems/secret-birding-site/florican.webp", caption: "The elusive Lesser Florican" }
   ]
 };

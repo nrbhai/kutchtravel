@@ -3,138 +3,127 @@ import type { Destination } from "./index";
 export const mundra: Destination = {
   slug: "mundra",
   title: "Mundra — The Port City",
-  image: "/images/mundra/mundra1.jpg",
+  image: "/images/mundra/mundra1.webp",
   sections: [
     {
-      heading: "Category",
-      content: "Port City"
-    },
-    {
-      heading: "Significance",
-      color: "bg-blue-50",
-      border: "border-l-4 border-blue-600 text-blue-800",
-      content: "Mundra is famous for housing the largest private port in India. While primarily an industrial hub, it retains the charm of an old fortified town with historic walls, temples, and a rich maritime history.",
+      heading: "Overview",
+      content: "Mundra offers a fascinating contrast between the old and the new. It is home to India's largest private port, a behemoth of modern industry, which stands alongside a historic walled city renowned for its salt and spice trade heritage. While the port area is restricted, the old town charms visitors with its diverse culture, ancient fortifications, and proximity to the serene Bhadreshwar Jain Temple.",
       image: {
-        src: "/images/mundra/mundra3.jpg",
-        alt: "Overview of Mundra Port"
+        src: "/images/mundra/mundra3.webp",
+        alt: "Mundra Port - A hub of global trade"
       }
     },
     {
-      heading: "History",
-      color: "bg-purple-50",
-      border: "border-l-4 border-purple-600 text-purple-800",
-      content: "Historically, Mundra was known for salt and spice trade. The old city walls and gates still stand as a testament to its past. Today, it represents the modern face of Kutch's economy.",
-      image: {
-        src: "/images/mundra/mundra2.jpg",
-        alt: "Historic Mundra"
-      }
-    },
-    {
-      heading: "Places of Interest",
-      color: "bg-amber-50",
-      border: "border-l-4 border-amber-600 text-amber-800",
-      list: [
-        "<b>Mundra Port:</b> Massive ships and cranes (requires permission for entry)",
-        "<b>Shantinath Mahadev Temple:</b> A peaceful temple in the city",
-        "<b>Bhadreshwar Jain Temple:</b> Located nearby, a significant pilgrimage site",
-        "<b>Old City Gates:</b> Remnants of the fortification"
-      ],
-      image: {
-        src: "/images/mundra/mundra1.jpg",
-        alt: "Mundra Attractions"
-      }
-    },
-    {
-      heading: "Food & Crafts",
-      color: "bg-emerald-50",
-      border: "border-l-4 border-emerald-600 text-emerald-800",
-      list: [
-        "<b>Local Markets:</b> Bustling with activity, offering local textiles and goods",
-        "<b>Kutchi Dabeli:</b> Enjoy the spicy local burger",
-        "<b>Seafood:</b> Fresh catch available near the coast"
-      ],
-      image: {
-        src: "/images/mundra/mundra3.jpg",
-        alt: "Mundra Food"
-      }
-    },
-    {
-      heading: "Nearby Destinations",
-      color: "bg-indigo-50",
-      border: "border-l-4 border-indigo-600 text-indigo-800",
-      list: [
-        "<b><a href='/destinations/mandvi' class='text-blue-600 hover:text-blue-800'>Mandvi:</a></b> 50km - Beach town",
-        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 60km - District HQ",
-        "<b><a href='/destinations/bhadreshwar' class='text-blue-600 hover:text-blue-800'>Bhadreshwar:</a></b> 25km - Jain Tirth"
-      ],
-      image: {
-        src: "/images/mundra/mundra2.jpg",
-        alt: "Nearby Places"
-      }
+        heading: "Who Should Visit",
+        color: "bg-pink-50",
+        border: "border-l-4 border-pink-600 text-pink-800",
+        list: [
+            "<b>Architecture Lovers:</b> To see the mix of colonial and Kutchi architecture in the old town.",
+            "<b>Spiritual Seekers:</b> For the nearby Bhadreshwar Jain Tirth and Shantinath Mahadev temple.",
+            "<b>Business Travelers:</b> The industrial hub attracts many corporate visitors.",
+            "<b>Road Trippers:</b> A good scenic coastal drive connecting Mandvi and Gandhidham."
+        ]
     },
     {
       heading: "How to Reach",
       color: "bg-cyan-50",
-      border: "border-l-4 border-cyan-500 text-cyan-800",
+      border: "border-l-4 border-cyan-600 text-cyan-800",
       list: [
-        "<b>By Road:</b> 1 hour drive from Bhuj. Good highways connect it to Mandvi and Gandhidham.",
-        "<b>By Air:</b> Nearest airport is Bhuj (60km) or Kandla (50km).",
-        "<b>By Rail:</b> Gandhidham is the nearest major railway junction."
+        "<b>From Bhuj:</b> 60km | 1 Hr 15 Mins. Good road connectivity.",
+        "<b>From Mandvi:</b> 50km | 1 Hr. A beautiful coastal drive.",
+        "<b>From Gandhidham:</b> 55km | 1 Hr. Connected via highways.",
+        "<b>Nearest Airport:</b> Kandla (50km) or Bhuj (60km)."
       ],
       image: {
-        src: "/images/mundra/mundra3.jpg",
-        alt: "Transport"
+        src: "/images/mundra/mundra1.webp",
+        alt: "Highlighting connectivity"
       }
     },
     {
-      heading: "Travel Information",
-      color: "bg-rose-50",
-      border: "border-l-4 border-rose-500 text-rose-800",
+      heading: "Top Things to Do",
+      color: "bg-amber-50",
+      border: "border-l-4 border-amber-600 text-amber-800",
       list: [
-        "<b>Industrial Zone:</b> Some areas are restricted due to port activities.",
-        "<b>Accommodaton:</b> Several business hotels are available due to corporate traffic.",
-        "<b>Connectivity:</b> Excellent road and mobile network coverage."
+        "<b>Bhadreshwar Jain Temple:</b> (25km away) A must-visit 2500-year-old Jain site located right on the seashore. A very unique location for a temple.",
+        "<b>Old Mundra Town:</b> (1 Hour) Walk through the historic gates and see the old fortifications.",
+        "<b>Shantinath Mahadev Temple:</b> An oasis of peace within the town.",
+        "<b>Kites and Salt:</b> Mundra is famous for its salt pans and kite-flying culture during Uttarayan."
       ],
       image: {
-        src: "/images/mundra/mundra1.jpg",
-        alt: "Travel Info"
+        src: "/images/mundra/mundra2.webp",
+        alt: "Bhadreshwar Temple nearby"
       }
+    },
+    {
+        heading: "Local Tips & Common Mistakes",
+        color: "bg-yellow-50",
+        border: "border-l-4 border-yellow-600 text-yellow-800",
+        list: [
+            "<b>Port Entry:</b> Do NOT expect to enter the Adani Port without prior high-level clearance. It is a high-security zone.",
+            "<b>Photography:</b> Photography is strictly prohibited near port installations and industrial zones.",
+            "<b>Stay:</b> Good business hotels are available, making it a comfortable alternative to Mandvi if hotels there are full."
+        ]
     },
     {
       heading: "Best Time to Visit",
       color: "bg-teal-50",
-      border: "border-l-4 border-teal-500 text-teal-800",
-      content: "October to March. The weather is pleasant for exploring the coast and town. Summers are humid.",
+      border: "border-l-4 border-teal-600 text-teal-800",
+      content: "<strong>October to March:</strong> Pleasant coastal weather. Sea breeze makes even sunny days bearable.\n\n<strong>April to June:</strong> High humidity and heat. Avoid.",
       image: {
-        src: "/images/mundra/mundra2.jpg",
-        alt: "Best Season"
+        src: "/images/mundra/mundra1.webp",
+        alt: "Winter sun in Mundra"
       }
     },
     {
-      heading: "Accommodation & Local Tips",
-      color: "bg-lime-50",
-      border: "border-l-4 border-lime-500 text-lime-800",
+      heading: "Food & Culture",
+      color: "bg-emerald-50",
+      border: "border-l-4 border-emerald-600 text-emerald-800",
       list: [
-        "<b>Hotels:</b> Fern Residency, Beetle Smartotels, and other business hotels.",
-        "<b>Tip:</b> Visit Bhadreshwar temple on the way."
+        "<b>Dabeli:</b> Mundra serves some of the spiciest and most authentic Dabelis in the region.",
+        "<b>Musk Bun:</b> A local bakery specialty - soft buns with a special sweet filling.",
+        "<b>Seafood:</b> Available in specific coastal pockets, though the town is largely vegetarian."
       ],
       image: {
-        src: "/images/mundra/mundra3.jpg",
-        alt: "Hotels"
+        src: "/images/mundra/mundra3.webp",
+        alt: "Kutchi Dabeli"
       }
+    },
+    {
+      heading: "Nearby Destinations",
+      color: "bg-slate-50",
+      border: "border-l-4 border-slate-600 text-slate-800",
+      list: [
+        "<b><a href='/destinations/mandvi' class='text-blue-500 hover:underline'>Mandvi:</a></b> (50km) The premier beach destination.",
+        "<b><a href='/destinations/anjar' class='text-blue-500 hover:underline'>Anjar:</a></b> (45km) Historic town.",
+        "<b>Bhadreshwar:</b> (25km) Seaside Jain temple."
+      ],
+      image: {
+        src: "/images/mundra/mundra2.webp",
+        alt: "Nearby Mandvi"
+      }
+    },
+    {
+        heading: "Frequently Asked Questions",
+        color: "bg-gray-50",
+        border: "border-l-4 border-gray-600 text-gray-800",
+        list: [
+            "<b>Can tourists visit the port?</b> Generally No, unless you have a business reference or special permit.",
+            "<b>Is one day enough?</b> Yes, 2-3 hours are enough to just see the town. Combine it with Mandvi or Bhadreshwar."
+        ]
     }
   ],
   facts: [
-    "Famous For: Largest Private Port",
-    "Population: Growing industrial city",
-    "History: Ancient spice trade center",
-    "Location: Gulf of Kutch",
-    "Vibe: Industrial & Historic mix"
+    "Famous For: Adani Port & Old Fort",
+    "Key Attraction: Bhadreshwar Temple (Nearby)",
+    "Food: Spicy Dabeli",
+    "Distance from Bhuj: 60 km",
+    "Economy: Industrial Hub",
+    "Coast: Gulf of Kutch"
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14787.9!2d69.7!3d22.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AMundra!5e0!3m2!1sen!2sin",
   gallery: [
-    { src: "/images/mundra/mundra1.jpg", caption: "City Gate of Mundra" },
-    { src: "/images/mundra/mundra2.jpg", caption: "Historic Architecture" },
-    { src: "/images/mundra/mundra3.jpg", caption: "Coastal View" }
+    { src: "/images/mundra/mundra1.webp", caption: "City Gate of Mundra" },
+    { src: "/images/mundra/mundra2.webp", caption: "Historic Architecture" },
+    { src: "/images/mundra/mundra3.webp", caption: "Coastal View" }
   ]
 };

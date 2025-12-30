@@ -3,7 +3,7 @@ import type { HiddenGem } from "./index";
 export const harappanSettlement: HiddenGem = {
   slug: "harappan-settlement",
   title: "Desalpar Gunthli — The Fortified Harappan Outpost",
-  image: "/images/hidden-gems/harappan-settlement/main.jpg",
+  image: "/images/hidden-gems/harappan-settlement/main.webp",
   difficulty: "Moderate",
   type: "Heritage",
   discoveryLevel: "Explorer",
@@ -56,9 +56,9 @@ export const harappanSettlement: HiddenGem = {
     "Approach roads can be narrow"
   ],
   gallery: [
-    { src: "/images/hidden-gems/harappan-settlement/ruins1.jpg", caption: "Remains of the massive stone walls" },
-    { src: "/images/hidden-gems/harappan-settlement/pottery.jpg", caption: "The mound of Desalpar Gunthli" },
-    { src: "/images/hidden-gems/harappan-settlement/drainage.jpg", caption: "Ancient drainage line visible in ruins" },
-    { src: "/images/hidden-gems/harappan-settlement/desert-approach.jpg", caption: "The landscape surrounding Nakhatrana" }
+    { src: "/images/hidden-gems/harappan-settlement/ruins1.webp", caption: "Remains of the massive stone walls" },
+    { src: "/images/hidden-gems/harappan-settlement/pottery.webp", caption: "The mound of Desalpar Gunthli" },
+    { src: "/images/hidden-gems/harappan-settlement/drainage.webp", caption: "Ancient drainage line visible in ruins" },
+    { src: "/images/hidden-gems/harappan-settlement/desert-approach.webp", caption: "The landscape surrounding Nakhatrana" }
   ]
 };
