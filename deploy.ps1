@@ -7,16 +7,6 @@ $password = "Nrbhai@220171"
 
 Write-Host "🚀 Starting deployment to $serverIP..." -ForegroundColor Cyan
 
-# Create deployment commands
-$deployCommands = @"
-cd ~/kutchtravel
-git pull origin main
-rm -rf .next
-npm install
-npm run build
-pm2 restart kutchtravel
-"@
-
 # Use plink (PuTTY) or ssh with password
 Write-Host "📦 Pulling latest changes and rebuilding..." -ForegroundColor Yellow
 
@@ -27,7 +17,7 @@ git pull origin main
 rm -rf .next
 npm install
 npm run build
-pm2 restart kutchtravel
+pm2 restart kutchtravel || pm2 start npm --name "kutchtravel" -- start
 "@
 
 Write-Host "✅ Deployment complete!" -ForegroundColor Green

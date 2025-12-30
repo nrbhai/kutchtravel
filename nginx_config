@@ -1,0 +1,24 @@
+server {
+    listen 80;
+    server_name travelkutch.org www.travelkutch.org srv1123496.hstgr.cloud 72.61.172.175;
+    return 301 https://travelkutch.org$request_uri;
+}
+
+server {
+    listen 443 ssl http2;
+    server_name travelkutch.org www.travelkutch.org;
+
+    ssl_certificate /etc/letsencrypt/live/travelkutch.org/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/travelkutch.org/privkey.pem;
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
