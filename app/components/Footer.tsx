@@ -106,7 +106,7 @@ export default function Footer() {
                   <span className="text-2xl mt-1">📍</span>
                   <div>
                     <p className="font-semibold text-white mb-1">Visit Us</p>
-                    <p className="text-sm leading-relaxed">Bhuj, Kutch District<br />Gujarat, India</p>
+                    <p className="text-sm leading-relaxed text-gray-300">Bhuj, Kutch District<br />Gujarat, India</p>
                   </div>
                 </div>
                 
@@ -167,7 +167,7 @@ export default function Footer() {
           <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <motion.p 
-                className="text-gray-400 text-center md:text-left font-medium"
+                className="text-gray-300 text-center md:text-left font-medium"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
@@ -178,7 +178,7 @@ export default function Footer() {
               </motion.p>
               
               <motion.p 
-                className="text-gray-400 text-sm font-medium"
+                className="text-gray-300 text-sm font-medium"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.5 }}

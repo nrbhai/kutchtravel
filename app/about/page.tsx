@@ -37,7 +37,7 @@ export default function AboutPage() {
               <div className="mb-8">
                  <MetallicHeading 
                   text="Curating Golden"
-                  variant="silver"
+                  variant="gold"
                   as="h1"
                   className="text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.1] font-sora block text-center lg:text-left"
                 />
@@ -49,7 +49,7 @@ export default function AboutPage() {
                 />
               </div>
               
-              <p className="text-xl text-gray-400 leading-relaxed font-inter mb-10 max-w-2xl mx-auto lg:mx-0 font-light">
+              <p className="text-xl text-gray-200 leading-relaxed font-inter mb-10 max-w-2xl mx-auto lg:mx-0 font-light">
                 We are passionate local experts dedicated to showcasing the incredible beauty, rich heritage, and vibrant culture of Kutch, Gujarat.
               </p>
               
@@ -60,7 +60,7 @@ export default function AboutPage() {
                   </div>
                   <div className="text-left">
                     <span className="block font-black text-white text-2xl font-sora">10k+</span>
-                    <span className="text-sm text-gray-400 font-medium">Happy Travelers</span>
+                    <span className="text-sm text-gray-300 font-medium">Happy Travelers</span>
                   </div>
                 </div>
                 
@@ -70,7 +70,7 @@ export default function AboutPage() {
                   </div>
                   <div className="text-left">
                     <span className="block font-black text-white text-2xl font-sora">4.9/5</span>
-                    <span className="text-sm text-gray-400 font-medium">Guest Rating</span>
+                    <span className="text-sm text-gray-300 font-medium">Guest Rating</span>
                   </div>
                 </div>
               </div>
@@ -134,16 +134,16 @@ export default function AboutPage() {
                     </div>
                     <MetallicHeading text="Our Mission" variant="gold" as="h2" className="text-3xl md:text-5xl font-black" />
                   </div>
-                  <div className="space-y-8 text-xl text-gray-400 font-inter leading-relaxed font-light">
-                    <p>
+                  <div className="space-y-8 text-xl text-gray-200 font-inter leading-relaxed font-light">
+                    <p className="text-gray-200">
                       Born from a deep love for our homeland, Kutch Travel began with a simple mission: to share the untold stories of this mystical desert land with the world.
                     </p>
                     <div className="pl-6 border-l-2 border-amber-500/50">
-                        <p className="italic text-gray-300">
+                        <p className="italic text-gray-200">
                         We believe that travel should be transformative. It's not just about seeing places; it's about feeling the soul of the land, connecting with its people, and understanding the threads of history.
                         </p>
                     </div>
-                    <p>
+                    <p className="text-gray-200">
                       From the pristine white salt desert of the Great Rann to the bustling markets of Bhuj, we curate experiences that are authentic, responsible, and unforgettable.
                     </p>
                   </div>
@@ -154,24 +154,24 @@ export default function AboutPage() {
                     <div className="bg-black/40 rounded-3xl p-8 border border-white/5 hover:border-amber-500/50 hover:bg-white/5 transition-all duration-300 group/card">
                       <span className="text-4xl mb-6 block group-hover/card:scale-110 transition-transform">🌍</span>
                       <h3 className="font-bold text-white text-xl mb-3 font-sora">Sustainable</h3>
-                      <p className="text-sm text-gray-400">Promoting eco-friendly tourism practices</p>
+                      <p className="text-sm text-gray-300">Promoting eco-friendly tourism practices</p>
                     </div>
                     <div className="bg-black/40 rounded-3xl p-8 border border-white/5 hover:border-amber-500/50 hover:bg-white/5 transition-all duration-300 group/card">
                       <span className="text-4xl mb-6 block group-hover/card:scale-110 transition-transform">🤝</span>
                       <h3 className="font-bold text-white text-xl mb-3 font-sora">Community</h3>
-                      <p className="text-sm text-gray-400">Supporting local artisans and villages</p>
+                      <p className="text-sm text-gray-300">Supporting local artisans and villages</p>
                     </div>
                   </div>
                   <div className="space-y-6">
                     <div className="bg-black/40 rounded-3xl p-8 border border-white/5 hover:border-amber-500/50 hover:bg-white/5 transition-all duration-300 group/card">
                       <span className="text-4xl mb-6 block group-hover/card:scale-110 transition-transform">✨</span>
                       <h3 className="font-bold text-white text-xl mb-3 font-sora">Authentic</h3>
-                      <p className="text-sm text-gray-400">Real experiences, no tourist traps</p>
+                      <p className="text-sm text-gray-300">Real experiences, no tourist traps</p>
                     </div>
                     <div className="bg-black/40 rounded-3xl p-8 border border-white/5 hover:border-amber-500/50 hover:bg-white/5 transition-all duration-300 group/card">
                       <span className="text-4xl mb-6 block group-hover/card:scale-110 transition-transform">🎓</span>
                       <h3 className="font-bold text-white text-xl mb-3 font-sora">Expert</h3>
-                      <p className="text-sm text-gray-400">Deep local knowledge and insights</p>
+                      <p className="text-sm text-gray-300">Deep local knowledge and insights</p>
                     </div>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ export default function AboutPage() {
           >
             <div className="text-center mb-16">
               <MetallicHeading text="Why Choose Us" variant="gold" as="h2" className="text-4xl md:text-5xl font-black mb-6 block mx-auto" />
-              <p className="text-xl text-gray-400 font-inter max-w-2xl mx-auto font-light">
+              <p className="text-xl text-gray-300 font-inter max-w-2xl mx-auto font-light">
                 We don't just plan trips; we craft memories that last a lifetime.
               </p>
             </div>
@@ -230,7 +230,7 @@ export default function AboutPage() {
                     <item.icon className="w-8 h-8 text-amber-500" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4 font-sora">{item.title}</h3>
-                  <p className="text-gray-400 font-inter leading-relaxed text-sm">{item.desc}</p>
+                  <p className="text-gray-300 font-inter leading-relaxed text-sm">{item.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -260,7 +260,7 @@ export default function AboutPage() {
                   as="h2" 
                   className="text-4xl md:text-6xl font-black mb-8 leading-tight block text-left"
               />
-              <p className="text-xl text-gray-400 mb-12 leading-relaxed font-light font-inter max-w-lg">
+              <p className="text-xl text-gray-300 mb-12 leading-relaxed font-light font-inter max-w-lg">
                 Whether you need a custom itinerary, hotel bookings, or just some local advice, we're here to help you plan the perfect Kutch trip.
               </p>
 
@@ -270,7 +270,7 @@ export default function AboutPage() {
                     <Phone className="w-7 h-7 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400 font-bold uppercase tracking-wider mb-1">Call Us Anytime</p>
+                    <p className="text-sm text-gray-300 font-bold uppercase tracking-wider mb-1">Call Us Anytime</p>
                     <p className="text-2xl font-black text-white group-hover:text-amber-400 transition-colors font-sora">+91 98250 34580</p>
                   </div>
                 </a>
@@ -280,7 +280,7 @@ export default function AboutPage() {
                     <Mail className="w-7 h-7 text-black" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400 font-bold uppercase tracking-wider mb-1">Send an Email</p>
+                    <p className="text-sm text-gray-300 font-bold uppercase tracking-wider mb-1">Send an Email</p>
                     <p className="text-2xl font-black text-white group-hover:text-amber-400 transition-colors font-sora">info@travelkutch.org</p>
                   </div>
                 </a>
@@ -290,7 +290,7 @@ export default function AboutPage() {
                     <MapPin className="w-7 h-7 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400 font-bold uppercase tracking-wider mb-1">Visit Our Office</p>
+                    <p className="text-sm text-gray-300 font-bold uppercase tracking-wider mb-1">Visit Our Office</p>
                     <p className="text-2xl font-black text-white font-sora">Bhuj, Kutch, Gujarat</p>
                   </div>
                 </div>

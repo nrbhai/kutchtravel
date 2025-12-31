@@ -20,7 +20,8 @@ import {
   Ship,
   ChevronDown,
   MenuIcon,
-  Globe
+  Globe,
+  History
 } from 'lucide-react';
 
 // Animation variants
@@ -91,10 +92,9 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
             {[
               { name: 'Home', href: '/', icon: Home },
               { name: 'Destinations', href: '/destinations', icon: MapPin },
-              { name: 'Festivals', href: '/festivals', icon: Sparkles },
-              { name: 'Culture', href: '/culture', icon: Users },
-              { name: 'Food', href: '/food', icon: Users },
-              { name: 'Itineraries', href: '/plan', icon: MapPin },
+              { name: 'History', href: '/history', icon: History },
+              { name: 'Hidden Gems', href: '/hidden-gems', icon: Sparkles },
+              { name: 'Booking', href: '/bookings', icon: Calendar },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -160,10 +160,9 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
                           {[
                             { name: 'Home', href: '/', icon: Home },
                             { name: 'Destinations', href: '/destinations', icon: MapPin },
-                            { name: 'Festivals', href: '/festivals', icon: Sparkles },
-                            { name: 'Culture', href: '/culture', icon: Users },
-                            { name: 'Food', href: '/food', icon: Users },
-                            { name: 'Itineraries', href: '/plan', icon: MapPin },
+                            { name: 'History', href: '/history', icon: History },
+                            { name: 'Hidden Gems', href: '/hidden-gems', icon: Sparkles },
+                            { name: 'Booking', href: '/bookings', icon: Calendar },
                             { name: 'About', href: '/about', icon: Users },
                           ].map((item) => (
                             <MenuItem key={item.href}>
