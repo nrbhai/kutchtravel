@@ -106,16 +106,20 @@ export const mandvi: Destination = {
     },
     {
       heading: "Nearby Destinations",
-      color: "bg-slate-50",
-      border: "border-l-4 border-slate-600 text-slate-800",
+      color: "bg-indigo-50",
+      border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b><a href='/destinations/mundra' class='text-blue-500 hover:underline'>Mundra:</a></b> (45km | 1 hr) Historic port town with colonial charm.",
-        "<b><a href='/places/72-jinalaya' class='text-blue-500 hover:underline'>72 Jinalaya:</a></b> (10km | 20 mins) A must-visit detour for architecture lovers.",
-        "<b>Ambe Dham:</b> (20km) A large temple complex worth a quick stop."
+        "<b><a href='/places/kashi-vishwanath' class='text-blue-400 hover:text-blue-300'>Kashi Vishwanath Temple & Beach:</a></b> 5km - Serene secluded beach with Shiv temple nearby",
+        "<b><a href='/places/vijay-vilas-palace' class='text-blue-400 hover:text-blue-300'>Vijay Vilas Palace:</a></b> 8km - Royal palace with private beach and stunning architecture",
+        "<b><a href='/places/asar-mata' class='text-blue-400 hover:text-blue-300'>Asar Mata Temple & Beach:</a></b> 10-12km - Serene and secluded temple site with peaceful beach",
+        "<b><a href='/places/72-jinalaya' class='text-blue-400 hover:text-blue-300'>72 Jinalaya:</a></b> 2km - Beautiful Jain temple complex with intricate architecture",
+        "<b>Maska:</b> 25km - Coastal village with traditional crafts and local culture",
+        "<b><a href='/places/shyamji-krishnavarma' class='text-blue-400 hover:text-blue-300'>Shyamji Krishnavarma Memorial:</a></b> 3km - Kranti Tirth dedicated to the freedom fighter and scholar",
+        "<b><a href='/places/ravalpir' class='text-blue-400 hover:text-blue-300'>Ravalpir Temple & Beach:</a></b> 15km - Sacred temple rebuilt in 1819 with clean beach nearby"
       ],
       image: {
         src: "/images/mandvi/nearby.webp",
-        alt: "Nearby scenic spots around Mandvi"
+        alt: "Nearby attractions around Mandvi — Where the Desert Meets the Sea"
       }
     },
     {

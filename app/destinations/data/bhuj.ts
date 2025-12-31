@@ -108,17 +108,21 @@ export const bhuj: Destination = {
     },
     {
       heading: "Nearby Destinations",
-      color: "bg-slate-50",
-      border: "border-l-4 border-slate-600 text-slate-800",
+      color: "bg-indigo-50",
+      border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b><a href='/destinations/dhordo-white-rann' class='text-blue-500 hover:underline'>White Rann (Dhordo):</a></b> (80km | 1.5 hr) The main desert attraction.",
-        "<b><a href='/destinations/mandvi' class='text-blue-500 hover:underline'>Mandvi Beach:</a></b> (60km | 1 hr) The nearest beach gateway.",
-        "<b><a href='/destinations/kalo-dungar' class='text-blue-500 hover:underline'>Kalo Dungar:</a></b> (90km | 2 hr) Highest point in Kutch.",
-        "<b>Ajrakhpur:</b> (15km) The hub of Ajrakh block printing art."
+        "<b><a href='/hidden-gems/kotay-temple' class='text-blue-400 hover:text-blue-300'>Kotay Surya Mandir:</a></b> 22km - Ancient 10th century Sun temple ruins with archaeological significance",
+        "<b><a href='/places/dhrang-mekan-dada' class='text-blue-400 hover:text-blue-300'>Dhrang - Mekan Dada:</a></b> 25km - Sacred shrine and pilgrimage site",
+        "<b><a href='/places/abjibapa-chhatardi' class='text-blue-400 hover:text-blue-300'>Abjibapa ni Chatardi Baladia:</a></b> 20km - Historical cenotaph and heritage site",
+        "<b><a href='/places/rudramata-dam' class='text-blue-400 hover:text-blue-300'>Rudramata Dam:</a></b> 15km - Scenic dam with water reservoir and peaceful surroundings",
+        "<b><a href='/places/gangeshwar-mahadev' class='text-blue-400 hover:text-blue-300'>Gangeshwar Mahadev:</a></b> 10km - Temple on hill with vast trekking opportunities and panoramic views",
+        "<b><a href='/places/vande-mataram-memorial' class='text-blue-400 hover:text-blue-300'>Vande Mataram Memorial:</a></b> 8km - Memorial at Bhujodi village commemorating freedom struggle",
+        "<b><a href='/places/jadura' class='text-blue-400 hover:text-blue-300'>Jadura:</a></b> 5km - Scenic sunset point with panoramic views",
+        "<b><a href='/places/hanuman-tekri' class='text-blue-400 hover:text-blue-300'>Hanuman Tekri Kodki:</a></b> 10km - Hanuman temple and excellent sunset viewpoint"
       ],
       image: {
         src: "/images/bhuj/bhuj4.webp",
-        alt: "Craftsman in Bhujodi village"
+        alt: "Nearby attractions around Bhuj — Cultural Heart of Kutch"
       }
     },
     {

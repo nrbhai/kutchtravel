@@ -103,17 +103,18 @@ export const kaloDungar: Destination = {
     },
     {
       heading: "Nearby Destinations",
-      color: "bg-slate-50",
-      border: "border-l-4 border-slate-600 text-slate-800",
+      color: "bg-indigo-50",
+      border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b><a href='/destinations/dhordo' class='text-blue-500 hover:underline'>Dhordo (White Rann):</a></b> (48km) The salt desert.",
-        "<b>Khavda:</b> (25km) Nearest town with basic facilities.",
-        "<b><a href='/destinations/bhuj' class='text-blue-500 hover:underline'>Bhuj:</a></b> (97km) Capital city.",
-        "<b><a href='/destinations/dholavira' class='text-blue-500 hover:underline'>Dholavira:</a></b> (~100km via Road to Heaven) Harappan site."
+        "<b><a href='/places/dhordo' class='text-blue-400 hover:text-blue-300'>Dhordo (White Rann):</a></b> 48km — salt desert and Rann Utsav festival site",
+        "<b><a href='/places/khavda' class='text-blue-400 hover:text-blue-300'>Khavda:</a></b> 25km — nearest town with basic facilities and accommodations",
+        "<b><a href='/places/bhuj' class='text-blue-400 hover:text-blue-300'>Bhuj:</a></b> 97km — regional capital and cultural hub of Kutch",
+        "<b><a href='/places/road-to-heaven' class='text-blue-400 hover:text-blue-300'>Road to Heaven:</a></b> 54km — the famous straight highway through the Rann",
+        "<b><a href='/places/dholavira' class='text-blue-400 hover:text-blue-300'>Dholavira:</a></b> ~100km — archaeological site of the Harappan civilization"
       ],
       image: {
         src: "/images/kalo-dungar/kalo-dungar2.webp",
-        alt: "White Rann view"
+        alt: "White Rann view from Kalo Dungar"
       }
     },
     {

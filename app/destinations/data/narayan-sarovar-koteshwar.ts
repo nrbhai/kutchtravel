@@ -89,15 +89,18 @@ export const narayanSarovarKoteshwar: Destination = {
     },
     {
       heading: "Nearby Destinations",
-      color: "bg-slate-50",
-      border: "border-l-4 border-slate-600 text-slate-800",
+      color: "bg-indigo-50",
+      border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b><a href='/destinations/lakhpat' class='text-blue-500 hover:underline'>Lakhpat:</a></b> (35km) The ghost town fort.",
-        "<b><a href='/destinations/mata-na-madh' class='text-blue-500 hover:underline'>Mata na Madh:</a></b> (45km) Ashapura Mata Temple."
+        "<b><a href='/places/lakhpat' class='text-blue-400 hover:text-blue-300'>Lakhpat:</a></b> 20km - Historic fort town on Kori Creek",
+        "<b><a href='/places/bhuj' class='text-blue-400 hover:text-blue-300'>Bhuj:</a></b> 100km - Cultural capital of Kutch",
+        "<b><a href='/places/white-rann' class='text-blue-400 hover:text-blue-300'>White Rann:</a></b> 80km - Famous salt desert",
+        "<b><a href='/places/mandvi' class='text-blue-400 hover:text-blue-300'>Mandvi:</a></b> 90km - Coastal town with beaches",
+        "<b><a href='/places/koteshwar' class='text-blue-400 hover:text-blue-300'>Koteshwar:</a></b> 5km - Additional temple complex"
       ],
       image: {
         src: "/images/narayan-sarovar-koteshwar/nearby.webp",
-        alt: "Nearby Lakhpat"
+        alt: "Nearby attractions around Narayan Sarovar Koteshwar"
       }
     },
     {

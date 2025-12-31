@@ -106,16 +106,18 @@ export const dhordo: Destination = {
     },
     {
       heading: "Nearby Destinations",
-      color: "bg-slate-50",
-      border: "border-l-4 border-slate-600 text-slate-800",
+      color: "bg-indigo-50",
+      border: "border-l-4 border-indigo-600 text-indigo-800",
       list: [
-        "<b><a href='/destinations/kalo-dungar' class='text-blue-500 hover:underline'>Kalo Dungar:</a></b> (50km | 1 hr) Panoramic view of the Rann from the top.",
-        "<b>Hodka Village:</b> (15km) Beautiful mud resorts and local crafts.",
-        "<b>Gandhi Nu Gam:</b> (30km) Handicraft village rebuilt after the earthquake."
+        "<b><a href='/places/kalo-dungar' class='text-blue-400 hover:text-blue-300'>Kalo Dungar:</a></b> 48km - Highest point in Kutch with panoramic views",
+        "<b><a href='/places/dholavira' class='text-blue-400 hover:text-blue-300'>Dholavira:</a></b> 88km - Ancient Harappan archaeological site",
+        "<b><a href='/places/bhuj' class='text-blue-400 hover:text-blue-300'>Bhuj:</a></b> 81km - Cultural capital of Kutch",
+        "<b><a href='/places/hodka' class='text-blue-400 hover:text-blue-300'>Hodka Village:</a></b> 15km - Traditional village with mud houses",
+        "<b><a href='/places/road-to-heaven' class='text-blue-400 hover:text-blue-300'>Road to Heaven:</a></b> 54km - Famous straight highway through the Rann"
       ],
       image: {
         src: "/images/dhordo-white-rann/nearby.webp",
-        alt: "Kalo Dungar view point"
+        alt: "Nearby attractions around Dhordo — Gateway to the White Desert"
       }
     },
     {
