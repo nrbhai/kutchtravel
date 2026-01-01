@@ -15,8 +15,6 @@ const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-507118549';
 
 export function GoogleAnalytics() {
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'production') return;
-
     // Load Google Analytics script
     const script1 = document.createElement('script');
     script1.async = true;
@@ -50,7 +48,6 @@ export function usePageTracking() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== 'production') return;
     if (!window.gtag) return;
 
     const url = pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '');
@@ -65,7 +62,6 @@ export function usePageTracking() {
 
 // Track custom events
 export function trackEvent(eventName: string, parameters?: Record<string, any>) {
-  if (process.env.NODE_ENV !== 'production') return;
   if (!window.gtag) return;
 
   window.gtag('event', eventName, {
