@@ -21,7 +21,11 @@ export const secretBirdingSite: HiddenGem = {
       heading: "Overview",
       color: "#fff7ed",
       border: "border-l-4 border-amber-500 text-gray-700",
-      content: "The Lala-Parjan Sanctuary (Kutch Bustard Sanctuary), located near Nalia in Abdasa, is the smallest sanctuary in the country but holds immense ecological value. It is one of the last few habitats in Gujarat for the Great Indian Bustard (Ghorad), a majestic bird on the brink of extinction. The sanctuary is a mix of grasslands and scrub, resembling the African Savannah."
+      content: "The Lala-Parjan Sanctuary (Kutch Bustard Sanctuary), located near Nalia in Abdasa, is the smallest sanctuary in the country but holds immense ecological value. It is one of the last few habitats in Gujarat for the Great Indian Bustard (Ghorad), a majestic bird on the brink of extinction. The sanctuary is a mix of grasslands and scrub, resembling the African Savannah.",
+      image: {
+        src: "/images/hidden-gems/secret-birding-site/main.webp",
+        alt: "Golden grasslands of Lala-Parjan Sanctuary"
+      }
     },
     {
       heading: "Wildlife Treasures", 
@@ -33,7 +37,11 @@ export const secretBirdingSite: HiddenGem = {
         "<b>MacQueen's Bustard:</b> A winter visitor to the region.",
         "<b>Blackbuck & Chinkara:</b> Common sightings in the open plains.",
         "<b>Predators:</b> Indian Wolf, Jungle Cat, and Desert Fox can be spotted."
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/secret-birding-site/bustard.webp",
+        alt: "Great Indian Bustard in natural habitat"
+      }
     },
     {
       heading: "Visitor Information",
@@ -45,13 +53,21 @@ export const secretBirdingSite: HiddenGem = {
         "<b>Timing:</b> Dawn to Dusk (Best visibility just after sunrise).",
         "<b>Facilities:</b> Very basic. A watchtower exists for spotting.",
         "<b>Guides:</b> Local guides from Nalia are recommended to navigate and spot camouflaged birds."
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/secret-birding-site/wildlife.webp",
+        alt: "Chinkara in the sanctuary"
+      }
     },
     {
       heading: "Photography Tips",
       color: "#f0fdf4",
       border: "border-l-4 border-emerald-500 text-gray-700", 
-      content: "A lens of at least 400mm is recommended. The GIB is very shy and will fly or run away if approached. Use a bean bag for car support as tripods might be cumbersome in a vehicle. The golden light of Kutch evenings provides excellent backdrops for Chinkara and Blackbuck photography."
+      content: "A lens of at least 400mm is recommended. The GIB is very shy and will fly or run away if approached. Use a bean bag for car support as tripods might be cumbersome in a vehicle. The golden light of Kutch evenings provides excellent backdrops for Chinkara and Blackbuck photography.",
+      image: {
+        src: "/images/hidden-gems/secret-birding-site/florican.webp",
+        alt: "Lesser Florican in grasslands"
+      }
     }
   ],
   facts: [

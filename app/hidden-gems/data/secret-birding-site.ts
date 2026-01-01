@@ -21,7 +21,11 @@ export const secretBirdingSite: HiddenGem = {
       heading: "Overview",
       color: "#f8fafc",
       border: "border-l-4 border-slate-500 text-slate-700",
-      content: "The Kutch Bustard Sanctuary (Kachchh Great Indian Bustard Sanctuary or Lala-Parjan Sanctuary) is a key conservation area for the critically endangered Great Indian Bustard (Ghorad). Located near Jakhau village in Abdasa Taluka, it covers about 2.03 sq km and is one of the smallest sanctuaries in India."
+      content: "The Kutch Bustard Sanctuary (Kachchh Great Indian Bustard Sanctuary or Lala-Parjan Sanctuary) is a key conservation area for the critically endangered Great Indian Bustard (Ghorad). Located near Jakhau village in Abdasa Taluka, it covers about 2.03 sq km and is one of the smallest sanctuaries in India.",
+      image: {
+        src: "/images/hidden-gems/kutch-bustard-bird-watching-site/main.webp",
+        alt: "Kutch Bustard Sanctuary landscape"
+      }
     },
     {
       heading: "Planning Your Visit",
@@ -31,7 +35,11 @@ export const secretBirdingSite: HiddenGem = {
         "Best Time: November to March (ideal), late monsoon also good.",
         "Timings: Generally 7:00 AM to 6:00 PM.",
         "Entry Fee: Adults INR 50, Children INR 25, Parking INR 30."
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/kutch-bustard-bird-watching-site/winter-flock.webp",
+        alt: "Winter migratory birds at sanctuary"
+      }
     },
     {
       heading: "What to See and Do",
@@ -43,7 +51,11 @@ export const secretBirdingSite: HiddenGem = {
         "Winter Migrants: Flamingos, Herons, Sandpipers in nearby Jakhau creeks.",
         "Wildlife: Wolf, Caracal, Desert Cat, Jackal, Striped Hyena, Fox, Mongoose, Bluebull (Nilgai), Chinkara (Indian Gazelle).",
         "Activities: Bird watching, nature walks, possible jeep safaris, watchtower for wildlife spotting."
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/kutch-bustard-bird-watching-site/bustard.webp",
+        alt: "Great Indian Bustard in grassland"
+      }
     },
     {
       heading: "How to Reach",
@@ -54,7 +66,11 @@ export const secretBirdingSite: HiddenGem = {
         "Nearest Railhead: Nalia (20 km) or Bhuj (110 km)",
         "Nearest Airport: Bhuj (110 km)",
         "By Road: Well-connected from Bhuj and other Kutch towns."
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/kutch-bustard-bird-watching-site/wildlife.webp",
+        alt: "Wildlife in the sanctuary"
+      }
     }
   ],
   facts: [

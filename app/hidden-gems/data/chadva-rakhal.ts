@@ -12,13 +12,21 @@ export const chadvaRakhal: HiddenGem = {
       heading: "Overview",
       color: "#f0fdfa", 
       border: "border-l-4 border-emerald-500 text-gray-700",
-      content: "Chadva Rakhal is a pristine private forest reserve owned by the former royal family of Kutch. Located just 15-20km from Bhuj near Samatra village, this protected oasis centers around the scenic Pragsar Lake. It is one of the few places in Kutch where you can spot Mugger Crocodiles basking in their natural habitat, surrounded by dense dry deciduous forest."
+      content: "Chadva Rakhal is a pristine private forest reserve owned by the former royal family of Kutch. Located just 15-20km from Bhuj near Samatra village, this protected oasis centers around the scenic Pragsar Lake. It is one of the few places in Kutch where you can spot Mugger Crocodiles basking in their natural habitat, surrounded by dense dry deciduous forest.",
+      image: {
+        src: "/images/hidden-gems/chadva-rakhal/main.webp",
+        alt: "Pragsar Lake at Chadva Rakhal"
+      }
     },
     {
       heading: "A Royal Legacy",
       color: "#fff7ed",
       border: "border-l-4 border-amber-500 text-gray-700",
-      content: "Historically, 'Rakhals' were hunting reserves for the Maharaos of Kutch. Today, Chadva Rakhal is a conservation success story. Managed by the Maharao Pragmulji Nature Conservation Trust, it protects indigenous flora and fauna, offering a glimpse into how the Kutch landscape looked before modern development."
+      content: "Historically, 'Rakhals' were hunting reserves for the Maharaos of Kutch. Today, Chadva Rakhal is a conservation success story. Managed by the Maharao Pragmulji Nature Conservation Trust, it protects indigenous flora and fauna, offering a glimpse into how the Kutch landscape looked before modern development.",
+      image: {
+        src: "/images/hidden-gems/chadva-rakhal/forest.webp",
+        alt: "Dense forest canopy of the Rakhal"
+      }
     },
     {
       heading: "Wildlife & Nature",
@@ -29,7 +37,11 @@ export const chadvaRakhal: HiddenGem = {
         "<b>Birdwatching:</b> A haven for waterfowl and forest birds.",
         "<b>Flora:</b> Home to ancient trees and medicinal plants typical of the Kutch region.",
         "<b>Serenity:</b> A quiet escape perfect for nature walks and picnics (with permission)."
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/chadva-rakhal/croc.webp",
+        alt: "Mugger Crocodile basking in the sun"
+      }
     },
     {
       heading: "Visitor Information",
@@ -40,7 +52,11 @@ export const chadvaRakhal: HiddenGem = {
         "<b>Access:</b> It is a private reserve. While often accessible to nature lovers, it's best to check locally or get permission.",
         "<b>Best Time:</b> Winter afternoons are best to spot basking crocodiles.",
         "<b>Facilities:</b> Minimal. Carry your own water and snacks. LEAVE NO TRACE."
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/chadva-rakhal/sunset.webp",
+        alt: "Sunset over Pragsar Lake"
+      }
     }
   ],
   facts: [

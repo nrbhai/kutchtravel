@@ -57,6 +57,40 @@ export const mandvi: Destination = {
       }
     },
     {
+      heading: "Local Bazaars & Shopping Areas",
+      color: "bg-purple-50",
+      border: "border-l-4 border-purple-600 text-purple-800",
+      list: [
+        "<b>Main Market (Bazaar Road):</b> The heart of Mandvi's shopping. Find authentic Bandhani textiles, local handicrafts, and traditional Kutchi embroidery at lower prices than Bhuj.",
+        "<b>Ship Building Area Market:</b> Small shops selling nautical items, ship models, and maritime souvenirs. Unique to Mandvi's shipbuilding heritage.",
+        "<b>Beach Road Stalls:</b> Evening market near Wind Farm Beach selling local snacks, Dabeli, beachwear, and colorful kites.",
+        "<b>Textile Shops:</b> Several family-run shops specializing in Bandhani and block-printed fabrics. Ask for factory-direct prices.",
+        "<b>Handicraft Emporiums:</b> Government-certified stores near the palace offering authentic Kutchi crafts with fixed prices."
+      ],
+      image: {
+        src: "/images/mandvi/crafts.webp",
+        alt: "Shopping in Mandvi markets"
+      }
+    },
+    {
+      heading: "Famous Spots & Landmarks",
+      color: "bg-rose-50",
+      border: "border-l-4 border-rose-600 text-rose-800",
+      list: [
+        "<b>Vijay Vilas Palace:</b> Built in 1920, this stunning royal palace features Indo-Saracenic architecture with private beach access. Famous Bollywood filming location. Entry: ₹50.",
+        "<b>Wind Farm Beach:</b> Mandvi's most popular beach with windmills backdrop. Perfect for sunset views, camel rides, and water sports. Gets lively in evenings.",
+        "<b>Shipbuilding Yard:</b> 400-year-old traditional wooden ship construction site. Watch master craftsmen build massive dhows using age-old techniques. Free to observe.",
+        "<b>72 Jinalaya:</b> Magnificent Jain temple complex with 72 shrines. Intricate marble carvings and peaceful atmosphere. 10km from town center.",
+        "<b>Shyamji Krishna Varma Memorial:</b> Interactive museum dedicated to the freedom fighter. Modern architecture with historical exhibits. Closed Thursdays.",
+        "<b>Rukmavati River Bridge:</b> Historic bridge offering panoramic views of the shipyard and river. Best photography spot during golden hour.",
+        "<b>Kashi Vishwanath Temple:</b> Ancient Shiva temple near a secluded beach. Peaceful location 5km from main town."
+      ],
+      image: {
+        src: "/images/mandvi/attractions.webp",
+        alt: "Famous landmarks of Mandvi"
+      }
+    },
+    {
         heading: "Local Tips & Common Mistakes",
         color: "bg-yellow-50",
         border: "border-l-4 border-yellow-600 text-yellow-800",

@@ -55,6 +55,41 @@ export const gandhidham: Destination = {
       }
     },
     {
+      heading: "Local Bazaars & Shopping Areas",
+      color: "bg-purple-50",
+      border: "border-l-4 border-purple-600 text-purple-800",
+      list: [
+        "<b>Banking Circle Market:</b> The commercial heart of Gandhidham. Find electronics, imported goods, clothing, and accessories. Modern shops with fixed prices. Best time: 10 AM - 9 PM.",
+        "<b>Tagore Road Shopping:</b> Main shopping street with branded stores, footwear shops, and textile outlets. Good for clothing and modern fashion items.",
+        "<b>Sindhi Market:</b> Traditional market selling Sindhi handicrafts, embroidered items, and local textiles. Bargaining expected. Morning hours best.",
+        "<b>Electronics Market:</b> Specialized area for computers, mobile phones, and electronic goods. Competitive prices due to port proximity.",
+        "<b>Adipur Market:</b> Sister town market 8km away. Good for daily essentials, local snacks, and traditional items at lower prices.",
+        "<b>Modern Malls:</b> Small shopping centers with branded stores, food courts, and entertainment options. Air-conditioned comfort shopping."
+      ],
+      image: {
+        src: "/images/gandhidham/gandhidham2.webp",
+        alt: "Shopping in Gandhidham markets"
+      }
+    },
+    {
+      heading: "Famous Spots & Landmarks",
+      color: "bg-rose-50",
+      border: "border-l-4 border-rose-600 text-rose-800",
+      list: [
+        "<b>Gandhi Samadhi (Adipur):</b> Serene memorial containing some of Mahatma Gandhi's ashes. Beautiful architecture with peaceful gardens. Open daily 6 AM - 8 PM. Free entry.",
+        "<b>Gandhidham Railway Station:</b> Major railway junction and architectural landmark. One of Kutch's busiest stations connecting to major Indian cities.",
+        "<b>Kandla Port:</b> India's major port handling international cargo. Restricted access but visible from outside. Symbol of Gandhidham's commercial importance.",
+        "<b>Shivaji Park:</b> Large public park with gardens, walking tracks, and children's play area. Popular evening spot for families and joggers.",
+        "<b>Purneshwar Temple:</b> Modern Hindu temple with beautiful architecture. Active worship center with regular ceremonies and festivals.",
+        "<b>Sindhi Cultural Center:</b> Showcases Sindhi heritage, art, and culture. Hosts cultural events and exhibitions. Check timings before visiting.",
+        "<b>Kandla Airport:</b> Small but modern airport connecting Kutch to major cities. Clean and efficient facility serving the region."
+      ],
+      image: {
+        src: "/images/gandhidham/gandhidham4.webp",
+        alt: "Famous landmarks of Gandhidham"
+      }
+    },
+    {
         heading: "Local Tips & Common Mistakes",
         color: "bg-yellow-50",
         border: "border-l-4 border-yellow-600 text-yellow-800",

@@ -59,7 +59,7 @@ Stay at one of the traditional tent accommodations near Dhordo to wake up to sun
     readTime: '8 min read',
     category: 'Destinations',
     tags: ['White Rann', 'Full Moon', 'Photography', 'Rann Utsav'],
-    image: '/images/blog-images/rann-1.webp',
+    image: '/images/dhordo-white-rann/dhordo1.webp',
     featured: true
   },
   {
@@ -146,7 +146,7 @@ One of Hinduism's five sacred lakes, Narayan Sarovar is a spiritual and scenic d
     readTime: '7 min read',
     category: 'Travel Tips',
     tags: ['Hidden Gems', 'Off-beat', 'Adventure', 'Nature'],
-    image: '/images/blog-images/landscape-2.webp',
+    image: '/images/dhordo-white-rann/landspace-2.webp',
     featured: true
   },
   {
@@ -195,7 +195,7 @@ Due to cultural and religious practices, most Kutchi cuisine is vegetarian, maki
     readTime: '6 min read',
     category: 'Food',
     tags: ['Food', 'Cuisine', 'Culture', 'Local'],
-    image: '/images/blog-images/market-1.webp'
+    image: '/images/bhuj/bhuj8.webp'
   },
   {
     id: '5',
@@ -358,7 +358,7 @@ Running from November to February, the Rann Utsav transforms the White Desert in
     readTime: '11 min read',
     category: 'Events',
     tags: ['Rann Utsav', 'Festival', 'Events', 'Culture'],
-    image: '/images/blog-images/rann-2.webp'
+    image: '/images/dhordo-white-rann/dhordo3.webp'
   }
 ];
 

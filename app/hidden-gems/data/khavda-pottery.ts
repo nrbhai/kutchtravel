@@ -12,7 +12,11 @@ export const khavdaPottery: HiddenGem = {
       heading: "Overview",
       color: "#fef3c7",
       border: "border-l-4 border-gray-500 text-gray-700",
-      content: "Khavda village is home to generations of master potters who continue the ancient tradition of creating beautiful terracotta pottery. This living heritage destination offers authentic cultural immersion with traditional artisans."
+      content: "Khavda village is home to generations of master potters who continue the ancient tradition of creating beautiful terracotta pottery. This living heritage destination offers authentic cultural immersion with traditional artisans.",
+      image: {
+        src: "/images/hidden-gems/khavda-pottery/khavda1.webp",
+        alt: "Master potter at work in Khavda"
+      }
     },
     {
       heading: "Pottery Tradition",
@@ -25,7 +29,11 @@ export const khavdaPottery: HiddenGem = {
         "<b>Natural Colors:</b> Earthy tones achieved through organic materials",
         "<b>Master Artisans:</b> Meet craftsmen who learned from their grandfathers",
         "<b>Live Demonstrations:</b> Watch entire pottery-making process"
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/khavda-pottery/khavda2.webp",
+        alt: "Traditional pottery kiln"
+      }
     },
     {
       heading: "Cultural Experience",
@@ -38,7 +46,11 @@ export const khavdaPottery: HiddenGem = {
         "<b>Folk Stories:</b> Listen to tales about pottery traditions",
         "<b>Shopping:</b> Purchase unique pieces directly from artisans",
         "<b>Photography:</b> Document traditional craftsmanship"
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/khavda-pottery/khavda3.webp",
+        alt: "Handcrafted pottery pieces"
+      }
     },
     {
       heading: "How to Reach",
@@ -50,7 +62,11 @@ export const khavdaPottery: HiddenGem = {
         "<b>Public Transport:</b> Regular bus service from Bhuj to Khavda",
         "<b>Private Vehicle:</b> Recommended for flexibility in timing",
         "<b>Local Transport:</b> Auto-rickshaws available within village"
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/khavda-pottery/khavda4.webp",
+        alt: "Khavda village pottery workshop"
+      }
     },
     {
       heading: "Visitor Experience",

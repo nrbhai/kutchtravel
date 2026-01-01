@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Popover, Menu, MenuButton, MenuItem, MenuItems, PopoverButton, PopoverPanel } from "@headlessui/react";
-import { MapPin, Calendar, Camera, BookOpen, Users, Sparkles, Mountain, Waves, ArrowRight, Palette } from "lucide-react";
+import { MapPin, Calendar, Camera, BookOpen, Users, Sparkles, Mountain, Waves, ArrowRight, Palette, Home as HomeIcon } from "lucide-react";
 import QuickGuide from "./components/QuickGuide";
 import Navigation from "./components/Navigation";
 import BookingWidget from "./components/BookingWidget";
@@ -17,143 +17,7 @@ import { useState, useEffect } from "react";
 
 
 
-// Craft Carousel Component - Changes every 5 seconds
-const CraftCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const craftImages = [
-    { src: "/images/crafts/bandhani.webp", alt: "Bandhani Tie-Dye", caption: "Bandhani - Traditional Tie-Dye", hasImage: true },
-    { src: "/images/crafts/ajrakh.webp", alt: "Ajrakh Block Printing", caption: "Ajrakh - Block Printing Art", hasImage: true },
-    { src: "/images/crafts/rogan.webp", alt: "Rogan Art", caption: "Rogan Art - Painted Textiles", hasImage: true },
-    { src: "/images/crafts/bandhani2.webp", alt: "Bandhani Variants", caption: "Bandhani - Colorful Patterns", hasImage: true },
-    { src: "/images/crafts/rogan2.webp", alt: "Rogan Art Designs", caption: "Rogan Art - Intricate Designs", hasImage: true },
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((current) => (current + 1) % craftImages.length);
-    }, 5000); // Change image every 5 seconds
-
-    return () => clearInterval(timer);
-  }, [craftImages.length]);
-
-  return (
-    <div className="relative w-full h-full">
-      {craftImages.map((image, index) => (
-        <motion.div
-          key={image.src}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: index === currentIndex ? 1 : 0 }}
-          transition={{ duration: 0.8 }}
-          className={`absolute inset-0 ${index === currentIndex ? 'z-10' : 'z-0'}`}
-        >
-          <div className="relative w-full h-full">
-            <Image
-              src={image.src}
-              alt={image.alt}
-              fill
-              className="object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority={index === 0}
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
-            <div className="absolute bottom-6 left-6 right-6 bg-black/60 backdrop-blur-md rounded-2xl p-4 shadow-lg border border-white/10">
-              <h3 className="text-2xl font-sora font-bold text-white mb-2">
-                {image.caption}
-              </h3>
-              <p className="text-gray-300 font-inter font-medium">Traditional Kutchi Craft</p>
-            </div>
-          </div>
-        </motion.div>
-      ))}
-      
-      {/* Navigation dots */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
-        {craftImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2.5 h-2.5 rounded-full transition-all ${
-              index === currentIndex 
-                ? 'bg-orange-600 scale-100' 
-                : 'bg-orange-300 scale-75 hover:scale-90 hover:bg-orange-400'
-            }`}
-            aria-label={`Go to craft ${index + 1}`}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-// Gallery Carousel Component - Changes every 5 seconds
-const GalleryCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const galleryImages = [
-    { src: "/images/carousel/kutch1.webp", alt: "Road to Heaven", caption: "Road to Heaven" },
-    { src: "/images/carousel/kutch2.webp", alt: "Kadiya Dhrow Canyon", caption: "Kadiya Dhrow Canyon" },
-    { src: "/images/carousel/kutch3.webp", alt: "White Rann at Dhordo", caption: "White Rann - Dhordo" },
-    { src: "/images/carousel/kutch4.webp", alt: "Bharapar near Bhuj", caption: "Bharapar - Near Bhuj" },
-    { src: "/images/carousel/kutch5.webp", alt: "Mandvi Road in Bhuj", caption: "Mandvi Road - Bhuj" },
-    { src: "/images/carousel/kutch6.webp", alt: "Greenland Lake on Mirzapar Road", caption: "Greenland Lake - Mirzapar Road" },
-    { src: "/images/carousel/kutch7.webp", alt: "Chattradi in Bhuj", caption: "Chattradi, Bhuj" },
-    { src: "/images/carousel/kutch8.webp", alt: "Greenland Lake on Mirzapar Road", caption: "Greenland Lake - Mirzapar Road" },
-    { src: "/images/carousel/kutch9.webp", alt: "Afternoon at Mandvi Beach", caption: "Afternoon at Mandvi Beach - Mandvi" },
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIndex((current) => (current + 1) % galleryImages.length);
-    }, 5000); // Change image every 5 seconds
-
-    return () => clearInterval(timer);
-  }, [galleryImages.length]);
-
-  return (
-    <div className="relative w-full h-full">
-      {galleryImages.map((image, index) => (
-        <motion.div
-          key={image.src}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: index === currentIndex ? 1 : 0 }}
-          transition={{ duration: 0.7 }}
-          className={`absolute inset-0 ${index === currentIndex ? 'z-10' : 'z-0'}`}
-        >
-          <Image
-            src={image.src}
-            alt={image.alt}
-            fill
-            priority={index === 0}
-            sizes="(max-width: 1024px) 90vw, 45vw"
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-yellow-600/50 via-amber-500/10 to-transparent"></div>
-          <div className="absolute bottom-4 left-4 right-4 text-white text-sm font-medium px-3 py-1 bg-black/60 rounded-full backdrop-blur-sm shadow-md truncate border border-white/10">
-            {image.caption}
-          </div>
-        </motion.div>
-      ))}
-      
-      {/* Navigation dots */}
-      <div className="absolute bottom-4 right-4 z-20 flex gap-2">
-        {galleryImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              index === currentIndex 
-                ? 'bg-white scale-100' 
-                : 'bg-white/50 scale-75 hover:scale-90 hover:bg-white/70'
-            }`}
-            aria-label={`Go to image ${index + 1} of ${galleryImages.length}`}
-            aria-current={index === currentIndex ? 'true' : 'false'}
-          />
-        ))}
-      </div>
-    </div>
-  );
-};
 
 // Create short descriptions matching the destinations page
 const destinationDescriptions: Record<string, string> = {
@@ -374,85 +238,73 @@ export default function Home() {
           <div className="absolute bottom-0 left-1/2 w-[480px] h-[480px] bg-primary/5 rounded-full blur-3xl opacity-40"></div>
         </div>
 
-        {/* Content grid container */}
+        {/* Content container - Centered single column */}
         
-        <div className="relative z-20 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            {/* Text Content */}
-            <motion.div 
-              className="text-center lg:text-left relative"
-              initial="hidden" 
-              animate="visible" 
-              variants={stagger}
-            >
-              {/* Local Watermark for Text Section */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.15]">
-                 <div className="relative w-[600px] h-[600px] grayscale mix-blend-multiply">
-                    <Image
-                       src="/images/logo-v3.webp"
-                       alt="Travel Kutch Watermark"
-                       fill
-                       className="object-contain"
-                    />
-                 </div>
-              </div>
+        <div className="relative z-20 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          {/* Centered Text Content */}
+          <motion.div 
+            className="text-center relative max-w-5xl mx-auto"
+            initial="hidden" 
+            animate="visible" 
+            variants={stagger}
+          >
+            {/* Local Watermark for Text Section */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 opacity-[0.15]">
+               <div className="relative w-[600px] h-[600px] grayscale mix-blend-multiply">
+                  <Image
+                     src="/images/logo-v3.webp"
+                     alt="Travel Kutch Watermark"
+                     fill
+                     className="object-contain"
+                  />
+               </div>
+            </div>
 
-              <motion.h1 variants={fadeUp} className="font-sora leading-tight tracking-tight relative z-10">
-                <MetallicHeading 
-                  text="Discover Kutch"
-                  as="strong"
-                  variant="gold"
-                  className="text-5xl md:text-6xl lg:text-8xl font-extrabold"
-                  animationDuration="12s"
-                />
-                <MetallicHeading 
-                  text={subtitle} 
-                  as="strong" 
-                  variant="silver-green"
-                  className="block text-2xl md:text-3xl lg:text-4xl font-inter font-medium mt-4 tracking-wide" 
-                  animationDuration="12s"
-                />
-              </motion.h1>
+            <motion.h1 variants={fadeUp} className="font-sora leading-tight tracking-tight relative z-10">
+              <MetallicHeading 
+                text="Discover Kutch"
+                as="strong"
+                variant="gold"
+                className="text-5xl md:text-6xl lg:text-8xl font-extrabold"
+                animationDuration="12s"
+              />
+              <MetallicHeading 
+                text={subtitle} 
+                as="strong" 
+                variant="silver-green"
+                className="block text-2xl md:text-3xl lg:text-4xl font-inter font-medium mt-4 tracking-wide" 
+                animationDuration="12s"
+              />
+            </motion.h1>
 
-              <motion.p variants={fadeUp} className="mt-8 text-base md:text-lg lg:text-xl max-w-4xl mx-auto lg:mx-0 font-inter font-medium leading-relaxed">
-                <span className="text-gray-300 font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-xl md:text-2xl lg:text-3xl whitespace-nowrap">
-                  Where salt meets sky, and stories meet silence
-                </span>
-                <span className="block text-sm md:text-base mt-5 font-inter font-medium text-primary">
-                  Your complete Kutch tour guide with real photos and local tips — not just brochures.
-                </span>
-              </motion.p>
+            <motion.p variants={fadeUp} className="mt-8 text-base md:text-lg lg:text-xl max-w-4xl mx-auto font-inter font-medium leading-relaxed">
+              <span className="text-gray-300 font-bold drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-xl md:text-2xl lg:text-3xl">
+                Where salt meets sky, and stories meet silence
+              </span>
+              <span className="block text-sm md:text-base mt-5 font-inter font-medium text-primary">
+                Your complete Kutch tour guide with real photos and local tips — not just brochures.
+              </span>
+            </motion.p>
 
-              <motion.div variants={fadeUp} className="mt-8 flex flex-wrap justify-center lg:justify-start gap-4">
-                <Link 
-                  href="/destinations" 
-                  className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-700 hover:from-yellow-500 hover:via-amber-400 hover:to-yellow-600 text-white font-inter font-bold py-3 px-6 rounded-full shadow-xl shadow-amber-500/30 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden"
-                >
-                  <span className="relative z-10">Explore Destinations</span>
-                  <span className="relative z-10 group-hover:translate-x-1 transition-transform">→</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
-                </Link>
+            <motion.div variants={fadeUp} className="mt-8 flex flex-wrap justify-center gap-4">
+              <Link 
+                href="/destinations" 
+                className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-yellow-600 via-amber-500 to-yellow-700 hover:from-yellow-500 hover:via-amber-400 hover:to-yellow-600 text-white font-inter font-bold py-3 px-6 rounded-full shadow-xl shadow-amber-500/30 transition-all duration-300 hover:scale-105 active:scale-95 overflow-hidden"
+              >
+                <span className="relative z-10">Explore Destinations</span>
+                <span className="relative z-10 group-hover:translate-x-1 transition-transform">→</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+              </Link>
 
-                <a 
-                  href="#destinations" 
-                  className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-inter font-semibold py-3 px-6 rounded-full border border-white/20 transition-all duration-300 hover:scale-105 active:scale-95"
-                >
-                  <span>Quick Guide</span>
-                  <span>✨</span>
-                </a>
-              </motion.div>
+              <a 
+                href="#destinations" 
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-inter font-semibold py-3 px-6 rounded-full border border-white/20 transition-all duration-300 hover:scale-105 active:scale-95"
+              >
+                <span>Quick Guide</span>
+                <span>✨</span>
+              </a>
             </motion.div>
-
-            {/* Gallery Image Carousel - 5 Second Intervals */}
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.3, duration: 0.8 }}
-              className="relative aspect-[4/3] w-full max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-2xl"
-            >
-              <GalleryCarousel />
-            </motion.div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Bottom Decorative Elements */}
@@ -476,99 +328,70 @@ export default function Home() {
       </section>
 
       {/* Feature Tabs Grid Section */}
-      <section className="relative -mt-20 mb-12 z-20">
+      <section className="relative -mt-20 mb-12 z-20 overflow-visible">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 grid-mobile-2 gap-4 md:gap-6 lg:gap-8 relative">
-            <Link href="/destinations" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-yellow-600 via-amber-500 to-yellow-700 backdrop-blur-sm border border-amber-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-br from-yellow-600 via-amber-600 to-yellow-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-6 max-w-7xl mx-auto overflow-visible">
+            <Link href="/" className="group relative flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-yellow-500 via-amber-500 to-orange-600 backdrop-blur-sm border border-yellow-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 min-h-[100px] sm:min-h-[120px]">
+              <div className="absolute inset-0 bg-gradient-to-br from-yellow-600 via-amber-600 to-orange-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <MapPin className="w-8 h-8 text-white mb-3 transform group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium text-white font-sans tracking-wide">Destinations</span>
+                <HomeIcon className="w-6 h-6 sm:w-8 sm:h-8 text-white mb-2 sm:mb-3 group-hover:scale-110 transition-transform mx-auto" />
+                <span className="text-xs sm:text-sm font-medium text-white font-sans tracking-wide">Home</span>
               </div>
             </Link>
-            <Link href="/hidden-gems" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-emerald-500 via-teal-500 to-cyan-600 backdrop-blur-sm border border-emerald-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+            <Link href="/destinations" className="group relative flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-cyan-500 via-blue-500 to-indigo-600 backdrop-blur-sm border border-cyan-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 min-h-[100px] sm:min-h-[120px]">
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-600 via-blue-600 to-indigo-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Sparkles className="w-8 h-8 text-white mb-3 transform group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium text-white font-sans tracking-wide">Hidden Gems</span>
+                <MapPin className="w-6 h-6 sm:w-8 sm:h-8 text-white mb-2 sm:mb-3 group-hover:scale-110 transition-transform mx-auto" />
+                <span className="text-xs sm:text-sm font-medium text-white font-sans tracking-wide">Destinations</span>
               </div>
             </Link>
-            <Link href="/guide" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-violet-500 via-purple-500 to-fuchsia-600 backdrop-blur-sm border border-violet-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+            <Link href="/history" className="group relative flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-violet-500 via-purple-500 to-indigo-600 backdrop-blur-sm border border-violet-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 min-h-[100px] sm:min-h-[120px]">
+              <div className="absolute inset-0 bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <BookOpen className="w-8 h-8 text-white mb-3 transform group-hover:scale-110 transition-transform duration-300" />
-                <span className="text-sm font-medium text-white font-sans tracking-wide">Travel Guide</span>
+                <BookOpen className="w-6 h-6 sm:w-8 sm:h-8 text-white mb-2 sm:mb-3 group-hover:scale-110 transition-transform mx-auto" />
+                <span className="text-xs sm:text-sm font-medium text-white font-sans tracking-wide">History</span>
               </div>
             </Link>
-            <Link href="/gallery" 
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-pink-500 via-rose-500 to-red-600 backdrop-blur-sm border border-pink-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <Link href="/hidden-gems" className="group relative flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-pink-500 via-rose-500 to-red-600 backdrop-blur-sm border border-pink-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 min-h-[100px] sm:min-h-[120px]">
               <div className="absolute inset-0 bg-gradient-to-br from-pink-600 via-rose-600 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Camera className="w-8 h-8 text-white mb-3 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-white font-sans tracking-wide">Gallery</span>
+                <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-white mb-2 sm:mb-3 group-hover:scale-110 transition-transform mx-auto" />
+                <span className="text-xs sm:text-sm font-medium text-white font-sans tracking-wide">Hidden Gems</span>
               </div>
             </Link>
-            <Link href="/blog" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-amber-500 via-orange-500 to-red-600 backdrop-blur-sm border border-amber-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-600 via-orange-600 to-red-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
-              <div className="relative z-10">
-                <Waves className="w-8 h-8 text-white mb-3 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-white font-sans tracking-wide">Blog</span>
-              </div>
-            </Link>
-            <Link href="/bookings" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-lime-500 via-green-500 to-emerald-600 backdrop-blur-sm border border-lime-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <Link href="/gallery" className="group relative flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-lime-500 via-green-500 to-emerald-600 backdrop-blur-sm border border-lime-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 min-h-[100px] sm:min-h-[120px]">
               <div className="absolute inset-0 bg-gradient-to-br from-lime-600 via-green-600 to-emerald-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Calendar className="w-8 h-8 text-white mb-3 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-white font-sans tracking-wide">Booking</span>
+                <Camera className="w-6 h-6 sm:w-8 sm:h-8 text-white mb-2 sm:mb-3 group-hover:scale-110 transition-transform mx-auto" />
+                <span className="text-xs sm:text-sm font-medium text-white font-sans tracking-wide">Gallery</span>
               </div>
             </Link>
-            <Link href="#culture" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-fuchsia-500 via-purple-500 to-indigo-600 backdrop-blur-sm border border-fuchsia-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <Link href="/bookings" className="group relative flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-emerald-500 via-teal-500 to-green-600 backdrop-blur-sm border border-emerald-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 min-h-[100px] sm:min-h-[120px]">
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-600 via-teal-600 to-green-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
+              <div className="relative z-10">
+                <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-white mb-2 sm:mb-3 group-hover:scale-110 transition-transform mx-auto" />
+                <span className="text-xs sm:text-sm font-medium text-white font-sans tracking-wide">Booking</span>
+              </div>
+            </Link>
+            <Link href="#culture" className="group relative flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-fuchsia-500 via-purple-500 to-indigo-600 backdrop-blur-sm border border-fuchsia-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 min-h-[100px] sm:min-h-[120px]">
               <div className="absolute inset-0 bg-gradient-to-br from-fuchsia-600 via-purple-600 to-indigo-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Palette className="w-8 h-8 text-white mb-3 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-white font-sans tracking-wide">Crafts</span>
+                <Palette className="w-6 h-6 sm:w-8 sm:h-8 text-white mb-2 sm:mb-3 group-hover:scale-110 transition-transform mx-auto" />
+                <span className="text-xs sm:text-sm font-medium text-white font-sans tracking-wide">Crafts</span>
               </div>
             </Link>
-            <Link href="/about" className="group relative flex flex-col items-center justify-center p-6 rounded-2xl bg-gradient-to-br from-orange-500 via-red-500 to-pink-600 backdrop-blur-sm border border-orange-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <Link href="/about" className="group relative flex flex-col items-center justify-center p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-orange-500 via-red-500 to-pink-600 backdrop-blur-sm border border-orange-400/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 min-h-[100px] sm:min-h-[120px]">
               <div className="absolute inset-0 bg-gradient-to-br from-orange-600 via-red-600 to-pink-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"></div>
               <div className="relative z-10">
-                <Users className="w-8 h-8 text-white mb-3 group-hover:scale-110 transition-transform" />
-                <span className="text-sm font-medium text-white font-sans tracking-wide">About/Contact</span>
+                <Users className="w-6 h-6 sm:w-8 sm:h-8 text-white mb-2 sm:mb-3 group-hover:scale-110 transition-transform mx-auto" />
+                <span className="text-xs sm:text-sm font-medium text-white font-sans tracking-wide">About</span>
               </div>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 2️⃣ Enhanced Explore Kutch Section */}
-      <section id="explore-kutch" className="relative overflow-hidden py-12 bg-background">
-        {/* Background decorative elements */}
-        <div className="absolute inset-0 bg-[url('/images/noise.webp')] opacity-[0.05] mix-blend-overlay"></div>
-        
-        <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-center items-center">
-            {/* Map Side */}
-            <div className="relative w-full max-w-4xl aspect-[16/9] rounded-2xl overflow-hidden shadow-2xl border border-white/10 shadow-amber-900/10">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d946413.6494866384!2d69.0!3d23.7337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39511930d634542d%3A0xe68c6f6693b7b2be!2sKutch%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1699999999999!5m2!1sen!2sin&z=9"
-                width="100%"
-                height="100%"
-                style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) contrast(90%)' }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 opacity-80"
-              ></iframe>
-              <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-amber-500/30">
-                <span className="text-sm font-semibold text-amber-500">📍 Kutch, Gujarat</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* 3️⃣ Enhanced Featured Destinations Section */}
       <section id="destinations" className="relative overflow-hidden py-28 bg-background">
@@ -762,7 +585,7 @@ export default function Home() {
               <h3 className="text-3xl font-sora font-bold mb-4 bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-400 bg-clip-text text-transparent">
                 Explore More Destinations
               </h3>
-              <p className="text-gray-300 text-lg mb-8 font-inter leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-300 mb-8 font-inter leading-relaxed">
                 We've shown you just a glimpse! Discover {DESTINATIONS.length - 6} more incredible destinations waiting to be explored in Kutch.
               </p>
               <Link
@@ -790,62 +613,48 @@ export default function Home() {
 
 
         <div className="relative max-w-[1600px] mx-auto px-6">
-          {/* Two Column Layout: Carousel Left, Title Right */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-            {/* Left Column - Auto-rotating Craft Images Carousel */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl order-2 lg:order-1"
-            >
-              <CraftCarousel />
-            </motion.div>
-
-            {/* Right Column - Title */}
-            <motion.div 
-              initial="hidden" 
-              whileInView="visible" 
-              viewport={{ once: true }} 
-              variants={fadeUp} 
-              className="text-left order-1 lg:order-2"
-            >
-              <div className="mb-8">
-                <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-base font-inter font-semibold tracking-wide shadow-xl shadow-cyan-500/30">
-                  <span>🎨</span>
-                  <span>Traditional Arts & Culture</span>
-                </span>
+          {/* Centered Title Section */}
+          <motion.div 
+            initial="hidden" 
+            whileInView="visible" 
+            viewport={{ once: true }} 
+            variants={fadeUp} 
+            className="text-center max-w-4xl mx-auto mb-20"
+          >
+            <div className="mb-8 flex justify-center">
+              <span className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-full text-base font-inter font-semibold tracking-wide shadow-xl shadow-cyan-500/30">
+                <span>🎨</span>
+                <span>Traditional Arts & Culture</span>
+              </span>
+            </div>
+            <MetallicHeading 
+              text="Culture & Crafts"
+              as="h2"
+              variant="gold"
+              className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold mb-8 leading-tight"
+              animationDuration="12s"
+            />
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-inter font-light mb-8">
+              Immerse yourself in the vibrant world of Kutchi traditions, where every thread tells a story 
+              <span className="block mt-3 text-gray-200 font-medium">and every craft carries centuries of heritage.</span>
+            </p>
+            
+            {/* Decorative Elements */}
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <div className="flex items-center gap-3 text-gray-300 font-inter font-medium">
+                <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
+                <span className="text-base">Traditional Textiles</span>
               </div>
-              <MetallicHeading 
-                text="Culture & Crafts"
-                as="h2"
-                variant="gold"
-                className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold mb-8 leading-tight whitespace-nowrap"
-                animationDuration="12s"
-              />
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed font-inter font-light mb-8">
-                Immerse yourself in the vibrant world of Kutchi traditions, where every thread tells a story 
-                <span className="block mt-3 text-gray-200 font-medium">and every craft carries centuries of heritage.</span>
-              </p>
-              
-              {/* Decorative Elements */}
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center gap-3 text-gray-300 font-inter font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
-                  <span className="text-base">Traditional Textiles</span>
-                </div>
-                <div className="flex items-center gap-3 text-gray-300 font-inter font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
-                  <span className="text-base">Ancient Techniques</span>
-                </div>
-                <div className="flex items-center gap-3 text-gray-300 font-inter font-medium">
-                  <span className="w-4 h-4 bg-gradient-to-r from-cyan-700 to-blue-800 rounded-full animate-pulse"></span>
-                  <span className="text-base">Master Artisans</span>
-                </div>
+              <div className="flex items-center gap-3 text-gray-300 font-inter font-medium">
+                <span className="w-4 h-4 bg-gradient-to-r from-cyan-600 to-blue-700 rounded-full animate-pulse"></span>
+                <span className="text-base">Ancient Techniques</span>
               </div>
-            </motion.div>
-          </div>
+              <div className="flex items-center gap-3 text-gray-300 font-inter font-medium">
+                <span className="w-4 h-4 bg-gradient-to-r from-cyan-700 to-blue-800 rounded-full animate-pulse"></span>
+                <span className="text-base">Master Artisans</span>
+              </div>
+            </div>
+          </motion.div>
 
           {/* Craft Cards Grid Below - Compact Style */}
           <motion.div
@@ -1085,7 +894,7 @@ export default function Home() {
                   whileInView="visible" 
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="group bg-gradient-to-br from-cyan-950/30 via-sky-950/30 to-blue-950/30 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/10 hover:border-cyan-500/50 hover:shadow-2xl transition-all duration-500"
+                  className="group bg-gradient-to-br from-cyan-950/30 via-sky-950/30 to-blue-950/30 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-white/10 hover:border-cyan-500/50 hover:shadow-2xl transition-all duration-500"
                 >
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-14 h-14 bg-gradient-to-br from-cyan-900 to-blue-900 rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-900/50 group-hover:scale-110 transition-transform duration-300">
@@ -1096,27 +905,27 @@ export default function Home() {
                       <p className="text-sm text-gray-400 font-inter">Choose your perfect season</p>
                     </div>
                   </div>
-                  <div className="space-y-4">
-                    <div className="bg-black/40 backdrop-blur-sm p-5 rounded-2xl border border-white/10 hover:border-cyan-500/50 transition-all duration-300 hover:shadow-lg">
-                      <div className="flex items-start justify-between mb-2">
-                        <h4 className="font-inter font-bold text-cyan-400 text-lg">November - February</h4>
-                        <span className="px-3 py-1 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-xs rounded-full font-bold">BEST</span>
+                  <div className="space-y-3">
+                    <div className="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:border-cyan-500/50 transition-all duration-300">
+                      <div className="flex items-start justify-between mb-1">
+                        <h4 className="font-inter font-bold text-cyan-400">November - February</h4>
+                        <span className="px-2 py-1 bg-gradient-to-r from-cyan-600 to-blue-600 text-white text-xs rounded-full font-bold">BEST</span>
                       </div>
-                      <p className="text-sm text-gray-300 font-inter leading-relaxed">Pleasant weather (10-25°C), world-famous Rann Utsav festival, perfect for desert camping under starlit skies, vibrant cultural performances, and exploring the white salt desert.</p>
+                      <p className="text-xs text-gray-300 font-inter">Pleasant weather (10-25°C), Rann Utsav festival, perfect for desert camping.</p>
                     </div>
-                    <div className="bg-black/40 backdrop-blur-sm p-5 rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-lg">
-                      <div className="flex items-start justify-between mb-2">
-                        <h4 className="font-inter font-bold text-indigo-400 text-lg">March - April</h4>
-                        <span className="px-3 py-1 bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-xs rounded-full font-bold">GOOD</span>
+                    <div className="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:border-indigo-500/50 transition-all duration-300">
+                      <div className="flex items-start justify-between mb-1">
+                        <h4 className="font-inter font-bold text-indigo-400">March - April</h4>
+                        <span className="px-2 py-1 bg-gradient-to-r from-indigo-600 to-blue-600 text-white text-xs rounded-full font-bold">GOOD</span>
                       </div>
-                      <p className="text-sm text-gray-300 font-inter leading-relaxed">Mild temperatures, fewer tourists means better deals, excellent for photography with clear skies, ideal for village visits and craft shopping without crowds.</p>
+                      <p className="text-xs text-gray-300 font-inter">Mild temperatures, fewer crowds, great for photography and village visits.</p>
                     </div>
-                    <div className="bg-black/40 backdrop-blur-sm p-5 rounded-2xl border border-white/10 hover:border-red-500/50 transition-all duration-300 hover:shadow-lg">
-                      <div className="flex items-start justify-between mb-2">
-                        <h4 className="font-inter font-bold text-red-400 text-lg">May - October</h4>
-                        <span className="px-3 py-1 bg-gradient-to-r from-red-600 to-orange-600 text-white text-xs rounded-full font-bold">AVOID</span>
+                    <div className="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:border-red-500/50 transition-all duration-300">
+                      <div className="flex items-start justify-between mb-1">
+                        <h4 className="font-inter font-bold text-red-400">May - October</h4>
+                        <span className="px-2 py-1 bg-gradient-to-r from-red-600 to-orange-600 text-white text-xs rounded-full font-bold">AVOID</span>
                       </div>
-                      <p className="text-sm text-gray-300 font-inter leading-relaxed">Extremely hot (40-48°C) with scorching desert heat, monsoon brings occasional rains making roads challenging, many tourist facilities remain closed during this off-season.</p>
+                      <p className="text-xs text-gray-300 font-inter">Extremely hot (40-48°C), monsoon rains, many facilities closed.</p>
                     </div>
                   </div>
                 </motion.div>
@@ -1127,7 +936,7 @@ export default function Home() {
                   whileInView="visible" 
                   viewport={{ once: true }}
                   variants={fadeUp}
-                  className="group bg-gradient-to-br from-blue-950/30 via-cyan-950/30 to-teal-950/30 backdrop-blur-xl rounded-3xl p-8 shadow-xl border border-white/10 hover:border-blue-500/50 hover:shadow-2xl transition-all duration-500"
+                  className="group bg-gradient-to-br from-blue-950/30 via-cyan-950/30 to-teal-950/30 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-xl border border-white/10 hover:border-blue-500/50 hover:shadow-2xl transition-all duration-500"
                 >
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-14 h-14 bg-gradient-to-br from-blue-900 to-cyan-900 rounded-2xl flex items-center justify-center shadow-lg shadow-blue-900/50 group-hover:scale-110 transition-transform duration-300">
@@ -1138,39 +947,37 @@ export default function Home() {
                       <p className="text-sm text-gray-400 font-inter">All routes lead to Kutch</p>
                     </div>
                   </div>
-                  <div className="space-y-4">
-                    <div className="bg-black/40 backdrop-blur-sm p-5 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-blue-900/50 to-cyan-900/50 rounded-xl flex items-center justify-center flex-shrink-0 border border-blue-800">
-                          <span className="text-2xl">✈️</span>
+                  <div className="space-y-3">
+                    <div className="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-blue-900/50 to-cyan-900/50 rounded-lg flex items-center justify-center flex-shrink-0 border border-blue-800">
+                          <span className="text-xl">✈️</span>
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-inter font-bold text-blue-400 text-lg mb-2">By Air - Fastest Route</h4>
-                          <p className="text-sm text-gray-300 font-inter leading-relaxed mb-2"><strong>Bhuj Airport (BHJ)</strong> - Direct flights from Mumbai, Ahmedabad, and Bengaluru. Just 60 km (1 hour) from the Great Rann of Kutch.</p>
-                          <p className="text-sm text-gray-300 font-inter leading-relaxed"><strong>Ahmedabad Airport</strong> - Major international hub, 330 km away. Scenic 5-hour drive through Gujarat's countryside.</p>
+                          <h4 className="font-inter font-bold text-blue-400 mb-1">By Air</h4>
+                          <p className="text-xs text-gray-300 font-inter">Bhuj Airport (BHJ) - Direct flights from major cities, 60 km from Rann.</p>
                         </div>
                       </div>
                     </div>
-                    <div className="bg-black/40 backdrop-blur-sm p-5 rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-300 hover:shadow-lg">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-indigo-900/50 to-blue-900/50 rounded-xl flex items-center justify-center flex-shrink-0 border border-indigo-800">
-                          <span className="text-2xl">🚂</span>
+                    <div className="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:border-indigo-500/50 transition-all duration-300">
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-indigo-900/50 to-blue-900/50 rounded-lg flex items-center justify-center flex-shrink-0 border border-indigo-800">
+                          <span className="text-xl">🚂</span>
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-inter font-bold text-indigo-400 text-lg mb-2">By Train - Scenic Journey</h4>
-                          <p className="text-sm text-gray-300 font-inter leading-relaxed mb-2"><strong>Bhuj Railway Station</strong> - Well connected to major cities. Overnight trains from Mumbai, Delhi, and Ahmedabad available.</p>
-                          <p className="text-sm text-gray-300 font-inter leading-relaxed"><strong>Gandhidham Junction</strong> - Alternative station, 60 km from Bhuj with more train options.</p>
+                          <h4 className="font-inter font-bold text-indigo-400 mb-1">By Train</h4>
+                          <p className="text-xs text-gray-300 font-inter">Bhuj Railway Station - Overnight trains from Mumbai, Delhi, Ahmedabad.</p>
                         </div>
                       </div>
                     </div>
-                    <div className="bg-black/40 backdrop-blur-sm p-5 rounded-2xl border border-white/10 hover:border-teal-500/50 transition-all duration-300 hover:shadow-lg">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-br from-teal-900/50 to-cyan-900/50 rounded-xl flex items-center justify-center flex-shrink-0 border border-teal-800">
-                          <span className="text-2xl">🚗</span>
+                    <div className="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-white/10 hover:border-teal-500/50 transition-all duration-300">
+                      <div className="flex items-start gap-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-teal-900/50 to-cyan-900/50 rounded-lg flex items-center justify-center flex-shrink-0 border border-teal-800">
+                          <span className="text-xl">🚗</span>
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-inter font-bold text-teal-400 text-lg mb-2">By Road - Freedom to Explore</h4>
-                          <p className="text-sm text-gray-300 font-inter leading-relaxed">Excellent highway network connects Kutch to Ahmedabad (330 km), Rajkot (250 km), and other Gujarat cities. State transport buses, private cabs, and self-drive options available. Road trip recommended for flexibility!</p>
+                          <h4 className="font-inter font-bold text-teal-400 mb-1">By Road</h4>
+                          <p className="text-xs text-gray-300 font-inter">Well-connected highways from Ahmedabad (330 km) and Rajkot (250 km).</p>
                         </div>
                       </div>
                     </div>
@@ -1196,18 +1003,18 @@ export default function Home() {
                     text="Stay in Comfort"
                     as="h3"
                     variant="gold"
-                    className="text-4xl md:text-5xl lg:text-6xl font-sora font-bold mb-2"
+                    className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sora font-bold mb-2"
                     animationDuration="12s"
                   />
-                  <p className="text-gray-200 font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                    From luxury resorts to authentic village homes
-                  </p>
+                  <p className="text-lg sm:text-xl md:text-2xl text-gray-200 font-space-grotesk font-medium mb-4 drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] leading-relaxed">
+              Beyond the White Desert
+            </p>
                 </div>
                 
                 {/* Placeholder Images Grid */}
                 <div className="space-y-4">
                   <a 
-                    href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYwLTRjZjYtOTgxZC0zMjg5NTBjMzUyMTbYAgHgAgE&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0"
+                    href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYtNGNmNi05ODFkLTMyODk1MGMzNTIxNlYAgHgAgE&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block group relative aspect-video rounded-2xl overflow-hidden shadow-lg cursor-pointer border border-white/10"
@@ -1227,7 +1034,7 @@ export default function Home() {
                   
                   <div className="grid grid-cols-2 gap-4">
                     <a 
-                      href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYwLTRjZjYtOTgxZC0zMjg5NTBjMzUyMTbYAgHgAgE&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0"
+                      href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYtNGNmNi05ODFkLTMyODk1MGMzNTIxNlYAgHgAgE&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer border border-white/10"
@@ -1246,7 +1053,7 @@ export default function Home() {
                     </a>
                     
                     <a 
-                      href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYwLTRjZjYtOTgxZC0zMjg5NTBjMzUyMTbYAgHgAgE&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0"
+                      href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYtNGNmNi05ODFkLTMyODk1MGMzNTIxNlYAgHgAgE&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="block group relative aspect-square rounded-2xl overflow-hidden shadow-lg cursor-pointer border border-white/10"
@@ -1266,7 +1073,7 @@ export default function Home() {
                   </div>
                   
                   <a 
-                    href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYwLTRjZjYtOTgxZC0zMjg5NTBjMzUyMTbYAgHgAgE&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0"
+                    href="https://www.booking.com/searchresults.html?ss=Bhuj%2C+Gujarat&efdco=1&label=gen173rf-10CAEoggI46AdIM1gDaGyIAQGYATO4ARfIAQzYAQPoAQH4AQGIAgGiAg5sb2NhbGhvc3Q6MzAwMKgCAbgCwov7yAbAAgHSAiQ5MmI3NTUzZi00MmYtNGNmNi05ODFkLTMyODk1MGMzNTIxNlYAgHgAgE&aid=304142&lang=en-us&sb=1&src_elem=sb&src=index&dest_id=-2091701&dest_type=city&ac_position=0&ac_click_type=b&ac_langcode=en&ac_suggestion_list_length=5&search_selected=true&search_pageview_id=947b35e1a2bd0635&ac_meta=GhA5NDdiMzVlMWEyYmQwNjM1IAAoATICZW46BGJodWo%3D&checkin=2025-11-20&checkout=2025-12-22&group_adults=2&no_rooms=1&group_children=0"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block group relative aspect-video rounded-2xl overflow-hidden shadow-lg cursor-pointer border border-white/10"
@@ -1333,76 +1140,58 @@ export default function Home() {
                 <p className="text-base text-gray-400 font-inter">Travel smart, travel light</p>
               </div>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
-              <div className="bg-black/40 backdrop-blur-sm p-5 rounded-xl border border-cyan-800/60 hover:border-cyan-500 transition-all duration-300 hover:shadow-lg group">
-                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
-                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">👕</span>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              <div className="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-cyan-800/60 hover:border-cyan-500 transition-all duration-300 group">
+                <div className="flex flex-col items-center justify-center text-center gap-2 h-full">
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-300">👕</span>
                   <div>
-                    <h4 className="font-inter font-bold text-cyan-400 mb-1 text-base">Clothing</h4>
-                    <p className="text-xs text-gray-400 font-inter leading-relaxed">Light cotton clothes, warm layers for nights</p>
+                    <h4 className="font-inter font-bold text-cyan-400 mb-1 text-sm">Clothing</h4>
+                    <p className="text-xs text-gray-400 font-inter">Cotton & warm layers</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-black/40 backdrop-blur-sm p-5 rounded-xl border border-indigo-800/60 hover:border-indigo-500 transition-all duration-300 hover:shadow-lg group">
-                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
-                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">👟</span>
+              <div className="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-indigo-800/60 hover:border-indigo-500 transition-all duration-300 group">
+                <div className="flex flex-col items-center justify-center text-center gap-2 h-full">
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-300">👟</span>
                   <div>
-                    <h4 className="font-inter font-bold text-indigo-400 mb-1 text-base">Footwear</h4>
-                    <p className="text-xs text-gray-400 font-inter leading-relaxed">Walking shoes, sandals, socks for salt flats</p>
+                    <h4 className="font-inter font-bold text-indigo-400 mb-1 text-sm">Footwear</h4>
+                    <p className="text-xs text-gray-400 font-inter">Shoes & sandals</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-black/40 backdrop-blur-sm p-5 rounded-xl border border-blue-800/60 hover:border-blue-500 transition-all duration-300 hover:shadow-lg group">
-                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
-                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">☀️</span>
+              <div className="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-blue-800/60 hover:border-blue-500 transition-all duration-300 group">
+                <div className="flex flex-col items-center justify-center text-center gap-2 h-full">
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-300">☀️</span>
                   <div>
-                    <h4 className="font-inter font-bold text-blue-400 mb-1 text-base">Sun Protection</h4>
-                    <p className="text-xs text-gray-400 font-inter leading-relaxed">SPF sunscreen, sunglasses, hat, lip balm</p>
+                    <h4 className="font-inter font-bold text-blue-400 mb-1 text-sm">Sun Protection</h4>
+                    <p className="text-xs text-gray-400 font-inter">Sunscreen & hat</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-black/40 backdrop-blur-sm p-5 rounded-xl border border-cyan-800/60 hover:border-cyan-500 transition-all duration-300 hover:shadow-lg group">
-                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
-                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">📸</span>
+              <div className="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-cyan-800/60 hover:border-cyan-500 transition-all duration-300 group">
+                <div className="flex flex-col items-center justify-center text-center gap-2 h-full">
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-300">📸</span>
                   <div>
-                    <h4 className="font-inter font-bold text-cyan-400 mb-1 text-base">Photography Gear</h4>
-                    <p className="text-xs text-gray-400 font-inter leading-relaxed">Camera, batteries, power bank, memory cards</p>
+                    <h4 className="font-inter font-bold text-cyan-400 mb-1 text-sm">Camera Gear</h4>
+                    <p className="text-xs text-gray-400 font-inter">Camera & batteries</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-black/40 backdrop-blur-sm p-5 rounded-xl border border-teal-800/60 hover:border-teal-500 transition-all duration-300 hover:shadow-lg group">
-                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
-                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">💧</span>
+              <div className="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-teal-800/60 hover:border-teal-500 transition-all duration-300 group">
+                <div className="flex flex-col items-center justify-center text-center gap-2 h-full">
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-300">💧</span>
                   <div>
-                    <h4 className="font-inter font-bold text-teal-400 mb-1 text-base">Hydration & Snacks</h4>
-                    <p className="text-xs text-gray-400 font-inter leading-relaxed">Water bottle, dry fruits, energy bars</p>
+                    <h4 className="font-inter font-bold text-teal-400 mb-1 text-sm">Hydration</h4>
+                    <p className="text-xs text-gray-400 font-inter">Water & snacks</p>
                   </div>
                 </div>
               </div>
-              <div className="bg-black/40 backdrop-blur-sm p-5 rounded-xl border border-sky-800/60 hover:border-sky-500 transition-all duration-300 hover:shadow-lg group">
-                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
-                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">💊</span>
+              <div className="bg-black/40 backdrop-blur-sm p-4 rounded-xl border border-sky-800/60 hover:border-sky-500 transition-all duration-300 group">
+                <div className="flex flex-col items-center justify-center text-center gap-2 h-full">
+                  <span className="text-3xl group-hover:scale-110 transition-transform duration-300">💊</span>
                   <div>
-                    <h4 className="font-inter font-bold text-sky-400 mb-1 text-base">Medical Essentials</h4>
-                    <p className="text-xs text-gray-400 font-inter leading-relaxed">First aid kit, medicines, antiseptic</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-black/40 backdrop-blur-sm p-5 rounded-xl border border-blue-800/60 hover:border-blue-500 transition-all duration-300 hover:shadow-lg group">
-                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
-                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">🔦</span>
-                  <div>
-                    <h4 className="font-inter font-bold text-blue-400 mb-1 text-base">Night Essentials</h4>
-                    <p className="text-xs text-gray-400 font-inter leading-relaxed">Flashlight, warm jacket, mosquito repellent</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-black/40 backdrop-blur-sm p-5 rounded-xl border border-teal-800/60 hover:border-teal-500 transition-all duration-300 hover:shadow-lg group">
-                <div className="flex flex-col items-center justify-center text-center gap-3 h-full">
-                  <span className="text-4xl group-hover:scale-110 transition-transform duration-300">📱</span>
-                  <div>
-                    <h4 className="font-inter font-bold text-teal-400 mb-1 text-base">Documents & Tech</h4>
-                    <p className="text-xs text-gray-400 font-inter leading-relaxed">ID proof, bookings, offline maps, chargers</p>
+                    <h4 className="font-inter font-bold text-sky-400 mb-1 text-sm">Medical Kit</h4>
+                    <p className="text-xs text-gray-400 font-inter">First aid & meds</p>
                   </div>
                 </div>
               </div>
@@ -1425,42 +1214,35 @@ export default function Home() {
                 text="Safety & Important Tips"
                 as="h3"
                 variant="gold"
-                className="text-4xl md:text-5xl lg:text-6xl font-sora font-bold mb-4"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sora font-bold mb-4"
                 animationDuration="12s"
               />
-              <p className="text-gray-200 text-lg font-space-grotesk font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                Stay safe and make the most of your Kutch adventure
-              </p>
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 font-inter mb-8 max-w-3xl mx-auto drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)] leading-relaxed px-4">
+              Experience the magic of India's largest salt desert, vibrant culture, and timeless traditions
+            </p>
             </div>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="group bg-black/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-emerald-800/60 hover:border-emerald-500 transition-all duration-300 hover:shadow-xl">
-                <div className="w-16 h-16 bg-gradient-to-br from-emerald-900/50 to-teal-900/50 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-emerald-800 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-4xl">🌡️</span>
+            <div className="grid md:grid-cols-3 gap-5">
+              <div className="group bg-black/40 backdrop-blur-sm rounded-xl p-5 text-center border border-emerald-800/60 hover:border-emerald-500 transition-all duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-emerald-900/50 to-teal-900/50 rounded-xl flex items-center justify-center mx-auto mb-3 border border-emerald-800 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl">🏜️</span>
                 </div>
-                <h4 className="font-inter font-bold mb-3 text-emerald-400 text-lg">Weather Check</h4>
-                <p className="text-sm text-gray-400 font-inter leading-relaxed">Monitor weather conditions daily, especially during monsoon season for safe travel</p>
+                <h4 className="font-inter font-bold mb-2 text-emerald-400">Desert Essentials</h4>
+                <p className="text-xs text-gray-400 font-inter">Check weather daily, carry plenty of water, protect from heat</p>
               </div>
-              <div className="group bg-black/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-teal-800/60 hover:border-teal-500 transition-all duration-300 hover:shadow-xl">
-                <div className="w-16 h-16 bg-gradient-to-br from-teal-900/50 to-cyan-900/50 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-teal-800 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-4xl">📱</span>
+              <div className="group bg-black/40 backdrop-blur-sm rounded-xl p-5 text-center border border-teal-800/60 hover:border-teal-500 transition-all duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-teal-900/50 to-cyan-900/50 rounded-xl flex items-center justify-center mx-auto mb-3 border border-teal-800 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl">📱</span>
                 </div>
-                <h4 className="font-inter font-bold mb-3 text-teal-400 text-lg">Stay Connected</h4>
-                <p className="text-sm text-gray-400 font-inter leading-relaxed">Keep emergency contacts handy, local network coverage may be limited in remote areas</p>
+                <h4 className="font-inter font-bold mb-2 text-teal-400">Stay Connected</h4>
+                <p className="text-xs text-gray-400 font-inter">Keep emergency contacts, network may be limited in remote areas</p>
               </div>
-              <div className="group bg-black/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-cyan-800/60 hover:border-cyan-500 transition-all duration-300 hover:shadow-xl">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-900/50 to-blue-900/50 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-cyan-800 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-4xl">💧</span>
+              <div className="group bg-black/40 backdrop-blur-sm rounded-xl p-5 text-center border border-blue-800/60 hover:border-blue-500 transition-all duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-blue-900/50 to-indigo-900/50 rounded-xl flex items-center justify-center mx-auto mb-3 border border-blue-800 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-3xl">🗺️</span>
                 </div>
-                <h4 className="font-inter font-bold mb-3 text-cyan-400 text-lg">Stay Hydrated</h4>
-                <p className="text-sm text-gray-400 font-inter leading-relaxed">Carry plenty of water bottles, desert climate can be extremely dehydrating in hot weather</p>
-              </div>
-              <div className="group bg-black/40 backdrop-blur-sm rounded-2xl p-6 text-center border border-blue-800/60 hover:border-blue-500 transition-all duration-300 hover:shadow-xl">
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-900/50 to-indigo-900/50 rounded-2xl flex items-center justify-center mx-auto mb-4 border border-blue-800 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-4xl">🗺️</span>
-                </div>
-                <h4 className="font-inter font-bold mb-3 text-blue-400 text-lg">Local Guide</h4>
-                <p className="text-sm text-gray-400 font-inter leading-relaxed">Consider hiring experienced local guides for remote areas and authentic village experiences</p>
+                <h4 className="font-inter font-bold mb-2 text-blue-400">Local Guide</h4>
+                <p className="text-xs text-gray-400 font-inter">Hire experienced guides for authentic village experiences</p>
               </div>
             </div>
           </motion.div>
@@ -1652,12 +1434,12 @@ export default function Home() {
                   className="bg-black/40 backdrop-blur-sm rounded-3xl p-8 border border-white/10 shadow-lg"
                 >
                   <MetallicHeading 
-                    text="Travel Kutch"
-                    as="h3"
-                    variant="gold"
-                    className="text-4xl md:text-5xl lg:text-6xl font-sora font-extrabold drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)] mb-6"
-                    animationDuration="12s"
-                  />
+              text="Discover Kutch"
+              as="h1"
+              variant="gold"
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-sora font-extrabold drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)] mb-6 leading-tight"
+              animationDuration="12s"
+            />
                   <p className="text-xl text-gray-300 leading-relaxed mb-8 font-inter">
                     Your gateway to the mystical land of Kutch — from the ethereal White Desert to ancient heritage sites. 
                     Discover authentic crafts, vibrant festivals, and the timeless stories that define Gujarat's cultural crown jewel.
@@ -1723,28 +1505,28 @@ export default function Home() {
               >
                 <h4 className="text-2xl font-sora font-bold bg-gradient-to-r from-cyan-600 to-orange-600 bg-clip-text text-transparent mb-6">Connect</h4>
                 <div className="space-y-5 font-inter">
-                  <div className="flex items-start gap-3 text-yellow-400">
+                  <div className="flex items-start gap-3 text-white">
                     <span className="text-2xl mt-1">📍</span>
                     <div>
-                      <p className="font-semibold mb-1">Visit Us</p>
-                      <p className="text-sm leading-relaxed text-yellow-200">Bhuj, Kutch District<br />Gujarat, India</p>
+                      <p className="font-semibold mb-1 text-white">Visit Us</p>
+                      <p className="text-sm leading-relaxed text-gray-100">Bhuj, Kutch District<br />Gujarat, India</p>
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3 text-yellow-400">
+                  <div className="flex items-start gap-3 text-white">
                     <span className="text-2xl mt-1">📞</span>
                     <div>
-                      <p className="font-semibold mb-1">Call Us</p>
-                      <a href="tel:+919825034580" className="hover:text-white transition-colors text-sm block text-yellow-200">+91 98250 34580</a>
-                      <a href="tel:+919512234395" className="hover:text-white transition-colors text-sm block text-yellow-200">+91 95122 34395</a>
+                      <p className="font-semibold mb-1 text-white">Call Us</p>
+                      <a href="tel:+919825034580" className="hover:text-cyan-300 transition-colors text-sm block text-gray-100">+91 98250 34580</a>
+                      <a href="tel:+919512234395" className="hover:text-cyan-300 transition-colors text-sm block text-gray-100">+91 95122 34395</a>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3 text-yellow-400">
+                  <div className="flex items-start gap-3 text-white">
                     <span className="text-2xl mt-1">✉️</span>
                     <div>
-                      <p className="font-semibold mb-1">Email</p>
-                      <a href="mailto:info@travelkutch.org" className="hover:text-white transition-colors text-sm text-yellow-200">
+                      <p className="font-semibold mb-1 text-white">Email</p>
+                      <a href="mailto:info@travelkutch.org" className="hover:text-cyan-300 transition-colors text-sm text-gray-100">
                         info@travelkutch.org
                       </a>
                     </div>

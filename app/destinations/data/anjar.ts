@@ -54,6 +54,40 @@ export const anjar: Destination = {
       }
     },
     {
+      heading: "Local Bazaars & Shopping Areas",
+      color: "bg-purple-50",
+      border: "border-l-4 border-purple-600 text-purple-800",
+      list: [
+        "<b>Ganga Bazaar:</b> The main market street famous for traditional metalwork. Find authentic Anjar knives, betel nut crackers (Sudi), and steel utensils. Best time: 10 AM - 1 PM and 4 PM - 8 PM.",
+        "<b>Metalwork Shops:</b> Specialized blacksmith workshops where you can watch artisans forge traditional knives and tools. Custom orders accepted. Prices negotiable.",
+        "<b>Textile Market:</b> Small shops selling Batik prints, Bandhani, and traditional Kutchi embroidery. Lower prices than Bhuj for similar quality.",
+        "<b>Jesal Toral Market Area:</b> Around the shrine, find religious items, traditional sweets, and local handicrafts. Gets busy during festivals.",
+        "<b>Station Road Shops:</b> Modern stores selling daily essentials, clothing, and some handicrafts. Fixed prices, convenient for quick shopping."
+      ],
+      image: {
+        src: "/images/anjar/anjar3.webp",
+        alt: "Traditional shopping in Anjar bazaars"
+      }
+    },
+    {
+      heading: "Famous Spots & Landmarks",
+      color: "bg-rose-50",
+      border: "border-l-4 border-rose-600 text-rose-800",
+      list: [
+        "<b>Jesal Toral Samadhi:</b> The legendary shrine complex dedicated to the robber-turned-saint Jesal and Queen Toral. Built in 1900s, this is Anjar's spiritual heart. Open 6 AM - 8 PM daily.",
+        "<b>Bileshwar Mahadev Temple:</b> Ancient Shiva temple with intricate stone carvings dating back centuries. Peaceful atmosphere perfect for meditation and photography.",
+        "<b>Vira Balak Smarak:</b> Moving memorial dedicated to 185 schoolchildren who lost their lives in the 2001 earthquake. A place of remembrance and reflection.",
+        "<b>Old Town Gates:</b> Historic entrance gates to the ancient capital, showcasing traditional Kutchi architecture. Great for photography and understanding town layout.",
+        "<b>Anjar Railway Station:</b> Heritage railway station building from British era. Still functional and connects to Bhuj and Gandhidham.",
+        "<b>Traditional Havelis:</b> Scattered throughout old town, these merchant houses display beautiful woodwork and traditional architecture. Some are still inhabited.",
+        "<b>Metalwork Workshops:</b> Living heritage sites where traditional knife-making continues using centuries-old techniques. Visitors welcome to observe."
+      ],
+      image: {
+        src: "/images/anjar/anjar2.webp",
+        alt: "Famous landmarks of Anjar"
+      }
+    },
+    {
         heading: "Local Tips & Common Mistakes",
         color: "bg-yellow-50",
         border: "border-l-4 border-yellow-600 text-yellow-800",

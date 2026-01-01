@@ -57,6 +57,40 @@ export const dhordo: Destination = {
       }
     },
     {
+      heading: "Local Bazaars & Shopping Areas",
+      color: "bg-purple-50",
+      border: "border-l-4 border-purple-600 text-purple-800",
+      list: [
+        "<b>Rann Utsav Craft Bazaar:</b> Massive handicraft market during the festival (Nov-Feb). Find authentic Kutchi embroidery, Bandhani, Ajrakh, and leather goods. Prices are higher but quality is assured.",
+        "<b>Hodka Village Market:</b> 15km from Dhordo. Buy directly from artisans at their homes. Famous for mud mirror work (Lippan Kaam) and traditional embroidery.",
+        "<b>Bhirandiyara Market:</b> Small roadside market en route from Bhuj. Good for local snacks, traditional sweets, and basic handicrafts at lower prices.",
+        "<b>Tent City Souvenir Shops:</b> Curated shops within the festival area selling premium handicrafts, textiles, and desert-themed souvenirs.",
+        "<b>Village Cooperatives:</b> Women-run craft cooperatives in nearby villages offering authentic handmade products with fair trade prices."
+      ],
+      image: {
+        src: "/images/dhordo-white-rann/crafts.webp",
+        alt: "Shopping at Rann Utsav craft bazaar"
+      }
+    },
+    {
+      heading: "Famous Spots & Landmarks",
+      color: "bg-rose-50",
+      border: "border-l-4 border-rose-600 text-rose-800",
+      list: [
+        "<b>White Rann Salt Desert:</b> The main attraction - an endless expanse of white salt marsh stretching to the horizon. Best experienced during sunrise, sunset, and full moon nights.",
+        "<b>Rann Utsav Tent City:</b> Luxury tent accommodation complex hosting cultural programs, adventure activities, and authentic Kutchi experiences during the festival season.",
+        "<b>Dhordo Viewpoint:</b> Elevated platform offering panoramic views of the White Rann. Perfect for photography and watching the salt desert transform with changing light.",
+        "<b>Cultural Performance Arena:</b> Open-air amphitheater hosting nightly folk dance performances, Garba, and Sufi music during Rann Utsav. Free for tent city guests.",
+        "<b>Hodka Village:</b> Traditional Banni village 15km away. Experience authentic mud houses (Bhungas), local hospitality, and artisan workshops.",
+        "<b>India Bridge:</b> Historic bridge near the Pakistan border. Requires special permission to visit. Offers unique desert landscape views.",
+        "<b>Flamingo Point:</b> Seasonal wetland area where thousands of flamingos gather during winter months. Best viewed early morning."
+      ],
+      image: {
+        src: "/images/dhordo-white-rann/attractions.webp",
+        alt: "Famous landmarks of Dhordo and White Rann"
+      }
+    },
+    {
         heading: "Local Tips & Common Mistakes",
         color: "bg-yellow-50",
         border: "border-l-4 border-yellow-600 text-yellow-800",

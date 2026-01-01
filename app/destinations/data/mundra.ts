@@ -55,6 +55,40 @@ export const mundra: Destination = {
       }
     },
     {
+      heading: "Local Bazaars & Shopping Areas",
+      color: "bg-purple-50",
+      border: "border-l-4 border-purple-600 text-purple-800",
+      list: [
+        "<b>Old Town Market:</b> Traditional market within the historic fort walls. Find local textiles, spices, and daily essentials. Best time: Morning 9 AM - 12 PM.",
+        "<b>Salt Market:</b> Mundra is famous for salt production. Small shops sell various grades of sea salt and salt-based products. Wholesale prices available.",
+        "<b>Kite Shops:</b> Mundra has a strong kite-flying culture. Numerous shops sell colorful kites, especially before Uttarayan festival (January).",
+        "<b>Textile Shops:</b> Small family-run stores selling Kutchi embroidery, Bandhani, and local fabrics. Prices lower than tourist areas.",
+        "<b>Business District Markets:</b> Modern shopping area near the port with clothing stores, electronics, and general merchandise. Fixed prices."
+      ],
+      image: {
+        src: "/images/mundra/mundra3.webp",
+        alt: "Shopping in Mundra markets"
+      }
+    },
+    {
+      heading: "Famous Spots & Landmarks",
+      color: "bg-rose-50",
+      border: "border-l-4 border-rose-600 text-rose-800",
+      list: [
+        "<b>Mundra Port (Adani Port):</b> India's largest private port and major commercial hub. Restricted access - viewing from outside only. A symbol of modern industrial India.",
+        "<b>Old Mundra Fort:</b> Historic fortification walls surrounding the old town. Built during medieval period, showcasing traditional defensive architecture. Free to explore.",
+        "<b>Shantinath Mahadev Temple:</b> Ancient Shiva temple in the heart of old town. Peaceful atmosphere with beautiful traditional architecture. Open daily for worship.",
+        "<b>Historic Town Gates:</b> Well-preserved entrance gates to the walled city. Great for photography and understanding the town's defensive history.",
+        "<b>Salt Pans:</b> Vast salt production fields near the coast. Best viewed during harvest season. Unique landscape with white salt crystals.",
+        "<b>Bhadreshwar Jain Temple (25km):</b> 2500-year-old temple complex right on the seashore. Unique coastal location for a Jain pilgrimage site. Must-visit nearby attraction.",
+        "<b>Coastal Promenade:</b> Scenic walkway along the Gulf of Kutch. Popular evening spot for locals. Good views of sunset and sea breeze."
+      ],
+      image: {
+        src: "/images/mundra/mundra2.webp",
+        alt: "Famous landmarks of Mundra"
+      }
+    },
+    {
         heading: "Local Tips & Common Mistakes",
         color: "bg-yellow-50",
         border: "border-l-4 border-yellow-600 text-yellow-800",

@@ -12,7 +12,11 @@ export const chhariDhand: HiddenGem = {
       heading: "Overview",
       color: "#f0fdfa",
       border: "border-l-4 border-emerald-500 text-gray-700",
-      content: "Chhari Dhand (meaning 'shallow wetland') is a breathtaking seasonal oasis on the edge of the Banni nature reserve. Unlike the white salt desert, this area transforms into a lush paradise after monsoons, hosting over 370 bird species. Fulay Village serves as the historic gateway to this protected conservation reserve."
+      content: "Chhari Dhand (meaning 'shallow wetland') is a breathtaking seasonal oasis on the edge of the Banni nature reserve. Unlike the white salt desert, this area transforms into a lush paradise after monsoons, hosting over 370 bird species. Fulay Village serves as the historic gateway to this protected conservation reserve.",
+      image: {
+        src: "/images/hidden-gems/chhari-dhand/chhari1.webp",
+        alt: "Flamingos at Chhari Dhand wetland"
+      }
     },
     {
       heading: "Why Visit?",
@@ -24,7 +28,11 @@ export const chhariDhand: HiddenGem = {
         "<b>Fossil Exploration:</b> The nearby rocky patches (Kiya Dhrow) are rich in Jurassic-era fossils.",
         "<b>Cultural Connect:</b> Meet the pastoral Maldhari community in Fulay and see their traditional mud homes (Bhungas).",
         "<b>Pure Solitude:</b> Miles away from the tourist rush, offering absolute silence and starry nights."
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/chhari-dhand/chhari2.webp",
+        alt: "Golden hour over Banni grasslands"
+      }
     },
     {
       heading: "Getting There (The Fulay Route)",
@@ -35,7 +43,11 @@ export const chhariDhand: HiddenGem = {
         "<b>Route:</b> Bhuj -> Nakhatrana Highway -> Turn right via Deshpar -> Fulay Village.",
         "<b>The Last Mile:</b> The wetland is ~10km from Fulay Village on dirt tracks. High-ground clearance vehicle (SUV) highly recommended.",
         "<b>Check Post:</b> Forest Department entry point is near Fulay. Permits might be checked here."
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/chhari-dhand/chhari.webp",
+        alt: "Fulay village surroundings"
+      }
     },
     {
       heading: "Best Experiences",
@@ -46,7 +58,11 @@ export const chhariDhand: HiddenGem = {
         "<b>Watch Towers:</b> Climb the distinct watchtowers for a 360-degree view of the marsh and desert.",
         "<b>Picnic:</b> Carry your own food for a peaceful picnic (strict no-littering zone).",
         "<b>Winter Visit:</b> Peak season is November to February when water levels are optimal."
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/chhari-dhand/Chhari-Dhand1.webp",
+        alt: "Watchtower view of the wetland"
+      }
     },
     {
       heading: "Essential Tips",
@@ -79,7 +95,7 @@ export const chhariDhand: HiddenGem = {
   gallery: [
     { src: "/images/hidden-gems/chhari-dhand/chhari1.webp", caption: "Thousands of Flamingos painting the water pink" },
     { src: "/images/hidden-gems/chhari-dhand/chhari2.webp", caption: "Golden hour over the Banni grasslands" },
-    { src: "/images/hidden-gems/chhari-dhand/chhari3.webp", caption: "A watchful eagle atop the watchtower" },
-    { src: "/images/hidden-gems/chhari-dhand/chhari4.webp", caption: "The rugged beauty of Fulay village surroundings" }
+    { src: "/images/hidden-gems/chhari-dhand/Chhari-Dhand1.webp", caption: "Watchtower view of the wetland" },
+    { src: "/images/hidden-gems/chhari-dhand/chhari.webp", caption: "The rugged beauty of Fulay village surroundings" }
   ]
 };

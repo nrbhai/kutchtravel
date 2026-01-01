@@ -12,7 +12,11 @@ export const kotayTemple: HiddenGem = {
       heading: "Overview",
       color: "#fefce8",
       border: "border-l-4 border-gray-500 text-gray-300",
-      content: "Kotai is a historic village in Bhuj Taluka of Kutch district, located on the shore of the Greater Rann of Kutch. The village contains remarkable archaeological remains including an ancient Sun temple complex dating to the earlier part of the 10th century, along with several other ruined temples that showcase exceptional medieval architecture."
+      content: "Kotai is a historic village in Bhuj Taluka of Kutch district, located on the shore of the Greater Rann of Kutch. The village contains remarkable archaeological remains including an ancient Sun temple complex dating to the earlier part of the 10th century, along with several other ruined temples that showcase exceptional medieval architecture.",
+      image: {
+        src: "/images/hidden-gems/kotay-temple/kotay1.webp",
+        alt: "Ancient Sun temple ruins at Kotai village"
+      }
     },
     {
       heading: "Archaeological Significance",
@@ -25,7 +29,11 @@ export const kotayTemple: HiddenGem = {
         "<b>Complex Layout:</b> Multiple temple ruins including the main Sun temple and three smaller temples to the west",
         "<b>Sculptural Details:</b> Elaborate carvings including Navagraha (nine planets), Ganpati, and four-armed figures",
         "<b>Historical Importance:</b> Contains remains of an old city and represents significant medieval temple architecture"
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/kotay-temple/kotay2.webp",
+        alt: "Intricate stone carvings and architectural details"
+      }
     },
     {
       heading: "Heritage Experience",
@@ -43,7 +51,11 @@ export const kotayTemple: HiddenGem = {
         "<b>Village Context:</b> Experience authentic rural Kutch village atmosphere",
         "<b>Sunset Views:</b> Beautiful desert sunset views from the archaeological site",
         "<b>Heritage Education:</b> Learn about 10th century temple architecture and ancient city remains"
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/kotay-temple/kotay3.webp",
+        alt: "Beautiful garden and natural setting around the temple"
+      }
     },
     {
       heading: "How to Reach",
@@ -55,7 +67,11 @@ export const kotayTemple: HiddenGem = {
         "<b>Vehicle Required:</b> SUV or high-clearance vehicle recommended - rough unmade road with ups and downs. Small cars not suitable. Two-wheelers are manageable.",
         "<b>Local Guide:</b> Village locals can provide temple history and customs",
         "<b>Parking:</b> Available near temple premises"
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/kotay-temple/kotay4.webp",
+        alt: "Temple complex location on the Greater Rann shore"
+      }
     },
     {
       heading: "Heritage Site Guidelines",

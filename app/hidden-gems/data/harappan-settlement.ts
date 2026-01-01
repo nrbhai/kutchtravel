@@ -12,13 +12,21 @@ export const harappanSettlement: HiddenGem = {
       heading: "Overview",
       color: "#fff7ed",
       border: "border-l-4 border-amber-500 text-gray-700",
-      content: "Desalpar Gunthli (or Gunthli) is a massive fortified Harappan settlement located in Nakhatrana taluka. Often overshadowed by Dholavira, this site is historically significant as a strategic trading outpost with massive stone fortifications still visible today. It sits on the banks of the Bamu-Chela stream, offering a glimpse into the ancient civilization's defensive architecture."
+      content: "Desalpar Gunthli (or Gunthli) is a massive fortified Harappan settlement located in Nakhatrana taluka. Often overshadowed by Dholavira, this site is historically significant as a strategic trading outpost with massive stone fortifications still visible today. It sits on the banks of the Bamu-Chela stream, offering a glimpse into the ancient civilization's defensive architecture.",
+      image: {
+        src: "/images/hidden-gems/harappan-settlement/main.webp",
+        alt: "Desalpar Gunthli archaeological site"
+      }
     },
     {
       heading: "Historical Significance", 
       color: "#f0f9ff",
       border: "border-l-4 border-indigo-500 text-gray-700",
-      content: "Excavations in the 1960s revealed a well-planned citadel with walls up to 4 meters thick. Key discoveries include a unique copper seal, distinct 'reserved slip ware' pottery (rare in other Kutch sites), and evidence of trade with other contemporary civilizations. The site effectively guarded the trade routes of Kutch 4,000 years ago."
+      content: "Excavations in the 1960s revealed a well-planned citadel with walls up to 4 meters thick. Key discoveries include a unique copper seal, distinct 'reserved slip ware' pottery (rare in other Kutch sites), and evidence of trade with other contemporary civilizations. The site effectively guarded the trade routes of Kutch 4,000 years ago.",
+      image: {
+        src: "/images/hidden-gems/harappan-settlement/ruins1.webp",
+        alt: "Massive stone wall remains"
+      }
     },
     {
       heading: "What to See",
@@ -29,13 +37,21 @@ export const harappanSettlement: HiddenGem = {
         "<b>Architectural Remains:</b> Foundations of houses with bathrooms and complex drainage systems.",
         "<b>The Stream:</b> The seasonal Bamu-Chela stream that served as the lifeline for the settlement.",
         "<b>Pottery Shards:</b> Visitors can still spot ancient painted grey ware shards scattered on the surface (Observation only - Do not collect)."
-      ]
+      ],
+      image: {
+        src: "/images/hidden-gems/harappan-settlement/pottery.webp",
+        alt: "Archaeological mound at Desalpar"
+      }
     },
     {
       heading: "Access & Visiting",
       color: "#f0fdf4",
       border: "border-l-4 border-emerald-500 text-gray-700", 
-      content: "Unlike Dholavira, Desalpar is not a ticketed tourist site, which adds to its 'hidden' charm. It is an open archaeological mound near Gunthli village. It is recommended to visit with a local guide who can point out the structural details."
+      content: "Unlike Dholavira, Desalpar is not a ticketed tourist site, which adds to its 'hidden' charm. It is an open archaeological mound near Gunthli village. It is recommended to visit with a local guide who can point out the structural details.",
+      image: {
+        src: "/images/hidden-gems/harappan-settlement/desert-approach.webp",
+        alt: "Landscape surrounding the site"
+      }
     }
   ],
   facts: [

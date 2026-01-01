@@ -21,7 +21,8 @@ import {
   ChevronDown,
   MenuIcon,
   Globe,
-  History
+  History,
+  FileText
 } from 'lucide-react';
 
 // Animation variants
@@ -94,7 +95,9 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
               { name: 'Destinations', href: '/destinations', icon: MapPin },
               { name: 'History', href: '/history', icon: History },
               { name: 'Hidden Gems', href: '/hidden-gems', icon: Sparkles },
+              { name: 'Blog', href: '/blog', icon: FileText },
               { name: 'Booking', href: '/bookings', icon: Calendar },
+              { name: 'About', href: '/about', icon: Users },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -162,6 +165,7 @@ export default function Navigation({ variant = 'transparent' }: NavigationProps)
                             { name: 'Destinations', href: '/destinations', icon: MapPin },
                             { name: 'History', href: '/history', icon: History },
                             { name: 'Hidden Gems', href: '/hidden-gems', icon: Sparkles },
+                            { name: 'Blog', href: '/blog', icon: FileText },
                             { name: 'Booking', href: '/bookings', icon: Calendar },
                             { name: 'About', href: '/about', icon: Users },
                           ].map((item) => (

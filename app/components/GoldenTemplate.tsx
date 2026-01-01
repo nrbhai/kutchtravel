@@ -238,7 +238,7 @@ export default function GoldenTemplate({ data }: Props) {
                 />
                 
                 {section.content && (
-                  <div className="text-gray-100 text-lg leading-relaxed font-light" dangerouslySetInnerHTML={{ __html: section.content }} />
+                  <div className="text-gray-200 text-lg leading-relaxed font-light [&_strong]:text-white [&_strong]:font-semibold" dangerouslySetInnerHTML={{ __html: section.content }} />
                 )}
 
                 {section.list && (

@@ -58,11 +58,47 @@ export const bhuj: Destination = {
       }
     },
     {
+      heading: "Local Bazaars & Shopping Areas",
+      color: "bg-purple-50",
+      border: "border-l-4 border-purple-600 text-purple-800",
+      list: [
+        "<b>Shroff Bazaar:</b> The heart of Bhuj's shopping scene. Famous for authentic Bandhani sarees, dupattas, and traditional Kutchi embroidery. Best time: 5 PM - 9 PM.",
+        "<b>Vaniyawad :</b> Specialized in cloths and traditonal Kutchi handicrafts. Bargaining is expected and part of the experience.",
+        "<b>Commerce College Road :</b> This is a new bazar developed with all modern branded showrooms.",
+        "<b>Anam Ring Road:</b> Modern shopping area with clothing stores, footwear shops, and handicraft emporiums. Open till late evening.",
+        "<b>Kansara Bazar : </b> Basically Jewellery market with all kinds of Gold & Silver Jewellery available",
+        "<b>Handicraft Emporiums:</b> Government-run stores near Aina Mahal offering fixed-price authentic handicrafts with quality certification."
+      ],
+      image: {
+        src: "/images/bhuj/bhuj8.webp",
+        alt: "Traditional shopping in Bhuj bazaars"
+      }
+    },
+    {
+      heading: "Famous Spots & Landmarks",
+      color: "bg-rose-50",
+      border: "border-l-4 border-rose-600 text-rose-800",
+      list: [
+        "<b>Aina Mahal (Palace of Mirrors):</b> Built in 1761, this stunning palace features intricate mirror work, Venetian glass, and a unique water fountain system. A masterpiece of Indo-European architecture.",
+        "<b>Prag Mahal:</b> Adjacent to Aina Mahal, this Italian Gothic-style palace was built in 1865. Climb the clock tower for panoramic city views (₹10 extra).",
+        "<b>Hamirsar Lake:</b> The 450-year-old artificial lake is Bhuj's social hub. Evening walks, street food, and local gatherings make it the city's beating heart.",
+        "<b>Kutch Museum:</b> Established in 1877, Gujarat's oldest museum houses rare Kutchi script manuscripts, tribal artifacts, and archaeological treasures.",
+        "<b>Bhujia Hill & Fort:</b> Historic fort ruins atop the hill offer 360° views of Bhuj. The Smritivan Memorial here honors 2001 earthquake victims.",
+        "<b>Swaminarayan Temple:</b> A magnificent white marble temple with intricate carvings. The evening aarti (7 PM) is a spiritual experience.",
+        "<b>Sharad Baug Palace:</b> Former royal residence now converted into a museum showcasing royal artifacts, vintage cars, and period furniture.",
+        "<b>Ram Dhun Temple:</b> Unique temple where continuous chanting of Ram's name has been going on for decades. Peaceful atmosphere for meditation."
+      ],
+      image: {
+        src: "/images/bhuj/bhuj3.webp",
+        alt: "Famous landmarks of Bhuj"
+      }
+    },
+    {
         heading: "Local Tips & Common Mistakes",
         color: "bg-yellow-50",
         border: "border-l-4 border-yellow-600 text-yellow-800",
         list: [
-            "<b>Siesta Time:</b> Many shops in Bhuj close between 1:00 PM and 4:00 PM for afternoon nap. Plan shopping for evenings.",
+            "<b>Siesta Time:</b> Many shops in Bhuj close between 2:00 PM and 4:00 PM for afternoon nap. Plan shopping for evenings.",
             "<b>Sundays:</b> Aina Mahal is open, but the Kutch Museum is closed on Wednesdays.",
             "<b>Traffic:</b> The old city area near the palaces has very narrow lanes. Avoid taking large cars inside; park outside and walk or take an auto.",
             "<b>Booking:</b> If visiting during Rann Utsav (Nov-Feb), book hotels 2 months in advance as prices triple."
@@ -96,10 +132,10 @@ export const bhuj: Destination = {
       color: "bg-emerald-50",
       border: "border-l-4 border-emerald-600 text-emerald-800",
       list: [
-        "<b>Kutchi Dabeli:</b> Try the 'Double Roti' at Shankar Vadapav or Bin Harif Dabeli. It's the staple street food.",
-        "<b>Pakwan:</b> A crispy breakfast treat served with dal and chutney. Try it at local stalls near Station Road.",
-        "<b>Thali:</b> 'Annapurna' and 'Green Rock' are famous for unlimited Gujarati Thalis.",
-        "<b>Sweets:</b> Don't miss 'Adadiya Pak' (winter sweet) and 'Gulab Pak' from Khavda Sweets."
+        "<b>Kutchi Dabeli:</b> Try the 'Double Roti' at Mandvi Dabalroti, near Bus Stand or Mohan's Dabeli on Hospital Road . It's the staple street food.",
+        "<b>Pakwan:</b>Pakwan is a dry salty round snack which resembles a small roll. Made with refined flour and oil, it has many folds and layers which are delightfully crunchy. The delicacy is also known as Kutchi pakwan, as it is believed to have originated in Kutch.",
+        "<b>Puri Sak:</b> If you want to taste local Best Puri Sak, visit Rajubhai near Bhanushalinagar or Chaubha near Vaniyavad Gate",
+        "<b>Sweets:</b> Don't miss 'Adadiya' (winter sweet), 'Mesuk' and 'Gulab Pak'. This are famous Kutchi Sweets"
       ],
       image: {
         src: "/images/bhuj/bhuj8.webp",
