@@ -82,7 +82,7 @@ export default function HistoryPage() {
               <h2 className="text- amber-500 font-mono tracking-widest text-sm uppercase mb-4 text-amber-500">The Land & Roots</h2>
               <MetallicHeading 
                 text="Geography & Early Settlement"
-                variant="silver"
+                variant="gold"
                 as="h2"
                 className="text-4xl md:text-5xl font-black mb-8 font-sora"
               />
@@ -232,7 +232,7 @@ export default function HistoryPage() {
                 </div>
                 <MetallicHeading 
                   text="Maritime Legacy"
-                  variant="blue-cyan"
+                  variant="gold"
                   as="h2"
                   className="text-4xl md:text-5xl font-black font-sora"
                   animationDuration="15s"
@@ -297,7 +297,7 @@ export default function HistoryPage() {
              
              {/* Colonial */}
              <div>
-                <MetallicHeading text="The Colonial Encounter" variant="silver" as="h3" className="text-3xl font-bold mb-6 font-sora" />
+                <MetallicHeading text="The Colonial Encounter" variant="gold" as="h3" className="text-3xl font-bold mb-6 font-sora" />
                 <p className="text-white leading-relaxed mb-6">
                    While technically a princely state, Kutch had significant interactions with the British Raj. The British influence brought administrative reforms and the railway, but Kutch maintained its internal autonomy. The 1819 treaty was a pivotal moment, shaping the geopolitical boundaries of the state for the next century.
                 </p>
