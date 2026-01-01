@@ -24,7 +24,7 @@ export const harappanSettlement: HiddenGem = {
       border: "border-l-4 border-indigo-500 text-gray-700",
       content: "Excavations in the 1960s revealed a well-planned citadel with walls up to 4 meters thick. Key discoveries include a unique copper seal, distinct 'reserved slip ware' pottery (rare in other Kutch sites), and evidence of trade with other contemporary civilizations. The site effectively guarded the trade routes of Kutch 4,000 years ago.",
       image: {
-        src: "/images/hidden-gems/harappan-settlement/ruins1.webp",
+        src: "/images/hidden-gems/harappan-settlement/ruins.webp",
         alt: "Massive stone wall remains"
       }
     },
@@ -39,7 +39,7 @@ export const harappanSettlement: HiddenGem = {
         "<b>Pottery Shards:</b> Visitors can still spot ancient painted grey ware shards scattered on the surface (Observation only - Do not collect)."
       ],
       image: {
-        src: "/images/hidden-gems/harappan-settlement/pottery.webp",
+        src: "/images/hidden-gems/harappan-settlement/harappan2.webp",
         alt: "Archaeological mound at Desalpar"
       }
     },
@@ -49,7 +49,7 @@ export const harappanSettlement: HiddenGem = {
       border: "border-l-4 border-emerald-500 text-gray-700", 
       content: "Unlike Dholavira, Desalpar is not a ticketed tourist site, which adds to its 'hidden' charm. It is an open archaeological mound near Gunthli village. It is recommended to visit with a local guide who can point out the structural details.",
       image: {
-        src: "/images/hidden-gems/harappan-settlement/desert-approach.webp",
+        src: "/images/hidden-gems/harappan-settlement/main.webp",
         alt: "Landscape surrounding the site"
       }
     }
@@ -72,9 +72,9 @@ export const harappanSettlement: HiddenGem = {
     "Approach roads can be narrow"
   ],
   gallery: [
-    { src: "/images/hidden-gems/harappan-settlement/ruins1.webp", caption: "Remains of the massive stone walls" },
-    { src: "/images/hidden-gems/harappan-settlement/pottery.webp", caption: "The mound of Desalpar Gunthli" },
-    { src: "/images/hidden-gems/harappan-settlement/drainage.webp", caption: "Ancient drainage line visible in ruins" },
-    { src: "/images/hidden-gems/harappan-settlement/desert-approach.webp", caption: "The landscape surrounding Nakhatrana" }
+    { src: "/images/hidden-gems/harappan-settlement/ruins.webp", caption: "Remains of the massive stone walls" },
+    { src: "/images/hidden-gems/harappan-settlement/harappan2.webp", caption: "The mound of Desalpar Gunthli" },
+    { src: "/images/hidden-gems/harappan-settlement/main.webp", caption: "Ancient drainage line visible in ruins" },
+    { src: "/images/hidden-gems/harappan-settlement/main.webp", caption: "The landscape surrounding Nakhatrana" }
   ]
 };

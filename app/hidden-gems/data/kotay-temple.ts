@@ -53,7 +53,7 @@ export const kotayTemple: HiddenGem = {
         "<b>Heritage Education:</b> Learn about 10th century temple architecture and ancient city remains"
       ],
       image: {
-        src: "/images/hidden-gems/kotay-temple/kotay3.webp",
+        src: "/images/hidden-gems/kotay-temple/kotay4.webp",
         alt: "Beautiful garden and natural setting around the temple"
       }
     },

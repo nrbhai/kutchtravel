@@ -23,7 +23,7 @@ export const secretBirdingSite: HiddenGem = {
       border: "border-l-4 border-amber-500 text-gray-700",
       content: "The Lala-Parjan Sanctuary (Kutch Bustard Sanctuary), located near Nalia in Abdasa, is the smallest sanctuary in the country but holds immense ecological value. It is one of the last few habitats in Gujarat for the Great Indian Bustard (Ghorad), a majestic bird on the brink of extinction. The sanctuary is a mix of grasslands and scrub, resembling the African Savannah.",
       image: {
-        src: "/images/hidden-gems/secret-birding-site/main.webp",
+        src: "/images/hidden-gems/kutch-bustard-bird-watching-site/main.webp",
         alt: "Golden grasslands of Lala-Parjan Sanctuary"
       }
     },
@@ -39,7 +39,7 @@ export const secretBirdingSite: HiddenGem = {
         "<b>Predators:</b> Indian Wolf, Jungle Cat, and Desert Fox can be spotted."
       ],
       image: {
-        src: "/images/hidden-gems/secret-birding-site/bustard.webp",
+        src: "/images/hidden-gems/kutch-bustard-bird-watching-site/bustard.webp",
         alt: "Great Indian Bustard in natural habitat"
       }
     },
@@ -55,7 +55,7 @@ export const secretBirdingSite: HiddenGem = {
         "<b>Guides:</b> Local guides from Nalia are recommended to navigate and spot camouflaged birds."
       ],
       image: {
-        src: "/images/hidden-gems/secret-birding-site/wildlife.webp",
+        src: "/images/hidden-gems/kutch-bustard-bird-watching-site/wildlife.webp",
         alt: "Chinkara in the sanctuary"
       }
     },
@@ -65,7 +65,7 @@ export const secretBirdingSite: HiddenGem = {
       border: "border-l-4 border-emerald-500 text-gray-700", 
       content: "A lens of at least 400mm is recommended. The GIB is very shy and will fly or run away if approached. Use a bean bag for car support as tripods might be cumbersome in a vehicle. The golden light of Kutch evenings provides excellent backdrops for Chinkara and Blackbuck photography.",
       image: {
-        src: "/images/hidden-gems/secret-birding-site/florican.webp",
+        src: "/images/hidden-gems/kutch-bustard-bird-watching-site/main.webp",
         alt: "Lesser Florican in grasslands"
       }
     }
@@ -79,9 +79,9 @@ export const secretBirdingSite: HiddenGem = {
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3663.755478204646!2d68.831234!3d23.341234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3951a5c6e8e8e8e8%3A0x1234567890abcdef!2sKutch%20Bustard%20Sanctuary!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin",
   gallery: [
-    { src: "/images/hidden-gems/secret-birding-site/bustard.webp", caption: "Great Indian Bustard - The flagship species" },
-    { src: "/images/hidden-gems/secret-birding-site/main.webp", caption: "Golden grasslands of Lala-Parjan" },
-    { src: "/images/hidden-gems/secret-birding-site/wildlife.webp", caption: "Chinkara grazing in the sanctuary" },
-    { src: "/images/hidden-gems/secret-birding-site/florican.webp", caption: "The elusive Lesser Florican" }
+    { src: "/images/hidden-gems/kutch-bustard-bird-watching-site/bustard.webp", caption: "Great Indian Bustard - The flagship species" },
+    { src: "/images/hidden-gems/kutch-bustard-bird-watching-site/main.webp", caption: "Golden grasslands of Lala-Parjan" },
+    { src: "/images/hidden-gems/kutch-bustard-bird-watching-site/wildlife.webp", caption: "Chinkara grazing in the sanctuary" },
+    { src: "/images/hidden-gems/kutch-bustard-bird-watching-site/main.webp", caption: "The elusive Lesser Florican" }
   ]
 };

@@ -64,7 +64,7 @@ export const khavdaPottery: HiddenGem = {
         "<b>Local Transport:</b> Auto-rickshaws available within village"
       ],
       image: {
-        src: "/images/hidden-gems/khavda-pottery/khavda4.webp",
+        src: "/images/hidden-gems/khavda-pottery/khavda1.webp",
         alt: "Khavda village pottery workshop"
       }
     },

@@ -39,7 +39,7 @@ export const chadvaRakhal: HiddenGem = {
         "<b>Serenity:</b> A quiet escape perfect for nature walks and picnics (with permission)."
       ],
       image: {
-        src: "/images/hidden-gems/chadva-rakhal/croc.webp",
+        src: "/images/hidden-gems/chadva-rakhal/main.webp",
         alt: "Mugger Crocodile basking in the sun"
       }
     },
@@ -54,7 +54,7 @@ export const chadvaRakhal: HiddenGem = {
         "<b>Facilities:</b> Minimal. Carry your own water and snacks. LEAVE NO TRACE."
       ],
       image: {
-        src: "/images/hidden-gems/chadva-rakhal/sunset.webp",
+        src: "/images/hidden-gems/chadva-rakhal/forest.webp",
         alt: "Sunset over Pragsar Lake"
       }
     }
@@ -77,8 +77,8 @@ export const chadvaRakhal: HiddenGem = {
   ],
   gallery: [
     { src: "/images/hidden-gems/chadva-rakhal/main.webp", caption: "Pragsar Lake - The heart of Chadva Rakhal" },
-    { src: "/images/hidden-gems/chadva-rakhal/croc.webp", caption: "A Mugger Crocodile basking in the sun" },
+    { src: "/images/hidden-gems/chadva-rakhal/main.webp", caption: "A Mugger Crocodile basking in the sun" },
     { src: "/images/hidden-gems/chadva-rakhal/forest.webp", caption: "Dense forest canopy of the Rakhal" },
-    { src: "/images/hidden-gems/chadva-rakhal/sunset.webp", caption: "Tranquil sunset over the lake" }
+    { src: "/images/hidden-gems/chadva-rakhal/forest.webp", caption: "Tranquil sunset over the lake" }
   ]
 };
