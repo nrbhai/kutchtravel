@@ -10,8 +10,8 @@ declare global {
   }
 }
 
-// Google Analytics tracking ID - replace with your actual ID
-const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-XXXXXXXXXX';
+// Google Analytics tracking ID
+const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-507118549';
 
 export function GoogleAnalytics() {
   useEffect(() => {
