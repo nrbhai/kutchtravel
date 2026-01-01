@@ -6,6 +6,7 @@ import { GoogleAnalytics } from './components/Analytics';
 import { WebVitals } from './components/WebVitals';
 import { StructuredData } from './components/StructuredData';
 import { Suspense } from 'react';
+import Script from 'next/script';
 
 const inter = Inter({
   subsets: ["latin"],
@@ -175,6 +176,26 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <StructuredData />
         <GoogleAnalytics />
         <WebVitals />
+        
+        {/* Google Analytics - Direct Implementation */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-507118549"
+        />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-507118549', {
+                page_path: window.location.pathname,
+              });
+            `,
+          }}
+        />
       </body>
     </html>
   );
