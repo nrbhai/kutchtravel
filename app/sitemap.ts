@@ -1,4 +1,5 @@
 import { DESTINATIONS } from '@/app/destinations/data';
+import { blogPosts } from '@/app/blog/data';
 import type { MetadataRoute } from 'next';
 
 export const dynamic = 'force-static';
@@ -102,20 +103,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // Blog posts
-  const blogPosts = [
-    'white-rann-full-moon-guide',
-    'rann-utsav-2025-guide',
-    'kutchi-cuisine-food-guide',
-    'photography-guide-kutch',
-    'hidden-gems-kutch',
-    'ancient-crafts-kutch-heritage'
-  ].map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
+  // Blog posts (Dynamic)
+  const blogUrls = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
 
-  return [...staticPages, ...destinationPages, ...craftPages, ...blogPosts];
+  return [...staticPages, ...destinationPages, ...craftPages, ...blogUrls];
 }
