@@ -196,6 +196,24 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         />
+        {/* Google Tag Manager (G-RCEQN3Z1ZD) */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-RCEQN3Z1ZD"
+        />
+        <Script
+          id="gtm-G-RCEQN3Z1ZD"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-RCEQN3Z1ZD');
+            `,
+          }}
+        />
       </body>
     </html>
   );
