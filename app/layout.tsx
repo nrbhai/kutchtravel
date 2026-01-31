@@ -142,6 +142,12 @@ export const metadata: Metadata = {
   formatDetection: {
     telephone: false,
   },
+  other: {
+    "geo.region": "IN-GJ",
+    "geo.placename": "Kutch, Gujarat, India",
+    "geo.position": "23.7337;69.8597",
+    "ICBM": "23.7337, 69.8597",
+  },
 };
 
 export const viewport: Viewport = {

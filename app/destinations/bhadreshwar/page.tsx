@@ -1,24 +1,23 @@
 import DestinationTemplate from "@/app/components/DestinationTemplate";
-import SectionCard from "@/app/components/SectionCard";
 import { bhadreshwar } from "@/app/destinations/data/bhadreshwar";
 import { generateDestinationStructuredData, generateBreadcrumbStructuredData } from "@/app/utils/seo";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: `${bhadreshwar.title} - Jain Pilgrimage`,
-  description: 'Visit Bhadreshwar Jain Temple, one of the oldest Jain tirths in India featuring ancient Sekhari architecture and historical significance.',
+  description: 'Visit Bhadreshwar (Bhadresar) Jain Tirth near the Kutch coast. Explore the Vasai Jain temple complex, historic mosque ruins, and the village’s rich pilgrimage heritage.',
   keywords: [
     'Bhadreshwar Jain Temple',
+    'Bhadresar village',
     'Vasai Jain Tirth',
     'Jain pilgrimage Gujarat',
     'Kutch temples',
-    'ancient Jain temples',
-    'Sekhari architecture',
+    'coastal heritage Kutch',
     'Bhadreshwar tourism'
   ],
   openGraph: {
     title: `${bhadreshwar.title} - Jain Pilgrimage`,
-    description: 'One of the oldest Jain temples in India with stunning architecture and history.',
+    description: 'A coastal Jain pilgrimage center with the Vasai temple complex and early Islamic monuments nearby.',
     images: [bhadreshwar.image],
   },
 };
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
 export default function Bhadreshwar() {
   const structuredData = generateDestinationStructuredData({
     title: bhadreshwar.title,
-    description: "Ancient Jain temple complex established in 516 BCE, featuring 52 sub-shrines and exquisite marble architecture.",
+    description: "Coastal Jain pilgrimage center known for the Vasai Jain temple complex, multiple sub‑shrines, and nearby historic mosques.",
     image: bhadreshwar.image,
     slug: bhadreshwar.slug,
     facts: bhadreshwar.facts,
@@ -39,29 +38,6 @@ export default function Bhadreshwar() {
     { name: bhadreshwar.title }
   ]);
 
-  const description = (
-    <div className="space-y-8">
-      {bhadreshwar.sections.map((section, index) => (
-        <SectionCard 
-          key={index}
-          title={section.heading}
-          image={section.image}
-          color={section.color}
-          border={section.border}
-        >
-          {section.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />}
-          {section.list && (
-            <ul className="list-none space-y-4">
-              {section.list.map((item, itemIndex) => (
-                <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }} />
-              ))}
-            </ul>
-          )}
-        </SectionCard>
-      ))}
-    </div>
-  );
-
   return (
     <>
       <script
@@ -73,7 +49,7 @@ export default function Bhadreshwar() {
       <DestinationTemplate
         title={bhadreshwar.title}
         image={bhadreshwar.image}
-        description={description}
+        data={bhadreshwar}
         facts={bhadreshwar.facts}
         mapUrl={bhadreshwar.mapUrl}
         gallery={bhadreshwar.gallery}

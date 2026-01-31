@@ -1,5 +1,4 @@
 import DestinationTemplate from "@/app/components/DestinationTemplate";
-import SectionCard from "@/app/components/SectionCard";
 import { adipur } from "@/app/destinations/data/adipur";
 import { generateDestinationStructuredData, generateBreadcrumbStructuredData } from "@/app/utils/seo";
 import type { Metadata } from 'next';
@@ -39,29 +38,6 @@ export default function Adipur() {
     { name: adipur.title }
   ]);
 
-  const description = (
-    <div className="space-y-8">
-      {adipur.sections.map((section, index) => (
-        <SectionCard 
-          key={index}
-          title={section.heading}
-          image={section.image}
-          color={section.color}
-          border={section.border}
-        >
-          {section.content && <p className="leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />}
-          {section.list && (
-            <ul className="list-none space-y-4">
-              {section.list.map((item, itemIndex) => (
-                <li key={itemIndex} dangerouslySetInnerHTML={{ __html: item }} />
-              ))}
-            </ul>
-          )}
-        </SectionCard>
-      ))}
-    </div>
-  );
-
   return (
     <>
       <script
@@ -73,7 +49,7 @@ export default function Adipur() {
       <DestinationTemplate
         title={adipur.title}
         image={adipur.image}
-        description={description}
+        data={adipur}
         facts={adipur.facts}
         mapUrl={adipur.mapUrl}
         gallery={adipur.gallery}

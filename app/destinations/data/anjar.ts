@@ -131,7 +131,7 @@ export const anjar: Destination = {
         "<b>Bhadreshwar:</b> (35km) Historic Jain temple and seaside spot."
       ],
       image: {
-        src: "/images/anjar/anjar7.webp",
+        src: "/images/anjar/anjar6.webp",
         alt: "Nearby Gandhidham"
       }
     },
@@ -153,7 +153,7 @@ export const anjar: Destination = {
     "Distance from Bhuj: 42 km",
     "Vibe: Rustic & Historic"
   ],
-  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14777!2d70.0!3d23.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AAnjar!5e0!3m2!1sen!2sin",
+  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59108.0!2d70.0131!3d23.1136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f9.5!3m3!1m2!1s0x39511e2b2b2b2b2b%3A0x0!2sAnjar%2C%20Gujarat!5e0!3m2!1sen!2sin",
   gallery: [
     { src: "/images/anjar/anjar1.webp", caption: "Anjar Town Gate" },
     { src: "/images/anjar/anjar2.webp", caption: "Jesal Toral Shrine" },

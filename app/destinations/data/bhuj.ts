@@ -70,7 +70,7 @@ export const bhuj: Destination = {
         "<b>Handicraft Emporiums:</b> Government-run stores near Aina Mahal offering fixed-price authentic handicrafts with quality certification."
       ],
       image: {
-        src: "/images/bhuj/bhuj8.webp",
+        src: "/images/bhuj/bhuj4.webp",
         alt: "Traditional shopping in Bhuj bazaars"
       }
     },
@@ -138,7 +138,7 @@ export const bhuj: Destination = {
         "<b>Sweets:</b> Don't miss 'Adadiya' (winter sweet), 'Mesuk' and 'Gulab Pak'. This are famous Kutchi Sweets"
       ],
       image: {
-        src: "/images/bhuj/bhuj8.webp",
+        src: "/images/bhuj/history.webp",
         alt: "Artisan working on Bandhani textile"
       }
     },

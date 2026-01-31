@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     title: 'Mandvi Beach & Palace Guide | Things to Do & Itinerary',
     description: 'The only beach destination in Kutch worth visiting. Royal palaces, wooden ships, and sunset beaches.',
     images: [mandvi.image],
+    url: '/destinations/mandvi',
+  },
+  alternates: {
+    canonical: '/destinations/mandvi',
   },
 };
 

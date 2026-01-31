@@ -20,6 +20,10 @@ export const metadata: Metadata = {
     title: 'Bhuj City Guide | Palaces, History & Handicrafts',
     description: 'Explore the royal heart of Kutch. Complete guide to palaces, museums, and artisan villages.',
     images: [bhuj.image],
+    url: '/destinations/bhuj',
+  },
+  alternates: {
+    canonical: '/destinations/bhuj',
   },
 };
 

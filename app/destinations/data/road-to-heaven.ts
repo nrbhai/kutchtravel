@@ -135,7 +135,7 @@ export const roadToHeaven: Destination = {
     "Best Time: Sunrise/Sunset",
     "Warning: No fuel/food on stretch"
   ],
-  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14749.1!2d70.0!3d23.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3951!2sRoad+To+Heaven!5e0!3m2!1sen!2sin",
+  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58996.4!2d70.0!3d23.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f9.5!3m3!1m2!1s0x3951!2sRoad+To+Heaven!5e0!3m2!1sen!2sin",
   gallery: [
     { src: "/images/road-to-heaven/road-to-heaven1.webp", caption: "The Infinite Straight Road" },
     { src: "/images/road-to-heaven/road-to-heaven2.webp", caption: "Sunset Reflections" },

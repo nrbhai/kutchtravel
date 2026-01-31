@@ -4,7 +4,7 @@ import type { Destination } from "./index";
 export const mandvi: Destination = {
   slug: "mandvi",
     title: "Mandvi — Where the Desert Meets the Sea",
-  image: "/images/mandvi/mandvi1.webp",
+  image: "/images/mandvi/hero-mandvi.webp",
   sections: [
     {
       heading: "Overview",
@@ -68,7 +68,7 @@ export const mandvi: Destination = {
         "<b>Handicraft Emporiums:</b> Government-certified stores near the palace offering authentic Kutchi crafts with fixed prices."
       ],
       image: {
-        src: "/images/mandvi/crafts.webp",
+        src: "/images/mandvi/mandvi5.webp",
         alt: "Shopping in Mandvi markets"
       }
     },

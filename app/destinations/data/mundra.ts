@@ -154,7 +154,7 @@ export const mundra: Destination = {
     "Economy: Industrial Hub",
     "Coast: Gulf of Kutch"
   ],
-  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14787.9!2d69.7!3d22.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3AMundra!5e0!3m2!1sen!2sin",
+  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236606.4!2d69.5211!3d22.8396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f7!3m3!1m2!1s0x3950e2b2b2b2b2b2%3A0x0!2sMundra%2C%20Gujarat!5e0!3m2!1sen!2sin",
   gallery: [
     { src: "/images/mundra/mundra1.webp", caption: "City Gate of Mundra" },
     { src: "/images/mundra/mundra2.webp", caption: "Historic Architecture" },

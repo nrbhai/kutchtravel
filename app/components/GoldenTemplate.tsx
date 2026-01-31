@@ -94,7 +94,14 @@ export default function GoldenTemplate({ data }: Props) {
                 text={data.title.split(' — ')[0]} 
                 as="h1"
                 variant="gold"
-                className="text-6xl md:text-8xl lg:text-9xl font-extrabold font-sora mb-6"
+                className={`font-extrabold font-sora mb-6 ${
+                  // Decrease font size for Road to Heaven hero
+                  (data.slug === "road-to-heaven")
+                    ? "text-3xl md:text-5xl lg:text-6xl"
+                    : (data.title.split(' — ')[0].length > 26
+                        ? "text-4xl md:text-6xl lg:text-7xl"
+                        : "text-6xl md:text-8xl lg:text-9xl")
+                }`}
               />
               <p className="text-xl md:text-2xl text-white font-light tracking-wide max-w-3xl mx-auto leading-relaxed">
                 {/* Try to extract subtitle from title after mdash, or use a default */}
@@ -457,11 +464,11 @@ export default function GoldenTemplate({ data }: Props) {
             src={data.mapUrl.replace(/!4f[\d.]+/i, '!4f9.5').replace(/!2i\d+!2i\d+!4f[\d.]+/i, '!2i1024!2i768!4f9.5')}
             width="100%"
             height="500"
-            style={{ border: 0, borderRadius: '20px', filter: 'invert(90%) hue-rotate(180deg)' }}
+            style={{ border: 0, borderRadius: '20px' }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="opacity-90 hover:opacity-100 transition-opacity"
+            className="transition-opacity"
           />
         </section>
 

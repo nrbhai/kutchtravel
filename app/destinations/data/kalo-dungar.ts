@@ -36,7 +36,7 @@ export const kaloDungar: Destination = {
         "<b>Transport:</b> best reached by private taxi or car. No direct public buses to the hilltop."
       ],
       image: {
-        src: "/images/kalo-dungar/transport.webp",
+        src: "/images/kalo-dungar/info.webp",
         alt: "Road to Kalo Dungar"
       }
     },
@@ -71,7 +71,7 @@ export const kaloDungar: Destination = {
       border: "border-l-4 border-teal-600 text-teal-800",
       content: "<strong>October to March (Winter):</strong> Best visibility and pleasant weather. \n\n<strong>Summer:</strong> Not recommended as it gets scorching hot and hazy, obscuring the view.",
       image: {
-        src: "/images/kalo-dungar/season.webp",
+        src: "/images/kalo-dungar/info.webp",
         alt: "Clear winter day at Kalo Dungar"
       }
     },
@@ -97,7 +97,7 @@ export const kaloDungar: Destination = {
         "<b>No Fancy Restaurants:</b> There are only tea stalls and maggi points at the top."
       ],
       image: {
-        src: "/images/kalo-dungar/kalo-dungar5.webp",
+        src: "/images/kalo-dungar/kalo-dungar.webp",
         alt: "Local sweets"
       }
     },
@@ -137,12 +137,12 @@ export const kaloDungar: Destination = {
   ],
   mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14767.123456789!2d69.8139!3d23.9342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3950ec6e1e559f19%3A0x2e23b8365f3870e1!2sKalo%20Dungar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1234567890!5m2!1sen!2sin",
   gallery: [
-  { src: "/images/kalo-dungar/kalo-dungar1.webp", caption: "Dattatreya Temple at the summit" },
+  { src: "/images/kalo-dungar/temple.webp", caption: "Dattatreya Temple at the summit" },
   { src: "/images/kalo-dungar/kalo-dungar2.webp", caption: "Sweeping panorama across the White Rann" },
-  { src: "/images/kalo-dungar/kalo-dungar3.webp", caption: "Sunset colors over the salt flats" },
+  { src: "/images/kalo-dungar/sunset.webp", caption: "Sunset colors over the salt flats" },
   { src: "/images/kalo-dungar/kalo-dungar4.webp", caption: "The Magnetic Hill road illusion" },
-  { src: "/images/kalo-dungar/kalo-dungar5.webp", caption: "Traditional temple architecture and local ritual" },
-  { src: "/images/kalo-dungar/kalo-dungar6.webp", caption: "Jackal feeding: a unique local tradition" }
+  { src: "/images/kalo-dungar/temple2.webp", caption: "Traditional temple architecture and local ritual" },
+  { src: "/images/kalo-dungar/jackal.webp", caption: "Jackal feeding: a unique local tradition" }
   ]
 };
 

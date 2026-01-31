@@ -3,27 +3,27 @@ import type { Destination } from "./index";
 export const adipur: Destination = {
   slug: "adipur",
   title: "Adipur — City of Memories",
-  image: "/images/adipur/adipur1.webp",
+  image: "/images/adipur/adipur2.webp",
   sections: [
     {
       heading: "Category",
-      content: "Planned City"
+      content: "Town (Gandhidham Municipal Corporation)"
     },
     {
       heading: "Significance",
       color: "bg-blue-50",
       border: "border-l-4 border-blue-600 text-blue-800",
-      content: "Adipur is a unique township in Kutch, originally established as a refugee camp. Located about 5km from Gandhidham, it serves as a residential twin city. The town is famous for its distinct culture, including a fascinating tradition of Charlie Chaplin impersonators and the sacred Gandhi Samadhi.",
+      content: "Adipur is a town in the Gandhidham Municipal Corporation of Kutch district, Gujarat. It lies about 8 km from Gandhidham and is known for Gandhi Samadhi and a distinctive local tradition of Charlie Chaplin impersonators.",
       image: {
-        src: "/images/adipur/adipur1.webp",
-        alt: "Adipur city landmark"
+        src: "/images/adipur/adipur2.webp",
+        alt: "Adipur town view"
       }
     },
     {
       heading: "History & Heritage",
       color: "bg-amber-50",
       border: "border-l-4 border-amber-600 text-amber-800",
-      content: "Founded in 1947 after the partition of India, Adipur was created to resettle Sindhi Hindu refugees from Pakistan. The settlement was the vision of Bhai Pratap Dialdas, who requested land from Mahatma Gandhi. The Maharaja of Kutch donated 15,000 acres for this purpose. The Sindhu Resettlement Corporation (SRC) was formed to manage the town's administration, making it a planned settlement with deep historical roots.",
+      content: "Adipur began in 1947 as a refugee settlement after the Partition. The initiative is credited to Bhai Pratap Dialdas, who sought land through Mahatma Gandhi to resettle Sindhi Hindu families; the Maharaja of Kutch provided land and the Sindhu Resettlement Corporation managed the settlement.",
       image: {
         src: "/images/adipur/adipur4.webp",
         alt: "Historical significance of Adipur"
@@ -35,15 +35,36 @@ export const adipur: Destination = {
       border: "border-l-4 border-purple-600 text-purple-800",
       list: [
         "<b>Gandhi Samadhi:</b> A revered memorial dedicated to Mahatma Gandhi",
-        "<b>Indian Institute of Sindhology:</b> Center for preserving Sindhi language, art, and culture",
-        "<b>Charlie Chaplin Connection:</b> Home to a unique club of Charlie Chaplin impersonators",
-        "<b>Education Hub:</b> Hosts numerous colleges and schools managed by the Tolani/Gandhidham Collegiate Board",
-        "<b>Cultural Mix:</b> A melting pot of Sindhi and Kutchi traditions"
+        "<b>Indian Institute of Sindhology:</b> Research center for Sindhi language, literature, art, and culture",
+        "<b>Charlie Chaplin Connection:</b> Known for a community of Chaplin fans and impersonators",
+        "<b>Education Hub:</b> Several higher‑education institutions under the Gandhidham Collegiate Board",
+        "<b>Languages:</b> Gujarati and Hindi (official), with Sindhi and Kutchi widely spoken"
       ],
       image: {
         src: "/images/adipur/adipur3.webp",
         alt: "Cultural and educational center"
       }
+    },
+    {
+      heading: "Geography & Climate",
+      color: "bg-emerald-50",
+      border: "border-l-4 border-emerald-600 text-emerald-800",
+      list: [
+        "<b>Coordinates:</b> 23.073454°N, 70.090585°E",
+        "<b>Elevation:</b> ~27 m above sea level",
+        "<b>Climate:</b> Hot desert (BWh) pattern",
+        "<b>Average Temperature:</b> ~26.8°C",
+        "<b>Average Rainfall:</b> ~375 mm/year"
+      ]
+    },
+    {
+      heading: "Education",
+      color: "bg-sky-50",
+      border: "border-l-4 border-sky-600 text-sky-800",
+      list: [
+        "<b>Higher Education:</b> About nine institutions run by the Gandhidham Collegiate Board",
+        "<b>Schools:</b> Excelsior Model School, Shri R.P Patel High School, St. Xavier’s School, Sadhu Hiranand Navalrai Academy, Maitri Maha Vidyalaya, Modern School, Mount Carmel School, Twinkle Star School"
+      ]
     },
     {
       heading: "Nearby Destinations",
@@ -53,7 +74,7 @@ export const adipur: Destination = {
         "<b><a href='/destinations/gandhidham' class='text-blue-600 hover:text-blue-800'>Gandhidham:</a></b> 5km - Commercial twin city",
         "<b><a href='/destinations/kandla' class='text-blue-600 hover:text-blue-800'>Kandla Port:</a></b> 8km - Major economic hub",
         "<b><a href='/destinations/anjar' class='text-blue-600 hover:text-blue-800'>Anjar:</a></b> 20km - Historic town renowned for metalwork",
-        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> 50km - District headquarters"
+        "<b><a href='/destinations/bhuj' class='text-blue-600 hover:text-blue-800'>Bhuj:</a></b> ~60km - District headquarters"
       ],
       image: {
         src: "/images/adipur/adipur2.webp",
@@ -79,13 +100,13 @@ export const adipur: Destination = {
     }
   ],
   facts: [
-    "Established in 1947 for Sindhi refugees",
-    "Vision of Bhai Pratap Dialdas",
-    "Home to the Indian Institute of Sindhology",
-    "Known for Gandhi Samadhi and Chaplin fans",
-    "Educational hub of the region"
+    "Town in Gandhidham Municipal Corporation (Kutch, Gujarat)",
+    "Established in 1947 as a refugee settlement",
+    "Home to Gandhi Samadhi and the Indian Institute of Sindhology",
+    "Known for Charlie Chaplin impersonators",
+    "Coordinates: 23.073454°N, 70.090585°E"
   ],
-  mapUrl: "https://maps.google.com/maps?q=23.0722,70.0886&hl=en&z=14&output=embed",
+  mapUrl: "https://maps.google.com/maps?q=23.073454,70.090585&hl=en&z=14&output=embed",
   gallery: [
     { src: "/images/adipur/adipur1.webp", caption: "Landmark of Adipur" },
     { src: "/images/adipur/adipur2.webp", caption: "Town View" },

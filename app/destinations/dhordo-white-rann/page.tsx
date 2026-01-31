@@ -21,6 +21,10 @@ export const metadata: Metadata = {
     title: `${dhordo.title} - White Desert of Kutch`,
     description: 'Discover Dhordo and the magical White Rann of Kutch, home to the famous Rann Utsav festival and stunning desert landscapes.',
     images: [dhordo.image],
+    url: '/destinations/dhordo-white-rann',
+  },
+  alternates: {
+    canonical: '/destinations/dhordo-white-rann',
   },
 };
 

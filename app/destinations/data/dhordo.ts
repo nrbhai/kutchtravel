@@ -4,13 +4,13 @@ import type { Destination } from "./index";
 export const dhordo: Destination = {
   slug: "dhordo-white-rann",
     title: "Dhordo — Gateway to the White Desert",
-  image: "/images/dhordo-white-rann/dhordo-main.webp",
+  image: "/images/dhordo-white-rann/view-1.webp",
   sections: [
     {
       heading: "Overview",
       content: "Dhordo is the gateway to the world-famous White Rann of Kutch—a vast salt marsh that transforms into a shimmering surreal landscape under the moonlight. Once a quiet hamlet, it is now the epicenter of the Rann Utsav (Nov-Feb), hosting the magnificent Tent City. Whether you want to witness a sunrise where the salt meets the sky or experience Kutchi culture at its vibrant best, Dhordo is the place to be. It serves as both a destination and a base for exploring the northern desert region.",
       image: {
-        src: "/images/dhordo-white-rann/overview.webp",
+        src: "/images/dhordo-white-rann/dhordo1.webp",
         alt: "Panoramic view of White Rann salt desert at sunset"
       }
     },
@@ -36,7 +36,7 @@ export const dhordo: Destination = {
         "<b>Nearest Transport Hubs:</b> Bhuj Airport (80km) and Bhuj Railway Station (80km)."
       ],
       image: {
-        src: "/images/dhordo-white-rann/transport.webp",
+        src: "/images/dhordo-white-rann/dhordo4.webp",
         alt: "Road leading to the White Rann"
       }
     },
@@ -52,7 +52,7 @@ export const dhordo: Destination = {
         "<b>Magnetic Hill (Kalo Dungar):</b> (48km away) Combine your trip with the highest point in Kutch."
       ],
       image: {
-        src: "/images/dhordo-white-rann/attractions.webp",
+        src: "/images/dhordo-white-rann/dhordo2.webp",
         alt: "Tourists exploring the White Rann salt flats"
       }
     },
@@ -86,7 +86,7 @@ export const dhordo: Destination = {
         "<b>Flamingo Point:</b> Seasonal wetland area where thousands of flamingos gather during winter months. Best viewed early morning."
       ],
       image: {
-        src: "/images/dhordo-white-rann/attractions.webp",
+        src: "/images/dhordo-white-rann/dhordo7.webp",
         alt: "Famous landmarks of Dhordo and White Rann"
       }
     },
@@ -107,7 +107,7 @@ export const dhordo: Destination = {
       border: "border-l-4 border-teal-600 text-teal-800",
       content: "<strong>November to February (Winter):</strong> The BEST time. Rann Utsav is on, weather is pleasant (10-25°C), and the salt is dry and firm.\n\n<strong>October & March:</strong> Shoulder season. It can get hot during the day. Salt might be slightly wet/slushy.\n\n<strong>April to September (Summer/Monsoon):</strong> CLOSED/NOT RECOMMENDED. The Rann is flooded with water and extremely hot. The 'White' look vanishes.",
       image: {
-        src: "/images/dhordo-white-rann/season.webp",
+        src: "/images/dhordo-white-rann/dhordo6.webp",
         alt: "Rann Utsav tents under the moonlight"
       }
     },
@@ -150,7 +150,7 @@ export const dhordo: Destination = {
         "<b><a href='/places/road-to-heaven' class='text-blue-400 hover:text-blue-300'>Road to Heaven:</a></b> 54km - Famous straight highway through the Rann"
       ],
       image: {
-        src: "/images/dhordo-white-rann/nearby.webp",
+        src: "/images/dhordo-white-rann/dhordo3.webp",
         alt: "Nearby attractions around Dhordo — Gateway to the White Desert"
       }
     },
